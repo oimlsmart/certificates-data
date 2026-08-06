@@ -1,0 +1,334 @@
+---
+_meta:
+  source: OIML D 11:2013 "General requirements for electronic measuring instruments"
+  source_path: mn-samples-oiml/sources/d011-e13/sections/
+  description: |
+    Environmental classification systems and performance tests defined by
+    OIML D 11:2013, referenced by multiple Recommendations
+    (R21, R46, R49, R50, R51, R60, R61, R76, R85, R99, R106, R107, R117,
+    R129, R137, ...).
+
+    Two layers of content:
+      1. Environmental class systems — three orthogonal enums (H/M/E) used by
+         Recommendations to declare the conditions an instrument is rated for.
+      2. Performance tests — D 11 §9-§14, tables 6-41. Recommendations may
+         cite any subset of these tests as having been applied during type
+         evaluation, with a test_level index specifying severity.
+
+    NOTE on R60 humidity marking: OIML R60 load cells use a SEPARATE
+    humidity-marking system (CH/NH/SH) as part of the load cell classification
+    symbol (R60:2021 §5.1.6, figure 4). CH/NH/SH is NOT the same concept as
+    D 11 H1/H2/H3 — R60's marking is a property of the load cell per its
+    classification symbol, while D 11 H-class is the instrument's installed
+    location. CH/NH/SH stays in schema/R60.yaml.
+
+environmental_classes:
+  climatic_environment_class:
+    description: |
+      D 11 §7.2 table 1. Classification of ambient conditions related to
+      humidity and water exposure at the instrument's installed location.
+    enum: [H1, H2, H3]
+    definitions:
+      H1: Instruments used in temperature-controlled enclosed (weather protected)
+        locations; local humidity not controlled; no exposure to condensed water,
+        precipitation, or ice.
+      H2: Instruments used in enclosed (weather protected) locations where local
+        climate is not controlled; may be subject to condensed water, water from
+        sources other than rain, and ice formations.
+      H3: Instruments used in open air locations excluding extreme climate zones
+        (polar/desert).
+  mechanical_environment_class:
+    description: |
+      D 11 §7.3 table 2. Classification of ambient conditions related to
+      vibration and shock at the instrument's installed location.
+    enum: [M1, M2, M3]
+    definitions:
+      M1: Locations with vibration and shocks of low significance.
+      M2: Locations with significant or high levels of vibration and shock
+        (e.g. transmitted from machines and passing vehicles).
+      M3: Locations where vibration and shock is high or very high (e.g.
+        instruments directly mounted on machines, conveyor belts).
+  electromagnetic_environment_class:
+    description: |
+      D 11 §7.4 table 3. Classification of expected electromagnetic
+      environmental conditions.
+    enum: [E1, E2, E3]
+    definitions:
+      E1: Locations where EM disturbances correspond to residential, commercial,
+        and light industrial environments.
+      E2: Locations where EM disturbances correspond to industrial buildings.
+      E3: Measuring instruments powered by the battery of a vehicle and exposed
+        to EM disturbances in any environment not hazardous for the general public.
+
+checking_facility_type:
+  description: |
+    D 11 §3.19 / §5.3.1. Type of checking facility on a measuring instrument
+    for detecting significant faults.
+  enum: [P, I, N]
+  definitions:
+    P: Type P checking facility (Permanent).
+    I: Type I checking facility (Intermittent).
+    N: Type N checking facility (Non-durable, no checking facility).
+
+test_level_index:
+  description: |
+    D 11 §7. Each test in D 11 has a recommended severity level indexed 1-5.
+    A Recommendation declares which level applies for each test it cites.
+  enum: [1, 2, 3, 4, 5]
+
+tests:
+  description: |
+    Performance tests defined in D 11 §9-§14. Each entry is a single test
+    identified by its D 11 table number. A Recommendation schema references
+    a subset of these via `d011_tests:` and records the `test_level_index`
+    actually applied during type evaluation.
+  climatic:
+    description: D 11 §9 — Climatic tests
+    entries:
+      d011_t06_static_temperature:
+        table: 6
+        name: Static temperature (low)
+        reference_section: D 11 §9.1
+      d011_t07_static_temperature:
+        table: 7
+        name: Static temperature (high)
+        reference_section: D 11 §9.1
+      d011_t08_damp_heat_steady_state:
+        table: 8
+        name: Damp heat, steady state
+        reference_section: D 11 §9.2
+      d011_t09_damp_heat_cyclic:
+        table: 9
+        name: Damp heat, cyclic
+        reference_section: D 11 §9.2
+      d011_t10_water:
+        table: 10
+        name: Water (rain)
+        reference_section: D 11 §9.3
+      d011_t11_atmospheric_pressure:
+        table: 11
+        name: Atmospheric pressure variation
+        reference_section: D 11 §9.4
+      d011_t12_vacuum:
+        table: 12
+        name: Vacuum
+        reference_section: D 11 §9.4
+      d011_t13_sand_dust:
+        table: 13
+        name: Sand and dust
+        reference_section: D 11 §9.5
+      d011_t14_salt_mist:
+        table: 14
+        name: Salt mist
+        reference_section: D 11 §9.6
+  mechanical:
+    description: D 11 §10 — Mechanical tests
+    entries:
+      d011_t15_vibration_random:
+        table: 15
+        name: Vibration, random
+        reference_section: D 11 §10.1
+      d011_t16_vibration_sinusoidal:
+        table: 16
+        name: Vibration, sinusoidal
+        reference_section: D 11 §10.1
+      d011_t17_mechanical_shock:
+        table: 17
+        name: Mechanical shock
+        reference_section: D 11 §10.2
+  conducted_electromagnetic:
+    description: D 11 §11 — Disturbances introduced through external wiring
+    entries:
+      d011_t18_dc_mains_voltage_variation:
+        table: 18
+        name: DC mains voltage variation
+        reference_section: D 11 §11.1
+      d011_t19_ripple_dc_mains:
+        table: 19
+        name: Ripple on DC mains power
+        reference_section: D 11 §11.1
+      d011_t20_ac_mains_voltage_variation:
+        table: 20
+        name: AC mains voltage variation
+        reference_section: D 11 §11.2
+      d011_t21_ac_mains_frequency_variation:
+        table: 21
+        name: AC mains frequency variation
+        reference_section: D 11 §11.2
+      d011_t22_dc_mains_dips_interruptions:
+        table: 22
+        name: DC mains voltage dips, short interruptions, voltage variations
+        reference_section: D 11 §11.3
+      d011_t23_ac_mains_dips_interruptions:
+        table: 23
+        name: AC mains voltage dips, short interruptions, reductions
+        reference_section: D 11 §11.3
+      d011_t24_ac_mains_harmonics:
+        table: 24
+        name: AC mains frequency harmonics
+        reference_section: D 11 §11.3
+      d011_t25_vlf_lf_disturbances_mains:
+        table: 25
+        name: VLF and LF disturbances on AC and DC mains
+        reference_section: D 11 §11.3
+      d011_t26_bursts_ac_dc_mains:
+        table: 26
+        name: Bursts (transients) on AC and DC mains
+        reference_section: D 11 §11.3
+      d011_t27_surges_ac_dc_mains:
+        table: 27
+        name: Surges on AC and DC mains power lines
+        reference_section: D 11 §11.3
+      d011_t28_bursts_signal_data_control:
+        table: 28
+        name: Bursts (transients) on signal, data and control lines
+        reference_section: D 11 §11.4
+      d011_t29_surges_signal_data_control:
+        table: 29
+        name: Surges on signal, data and control lines
+        reference_section: D 11 §11.4
+  radiated_electromagnetic:
+    description: D 11 §12 — Electromagnetic fields
+    entries:
+      d011_t30_mains_power_frequency_em_field:
+        table: 30
+        name: AC mains power frequency electromagnetic field
+        reference_section: D 11 §12.1
+      d011_t31_conducted_rf_currents:
+        table: 31
+        name: Conducted (common mode) currents generated by RF EM fields
+        reference_section: D 11 §12.2
+      d011_t32_rf_em_fields_specific:
+        table: 32
+        name: RF EM fields (specific origin)
+        reference_section: D 11 §12.2
+      d011_t33_rf_em_fields_general:
+        table: 33
+        name: RF EM fields (general origin)
+        reference_section: D 11 §12.2
+      d011_t34_rf_em_fields_digital_radio:
+        table: 34
+        name: RF EM fields (digital radio telephones and portable radio transceivers)
+        reference_section: D 11 §12.2
+      d011_t35_electrostatic_discharges:
+        table: 35
+        name: Electrostatic discharges
+        reference_section: D 11 §12.3
+  battery:
+    description: D 11 §13-§14 — Battery tests (general and road vehicle)
+    entries:
+      d011_t36_general_battery:
+        table: 36
+        name: General battery tests (disposable / rechargeable)
+        reference_section: D 11 §13
+      d011_t37_road_vehicle_battery_voltage_variation:
+        table: 37
+        name: Voltage variations of a road vehicle battery
+        reference_section: D 11 §14.2
+      d011_t38_road_vehicle_transient_supply_lines:
+        table: 38
+        name: Electrical transient conduction along supply lines (external 12V/24V)
+        reference_section: D 11 §14.2
+      d011_t39_road_vehicle_transient_other_lines:
+        table: 39
+        name: Electrical transient conduction via lines other than supply (12V/24V)
+        reference_section: D 11 §14.2
+      d011_t40_battery_voltage_cranking:
+        table: 40
+        name: Battery voltage variations during cranking
+        reference_section: D 11 §14.2
+      d011_t41_load_dump:
+        table: 41
+        name: Load dump test
+        reference_section: D 11 §14.2
+
+normalization_map:
+  description: |
+    Maps non-canonical surface forms seen in cert data to canonical D 11 enum
+    values. Free-text humidity descriptions in older certs should be normalized
+    via this map during migration.
+  condensing: H2
+  non-condensing: H1
+  "non-condensing, indoor": H1
+  "condensing, outdoor": H3
+
+definitions:
+  ClimaticClass:
+    description: D 11 §7.2 table 1 — climatic environment class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: H1
+            description: Temperature-controlled enclosed (weather protected) locations
+          - const: H2
+            description: Enclosed (weather protected) locations without climate control; subject to condensation
+          - const: H3
+            description: Open-air locations excluding extreme climate zones (polar/desert)
+
+  MechanicalClass:
+    description: D 11 §7.3 table 2 — mechanical environment class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: M1
+            description: Locations with vibration and shocks of low significance
+          - const: M2
+            description: Significant or high levels of vibration and shock
+          - const: M3
+            description: High or very high vibration and shock (e.g. mounted on machines)
+
+  EMClass:
+    description: D 11 §7.4 table 3 — electromagnetic environment class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: E1
+            description: Residential, commercial, and light industrial environments
+          - const: E2
+            description: Industrial buildings
+          - const: E3
+            description: Vehicle battery-powered instruments in general-public environments
+
+  TemperatureRange:
+    description: Ambient operating temperature range, structured with unit.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        unit:
+          default:
+            unit_id: u:degree_Celsius
+
+  CheckingFacilityType:
+    description: D 11 §3.19 / §5.3.1 — checking facility type.
+    type: string
+    oneOf:
+    - const: P
+      description: Type P — permanent checking facility
+    - const: I
+      description: Type I — intermittent checking facility
+    - const: N
+      description: Type N — non-durable / no checking facility
+
+  TestLevelIndex:
+    description: D 11 §7 test level index (1-5).
+    type: integer
+    minimum: 1
+    maximum: 5
+
+  TestReference:
+    description: Reference to a D 11 performance test with optional level and notes.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { $ref: "#/definitions/TestLevelIndex" }
+      notes:            { type: string }

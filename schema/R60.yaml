@@ -1,0 +1,316 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R60.yaml"
+title: "OIML R60 (Load Cells) Certificate Schema"
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:          { type: string, const: R60 }
+      edition:
+        type: integer
+        oneOf:
+        - const: 2017
+          description: Edition 2017
+        - const: 2021
+          description: Edition 2021
+        - const: 1
+          description: Legacy edition 1 (pre-2017 numbering)
+      amendment:   { type: [integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        items:
+          type: string
+          description: |
+            R60 accuracy class or classification symbol. Bare letters (A, B, C, D)
+            are the base class; full symbols (C3, C4MI7.5, D1, etc.) per R60-1
+            §5.1.6 figure 4 encode class + max intervals (thousands) + optional
+            multi-interval marker.
+          anyOf:
+          - enum: [A, B, C, D, "N/A"]
+          - pattern: '^[ABCD]\d+(MI\d+(\.\d+)?)?$'
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  d011_tests_applicable:
+    description: Tests mandated by R60-2 §2.10 type evaluation.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  AccuracyClass:
+    description: OIML R60-1 §5.1.1 load cell accuracy class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          oneOf:
+          - type: string
+            oneOf:
+            - const: A
+              description: Class A — highest precision, ≥ 50 000 intervals
+            - const: B
+              description: Class B — high precision, 5 000–100 000 intervals
+            - const: C
+              description: Class C — medium precision, 500–10 000 intervals
+            - const: D
+              description: Class D — lower precision, 100–1 000 intervals
+            - const: "N/A"
+              description: Not applicable
+          - type: array
+            description: Multi-class load cell (e.g. certified for both C and D).
+            minItems: 1
+            items:
+              type: string
+              enum: [A, B, C, D]
+
+  LoadCellCharacterization:
+    description: |
+      R60-1 §3.2 load cell characterization. "N/A" is allowed for cases where
+      the load cell has no meaningful characterization. Accepts either a bare
+      canonical token string or a StructuredValue wrapping it (normalized form).
+    oneOf:
+    - type: string
+      oneOf:
+      - const: analog_passive
+        description: Analogue-passive load cell
+      - const: analog_active
+        description: Analogue-active load cell
+      - const: digital_passive
+        description: Digital-passive load cell
+      - const: digital_active
+        description: Digital-active load cell
+      - const: "N/A"
+        description: Not applicable
+    - allOf:
+      - $ref: "_core.yaml#/definitions/StructuredValue"
+      - properties:
+          value:
+            type: string
+            oneOf:
+            - const: analog_passive
+              description: Analogue-passive load cell
+            - const: analog_active
+              description: Analogue-active load cell
+            - const: digital_passive
+              description: Digital-passive load cell
+            - const: digital_active
+              description: Digital-active load cell
+            - const: "N/A"
+              description: Not applicable
+
+  ClassificationSymbol:
+    description: |
+      R60-1 §5.1.6 figure 4 classification symbol encoding accuracy class +
+      maximum number of load cell intervals (in thousands) +
+      optional Multi-Interval marker, load direction (↑ tension / ↓ compression),
+      humidity marking (NH/SH/CH), and special temperature limits.
+    type: string
+    pattern: '^[ABCD]\d+(MI\d+(\.\d+)?)?(\s*[↑↓]+\s*)?(\s*(NH|SH|CH))?(\s*-?\d+/-?\d+)?$'
+    examples:
+    - C3
+    - C2 NH
+    - "C3 ↑↓ -5/30"
+    - C3MI7.5
+
+  HumidityMarking:
+    description: |
+      R60-1 §5.1.6 figure 4 load-cell humidity marking. Distinct from
+      D 11 climatic_environment_class (H1/H2/H3) which describes the
+      instrument's installed location rather than the load cell itself.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: CH
+            description: Condensing humidity — tested per D 11 table 9 (damp heat, cyclic)
+          - const: NH
+            description: Not tested for humidity
+          - const: SH
+            description: Stable humidity — tested per D 11 table 8 (damp heat, steady state)
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category: { type: string, const: "Load cell" }
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation:
+        oneOf:
+        - $ref: "#/definitions/LoadCellCharacterization"
+        - type: "null"
+      description: { type: string }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level: { $ref: "#/definitions/TypeLevel" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    type: object
+    properties:
+      accuracy_class:                    { $ref: "#/definitions/AccuracyClass" }
+      classification_symbol:             { $ref: "#/definitions/ClassificationSymbol" }
+      humidity_class:                    { $ref: "#/definitions/HumidityMarking" }
+      temperature_range:                 { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      electromagnetic_environment_class: { $ref: "_modules/d011_environmental.yaml#/definitions/EMClass" }
+      mechanical_environment_class:      { $ref: "_modules/d011_environmental.yaml#/definitions/MechanicalClass" }
+      maximum_capacity:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_dead_load:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_number_of_load_cell_intervals_nlc: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ratio_y_emax_over_vmin:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ratio_z_emax_over_2dr:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      apportioning_factor_plc:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      rated_output:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      input_impedance:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      output_impedance:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      safe_overload:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      safe_overload_reference:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      recommended_excitation:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      excitation_maximum:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      transducer_material:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      atmospheric_protection:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      characterization_of_load_cell_capabilities: { $ref: "#/definitions/LoadCellCharacterization" }
+      number_of_counts_for_emax:         { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification:           { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit:      { $ref: "_units.yaml#/definitions/Unit" }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute: { type: string }
+      axis:      { oneOf: [ { type: string }, { type: "null" } ] }
+      unit:      { $ref: "_units.yaml#/definitions/Unit" }
+      values:
+        type: array
+        items:
+          type: object
+          anyOf:
+          - required: [condition, value]
+            properties:
+              condition: { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+          - required: [model, value]
+            properties:
+              model:     { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+allOf:
+- description: |
+    Conditional applicability of D 11 damp heat tests (R60-2 §2.10.6):
+    t08 (steady state) applies iff humidity_class = SH;
+    t09 (cyclic) applies iff humidity_class = CH.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class: { const: SH }
+  then:
+    properties:
+      d011_tests_applicable: { contains: { properties: { test_id: { const: d011_t08_damp_heat_steady_state } } } }
+- if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class: { const: CH }
+  then:
+    properties:
+      d011_tests_applicable: { contains: { properties: { test_id: { const: d011_t09_damp_heat_cyclic } } } }
+- description: |
+    Conducted/radiated EM tests apply only to analogue-active and
+    digital-active load cells per R60-2 §2.10.7.
+  if:
+    properties:
+      certified_type:
+        properties:
+          module_designation: { enum: [analog_passive, digital_passive] }
+  then:
+    properties:
+      d011_tests_applicable:
+        not:
+          contains:
+            properties:
+              test_id:
+                enum:
+                - d011_t18_dc_mains_voltage_variation
+                - d011_t20_ac_mains_voltage_variation
+                - d011_t22_dc_mains_dips_interruptions
+                - d011_t23_ac_mains_dips_interruptions
+                - d011_t26_bursts_ac_dc_mains
+                - d011_t27_surges_ac_dc_mains
+                - d011_t28_bursts_signal_data_control
+                - d011_t29_surges_signal_data_control
+                - d011_t33_rf_em_fields_general
+                - d011_t35_electrostatic_discharges

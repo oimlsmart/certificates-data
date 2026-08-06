@@ -1,0 +1,142 @@
+# OIML-CS Certificate — Common Layered Schema (data contract)
+#
+# This is the canonical structure that EVERY per-cert YAML conforms to.
+# Per-R vocabularies (schema/vocabularies/R<NN>.yaml) extend this with
+# R-specific characteristic labels and matrix axes.
+#
+# Sections marked `[required]` must be present in every cert YAML (even if
+# the underlying value is null). Sections marked `[optional]` are omitted
+# entirely when not applicable (e.g. a cert with no model matrix omits
+# `characteristics.model_level`).
+#
+# Field naming: snake_case. Canonical labels in `characteristics.*` come from
+# the per-R vocabulary — no LaTeX, no footnote markers, no trailing punctuation.
+
+# ─── Provenance ──────────────────────────────────────────────────────────
+_meta:                                # [required] — from manifest, for tooling
+  cert_id: int                        # manifest row id
+  num: string                         # OIML number, e.g. "R60/2021-A-DE1-24.01"
+  applicant: string | null
+  issuing_year: string | null
+  status: string                      # "Valid" | "Suspended" | "Withdrawn"
+  issuer: string | null               # "DE1", "NL1", etc.
+  recommendation: string              # "R60" (canonical, no leading zeros)
+  edition_year: int
+  extraction_method: string           # "glm-ocr" | "glm-4.5v" | "error"
+  extractor_prompt_version: string    # which prompt produced this YAML
+  source_pdf: string                  # relative path
+
+# ─── Document-level ──────────────────────────────────────────────────────
+certificate:                          # [required]
+  number: string                      # canonical form, e.g. "R60/2021-A-DE1-24.01"
+  scheme: enum(A, B) | null           # OIML-CS scheme
+  project_number: string | null
+  page_total: int | null
+  member_state: string | null         # e.g. "Germany", "The Netherlands"
+  date_issued: string | null          # ISO if parseable, else raw "24.10.2024"
+  oiml_issuer_id: string | null       # "DE1", "NL1"
+
+# ─── Parties ─────────────────────────────────────────────────────────────
+issuing_authority:                    # [required]
+  name: string
+  address_lines: string[]
+  person_responsible: string | null
+  person_title: string | null
+  phone: string | null
+  email: string | null
+  website: string | null
+  oiml_issuer_id: string | null
+
+applicants:                           # [required] — list, usually 1 entry
+  - name: string
+    address_lines: string[]
+
+manufacturers:                        # [required] — list, often 1, can be many
+  - name: string
+    address_lines: string[]
+
+# ─── Certified Type (the "what") ────────────────────────────────────────
+certified_type:                       # [required]
+  category: string                    # "Load cell", "Indicator", "Measuring system", ...
+  type_designations: string[]         # ["RCMF"], or ["CI-200D","CI-201D",...]
+  module_designation: string | null   # "Analog load cell" | "Not applicable" | null
+  description: string | null          # free-text instrument description if any
+
+# ─── Model family (optional — when cert covers >1 model) ────────────────
+model_family:                         # [optional — omit for single-model certs]
+  family_name: string | null          # "ET series", "KiTraffic", ...
+  models:                             # one entry per model variant
+    - model_id: string                # "G1.6", "A-100", "CI-200D", ...
+      label: string | null            # human label if different from model_id
+      attributes:                     # model-specific row in the matrix
+        <canonical_label>: <value>
+
+# ─── Components (optional — for multi-part instruments) ─────────────────
+components:                           # [optional — omit for simple instruments]
+  - role: string                      # "Measuring sensor", "Pulser", "Transmitter", ...
+    type_designations: string[]       # 1 or more (multiple = alternatives)
+    alternatives: enum(OR, AND) | null  # "OR" = pick one, "AND" = all included
+    characteristics:                  # component-specific attributes
+      <canonical_label>: <value>
+
+# ─── Characteristics (the big one — explicit scope) ─────────────────────
+characteristics:                      # [required]
+  type_level:                         # attributes that apply to the whole cert
+    <canonical_label>:
+      value: <value>
+      unit: string | null
+      footnote_markers: string[]      # e.g. ["1)", "2)"] if value references footnotes
+
+  model_level:                        # [optional] — matrix: attribute × model
+    - attribute: <canonical_label>    # "maximum_capacity"
+      unit: string | null             # "kg"
+      values:
+        - model: string               # "G1.6"
+          value: <value>
+          footnote_markers: string[]
+        - model: "G2.5"
+          value: <value>
+
+  config_level:                       # [optional] — matrix: attribute × config axis
+    - attribute: <canonical_label>    # "accuracy_class_total_load"
+      axis: string                    # "number_of_sensor_rows"
+      values:
+        - condition: string           # "2 rows"
+          value: <value>
+        - condition: "3-4 rows"
+          value: <value>
+
+# ─── Matrix tables (preserved structured data) ──────────────────────────
+matrix_tables:                        # [optional] — when source has multi-dim tables
+  - name: string                      # "Q-values by model size"
+    description: string | null
+    columns: string[]                 # ["Size", "Qmax_m3_per_h", "Qt_m3_per_h", ...]
+    rows:                             # list of objects, one per row
+      <column_name>: <cell_value>
+    footnotes: string[]               # footnotes attached to this table
+
+# ─── Recommendation ──────────────────────────────────────────────────────
+recommendation:                       # [required]
+  id: string                          # "R60"
+  edition: int                        # 2021
+  amendment: string | null            # "Including Amendment 2014"
+  scheme: enum(A, B) | null
+  accuracy_classes: string[]          # ["C3"], ["III", "IIII"], etc.
+
+# ─── Tests & documentation ──────────────────────────────────────────────
+test_reports:                         # [optional] — list
+  - id: string                        # "KBS2-4.3-TER-06.02.03/0341#0001-0015"
+    date: string | null               # "24.10.2024"
+    pages: int | null
+    role: enum(type_evaluation_report, test_report, documentation_file, evaluation_report)
+
+# ─── Revision history ───────────────────────────────────────────────────
+revision_history:                     # [optional] — list, often 1 entry
+  - revision: string                  # "0", "1", "Initial"
+    date: string
+    changes: string
+
+# ─── Footnotes (referenced from values) ─────────────────────────────────
+footnotes:                            # [optional]
+  - marker: string                    # "1)", "a)", "^{(1)}$"
+    text: string

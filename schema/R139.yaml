@@ -1,0 +1,433 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R139.yaml"
+title: "OIML R139 (Compressed gaseous fuel dispensers — CNG and hydrogen) Certificate Schema"
+description: |
+  Schema for OIML R139:2018 measuring systems for compressed gaseous fuels
+  (CNG and hydrogen) for vehicles. The Recommendation defines accuracy
+  classes 1.5/2/4. Both single and multi-class instruments appear in the
+  dataset, so the type_level accuracy_class accepts both a single token and
+  a list of tokens (one per measuring range).
+
+  Edition 2018. Categories span several instrument roles: dispensers, measuring
+  sensors/transducers (typically Coriolis), calculating/indicating devices,
+  metering modules, and measuring systems. The Recommendation id drifts
+  between "R139" (umbrella, 33/39) and "R139-1" (hydrogen-specific, 6/39);
+  both are admitted pending canonicalization.
+
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:
+    description: |
+      Manufacturer parties. One cert (`r139-2018-nl1-2022-05-rev0.yaml`) has
+      `manufacturers: []`; the local override permits this, unlike the
+      `_core.yaml` PartyList which requires minItems: 1.
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Party" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:
+        description: |
+          Recommendation id. The dataset drifts between "R139" (umbrella,
+          33/39) and "R139-1" (hydrogen-specific, 6/39). Both are admitted;
+          downstream tooling should treat them as the same Recommendation.
+        type: string
+        enum: [R139, R139-1]
+      edition:     { type: integer, const: 2018 }
+      amendment:   { type: [integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        description: |
+          OIML R139:2018 accuracy classes. May be empty for calculating-only
+          devices (2/39 FillnDrive certs declare `accuracy_classes: []` with
+          `_note: "Calculating device only"`).
+        type: array
+        items: { $ref: "#/definitions/AccuracyClassValue" }
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  d011_tests_applicable:
+    description: |
+      Tests mandated by R139:2018 type evaluation (D 11:2013 subset). R139
+      dispensers are installed outdoors and exposed to vehicle-borne EM
+      disturbances; the default list reflects the climatic, conducted, and
+      radiated tests typically applied.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  AccuracyClassValue:
+    description: |
+      OIML R139:2018 §3.2 accuracy class token. R139 uses decimal classes;
+      classes 1.5/2/4 appear in the dataset (class 1 is also admitted for
+      completeness per the Recommendation).
+    type: string
+    oneOf:
+    - const: "1"
+      description: Class 1 — highest precision (rare in practice)
+    - const: "1.5"
+      description: Class 1.5 — high precision
+    - const: "2"
+      description: Class 2 — medium precision (most common)
+    - const: "4"
+      description: Class 4 — coarse precision
+    - const: "N/A"
+      description: Not applicable
+
+  AccuracyClass:
+    description: |
+      StructuredValue-wrapped accuracy class token. R139 instruments may be
+      multi-accuracy (one class per measuring range), so `value` accepts
+      either a single enum token or an array of tokens. Mirrors
+      `recommendation.accuracy_classes`.
+
+      Defined standalone rather than extending `_core.yaml#/StructuredValue`
+      because the array form of `value` is incompatible with StructuredValue's
+      `{min, max}` value branch.
+    type: object
+    properties:
+      value:
+        description: |
+          Single class token, or array of tokens for multi-accuracy
+          instruments. The same data may also carry `_raw: "2 or 4"` or
+          `_note: "Calculating device only"` provenance keys; these are
+          tolerated by `additionalProperties: true` on the parent.
+        oneOf:
+        - $ref: "#/definitions/AccuracyClassValue"
+        - type: "null"
+        - type: array
+          items: { $ref: "#/definitions/AccuracyClassValue" }
+      unit_symbol:      { type: [string, "null"] }
+      unit_id:          { type: [string, "null"] }
+      footnote_markers:
+        type: array
+        items: { type: string }
+    additionalProperties: true
+
+  TemperatureRangeR139:
+    description: |
+      Ambient or product temperature range for R139. The dataset has three
+      value shapes: scalar range `{min, max}` (most common), model-conditional
+      matrix `{CNGMass: {min, max}, CNG050: {min, max}}` (NL1 multi-variant
+      certs), and free-text notes ("Depending on flow sensor used").
+
+      Defined standalone rather than extending `_core.yaml#/StructuredValue`
+      because the model-conditional form is incompatible with StructuredValue's
+      `{min, max}` value branch.
+    type: object
+    properties:
+      value:
+        oneOf:
+        - type: [number, string, "null"]
+        - type: object
+          properties:
+            min: { type: [number, string, "null"] }
+            max: { type: [number, string, "null"] }
+          additionalProperties: false
+          description: Scalar range value (min/max form).
+        - type: object
+          description: Model-conditional matrix keyed by model_id.
+          additionalProperties:
+            type: object
+            properties:
+              min: { type: [number, string, "null"] }
+              max: { type: [number, string, "null"] }
+            additionalProperties: true
+      unit_symbol:      { type: [string, "null"] }
+      unit_id:          { type: [string, "null"] }
+      footnote_markers:
+        type: array
+        items: { type: string }
+    additionalProperties: true
+
+  FlowDirection:
+    description: |
+      R139:2018 §3.x flow direction. Coriolis-based sensors may be
+      bi-directional; most dispensers are unidirectional.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          enum: [unidirectional, bi-directional, bidirectional, null]
+
+  PowerSupplyType:
+    description: |
+      R139:2018 §3.x power supply type. The dataset uses "AC", "DC", and
+      "AC/DC" (dual-supply instruments).
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          enum: [AC, DC, "AC/DC", null]
+
+  IntendedFor:
+    description: |
+      R139:2018 §3.x intended measured gas. CNG and hydrogen are the
+      canonical cases; the dataset records "Hydrogen(H2)", "CNG",
+      "Compressed Natural Gas (CNG)", and similar free-form tokens.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+
+  EnvironmentalClasses:
+    description: |
+      R139:2018 §3.x environmental class bundle. Many NL1 certs record a
+      single structured value with `{mechanical: M2, electromagnetic: E2}`
+      rather than the two separate fields `mechanical_environment_class`
+      and `electromagnetic_environment_class`. Both representations are
+      admitted; the GLM emits `_decomposed: true` on the bundled form.
+
+      Defined standalone rather than extending `_core.yaml#/StructuredValue`
+      because the bundled `{mechanical, electromagnetic, climatic}` object
+      shape is incompatible with StructuredValue's `{min, max}` value branch.
+    type: object
+    properties:
+      value:
+        oneOf:
+        - type: [string, "null"]
+        - type: object
+          properties:
+            mechanical:      { type: [string, "null"], enum: [M1, M2, M3, null] }
+            electromagnetic: { type: [string, "null"], enum: [E1, E2, E3, null] }
+            climatic:        { type: [string, "null"], enum: [H1, H2, H3, null] }
+          additionalProperties: true
+      unit_symbol:      { type: [string, "null"] }
+      unit_id:          { type: [string, "null"] }
+      footnote_markers:
+        type: array
+        items: { type: string }
+    additionalProperties: true
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category:
+        description: |
+          OIML R139:2018 instrument category. The dataset has heavy variation:
+          dispenser variants ("CNG dispenser", "Compressed gas (CG) dispenser",
+          "Compressed gas dispenser for hydrogen"), sensor variants
+          ("Measurement sensor", "Measurement sensor (Coriolis sensor)",
+          "Coriolis meter", "Measurement transducer"), and assembly variants
+          ("Metering module", "Measuring system", "Fuel dispenser"). All
+          refer to one of the four R139 instrument roles: dispenser, sensor,
+          transducer, calculating/indicating device. Free-form strings are
+          admitted pending canonicalization.
+        type: string
+      type_designations:
+        type: array
+        items: { type: string }
+      module_designation:
+        description: |
+          R139 does not classify instruments by a module designation. The
+          dataset records "Not applicable" (15/39), null (21/39), or a
+          free-form description (3/39 metering-module certs).
+        type: [string, "null"]
+      description: { type: [string, "null"] }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level: { $ref: "#/definitions/TypeLevel" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    description: |
+      R139:2018 type-level characteristics. The dataset uses ~15 distinct
+      synonyms for `maximum_flow_rate` (including `nominal_maximum_capacity`,
+      `flow_rate`, `flow_rate_range`) and ~7 for `temperature_range`
+      (including `gas_temperature`, `ambient_temperature_range_cdwxsb`).
+      The schema documents the canonical names and accepts legacy
+      issuer-specific labels via `additionalProperties: true`.
+    type: object
+    properties:
+      accuracy_class:                       { $ref: "#/definitions/AccuracyClass" }
+      temperature_range:                    { $ref: "#/definitions/TemperatureRangeR139" }
+      product_temperature_range:            { $ref: "#/definitions/TemperatureRangeR139" }
+      humidity_class:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      environmental_classes:                { $ref: "#/definitions/EnvironmentalClasses" }
+      environmental_class:                  { $ref: "#/definitions/EnvironmentalClasses" }
+      environmental_classification:         { $ref: "_core.yaml#/definitions/StructuredValue" }
+      electromagnetic_environment_class:    { $ref: "_modules/d011_environmental.yaml#/definitions/EMClass" }
+      mechanical_environment_class:         { $ref: "_modules/d011_environmental.yaml#/definitions/MechanicalClass" }
+      # Flow rates (canonical + synonyms)
+      maximum_flow_rate:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_flow_rate:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      flow_rate:                            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      flow_rate_range:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      nominal_maximum_capacity:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      nominal_maximum_capacity_qmax:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      nominal_minimum_capacity:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      nominal_minimum_capacity_qmin:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ratio_qmax_over_qmin:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Measured quantity
+      minimum_measured_quantity:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_measured_quantity_mmq:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_measured_quantity_cngmass:    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_measured_quantity_cng050:     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Pressure (canonical + synonyms)
+      maximum_pressure:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_pressure_of_gas:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_pressure_of_the_gas_pmax:     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_pressure_cngmass:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_pressure_cng050:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_operating_pressure:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_storage_pressure:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Gas
+      type_of_gas:                          { $ref: "#/definitions/IntendedFor" }
+      type_of_gas_to_be_measured:           { $ref: "#/definitions/IntendedFor" }
+      types_of_gas_or_mixtures_of_gas:      { $ref: "#/definitions/IntendedFor" }
+      intended_for:                         { $ref: "#/definitions/IntendedFor" }
+      intended_for_measurement:             { $ref: "#/definitions/IntendedFor" }
+      intended_for_measurement_of:          { $ref: "#/definitions/IntendedFor" }
+      intended_for_the_measurement_of:      { $ref: "#/definitions/IntendedFor" }
+      # Direction
+      flow_direction:                       { $ref: "#/definitions/FlowDirection" }
+      # Indication
+      maximum_mass_indication:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_quantity_indication:          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_volume_indication:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_unit_price:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_unit_price_indication:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_price_to_pay:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_price_indication:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Dispenser topology
+      maximum_number_of_nozzles:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_number_of_main_indicating_device:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_number_of_nozzles_connected_to_each_indicating_device: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      mass_meter_communication:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      output:                               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Power
+      power_supply_voltage:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_frequency:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_type:                    { $ref: "#/definitions/PowerSupplyType" }
+      # Software
+      software_identification:              { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+    additionalProperties: true
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute:    { type: string }
+      unit:         { $ref: "_units.yaml#/definitions/Unit" }
+      unit_symbol:  { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute:    { type: string }
+      axis:      { oneOf: [ { type: string }, { type: "null" } ] }
+      unit:         { $ref: "_units.yaml#/definitions/Unit" }
+      unit_symbol:  { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [condition, value]
+          properties:
+            condition: { type: string }
+            value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+allOf:
+- description: |
+    D 11 damp heat tests (§9.2) apply iff the dispenser is installed in a
+    humidity class warranting them. R139 dispensers are outdoor-installed
+    (D 11 H3), so both t08 (steady state) and t09 (cyclic) apply when the
+    `environmental_classes.value.climatic` field records H3.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              environmental_classes:
+                properties:
+                  value:
+                    properties:
+                      climatic: { const: H3 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains:
+          properties:
+            test_id: { const: d011_t09_damp_heat_cyclic }
+- description: |
+    Road-vehicle battery tests (D 11 tables 37-41) apply when the dispenser
+    is supplied from the vehicle's 12V/24V battery. R139 dispensers are
+    typically mains-powered, so these tests are not in the default list;
+    this rule fires when an issuer explicitly records `power_supply_type:
+    DC` (vehicle-battery powered).
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              power_supply_type:
+                properties:
+                  value: { const: DC }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains:
+          properties:
+            test_id: { const: d011_t37_road_vehicle_battery_voltage_variation }

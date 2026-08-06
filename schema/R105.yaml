@@ -1,0 +1,187 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R105.yaml"
+title: "OIML R105 (Direct Mass Flow Measurement) Certificate Schema"
+description: |
+  OIML R105 "Direct mass flow measurement — Coriolis meters". Covers direct mass
+  flow measuring systems using Coriolis effect (sensor + transmitter), per
+  R105-1 §3.1. The 1993 edition uses accuracy classes 0.3 / 0.5 / 1 / 1.5 / 2.
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:          { type: string, const: R105 }
+      edition:     { type: integer, enum: [1993] }
+      amendment:   { type: [string, integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        items:
+          oneOf:
+          - type: string
+          - type: number
+          - $ref: "#/definitions/AccuracyClass"
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  matrix_tables:         { $ref: "#/definitions/MatrixTableList" }
+  d011_tests_applicable:
+    description: Tests mandated by R105 type evaluation.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t16_vibration_sinusoidal }
+    - { test_id: d011_t17_mechanical_shock }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t30_mains_power_frequency_em_field }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  AccuracyClass:
+    description: |
+      OIML R105-1:1993 §3.2 direct mass flow meter accuracy class.
+      The 1993 edition used class 0.3; later drafts standardized on 0.5 minimum.
+      Both 0.3 and the modern classes are accepted.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          oneOf:
+          - const: "0.3"
+            description: Class 0.3 — highest precision (1993 edition only; dropped in later revisions)
+          - const: "0.5"
+            description: Class 0.5 — high precision
+          - const: "1"
+            description: Class 1 — medium precision
+          - const: "1.5"
+            description: Class 1.5 — medium precision
+          - const: "2"
+            description: Class 2 — lower precision
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category: { type: string }
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation: { type: [string, "null"] }
+      description: { type: [string, "null"] }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level:
+        type: object
+        additionalProperties: { $ref: "_core.yaml#/definitions/StructuredValue" }
+        properties:
+          accuracy_class:                          { $ref: "#/definitions/AccuracyClass" }
+          maximum_flow_rate:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+          minimum_flow_rate:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+          transitional_flow_rate:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+          maximum_pressure:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          minimum_pressure:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          cyclic_volume:                           { $ref: "_core.yaml#/definitions/StructuredValue" }
+          density_range:                           { $ref: "_core.yaml#/definitions/StructuredValue" }
+          measuring_range:                         { $ref: "_core.yaml#/definitions/StructuredValue" }
+          temperature_range:                       { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+          humidity_class:                          { $ref: "_modules/d011_environmental.yaml#/definitions/ClimaticClass" }
+          electromagnetic_environment_class:       { $ref: "_modules/d011_environmental.yaml#/definitions/EMClass" }
+          mechanical_environment_class:            { $ref: "_modules/d011_environmental.yaml#/definitions/MechanicalClass" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit_symbol: { type: [string, "null"] }
+      unit_id:    { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute: { type: string }
+      axis:      { oneOf: [ { type: string }, { type: "null" } ] }
+      unit_symbol: { type: [string, "null"] }
+      unit_id:    { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [condition, value]
+          properties:
+            condition: { type: string }
+            value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  MatrixTableList:
+    description: Preserved structured tables (e.g. flow-spec matrices).
+    type: array
+    items:
+      type: object
+      required: [name, columns, rows]
+      properties:
+        name:        { type: string }
+        description: { type: [string, "null"] }
+        columns:
+          type: array
+          items: { type: string }
+        rows:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        footnotes:
+          type: array
+          items: { type: string }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }

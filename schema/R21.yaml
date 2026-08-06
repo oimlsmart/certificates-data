@@ -1,0 +1,379 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R21.yaml"
+title: "OIML R21 (Taximeters) Certificate Schema"
+description: |
+  Schema for OIML R21:2007 taximeters. The Recommendation defines accuracy
+  classes 0.5/1/1.5/2 in the standard text, but no certificate in the
+  dataset (42/42) declares an accuracy class — the class is implicit in the
+  type approval and the `accuracy_classes[]` array is always empty. The
+  accuracy_class enum is therefore retained for completeness but the array
+  is not validated for non-emptiness.
+
+  Edition 2007. Category: "Taximeter".
+
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:          { type: string, const: R21 }
+      edition:     { type: integer, const: 2007 }
+      amendment:   { type: [integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        description: |
+          OIML R21:2007 accuracy classes. Always empty in the observed
+          dataset — accuracy is implicit in the type approval.
+        type: array
+        items: { $ref: "#/definitions/AccuracyClassValue" }
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  d011_tests_applicable:
+    description: |
+      Tests mandated by R21:2007 type evaluation (D 11:2013 subset). Taximeters
+      are vehicle-installed electronic instruments, so the road-vehicle battery
+      tests (D 11 tables 37-41) apply in addition to the standard electronic
+      instrument tests.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+    - { test_id: d011_t37_road_vehicle_battery_voltage_variation }
+    - { test_id: d011_t38_road_vehicle_transient_supply_lines }
+    - { test_id: d011_t39_road_vehicle_transient_other_lines }
+    - { test_id: d011_t41_load_dump }
+
+definitions:
+  IssuingAuthority:
+    description: Body that issued the certificate. Extends _core with fax field.
+    type: object
+    required: [name]
+    properties:
+      name:               { type: string }
+      address_lines:      { type: array, items: { type: string } }
+      person_responsible: { type: string }
+      person_title:       { type: string }
+      phone:              { type: string }
+      fax:                { type: string }
+      email:              { type: string }
+      website:            { type: string }
+      oiml_issuer_id:     { type: string }
+    additionalProperties: false
+
+  NullableEMClass:
+    description: D 11 §7.4 EM class extended with N/A and null for R21 cert data.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          oneOf:
+          - const: E1
+          - const: E2
+          - const: E3
+          - const: "N/A"
+          - const: "Not applicable"
+          - type: "null"
+
+  NullableMechanicalClass:
+    description: D 11 §7.3 mechanical class extended with N/A and null for R21 cert data.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          oneOf:
+          - const: M1
+          - const: M2
+          - const: M3
+          - const: "N/A"
+          - const: "Not applicable"
+          - type: "null"
+
+  AccuracyClassValue:
+    description: |
+      OIML R21:2007 accuracy class token. The standard defines classes 0.5, 1,
+      1.5, and 2; class 0 designates instruments without a class designation.
+      Not used in any observed certificate (42/42 have empty
+      `accuracy_classes[]`).
+    type: string
+    oneOf:
+    - const: "0"
+      description: Class 0 — instruments without accuracy class designation
+    - const: "0.5"
+      description: Class 0.5
+    - const: "1"
+      description: Class 1
+    - const: "1.5"
+      description: Class 1.5
+    - const: "2"
+      description: Class 2
+
+  AccuracyClass:
+    description: |
+      StructuredValue-wrapped accuracy class token. Mirrors
+      `recommendation.accuracy_classes` but used at type_level when an
+      issuer records the class against the characteristic.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value: { $ref: "#/definitions/AccuracyClassValue" }
+
+  DisplayType:
+    description: |
+      R21:2007 §3 taximeter display technology. The dataset records
+      `module_designation: "Not applicable"` or `"N/A"` for every R21 cert —
+      taximeters are not classified by display technology on the certificate.
+    type: [string, "null"]
+    enum:
+    - mechanical
+    - electromechanical
+    - electronic
+    - "Not applicable"
+    - "N/A"
+    - null
+
+  HumidityClass:
+    description: |
+      R21:2007 §3.2 climatic class — humidity marking. Issuers record this
+      as the free-text tokens "condensing" / "non-condensing" rather than
+      the D 11 H1/H2/H3 enum. Both forms are accepted; the d011 module
+      normalization map (`condensing`→H2, `non-condensing`→H1) maps these
+      to the canonical D 11 classes at view time.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          enum: [condensing, non-condensing, H1, H2, H3, "N/A", "Not applicable", null]
+
+  ClimaticIntendedLocation:
+    description: |
+      R21:2007 §3.2 climatic environment class — installed location of the
+      taximeter. Issuers record this as a free-text label ("closed", "open",
+      "non-condensing", "condensing") rather than a D 11 H-class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          enum: [closed, Closed, open, Open, indoor, outdoor, null]
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category:
+        description: |
+          OIML R21:2007 instrument category. The standard admits one value
+          ("Taximeter"); historical certs use this verbatim.
+        type: string
+        enum:
+        - Taximeter
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation:
+        $ref: "#/definitions/DisplayType"
+      description: { type: [string, "null"] }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level: { $ref: "#/definitions/TypeLevel" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    description: |
+      R21:2007 §4 type-level characteristics. Many issuers record the k-
+      constant and tariffs in `model_level` even for single-model certs;
+      this is a known data-quality gap and the schema does not enforce
+      one location over the other.
+
+      `additionalProperties: true` is intentional: the observed dataset
+      uses ~70 distinct labels (k_constant_range vs range_of_k_constant vs
+      taximeter_constant_k vs device_constant_range vs
+      distance_signal_generator_constant_k), and the schema documents the
+      canonical names while accepting legacy issuer-specific labels.
+    type: object
+    properties:
+      accuracy_class:                       { $ref: "#/definitions/AccuracyClass" }
+      temperature_range:                    { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      humidity_class:                       { $ref: "#/definitions/HumidityClass" }
+      electromagnetic_environment_class:    { $ref: "#/definitions/NullableEMClass" }
+      mechanical_environment_class:         { $ref: "#/definitions/NullableMechanicalClass" }
+      electromagnetic_immunity_class:       { $ref: "#/definitions/NullableEMClass" }
+      climatic_environment_intended_location: { $ref: "#/definitions/ClimaticIntendedLocation" }
+      climatic_environment_non_condensing:  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      climatic_environment_condensing:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      climatic_environment_temperature:     { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      climatic_condensing:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      climatic_temperature:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      climatic_temperature_range:           { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      # K-constant / device constant / distance-signal-generator constant (synonyms of one concept)
+      taximeter_constant_k:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      taximeter_constant_k_km_minus_1:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      k_constant_range:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      range_of_k_constant:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      range_k_constant:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      device_constant_range:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      range_device_constant:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k_range:  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k_resolution: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k_km_minus_1:       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k_km_minus_1_range: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_k_km_minus_1_resolution: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_signal_generator_constant_resolution:       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      device_constant_resolution:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      resolution_device_constant:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      resolution_k_constant:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Pulse interface
+      pulse_voltage_amplitude:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_voltage_low:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_voltage_high:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_voltage_amplitude_low:          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_voltage_amplitude_high:         { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_voltage_amplitude_low_high:     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pulse_frequency:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_pulse_width:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_measuring_signal_frequency:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Tariffs
+      time_tariff:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_range:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_resolution:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_cu_per_hour:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_cu_per_h:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_cu_per_h_range:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      time_tariff_cu_per_h_resolution:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff_range:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff_resolution:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff_cu_per_km:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff_cu_per_km_range:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      distance_tariff_cu_per_km_resolution: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      cu_currency_unit:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Power supply
+      power_supply_voltage:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_type:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      voltage_supply_range:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Software
+      software_identification:              { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+      software_identification_version:      { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+      software_release_name:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_checksum:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      crc_checksum_value:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_version_tx80_box:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_checksum_tx80_box:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_version_skyglass:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_checksum_skyglass:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification_terminal_version:  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification_terminal_checksum: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification_mcu_version:  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification_mcu_checksum: { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Locales
+      country_language:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+    additionalProperties: true
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute:    { type: string }
+      unit:         { $ref: "_units.yaml#/definitions/Unit" }
+      unit_symbol:  { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute:    { type: string }
+      axis:         { oneOf: [ { type: string }, { type: "null" } ] }
+      unit:         { $ref: "_units.yaml#/definitions/Unit" }
+      unit_symbol:  { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          anyOf:
+          - required: [condition, value]
+            properties:
+              condition: { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+          - required: [model, value]
+            properties:
+              model:     { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+allOf:
+- description: |
+    Road-vehicle battery tests (D 11 tables 37-41) apply when the taximeter
+    is supplied from the vehicle's 12V/24V battery (the typical case for
+    a taximeter). The schema mandates the battery-variation test (t37);
+    if `power_supply_type` is "VDC" or "V DC" the test must appear in
+    `d011_tests_applicable`.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              power_supply_type:
+                properties:
+                  value: { enum: [VDC, "V DC", DC, vehicle_battery] }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains:
+          properties:
+            test_id: { const: d011_t37_road_vehicle_battery_voltage_variation }

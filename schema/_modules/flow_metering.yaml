@@ -1,0 +1,66 @@
+# Module: flow_metering
+#
+# Flow-rate and pressure characteristics for fluid/gas measuring systems.
+#
+# Used by: R31 (diaphragm gas meters), R50 (continuous totalising), R85
+#          (level gauges — partial), R107 (liquid measuring systems),
+#          R117 (liquid measuring systems, new), R126 (ethanol), R137 (gas meters),
+#          R139 (fuel dispensers)
+
+characteristics:
+  maximum_flow_rate:
+    description: Maximum flow rate (Qmax)
+    type: range
+    common_units: [m3/h, L/min, kg/h]
+    synonyms:
+      - maximum_flow_rate_qmax
+      - qmax
+      - q_max
+      - min_maximum_flow_rate
+      - max_flow_rate
+      - flow_rate_maximum
+
+  minimum_flow_rate:
+    description: Minimum flow rate (Qmin)
+    type: range
+    common_units: [m3/h, L/min, kg/h]
+    synonyms:
+      - minimum_flow_rate_qmin
+      - qmin
+      - q_min
+      - min_flow_rate
+      - flow_rate_minimum
+
+  transitional_flow_rate:
+    description: Transitional flow rate (Qt)
+    type: numeric
+    common_units: [m3/h, L/min]
+    synonyms:
+      - transitional_flow_rate_qt
+      - qt
+      - q_t
+
+  maximum_pressure:
+    description: Maximum working pressure (Pmax)
+    type: numeric
+    common_units: [Pa, kPa, MPa, bar, mbar]
+    synonyms:
+      - maximum_pressure_pmax
+      - pmax
+      - maximum_working_pressure
+
+  minimum_pressure:
+    description: Minimum working pressure (Pmin)
+    type: numeric
+    common_units: [Pa, kPa, MPa, bar, mbar]
+    synonyms:
+      - minimum_pressure_pmin
+      - pmin
+
+  cyclic_volume:
+    description: Cyclic volume per revolution (gas meters)
+    type: numeric
+    unit_symbol: dm3
+    synonyms:
+      - cyclic_volume_v
+      - cyclic_volume_of_a_gas_volume_meter

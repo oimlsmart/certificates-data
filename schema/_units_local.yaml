@@ -1,0 +1,352 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/_units_local.yaml"
+title: "OIML Local Unit Extensions"
+description: |
+  Compound and count units used in OIML certificates that are NOT in the
+  upstream unitsdb. Each entry follows unitsdb's schema pattern (root_units
+  composition with prefix_reference/unit_reference/power) so it can be
+  upstreamed verbatim when stable.
+
+  Per-Recommendation schemas (R<NN>.yaml) reference these via the `unit:`
+  field on StructuredValue. The unit_id values here are namespaced as
+  `u:<name>` to match unitsdb convention.
+
+  Loaded via the `unitsdb` Ruby gem at runtime, so the gem's full API
+  (Database.from_db, find_by_symbol, root_units composition) works for
+  these local entries too.
+
+# Compound units — defined via unitsdb root_units composition pattern.
+# Each factor has: power (1=positive, -1=inverse, etc.), optional
+# prefix_reference (SI prefix), and unit_reference (unitsml base unit ID).
+compounds:
+
+  u:gram_per_liter:
+    names:
+    - { value: "gram per liter", lang: en }
+    - { value: "gramme par litre", lang: fr }
+    short: gram_per_liter
+    symbols:
+    - { unicode: "g/L", ascii: "g/L", id: "g/L" }
+    - { unicode: "g·L⁻¹", ascii: "g*L^-1", id: "g_per_liter" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:gram } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:liter } }
+    quantity_references:
+    - { type: unitsml, id: q:mass_concentration }
+
+  u:milligram_per_liter:
+    names:
+    - { value: "milligram per liter", lang: en }
+    short: milligram_per_liter
+    symbols:
+    - { unicode: "mg/L", ascii: "mg/L", id: "mg/L" }
+    - { unicode: "mg·L⁻¹", ascii: "mg*L^-1", id: "mg_per_liter" }
+    root_units:
+    - { power: 1, prefix_reference: { type: unitsml, id: p:milli }, unit_reference: { type: unitsml, id: u:gram } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:liter } }
+    quantity_references:
+    - { type: unitsml, id: q:mass_concentration }
+
+  u:meter_per_minute:
+    names:
+    - { value: "meter per minute", lang: en }
+    short: meter_per_minute
+    symbols:
+    - { unicode: "m/min", ascii: "m/min", id: "m/min" }
+    - { unicode: "m·min⁻¹", ascii: "m*min^-1", id: "m_per_min" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:meter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:minute } }
+    quantity_references:
+    - { type: unitsml, id: q:speed }
+    notes: "Conveyor belt speed (R51 catchweighing, R129 multidim)."
+
+  u:standard_cubic_meter:
+    names:
+    - { value: "standard cubic meter", lang: en }
+    short: standard_cubic_meter
+    symbols:
+    - { unicode: "Sm³", ascii: "Sm3", id: "Sm3" }
+    root_units:
+    - { power: 1, unit_reference: { type: unitsml, id: u:cubic_meter } }
+    notes: "Gas volume at standard conditions (15°C, 101.325 kPa). Used in R117 fuel dispensers, R137 gas meters."
+
+  u:normal_cubic_meter:
+    names:
+    - { value: "normal cubic meter", lang: en }
+    short: normal_cubic_meter
+    symbols:
+    - { unicode: "Nm³", ascii: "Nm3", id: "Nm3" }
+    root_units:
+    - { power: 1, unit_reference: { type: unitsml, id: u:cubic_meter } }
+    notes: "Gas volume at normal conditions (0°C, 101.325 kPa)."
+
+  u:cubic_centimeter_per_gram:
+    names:
+    - { value: "cubic centimeter per gram", lang: en }
+    short: cubic_centimeter_per_gram
+    symbols:
+    - { unicode: "cm³/g", ascii: "cm3/g", id: "cm3_per_g" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:cubic_centimeter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:gram } }
+    quantity_references:
+    - { type: unitsml, id: q:specific_volume }
+    notes: "Magnetic susceptibility unit (R111 weights)."
+
+  u:kilogram_per_standard_cubic_meter:
+    names:
+    - { value: "kilogram per standard cubic meter", lang: en }
+    short: kilogram_per_standard_cubic_meter
+    symbols:
+    - { unicode: "kg/Sm³", ascii: "kg/Sm3", id: "kg_per_Sm3" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:kilogram } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:standard_cubic_meter } }
+    quantity_references:
+    - { type: unitsml, id: q:mass_density }
+    notes: "Reference density for CNG/hydrogen (R117, R139)."
+
+  u:meter_per_square_millimeter:
+    names:
+    - { value: "meter per square millimeter", lang: en }
+    short: meter_per_square_millimeter
+    symbols:
+    - { unicode: "m/mm²", ascii: "m/mm2", id: "m_per_mm2" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:meter } }
+    - { power: -2, prefix_reference: { type: unitsml, id: p:milli }, unit_reference: { type: unitsml, id: u:meter } }
+    notes: "Cable length per cross-section area (load cell cabling)."
+
+  u:cubic_meter_per_hour:
+    names:
+    - { value: "cubic meter per hour", lang: en }
+    short: cubic_meter_per_hour
+    symbols:
+    - { unicode: "m³/h", ascii: "m3/h", id: "m3_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:cubic_meter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+    quantity_references:
+    - { type: unitsml, id: q:volume_flow_rate }
+
+  u:liter_per_minute:
+    names:
+    - { value: "liter per minute", lang: en }
+    short: liter_per_minute
+    symbols:
+    - { unicode: "L/min", ascii: "L/min", id: "L_per_min" }
+    - { unicode: "l/min", ascii: "l/min", id: "l_per_min" }
+    - { unicode: "lpm", ascii: "lpm", id: "lpm" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:liter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:minute } }
+    quantity_references:
+    - { type: unitsml, id: q:volume_flow_rate }
+
+  u:meter_per_hour:
+    names:
+    - { value: "meter per hour", lang: en }
+    short: meter_per_hour
+    symbols:
+    - { unicode: "m/h", ascii: "m/h", id: "m_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:meter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+
+  u:per_degree_Celsius:
+    names:
+    - { value: "per degree Celsius", lang: en }
+    short: per_degree_Celsius
+    symbols:
+    - { unicode: "/°C", ascii: "/degC", id: "per_degC" }
+    root_units:
+    - { power: -1, unit_reference: { type: unitsml, id: u:degree_Celsius } }
+    notes: "Thermal expansion coefficient (R117)."
+
+  u:impulse_per_cubic_meter:
+    names:
+    - { value: "impulse per cubic meter", lang: en }
+    short: impulse_per_cubic_meter
+    symbols:
+    - { unicode: "imp/m³", ascii: "imp/m3", id: "imp_per_m3" }
+    - { unicode: "P/m³", ascii: "P/m3", id: "P_per_m3" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:cubic_meter } }
+    notes: "OIML-specific: gas meter pulse constant."
+
+  u:impulse_per_kilometer:
+    names:
+    - { value: "impulse per kilometer", lang: en }
+    short: impulse_per_kilometer
+    symbols:
+    - { unicode: "imp/km", ascii: "imp/km", id: "imp_per_km" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: -1, prefix_reference: { type: unitsml, id: p:kilo }, unit_reference: { type: unitsml, id: u:meter } }
+    notes: "OIML-specific: taximeter distance constant."
+
+  u:impulse_per_kilowatt_hour:
+    names:
+    - { value: "impulse per kilowatt hour", lang: en }
+    short: impulse_per_kilowatt_hour
+    symbols:
+    - { unicode: "imp/kWh", ascii: "imp/kWh", id: "imp_per_kWh" }
+    - { unicode: "imp./kWh", ascii: "imp./kWh", id: "imp_dot_per_kWh" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:kilowatt_hour } }
+    notes: "OIML-specific: electricity meter constant."
+
+  u:cubic_meter_per_impulse:
+    names:
+    - { value: "cubic meter per impulse", lang: en }
+    short: cubic_meter_per_impulse
+    symbols:
+    - { unicode: "m³/imp", ascii: "m3/imp", id: "m3_per_imp" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:cubic_meter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:count } }
+
+  u:microvolt_per_verification_interval:
+    names:
+    - { value: "microvolt per verification interval", lang: en }
+    short: microvolt_per_verification_interval
+    symbols:
+    - { unicode: "μV/e", ascii: "uV/e", id: "uV_per_e" }
+    root_units:
+    - { power: 1, prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:volt } }
+    notes: "R76-specific: minimum input voltage per verification scale interval e."
+
+  u:microvolt_per_division:
+    names:
+    - { value: "microvolt per division", lang: en }
+    short: microvolt_per_division
+    symbols:
+    - { unicode: "μV/div", ascii: "uV/div", id: "uV_per_div" }
+    root_units:
+    - { power: 1, prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:volt } }
+
+  u:microampere_per_division:
+    names:
+    - { value: "microampere per division", lang: en }
+    short: microampere_per_division
+    symbols:
+    - { unicode: "μA/div", ascii: "uA/div", id: "uA_per_div" }
+    root_units:
+    - { power: 1, prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:ampere } }
+
+  u:impulse_per_revolution:
+    names:
+    - { value: "impulse per revolution", lang: en }
+    short: impulse_per_revolution
+    symbols:
+    - { unicode: "pulse/revolution", ascii: "pulse/rev", id: "pulse_per_rev" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+
+  u:relative_humidity_percent:
+    names:
+    - { value: "relative humidity percent", lang: en }
+    short: relative_humidity_percent
+    symbols:
+    - { unicode: "%RH", ascii: "%RH", id: "pct_RH" }
+
+  u:percent_of_maximum_capacity:
+    names:
+    - { value: "percent of maximum capacity", lang: en }
+    short: percent_of_maximum_capacity
+    symbols:
+    - { unicode: "%Max", ascii: "%Max", id: "pct_Max" }
+    notes: "Used in R51 catchweighing tare specification."
+
+  u:per_degree_Celsius_2:
+    names:
+    - { value: "per degree Celsius", lang: en }
+    short: per_degree_Celsius
+    symbols:
+    - { unicode: "/degC", ascii: "/degC", id: "/degC" }
+
+# OIML-specific COUNT units — dimensionless counters used in metrology.
+# These represent counted things, not measured quantities.
+counts:
+
+  u:division:
+    names:
+    - { value: "division", lang: en }
+    short: division
+    symbols:
+    - { unicode: "divisions", ascii: "divisions", id: "divisions" }
+    notes: "Count of scale divisions (R76/R51 weighing instruments)."
+
+  u:digit:
+    names:
+    - { value: "digit", lang: en }
+    short: digit
+    symbols:
+    - { unicode: "digits", ascii: "digits", id: "digits" }
+    notes: "Count of display digits (R117/R139 fuel/CNG dispensers)."
+
+  u:decimal_place:
+    names:
+    - { value: "decimal place", lang: en }
+    short: decimal_place
+    symbols:
+    - { unicode: "decimals", ascii: "decimals", id: "decimals" }
+    notes: "Count of decimal places."
+
+  u:package_per_minute:
+    names:
+    - { value: "package per minute", lang: en }
+    short: package_per_minute
+    symbols:
+    - { unicode: "packages per minute", ascii: "packages per minute", id: "packages_per_minute" }
+    - { unicode: "packages/min", ascii: "packages/min", id: "packages_per_min" }
+    - { unicode: "packs/min", ascii: "packs/min", id: "packs_per_min" }
+    notes: "R61 AGFI package throughput rate."
+
+  u:piece_per_minute:
+    names:
+    - { value: "piece per minute", lang: en }
+    short: piece_per_minute
+    symbols:
+    - { unicode: "pieces/min", ascii: "pieces/min", id: "pieces_per_min" }
+
+  u:load_per_minute:
+    names:
+    - { value: "load per minute", lang: en }
+    short: load_per_minute
+    symbols:
+    - { unicode: "loads/min", ascii: "loads/min", id: "loads_per_min" }
+    notes: "R51 load cycle rate."
+
+  u:package_per_hour_per_head:
+    names:
+    - { value: "package per hour per filling head", lang: en }
+    short: package_per_hour_per_head
+    symbols:
+    - { unicode: "packages per hour per filling head", ascii: "packages per hour per filling head", id: "pphph" }
+
+  u:customary_unit:
+    names:
+    - { value: "customary unit", lang: en }
+    short: customary_unit
+    symbols:
+    - { unicode: "CU", ascii: "CU", id: "CU" }
+    notes: "R21 taximeter customary fare unit."
+
+  u:customary_unit_per_hour:
+    names:
+    - { value: "customary unit per hour", lang: en }
+    short: customary_unit_per_hour
+    symbols:
+    - { unicode: "CU/h", ascii: "CU/h", id: "CU_per_h" }
+
+  u:customary_unit_per_kilometer:
+    names:
+    - { value: "customary unit per kilometer", lang: en }
+    short: customary_unit_per_kilometer
+    symbols:
+    - { unicode: "CU/km", ascii: "CU/km", id: "CU_per_km" }

@@ -1,0 +1,18 @@
+# Module: accuracy
+#
+# OIML accuracy class — used by 15 of 22 Recommendations. Value-set varies
+# by R: Roman numerals (weighing), Letter+digit (load cells), Numeric (flow/gas).
+# Per-R enum values live in `schema/vocabularies/R<NN>.yaml`.
+
+characteristics:
+  accuracy_class:
+    description: OIML accuracy class(es) — list of one or more class tokens
+    type: enum_multi
+    # See schema/vocabularies/R<NN>.yaml for per-R allowed values
+    synonyms:
+      - accuracy_classes
+      - accuracy_class_xiii_y
+      - accuracy_class_xiii
+      - accuracy_class_y
+      - accuracy
+      - class

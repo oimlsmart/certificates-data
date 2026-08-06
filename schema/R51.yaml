@@ -1,0 +1,427 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R51.yaml"
+title: "OIML R51 (Automatic Catchweighing Instruments) Certificate Schema"
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:
+        type: string
+        description: |
+          Recommendation identifier. R51 certs normally carry `R51`; the form
+          `R51-1` (referring to part 1 of the recommendation) also appears in
+          legacy data and is tolerated.
+        enum: [R51, R51-1]
+      edition:     { type: integer, const: 2006 }
+      amendment:   { type: [integer, string, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        description: |
+          Canonical R51 accuracy-class tokens. This is the single source of truth
+          for accuracy class —
+          type_level.accuracy_class is a deprecated duplicate and should be
+          empty. Each token is either a bare string (canonical form emitted by
+          the GLM extractor) or a StructuredValue-wrapped object (normalized form).
+
+          3 of 100 certs currently emit an empty list (extraction failures);
+          the schema accepts both populated and empty arrays to allow those
+          certs to be flagged downstream rather than rejected outright.
+        items: { $ref: "#/definitions/AccuracyClassToken" }
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  d011_tests_applicable:
+    description: |
+      Tests mandated by R51-2 (Type evaluation report) §3.x and OIML D 11:2013.
+      Catchweighers are typically electronic instruments operating in industrial
+      environments; the default set mirrors the climatic + EM disturbance suite
+      applied at type evaluation. Mechanical vibration tests (t15/t16) apply to
+      belt-driven / motion-mode catchweighers.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t15_vibration_random }
+    - { test_id: d011_t16_vibration_sinusoidal }
+    - { test_id: d011_t17_mechanical_shock }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  AccuracyClassToken:
+    description: |
+      Single R51 accuracy-class token. Accepts either:
+        * a bare string (canonical — what the GLM extractor emits), or
+        * a StructuredValue object whose `value` is the canonical token
+          (normalized form for downstream consumers).
+
+      Tokens use the Unicode comparison operators as emitted by the source PDF
+      OCR (e.g. "x≥2", "x<1"). Decimal-comma ("0,5") and whitespace ("Y (b)",
+      "x ≥ 2") variants also appear and are tolerated pending normalization.
+    oneOf:
+    - type: string
+      description: |
+        Canonical bare-string form. The Unicode "≥" (U+2265) reflects OIML R51
+        standard typography; ASCII ">=" is a display variant.
+      oneOf:
+      - const: XII
+        description: X family — XII (lowest precision, x<1 interval multiplier)
+      - const: XIII
+        description: X family — XIII (default band, x=1)
+      - const: XIIII
+        description: X family — XIIII (higher precision)
+      - const: "XII(x<1)"
+        description: X family — XII, multiplier x<1
+      - const: "XIII(1)"
+        description: X family — XIII, multiplier 1 (single-scale static)
+      - const: "XIII(x)"
+        description: X family — XIII, general multiplier x
+      - const: "XIII(x≥2)"
+        description: X family — XIII, multiplier x>=2 (multi-interval)
+      - const: "XIIII(x≥2)"
+        description: X family — XIIII, multiplier x>=2
+      - const: "Y(a)"
+        description: Y family — Y(a), dynamic-weighing band a
+      - const: "Y(b)"
+        description: Y family — Y(b), dynamic-weighing band b
+      - const: "Y(II)"
+        description: Y family — Y(II), lower-precision dynamic band
+      - const: IIII
+        description: Legacy R76-style non-automatic class — tolerated on old certs, migrate to XIIII
+      - const: III
+        description: Legacy R76-style non-automatic class — tolerated on old certs, migrate to XIII
+      - description: |
+          Non-canonical extraction-source variants. Decimal-comma forms come
+          from European OIML standard typography; whitespace variants come
+          from inconsistent OCR of parenthesized tokens. These are tolerated
+          for round-trip validation of pre-normalization data; the canonical
+          forms above are preferred.
+        enum:
+        - "XII(0,5)"
+        - "XIII(0,5)"
+        - "XIII(x ≥ 2)"
+        - "XIIII(x ≥ 2)"
+        - "Y (b)"
+    - $ref: "#/definitions/AccuracyClass"
+
+  AccuracyClass:
+    description: |
+      OIML R51-1:2006 §2.2.3 catchweigher accuracy class, wrapped in a
+      StructuredValue. R51 classes are X(i) and Y(i) variants where the
+      parenthesized qualifier distinguishes accuracy bands within the X family
+      (static weighing) and the Y family (lower precision). The Roman numeral
+      prefix denotes the precision grade; the parenthesized qualifier refines
+      it (e.g. `(1)`, `(x)`, `(x>=2)`, `(a)`, `(b)`, `(II)`, `(0.5)`).
+
+      Observed tokens in 100 certs include XII(i), XIII(1), XIII(x), XIII(x>=2),
+      XIIII(x>=2), Y(a), Y(b), Y(II). Decimal-comma and whitespace variants
+      (e.g. `XIII(0,5)`, `Y (b)`, `XIII(x >= 2)`) appear in source PDFs and
+      SHOULD be normalized to canonical form at extraction time.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          description: Canonical R51 accuracy-class token.
+          oneOf:
+          - const: XII
+            description: X family — XII (lowest precision, x<1 interval multiplier)
+          - const: XIII
+            description: X family — XIII (default band, x=1)
+          - const: XIIII
+            description: X family — XIIII (higher precision)
+          - const: "XII(0.5)"
+            description: X family — XII, interval multiplier 0.5
+          - const: "XII(x<1)"
+            description: X family — XII, multiplier x<1
+          - const: "XIII(1)"
+            description: X family — XIII, multiplier 1 (single-scale static)
+          - const: "XIII(x)"
+            description: X family — XIII, general multiplier x
+          - const: "XIII(x>=2)"
+            description: X family — XIII, multiplier x>=2 (multi-interval)
+          - const: "XIII(0.5)"
+            description: X family — XIII, interval multiplier 0.5
+          - const: "XIIII(x>=2)"
+            description: X family — XIIII, multiplier x>=2
+          - const: "Y(a)"
+            description: Y family — Y(a), dynamic-weighing band a
+          - const: "Y(b)"
+            description: Y family — Y(b), dynamic-weighing band b
+          - const: "Y(II)"
+            description: Y family — Y(II), lower-precision dynamic band
+          - const: IIII
+            description: Legacy R76-style non-automatic class — tolerated on old certs, migrate to XIIII
+          - const: III
+            description: Legacy R76-style non-automatic class — tolerated on old certs, migrate to XIII
+          # Source-shape variants observed in extraction output. These exist
+          # for round-trip validation of pre-normalization data; preferred form
+          # is the canonical tokens above.
+          - const: "XII(0,5)"
+            description: Non-canonical decimal-comma variant of XII(0.5)
+          - const: "XIII(0,5)"
+            description: Non-canonical decimal-comma variant of XIII(0.5)
+          - const: "XIII(x ≥ 2)"
+            description: Non-canonical whitespace variant of XIII(x>=2)
+          - const: "XIIII(x ≥ 2)"
+            description: Non-canonical whitespace variant of XIIII(x>=2)
+          - const: "Y (b)"
+            description: Non-canonical whitespace variant of Y(b)
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category:
+        type: string
+        description: |
+          Instrument category per R51-1 §3.1. Free text because the GLM
+          extractor captures full descriptions (e.g. "Automatic catchweighing
+          instrument", "Weighing transmitter", "Checkweigher mounted on a
+          vehicle"). Schema does not constrain because real data uses 40+
+          phrasings.
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation:
+        description: |
+          Load-cell technology description (e.g. "strain gauge load cell",
+          "electro-dynamic force compensation", "Not applicable"). Free text
+          because R51 does not have a closed load-cell-characterization enum
+          like R60.
+        type: [string, "null"]
+      description: { type: [string, "null"] }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level:
+        description: |
+          Per-type characteristics shared by all variants of the certified
+          type. R51 characteristics are heterogeneous across issuers and
+          editions (154 distinct labels observed in 100 certs); this schema
+          deliberately leaves type_level permissive.
+          Additional properties beyond the named ones below are accepted.
+        $ref: "#/definitions/TypeLevel"
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    type: object
+    properties:
+      temperature_range:
+        description: Ambient operating temperature range (e.g. -10/40 deg C).
+        $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange"
+      climatic_environment_class:
+        description: |
+          D 11 §7.2 table 1 — climatic environment class for the installed
+          location. NOTE: real data sometimes carries pre-normalization
+          synonyms ("condensing", "non-condensing") in the `value` field —
+          see _modules/d011_environmental.yaml#/normalization_map. Those
+          synonyms are accepted here and SHOULD be migrated to canonical
+          H1/H2/H3 by a normalization pass.
+        allOf:
+        - $ref: "_core.yaml#/definitions/StructuredValue"
+      mechanical_environment_class:
+        description: |
+          D 11 §7.3 table 2 — mechanical environment class (vibration/shock at
+          the location). Real data carries pre-normalization free-text values
+          (e.g. "Vehicle mounted") that are NOT in the strict M1/M2/M3 enum;
+          these are accepted here and SHOULD be normalized by a migration pass.
+        allOf:
+        - $ref: "_core.yaml#/definitions/StructuredValue"
+      electromagnetic_environment_class:
+        description: |
+          D 11 §7.4 table 3 — electromagnetic environment class. Real data
+          carries pre-normalization free-text values (e.g. "E1 and E2") that
+          are NOT in the strict E1/E2/E3 enum; these are accepted here and
+          SHOULD be normalized by a migration pass.
+        allOf:
+        - $ref: "_core.yaml#/definitions/StructuredValue"
+      humidity_class:
+        description: |
+          D 11 §7.2 table 1 — humidity classification at the installed location.
+          NOTE: R51 uses D 11 H1/H2/H3 (instrument installed location), NOT the
+          R60 load-cell CH/NH/SH humidity marking (which is a property of the
+          load-cell classification symbol, not the instrument).
+
+          Real data carries pre-normalization synonyms ("non-condensing",
+          "condensing") in the `value` field — see
+          _modules/d011_environmental.yaml#/normalization_map. Those synonyms
+          are accepted here and SHOULD be migrated to canonical H1/H2/H3 by a
+          normalization pass. After normalization, the conditional rules under
+          `allOf` enforce that H1 implies t08 and H2/H3 implies t09.
+        allOf:
+        - $ref: "_core.yaml#/definitions/StructuredValue"
+      maximum_capacity:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_capacity:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      scale_interval:          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      number_of_scale_intervals:
+                               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_speed:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_speed:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification: { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+      # R51 type_level accepts many additional free-form characteristic labels
+      # emitted by the GLM extractor (e.g. weighing_mode, mode_of_operation,
+      # conveyor_speed, belt_speed, tare, power_supply_voltage). These are not
+      # enumerated here.
+    additionalProperties:
+      $ref: "_core.yaml#/definitions/StructuredValue"
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit:      { $ref: "_units.yaml#/definitions/Unit" }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute: { type: string }
+      axis:
+        description: |
+          Configuration axis (e.g. weighing_mode, model, number_of_sensor_rows).
+          R51 commonly uses weighing_mode for static vs dynamic columns. Real
+          data sometimes abuses `model` for what model_level is intended for.
+        oneOf:
+        - type: string
+        - type: "null"
+      unit:      { $ref: "_units.yaml#/definitions/Unit" }
+      values:
+        type: array
+        items:
+          type: object
+          anyOf:
+          - required: [condition, value]
+            properties:
+              condition: { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+          - required: [model, value]
+            properties:
+              model:     { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test applied at type evaluation.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+allOf:
+- description: |
+    Conditional applicability of D 11 damp heat tests (R51-2 + D 11:2013 §9.2).
+    Damp heat steady-state (t08) applies when the catchweigher is installed in
+    H1 (stable-humidity enclosed) locations; damp heat cyclic (t09) applies
+    when installed in H2/H3 (condensing / open-air) locations. These are
+    expressed via type_level.humidity_class (= D 11 climatic_environment_class).
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class:
+                properties:
+                  value: { const: H1 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains: { properties: { test_id: { const: d011_t08_damp_heat_steady_state } } }
+- if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class:
+                properties:
+                  value: { enum: [H2, H3] }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains: { properties: { test_id: { const: d011_t09_damp_heat_cyclic } } }
+- description: |
+    If the catchweigher is rated for M3 mechanical environment (e.g. mounted
+    on machines or conveyor belts), mechanical-shock test t17 is mandatory
+    per D 11 §10.2. M1/M2 instruments typically do not require t17.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              mechanical_environment_class:
+                properties:
+                  value: { const: M3 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains: { properties: { test_id: { const: d011_t17_mechanical_shock } } }
+- description: |
+    Catchweighers rated for E3 electromagnetic environment (vehicle-battery
+    powered) require D 11 §14 road-vehicle battery tests instead of, or in
+    addition to, the mains-power EM suite. t40/t41 specifically apply.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              electromagnetic_environment_class:
+                properties:
+                  value: { const: E3 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains:
+          anyOf:
+          - properties: { test_id: { const: d011_t40_battery_voltage_cranking } }
+          - properties: { test_id: { const: d011_t41_load_dump } }

@@ -1,0 +1,357 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/_core.yaml"
+title: "OIML-CS Core Certificate Schema"
+description: |
+  Document-level metadata fields that appear in every certificate regardless
+  of Recommendation. Characteristics live in `_modules/<theme>.yaml`
+  (cross-cutting) or `R<NN>.yaml` (Recommendation-specific).
+
+  Conventions:
+  - Missing fields are ABSENT, never null. Use `required:` to enforce presence.
+  - Not-applicable values use the canonical sentinel `"N/A"`, never null.
+  - `additionalProperties: false` everywhere. No free-form slots.
+
+type: object
+definitions:
+
+  # ─── Value primitives ────────────────────────────────────────────────
+
+  NA:
+    description: Canonical sentinel for "not applicable" values. Stored as the literal string "N/A".
+    type: string
+    const: "N/A"
+
+  ScalarValue:
+    description: |
+      A single scalar value — number, string, boolean, or the N/A sentinel.
+      Use this for fields that hold a single piece of data with no range.
+    oneOf:
+    - $ref: "#/definitions/NA"
+    - type: number
+    - type: boolean
+    - type: string
+      not:
+        const: "N/A"
+
+  RangeValue:
+    description: A min/max range with both bounds required (use N/A for open-ended).
+    type: object
+    properties:
+      min: { oneOf: [{ $ref: "#/definitions/NA" }, { type: number }, { type: string, not: { const: "N/A" } }] }
+      max: { oneOf: [{ $ref: "#/definitions/NA" }, { type: number }, { type: string, not: { const: "N/A" } }] }
+    required: [min, max]
+    additionalProperties: false
+
+  ListValue:
+    description: A list of scalar values (e.g. multi-accuracy-class instruments).
+    type: array
+    minItems: 1
+    items: { oneOf: [{ type: number }, { type: string }] }
+
+  MapValue:
+    description: |
+      A variant-keyed map of scalar values. Used when a value varies by
+      sub-variant, weight range, or configuration condition (e.g.
+      {lightweight_variant: 70, mid_range_variant: 50} or
+      {"20-50g": 31, "50-80g": 35}). Keys are arbitrary descriptive
+      labels; values are scalars, null, or nested ranges. Excludes min/max
+      keys (those are RangeValue).
+    type: object
+    properties:
+      min: false
+      max: false
+    additionalProperties:
+      oneOf:
+      - type: number
+      - type: string
+      - type: boolean
+      - type: "null"
+      - $ref: "#/definitions/RangeValue"
+    minProperties: 1
+
+  Value:
+    description: |
+      The canonical value union. Every characteristic's `value` field is one of:
+      - A scalar (number, string, boolean)
+      - The N/A sentinel
+      - A min/max range
+      - A list of scalars (multi-value, e.g. multi-class accuracy)
+      - A variant-keyed map of scalars (e.g. per-weight-range values)
+    oneOf:
+    - $ref: "#/definitions/ScalarValue"
+    - $ref: "#/definitions/RangeValue"
+    - $ref: "#/definitions/ListValue"
+    - $ref: "#/definitions/MapValue"
+
+  ValueOrScalar:
+    description: Legacy alias for Value.
+    $ref: "#/definitions/Value"
+
+  # ─── Units ───────────────────────────────────────────────────────────
+
+  Unit:
+    description: |
+      Structured unit reference. The unit_id is the canonical unitsml identifier
+      (closed enum from _units.yaml). Prefix, current_type, and reference
+      qualify the unit when applicable (e.g. kV AC, bar(g)).
+    type: object
+    properties:
+      unit_id:    { type: string, pattern: "^u:" }
+      prefix:     { type: [string, "null"], pattern: "^p:", description: "Unitsml SI prefix (e.g. p:milli), or null." }
+      current_type:
+        type: [string, "null"]
+        enum: [AC, DC, null]
+        description: Electrical current qualifier (AC/DC).
+      reference:
+        type: [string, "null"]
+        enum: [gauge, absolute, differential, null]
+        description: Pressure reference qualifier (R117/R139/R137).
+    additionalProperties: false
+
+  # ─── Structured characteristic value ─────────────────────────────────
+
+  StructuredValue:
+    description: |
+      Canonical characteristic value with separated value, unit, and footnote
+      markers. Every characteristic in every R schema is a StructuredValue.
+    type: object
+    properties:
+      value:             { $ref: "#/definitions/Value" }
+      unit:              { oneOf: [{ $ref: "#/definitions/Unit" }, { $ref: "#/definitions/NA" }, { type: "null" }] }
+      unit_symbol:
+        description: Display surface form (round-trip fidelity only; canonical reference is `unit`).
+        type: [string, "null"]
+      unit_id:
+        description: Flat unitsml unit ID (legacy field; migrate to `unit.unit_id`).
+        type: [string, "null"]
+      footnote_markers:
+        type: array
+        items: { type: string }
+      tolerance:
+        description: Symmetric tolerance (e.g. 0.002 for 2.000±0.002).
+        type: number
+      tolerance_type:
+        type: string
+        enum: [absolute, relative]
+      _unit_kind:
+        description: Classifier for non-SI units (e.g. "custom_count" for OIML-specific counts like divisions/digits).
+        type: string
+      _note:
+        description: Reviewer note flagging suspected extraction errors or unusual values.
+        type: string
+      _qualifier:
+        description: Additional qualifier preserved from source unit (e.g. "optional", "square_wave", "for_greater_loads").
+        type: string
+      current_type:
+        description: "Electrical current qualifier extracted from unit_symbol (e.g. V AC square wave yields current_type=AC)."
+        type: string
+        enum: [AC, DC, AC_DC]
+    additionalProperties: false
+
+  # ─── Document-level types ────────────────────────────────────────────
+
+  Certificate:
+    description: Certificate identification.
+    type: object
+    required: [number, scheme, oiml_issuer_id]
+    properties:
+      number:         { type: string }
+      scheme:         { type: string, enum: [A, B] }
+      project_number: { type: [string, integer] }
+      page_total:     { type: integer, minimum: 1 }
+      member_state:   { type: string }
+      date_issued:    { type: string }
+      oiml_issuer_id: { type: string }
+    additionalProperties: false
+
+  IssuingAuthority:
+    description: Body that issued the certificate.
+    type: object
+    required: [name]
+    properties:
+      name:               { type: string }
+      address_lines:      { type: array, items: { type: string } }
+      person_responsible: { type: string }
+      person_title:       { type: string }
+      phone:              { type: string }
+      fax:                { type: string }
+      email:              { type: string }
+      website:            { type: string }
+      oiml_issuer_id:     { type: string }
+    additionalProperties: false
+
+  Party:
+    description: Applicant or manufacturer.
+    type: object
+    required: [name]
+    properties:
+      name:          { type: string }
+      address_lines: { type: array, items: { type: string } }
+    additionalProperties: false
+
+  PartyList:
+    type: array
+    minItems: 1
+    items: { $ref: "#/definitions/Party" }
+
+  TestReport:
+    type: object
+    required: [id]
+    properties:
+      id:    { type: string }
+      date:  { type: string }
+      pages: { type: integer, minimum: 1 }
+      role:
+        type: string
+        oneOf:
+        - const: type_evaluation_report
+          description: Per-R type evaluation report
+        - const: test_report
+          description: Additional test report
+        - const: documentation_file
+          description: Documentation file reference
+        - const: evaluation_report
+          description: Evaluation report
+        - const: pattern_evaluation_checklist
+          description: Pattern evaluation checklist
+        - const: pattern_evaluation_report
+          description: Pattern evaluation report
+        - const: "N/A"
+          description: Not applicable
+    additionalProperties: false
+
+  TestReportList:
+    type: array
+    items: { $ref: "#/definitions/TestReport" }
+
+  RevisionEntry:
+    type: object
+    required: [revision, date, changes]
+    properties:
+      revision: { type: string }
+      date:     { type: string }
+      changes:  { type: string }
+    additionalProperties: false
+
+  RevisionHistory:
+    type: array
+    items: { $ref: "#/definitions/RevisionEntry" }
+
+  ModelVariant:
+    type: object
+    required: [model_id]
+    properties:
+      model_id:   { type: string }
+      label:      { type: [string, "null"] }
+      attributes: { type: object }
+    additionalProperties: false
+
+  ModelFamily:
+    type: object
+    properties:
+      family_name: { type: [string, "null"] }
+      models:
+        description: |
+          Model variants. Accepts null, an array of ModelVariant objects,
+          or an array of bare model ID strings (pre-normalization form).
+        anyOf:
+        - type: "null"
+        - type: array
+          items: { $ref: "#/definitions/ModelVariant" }
+        - type: array
+          items: { type: string }
+    additionalProperties: false
+
+  SoftwareIdentification:
+    description: |
+      Software identification. Accepts multiple forms observed in cert data:
+      - Single version string ("V1.xxx")
+      - Structured object {version_number, checksum}
+      - Array of board entries [{board, firmware_version, hash_code}, ...]
+      - StructuredValue wrapping any of the above (with footnote_markers)
+    oneOf:
+    - type: string
+    - type: object
+      properties:
+        version_number: { type: string }
+        checksum:       { type: string }
+      additionalProperties: false
+    - type: array
+      minItems: 1
+      items:
+        type: object
+        properties:
+          board:            { type: string }
+          firmware_version: { type: string }
+          hash_code:        { type: string }
+        additionalProperties: false
+    - type: object
+      properties:
+        value:
+          oneOf:
+          - type: string
+          - type: object
+          - type: array
+        footnote_markers:
+          type: array
+          items: { type: string }
+        unit_symbol: { type: [string, "null"] }
+        unit_id:     { type: [string, "null"] }
+      additionalProperties: false
+
+  Component:
+    type: object
+    required: [role]
+    properties:
+      role:             { type: string }
+      type_designations:
+        type: array
+        items: { type: string }
+      alternatives:
+        type: string
+        enum: [OR, AND]
+      characteristics:
+        description: |
+          Component-specific attributes. Accepts either:
+          - A map of {label: StructuredValue} (canonical form), or
+          - An array of {attribute, value, unit_symbol?} entries
+            (extraction form — normalize to map for downstream consumers).
+        oneOf:
+        - type: object
+        - type: array
+          items: { type: object }
+    additionalProperties: false
+
+  Footnote:
+    type: object
+    required: [marker, text]
+    properties:
+      marker: { type: string }
+      text:   { type: string }
+    additionalProperties: false
+
+  FootnoteList:
+    type: array
+    items: { $ref: "#/definitions/Footnote" }
+
+  MatrixTable:
+    description: Multi-dimensional table preserved from source PDF when it does not fit model_level.
+    type: object
+    required: [name, columns, rows]
+    properties:
+      name:        { type: string }
+      description: { type: string }
+      columns:
+        type: array
+        minItems: 1
+        items: { type: string }
+      column_units:
+        type: array
+        items: { type: [string, "null"] }
+      rows:
+        type: array
+        minItems: 1
+        items: { type: object }
+      footnotes: { $ref: "#/definitions/FootnoteList" }
+    additionalProperties: false

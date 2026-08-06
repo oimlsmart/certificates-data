@@ -1,0 +1,205 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R107.yaml"
+title: "OIML R107 (Discontinuous Totalizing Automatic Weighing Instruments) Certificate Schema"
+description: |
+  OIML R107 "Discontinuous totalizing automatic weighing instruments (totalizing
+  hopper weighers)". Covers class 0.2 / 0.5 / 1 / 2 instruments per R107-1 §3.2.
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:          { type: string, const: R107 }
+      edition:     { type: integer, enum: [2007] }
+      amendment:   { type: [string, integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        items:
+          oneOf:
+          - type: string
+          - type: number
+          - $ref: "#/definitions/AccuracyClass"
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  matrix_tables:         { $ref: "#/definitions/MatrixTableList" }
+  d011_tests_applicable:
+    description: Tests mandated by R107-2 type evaluation.
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t15_vibration_random }
+    - { test_id: d011_t16_vibration_sinusoidal }
+    - { test_id: d011_t17_mechanical_shock }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  AccuracyClass:
+    description: OIML R107-1 §3.2 totalizing hopper weigher accuracy class.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: [string, "null"]
+          oneOf:
+          - const: "0.2"
+            description: Class 0.2 — highest precision
+          - const: "0.5"
+            description: Class 0.5 — high precision
+          - const: "1"
+            description: Class 1 — medium precision
+          - const: "2"
+            description: Class 2 — lower precision
+          - const: "N/A"
+            description: Not applicable
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category: { type: string }
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation: { type: [string, "null"] }
+      description: { type: [string, "null"] }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level:
+        type: object
+        additionalProperties: { $ref: "_core.yaml#/definitions/StructuredValue" }
+        properties:
+          accuracy_class:                          { $ref: "#/definitions/AccuracyClass" }
+          max_intervals_n:                         { $ref: "_core.yaml#/definitions/StructuredValue" }
+          max_intervals_n_partial:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+          max_capacity_range:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+          number_of_scale_intervals:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+          number_of_scale_intervals_n:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+          verification_scale_interval_dt:          { $ref: "_core.yaml#/definitions/StructuredValue" }
+          verification_scale_interval_min_uv:      { $ref: "_core.yaml#/definitions/StructuredValue" }
+          minimum_totalized_load:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+          subtractive_tare:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          load_cell_impedance:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+          load_cell_connecting_system:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+          module_fractional_factor_pi:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+          interface:                               { $ref: "_core.yaml#/definitions/StructuredValue" }
+          connected_load_cells:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+          supply_voltage:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+          power_supply_voltage:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+          power_supply_frequency:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+          power_supply_type:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+          power_supply_dc:                         { $ref: "_core.yaml#/definitions/StructuredValue" }
+          weighing_mode:                           { $ref: "_core.yaml#/definitions/StructuredValue" }
+          warm_up_time:                            { $ref: "_core.yaml#/definitions/StructuredValue" }
+          max_cable_length_to_junction_box:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          rate_of_operation:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+          software_identification:                 { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+          weighing_range:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+          maximum_capacity:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          minimum_capacity:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+          scale_interval:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+          measuring_range:                         { $ref: "_core.yaml#/definitions/StructuredValue" }
+          tare:                                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+          temperature_range:                       { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+          humidity_class:                          { $ref: "_modules/d011_environmental.yaml#/definitions/ClimaticClass" }
+          electromagnetic_environment_class:       { $ref: "_modules/d011_environmental.yaml#/definitions/EMClass" }
+          mechanical_environment_class:            { $ref: "_modules/d011_environmental.yaml#/definitions/MechanicalClass" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit_symbol: { type: [string, "null"] }
+      unit_id:    { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute: { type: string }
+      axis:      { oneOf: [ { type: string }, { type: "null" } ] }
+      unit_symbol: { type: [string, "null"] }
+      unit_id:    { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [condition, value]
+          properties:
+            condition: { type: string }
+            value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  MatrixTableList:
+    description: Multi-axis tables preserved from source (e.g. software-version manifests).
+    type: array
+    items:
+      type: object
+      required: [name, columns, rows]
+      properties:
+        name:        { type: string }
+        description: { type: [string, "null"] }
+        columns:
+          type: array
+          items: { type: string }
+        rows:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        footnotes:
+          type: array
+          items: { type: string }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }

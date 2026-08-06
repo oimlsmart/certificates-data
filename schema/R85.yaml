@@ -1,0 +1,396 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R85.yaml"
+title: "OIML R85 (Automatic level measuring instruments) Certificate Schema"
+description: |
+  OIML R85:2008 "Automatic level measuring instruments for liquid in stationary
+  storage tanks". One accuracy class per instrument, single-axis
+  (level-measurement only). Three classes per R85:2008 — class I (best,
+  tolerance 0.5 mm), class II (1 mm), class III (1.5 mm).
+
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:          { type: string, const: R85 }
+      edition:     { type: integer, enum: [2008] }
+      amendment:   { type: [integer, "null"] }
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        items: { $ref: "#/definitions/AccuracyClassValue" }
+  test_reports:          { $ref: "_core.yaml#/definitions/TestReportList" }
+  revision_history:      { $ref: "_core.yaml#/definitions/RevisionHistory" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  matrix_tables:
+    type: array
+    items:
+      type: object
+      required: [name, columns, rows]
+      properties:
+        name: { type: string }
+        columns:
+          type: array
+          items: { type: string }
+        rows:
+          type: array
+          items: { type: object }
+        description: { type: string }
+        footnotes:
+          type: array
+          items:
+            oneOf:
+            - $ref: "_core.yaml#/definitions/Footnote"
+            - type: string
+              description: Bare footnote marker string (pre-normalization form)
+  d011_tests_applicable:
+    description: Tests mandated by R85:2008 type evaluation (D 11:2013 subset).
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  HumidityClass:
+    description: |
+      D 11 §7.2 climatic class extended with N/A and surface forms observed
+      in R85 cert data (e.g. "condensing"). Override of the d011 module
+      definition to accept pre-normalization values.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: H1
+            description: Temperature-controlled enclosed location
+          - const: H2
+            description: Enclosed without climate control; subject to condensation
+          - const: H3
+            description: Open-air location
+          - const: "N/A"
+            description: Not applicable
+          - const: condensing
+            description: Surface form — normalize to H2 or H3
+          - const: non-condensing
+            description: Surface form — normalize to H1
+
+  EMClass:
+    description: |
+      D 11 §7.4 electromagnetic class extended with N/A for R85 cert data.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: E1
+            description: Residential, commercial, light industrial
+          - const: E2
+            description: Industrial buildings
+          - const: E3
+            description: Vehicle battery-powered instruments
+          - const: "N/A"
+            description: Not applicable
+
+  MechanicalClass:
+    description: |
+      D 11 §7.3 mechanical class extended with N/A for R85 cert data.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: M1
+            description: Low vibration and shock
+          - const: M2
+            description: Significant vibration and shock
+          - const: M3
+            description: High or very high vibration and shock
+          - const: "N/A"
+            description: Not applicable
+
+  AccuracyClass:
+    description: |
+      OIML R85:2008 §3 — accuracy class. Three classes, encoded as the
+      numerical tolerance in millimetres (0.5, 1, 1.5).
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: "0.5"
+            description: Class I — tolerance 0.5 mm
+          - const: "1"
+            description: Class II — tolerance 1 mm
+          - const: "1.5"
+            description: Class III — tolerance 1.5 mm
+          - const: "N/A"
+            description: Not applicable
+
+  AccuracyClassValue:
+    description: |
+      Bare accuracy class token used in `recommendation.accuracy_classes`.
+    type: string
+    oneOf:
+    - const: "0.5"
+      description: Class I
+    - const: "1"
+      description: Class II
+    - const: "1.5"
+      description: Class III
+    - const: "N/A"
+      description: Not applicable
+
+  MeasuringPrinciple:
+    description: |
+      R85:2008 physical measuring principle for the level probe. Accepts
+      either a bare canonical string or a StructuredValue wrapping it.
+      Surface variants seen in certs include "Magnetostrictive", "Servo",
+      "Radar", "Float", "Capacitive", "Digital Microwave". Synonyms should
+      be normalized to canonical tokens.
+    oneOf:
+    - type: string
+      oneOf:
+      - const: magnetostrictive
+        description: Magnetostrictive position sensing
+      - const: servo
+        description: Servo-balanced displacer
+      - const: radar
+        description: Non-contact radar
+      - const: ultrasonic
+        description: Ultrasonic echo-ranging
+      - const: capacitive
+        description: Capacitance probe
+      - const: hydrostatic
+        description: Hydrostatic pressure sensor
+      - const: "N/A"
+        description: Not applicable
+      # Surface forms from extraction data
+      - const: Magnetostrictive
+        description: Surface form of magnetostrictive
+      - const: Capacitive
+        description: Surface form of capacitive
+      - const: "Digital Microwave"
+        description: Surface form of radar (microwave variant)
+    - allOf:
+      - $ref: "_core.yaml#/definitions/StructuredValue"
+      - properties:
+          value:
+            type: string
+            oneOf:
+            - const: magnetostrictive
+            - const: servo
+            - const: radar
+            - const: ultrasonic
+            - const: capacitive
+            - const: hydrostatic
+            - const: "N/A"
+            - const: Magnetostrictive
+            - const: Capacitive
+            - const: "Digital Microwave"
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category: { type: string }
+      type_designations:
+        type: array
+        minItems: 1
+        items: { type: string }
+      module_designation:
+        description: |
+          R85 distinguishes single-component (probe only) and combined
+          systems (probe + console). Free-text in the corpus; not a
+          closed enum.
+        type: [string, "null"]
+      description: { type: string }
+
+  Characteristics:
+    type: object
+    properties:
+      type_level: { $ref: "#/definitions/TypeLevel" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    type: object
+    properties:
+      accuracy_class:                    { $ref: "#/definitions/AccuracyClass" }
+      measuring_principle:               { $ref: "#/definitions/MeasuringPrinciple" }
+      temperature_range:                 { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      humidity_class:                    { $ref: "#/definitions/HumidityClass" }
+      electromagnetic_environment_class: { $ref: "#/definitions/EMClass" }
+      mechanical_environment_class:      { $ref: "#/definitions/MechanicalClass" }
+      maximum_measuring_range:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_measuring_range:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      maximum_measuring_range_level:     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      minimum_measuring_range_level:     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_voltage:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_voltage_dc:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_frequency:            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_type:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      power_supply_battery:              { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software_identification:           { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+      warm_up_time:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      adjustment_period:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      # Probe characteristics
+      probe_type:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_body_material:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_length:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_max_length:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_temperature_range:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_accuracy:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_resolution:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_software:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      probe_operating_temperature:       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      floats:                            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      floats_material:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      float_material:                    { $ref: "_core.yaml#/definitions/StructuredValue" }
+      float_materials:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      console_type:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      console_resolution:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      console_temperature_range:         { $ref: "_core.yaml#/definitions/StructuredValue" }
+      console_temperature:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      console_software:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      display_resolution:                { $ref: "_core.yaml#/definitions/StructuredValue" }
+      length:                            { $ref: "_core.yaml#/definitions/StructuredValue" }
+      temperature:                       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      controller_type:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      controller_resolution:             { $ref: "_core.yaml#/definitions/StructuredValue" }
+      controller_software:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      program_name:                      { $ref: "_core.yaml#/definitions/StructuredValue" }
+      operating_system:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      software:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ambient_temperature:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ambient_temperature_low:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      ambient_temperature_high:          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      relative_humidity:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+      exterior_protection:               { $ref: "_core.yaml#/definitions/StructuredValue" }
+      data_communication_inputs:         { $ref: "_core.yaml#/definitions/StructuredValue" }
+      data_communication_outputs:        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      measurand:                        { $ref: "_core.yaml#/definitions/StructuredValue" }
+      measured_liquid:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      measured_liquid_temperature:       { $ref: "_core.yaml#/definitions/StructuredValue" }
+      measured_liquid_density:           { $ref: "_core.yaml#/definitions/StructuredValue" }
+      pressure_of_use:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      material:                          { $ref: "_core.yaml#/definitions/StructuredValue" }
+      voltage_range:                     { $ref: "_core.yaml#/definitions/StructuredValue" }
+      voltage_tolerance:                 { $ref: "_core.yaml#/definitions/StructuredValue" }
+
+  ModelLevelEntry:
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit:
+        $ref: "_units.yaml#/definitions/Unit"
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:            { type: string }
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    type: object
+    required: [attribute, axis, values]
+    properties:
+      attribute: { type: string }
+      axis:      { oneOf: [ { type: string }, { type: "null" } ] }
+      unit:
+        $ref: "_units.yaml#/definitions/Unit"
+      values:
+        type: array
+        items:
+          type: object
+          anyOf:
+          - required: [condition, value]
+            properties:
+              condition: { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+          - required: [model, value]
+            properties:
+              model:     { type: string }
+              value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+allOf:
+- description: |
+    D 11 §9.2 damp-heat tests apply to R85 instruments based on humidity
+    class. R85:2008 instruments in open locations (H3) must pass t09
+    (cyclic); those in weather-protected locations without climate control
+    (H2) must pass t08 (steady state).
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class:
+                properties:
+                  value: { const: H2 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains: { properties: { test_id: { const: d011_t08_damp_heat_steady_state } } }
+- if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class:
+                properties:
+                  value: { const: H3 }
+  then:
+    properties:
+      d011_tests_applicable:
+        contains: { properties: { test_id: { const: d011_t09_damp_heat_cyclic } } }

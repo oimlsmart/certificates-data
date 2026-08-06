@@ -1,0 +1,50 @@
+# Module: power_supply
+#
+# Power-supply characteristics for powered measuring instruments.
+# Taximeters and pure-mechanical instruments may not use these.
+#
+# Used by: R21, R46, R50, R51, R61, R76, R85, R106, R107, R117, R129,
+#          R134, R137, R139
+# Not used by: R31 (mostly mechanical), R49, R60 (load cells are passive),
+#          R99, R105, R111, R126, R136
+
+characteristics:
+  power_supply_voltage:
+    description: Power supply voltage
+    type: range
+    unit_symbol: V
+    synonyms:
+      - supply_voltage
+      - mains_power_supply
+      - excitation_voltage
+      - load_cell_excitation_voltage
+      - power_supply_voltage_ac
+      - power_supply_voltage_dc
+      - voltage_supply
+      - power_supply
+      - mains_dc_voltage
+      - nominal_voltage
+
+  power_supply_frequency:
+    description: Power line frequency
+    type: range
+    unit_symbol: Hz
+    synonyms:
+      - nominal_frequency
+      - line_frequency
+      - mains_frequency
+
+  power_supply_type:
+    description: AC / DC / both
+    type: enum
+    values: [AC, DC, "AC/DC"]
+    synonyms:
+      - current_type
+      - supply_type
+
+  power_supply_battery:
+    description: Battery voltage when applicable
+    type: numeric
+    unit_symbol: V
+    synonyms:
+      - battery_voltage

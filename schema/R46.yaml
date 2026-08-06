@@ -1,0 +1,672 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://oimlsmart.org/schemas/R46.yaml"
+title: "OIML R46 (Active Electrical Energy Meters) Certificate Schema"
+type: object
+required: [certificate, certified_type, characteristics, recommendation]
+properties:
+  certificate:           { $ref: "_core.yaml#/definitions/Certificate" }
+  issuing_authority:     { $ref: "_core.yaml#/definitions/IssuingAuthority" }
+  applicants:            { $ref: "_core.yaml#/definitions/PartyList" }
+  manufacturers:         { $ref: "_core.yaml#/definitions/PartyList" }
+  certified_type:        { $ref: "#/definitions/CertifiedType" }
+  characteristics:       { $ref: "#/definitions/Characteristics" }
+  recommendation:
+    type: object
+    required: [id, edition, scheme]
+    properties:
+      id:
+        description: |
+          Recommendation identifier. The canonical form is "R46"; some
+          older extractions store "R 46-1/-2" or "R 46-1/2:2012".
+        type: string
+        enum: [R46, "R 46-1/-2", "R 46-1/2:2012"]
+      edition:     { type: integer, enum: [2012] }
+      amendment:
+        description: |
+          Amendment index or text. Most certs leave this null; a few use
+          "-1/-2" or "1/2" to indicate a bundled amendment package.
+        type: [integer, "string", "null"]
+      scheme:      { type: string, enum: [A, B] }
+      accuracy_classes:
+        type: array
+        items: { $ref: "#/definitions/AccuracyClassValue" }
+  test_reports:
+    description: |
+      Test reports associated with the certificate. Uses a local
+      definition to allow nullable `date` (the shared _core TestReport
+      requires a non-null ISO date string, which some R46 extractions
+      fail to produce).
+    type: array
+    items: { $ref: "#/definitions/TestReport" }
+  revision_history:
+    description: |
+      Revision history. Uses a local definition to allow nullable /
+      non-ISO date strings, which some R46 extractions produce
+      (e.g. text dates like "Initial" or empty values).
+    type: array
+    items: { $ref: "#/definitions/RevisionEntry" }
+  model_family:          { $ref: "_core.yaml#/definitions/ModelFamily" }
+  components:
+    type: array
+    items: { $ref: "_core.yaml#/definitions/Component" }
+  footnotes:             { $ref: "_core.yaml#/definitions/FootnoteList" }
+  matrix_tables:
+    description: |
+      Optional structured tables preserved from the source certificate when
+      the cert contains multi-dimensional matrix data (e.g. characteristic
+      values across model variants or rated conditions). See
+      _common_certificate_schema.yaml for the conventional shape.
+    type: array
+    items: { $ref: "#/definitions/MatrixTable" }
+  d011_tests_applicable:
+    description: |
+      Tests mandated by R46-2:2012 §3 type evaluation
+      (D 11:2013 environmental + EM + battery subsets relevant to active
+      electrical energy meters).
+    type: array
+    items: { $ref: "#/definitions/D011TestReference" }
+    default:
+    - { test_id: d011_t06_static_temperature }
+    - { test_id: d011_t07_static_temperature }
+    - { test_id: d011_t11_atmospheric_pressure }
+    - { test_id: d011_t08_damp_heat_steady_state }
+    - { test_id: d011_t09_damp_heat_cyclic }
+    - { test_id: d011_t18_dc_mains_voltage_variation }
+    - { test_id: d011_t19_ripple_dc_mains }
+    - { test_id: d011_t20_ac_mains_voltage_variation }
+    - { test_id: d011_t21_ac_mains_frequency_variation }
+    - { test_id: d011_t22_dc_mains_dips_interruptions }
+    - { test_id: d011_t23_ac_mains_dips_interruptions }
+    - { test_id: d011_t24_ac_mains_harmonics }
+    - { test_id: d011_t26_bursts_ac_dc_mains }
+    - { test_id: d011_t27_surges_ac_dc_mains }
+    - { test_id: d011_t28_bursts_signal_data_control }
+    - { test_id: d011_t29_surges_signal_data_control }
+    - { test_id: d011_t33_rf_em_fields_general }
+    - { test_id: d011_t35_electrostatic_discharges }
+
+definitions:
+  HumidityClass:
+    description: |
+      D 11 §7.2 table 1 climatic environment class, as seen on R46
+      certs. StructuredValue-wrapped enum. The shared
+      `_modules/d011_environmental.yaml#/definitions/ClimaticClass`
+      forbids a null `value`; this local copy allows null to
+      accommodate the occasional empty extraction.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: ["string", "null"]
+          anyOf:
+          - enum: [H1, H2, H3]
+            description: Canonical D 11 climatic environment class token
+          - type: "null"
+            description: Empty extraction value (data quality issue, permitted but flagged)
+
+  AccuracyClass:
+    description: |
+      OIML R46-1:2012 §4 accuracy class for active electrical energy
+      meters. StructuredValue-wrapped enum. A multi-class cert (e.g.
+      class B and C simultaneously) is allowed because R46 meters may be
+      approved for more than one accuracy class. Mapping to percentage
+      error limits at Itr per §4.2:
+        A ≈ 1.0 %, B ≈ 0.5 %, C ≈ 0.2 %, D ≈ 0.1 %.
+
+      The `value` is nullable to accommodate OCR-stage data loss where
+      the accuracy-class letter is rendered as an inline image.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: ["string", "null"]
+          anyOf:
+          - enum: [A, B, C, D, "N/A"]
+            description: Canonical R46 accuracy class token
+          - type: "null"
+            description: Empty extraction value (OCR data loss; permitted but flagged)
+
+  AccuracyClassValue:
+    description: |
+      Bare accuracy-class token used inside
+      `recommendation.accuracy_classes[]` (where the class letter appears
+      directly, not wrapped in a StructuredValue).
+    type: string
+    oneOf:
+    - const: A
+      description: Class A — single-phase accuracy ≥ 1.0 % (R46-1:2012 §4)
+    - const: B
+      description: Class B — single-phase accuracy ≥ 0.5 % (R46-1:2012 §4)
+    - const: C
+      description: Class C — single-phase accuracy ≥ 0.2 % (R46-1:2012 §4)
+    - const: D
+      description: Class D — single-phase accuracy ≥ 0.1 % (R46-1:2012 §4)
+
+  CurrentType:
+    description: |
+      Electrical current qualifier — AC vs DC. R46 meters rated for
+      alternating current have voltage/current values stated as RMS and may
+      require additional harmonic / frequency tests (D 11 t21, t24). DC
+      meters require t19 (ripple). Currently modeled inline here as an
+      R46-specific value; planned to migrate to a cross-cutting
+      `unit.current_type` qualifier in a subsequent revision.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: AC
+            description: Alternating current — RMS values, may carry harmonics
+          - const: DC
+            description: Direct current — ripple on supply must be tested
+          - const: AC_DC
+            description: Meter accepts both AC and DC supply (rare; multi-mode)
+
+  MeterType:
+    description: |
+      R46-1:2012 §5.1 construction form of the meter. StructuredValue-
+      wrapped enum. Pre-2012 editions used "electromechanical" /
+      "static"; the 2012 edition formalizes the same distinction.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: electromechanical
+            description: Electromechanical (Ferraris-disc) meter
+          - const: static
+            description: Static (electronic) meter — canonical lowercase form
+          - const: Static
+            description: Static (electronic) meter — capital-S variant from some extractions
+
+  EnergyFlowDirection:
+    description: |
+      R46-1:2012 §5.3 direction of energy flow registration.
+      StructuredValue-wrapped enum.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          type: string
+          oneOf:
+          - const: uni-directional
+            description: Single direction of energy flow
+          - const: bi-directional
+            description: Both directions registered separately
+
+  Register:
+    description: |
+      R46-1:2012 §5.4 register count and direction.
+      StructuredValue-wrapped. Canonical enum values are
+      single-register / one-register / two-register / multi-register,
+      but extractions sometimes place a combined bi-directional string
+      (e.g. "bi-directional; Import Active energy ...") into this
+      field, so the value is not strictly enum-constrained. A
+      post-extraction normalizer is expected to migrate to the
+      canonical tokens.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+
+  InsulationProtectionClass:
+    description: |
+      R46-1:2012 §5.5 insulation/protective class. R46 distinguishes
+      Category 2 (basic insulation + supplementary protection, typical
+      for indoor household meters) from Category 3 (reinforced
+      insulation, outdoor/industrial use). StructuredValue-wrapped enum.
+    allOf:
+    - $ref: "_core.yaml#/definitions/StructuredValue"
+    - properties:
+        value:
+          description: |
+            Canonical values use the spaced strings "Category 1/2/3".
+            Unspaced variants, Roman-numeral "II", and bare integers
+            (1/2/3) appear in some extractions — all are accepted.
+          oneOf:
+          - type: string
+            enum:
+            - "Category 1"
+            - "Category 2"
+            - "Category 3"
+            - "Category1"
+            - "Category2"
+            - "Category3"
+            - "II"
+          - type: integer
+            enum: [1, 2, 3]
+
+  CertifiedType:
+    type: object
+    required: [category, type_designations]
+    properties:
+      category:
+        description: |
+          Free-form instrument category (e.g. "Active electrical energy
+          meter", "Active electrical polyphase energy meter",
+          "Measuring system"). R46 cert issuers use varying phrasings —
+          no canonical closed enum is feasible at this layer.
+        type: string
+      type_designations:
+        description: |
+          Type designation strings. May be empty when all identifying
+          information lives in `description` (e.g. some R46 cert
+          issuers use a single free-form type description rather than
+          designations).
+        type: array
+        items: { type: string }
+      meter_type:
+        $ref: "#/definitions/MeterType"
+      module_designation:
+        description: |
+          Free-form module designation. Some R46 certs carry a
+          `module_designation` string rather than a meter_type enum.
+        type: ["string", "null"]
+      description:
+        description: Free-form description of the certified type.
+        type: ["string", "null"]
+
+  Characteristics:
+    type: object
+    properties:
+      type_level:    { $ref: "#/definitions/TypeLevel" }
+      model_level:
+        type: array
+        items: { $ref: "#/definitions/ModelLevelEntry" }
+      config_level:
+        type: array
+        items: { $ref: "#/definitions/ConfigLevelEntry" }
+
+  TypeLevel:
+    description: |
+      Type-level characteristics for an R46 active electrical energy
+      meter. Field set covers R46-1:2012 §5 (technical characteristics)
+      plus D 11 environmental classes (climatic / mechanical / EM).
+    type: object
+    properties:
+      accuracy_class:                    { $ref: "#/definitions/AccuracyClass" }
+      current_type:                      { $ref: "#/definitions/CurrentType" }
+      temperature_range:                 { $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange" }
+      electromagnetic_environment_class: { $ref: "_modules/d011_environmental.yaml#/definitions/EMClass" }
+      mechanical_environment_class:      { $ref: "_modules/d011_environmental.yaml#/definitions/MechanicalClass" }
+      climatic_environment_class:        { $ref: "_modules/d011_environmental.yaml#/definitions/ClimaticClass" }
+      humidity_class:
+        description: |
+          D 11 §7.2 table 1 climatic environment class. StructuredValue-
+          wrapped enum. Uses a local definition because some R46
+          extractions produce an empty value; null is permitted to
+          accommodate that extraction noise.
+        $ref: "#/definitions/HumidityClass"
+      checking_facility_type:            { $ref: "_modules/d011_environmental.yaml#/definitions/CheckingFacilityType" }
+      meter_type:                        { $ref: "#/definitions/MeterType" }
+      connection_mode:                   { $ref: "_core.yaml#/definitions/StructuredValue" }
+      connection_mode_details:
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      connection_modes:
+        description: |
+          Free-form connection mode description (alias used by older
+          cert extraction for `connection_mode`).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      connection_mode_phases_wires_elements:
+        description: |
+          Structured phase/wire/element form (declared but rarely
+          populated in current data). Preserved for forward-compatibility.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      alternative_connection_mode:
+        description: Alternative connection mode (for multi-mode meters).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      energy_flow_direction:             { $ref: "#/definitions/EnergyFlowDirection" }
+      direction_of_energy_flow:
+        description: |
+          Free-form direction-of-energy-flow statement from the cert
+          (synonym for `energy_flow_direction`). StructuredValue-wrapped
+          to match the actual cert shape.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      direction_of_energy_flow_registers:
+        description: |
+          Combined "register + direction" statement from the cert
+          (e.g. "Two-registers, bi-directional"). Will be split into
+          `register` + `energy_flow_direction` by extraction.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      energy_flow_registers:
+        description: |
+          Legacy label for combined register + direction statement;
+          synonym of `direction_of_energy_flow_registers`.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      register:                          { $ref: "#/definitions/Register" }
+      insulation_protection_class:       { $ref: "#/definitions/InsulationProtectionClass" }
+      protective_class:
+        description: Synonym for `insulation_protection_class`.
+        $ref: "#/definitions/InsulationProtectionClass"
+      indoor_outdoor:
+        description: |
+          Indoor vs outdoor installation class. StructuredValue-wrapped
+          enum to match the actual cert shape.
+        allOf:
+        - $ref: "_core.yaml#/definitions/StructuredValue"
+        - properties:
+            value:
+              type: string
+              oneOf:
+              - const: indoor
+                description: Indoor installation
+              - const: outdoor
+                description: Outdoor installation
+              - const: indoor_outdoor
+                description: Suitable for both indoor and outdoor
+      environmental_use:
+        description: Free-form environmental use statement (e.g. "indoor", "outdoor").
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      indoor_outdoor_type:
+        description: Legacy alias for `indoor_outdoor`.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      ip_rating:
+        description: IP code (IEC 60529), e.g. IP54 / IP65.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      ip_rating_environmental_use:
+        description: |
+          Combined IP rating + indoor/outdoor statement (e.g.
+          "IP54/outdoor"). StructuredValue-wrapped to match the actual
+          cert shape.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      terminal_arrangement:
+        description: |
+          Terminal / mounting form. StructuredValue-wrapped: value is
+          the form ("DIN", "BS", "DIN or BS", "panel", …).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      tilt_mounting_position:
+        description: Tilt orientation (some R46 meters are tilt-sensitive).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      nominal_voltage:
+        description: |
+          Nominal voltage Un. For polyphase meters this commonly encodes
+          a phase/line-to-neutral/line-to-line triple
+          (e.g. "3×133/230…3×230/400 V") or a single-phase value.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      power_supply_voltage:
+        description: Power supply voltage (synonym of `nominal_voltage` per R46).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      nominal_frequency:
+        description: Nominal frequency fnom, in Hz. 50 or 60 Hz typical.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      power_supply_frequency:
+        description: Power supply frequency (synonym of `nominal_frequency` per R46).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      minimum_current:
+        description: Minimum current Imin (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      transitional_current:
+        description: Transitional current Itr (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      maximum_current:
+        description: Maximum current Imax (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      starting_current:
+        description: Starting current Ist (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      reference_current:
+        description: Reference current Iref (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      ib_reference:
+        description: Reference current Ib (R46-1:2012 §5.6).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      meter_constant:
+        description: |
+          Meter constant — impulses per kWh (imp/kWh) or per m³ (imp/m³)
+          for the meter's test output. The reciprocal Wh/imp is sometimes
+          used. `unit_id` is typically null because `imp/kWh` has no
+          unitsdb entry.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      impulse_voltage:
+        description: Impulse voltage withstand rating (R46-1:2012 §5.7).
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      hardware_version:                  { $ref: "_core.yaml#/definitions/StructuredValue" }
+      hardware_versions:
+        description: Plural form used by some certs for multi-board hardware.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      software_identification:           { $ref: "_core.yaml#/definitions/SoftwareIdentification" }
+      software_versions:
+        description: Plural form used by some certs for multi-firmware version.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      software_checksum:
+        description: Software checksum/crc alone, when not bundled into software_identification.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      specified_clock_frequencies:
+        description: Internal clock frequencies used by the meter's measurement circuitry.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      register_multiplier:
+        description: Register multiplier when the displayed value differs from raw counts.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      communication_interface:
+        description: Communication interface(s) — e.g. "PLC", "RF mesh", "DLMS/COSEM".
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      communication_interfaces:
+        description: Plural form for multi-interface certs.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      ambient_temperature_range:
+        description: |
+          Alias for `temperature_range` used by some older extractions.
+          StructuredValue form with implicit degree_Celsius unit.
+        $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange"
+      temperature_limit:
+        description: |
+          Legacy alias for `temperature_range`. StructuredValue form
+          with implicit degree_Celsius unit.
+        $ref: "_modules/d011_environmental.yaml#/definitions/TemperatureRange"
+      lower_specified_temperature:
+        description: Lower bound of the specified temperature range, standalone.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      upper_specified_temperature:
+        description: Upper bound of the specified temperature range, standalone.
+        $ref: "_core.yaml#/definitions/StructuredValue"
+      application_number:
+        description: |
+          Application number assigned by the issuer (rare; sometimes
+          surfaced as a type-level attribute rather than in `certificate`).
+        type: string
+      application_no:
+        description: Alias for `application_number`.
+        type: string
+      meter_model:
+        description: Meter model string surfaced at type level (rare).
+        type: string
+      meter_name:
+        description: Meter marketing name surfaced at type level (rare).
+        type: string
+      meter_type_electromechanical_static:
+        description: Legacy alias for `meter_type` used by older extractions.
+        $ref: "#/definitions/MeterType"
+      serial_numbers:
+        description: Serial numbers of the test samples.
+        type: string
+
+  ModelLevelEntry:
+    description: |
+      A characteristic that varies across hardware variants of a single
+      type designation. Each entry has an `attribute` label (canonical
+      R46 attribute name), a list of `values` keyed by `model`, and
+      `unit_symbol`/`unit_id` (where applicable).
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      unit_symbol:        { type: [string, "null"] }
+      unit_id:            { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [model, value]
+          properties:
+            model:
+              description: |
+                Model identifier. May be null when the cert groups all
+                values under a single implicit model (the GLM extractor
+                sometimes omits per-row model strings).
+              type: ["string", "null"]
+            value:            { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            unit_symbol:      { type: [string, "null"] }
+            unit_id:          { type: [string, "null"] }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  ConfigLevelEntry:
+    description: |
+      A characteristic that varies with a configuration axis
+      (e.g. Ib-reference for `transitional_current`). Mirrors the shape
+      used in R46 cert data: no separate `axis` field — the axis is
+      implicit in `attribute` and the `condition` strings below.
+    type: object
+    required: [attribute, values]
+    properties:
+      attribute: { type: string }
+      axis:      { type: ["string", "null"] }
+      unit_symbol:        { type: [string, "null"] }
+      unit_id:            { type: [string, "null"] }
+      values:
+        type: array
+        items:
+          type: object
+          required: [condition, value]
+          properties:
+            condition: { type: string }
+            value:     { $ref: "_core.yaml#/definitions/ValueOrScalar" }
+            unit_symbol:    { type: [string, "null"] }
+            unit_id:        { type: [string, "null"] }
+            footnote_markers:
+              type: array
+              items: { type: string }
+
+  D011TestReference:
+    description: Reference to an OIML D 11:2013 performance test.
+    type: object
+    required: [test_id]
+    properties:
+      test_id:          { type: string, pattern: '^d011_t\d{2}_' }
+      test_level_index: { type: integer, minimum: 1, maximum: 5 }
+      notes:            { type: string }
+
+  TestReport:
+    description: |
+      R46-specific test-report entry. Allows nullable date (some
+      extractions omit it) and permissive date format (some non-ISO
+      date strings appear).
+    type: object
+    required: [id]
+    properties:
+      id:     { type: string }
+      date:
+        type: ["string", "null"]
+      pages:
+        type: ["integer", "null"]
+        minimum: 1
+      role:
+        type: ["string", "null"]
+        enum:
+        - type_evaluation_report
+        - test_report
+        - documentation_file
+        - evaluation_report
+        - null
+
+  RevisionEntry:
+    description: |
+      Revision history entry. Permits nullable / non-ISO date strings
+      to accommodate extraction noise.
+    type: object
+    required: [revision, date]
+    properties:
+      revision: { type: ["string", "integer", "null"] }
+      date:     { type: ["string", "null"] }
+      changes:  { type: ["string", "null"] }
+
+  MatrixTable:
+    description: |
+      Structured matrix table preserved verbatim from the source
+      certificate when the cert contains multi-dimensional matrix data.
+      See _common_certificate_schema.yaml §matrix_tables for the
+      conventional shape. Schema is intentionally permissive — the
+      row-cell shape depends on each source table's columns.
+    type: object
+    required: [name, columns, rows]
+    properties:
+      name:        { type: string }
+      description: { type: [string, "null"] }
+      columns:
+        type: array
+        items: { type: string }
+      rows:
+        type: array
+        items: { type: object }
+      footnotes:
+        type: array
+        items: { type: string }
+
+allOf:
+- description: |
+    R46-2:2012 §3.4: damp-heat steady state (t08) applies iff the
+    climatic environment class is H2 (non-condensing enclosed locations
+    with possible condensation) or H3 (outdoor); cyclic damp heat (t09)
+    applies iff the class is H3.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class: { const: H2 }
+  then:
+    properties:
+      d011_tests_applicable: { contains: { properties: { test_id: { const: d011_t08_damp_heat_steady_state } } } }
+- if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              humidity_class: { const: H3 }
+  then:
+    properties:
+      d011_tests_applicable:
+        allOf:
+        - contains: { properties: { test_id: { const: d011_t08_damp_heat_steady_state } } }
+        - contains: { properties: { test_id: { const: d011_t09_damp_heat_cyclic } } }
+- description: |
+    R46-2:2012 §3.6: ripple on DC mains (t19) applies only when the
+    meter is rated for DC supply.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              current_type:
+                allOf:
+                - properties:
+                    value: { enum: [DC, AC_DC] }
+  then:
+    properties:
+      d011_tests_applicable: { contains: { properties: { test_id: { const: d011_t19_ripple_dc_mains } } } }
+- description: |
+    R46-2:2012 §3.6: AC-mains tests (t20, t21, t23, t24) apply only
+    when the meter is rated for AC supply.
+  if:
+    properties:
+      characteristics:
+        properties:
+          type_level:
+            properties:
+              current_type:
+                allOf:
+                - properties:
+                    value: { enum: [AC, AC_DC] }
+  then:
+    properties:
+      d011_tests_applicable:
+        allOf:
+        - contains: { properties: { test_id: { const: d011_t20_ac_mains_voltage_variation } } }
+        - contains: { properties: { test_id: { const: d011_t21_ac_mains_frequency_variation } } }
+        - contains: { properties: { test_id: { const: d011_t23_ac_mains_dips_interruptions } } }
+        - contains: { properties: { test_id: { const: d011_t24_ac_mains_harmonics } } }

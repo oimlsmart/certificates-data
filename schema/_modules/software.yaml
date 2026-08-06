@@ -1,0 +1,31 @@
+# Module: software
+#
+# Software identification, version, checksum. Applies to instruments with
+# legally-relevant software (most electronic instruments).
+#
+# Used by: R21, R46, R50, R51, R60, R61, R76, R85, R107, R117, R129,
+#          R134, R137, R139
+
+characteristics:
+  software_identification:
+    description: Software version / identification string
+    type: string
+    synonyms:
+      - software_version
+      - software_identification_version_number
+      - identification_of_software
+      - software_id
+      - software_identification_number
+      - approved_software_versions
+      - approved_legal_software_version
+
+  software_checksum:
+    description: Software CRC / checksum
+    type: string
+    pattern: "^[0-9A-Fa-f]{2,16}$|^0x[0-9A-Fa-f]+$"
+    synonyms:
+      - software_identification_checksum
+      - software_crc
+      - checksum
+      - w&m_checksum
+      - approved_legal_software_checksum
