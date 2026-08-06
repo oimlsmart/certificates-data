@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+# RSpec configuration
+require "pathname"
+ROOT = Pathname.new(File.expand_path("..", __dir__))
+$LOAD_PATH.unshift(ROOT + "lib")
+
+RSpec.configure do |config|
+  config.color = true
+  config.formatter = :documentation
+end
