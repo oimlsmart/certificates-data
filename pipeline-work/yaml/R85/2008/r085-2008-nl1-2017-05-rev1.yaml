@@ -1,0 +1,283 @@
+---
+_meta:
+  cert_id: 4392
+  num: R085/2008-NL1-2017.05 Rev. 1
+  applicant: Enraf B.V.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-nl1-2017-05-rev1.pdf
+  accuracy_class_note: accuracy_class not stated in source PDF
+certificate:
+  number: R85/2008-NL1-17.05 revision 01
+  scheme: A
+  project_number: '1900582'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2017-08-02'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: https://www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+manufacturers:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+certified_type:
+  category: Automatic level gauge for measuring the level of liquid in stationary storage tanks
+  type_designations:
+  - Smartradar Flexline XP
+  - Smartradar Flexline HP
+  module_designation: N/A
+  description: An automatic level gauge for measuring the level of liquid in stationary storage tanks
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -25
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 65
+        max: 240
+      unit_symbol: Vac
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_voltage_dc:
+      value:
+        min: 24
+        max: 65
+      unit_symbol: Vdc
+      unit_id: u:volt
+  model_level: []
+  config_level: []
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+  accuracy_classes: []
+test_reports:
+- id: R85/1998-NL1-07.02
+  date: N/A
+  pages: 100
+  role: test_report
+- id: CPC/9200376
+  date: N/A
+  pages: 20
+  role: test_report
+- id: NMi-10200994
+  date: N/A
+  pages: 15
+  role: test_report
+- id: NMi-12200691
+  date: N/A
+  pages: 13
+  role: test_report
+- id: NMi-13200623
+  date: N/A
+  pages: 14
+  role: test_report
+- id: NMi-14200253-1
+  date: N/A
+  pages: 21
+  role: test_report
+- id: NMi-16200400-01
+  date: N/A
+  pages: 21
+  role: test_report
+- id: NMi-16200400-02
+  date: N/A
+  pages: 21
+  role: test_report
+- id: R85-2008-NL1-12.04
+  date: '2012-12-10'
+  pages: 49
+  role: test_report
+- id: NMi-13200623
+  date: '2013-10-15'
+  pages: 14
+  role: test_report
+- id: NMi-1900750-02
+  date: '2017-03-24'
+  pages: 26
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2017-06-16'
+  changes: "-"
+- revision: '01'
+  date: '2017-08-01'
+  changes: >-
+    New software version A1300 and DSP A1300 because addition of reference height compensation in wet part and in dry part
+    of the tank.
+components:
+- role: sensor processor
+  type_designations:
+  - TII-XR (also indicated as CAN Xband board) with ART2A
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx and DSP A10 xxx
+      - A11xxx and DSP A11 xxx
+      - A12xxx and DSP A12 xxx
+      - A1300
+      - DSP A1300
+    checksums:
+      value:
+      - 0
+      - 38676
+      - '0x55B4'
+- role: sensor processor
+  type_designations:
+  - TII-XR (also indicated as CAN Xband board) with ART2B
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx and DSP A10 xxx
+      - A11xxx and DSP A11 xxx
+      - A1204 and DSP A12 xxx
+      - A1300
+      - DSP A1300
+    checksums:
+      value:
+      - 0
+      - 64095
+      - 38676
+      - '0x55B4'
+- role: display communication board
+  type_designations:
+  - HMI-TSI/FII-SMV
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx (previous to A1006)
+      - A1006
+      - A1007
+    checksums:
+      value:
+      - 0
+      - 3170
+      - 22441
+- role: display communication board
+  type_designations:
+  - FCI-HRT
+  characteristics:
+    software_versions:
+      value:
+      - A1006T
+      - A1007
+    checksums:
+      value:
+      - 38785
+      - 12537
+- role: communication board
+  type_designations:
+  - CAN-BPM/HCI-BPM
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx (previous to A1007)
+      - A1007
+    checksums:
+      value:
+      - 0
+      - 37556
+- role: communication board
+  type_designations:
+  - CAN-TRL2/HCI-TRL2
+  characteristics:
+    software_versions:
+      value:
+      - A1001
+    checksums:
+      value:
+      - 12361030
+- role: interface board
+  type_designations:
+  - CAN RTD/FII_RTD
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx (previous to A1004)
+      - A1004
+    checksums:
+      value:
+      - 0
+      - 0
+- role: interface board
+  type_designations:
+  - CAN-HART-SLAVE/HCI-HAO
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx (previous to A1003)
+      - A1003
+    checksums:
+      value:
+      - 0
+      - 12791
+- role: interface board
+  type_designations:
+  - CAN RS/HCM-GPU
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx
+    checksums:
+      value:
+      - 0
+- role: interface board
+  type_designations:
+  - CAN SD
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx
+    checksums:
+      value:
+      - 0
+- role: 1 WL main board
+  type_designations:
+  - CAN-HCI-1WL
+  characteristics:
+    software_versions:
+      value:
+      - A10xxx
+      - A3013
+      - A3017
+      - A3018
+    checksums:
+      value:
+      - 0
+      - 22685
+      - 16395
+      - 11607
+_traceability:
+  raw_labels:
+    power_supply_voltage_dc: power_supply_voltage_dc

@@ -1,0 +1,443 @@
+---
+_meta:
+  cert_id: 4393
+  num: R085/2008-NL1-2017.05 Rev. 2
+  applicant: Enraf B.V.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-nl1-2017-05-rev2.pdf
+  accuracy_class_note: accuracy_class not stated in source PDF
+certificate:
+  number: R85/2008-NL1-17.05
+  scheme: A
+  project_number: '1900582'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2017-08-28'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: https://www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+manufacturers:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+certified_type:
+  category: Automatic level gauge for measuring the level of liquid in stationary storage tanks
+  type_designations:
+  - Smartradar Flexline XP
+  - Smartradar Flexline HP
+  - F06
+  - F08
+  - W06
+  - H04
+  - S06
+  - S08
+  - S10
+  - S12
+  - SmartView
+  - HARTSmartView
+  module_designation: N/A
+  description: An automatic level gauge for measuring the level of liquid in stationary storage tanks
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -25
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 65
+        max: 240
+      unit_symbol: Vac
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_voltage_dc:
+      value:
+        min: 24
+        max: 65
+      unit_symbol: Vdc
+      unit_id: u:volt
+  model_level:
+  - attribute: minimum_product_level
+    unit_symbol: m
+    unit_id: u:metre
+    values:
+    - model: F06
+      value: -20
+    - model: F08
+      value: -20
+    - model: W06
+      value: -20
+    - model: H04
+      value: -21
+    - model: S06
+      value: -21
+    - model: S08
+      value: -21
+    - model: S10
+      value: -21
+    - model: S12
+      value: -21
+  - attribute: maximum_product_level
+    unit_symbol: m
+    unit_id: u:metre
+    values:
+    - model: F06
+      value: -1
+    - model: F08
+      value: -1
+    - model: W06
+      value: -1
+    - model: H04
+      value: -1
+    - model: S06
+      value: -1
+    - model: S08
+      value: -1
+    - model: S10
+      value: -1
+    - model: S12
+      value: -1
+  config_level: []
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+  accuracy_classes: []
+test_reports:
+- id: R85/1998-NL1-07.02
+  date: N/A
+  pages: 100
+  role: test_report
+- id: CPC/9200376
+  date: N/A
+  pages: 20
+  role: test_report
+- id: NMi-10200994
+  date: N/A
+  pages: 15
+  role: test_report
+- id: NMi-12200691
+  date: N/A
+  pages: 13
+  role: test_report
+- id: NMi-13200623
+  date: N/A
+  pages: 14
+  role: test_report
+- id: NMi-14200253-1
+  date: N/A
+  pages: 21
+  role: test_report
+- id: NMi-16200400-01
+  date: N/A
+  pages: 21
+  role: test_report
+- id: NMi-16200400-02
+  date: N/A
+  pages: 21
+  role: test_report
+- id: R85-2008-NL1-12.04
+  date: '2012-12-10'
+  pages: 49
+  role: test_report
+- id: NMi-13200623
+  date: '2013-10-15'
+  pages: 14
+  role: test_report
+- id: NMi-1900750-02
+  date: '2017-03-24'
+  pages: 26
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2017-06-16'
+  changes: "-"
+- revision: '01'
+  date: '2017-08-02'
+  changes: >-
+    New software version A1300 and DSP A1300 because addition of reference height compensation in wet part and in dry part
+    of the tank.
+- revision: '02'
+  date: '2017-08-28'
+  changes: Typing error in issuing date and date of certificate history
+model_family:
+  family_name:
+  models:
+  - model_id: F06
+  - model_id: F08
+  - model_id: W06
+  - model_id: H04
+  - model_id: S06
+  - model_id: S08
+  - model_id: S10
+  - model_id: S12
+components:
+- role: sensor processor
+  type_designations:
+  - TII-XR (also indicated as CAN Xband board) with ART2A
+  - TII-XR (also indicated as CAN Xband board) with ART2B
+  characteristics: {}
+- role: display communication board
+  type_designations:
+  - HMI-TSI/FII-SMV
+  - FCI-HRT
+  characteristics: {}
+- role: communication board
+  type_designations:
+  - CAN-BPM/HCI-BPM
+  - CAN-TRL2/HCI-TRL2
+  characteristics: {}
+- role: interface board
+  type_designations:
+  - CAN RTD/FII_RTD
+  - CAN-HART-SLAVE/HCI-HAO
+  - CAN RS/HCM-GPU
+  - CAN SD
+  characteristics: {}
+- role: main board
+  type_designations:
+  - CAN-HCI-1WL
+  characteristics: {}
+matrix_tables:
+- name: Software identification
+  columns:
+  - part
+  - type
+  - software
+  - checksum
+  rows:
+  - part:
+      value: sensor processor in combination with sensor ART2A
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2A
+    software:
+      value: A10xxx and DSP A10 xxx, A11xxx and DSP A11 xxx, A12xxx and DSP A12 xxx
+    checksum:
+      value: 0
+  - part:
+      value: sensor processor in combination with sensor ART2A
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2A
+    software:
+      value: A1300
+    checksum:
+      value: 38676
+  - part:
+      value: sensor processor in combination with sensor ART2A
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2A
+    software:
+      value: DSP A1300
+    checksum:
+      value: '0x55B4'
+  - part:
+      value: sensor processor in combination with sensor ART2B
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2B
+    software:
+      value: A10xxx and DSP A10 xxx, A11xxx and DSP A11 xxx
+    checksum:
+      value: 0
+  - part:
+      value: sensor processor in combination with sensor ART2B
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2B
+    software:
+      value: A1204 and DSP A12 xxx
+    checksum:
+      value: 64095
+  - part:
+      value: sensor processor in combination with sensor ART2B
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2B
+    software:
+      value: A1300
+    checksum:
+      value: 38676
+  - part:
+      value: sensor processor in combination with sensor ART2B
+    type:
+      value: TII-XR (also indicated as CAN Xband board) with ART2B
+    software:
+      value: DSP A1300
+    checksum:
+      value: '0x55B4'
+  - part:
+      value: display communication board
+    type:
+      value: HMI-TSI/FII-SMV
+    software:
+      value: A10xxx (previous to A1006)
+    checksum:
+      value: 0
+  - part:
+      value: display communication board
+    type:
+      value: HMI-TSI/FII-SMV
+    software:
+      value: A1006
+    checksum:
+      value: 3170
+  - part:
+      value: display communication board
+    type:
+      value: HMI-TSI/FII-SMV
+    software:
+      value: A1007
+    checksum:
+      value: 22441
+  - part:
+      value: display communication board
+    type:
+      value: FCI-HRT
+    software:
+      value: A1006T
+    checksum:
+      value: 38785
+  - part:
+      value: display communication board
+    type:
+      value: FCI-HRT
+    software:
+      value: A1007
+    checksum:
+      value: 12537
+  - part:
+      value: communication board
+    type:
+      value: CAN-BPM/HCI-BPM
+    software:
+      value: A10xxx (previous to A1007)
+    checksum:
+      value: 0
+  - part:
+      value: communication board
+    type:
+      value: CAN-BPM/HCI-BPM
+    software:
+      value: A1007
+    checksum:
+      value: 37556
+  - part:
+      value: communication board
+    type:
+      value: CAN-TRL2/HCI-TRL2
+    software:
+      value: A1001
+    checksum:
+      value: 12361030
+  - part:
+      value: interface board
+    type:
+      value: CAN RTD/FII_RTD
+    software:
+      value: A10xxx (previous to A1004)
+    checksum:
+      value: 0
+  - part:
+      value: interface board
+    type:
+      value: CAN RTD/FII_RTD
+    software:
+      value: A1004
+    checksum:
+      value: 0
+  - part:
+      value: interface board
+    type:
+      value: CAN-HART-SLAVE/HCI-HAO
+    software:
+      value: A10xxx (previous to A1003)
+    checksum:
+      value: 0
+  - part:
+      value: interface board
+    type:
+      value: CAN-HART-SLAVE/HCI-HAO
+    software:
+      value: A1003
+    checksum:
+      value: 12791
+  - part:
+      value: interface board
+    type:
+      value: CAN RS/HCM-GPU
+    software:
+      value: A10xxx
+    checksum:
+      value: 0
+  - part:
+      value: interface board
+    type:
+      value: CAN SD
+    software:
+      value: A10xxx
+    checksum:
+      value: 0
+  - part:
+      value: 1 WL main board
+    type:
+      value: CAN-HCI-1WL
+    software:
+      value: A10xxx
+    checksum:
+      value: 0
+  - part:
+      value: 1 WL main board
+    type:
+      value: CAN-HCI-1WL
+    software:
+      value: A3013
+    checksum:
+      value: 22685
+  - part:
+      value: 1 WL main board
+    type:
+      value: CAN-HCI-1WL
+    software:
+      value: A3017
+    checksum:
+      value: 16395
+  - part:
+      value: 1 WL main board
+    type:
+      value: CAN-HCI-1WL
+    software:
+      value: A3018
+    checksum:
+      value: 11607
+  description: Software identification and checksums for various components
+  footnotes: []
+_traceability:
+  raw_labels:
+    power_supply_voltage_dc: power_supply_voltage_dc

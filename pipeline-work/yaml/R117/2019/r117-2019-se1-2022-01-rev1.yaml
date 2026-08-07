@@ -1,0 +1,156 @@
+---
+_meta:
+  cert_id: 5796
+  num: R117/2019-A-SE1-22.01 Rev. 1
+  applicant: Dover Fueling Solutions UK Limited (Filial)
+  issuing_year: '2022'
+  status: Valid
+  issuer: SE1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-se1-2022-01-rev1.pdf
+certificate:
+  number: R117/2019-A-SE1-22.01 Rev. 1
+  scheme: A
+  member_state: Sweden
+  date_issued: '2022-12-11'
+  oiml_issuer_id: SE1
+issuing_authority:
+  name: RISE Research Institutes of Sweden AB
+  address_lines:
+  - Box 857,SE-50115 Borås,Sweden
+  person_responsible: Martin Tillander
+  oiml_issuer_id: SE1
+applicants:
+- name: Dover Fueling Solutions UK Limited Filial (DFS)
+  address_lines:
+  - PO.Box 50559,SE-20515 Malmö
+  - Hanögatan8,SE-21124 Malmö
+manufacturers:
+- name: Dover Fueling Solutions UK Limited
+  address_lines:
+  - Unit3,Baker Road,West Pitkerro Industrial Estate,Dundee DD53RT,United Kingdom
+- name: Wayne Industria e Comercio Ltda
+  address_lines:
+  - Estrada Timbó126--Higienópolis,2106-280—Rio de Janeiro,--RJ—Brazil
+- name: Tokheim India Pvt.Ltd
+  address_lines:
+  - Building No.2,Plot No.66,TTC Industrial Area,MIDC Mahape,Navi Mumbai-400710 Maharashtra,India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Wayne Helix XXX Fuel Dispenser (where XXX stands for a number between 1000 and 6000)
+  module_designation:
+  description: >-
+    A family of Wayne Helix 1000 Fuel dispenser, Wayne Helix 2000 Fuel dispenser, Wayne Helix 4000 Fuel dispenser, Wayne Helix
+    5000 Fuel dispenser, Wayne Helix 6000 Fuel dispenser, for petrol, kerosene, diesel, ethanol, FAME/RME, HVO fuel, DEF (Diesel
+    Exhaust Fluid), Windshield liquid or LPG, including ATC conversion device (optional).
+characteristics:
+  type_level:
+    scale_interval_volume_display:
+      value: 0.01
+      unit_symbol: l
+      unit_id: u:liter
+    maximum_pressure:
+      value: 2.5
+      unit_symbol: MPa
+      unit_id: u:pascal
+    minimum_working_pressure:
+      value: 0.12
+      unit_symbol: MPa
+      unit_id: u:pascal
+    temperature_range:
+      value:
+        min: -30
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    ambient_temperature_limits:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    mechanic_class:
+      value: M1
+    electromagnetic_environment_class:
+      value: E1
+    humidity_class:
+      value: H3
+  model_level:
+  - attribute: maximum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: Wayne Helix 1000
+      value: 40
+    - model: Wayne Helix 2000
+      value: 40
+    - model: Wayne Helix 4000
+      value: 40
+    - model: Wayne Helix 5000
+      value: 40
+    - model: Wayne Helix 6000
+      value: 40
+    unit_id: u:liter_per_minute
+  - attribute: minimum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: Wayne Helix 1000
+      value: 0.2
+    - model: Wayne Helix 2000
+      value: 0.2
+    - model: Wayne Helix 4000
+      value: 0.2
+    - model: Wayne Helix 5000
+      value: 0.2
+    - model: Wayne Helix 6000
+      value: 0.2
+    unit_id: u:liter_per_minute
+  - attribute: minimum_measured_quantity
+    unit_symbol: l
+    values:
+    - model: Wayne Helix 1000
+      value: 2.0
+    - model: Wayne Helix 2000
+      value: 2.0
+    - model: Wayne Helix 4000
+      value: 2.0
+    - model: Wayne Helix 5000
+      value: 2.0
+    - model: Wayne Helix 6000
+      value: 2.0
+    unit_id: u:liter
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+  - '1'
+test_reports:
+- id: '1122498'
+  date: '2022-12-07'
+  pages: 18
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2022-09-30'
+  changes: First edition
+- revision: '1'
+  date: '2022-12-11'
+  changes: Second edition Adding clarification concerning XTEA encryption and replacing incorrect CRC for iGEM2 rev.18.
+model_family:
+  family_name:
+  models:
+  - model_id: Wayne Helix 1000
+  - model_id: Wayne Helix 2000
+  - model_id: Wayne Helix 4000
+  - model_id: Wayne Helix 5000
+  - model_id: Wayne Helix 6000
+_traceability:
+  raw_labels:
+    maximum_pressure: maximum_working_pressure
+    temperature_range: liquid_temperature_range
+    electromagnetic_environment_class: electromagnetic_class

@@ -1,0 +1,214 @@
+---
+_meta:
+  cert_id: 6911
+  num: R134/2006-A-NL1-24.01 Rev. 0
+  applicant: SMA Road Safety s.r.l.
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R134
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R134/2006/r134-2006-nl1-2024-01-rev0.pdf
+certificate:
+  number: R134/2006-A-NL1-24.01 Rev. 0
+  scheme: A
+  project_number: '2647140'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2024-07-16'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  oiml_issuer_id: NL1
+applicants:
+- name: SMA Road Safety s.r.l.
+  address_lines:
+  - Via Giovanni Battista Pirelli
+  - 81025 Marcianise CE
+  - Italy
+manufacturers:
+- name: SMA Road Safety s.r.l.
+  address_lines:
+  - Via Giovanni Battista Pirelli
+  - 81025 Marcianise CE
+  - Italy
+certified_type:
+  category: 'Load cell WIM system: single/double'
+  type_designations:
+  - Load cell WIM system
+  module_designation: N/A
+  description: An Automatic instrument for weighing road vehicles in motion
+characteristics:
+  type_level:
+    maximum_capacity:
+      value: 20
+      unit_symbol: t
+      unit_id: u:metric_ton
+    application:
+      value: Not to be used to weigh liquid products
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_type:
+      value: AC
+    software_identification:
+      value: V1.0.x (x=0...9 and represents patch number)
+    maximum_operating_speed_vmax:
+      value: 60
+      unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
+    minimum_operating_speed_vmin:
+      value: 5
+      unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
+  model_level:
+  - attribute: accuracy_class
+    values:
+    - model: double WIM
+      value: '5'
+    - model: single WIM
+      value: '10'
+  - attribute: minimum_capacity
+    unit_symbol: kg
+    values:
+    - model: double WIM
+      value: 1000
+    - model: single WIM
+      value: 2000
+    unit_id: u:kilogram
+  - attribute: scale_interval
+    unit_symbol: kg
+    values:
+    - model: double WIM
+      value: 100
+    - model: single WIM
+      value: 200
+    unit_id: u:kilogram
+  config_level: []
+recommendation:
+  id: R134
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - '5'
+  - '10'
+test_reports:
+- id: NMi-2647140-01
+  date: '2024-07-16'
+  pages: 31
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2024-07-16'
+  changes: Initial issue.
+matrix_tables:
+- name: Characteristics of the automatic instrument for weighing road vehicles in motion
+  columns:
+  - accuracy_class
+  - vehicle_mass
+  - double_WIM
+  - single_WIM
+  rows:
+  - accuracy_class:
+      value: '5'
+    vehicle_mass:
+      value: double WIM
+    double_WIM:
+      value: '5'
+    single_WIM:
+      value: '10'
+  - accuracy_class:
+      value: Maximum capacity (per load receptor)
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: 20t
+    single_WIM:
+      value: 20t
+  - accuracy_class:
+      value: Minimum capacity (per load receptor)
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: 1000kg
+    single_WIM:
+      value: 2000kg
+  - accuracy_class:
+      value: Scale interval
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: d≥100kg
+    single_WIM:
+      value: d≥200kg
+  - accuracy_class:
+      value: Maximum operating speed
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: vmax=60km/h
+    single_WIM:
+      value: vmax=60km/h
+  - accuracy_class:
+      value: Minimum operating speed
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: vmin=5km/h
+    single_WIM:
+      value: vmin=5km/h
+  - accuracy_class:
+      value: Application
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: Not to be used to weigh liquid products
+    single_WIM:
+      value: Not to be used to weigh liquid products
+  - accuracy_class:
+      value: Temperature range
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: "-10℃/+40℃"
+    single_WIM:
+      value: "-10℃/+40℃"
+  - accuracy_class:
+      value: Power supply voltage
+    vehicle_mass:
+      value: N/A
+    double_WIM:
+      value: 100-240V AC 50/60Hz
+    single_WIM:
+      value: 100-240V AC 50/60Hz
+  - accuracy_class:
+      value: Software identification
+    vehicle_mass:
+      value: Version number
+    double_WIM:
+      value: V1.0.x (x=0...9 and represents patch number)
+    single_WIM:
+      value: V1.0.x (x=0...9 and represents patch number)
+  description: Characteristics of the automatic instrument for weighing road vehicles in motion
+  footnotes: []
+_traceability:
+  raw_labels:
+    maximum_speed: maximum_operating_speed
+    minimum_speed: minimum_operating_speed

@@ -1,0 +1,259 @@
+---
+_meta:
+  cert_id: 5509
+  num: R139/2018-A-NL1-21.04 Rev. 0
+  applicant: Dover Fueling Solutions UK Limited (Filial)
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R139
+  edition_year: 2018
+  extraction_method: glm-extract
+  source_pdf: certificates/R139/2018/r139-2018-nl1-2021-04-rev0.pdf
+certificate:
+  number: R 139/2018-A-NL1-21.04
+  scheme: A
+  project_number: '2573771'
+  page_total: 6
+  member_state: The Netherlands
+  date_issued: '2021-09-30'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: https://www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Dover Fueling Solutions UK limited (Filial)
+  address_lines:
+  - Hanögatan 8
+  - 21124 Malmö
+  - Sweden
+manufacturers:
+- name: Dover Fueling Solutions UK limited (Filial)
+  address_lines:
+  - Hanögatan 8
+  - 21124 Malmö
+  - Sweden
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Helix CNG
+  module_designation: N/A
+characteristics:
+  type_level:
+    minimum_measured_quantity:
+      value:
+        CNGMass: 5
+        CNG050: 1
+      unit_symbol: kg
+      unit_id: u:kilogram
+    maximum_pressure:
+      value: 300
+      unit_symbol: bar(g)
+      unit_id: u:bar
+    accuracy_class:
+      value: '1.5'
+    environmental_classes:
+      value:
+        mechanical: M1
+        electromagnetic: E2
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    product_temperature_range:
+      value:
+        CNGMass:
+          min: -40
+          max: 55
+        CNG050:
+          min: -25
+          max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    intended_for_measurement:
+      value: Compressed Natural Gas
+  model_level:
+  - attribute: minimum_flow_rate
+    unit_symbol: kg/min
+    values:
+    - model: DN08
+      value: 0.3
+    - model: DN15
+      value: 0.8
+    - model: DN25
+      value: 1.5
+    unit_id: u:kilogram_per_minute
+  - attribute: maximum_flow_rate
+    unit_symbol: kg/min
+    values:
+    - model: DN08
+      value: 30
+    - model: DN15
+      value: 80
+    - model: DN25
+      value: 150
+    unit_id: u:kilogram_per_minute
+  - attribute: mmq
+    unit_symbol: kg
+    values:
+    - model: DN08
+      value: 1
+    - model: DN15
+      value: 1
+    - model: DN25
+      value: 1
+    unit_id: u:kilogram
+  - attribute: maximum_pressure
+    unit_symbol: bar(g)
+    values:
+    - model: DN08
+      value: 250
+    - model: DN15
+      value: 250
+    - model: DN25
+      value: 250
+    unit_id: u:bar
+  - attribute: diameter_in_outlet
+    unit_symbol: mm
+    values:
+    - model: DN08
+      value: 8
+    - model: DN15
+      value: 15
+    - model: DN25
+      value: 25
+    unit_id: u:meter
+  config_level: []
+recommendation:
+  id: R139
+  edition: 2018
+  scheme: A
+  accuracy_classes:
+  - '1.5'
+test_reports:
+- id: NMi-1901591-01
+  date: '2018-06-18'
+  pages: 19
+  role: type_evaluation_report
+- id: NMi-2283414-01
+  date: '2021-02-19'
+  pages: 34
+  role: type_evaluation_report
+- id: C-BI-02-WV-0428
+  date: '2002-05-28'
+  pages: 20
+  role: documentation_file
+- id: CPC-92005574-2
+  date: '2010-01-26'
+  pages: 12
+  role: documentation_file
+- id: NMi-1900487-01
+  date: '2017-07-17'
+  pages: 24
+  role: test_report
+- id: CPC-10200012-01
+  date: '2010-02-08'
+  pages: 23
+  role: documentation_file
+- id: NMi-16200831-01
+  date: '2017-07-07'
+  pages: 41
+  role: test_report
+- id: NMi-16200831-02
+  date: '2017-07-19'
+  pages: 17
+  role: test_report
+- id: CPC-805983
+  date: '2008-06-24'
+  pages: 48
+  role: documentation_file
+- id: NMi-15200585-01
+  date: '2016-03-17'
+  pages: 29
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2021-09-30'
+  changes: "-"
+model_family:
+  family_name:
+  models:
+  - model_id: DN08
+    label: DN08
+  - model_id: DN15
+    label: DN15
+  - model_id: DN25
+    label: DN25
+components:
+- role: Measurement transducer
+  type_designations:
+  - CNG050
+  characteristics: {}
+- role: Measurement transducer
+  type_designations:
+  - CNGmass
+  characteristics: {}
+- role: Calculating/indicating device
+  type_designations:
+  - OPT-ELT
+  characteristics: {}
+matrix_tables:
+- name: General characteristics of the family of instruments type CNGmass
+  columns:
+  - meter_size
+  - minimum_flow_rate
+  - maximum_flow_rate
+  - mmq
+  - maximum_pressure
+  - diameter_in_outlet
+  rows:
+  - meter_size:
+      value: DN08
+    minimum_flow_rate:
+      value: 0.3
+    maximum_flow_rate:
+      value: 30
+    mmq:
+      value: 1
+    maximum_pressure:
+      value: 250
+    diameter_in_outlet:
+      value: 8
+  - meter_size:
+      value: DN15
+    minimum_flow_rate:
+      value: 0.8
+    maximum_flow_rate:
+      value: 80
+    mmq:
+      value: 1
+    maximum_pressure:
+      value: 250
+    diameter_in_outlet:
+      value: 15
+  - meter_size:
+      value: DN25
+    minimum_flow_rate:
+      value: 1.5
+    maximum_flow_rate:
+      value: 150
+    mmq:
+      value: 1
+    maximum_pressure:
+      value: 250
+    diameter_in_outlet:
+      value: 25
+  footnotes: []
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range

@@ -1,0 +1,155 @@
+---
+_meta:
+  cert_id: 5734
+  num: R139/2018-A-DK2-20.01 Rev. 2
+  applicant: NEL Hydorgen A/S
+  issuing_year: '2022'
+  status: Valid
+  issuer: DK2
+  recommendation: R139
+  edition_year: 2018
+  extraction_method: glm-extract
+  source_pdf: certificates/R139/2018/r139-2018-dk2-2020-01-rev2.pdf
+certificate:
+  number: R139/2018-B-DK2-2020.01 revision 2
+  scheme: B
+  project_number: R139/2018-B-DK2-2020.01
+  member_state: Denmark
+  date_issued: '2022-09-28'
+  oiml_issuer_id: DK2
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345, 2605 Brøndby Denmark
+  person_responsible: Niels Ovesen
+  person_title: Inspector
+  phone: N/A
+  email: lrp@force.dk
+  website: N/A
+  oiml_issuer_id: DK2
+applicants:
+- name: NEL Hydrogen A/S
+  address_lines:
+  - Vejlevej 5, 7400 Herning Denmark
+manufacturers:
+- name: NEL Hydrogen A/S
+  address_lines:
+  - Vejlevej 5, 7400 Herning Denmark
+certified_type:
+  category: Metering module
+  type_designations:
+  - MM-001
+  module_designation: Metering module to be used in a NEL hydrogen refuelling dispenser up to 70 MPa.
+characteristics:
+  type_level:
+    type_of_gas_to_be_measured:
+      value: Hydrogen
+    accuracy_class:
+      value: '2'
+    nominal_maximum_capacity_qmax:
+      value: 3.6
+      unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
+    nominal_minimum_capacity_qmin:
+      value: 0.133
+      unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
+    minimum_measured_quantity_mmq:
+      value: 1
+      unit_symbol: kg
+      unit_id: u:kilogram
+    maximum_pressure_of_the_gas_pmax:
+      value: 87.5
+      unit_symbol: MPa
+      unit_id: u:pascal
+    gas_temperature:
+      value:
+        min: -40
+        max: 0
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    environmental_class:
+      value: M1
+  model_level: []
+  config_level: []
+recommendation:
+  id: R139
+  edition: 2018
+  scheme: B
+  accuracy_classes:
+  - '2'
+test_reports: []
+revision_history:
+- revision: '0'
+  date: '2020-12-07'
+  changes: Original certificate
+- revision: '1'
+  date: '2022-01-20'
+  changes: Transmitter UMC4 added
+- revision: '2'
+  date: '2022-09-20'
+  changes: New revision of calculator and indicating device SK700-2 added
+components:
+- role: Flow sensor
+  type_designations:
+  - TMU-W004
+  characteristics:
+    maximum_capacity_qmax:
+      value: 4
+      unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
+    minimum_capacity_qmin:
+      value: 0.133
+      unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
+    environmental_class:
+      value: M2
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    gas_temperature:
+      value:
+        min: -40
+        max: 0
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+- role: Flow transmitter
+  type_designations:
+  - UMC4-RM
+  - UMC4
+  alternatives: OR
+  characteristics:
+    environmental_class:
+      value: M2
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    software_identification:
+      value: '5.241'
+    crc_checksum:
+      value: D2D5
+- role: Calculating/indicating device
+  type_designations: []
+  characteristics:
+    software_identification:
+      value: '5.241'
+    crc_checksum:
+      value: D2D5
+- role: Piping, valves, pressure control valve, breakaway valve, safety valve, hose and nozzle
+  type_designations: []
+  characteristics: {}
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature

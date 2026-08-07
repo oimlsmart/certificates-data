@@ -1,0 +1,185 @@
+---
+_meta:
+  cert_id: 5817
+  num: R51/2006-A-GB1-23.02
+  applicant: Topcon Technology Ltd
+  issuing_year: '2023'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r51-2006-gb1-2023-02.pdf
+certificate:
+  number: R51/2006-A-GB1-23.02
+  scheme: A
+  member_state: United Kingdom
+  date_issued: '2023-01-19'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: N/A
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: GB1
+applicants:
+- name: Topcon Technology Ltd
+  address_lines:
+  - Cirencester Road,
+  - Minchinhampton,
+  - Stroud,
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+manufacturers:
+- name: Topcon Technology Ltd
+certified_type:
+  category: Load cell
+  type_designations:
+  - Loadmaster Alpha 50
+  module_designation:
+  description: >-
+    This pattern of an automatic catchweighing instrument, powered by a road vehicle battery, designated the Loadmaster Alpha
+    50, comprises an indicator with touchscreen and soft key controls, "Terminator" junction box, pressure transducers and
+    sensors mounted on a wheeled loader. This pattern automatically determines the load in the bucket during the lifting process,
+    the hydraulic pressure in the loader's arms is converted by a pressure transducer, the output being used by the indicator
+    to display the corresponding weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: N/A
+        max: 50000
+      unit_symbol: kg
+      unit_id: u:kilogram
+    scale_interval:
+      value: 10
+      unit_symbol: kg
+      unit_id: u:kilogram
+    minimum_capacity:
+      value: 10
+      unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
+    max_scale_intervals:
+      value: 250
+    electromagnetic_environment_class:
+      value: E3
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 30
+      unit_symbol: VDC
+      unit_id: u:volt
+    power_supply_type:
+      value: N/A
+    accuracy_class:
+      value: N/A
+    interfaces:
+      value: RS232, CAN1, CAN2
+  model_level: []
+  config_level:
+  - attribute: boom_extension_sensor
+    axis: telescopic loader with boom extension sensor
+    values:
+    - value: true
+      condition: N/A
+  - attribute: kickout_relay
+    axis: kickout relay setup
+    values:
+    - value: true
+      condition: N/A
+  - attribute: attachments
+    axis: up to 10 different attachments
+    values:
+    - value: true
+      condition: N/A
+  - attribute: alternative_pressure_transducer
+    axis: Topcon MK4 250 bar Compact
+    values:
+    - value: true
+      condition: N/A
+  - attribute: alternative_pressure_transducers
+    axis: Topcon MKII and MKIII 250 bar Compact
+    values:
+    - value: true
+      condition: N/A
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P02989-2
+  date: '2023-01-19'
+  pages: 14
+  role: type_evaluation_report
+- id: P02989-2-D
+  date: '2023-01-19'
+  pages: 1
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2023-01-19'
+  changes: OIML Certificate first issued.
+components:
+- role: Pressure transducer
+  type_designations:
+  - Danfoss type MBS1250
+  characteristics:
+  - attribute: measuring_range
+    value: 0-250bar or 0-400bar
+    unit_symbol: bar
+    unit_id: u:bar
+  - attribute: output_signal
+    value:
+      min: 4
+      max: 20
+    unit_symbol: mA
+    unit_id: u:ampere
+  - attribute: minimum_sensitivity
+    value: 35
+    unit_symbol: μA/div
+    unit_id: u:microampere_per_division
+- role: Positional sensors
+  type_designations: []
+  characteristics: {}
+- role: Temperature sensor
+  type_designations: []
+  characteristics: {}
+- role: Chassis inclinometer
+  type_designations: []
+  characteristics: {}
+- role: Junction box (MK5)
+  type_designations:
+  - MK5 junction box
+  characteristics:
+  - attribute: climatic_environment_open_condensing
+    value:
+      min: -25
+      max: 50
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+- role: Cab termination box
+  type_designations: []
+  characteristics: {}
+- role: Loadmaster Alpha 50 indicator
+  type_designations:
+  - Loadmaster Alpha 50 indicator
+  characteristics:
+  - attribute: climatic_environment_closed_non_condensing
+    value:
+      min: -25
+      max: 50
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+_traceability:
+  raw_labels:
+    electromagnetic_environment_class: electromagnetic_environment

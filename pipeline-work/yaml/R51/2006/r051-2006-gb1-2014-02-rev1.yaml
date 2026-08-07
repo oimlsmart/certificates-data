@@ -1,0 +1,157 @@
+---
+_meta:
+  cert_id: 3435
+  num: R051/2006-GB1-2014.02 Rev. 1
+  applicant: Marel Ltd
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-02-rev1.pdf
+certificate:
+  number: R051/2006-GB1-2014.02 Rev. 1
+  scheme: A
+  project_number: R051/2006-GB1-2014.02
+  page_total: 2
+  member_state: United Kingdom
+  date_issued: '2014-05-09'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Certification Services
+  phone: "+44 20 8943 7272"
+  website: https://www.bis.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Marel Ltd
+manufacturers:
+- name: Marel Ltd
+certified_type:
+  category: Checkweighing/catchweighing instrument
+  type_designations:
+  - MCheck2
+  module_designation:
+  description: Mains-powered automatic checkweighing/catchweighing instrument
+characteristics:
+  type_level:
+    minimum_capacity:
+      value: 40
+      unit_symbol: g
+      unit_id: u:gram
+    single_or_multi_interval:
+      value: Any combination of the above
+    maximum_preset_tare:
+      value: PT≤23% Gross(single interval)PT≤Max1(multi interval)
+    operating_speed:
+      value:
+        min: 0.3
+        max: 1.33
+    humidity_class:
+      value: N/A
+    em_environments:
+      value: E1 and E2
+    power_supply_voltage:
+      value:
+        min: 14
+        max: 14
+      unit_symbol: Vdc
+      unit_id: u:volt
+    power_supply:
+      value:
+        :min: 220
+        :max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    accuracy_class:
+      value: N/A
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value: 1
+    - model: N/A
+      value: 3
+    - model: N/A
+      value: 6
+    unit_id: u:kilogram
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 0.5
+    - model: N/A
+      value: 1
+    - model: N/A
+      value: 2
+    unit_id: u:gram
+  - attribute: minimum_voltage_input_per_scale_interval
+    unit_symbol: μV/e
+    values:
+    - model: N/A
+      value: 0.46
+    - model: N/A
+      value: 1.87
+    unit_id: u:microvolt_per_verification_interval
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+  - Y(a)
+test_reports:
+- id: P01353
+  date: N/A
+  pages: 12
+  role: pattern_evaluation_report
+revision_history:
+- revision: R51/2006-GB1-14.02
+  date: '2014-04-24'
+  changes: OIML certificate first issued.
+- revision: R51/2006-GB1-14.02 revision 1
+  date: '2014-05-09'
+  changes: >-
+    Page 2: Reference to Evaluation report changed to P01353. Characteristics: Operating speed Maximum speed weight range
+    (250 to 1000 g) changed to 1.2m/s
+model_family:
+  family_name: MCheck2
+  models:
+  - model_id: Max=1kg
+  - model_id: Max=3kg
+  - model_id: Max=6kg
+components:
+- role: Load cell
+  type_designations:
+  - PC1 C3
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value: 30
+      unit_symbol: kg
+      unit_id: u:kilogram
+    nlc_y_z:
+      value: Same or better than Tedea 1040 C3 (15 kg)
+    digital_output:
+      value: false
+    oil_damper:
+      value: false
+_traceability:
+  raw_labels:
+    power_supply: power_supply

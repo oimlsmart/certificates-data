@@ -1,0 +1,193 @@
+---
+_meta:
+  cert_id: 5224
+  num: R139/2018-B-DK2-20.02
+  applicant: Heinrichs Messtechnik GmbH
+  issuing_year: '2020'
+  status: Valid
+  issuer: DK2
+  recommendation: R139
+  edition_year: 2018
+  extraction_method: glm-extract
+  source_pdf: certificates/R139/2018/r139-2018-dk2-2020-02.pdf
+certificate:
+  number: R139/2018-B-DK2-20.02
+  scheme: B
+  page_total: 6
+  member_state: Denmark
+  date_issued: '2020-12-17'
+  oiml_issuer_id: DK2
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345, 2605 Brøndby Denmark
+  person_responsible: Kurt Rasmussen
+  oiml_issuer_id: DK2
+applicants:
+- name: Heinrichs Messtechnik GmbH
+  address_lines:
+  - Robert-Perthel-Strasse 9, D 50739 Köln
+manufacturers:
+- name: Heinrichs Messtechnik GmbH
+  address_lines:
+  - Robert-Perthel-Strasse 9, D 50739 Köln
+certified_type:
+  category: Coriolis meter
+  type_designations:
+  - TMU-W004
+  - UMC4
+  - UMC4-RM
+  module_designation: Coriolis measuring device for measurement of Hydrogen to be used in a hydrogen refuelling dispenser.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 19
+        max: 36
+      unit_symbol: VDC
+      unit_id: u:volt
+    software_identification:
+      value: '5.241'
+    output:
+      value: Pulses
+    environmental_class:
+      value: M2
+    accuracy_class:
+      value: '2'
+  model_level:
+  - attribute: minimum_flow_rate
+    unit_symbol: kg/h
+    values:
+    - model: TMU-W004
+      value: 8
+    unit_id: u:kilogram_per_hour
+  - attribute: maximum_flow_rate
+    unit_symbol: kg/h
+    values:
+    - model: TMU-W004
+      value: 240
+    unit_id: u:kilogram_per_hour
+  - attribute: sensor_constant_c
+    values:
+    - model: TMU-W004
+      value: 757.684
+  - attribute: ps
+    unit_symbol: bar
+    values:
+    - model: TMU-W004
+      value: 1050
+    unit_id: u:bar
+  - attribute: pt
+    unit_symbol: bar
+    values:
+    - model: TMU-W004
+      value: 1600
+    unit_id: u:bar
+  - attribute: pn_body
+    unit_symbol: bar
+    values:
+    - model: TMU-W004
+      value: 0.4
+    unit_id: u:bar
+  - attribute: connection
+    values:
+    - model: TMU-W004
+      value: 9/16" - 18 UNF
+    - model: TMU-W004
+      value: HAN R23 Conn.
+  - attribute: protection
+    values:
+    - model: TMU-W004
+      value: IP65
+  config_level: []
+recommendation:
+  id: R139
+  edition: 2018
+  scheme: B
+  accuracy_classes:
+  - '2'
+test_reports:
+- id: 120-25992.01.02_1
+  date: '2020-12-17'
+  pages: 59
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2020-12-17'
+  changes: Original certificate
+components:
+- role: Flow sensor
+  type_designations:
+  - TMU-W004
+  characteristics: {}
+- role: Flow transmitter
+  type_designations:
+  - UMC4
+  - UMC4-RM
+  alternatives: OR
+  characteristics: {}
+matrix_tables:
+- name: Identification plate details
+  columns:
+  - Ser. No.
+  - TAG No.
+  - MF-Date
+  - Wetted Parts
+  - Medium Temp
+  - Tamb
+  - Connection
+  - PS
+  - PT
+  - PN Body
+  - Qmin
+  - Qmax
+  - Sensor Constant C
+  - PED
+  - Protection
+  - Connection
+  rows:
+  - Ser. No.:
+      value: '350090'
+    TAG No.:
+      value: OIML R139-1
+    MF-Date:
+      value: 2020/04
+    Wetted Parts:
+      value: '1.4571'
+    Medium Temp:
+      value: "-40°C to 55°C"
+    Tamb:
+      value: "-40°C to +55°C"
+    Connection:
+      value: 9/16" - 18 UNF
+    PS:
+      value: 1050 bar
+    PT:
+      value: 1600 bar
+    PN Body:
+      value: 0,4 bar
+    Qmin:
+      value: 8 kg/h
+    Qmax:
+      value: 240 kg/h
+    Sensor Constant C:
+      value: 757684
+    PED:
+      value: Art.4,Cat.3
+    Protection:
+      value: IP65
+  - Connection:
+      value: HAN R23 Conn.
+  description: Identification plate details for sensor TMU-W004
+  footnotes: []
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature
+    power_supply_voltage: mains_dc_voltage
+    software_identification: software_version

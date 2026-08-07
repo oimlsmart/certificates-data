@@ -1,0 +1,189 @@
+---
+_meta:
+  cert_id: 6547
+  num: R139/2018-A-CZ1-24.01 Rev. 1
+  applicant: Zenner Meters Ltd
+  issuing_year: '2025'
+  status: Valid
+  issuer: CZ1
+  recommendation: R139
+  edition_year: 2018
+  extraction_method: glm-extract
+  source_pdf: certificates/R139/2018/r139-2018-cz1-2024-01-rev1.pdf
+certificate:
+  number: R139/2018-A-CZ1-24.01 Rev. 1
+  scheme: A
+  project_number: R139/2018-A-CZ1-24.01
+  member_state: Czech Republic
+  date_issued: '2025-05-21'
+  oiml_issuer_id: CZ1
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31, 638 00 Brno, Czech Republic
+  person_responsible: Jan Kalandra
+  oiml_issuer_id: CZ1
+applicants:
+- name: Censtar Science & Technology Corp. Ltd.
+  address_lines:
+  - No.4, Xuesong Road, Hi-New Technology Industry Development Zone, Zhengzhou City, Henan Province, China
+manufacturers:
+- name: Censtar Science & Technology Corp. Ltd.
+  address_lines:
+  - No.4, Xuesong Road, Hi-New Technology Industry Development Zone, Zhengzhou City, Henan Province, China
+certified_type:
+  category: CNG dispenser
+  type_designations:
+  - CSJQD3S
+  - CSJQD1S
+  module_designation: N/A
+  description: >-
+    The CNG dispensers type CSJQD1S, CSJQD3S are designed to measure, memorise and display the mass of compressed natural
+    gas (CNG) passing through the measurement transducer.
+characteristics:
+  type_level:
+    types_of_gas_or_mixtures_of_gas:
+      value: Compressed natural gas
+    environmental_classification:
+      value: M1
+    software_identification:
+      value:
+        calculating_device_cng200: Main-V200
+        keyboard: CNG01-V2.00.1
+        measurement_transducer: 3.52/3C4A
+    accuracy_class:
+      value: '1.5'
+  model_level:
+  - attribute: minimum_measured_quantity
+    unit_symbol: kg
+    values:
+    - model: CSJQD1S
+      value: 2
+    - model: CSJQD3S
+      value: 2
+    unit_id: u:kilogram
+  - attribute: flow_rate_range
+    unit_symbol: kg/min
+    values:
+    - model: CSJQD1S
+      value:
+        min: 1.3
+        max: 77
+    - model: CSJQD3S
+      value:
+        min: 1.3
+        max: 77
+    unit_id: u:kilogram_per_minute
+  - attribute: maximum_pressure_of_the_gas_pmax
+    unit_symbol: MPa
+    values:
+    - model: CSJQD1S
+      value: 25
+    - model: CSJQD3S
+      value: 25
+    unit_id: u:pascal
+  - attribute: maximum_storage_pressure_pst
+    unit_symbol: MPa
+    values:
+    - model: CSJQD1S
+      value: 27
+    - model: CSJQD3S
+      value: 27
+    unit_id: u:pascal
+  - attribute: maximum_fast_fill_pressure_pv
+    unit_symbol: MPa
+    values:
+    - model: CSJQD1S
+      value: 20
+    - model: CSJQD3S
+      value: 20
+    unit_id: u:pascal
+  - attribute: temperature_range_of_the_gas
+    unit_symbol: "°C"
+    values:
+    - model: CSJQD1S
+      value:
+        min: -25
+        max: 55
+    - model: CSJQD3S
+      value:
+        min: -25
+        max: 55
+    unit_id: u:degree_Celsius
+  - attribute: temperature_range
+    unit_symbol: "°C"
+    values:
+    - model: CSJQD1S
+      value:
+        min: -25
+        max: 55
+    - model: CSJQD3S
+      value:
+        min: -25
+        max: 55
+    unit_id: u:degree_Celsius
+  - attribute: electrical_power_supply
+    unit_symbol: V
+    values:
+    - model: CSJQD1S
+      value: 230
+    - model: CSJQD3S
+      value: 230
+    unit_id: u:volt
+  config_level: []
+recommendation:
+  id: R139
+  edition: 2018
+  scheme: A
+  accuracy_classes:
+  - '1.5'
+test_reports:
+- id: 0511-ER-F119-23
+  date: '2024-07-22'
+  pages: 20
+  role: type_evaluation_report
+- id: 6015-PT-P5004-24
+  date: '2024-07-23'
+  pages: 16
+  role: test_report
+- id: 0511-ER-F010-25
+  date: '2025-05-19'
+  pages: 20
+  role: type_evaluation_report
+- id: 6015-PT-P0026-25
+  date: '2025-05-19'
+  pages: 13
+  role: test_report
+revision_history:
+- revision: "-"
+  date: '2024-08-29'
+  changes: Issuing certificate
+- revision: '1'
+  date: '2025-05-21'
+  changes: New motherboard layout CNG200
+model_family:
+  family_name:
+  models:
+  - model_id: CSJQD1S
+    label: 'CSJQD1S: 2 filling nozzles, 1 bank'
+  - model_id: CSJQD3S
+    label: 'CSJQD3S: 2 filling nozzles, 3 banks'
+components:
+- role: Calculating / indicating device
+  type_designations:
+  - Censtar Science & Technology Corp.
+  characteristics: {}
+- role: Motherboard of keyboard
+  type_designations: []
+  characteristics: {}
+- role: Motherboard of calculating device
+  type_designations:
+  - CNG200
+  characteristics: {}
+- role: Measurement transducer
+  type_designations:
+  - Micro Motion CNG050
+  characteristics: {}
+_traceability:
+  raw_labels:
+    software_identification: identification_of_software

@@ -1,0 +1,288 @@
+---
+_meta:
+  cert_id: 6489
+  num: R117/2019-A-NL1-25.03 Rev. 0
+  applicant: FAURE HERMAN
+  issuing_year: '2025'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2025-03-rev0.pdf
+certificate:
+  number: R117/2019-A-NL1-25.03 Rev. 0
+  scheme: A
+  project_number: '3687257'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2025-03-04'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  oiml_issuer_id: NL1
+applicants:
+- name: FAURE HERMAN
+  address_lines:
+  - 2 Lieu-Dit l'Archette
+  - 72400 La Ferté Bernard
+  - France
+manufacturers:
+- name: FAURE HERMAN
+  address_lines:
+  - 2 Lieu-Dit l'Archette
+  - 72400 La Ferté Bernard
+  - France
+certified_type:
+  category: Measuring system
+  type_designations:
+  - FH-SONIC
+  module_designation: N/A
+  description: >-
+    A measuring device (ultrasonic flow meter) intended to be used as part of an interruptible or non-interruptible dynamic
+    measuring system for liquids other than water.
+characteristics:
+  type_level:
+    number_of_sound_paths:
+      value: 5
+    sound_frequency:
+      value: Around 1 MHz
+    path_angle:
+      value: 45
+    approved_quantity:
+      value: Volume at flowing conditions
+    maximum_pressure:
+      value: 20
+      unit_symbol: bar(g)
+      unit_id: u:bar
+    environmental_classes:
+      value:
+        mechanical: M2
+        electromagnetic: E2
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    product_temperature_range:
+      value:
+        min: -40
+        max: 35
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    intended_for_measurement_of:
+      value: >-
+        Liquid petroleum and related products, liquids food and chemical products in liquid state with a maximum viscosity
+        of 200mPa·s.
+    power_supply_voltage:
+      value:
+        min: 24
+        max: 24
+      unit_symbol: V
+      unit_id: u:volt
+    flow_characteristics:
+      value: See table 2
+    approved_inputs:
+      value: "-"
+    approved_outputs:
+      value: Dual pulse output(maximum frequency is 10kHz)
+    software_identification:
+      value: See table 3
+    power_supply_type:
+      value: DC
+  model_level:
+  - attribute: minimum_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: DN200
+      value: 53
+    - model: DN250
+      value: 92
+    - model: DN300
+      value: 130
+    - model: DN350
+      value: 157
+    - model: DN400
+      value: 205
+    - model: DN450
+      value: 258
+    unit_id: u:cubic_meter_per_hour
+  - attribute: maximum_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: DN200
+      value: 1394
+    - model: DN250
+      value: 2198
+    - model: DN300
+      value: 3120
+    - model: DN350
+      value: 3770
+    - model: DN400
+      value: 4925
+    - model: DN450
+      value: 6235
+    unit_id: u:cubic_meter_per_hour
+  - attribute: minimum_measured_quantity
+    unit_symbol: m³
+    values:
+    - model: DN200
+      value: 2
+    - model: DN250
+      value: 5
+    - model: DN300
+      value: 5
+    - model: DN350
+      value: 5
+    - model: DN400
+      value: 5
+    - model: DN450
+      value: 5
+    unit_id: u:cubic_meter
+  - attribute: minimum_reynolds_number
+    values:
+    - model: DN200
+      value: 5000
+    - model: DN250
+      value: 5000
+    - model: DN300
+      value: 5000
+    - model: DN350
+      value: 5000
+    - model: DN400
+      value: 6000
+    - model: DN450
+      value: 6000
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+  - '1'
+test_reports:
+- id: NMi-3687257-01
+  date: '2025-03-04'
+  pages: 45
+  role: type_evaluation_report
+- id: NMi-3687257-02
+  date: '2025-03-04'
+  pages: 32
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2025-03-04'
+  changes: Initial release
+model_family:
+  family_name:
+  models:
+  - model_id: DN200
+  - model_id: DN250
+  - model_id: DN300
+  - model_id: DN350
+  - model_id: DN400
+  - model_id: DN450
+components:
+- role: meter body
+  type_designations:
+  - straight pipe section with 5 ultrasonic measuring paths
+  characteristics: {}
+- role: ultrasonic transducers
+  type_designations:
+  - Two ultrasonic transducers per measuring path
+  characteristics: {}
+- role: electronics
+  type_designations:
+  - measurement electronics for excitation and processing of the transducer signals and the interface electronic
+  characteristics: {}
+matrix_tables:
+- name: Characteristics of the family of instruments
+  columns:
+  - meter_size_dn
+  - meter_size_inch
+  - qmin
+  - qmax
+  - minimum_measured_quantity
+  - minimum_reynolds_number
+  rows:
+  - meter_size_dn:
+      value: '200'
+    meter_size_inch:
+      value: '8'
+    qmin:
+      value: 53
+    qmax:
+      value: 1394
+    minimum_measured_quantity:
+      value: 2
+    minimum_reynolds_number:
+      value: 5000
+  - meter_size_dn:
+      value: '250'
+    meter_size_inch:
+      value: '10'
+    qmin:
+      value: 92
+    qmax:
+      value: 2198
+    minimum_measured_quantity:
+      value: 5
+    minimum_reynolds_number:
+      value: 5000
+  - meter_size_dn:
+      value: '300'
+    meter_size_inch:
+      value: '12'
+    qmin:
+      value: 130
+    qmax:
+      value: 3120
+    minimum_measured_quantity:
+      value: 5
+    minimum_reynolds_number:
+      value: 5000
+  - meter_size_dn:
+      value: '350'
+    meter_size_inch:
+      value: '14'
+    qmin:
+      value: 157
+    qmax:
+      value: 3770
+    minimum_measured_quantity:
+      value: 5
+    minimum_reynolds_number:
+      value: 5000
+  - meter_size_dn:
+      value: '400'
+    meter_size_inch:
+      value: '16'
+    qmin:
+      value: 205
+    qmax:
+      value: 4925
+    minimum_measured_quantity:
+      value: 5
+    minimum_reynolds_number:
+      value: 6000
+  - meter_size_dn:
+      value: '450'
+    meter_size_inch:
+      value: '18'
+    qmin:
+      value: 258
+    qmax:
+      value: 6235
+    minimum_measured_quantity:
+      value: 5
+    minimum_reynolds_number:
+      value: 6000
+  description: Flow characteristics by meter size
+  footnotes: []
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range

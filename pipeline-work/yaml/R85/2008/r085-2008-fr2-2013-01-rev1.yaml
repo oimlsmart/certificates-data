@@ -1,0 +1,249 @@
+---
+_meta:
+  cert_id: 3893
+  num: R085/2008-FR2-2013.01 Rev. 1
+  applicant: SERAP Industries
+  issuing_year: '2016'
+  status: Valid
+  issuer: FR2
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-fr2-2013-01-rev1.pdf
+  accuracy_class_note: accuracy_class not stated in source PDF
+certificate:
+  number: R85/2008-FR2-13.01 rev.1
+  scheme: A
+  project_number: R85/2008-FR2-13.01
+  page_total: 3
+  member_state: France
+  date_issued: '2016-02-17'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier - 75724 Paris Cedex 15
+  - Établissement public à caractère industriel et commercial
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Responsable du Petro Certification
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: https://www.lne.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: SERAP Industries
+  address_lines:
+  - route de Fougères
+manufacturers:
+- name: MTS Sensor Technology GmbH & CO
+  address_lines:
+  - Auf dem Schüffel 9
+  - DEU 58513 Lüdenscheid
+certified_type:
+  category: Level gauge
+  type_designations:
+  - FIRST LEVEL 2
+  module_designation:
+  description: >-
+    The level gauge SERAP type FIRST LEVEL 2 is basically made of a transducer composed of a level sensor fitted with a float.
+    The level sensor is connected with the local indicating device by a screened cable. The level sensor is directly mounted
+    on a bulk milk cooling tank.
+characteristics:
+  type_level:
+    minimal_range:
+      value: 66
+      unit_symbol: mm
+      unit_id: u:millimetre
+    scale_of_display:
+      value: 1
+      unit_symbol: mm
+      unit_id: u:millimetre
+    measured_liquid:
+      value: milk
+    measured_liquid_temperature:
+      value:
+        min: 3
+        max: 8
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    measured_liquid_density:
+      value:
+        min: 1026
+        max: 1033
+      unit_symbol: kg/m³
+      unit_id: u:kilogram_per_metre_cubed
+    pressure_of_use:
+      value: atmospheric
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+  model_level:
+  - attribute: maximal_range
+    unit_symbol: mm
+    unit_id: u:millimetre
+    values:
+    - model: ellipse_0
+      value: 925
+    - model: ellipse_1
+      value: 1075
+    - model: ellipse_2
+      value: 1285
+    - model: ellipse_3
+      value: 1460
+    - model: ellipse_4
+      value: 1875
+    - model: vertical_cylindrical
+      value: 2650
+    - model: vertical_cylindrical
+      value: 3050
+    - model: vertical_cylindrical
+      value: 3200
+    - model: vertical_cylindrical
+      value: 3850
+    - model: vertical_cylindrical
+      value: 4800
+    - model: vertical_cylindrical
+      value: 5450
+    - model: vertical_cylindrical
+      value: 6200
+  config_level:
+  - attribute: tank_type
+    axis: tank_configuration
+    values:
+    - value: elliptic_horizontal_tank
+      condition: N/A
+    - value: vertical_cylindrical_tank
+      condition: N/A
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+  accuracy_classes: []
+test_reports:
+- id: P150871-D1
+  date: N/A
+  pages: 6
+  role: evaluation_report
+- id: M061373-D1
+  date: N/A
+  pages: 9
+  role: evaluation_report
+- id: P110932
+  date: N/A
+  pages: 18
+  role: test_report
+- id: M061373
+  date: N/A
+  pages: 22
+  role: test_report
+- id: J100597
+  date: N/A
+  pages: 12
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2013-11-28'
+  changes: Création du document/First issue
+- revision: '1'
+  date: '2016-02-17'
+  changes: >-
+    Correction des versions logicielles installées dans le jaugeur/Correction of calculator level gauge software version/Mise
+    à jour du plan de scellement lorsque le calculateur du jaugeur est intégré dans l'armoire de commande./Update of sealing
+    scheme when calculator level gauge is included into control box
+components:
+- role: transducer
+  type_designations:
+  - TEMPSONICS « G-Series » type CP05013LS
+  - TEMPSONICS « R-Series » type RF
+  alternatives: OR
+  characteristics: {}
+- role: local_indicating_device
+  type_designations: []
+  characteristics: {}
+matrix_tables:
+- name: Maximal range by tank type and ellipse configuration
+  columns:
+  - tank_type
+  - ellipse_config
+  - maximal_range_mm
+  rows:
+  - tank_type:
+      value: elliptic_horizontal_tank
+    ellipse_config:
+      value: ellipse_0
+    maximal_range_mm:
+      value: 925
+  - tank_type:
+      value: elliptic_horizontal_tank
+    ellipse_config:
+      value: ellipse_1
+    maximal_range_mm:
+      value: 1075
+  - tank_type:
+      value: elliptic_horizontal_tank
+    ellipse_config:
+      value: ellipse_2
+    maximal_range_mm:
+      value: 1285
+  - tank_type:
+      value: elliptic_horizontal_tank
+    ellipse_config:
+      value: ellipse_3
+    maximal_range_mm:
+      value: 1460
+  - tank_type:
+      value: elliptic_horizontal_tank
+    ellipse_config:
+      value: ellipse_4
+    maximal_range_mm:
+      value: 1875
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 2650
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 3050
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 3200
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 3850
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 4800
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 5450
+  - tank_type:
+      value: vertical_cylindrical_tank
+    ellipse_config:
+      value: N/A
+    maximal_range_mm:
+      value: 6200
+  description: Maximal range (in mm) for different tank configurations
+  footnotes: []
+_traceability:
+  raw_labels:
+    temperature_range: operating_temperature

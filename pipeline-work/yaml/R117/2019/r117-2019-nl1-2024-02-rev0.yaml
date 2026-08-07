@@ -1,0 +1,142 @@
+---
+_meta:
+  cert_id: 6266
+  num: R117/2019-A-NL1-24.02 Rev. 0
+  applicant: Honeywell Process Solutions
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2024-02-rev0.pdf
+certificate:
+  number: R117/2019-A-NL1-24.02 Rev. 0
+  scheme: A
+  project_number: '3581943'
+  page_total: 5
+  member_state: The Netherlands
+  date_issued: '2024-06-18'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - 2101 CityWest Blvd
+  - Houston, TX 77042
+  - United States of America
+  person_responsible: M.Ph.D. Schmidt
+  oiml_issuer_id: NL1
+applicants:
+- name: Honeywell Process Solutions
+  address_lines:
+  - 2101 CityWest Blvd
+  - Houston, TX 77042
+  - United States of America
+manufacturers:
+- name: Honeywell Process Solutions
+  address_lines:
+  - 2101 CityWest Blvd
+  - Houston, TX 77042
+  - United States of America
+certified_type:
+  category: Measuring system
+  type_designations:
+  - ControlEdge 2020 Platform
+  description: >-
+    An electronic calculating and indicating device intended to be used as a part of an interruptible or non-interruptible
+    dynamic measuring systems for liquids other than water.
+characteristics:
+  type_level:
+    approved_for_application:
+      value: >-
+        Measuring systems on pipelines and loading of ships; Measuring systems for the(un)loading of ships' tanks and rail
+        and road tankers; Measuring systems for loading ships; Measuring multiple liquids with different viscosities in one
+        installation using one calibration curve for all(measuring multiple liquids without adjustment); Measuring systems
+        for liquefied gases under pressure measured at a temperature equal to or above-10℃.
+    measuring_system_type:
+      value: Interruptible or non-interruptible measuring system
+    approved_for_measuring:
+      value: Volume at flowing conditions; Volume at standard condition(0kPa,15℃); Mass
+    environmental_classes:
+      value:
+        mechanical: M3
+        electromagnetic: E2
+        humidity: H1
+    temperature_range:
+      value:
+        min: -25
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 23
+        max: 27
+      unit_symbol: VDC
+      unit_id: u:volt
+    software_identification_firmware_version:
+      value: 174
+      footnote_markers:
+      - 1)
+    software_checksum:
+      value: 4294927296
+      footnote_markers:
+      - 2)
+    software_identification_code_version_number:
+      value: See note3 below
+      footnote_markers:
+      - 3)
+    approved_inputs:
+      value: >-
+        Pulse input(single pulse) for volume or mass; Voltage input(1...5V DC) for temperature, pressure or density; Current
+        input(4...20mA) for temperature, pressure or density; HART input; TCP/IP Ethernet communication; Serial communication
+        RS-485; Serial communication RS-232.
+    approved_outputs:
+      value: TCP/IP Ethernet communication; Serial communication RS-485; Serial communication RS-232.
+    emc_measures:
+      value:
+        min: 20.0
+        max: 24.0
+    approved_conversion_methods:
+      value:
+        min: 1250.0
+        max: 7.0
+  model_level: []
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+test_reports:
+- id: NMi-3581943-01
+  date: '2024-06-18'
+  pages: 54
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2024-06-18'
+  changes: First issue.
+footnotes:
+- marker: 1)
+  text: >-
+    The Firmware version number is denoted by the following format: AAA.X.YY.Z - AAA - The major version of the release; -
+    X - The minor version of the release; - YY - The revisions / bug fixes of the release; - Z - The build number of the release.
+    Only a change in AAA is metrologically relevant. The software version for ControlEdge RTU controller is generated through
+    software build process. They can be seen from the software ControlEdge Builder (Menu Help -> About ControlEdge Builder)
+    or while connecting to a controller - Controller Firmware version. The software version, checksum and Code version number
+    can be seen from the software ControlEdge Builder (Application -> Electronic Flow Measurement -> View Diagnostics), and
+    it will be displayed when selecting API in a dropdown bar "Select Group Name".
+- marker: 2)
+  text: Checksum of the firmware will remain the same if there is no change in the ControlEdge Library.
+- marker: 3)
+  text: >-
+    If ControlEdge RTU controller loads and runs a calculation project file in the ControlEdge Builder software, The unique
+    "Code version number" of the project file will be made. This code version number is recalculated when the project is built,
+    or when there is an intentional or accidental parameter change. Changes on the code version number are logged in the audit
+    trail.
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range
+    software_checksum: software_identification_checksum

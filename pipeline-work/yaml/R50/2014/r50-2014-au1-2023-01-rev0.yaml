@@ -1,0 +1,213 @@
+---
+_meta:
+  cert_id: 6095
+  num: R50/2014-A-AU1-23.01 Rev. 0
+  applicant: Control Systems Technology Pty Ltd
+  issuing_year: '2023'
+  status: Valid
+  issuer: AU1
+  recommendation: R50
+  edition_year: 2014
+  extraction_method: glm-extract
+  source_pdf: certificates/R50/2014/r50-2014-au1-2023-01-rev0.pdf
+certificate:
+  number: R50/2014-A-AU1-23.01 Rev. 0
+  scheme: A
+  project_number: PA-2021/012
+  page_total: 1
+  member_state: Australia
+  date_issued: '2023-12-01'
+  oiml_issuer_id: AU1
+issuing_authority:
+  name: National Measurement Institute Australia
+  address_lines:
+  - 36 Bradfield Rd, West Lindfield, NSW 2070, Australia
+  person_responsible: Darryl Hines
+  person_title: Manager, Policy and Regulatory Services
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: AU1
+applicants:
+- name: Control Systems Technology Pty Ltd
+  address_lines:
+  - 47 Fitzpatrick St, Revesby, NSW 2212, Australia
+manufacturers:
+- name: Control Systems Technology Pty Ltd
+  address_lines:
+  - 47 Fitzpatrick St, Revesby, NSW 2212, Australia
+certified_type:
+  category: Continuous totalising automatic weighing instrument (belt weigher)
+  type_designations:
+  - PFS4-CSRR
+  - WIM3.0
+  - WIM3.1
+  module_designation: Continuous totalizing automatic weighing instrument
+  description: >-
+    Control Systems Technology model PFS4-CSRR continuous totalising automatic weighing instruments (belt weighers) using
+    integrator/indicator models WIM3.0 or WIM3.1.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: N/A
+      footnote_markers:
+      - 1)
+    maximum_flow_rate:
+      value: N/A
+      unit_symbol: t/h
+      unit_id: u:metric_ton_per_hour
+    minimum_flow_rate:
+      value: N/A
+    minimum_totalised_load:
+      value: 3.6
+      unit_symbol: t
+      unit_id: u:metric_ton
+    totalisation_scale_interval:
+      value: d≥0.001t
+      unit_symbol: t
+      unit_id: u:metric_ton
+    maximum_capacity:
+      value: N/A
+    belt_speed:
+      value:
+        min: 0.5
+        max: 5.2
+      unit_symbol: m/s
+      unit_id: u:meter_per_second
+      footnote_markers:
+      - 2)
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    maximum_pulse_frequency:
+      value: 1000
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_voltage:
+      value:
+        min: 110
+        max: 120
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 50
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_type:
+      value: AC
+    power_supply_dc:
+      value: 24
+      unit_symbol: VDC
+      unit_id: u:volt
+    embedded_software_identification:
+      value: WIM3-7.4-20230824
+  model_level:
+  - attribute: accuracy_class
+    values:
+    - model: N/A
+      value: '0.2'
+    - model: N/A
+      value: '0.5'
+    - model: N/A
+      value: '1'
+    - model: N/A
+      value: '2'
+  - attribute: belt_speed
+    unit_symbol: m/s
+    values:
+    - model: N/A
+      value:
+        min: 0.5
+        max: 5.2
+    - model: N/A
+      value:
+        min: N/A
+        max: 7
+    unit_id: u:meter_per_second
+  config_level:
+  - attribute: number_of_weigh_idlers
+    axis: number of weigh idlers
+    values:
+    - value:
+        min: 2
+        max: 8
+      condition: N/A
+recommendation:
+  id: R50
+  edition: 2014
+  scheme: A
+  accuracy_classes:
+  - '0.2'
+  - '0.5'
+  - '1'
+  - '2'
+test_reports:
+- id: PA-2021/012
+  date: '2023-11-03'
+  pages: 1
+  role: type_evaluation_report
+revision_history:
+- revision: Initial version
+  date: '2023-12-01'
+  changes: N/A
+model_family:
+  family_name:
+  models:
+  - model_id: '0.2'
+    label: Accuracy class 0.2
+  - model_id: '0.5'
+    label: Accuracy class 0.5
+  - model_id: '1'
+    label: Accuracy class 1
+  - model_id: '2'
+    label: Accuracy class 2
+  - model_id: nominal_speed
+    label: Nominal belt speed
+  - model_id: actual_speed
+    label: Actual maximum belt speed
+  - model_id: 2_idlers
+    label: 2 weigh idlers
+  - model_id: 8_idlers
+    label: 8 weigh idlers
+components:
+- role: Integrator
+  type_designations:
+  - MaVIS-ICS-ARM WIM3
+  - MaVIS-ICS-ARM WIM3.1
+  characteristics: {}
+- role: Basework (weigh platform)
+  type_designations:
+  - PFS4-x CSRR
+  characteristics:
+    number_of_weigh_idlers:
+      value:
+        min: 2
+        max: 8
+- role: Speed sensor
+  type_designations:
+  - Autonics rotary encoder
+  - Leine Linde
+  - Bauner
+  characteristics: {}
+- role: Junction box
+  type_designations: []
+  characteristics: {}
+- role: Load cells
+  type_designations:
+  - Scaime SK 30X 500 C6 CH 15e 8z
+  characteristics: {}
+- role: Length Reference System
+  type_designations:
+  - Tacho tracking device
+  characteristics: {}
+footnotes:
+- marker: 1)
+  text: Refer to test reports listed in the OIML type evaluation report No. PA-2021/012.
+- marker: 2)
+  text: >-
+    An actual maximum speed (up to 7 m/s) is determined upon application conditions and performed metrological characteristics.

@@ -1,0 +1,177 @@
+---
+_meta:
+  cert_id: 3714
+  num: R021/2007-FR2-2015.01
+  applicant: Automatismes et Techniques Avancées SA
+  issuing_year: '2015'
+  status: Valid
+  issuer: FR2
+  recommendation: R21
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R21/2007/r021-2007-fr2-2015-01.pdf
+  accuracy_class_note: accuracy_class not stated in source PDF
+certificate:
+  number: R021/2007-FR2-2015.01
+  scheme: A
+  page_total: 7
+  member_state: France
+  date_issued: '2015-04-24'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Directeur Général
+  website: https://www.cofac.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: Automatismes et Techniques Avancées SA
+  address_lines:
+  - 30 impasse du nid - ZA du Verdalaï
+  - FRA 13790 PEYNIER
+manufacturers:
+- name: Automatismes et Techniques Avancées
+  address_lines:
+  - 30 impasse du nid - ZA du Verdalaï
+  - FRA 13790 PEYNIER
+certified_type:
+  category: Taximeter
+  type_designations:
+  - A.T.A. type Révolution
+  module_designation:
+  description: >-
+    The taximeter ATA type REVOLUTION indicates at any moment, the price to be paid by users depending on the distance covered,
+    how long the vehicle is engaged and the programmed tariffs. The taximeter is composed by two elements: the ATA BOX and
+    the ATA screen being the Human Machine Interface.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 9
+        max: 16
+      unit_symbol: V
+      unit_id: u:volt
+    k_constant_range:
+      value:
+        min: 500
+        max: 120000
+      unit_symbol: imp/km
+      unit_id: u:impulse_per_kilometer
+    mechanical_environment_class:
+      value: M3
+    electromagnetic_environment_class:
+      value: E3
+    temperature_range:
+      value:
+        min: -25
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+  model_level: []
+  config_level: []
+recommendation:
+  id: R21
+  edition: 2007
+  scheme: A
+  accuracy_classes: []
+test_reports: []
+revision_history:
+- revision: '0'
+  date: '2015-04-24'
+  changes: Initial
+components:
+- role: Main unit
+  type_designations:
+  - ATA BOX
+  characteristics: {}
+- role: Display interface
+  type_designations:
+  - ATA screen
+  characteristics: {}
+matrix_tables:
+- name: Error messages
+  columns:
+  - screen_code
+  - description
+  rows:
+  - screen_code:
+      value: "[CODE_MESS_DEFAULT]"
+    description:
+      value: Fault message position
+  - screen_code:
+      value: "[CODE_MESS_DEF_CAI]"
+    description:
+      value: 'Anomaly of sensor signal: instant acceleration'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CAM]"
+    description:
+      value: 'Anomaly of sensor signal: mean acceleration'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CU]"
+    description:
+      value: 'Anomaly of sensor signal: sudden acceleration'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CP]"
+    description:
+      value: 'Anomaly of sensor signal: disturbance'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CT]"
+    description:
+      value: 'Anomaly of sensor signal: amplitude'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CIH]"
+    description:
+      value: 'Anomaly of sensor signal: high level impedance'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CIB]"
+    description:
+      value: 'Anomaly of sensor signal: low level impedance'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CIA]"
+    description:
+      value: 'Anomaly of sensor signal: stop impedance'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CS]"
+    description:
+      value: 'Anomaly of sensor signal: stability'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CL]"
+    description:
+      value: 'Anomaly of sensor signal: pulse width'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CR]"
+    description:
+      value: 'Anomaly of sensor signal: duty cycle'
+  - screen_code:
+      value: "[CODE_MESS_DEF_CANBUS]"
+    description:
+      value: 'Anomaly of sensor signal: CAN Bus'
+  - screen_code:
+      value: "[CODE_NOTIF_PB_IMP]"
+    description:
+      value: 'Anomaly of printer: connection problem or missing paper'
+  - screen_code:
+      value: "[CODE_MESS_DEF_LA]"
+    description:
+      value: 'Anomaly of removable roof light: missing roof light'
+  - screen_code:
+      value: "[CODE_MESS_DEF_LE]"
+    description:
+      value: 'Anomaly of removable roof light: disconnected during a trip'
+  - screen_code:
+      value: "[CODE_MESS_DEF_LU]"
+    description:
+      value: 'Anomaly of removable roof light: Unrecognized device'
+  - screen_code:
+      value: "[CODE_NOTIF_PB_LUM]"
+    description:
+      value: Anomaly of roof light
+  - screen_code:
+      value: "[CODE_NOTIF_PB_PILE]"
+    description:
+      value: Anomaly of internal battery
+  description: Error messages displayed by the taximeter
+  footnotes: []
+_traceability:
+  raw_labels:
+    power_supply_voltage: voltage_supply

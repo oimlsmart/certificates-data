@@ -1,0 +1,327 @@
+---
+_meta:
+  cert_id: 4073
+  num: R051/2006-GB1-2014.01 Rev. 1
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-01-rev1.pdf
+certificate:
+  number: R051/2006-GB1-2014.01 Rev. 1
+  scheme: A
+  project_number: TS0101/0022
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2016-10-27'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - I Stanton Avenue
+  - Teddington
+  - TW11 OJZ
+  - United Kingdom
+  person_responsible: Max Linnemann
+  person_title: Head of Certification Body
+  phone: "+44 20 8943 7272"
+  website: https://www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: GB1
+applicants:
+- name: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  address_lines:
+  - Società Cooperativa Bilanciai Campogalliano Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+manufacturers:
+- name: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  address_lines:
+  - Società Cooperativa Bilanciai Campogalliano Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+certified_type:
+  category: Automatic checkweighers
+  type_designations:
+  - Selecta
+  module_designation: N/A
+  description: >-
+    The instruments comprise a cabinet, a pole-mounted display and user interface, conveyors, a weighing device and mechanical
+    handling facilities. The instruments are designed to weigh packs dynamically.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: N/A
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 1200
+    - model: Max=3000g
+      value: 3000
+    unit_id: u:gram
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 20
+    - model: Max=3000g
+      value: 20
+    unit_id: u:gram
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 0.2
+    - model: Max=3000g
+      value: 0.5
+    unit_id: u:gram
+  - attribute: max_scale_intervals
+    values:
+    - model: Max=1200g
+      value: 6000
+    - model: Max=3000g
+      value: 6000
+  - attribute: tare_percentage
+    unit_symbol: "%"
+    values:
+    - model: Max=1200g
+      value:
+        20-50g: 31
+        50-80g: 35
+        80-100g: 55
+        100-1200g: 70
+    - model: Max=3000g
+      value:
+        20-50g: 31
+        50-80g: 35
+        80-100g: 55
+        100-3000g: 70
+    unit_id: u:percent
+  - attribute: dynamic_setting
+    values:
+    - model: Max=1200g
+      value:
+        20-300g: "±20%"
+        300-500g: "±10%"
+        500-1200g: "±20%"
+    - model: Max=3000g
+      value:
+        20-300g: "±20%"
+        300-500g: "±10%"
+        500-1200g: "±20%"
+        1200-3000g: "±240g"
+  - attribute: belt_speed
+    unit_symbol: m/min
+    values:
+    - model: Max=1200g
+      value:
+        20-50g: 55
+        50-Max: 80
+    - model: Max=3000g
+      value:
+        20-50g: 55
+        50-Max: 80
+    unit_id: u:meter_per_minute
+  - attribute: climatic_environment_temperature
+    unit_symbol: "°C"
+    values:
+    - model: Max=1200g
+      value:
+        min: 5
+        max: 40
+    - model: Max=3000g
+      value:
+        min: 5
+        max: 40
+    unit_id: u:degree_Celsius
+  - attribute: humidity_class
+    values:
+    - model: Max=1200g
+      value: Non-condensing(closed)
+    - model: Max=3000g
+      value: Non-condensing(closed)
+  - attribute: electromagnetic_environment_class
+    values:
+    - model: Max=1200g
+      value: E1 and E2
+    - model: Max=3000g
+      value: E1 and E2
+  - attribute: power_supply_voltage
+    unit_symbol: V
+    values:
+    - model: Max=1200g
+      value:
+        min: 100
+        max: 120
+    - model: Max=3000g
+      value:
+        min: 220
+        max: 240
+    unit_id: u:volt
+  - attribute: power_supply_frequency
+    unit_symbol: Hz
+    values:
+    - model: Max=1200g
+      value:
+        min: 50
+        max: 60
+    - model: Max=3000g
+      value:
+        min: 50
+        max: 60
+    unit_id: u:hertz
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: P01126 Revision 1
+  date: N/A
+  pages: 12
+  role: evaluation_report
+revision_history:
+- revision: R51/2006-GB1-14.01
+  date: '2014-03-10'
+  changes: Certificate first issued.
+- revision: R51/2006-GB1-14.01 Revision 1
+  date: '2016-10-27'
+  changes: Extended minimum capacity to 20g with reduced belt speed. Software section editorial change. Alternatives added
+model_family:
+  family_name:
+  models:
+  - model_id: Max=1200g
+  - model_id: Max=3000g
+components:
+- role: weighing_device
+  type_designations:
+  - Tedea load cell type 240 C3
+  characteristics: {}
+matrix_tables:
+- name: Technical data
+  columns:
+  - maximum_capacity
+  - minimum_capacity
+  - scale_interval
+  - max_scale_intervals
+  - tare
+  - dynamic_setting
+  - belt_speed
+  - climatic_environment
+  - electromagnetic_environment
+  - power_supply
+  - accuracy_class
+  rows:
+  - maximum_capacity:
+      value: 1200
+      unit_symbol: g
+      unit_id: u:gram
+    minimum_capacity:
+      value: 20
+      unit_symbol: g
+      unit_id: u:gram
+    scale_interval:
+      value: 0.2
+      unit_symbol: g
+      unit_id: u:gram
+    max_scale_intervals:
+      value: 6000
+    tare:
+      value:
+        20-50g: 31
+        50-80g: 35
+        80-100g: 55
+        100-1200g: 70
+      unit_symbol: "%"
+      unit_id: u:percent
+    dynamic_setting:
+      value:
+        20-300g: "±20%"
+        300-500g: "±10%"
+        500-1200g: "±20%"
+    belt_speed:
+      value:
+        20-50g: 55
+        50-Max: 80
+      unit_symbol: m/min
+      unit_id: u:meter_per_minute
+    climatic_environment:
+      value:
+        temperature:
+          min: 5
+          max: 40
+        humidity: Non-condensing(closed)
+    electromagnetic_environment:
+      value: E1 and E2
+    power_supply:
+      value:
+        voltage:
+          min: 100
+          max: 120
+        frequency:
+          min: 50
+          max: 60
+    accuracy_class:
+      value: XIII(1)
+  - maximum_capacity:
+      value: 3000
+      unit_symbol: g
+      unit_id: u:gram
+    minimum_capacity:
+      value: 20
+      unit_symbol: g
+      unit_id: u:gram
+    scale_interval:
+      value: 0.5
+      unit_symbol: g
+      unit_id: u:gram
+    max_scale_intervals:
+      value: 6000
+    tare:
+      value:
+        20-50g: 31
+        50-80g: 35
+        80-100g: 55
+        100-3000g: 70
+      unit_symbol: "%"
+      unit_id: u:percent
+    dynamic_setting:
+      value:
+        20-300g: "±20%"
+        300-500g: "±10%"
+        500-1200g: "±20%"
+        1200-3000g: "±240g"
+    belt_speed:
+      value:
+        20-50g: 55
+        50-Max: 80
+      unit_symbol: m/min
+      unit_id: u:meter_per_minute
+    climatic_environment:
+      value:
+        temperature:
+          min: 5
+          max: 40
+        humidity: Non-condensing(closed)
+    electromagnetic_environment:
+      value: E1 and E2
+    power_supply:
+      value:
+        voltage:
+          min: 220
+          max: 240
+        frequency:
+          min: 50
+          max: 60
+    accuracy_class:
+      value: XIII(1)
+  description: Technical specifications of the Selecta automatic checkweighers
+  footnotes: []

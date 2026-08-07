@@ -1,0 +1,165 @@
+---
+_meta:
+  cert_id: 6087
+  num: R117/2019-A-NL1-23.07 Rev. 0
+  applicant: FMC Kongsberg Subsea A/S
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2023-07-rev0.pdf
+certificate:
+  number: R 117/2019-A-NL1-23.07 revision 0
+  scheme: A
+  project_number: '2546746'
+  page_total: 7
+  member_state: The Netherlands
+  date_issued: '2023-11-30'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  oiml_issuer_id: NL1
+applicants:
+- name: FMC Kongsberg Subsea A/S
+  address_lines:
+  - Kirkegårdveien 45
+  - NO-3616 Kongsberg
+  - Norway
+manufacturers:
+- name: FMC Kongsberg Subsea A/S
+  address_lines:
+  - Kirkegårdveien 45
+  - NO-3616 Kongsberg
+  - Norway
+certified_type:
+  category: Measuring system
+  type_designations:
+  - Sigma³
+  module_designation: N/A
+  description: >-
+    An electronic calculating and indicating device intended to be used as a part of a dynamic measuring system for liquids
+    other than water. Manufacturers mark: TechnipFMC Type: Sigma³
+characteristics:
+  type_level:
+    approved_for_application:
+      value: Measuring systems on pipelines and loading of ships
+    measuring_system_type:
+      value: Non-interruptible measuring system
+    approved_for_measuring:
+      value:
+      - Volume at flowing conditions
+      - Volume at standard condition(0kPa,15℃)
+      - Mass
+    environmental_classes:
+      value:
+        mechanical: M3
+        electromagnetic: E2
+        humidity: H1
+    temperature_range:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 110
+        max: 230
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_type:
+      value: AC
+    software_identification_for_sigma3:
+      value: Software version:V.20.03MID, Checksum:f8de26547c406794d8104b5c1131e4a9
+      footnote_markers:
+      - 1)
+    software_identification_for_hmi_client:
+      value: Software version:2.0.1, Checksum:6c102ed4584efa73e379b163d48e7acf
+      footnote_markers:
+      - 2)
+    approved_inputs:
+      value:
+      - Volume/mass pulse input
+      - 4...20mA signal for temperature,pressure and density;
+      - RJ45Modbus TCP connection
+      - HART
+      - HART superimposed on4...20mA signal
+      - Modbus RS485
+      - Time period signal for density input
+    vapour_pressure:
+      value:
+        min: 0
+        max: 10
+      unit_symbol: barg
+      unit_id: u:bar
+    reference_density:
+      value:
+        min: 350
+        max: 1163.5
+      unit_symbol: kg/Sm3
+      unit_id: u:kilogram_per_standard_cubic_meter
+    shrinkage_factor:
+      value:
+        min: 0.8
+        max: 1.2
+    reference_density_water:
+      value:
+        min: 900
+        max: 1050
+      unit_symbol: kg/Sm3
+      unit_id: u:kilogram_per_standard_cubic_meter
+    daily_report_time:
+      value: 0
+      unit_symbol: h
+      unit_id: u:sidereal_hour
+    line_reference_temperature:
+      value: 15
+      unit_symbol: degC
+      unit_id: u:degree_Celsius
+    line_reference_pressure:
+      value: 0
+      unit_symbol: barg
+      unit_id: u:bar
+  model_level: []
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+test_reports:
+- id: NMi-2546746-01
+  date: '2023-11-30'
+  pages: 127
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2023-11-30'
+  changes: "-"
+components:
+- role: Human interface software
+  type_designations:
+  - HMI-207CE
+  characteristics: {}
+footnotes:
+- marker: 1)
+  text: >-
+    The metrological software of Sigma³ is identified by the software version and checksum, which can be checked on the local
+    display via the menu structure System → Status.
+- marker: 2)
+  text: >-
+    The metrological software of the HMI Client HMI-207CE is identified by the software version and checksum, which can be
+    checked on the local display via the menu structure Help -> About.
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range
