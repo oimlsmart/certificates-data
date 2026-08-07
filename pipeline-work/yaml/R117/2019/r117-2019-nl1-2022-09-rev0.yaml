@@ -1,0 +1,178 @@
+---
+_meta:
+  cert_id: 5745
+  num: R117/2019-A-NL1-22.09 Rev. 0
+  applicant: Endress + Hauser Flowtec AG
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2022-09-rev0.pdf
+certificate:
+  number: R117/2019-A-NL1-22.09 Rev. 0
+  scheme: A
+  project_number: '3568185'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2022-09-12'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  person_title: N/A
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: NL1
+applicants:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kägenstrasse 7
+  - 4153 Reinach
+  - Switzerland
+manufacturers:
+- name: Newflow Ltd
+  address_lines:
+  - George House Derwent Road YO17 6YB
+  - Malton, North Yorkshire
+  - United Kingdom
+certified_type:
+  category: Measuring system
+  type_designations:
+  - NANO or NANO flow computer
+  module_designation: N/A
+  description: >-
+    An electronic calculating device intended to be used as a part of a dynamic measuring system for liquids other than water.
+characteristics:
+  type_level:
+    environmental_classes:
+      value:
+        mechanical: M1
+        electromagnetic: E2
+        humidity: H1
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 24
+        max: 32
+      unit_symbol: VDC
+      unit_id: u:volt
+  model_level: []
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+  - '1'
+  - '1.5'
+test_reports:
+- id: NMi-2502312-01
+  date: '2021-03-08'
+  pages: 45
+  role: type_evaluation_report
+- id: NMi-2502312-02
+  date: '2021-03-08'
+  pages: 34
+  role: type_evaluation_report
+- id: NMi-2607496-01
+  date: '2021-07-19'
+  pages: 20
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2022-09-12'
+  changes: Initial release
+matrix_tables:
+- name: Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer
+  columns:
+  - Software part
+  - CRC Checksum
+  - Remark
+  rows:
+  - Software part:
+      value: Totaliser
+    CRC Checksum:
+      value: 281ee714633b1e8d5d6623bb61936774
+    Remark:
+      value: >-
+        Totaliser block takes the calculated increments from the Liquid Flow Handler block and integrates these into check-summed
+        totals and remainders, maintaining very high resolution over a wide number range.
+  - Software part:
+      value: Liquid Flow Handler
+    CRC Checksum:
+      value: ecd270d90c5863c3e1c7589fc72d8ba8
+    Remark:
+      value: >-
+        Liquid Flow Handler generates the high-resolution increments once corrections are applied to the pulse input stream.The
+        block also calculate instantaneous corrected flow rate values for indication purposes.
+  - Software part:
+      value: KF Linearisation
+    CRC Checksum:
+      value: 31802dcd1dc23e23af6345effcbbdde1
+    Remark:
+      value: >-
+        Multi point K-factor linearisation code block, that performs straight line interpolation between the points with clamped
+        start and end values
+  - Software part:
+      value: API_Ch11-1_2012
+    CRC Checksum:
+      value: d22d623940f6cd3d386a3f97f304310a
+    Remark:
+      value: API Ch11.1 (2012) incorporating API Ch11.2.5
+  footnotes: []
+- name: >-
+    Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer (continued)
+  columns:
+  - Software part
+  - CRC Checksum
+  - Remark
+  rows:
+  - Software part:
+      value: N/A
+    CRC Checksum:
+      value: N/A
+    Remark:
+      value: Temperature and Pressure Volume Correction Factors for Generalized Crude Oils, Refined Products, and Lubricating
+        Oils
+  - Software part:
+      value: API_Ch11-2-5_2007
+    CRC Checksum:
+      value: b93fe392eacc567d368bfbea9aab40fe
+    Remark:
+      value: API Ch11.2.5,GPA TP-15(2007)Simplified Vapor Pressure Correlation for Commercial NGLs
+  - Software part:
+      value: API_Ch11-2-4_2019
+    CRC Checksum:
+      value: ed8159c9433b793c16fc1a40b5372ef0
+    Remark:
+      value: >-
+        API Ch11.2.4,GPA 8217(2019)(formally TP-27)incorporating API Ch11.2.2MTemperature Correction for the Volume of NGL
+        and LPG Tables,53E,54E,59E and 60EPressure correction provided by API Ch11.2.2M
+  - Software part:
+      value: API_Ch11-2-2M_2017
+    CRC Checksum:
+      value: 39d2ff37492343e213c2cccf40d82a65
+    Remark:
+      value: >-
+        API Ch11.2.2M(R2017)Compressibility Factors for Hydrocarbons:350-637Kilograms per Cubic Meter Density(15℃)and-46℃to60℃Metering
+        Temperature
+  - Software part:
+      value: OIML_R022
+    CRC Checksum:
+      value: '00794f1ee95633a66005927cb10ee9dd'
+    Remark:
+      value: OIML R022International Alcoholometric Tables including theBettin Spiewick ITS90 calculation
+  footnotes: []
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range

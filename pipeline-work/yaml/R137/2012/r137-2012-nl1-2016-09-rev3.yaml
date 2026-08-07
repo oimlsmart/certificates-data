@@ -1,0 +1,197 @@
+---
+_meta:
+  cert_id: 4397
+  num: R137/2012-NL1-2016.09 Rev. 3
+  applicant: GoldCard Smart Group Co., Ltd.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R137
+  edition_year: 2012
+  extraction_method: glm-extract
+  source_pdf: certificates/R137/2012/r137-2012-nl1-2016-09-rev3.pdf
+certificate:
+  number: R137/2012-NL1-2016.09 Rev. 3
+  scheme: A
+  project_number: '1901325'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2017-08-28'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: C. Oosterman
+  oiml_issuer_id: NL1
+applicants:
+- name: GoldCard Smart Group Co., Ltd.
+  address_lines:
+  - No 158, Jinqiao Street, Economic and Technology development Zone
+  - Hangzhou City
+  - P.R. China
+manufacturers:
+- name: GoldCard Smart Group Co., Ltd.
+  address_lines:
+  - No 158, Jinqiao Street, Economic and Technology development Zone
+  - Hangzhou City
+  - P.R. China
+certified_type:
+  category: Diaphragm gas meter
+  type_designations:
+  - JK/G2.5
+  - JK/G1.6
+  module_designation: N/A
+characteristics:
+  type_level:
+    destined_for:
+      value: Gas volume
+    mechanical_environment_class:
+      value: M2
+    electromagnetic_environment_class:
+      value: E1
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    gas_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    orientation:
+      value: Horizontal
+    flow_direction:
+      value: Uni-directional
+    distance_between_connections:
+      value:
+        min: 110
+        max: 130
+      unit_symbol: mm
+      unit_id: u:meter
+  model_level:
+  - attribute: cyclic_volume
+    unit_symbol: dm³
+    values:
+    - model: JK/G2.5
+      value: 0.9
+    - model: JK/G1.6
+      value: 0.9
+    unit_id: u:liter
+  - attribute: maximum_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: JK/G2.5
+      value: 4
+    - model: JK/G1.6
+      value: 2.5
+    unit_id: u:cubic_meter_per_hour
+  - attribute: transitional_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: JK/G2.5
+      value: 0.4
+    - model: JK/G1.6
+      value: 0.25
+    unit_id: u:cubic_meter_per_hour
+  - attribute: minimum_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: JK/G2.5
+      value: 0.025
+    - model: JK/G1.6
+      value: 0.016
+    unit_id: u:cubic_meter_per_hour
+  - attribute: number_of_drums_before_comma
+    values:
+    - model: JK/G2.5
+      value: 5
+    - model: JK/G1.6
+      value: 5
+  - attribute: number_of_drums_behind_comma
+    values:
+    - model: JK/G2.5
+      value: 3
+    - model: JK/G1.6
+      value: 3
+  - attribute: control_element
+    unit_symbol: m³
+    values:
+    - model: JK/G2.5
+      value: 0.0002
+    - model: JK/G1.6
+      value: 0.0002
+    unit_id: u:cubic_meter
+  config_level: []
+recommendation:
+  id: R137
+  edition: 2012
+  amendment: 2014
+  scheme: A
+  accuracy_classes:
+  - '1.5'
+test_reports:
+- id: NMi-13200784-01
+  date: '2015-03-12'
+  pages: 35
+  role: type_evaluation_report
+- id: NMi-16200632-01
+  date: '2016-09-29'
+  pages: 15
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2016-09-29'
+  changes: "-"
+- revision: '1'
+  date: '2016-10-17'
+  changes: 'Correction in given Type Evaluation Report: NMi-16200632-01 (corrected date)'
+- revision: '2'
+  date: '2017-08-04'
+  changes: Updated manufacturer name; Clarified possible distances between the connections
+- revision: '3'
+  date: '2017-08-28'
+  changes: Typing error in date of issuing and date in certificate history
+model_family:
+  family_name:
+  models:
+  - model_id: JK/G2.5
+  - model_id: JK/G1.6
+matrix_tables:
+- name: Flow characteristics by model
+  columns:
+  - model
+  - cyclic_volume
+  - qmax
+  - qt
+  - qmin
+  rows:
+  - model:
+      value: JK/G2.5
+    cyclic_volume:
+      value: 0.9
+    qmax:
+      value: 4
+    qt:
+      value: 0.4
+    qmin:
+      value: 0.025
+  - model:
+      value: JK/G1.6
+    cyclic_volume:
+      value: 0.9
+    qmax:
+      value: 2.5
+    qt:
+      value: 0.25
+    qmin:
+      value: 0.016
+  description: Flow characteristics for different gas meter models
+  footnotes: []
+footnotes:
+- marker: 1)
+  text: The working pressure range for all "diaphragm gas meters" is atmospheric up to and including 0,5 bar(g).
+_traceability:
+  raw_labels:
+    gas_temperature_range: gas_temperature_range

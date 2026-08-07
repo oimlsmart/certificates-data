@@ -1,0 +1,145 @@
+---
+_meta:
+  cert_id: 3933
+  num: R051/2006-GB1-2016.01
+  applicant: AMCS Ltd.
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2016-01.pdf
+certificate:
+  number: R051/2006-GB1-2016.01
+  scheme: A
+  project_number: TS0101/0014
+  page_total: 1
+  member_state: United Kingdom
+  date_issued: '2016-04-07'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - NMO I Stanton Avenue I Teddington I TW11 OJZ I United Kingdom
+  person_responsible: Max Linnemann
+  person_title: Head of Certification Body
+  phone: "+44 20 8943 7272"
+  email: N/A
+  website: https://www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: GB1
+applicants:
+- name: AMCS Ltd.
+manufacturers:
+- name: AMCS Ltd.
+certified_type:
+  category: Measuring system
+  type_designations:
+  - Vehicle Data Hub (VDH)
+  module_designation: N/A
+  description: >-
+    This pattern automatically determines the weight of the loaded containers during the lifting process, then the weight
+    of the empty containers on the way down to determine the net weight of refuse emptied.
+characteristics:
+  type_level:
+    load_cell_rated_output_signal:
+      value: 2
+      unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 17
+        max: 32
+      unit_symbol: VDC
+      unit_id: u:volt
+    display_location:
+      value: Rear of the vehicle, near operating console
+    accuracy_class:
+      value: N/A
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: container_type
+    values:
+    - value: 300
+      condition: N/A
+    - value: 600
+      condition: N/A
+  - attribute: minimum_capacity
+    axis: container_type
+    values:
+    - value: 2.5
+      condition: N/A
+    - value: 5.0
+      condition: N/A
+  - attribute: verification_interval
+    axis: container_type
+    values:
+    - value: 0.5
+      condition: N/A
+    - value: 1.0
+      condition: N/A
+recommendation:
+  id: R51
+  edition: 2006
+  amendment: "(E)"
+  scheme: A
+  accuracy_classes:
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: P01832
+  date: N/A
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2016-04-07'
+  changes: Certificate first issued.
+model_family:
+  family_name:
+  models:
+  - model_id: Base model (Flintec PC2H, firmware V1.X.Y)
+  - model_id: Firmware V2.X.Y
+  - model_id: Firmware V3.X.Y
+  - model_id: AMCS SPL79-880kg load cell
+  - model_id: Two load cells on one weighing board
+  - model_id: Elite Transducers DT4650 load cell
+  - model_id: Flintec PC5H load cell
+  - model_id: Fixed platform installation
+  - model_id: Summation of left and right weight
+matrix_tables:
+- name: Technical data
+  columns:
+  - container_type
+  - max
+  - min
+  - e
+  rows:
+  - container_type:
+      value: Individual container
+    max:
+      value: 300
+    min:
+      value: 2.5
+    e:
+      value: 0.5
+  - container_type:
+      value: Trade container
+    max:
+      value: 600
+    min:
+      value: 5.0
+    e:
+      value: 1.0
+  description: Technical characteristics for different container types
+  footnotes: []
+_traceability:
+  raw_labels:
+    power_supply_voltage: power_supply

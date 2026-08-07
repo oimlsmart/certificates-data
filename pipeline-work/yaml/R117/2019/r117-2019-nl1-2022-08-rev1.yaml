@@ -1,0 +1,145 @@
+---
+_meta:
+  cert_id: 6041
+  num: R117/2019-A-NL1-22.08 Rev. 1
+  applicant: Endress + Hauser Flowtec AG
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2022-08-rev1.pdf
+certificate:
+  number: R117/2019-A-NL1-22.08 Rev. 1
+  scheme: A
+  project_number: '3692100'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2023-09-29'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  person_title: N/A
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: NL1
+applicants:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kagenstrasse 7
+  - 4153 Reinach
+  - Switzerland
+manufacturers:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kagenstrasse 7
+  - 4153 Reinach
+  - Switzerland
+certified_type:
+  category: Measuring system
+  type_designations:
+  - LNG Metering Computer
+  module_designation: N/A
+  description: >-
+    An electronic calculating and indicating device (flow computer), intended to be used as a part of a liquid measuring system
+    for LNG.
+characteristics:
+  type_level:
+    environmental_classes:
+      value:
+        mechanical: M1
+        electromagnetic: E1
+        humidity: H1
+    temperature_range:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    software_identification:
+      value: See table 2
+    communication_interface:
+      value: HMI version 1:TCP/IP protocol.HMI version 2:OPC-UA protocol.
+    power_supply_voltage:
+      value:
+        min: 24
+        max: 24
+      unit_symbol: V
+      unit_id: u:volt
+    approved_variable:
+      value: Mass
+  model_level: []
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '1.5'
+test_reports:
+- id: NMi-2495471-02
+  date: '2020-12-18'
+  pages: 42
+  role: type_evaluation_report
+- id: NMi-3568185-01
+  date: '2023-01-19'
+  pages: 14
+  role: type_evaluation_report
+- id: NMi-3692100-02
+  date: '2023-09-29'
+  pages: 45
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2023-01-19'
+  changes: Initial release
+- revision: '1'
+  date: '2023-09-29'
+  changes: Addition of HMI version 2.
+components:
+- role: Computer
+  type_designations:
+  - B&R PANEL PC xxxx
+  characteristics: {}
+- role: Flow computer
+  type_designations:
+  - NANOflow
+  characteristics: {}
+- role: Optional additional flow computer
+  type_designations:
+  - NANOflow
+  alternatives: OR
+  characteristics: {}
+- role: Ethernet switch
+  type_designations: []
+  characteristics: {}
+matrix_tables:
+- name: Software identification of the electronic calculating and indicating device type LNG Metering Computer
+  columns:
+  - Software part
+  - Firmware version
+  - Hash code
+  rows:
+  - Software part:
+      value: HMI Legally relevant version
+    Firmware version:
+      value: 1.00.02
+    Hash code:
+      value: 90f35ef071dbc4761b7915a85a229b5e
+  - Software part:
+      value: HMI Legally relevant version
+    Firmware version:
+      value: 2.01.02
+    Hash code:
+      value: 5fda37a736e3f79c68b0671fa69bb585
+  footnotes: []
+footnotes:
+- marker: 1)
+  text: Computer of brand B&R, type PANEL PC xxxx
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range
+    power_supply_voltage: power_supply

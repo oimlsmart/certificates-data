@@ -1,0 +1,199 @@
+---
+_meta:
+  cert_id: 2136
+  num: R051/2006-GB1-2008.01 Rev. 2
+  applicant: Loma Systems Group and ITW Group
+  issuing_year: '2008'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2008-01-rev2.pdf
+certificate:
+  number: R051/2006-GB1-2008.01 Rev. 2
+  scheme: A
+  project_number: R051/2006-GB1-2008.01
+  page_total: 2
+  member_state: United Kingdom
+  date_issued: '2008-12-11'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: GB1
+applicants:
+- name: Loma Systems Group and ITW Group
+  address_lines:
+  - Southwood
+  - Farnborough
+  - Hampshire
+  - GU14 0NY
+  - United Kingdom
+manufacturers:
+- name: Loma Systems Group and ITW Group
+  address_lines:
+  - Southwood
+  - Farnborough
+  - Hampshire
+  - GU14 0NY
+  - United Kingdom
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - CW³
+  module_designation: N/A
+  description: Mains-powered automatic checkweighing instrument designated the CW³
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 1500
+        max: 6000
+      unit_symbol: g
+      unit_id: u:gram
+    minimum_capacity:
+      value: 50
+      unit_symbol: g
+      unit_id: u:gram
+    scale_interval:
+      value: 1
+      unit_symbol: g
+      unit_id: u:gram
+    number_of_scale_intervals:
+      value: 6000
+    tare:
+      value: "≤-10%Max/300g"
+    load_cell_emax:
+      value:
+        min: 10
+        max: 20
+      unit_symbol: kg
+      unit_id: u:kilogram
+    humidity_class:
+      value: N/A
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_environments:
+      value: E1 and E2
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 50
+      unit_symbol: Hz
+      unit_id: u:hertz
+    accuracy_class:
+      value: N/A
+  model_level:
+  - attribute: maximum_speed
+    unit_symbol: m/min
+    values:
+    - model: Lightweight variant
+      value: 80
+    - model: Mid-Range variant
+      value: 50
+    - model: Lightweight variant
+      value: 100
+    - model: Mid-Range variant
+      value: 100
+    - model: Mid-Range variant
+      value: 100
+    - model: Mid-Range variant
+      value: 70
+    unit_id: u:meter_per_minute
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment: E
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: TR 532
+  date: N/A
+  pages: 40
+  role: test_report
+- id: TR 537
+  date: N/A
+  pages: 39
+  role: test_report
+- id: G20156
+  date: N/A
+  pages: 11
+  role: pattern_evaluation_checklist
+revision_history:
+- revision: '2'
+  date: '2008-12-11'
+  changes: N/A
+model_family:
+  family_name:
+  models:
+  - model_id: Lightweight variant
+    label: Lightweight variant
+  - model_id: Mid-Range variant
+    label: Mid-Range variant
+components:
+- role: Load cell
+  type_designations:
+  - Vishay Tedea Huntleigh 240 C3
+  characteristics:
+    capacity:
+      value:
+        min: 10
+        max: 20
+      unit_symbol: kg
+      unit_id: u:kilogram
+matrix_tables:
+- name: Maximum belt speed
+  columns:
+  - load
+  - Lightweight variant
+  - Mid-Range variant
+  rows:
+  - load:
+      value: 50g to 200g
+    Lightweight variant:
+      value: 80
+    Mid-Range variant:
+      value: 50
+  - load:
+      value: 201g to 1500g
+    Lightweight variant:
+      value: 100
+    Mid-Range variant:
+      value: 100
+  - load:
+      value: 1501g to 2000g
+    Lightweight variant:
+      value: N/A
+    Mid-Range variant:
+      value: 100
+  - load:
+      value: 2001g to 6000g
+    Lightweight variant:
+      value: N/A
+    Mid-Range variant:
+      value: 70
+  description: Maximum belt speed for different load ranges and variants
+  footnotes: []
+_traceability:
+  raw_labels:
+    number_of_scale_intervals: max_number_of_scale_intervals
+    humidity_class: climatic_environment

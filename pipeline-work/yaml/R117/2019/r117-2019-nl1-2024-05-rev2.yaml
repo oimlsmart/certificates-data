@@ -1,0 +1,269 @@
+---
+_meta:
+  cert_id: 6645
+  num: R117/2019-A-NL1-24.05 Rev. 2
+  applicant: Endress+Hauser SICK Engineering GmbH
+  issuing_year: '2025'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2024-05-rev2.pdf
+certificate:
+  number: R117/2019-A-NL1-24.05 Rev. 2
+  scheme: A
+  project_number: '3978954'
+  page_total: 7
+  member_state: The Netherlands
+  date_issued: '2025-01-01'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  person_title: N/A
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: NL1
+applicants:
+- name: Endress+Hauser SICK Engineering GmbH
+  address_lines:
+  - Bergener Ring 27
+  - '01458 Ottendorf-Okrilla'
+  - Germany
+manufacturers:
+- name: Endress+Hauser SICK GmbH+Co. KG
+  address_lines:
+  - Bergener Ring 27
+  - '01458 Ottendorf-Okrilla'
+  - Germany
+certified_type:
+  category: Measuring system
+  type_designations:
+  - FLOWSIC900 F9L-XXXX
+  module_designation:
+  description: >-
+    A measuring device (ultrasonic flow meter) intended to be used as part of an interruptible or non-interruptible dynamic
+    measuring system for liquids other than water.
+characteristics:
+  type_level:
+    number_of_sound_path:
+      value: 8(4+4inX-configuration);4(A-Aplane)
+    sound_frequency:
+      value: 1.5
+      unit_symbol: MHz
+      unit_id: u:hertz
+    path_angle:
+      value:
+        min: 42.5
+        max: 62.5
+    approved_quantity:
+      value: Volume at flowing conditions
+    maximum_pressure:
+      value: 20
+      unit_symbol: bar(g)
+      unit_id: u:bar
+    environmental_classes:
+      value:
+        mechanical: M3
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    product_temperature_range:
+      value:
+        min: -200
+        max: 60
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    intended_for_the_measurement_of:
+      value: >-
+        Liquified Natural Gas(LNG);Liquid petroleum and related products,liquids food,chemical products any other liquids
+        other than water in liquid state with maximum kinematic viscosity of2cSt.
+    power_supply_voltage:
+      value:
+        min: 23
+        max: 29
+      unit_symbol: VDC
+      unit_id: u:volt
+    software_identification:
+      value:
+        version_number: 1.1.0.
+        checksum: EFC304FA
+  model_level:
+  - attribute: minimum_flow_rate
+    unit_symbol: m³/hr
+    values:
+    - model: 8 inch/DN 200
+      value: 60
+    - model: 10 inch/DN 250
+      value: 90
+    - model: 12 inch/DN 300
+      value: 130
+    - model: 14 inch/DN 350
+      value: 160
+    unit_id: u:cubic_meter_per_hour
+  - attribute: maximum_flow_rate
+    unit_symbol: m³/hr
+    values:
+    - model: 8 inch/DN 200
+      value: 1500
+    - model: 10 inch/DN 250
+      value: 2300
+    - model: 12 inch/DN 300
+      value: 3300
+    - model: 14 inch/DN 350
+      value: 4100
+    unit_id: u:cubic_meter_per_hour
+  - attribute: mmq
+    unit_symbol: m³
+    values:
+    - model: 8 inch/DN 200
+      value: 2
+    - model: 10 inch/DN 250
+      value: 2
+    - model: 12 inch/DN 300
+      value: 5
+    - model: 14 inch/DN 350
+      value: 5
+    unit_id: u:cubic_meter
+  - attribute: minimum_reynolds_number
+    values:
+    - model: 8 inch/DN 200
+      value: 50000
+    - model: 10 inch/DN 250
+      value: 50000
+    - model: 12 inch/DN 300
+      value: 50000
+    - model: 14 inch/DN 350
+      value: 50000
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+  - '1'
+  - '1.5'
+test_reports:
+- id: NMi-3575261-01
+  date: '2024-12-06'
+  pages: 77
+  role: type_evaluation_report
+- id: NMi-3978954-01
+  date: '2025-09-10'
+  pages: 14
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2024-12-06'
+  changes: Initial issue
+- revision: '1'
+  date: '2025-07-25'
+  changes: Manufacturer name change. Previously named as"Sick Engineering GmbH".
+- revision: '2'
+  date: '2025-09-23'
+  changes: |-
+    Added to the Certificate:
+    - Component exchange without the need of recalibration of the instrument.
+    - Guidance on sealing of the measuring device.
+    - Guidance on the conformity assessment of the measuring device
+model_family:
+  family_name:
+  models:
+  - model_id: 8 inch/DN 200
+  - model_id: 10 inch/DN 250
+  - model_id: 12 inch/DN 300
+  - model_id: 14 inch/DN 350
+components:
+- role: meter body
+  type_designations: []
+  characteristics: {}
+- role: ultrasonic transducers
+  type_designations: []
+  characteristics: {}
+- role: signal processing unit (SPU)
+  type_designations: []
+  characteristics: {}
+matrix_tables:
+- name: Characteristics of the family of instruments
+  columns:
+  - meter_size
+  - inch
+  - dn
+  - minimum_flow_rate
+  - maximum_flow_rate
+  - mmq
+  - minimum_reynolds_number
+  rows:
+  - meter_size:
+      value: 8 inch/DN 200
+    inch:
+      value: 8
+    dn:
+      value: 200
+    minimum_flow_rate:
+      value: 60
+    maximum_flow_rate:
+      value: 1500
+    mmq:
+      value: 2
+    minimum_reynolds_number:
+      value: 50000
+  - meter_size:
+      value: 10 inch/DN 250
+    inch:
+      value: 10
+    dn:
+      value: 250
+    minimum_flow_rate:
+      value: 90
+    maximum_flow_rate:
+      value: 2300
+    mmq:
+      value: 2
+    minimum_reynolds_number:
+      value: 50000
+  - meter_size:
+      value: 12 inch/DN 300
+    inch:
+      value: 12
+    dn:
+      value: 300
+    minimum_flow_rate:
+      value: 130
+    maximum_flow_rate:
+      value: 3300
+    mmq:
+      value: 5
+    minimum_reynolds_number:
+      value: 50000
+  - meter_size:
+      value: 14 inch/DN 350
+    inch:
+      value: 14
+    dn:
+      value: 350
+    minimum_flow_rate:
+      value: 160
+    maximum_flow_rate:
+      value: 4100
+    mmq:
+      value: 5
+    minimum_reynolds_number:
+      value: 50000
+  description: Flow characteristics by meter size
+  footnotes: []
+footnotes:
+- marker: 1)
+  text: This measuring device was previously placed on the market under the manufacturer name Sick Engineering GmbH
+- marker: 2)
+  text: Where Y = D for 8-path and C for 4-path meter. L = Large scale flow meter type.
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range

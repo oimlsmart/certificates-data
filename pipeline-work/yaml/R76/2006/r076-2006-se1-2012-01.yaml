@@ -1,0 +1,177 @@
+---
+_meta:
+  cert_id: 3018
+  num: R076/2006-SE1-2012.01
+  applicant: Ishida Co., Ltd.
+  issuing_year: '2012'
+  status: Valid
+  issuer: SE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-se1-2012-01.pdf
+certificate:
+  number: R076/2006-SE1-2012.01
+  scheme: A
+  date_issued: '2012-04-16'
+  oiml_issuer_id: SE1
+  member_state: Sweden
+issuing_authority:
+  name: RISE Research Institutes of Sweden AB
+  address_lines:
+  - Box 857, SE-501 15 Borås, Sweden
+  person_responsible: Lennart Månsson
+  oiml_issuer_id: SE1
+applicants:
+- name: Ishida Co., Ltd.
+  address_lines:
+  - 44 Sanno-cho, Shogoin, Sakyo-ku
+  - Kyoto 606-8392, JAPAN
+manufacturers:
+- name: Ishida Co., Ltd.
+  address_lines:
+  - 44 Sanno-cho, Shogoin, Sakyo-ku
+  - Kyoto 606-8392, JAPAN
+certified_type:
+  category: Weighing instrument
+  type_designations:
+  - UNI-9 B
+  - UNI-9 P
+  - UNI-9 BP
+  - UNI-9 SS
+  - UNI-9 EV
+  accuracy_class: III
+  description: A graduated, self-indicating, electronic, single or multi-interval non-automatic weighing instrument.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    number_of_verification_scale_intervals_n:
+      value:
+        min: N/A
+        max: 3000
+    temperature_range:
+      value:
+        min: -5
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_type:
+      value: AC
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value: 6
+    - model: N/A
+      value: 15
+    unit_id: u:kilogram
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 20
+    - model: N/A
+      value: 40
+    - model: N/A
+      value: 40
+    - model: N/A
+      value: 100
+    unit_id: u:gram
+  - attribute: scale_interval_e1
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 1
+      footnote_markers:
+      - "(0-2,999kg)"
+    - model: N/A
+      value: 2
+    - model: N/A
+      value: 2
+      footnote_markers:
+      - "(0-5,998kg)"
+    - model: N/A
+      value: 5
+    unit_id: u:gram
+  - attribute: scale_interval_e2
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 2
+      footnote_markers:
+      - "(3-6kg)"
+    - model: N/A
+      value: 5
+      footnote_markers:
+      - "(6-15kg)"
+    unit_id: u:gram
+  - attribute: maximum_tare_effect
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value: "-Max1"
+    - model: N/A
+      value: -2.998
+    - model: N/A
+      value: -5.995
+    unit_id: u:kilogram
+  config_level: []
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: MTmPX13181.001
+  date: '2011-09-22'
+  pages: 1
+  role: test_report
+- id: MTmPX21234.001
+  date: '2012-03-16'
+  pages: 1
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: UNI-9 6kg
+  - model_id: UNI-9 15kg
+components:
+- role: Load cell
+  type_designations:
+  - ULC-10L
+  - ULC-25L
+  alternatives: OR
+  characteristics:
+    capacity:
+      value:
+      - type_designation: ULC-10L
+        value: 10
+        unit_symbol: kg
+        unit_id: u:kilogram
+      - type_designation: ULC-25L
+        value: 25
+        unit_symbol: kg
+        unit_id: u:kilogram
+    number_of_scale_intervals:
+      value:
+      - type_designation: ULC-10L
+        value: 3000
+      - type_designation: ULC-25L
+        value: 3000

@@ -1,0 +1,144 @@
+---
+_meta:
+  cert_id: 6646
+  num: R117/2019-A-NL1-24.04 Rev. 1
+  applicant: Total Control Systems
+  issuing_year: '2025'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2024-04-rev1.pdf
+certificate:
+  number: R117/2019-A-NL1-24.04 Rev. 1
+  scheme: A
+  project_number: '4015220'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2025-09-18'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  oiml_issuer_id: NL1
+applicants:
+- name: Total Control Systems, A Division of Murray Equipment, Inc.
+  address_lines:
+  - 2515 Charleston Place
+  - Fort Wayne, IN 46808
+  - United States of America
+manufacturers:
+- name: Total Control Systems
+  address_lines:
+  - 2515 Charleston Place
+  - Fort Wayne, IN 46808
+  - United States of America
+certified_type:
+  category: Measuring system
+  type_designations:
+  - TCS 3000
+  - TCS 3000EX
+  module_designation: N/A
+  description: >-
+    An electronic calculating and indicating device intended to be used as a part of an interruptible dynamic measuring systems
+    for liquids other than water. TCS 3000 can calculate the product volume at reference conditions using the measured volume
+    at measured conditions, measured product temperature, the manually input density at reference conditions and the conversion
+    method. Both the manually input density and the conversion method are protected by a seal. TCS 3000EX is the variation
+    in explosion proof enclosure. It shares the same main board as the TCS 3000, however it has distinct features from TCS
+    3000 in the interface board, keyboard barrier board and power supply stabilization board.
+characteristics:
+  type_level:
+    environmental_classes:
+      value:
+        mechanical: M3
+        humidity: H3
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+    intended_for_measurement_of:
+      value:
+      - Mass
+      - Uncorrected volume
+      - Standard volume
+      - Density
+      - Temperature
+    power_supply_voltage:
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id: u:volt
+    approved_inputs:
+      value:
+      - Dual frequency pulse input
+      - Temperature input via 4-wire RTD sensor(PT100)
+      - HART superimposed on the current input
+      - RS232 or RS485 serial communication
+    approved_outputs:
+      value:
+      - LCD/Segment display
+      - RS232 or RS485 serial communication
+    power_supply_type:
+      value: DC
+  model_level:
+  - attribute: temperature_range
+    unit_symbol: "℃"
+    values:
+    - model: Generalized products
+      value:
+        min: -40
+        max: 90
+    - model: Liquefied Petroleum Gas(LPG)
+      value:
+        min: -46
+        max: 80
+    unit_id: u:degree_Celsius
+  - attribute: density_range
+    unit_symbol: kg/m3
+    values:
+    - model: Generalized products
+      value:
+        min: 615
+        max: 1155
+    - model: Liquefied Petroleum Gas(LPG)
+      value:
+        min: 490
+        max: 685
+    unit_id: u:kilogram_per_cubic_meter
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: NMi-3739564-01
+  date: '2024-06-13'
+  pages: 56
+  role: type_evaluation_report
+- id: NMi-2267300-01
+  date: '2022-03-25'
+  pages: 43
+  role: type_evaluation_report
+- id: NMi-3834652-01
+  date: '2024-10-25'
+  pages: 18
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2024-10-25'
+  changes: First issue.
+- revision: '1'
+  date: '2025-09-18'
+  changes: Firmware update
+model_family:
+  family_name:
+  models:
+  - model_id: TCS 3000
+  - model_id: TCS 3000EX
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range

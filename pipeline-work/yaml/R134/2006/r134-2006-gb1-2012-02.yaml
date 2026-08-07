@@ -1,0 +1,215 @@
+---
+_meta:
+  cert_id: 3235
+  num: R134/2006-GB1-2012.02
+  applicant: Dini Argeo Srl
+  issuing_year: '2012'
+  status: Valid
+  issuer: GB1
+  recommendation: R134
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R134/2006/r134-2006-gb1-2012-02.pdf
+certificate:
+  number: R134/2006-GB1-2012.02
+  scheme: A
+  member_state: United Kingdom
+  date_issued: '2012-09-21'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 20 8943 7272"
+  email: N/A
+  website: https://www.bis.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Dini Argeo S.r.l.
+  address_lines:
+  - Via della Fisica 20
+  - 41042 Spezzano di Fiorano
+  - Modena
+  - Italy
+manufacturers:
+- name: Dini Argeo S.r.l.
+  address_lines:
+  - Via della Fisica 20
+  - 41042 Spezzano di Fiorano
+  - Modena
+  - Italy
+certified_type:
+  category: Measuring system
+  type_designations:
+  - 3590E-AF09
+  module_designation:
+  description: >-
+    Dynamic axle weighing of road vehicles in motion, can be configured by using one or two WWS platforms fixed temporarily
+    to a concrete base or it can be configured to use the RWS fixed platforms embedded into the ground
+characteristics:
+  type_level:
+    accuracy_class:
+      value: N/A
+    maximum_capacity:
+      value:
+        min: N/A
+        max: 60000
+      unit_symbol: kg
+      unit_id: u:kilogram
+    scale_interval:
+      value: 5
+      unit_symbol: kg
+      unit_id: u:kilogram
+    minimum_capacity:
+      value: 400
+      unit_symbol: kg
+      unit_id: u:kilogram
+    number_of_scale_intervals:
+      value: 3000
+    direction_of_travel:
+      value: Dual direction
+    compensating_axle_groups:
+      value: Yes(Pneumatic&Steel leaf)
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    load_cells:
+      value: CompatibleOIMLR60
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+    maximum_number_of_axles_per_vehicle:
+      value:
+        min: N/A
+        max: 20
+    maximum_operating_speed_vmax:
+      value:
+        min: N/A
+        max: 5
+      unit_symbol: km/hr
+      unit_id: u:kilometer_per_hour
+  model_level:
+  - attribute: maximum_capacity_of_single_platform
+    unit_symbol: kg
+    values:
+    - model: WWSD-Portable system
+      value: 20000
+    - model: WWSE-Portable system
+      value: 12500
+    - model: WWSF-Portable system
+      value: 30000
+    - model: RWS-Permanently fixed system
+      value: 25000
+    unit_id: u:kilogram
+  - attribute: dimensions
+    unit_symbol: mm
+    values:
+    - model: WWSD-Portable system
+      value: 900x500
+    - model: WWSE-Portable system
+      value: 700x450
+    - model: WWSF-Portable system
+      value: 900x700
+    - model: RWS-Permanently fixed system
+      value: 3000x720
+    unit_id: u:meter
+  config_level: []
+recommendation:
+  id: R134
+  edition: 2006
+  amendment: "(E)"
+  scheme: A
+  accuracy_classes:
+  - '2'
+  - '5'
+  - '10'
+test_reports:
+- id: P00251/R76
+  date: N/A
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: R134/2006-GB1-12.02
+  date: '2012-09-21'
+  changes: Certificate first issued.
+model_family:
+  family_name:
+  models:
+  - model_id: WWSD-Portable system
+  - model_id: WWSE-Portable system
+  - model_id: WWSF-Portable system
+  - model_id: RWS-Permanently fixed system
+components:
+- role: Weighing platform
+  type_designations:
+  - WWSD
+  - WWSE
+  - WWSF
+  - RWS
+  alternatives: OR
+  characteristics: {}
+- role: Digital indicating device
+  type_designations:
+  - 3590-E
+  - CPWE
+  - DFW
+  - DFWK06
+  alternatives: OR
+  characteristics: {}
+matrix_tables:
+- name: Platform types
+  columns:
+  - Platform Model
+  - Maximum capacity of single platform(kg)
+  - Dimensions(mm)
+  rows:
+  - Platform Model:
+      value: WWSD-Portable system
+    Maximum capacity of single platform(kg):
+      value: 20000
+    Dimensions(mm):
+      value: 900x500
+  - Platform Model:
+      value: WWSE-Portable system
+    Maximum capacity of single platform(kg):
+      value: 12500
+    Dimensions(mm):
+      value: 700x450
+  - Platform Model:
+      value: WWSF-Portable system
+    Maximum capacity of single platform(kg):
+      value: 30000
+    Dimensions(mm):
+      value: 900x700
+  - Platform Model:
+      value: RWS-Permanently fixed system
+    Maximum capacity of single platform(kg):
+      value: 25000
+    Dimensions(mm):
+      value: 3000x720
+  footnotes: []
+_traceability:
+  raw_labels:
+    accuracy_class: accuracy_classes
+    maximum_capacity: max_capacity
+    minimum_capacity: min_capacity
+    maximum_speed: max_speed
+    temperature_range: operating_temperature_range
+    power_supply_voltage: power_supply

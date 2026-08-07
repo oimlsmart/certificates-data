@@ -1,0 +1,179 @@
+---
+_meta:
+  cert_id: 3826
+  num: R051/2006-GB1-2013.01 Rev. 2
+  applicant: Trimble Loadrite Auckland Ltd
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2013-01-rev2.pdf
+certificate:
+  number: R051/2006-GB1-2013.01 Rev. 2
+  scheme: A
+  project_number: R051/2006-GB1-2013.01
+  page_total: 1
+  member_state: United Kingdom
+  date_issued: '2015-11-05'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - I Stanton Avenue
+  - I Teddington
+  - I TW11 OJZ
+  - I United Kingdom
+  person_responsible: Paul Dixon - Director, Certification Services
+  person_title: Technical Manager - Certification Services
+  phone: "+44 20 8943 7272"
+  website: https://www.gov.uk/nmro
+  oiml_issuer_id: GB1
+applicants:
+- name: Trimble Loadrite Auckland Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale
+  - Auckland
+  - New Zealand
+manufacturers:
+- name: Trimble Loadrite Auckland Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale
+  - Auckland
+  - New Zealand
+certified_type:
+  category: battery-operated automatic catchweighing instrument (Category Y)
+  type_designations:
+  - L-Series 2180
+  module_designation:
+  description: >-
+    This pattern of a battery-operated automatic catchweighing instrument (Category Y), designated the L-Series 2180, comprises
+    an electronic indicator, pressure transducer and sensors mounted on a wheeled loader. This pattern automatically determines
+    the load in the bucket during the lifting process, the hydraulic pressure in the loader's arms is converted by a pressure
+    transducer, the output being used by the indicator to display the corresponding weight.
+characteristics:
+  type_level:
+    semi_automatic_zero_setting_device:
+      value: 4
+      unit_symbol: "%"
+      unit_id: u:percent
+    accuracy_class:
+      value: N/A
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: e
+    values:
+    - model: N/A
+      value: 350
+    unit_id: u:atomic_unit_of_charge
+  - attribute: scale_interval
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value:
+        min: 1
+        max: 200
+    unit_id: u:kilogram
+  - attribute: minimum_capacity
+    unit_symbol: e
+    values:
+    - model: N/A
+      value: 10
+    unit_id: u:atomic_unit_of_charge
+  - attribute: transducer_measuring_range
+    unit_symbol: bar
+    values:
+    - model: N/A
+      value:
+        min: 0
+        max: 350
+    unit_id: u:bar
+  - attribute: transducer_output_signal
+    unit_symbol: mA
+    values:
+    - model: N/A
+      value:
+        min: 4
+        max: 20
+    unit_id: u:ampere
+  - attribute: humidity_class
+    unit_symbol: "°C"
+    values:
+    - model: N/A
+      value:
+        min: -20
+        max: 50
+    unit_id: u:degree_Celsius
+  - attribute: electromagnetic_environment_class
+    values:
+    - model: N/A
+      value: E3
+  - attribute: mechanical_environment_class
+    values:
+    - model: N/A
+      value: Vehicle mounted
+  - attribute: power_supply_voltage
+    unit_symbol: VDC
+    values:
+    - model: N/A
+      value:
+        min: 11
+        max: 32
+    unit_id: u:volt
+  - attribute: display_keyboard_location
+    values:
+    - model: N/A
+      value: Indicator console in cabin
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01061
+  date: '2015-11-05'
+  pages: 17
+  role: type_evaluation_report
+revision_history:
+- revision: R51/2006-GB1-13.01
+  date: '2013-03-19'
+  changes: Certificate first issued.
+- revision: R51/2006-GB1-13.01 rev 1
+  date: '2013-10-01'
+  changes: Software version 2.xx added for the L2150.
+- revision: R51/2006-GB1-13.01 rev 2
+  date: '2015-11-05'
+  changes: >-
+    Applicant's name changed from Actronics Ltd to Trimble Loadrite Auckland Ltd. Tilt changed from 5° to 6° for LR966 angle
+    sensor. Alternatives 4 to 6 added.
+components:
+- role: Pressure transducer
+  type_designations:
+  - Loadrite model LC965C
+  alternatives: OR
+  characteristics: {}
+- role: Position reference / Lift speed / Direction sensor
+  type_designations:
+  - Loadrite Model LM960 optical arm-location sensor
+  - Loadrite Model LR908 spring-loaded rotary encoder type arm-location sensor
+  alternatives: OR
+  characteristics: {}
+- role: Load receptor ("Bucket") location sensors
+  type_designations:
+  - Loadrite AAA-20710 sensors
+  characteristics: {}
+- role: Inclinometer
+  type_designations:
+  - Loadrite LR966 angle sensor
+  characteristics:
+    tilt_inhibition_threshold:
+      value: 6
+- role: Indicator
+  type_designations:
+  - Loadrite L2180 weighing indicator console
+  characteristics: {}

@@ -1,0 +1,249 @@
+---
+_meta:
+  cert_id: 3148
+  num: R107/2007-GB1-2013.01
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R107
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R107/2007/r107-2007-gb1-2013-01.pdf
+certificate:
+  number: R107/2007-GB1-2013.01
+  scheme: A
+  project_number: TS0103/0003
+  page_total: 1
+  member_state: United Kingdom
+  date_issued: '2013-04-15'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 20 8943 7272"
+  email: N/A
+  website: https://www.bis.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano Modena Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano Modena Italy
+certified_type:
+  category: Measuring system
+  type_designations:
+  - DDxxxxHS
+  module_designation: N/A
+  description: >-
+    This pattern of an automatic discontinuous totalising instrument designated the DDxxxxHS is designed to totalise loads
+    of powder or granular materials, and comprises a weight indicator and a weighing unit comprising of a weighing hopper
+    supported by load cells. Additional PLCs may be used to provide various inputs, a remote PC may also be used to edit the
+    batch and product parameters and command the operation.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: N/A
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    number_of_scale_intervals_n:
+      value: 6000
+  model_level:
+  - attribute: maximum_capacity
+    values:
+    - model: DDxxxxHS
+      value: Dependent upon application
+  - attribute: minimum_capacity
+    values:
+    - model: DDxxxxHS
+      value: Dependent upon application
+  - attribute: minimum_totalised_load
+    values:
+    - model: DDxxxxHS
+      value: Min ≤ Σmin ≥1000dt for class 0.2 ≥400dt for class 0.5 ≥200dt for class 1 ≥100dt for class 2
+  - attribute: scale_interval_dt
+    values:
+    - model: DDxxxxHS
+      value: 0.01% Max ≤ dt ≤ 0.2% Max
+  config_level:
+  - attribute: rate_of_operation
+    axis: operation_mode
+    values:
+    - value: Fixed at initial verification
+      condition: N/A
+  - attribute: product_and_batch_parameters
+    axis: operation_mode
+    values:
+    - value: Editing prevented during automatic operation
+      condition: N/A
+recommendation:
+  id: R107
+  edition: 2007
+  scheme: A
+  accuracy_classes:
+  - '0.2'
+  - '0.5'
+  - '1'
+  - '2'
+test_reports:
+- id: P00962
+  date: N/A
+  pages: 13
+  role: type_evaluation_report
+revision_history:
+- revision: R107/2007-GB1-13.01
+  date: '2013-04-15'
+  changes: Certificate first issued
+model_family:
+  family_name:
+  models:
+  - model_id: DD1050HS
+  - model_id: DD1050iHS
+  - model_id: DD2050HS
+  - model_id: DD1010HS
+  - model_id: DD1010IHS
+  - model_id: DD1010ICHS
+  - model_id: DD1010HHS
+  - model_id: DD1010IHHS
+  - model_id: DD1010ICHHS
+components:
+- role: Weighing unit
+  type_designations:
+  - weigh hopper supported by strain gauge or digital load cells
+  characteristics: {}
+- role: Weight indicator
+  type_designations:
+  - DD1050HS
+  - DD1050iHS
+  - DD2050HS
+  - DD1010HS
+  - DD1010IHS
+  - DD1010ICHS
+  - DD1010HHS
+  - DD1010IHHS
+  - DD1010ICHHS
+  characteristics: {}
+- role: Feeding device
+  type_designations: []
+  characteristics: {}
+- role: Discharge unit
+  type_designations: []
+  characteristics: {}
+- role: Optional printer
+  type_designations: []
+  characteristics: {}
+- role: Load cell
+  type_designations:
+  - compatible load cell(s)
+  characteristics: {}
+- role: Junction box
+  type_designations:
+  - DILINK
+  characteristics: {}
+- role: PLCs
+  type_designations:
+  - Additional PLCs
+  characteristics: {}
+- role: Remote PC
+  type_designations: []
+  characteristics: {}
+matrix_tables:
+- name: Weighing board software versions (DD1050HS, DD1050iHS, DD2050HS)
+  columns:
+  - version_type
+  - identification
+  - release
+  - checksum
+  rows:
+  - version_type:
+      value: 'Analogue version:'
+    identification:
+      value: '491039'
+    release:
+      value: '1.0'
+    checksum:
+      value: 85E2
+  - version_type:
+      value: 'Digital version:'
+    identification:
+      value: '491040'
+    release:
+      value: '1.0'
+    checksum:
+      value: B664
+  description: Software versions for weighing board
+  footnotes: []
+- name: Weighing board software versions (DD1010HS, DD1010IHS, DD1010ICHS, DD1010HHS, DD1010IHHS, DD1010ICHHS)
+  columns:
+  - version_type
+  - identification
+  - release
+  - checksum
+  rows:
+  - version_type:
+      value: 'Analogue version 5 VDC:'
+    identification:
+      value: '491032'
+    release:
+      value: '1.1'
+    checksum:
+      value: 325e
+  - version_type:
+      value: 'Analogue version 10 VDC:'
+    identification:
+      value: '491039'
+    release:
+      value: '1.1'
+    checksum:
+      value: ce47
+  - version_type:
+      value: 'Digital version:'
+    identification:
+      value: '491040'
+    release:
+      value: '1.1'
+    checksum:
+      value: 7c08
+  description: Software versions for weighing board
+  footnotes: []
+- name: Main board software versions (all models)
+  columns:
+  - module
+  - release
+  - checksum
+  rows:
+  - module:
+      value: PluginBilancia.dll
+    release:
+      value: 3.1.1.2
+    checksum:
+      value: EEC0414D99D9D4E74F236E407455B68A047937B5
+  - module:
+      value: PluginCbWeightViewerH.dll
+    release:
+      value: 3.3.0.0
+    checksum:
+      value: 0C88143ACBFF11B2F212218B8613B176517F8D00
+  - module:
+      value: PluginCbMpp.dll
+    release:
+      value: 3.1.1.4
+    checksum:
+      value: 6FE313655513FACF1DB5C12174CDB24E2DC8C8C6
+  description: Software versions for main board
+  footnotes: []

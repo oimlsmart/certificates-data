@@ -1,0 +1,222 @@
+---
+_meta:
+  cert_id: 5206
+  num: R117/2019-A-NL1-20.02 Rev. 01
+  applicant: Tatsuno India Private Limited
+  issuing_year: '2020'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2020-02-rev01.pdf
+certificate:
+  number: R117/2019-A-NL1-20.02 Rev. 01
+  scheme: A
+  project_number: '2428030'
+  page_total: 7
+  member_state: The Netherlands
+  date_issued: '2020-12-01'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  person_title: N/A
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: https://www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Tatsuno India Private Limited
+  address_lines:
+  - B-31 & B-32 MIDC Industrial area, Taloja Dist.- Raigad 410208, Maharashtra, India
+manufacturers:
+- name: Tatsuno India Pvt. Ltd.
+  address_lines:
+  - B-31 & B-32 MIDC Industrial area, Taloja Dist.- Raigad 410208, Maharashtra, India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Sunny NexG series S** ********
+  module_designation:
+  description: 'Fuel dispenser (liquids other than water) Type: Sunny NexG series S** ******** [1]'
+characteristics:
+  type_level:
+    accuracy_class:
+      value: '0.5'
+    instrument_type:
+      value: Fuel dispenser (liquid other than water)
+    max_nozzles:
+      value: 8
+    environment_classes:
+      value: M2/E1/H3
+    temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    liquid_temperature_range:
+      value:
+        min: -5
+        max: 35
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    density_range_piston:
+      value:
+        min: 725
+        max: 1200
+      unit_symbol: kg/m3
+      unit_id: u:kilogram_per_cubic_meter
+    density_range_lobe:
+      value:
+        min: 725
+        max: 925
+      unit_symbol: kg/m3
+      unit_id: u:kilogram_per_cubic_meter
+    maximum_pressure:
+      value: 4
+      unit_symbol: bar(g)
+      unit_id: u:bar
+    electrical_power_calculator:
+      value: 230 VAC / 50 Hz
+  model_level:
+  - attribute: flow_rate_range
+    unit_symbol: L/min
+    values:
+    - model: Piston meter (FF-1025)
+      value:
+        min: 3
+        max: 80
+    - model: Lobe meter (FF-1006)
+      value:
+        min: 14
+        max: 180
+    unit_id: u:liter_per_minute
+  - attribute: mmq
+    unit_symbol: L
+    values:
+    - model: Piston meter (FF-1025)
+      value: 2
+    - model: Lobe meter (FF-1006)
+      value: 10
+    unit_id: u:liter
+  - attribute: maximum_volume_indication
+    values:
+    - model: Jisedai-1
+      value: 10 digits
+  - attribute: maximum_unit_price
+    values:
+    - model: Jisedai-1
+      value: 7 digits
+  - attribute: max_nozzles_jisedai1
+    values:
+    - model: Jisedai-1
+      value: 8
+  - attribute: max_main_displays_jisedai1
+    values:
+    - model: Jisedai-1
+      value: 4
+  - attribute: maximum_flow_rate_gas_elimination
+    unit_symbol: L/min
+    values:
+    - model: Integral suction pump FP1001
+      value: 180
+    - model: Modular suction pump FP1022
+      value: 180
+    unit_id: u:liter_per_minute
+  - attribute: maximum_pressure_gas_elimination
+    unit_symbol: bars
+    values:
+    - model: Integral suction pump FP1001
+      value: 4.0
+    - model: Modular suction pump FP1022
+      value: 4.0
+    unit_id: u:bar
+  - attribute: product_temperature_range_gas_elimination
+    unit_symbol: "°C"
+    values:
+    - model: Integral suction pump FP1001
+      value:
+        min: -5
+        max: 35
+    - model: Modular suction pump FP1022
+      value:
+        min: -5
+        max: 35
+    unit_id: u:degree_Celsius
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: NMi-2428030-01
+  date: '2020-12-01'
+  pages: 143
+  role: type_evaluation_report
+revision_history: []
+model_family:
+  family_name: Sunny NexG series
+  models:
+  - model_id: Piston meter (FF-1025)
+    label: Piston meter (FF-1025)
+    attributes: {}
+  - model_id: Lobe meter (FF-1006)
+    label: Lobe meter (FF-1006)
+    attributes: {}
+components:
+- role: Electronic calculating and indicating device
+  type_designations:
+  - Jisedai-1
+  characteristics: {}
+- role: Measurement transducer
+  type_designations:
+  - Piston meter FF-1025
+  - Lobe meter FF-1006
+  alternatives: OR
+  characteristics: {}
+- role: Gas Separator in combination with the pumping unit
+  type_designations:
+  - Integral suction pump FP1001
+  - Modular suction pump FP1022
+  alternatives: OR
+  characteristics: {}
+matrix_tables:
+- name: Table 2 Flow characteristics
+  columns:
+  - Flow rate Range
+  - Qmin[L/min]
+  - Qmax[L/min]
+  - MMQ[L]
+  rows:
+  - Flow rate Range:
+      value: Fuel Dispenser with Piston Meter(FF-1025)(Standard and heavy-duty application)
+    Qmin[L/min]:
+      value: 3
+    Qmax[L/min]:
+      value: 80
+    MMQ[L]:
+      value: 2
+  - Flow rate Range:
+      value: Fuel Dispenser with Lobe meter(FF-1006)(Ultra-heavy-duty application)
+    Qmin[L/min]:
+      value: 14
+    Qmax[L/min]:
+      value: 180
+    MMQ[L]:
+      value: 10
+  description: Flow characteristics for different meter types
+  footnotes: []
+footnotes:
+- marker: 1)
+  text: Where " * " can be a number or a letter for representing different configurations of the dispenser.
+_traceability:
+  raw_labels:
+    liquid_temperature_range: liquid_temperature_range

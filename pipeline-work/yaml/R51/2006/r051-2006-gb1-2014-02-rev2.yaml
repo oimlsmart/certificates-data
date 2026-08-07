@@ -1,0 +1,157 @@
+---
+_meta:
+  cert_id: 3914
+  num: R051/2006-GB1-2014.02 Rev. 2
+  applicant: Marel Ltd
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-02-rev2.pdf
+certificate:
+  number: R051/2006-GB1-2014.02 Rev. 2
+  scheme: A
+  project_number: R051/2006-GB1-2014.02
+  page_total: 1
+  member_state: United Kingdom
+  date_issued: '2016-03-24'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - I Stanton Avenue
+  - I Teddington
+  - I TW11 OJZ
+  - I United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Technical Services Director
+  phone: "+44 20 8943 7272"
+  website: https://www.gov.uk/nmro
+  oiml_issuer_id: GB1
+applicants:
+- name: Marel Limited
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester CO4 9HW
+  - United Kingdom
+manufacturers:
+- name: Marel Limited
+certified_type:
+  category: Checkweighing instrument
+  type_designations:
+  - MCheck2
+  module_designation: N/A
+  description: Mains-powered automatic checkweighing/catchweighing instrument designated the MCheck2
+characteristics:
+  type_level:
+    minimum_capacity:
+      value: 40
+    single_or_multi_interval:
+      value: Any combination of the above
+    maximum_preset_tare:
+      value: PT≤23% Gross(single interval)PT≤Max1(multi interval)
+    climatic_environment_temperature:
+      value:
+        min: 0
+        max: 35
+    humidity_class:
+      value: H1
+    em_environments:
+      value: E1 and E2
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 240
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+    accuracy_class:
+      value: N/A
+    load_cell_manufacturer:
+      value: Flintec
+    load_cell_compatibility_conditions:
+      value: Must have OIML R60 cert, same or better characteristics, same design, no oil damper
+    load_cell_voltage_input_per_scale_interval_min_to_1kg:
+      value: 0.46
+    load_cell_voltage_input_per_scale_interval_1kg_to_6kg:
+      value: 1.87
+    interfaces:
+      value: Ethernet, RS232, CAN
+    software_identification:
+      value: 1.0.0
+    sealings:
+      value: Two event counters (Calibration Changes, Configuration Changes), physically sealed
+    alternatives:
+      value: Remote pod configuration, M3310 controller
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=1kg
+      value: 1
+    - model: Emax=3kg
+      value: 3
+    - model: Emax=6kg
+      value: 6
+    unit_id: u:kilogram
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: Emax=1kg
+      value: 0.5
+    - model: Emax=3kg
+      value: 1
+    - model: Emax=6kg
+      value: 2
+    unit_id: u:gram
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+  - Y(a)
+test_reports:
+- id: P01353
+  date: '2016-03-24'
+  pages: 12
+  role: evaluation_report
+revision_history:
+- revision: R51/2006-GB1-14.02
+  date: '2014-04-24'
+  changes: OIML certificate first issued.
+- revision: R51/2006-GB1-14.02 revision 1
+  date: '2014-05-09'
+  changes: >-
+    Page 2: Reference to Evaluation report changed to P01353. Characteristics: Operating speed Maximum speed weight range
+    (250 to 1000 g) changed to 1.2 m/s
+- revision: R51/2006-GB1-14.02 revision 2
+  date: '2016-03-24'
+  changes: Added Marel M3310 to Alternatives section.
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=1kg
+  - model_id: Emax=3kg
+  - model_id: Emax=6kg
+components:
+- role: Load cell
+  type_designations:
+  - PC1 C3
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value: 30
+      unit_symbol: kg
+      unit_id: u:kilogram
+_traceability:
+  raw_labels:
+    humidity_class: climatic_environment_humidity
+    power_supply_voltage: power_supply_voltage
+    accuracy_class: accuracy_classes
+    software_identification: software_version

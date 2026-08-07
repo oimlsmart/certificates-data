@@ -1,0 +1,358 @@
+---
+_meta:
+  cert_id: 2723
+  num: R051/2006-GB1-2008.01 Rev. 4
+  applicant: Loma Systems Group and ITW Group
+  issuing_year: '2011'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2008-01-rev4.pdf
+certificate:
+  number: R051/2006-GB1-2008.01 Rev. 4
+  scheme: A
+  member_state: United Kingdom
+  date_issued: '2011-12-21'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Southwood Farnborough Hampshire GU14 0NY United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  oiml_issuer_id: GB1
+applicants:
+- name: Loma Systems Group and ITW Group
+  address_lines:
+  - Southwood Farnborough Hampshire GU14 0NY United Kingdom
+manufacturers:
+- name: Loma Systems Group and ITW Group
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - CW³
+  module_designation:
+  description: mains-powered automatic checkweighing instrument designated the CW³
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 1500
+        max: 6000
+      unit_symbol: g
+      unit_id: u:gram
+    minimum_capacity:
+      value: 50
+      unit_symbol: g
+      unit_id: u:gram
+    scale_interval:
+      value: 1
+      unit_symbol: g
+      unit_id: u:gram
+    number_of_scale_intervals:
+      value: 6000
+    tare:
+      value:
+        min: N/A
+        max: N/A
+    load_cell_emax:
+      value:
+        min: 10
+        max: 20
+      unit_symbol: kg
+      unit_id: u:kilogram
+    humidity_class:
+      value: N/A
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_environments:
+      value: E1 and E2
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id: u:volt
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 50
+      unit_symbol: Hz
+      unit_id: u:hertz
+    power_supply_type:
+      value: AC
+    accuracy_class:
+      value: N/A
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value: 12
+    - model: N/A
+      value: 10/20/50
+    - model: N/A
+      value: 0.4
+    unit_id: u:kilogram
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 500
+    - model: N/A
+      value: 3000
+    - model: N/A
+      value: 15
+    unit_id: u:gram
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: N/A
+      value: 2
+    - model: N/A
+      value: 5/10/20
+    - model: N/A
+      value: 0.5
+    unit_id: u:gram
+  - attribute: tare
+    values:
+    - model: N/A
+      value: "-1.2kg"
+    - model: N/A
+      value: "-5kg"
+    - model: N/A
+      value: No tare allowed for Gross≤50g T≤10%Net for Net>50g
+  - attribute: load_cell_model
+    values:
+    - model: N/A
+      value: Tedea Huntleigh240C3
+    - model: N/A
+      value: Tedea Huntleigh1265C3
+    - model: N/A
+      value: Vishay Type240C3
+  - attribute: load_cell_emax
+    unit_symbol: kg
+    values:
+    - model: N/A
+      value: 30
+    - model: N/A
+      value: 100
+    - model: N/A
+      value: 5
+    unit_id: u:kilogram
+  - attribute: operating_speed
+    unit_symbol: m/min
+    values:
+    - model: N/A
+      value: As per Mid-Range variant
+    - model: N/A
+      value: 50
+    - model: N/A
+      value: 60
+    unit_id: u:meter_per_minute
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: P00781
+  date: N/A
+  pages: 12
+  role: type_evaluation_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: Lightweight variant
+  - model_id: Mid-Range variant
+  - model_id: Heavy Range variant
+  - model_id: Super Heavy Range variant
+  - model_id: Ultra Lightweight Range variant
+components:
+- role: load cell
+  type_designations:
+  - Vishay Tedea Huntleigh 240 C3
+  - Tedea Huntleigh1265C3
+  characteristics:
+    lightweight_variant:
+      value:
+        capacity: 10kg
+        maximum_capacity: 1500g
+    mid_range_variant:
+      value:
+        capacity: 20kg
+        maximum_capacity: 6000g
+    heavy_range_variant:
+      value:
+        capacity: 30kg
+        maximum_capacity: 12kg
+    super_heavy_range_variant:
+      value:
+        capacity: 100kg
+        maximum_capacity: 10/20/50kg
+    ultra_lightweight_range_variant:
+      value:
+        capacity: 5kg
+        maximum_capacity: 400g
+- role: pc console
+  type_designations: []
+  characteristics:
+    power_supply_voltage:
+      value: 10VDC
+matrix_tables:
+- name: Maximum belt speed
+  columns:
+  - load
+  - lightweight_variant
+  - mid_range_variant
+  rows:
+  - load:
+      value: 50g to 200g
+    lightweight_variant:
+      value: 80
+    mid_range_variant:
+      value: 50
+  - load:
+      value: 201g to 1500g
+    lightweight_variant:
+      value: 100
+    mid_range_variant:
+      value: 100
+  - load:
+      value: 1501g to 2000g
+    lightweight_variant:
+      value: N/A
+    mid_range_variant:
+      value: 100
+  - load:
+      value: 2001g to 6000g
+    lightweight_variant:
+      value: N/A
+    mid_range_variant:
+      value: 70
+  description: Belt speed by load range and variant
+  footnotes: []
+- name: Heavy Range variant characteristics
+  columns:
+  - maximum_capacity
+  - minimum_capacity
+  - scale_interval
+  - tare
+  - load_cell_model
+  - load_cell_emax
+  - climatic_environment
+  - electromagnetic_environments
+  - power_supply
+  - accuracy_class
+  - speed_range
+  rows:
+  - maximum_capacity:
+      value: 12
+    minimum_capacity:
+      value: 500
+    scale_interval:
+      value: 2
+    tare:
+      value: "-1.2kg"
+    load_cell_model:
+      value: Tedea Huntleigh240C3
+    load_cell_emax:
+      value: 30
+    climatic_environment:
+      value: 0℃ to +40℃
+    electromagnetic_environments:
+      value: E1 and E2
+    power_supply:
+      value: 100-240Va.c.50Hz
+    accuracy_class:
+      value: XIII(1)
+    speed_range:
+      value: As per Mid-Range variant
+  description: Technical characteristics of Heavy Range variant
+  footnotes: []
+- name: Super Heavy Range variant characteristics
+  columns:
+  - maximum_capacity
+  - minimum_capacity
+  - scale_interval
+  - tare
+  - load_cell_model
+  - load_cell_emax
+  - climatic_environment
+  - electromagnetic_environments
+  - power_supply
+  - accuracy_class
+  - operating_speed
+  rows:
+  - maximum_capacity:
+      value: 10/20/50
+    minimum_capacity:
+      value: 3000
+    scale_interval:
+      value: 5/10/20
+    tare:
+      value: "-5kg"
+    load_cell_model:
+      value: Tedea Huntleigh1265C3
+    load_cell_emax:
+      value: 100
+    climatic_environment:
+      value: 0℃ to +40℃
+    electromagnetic_environments:
+      value: E1 and E2
+    power_supply:
+      value: 100-240Va.c.50Hz
+    accuracy_class:
+      value: XIII(1)
+    operating_speed:
+      value: 50
+  description: Technical characteristics of Super Heavy Range variant
+  footnotes: []
+- name: Ultra Lightweight Range variant characteristics
+  columns:
+  - maximum_capacity
+  - minimum_capacity
+  - scale_interval
+  - tare
+  - load_cell_model
+  - load_cell_emax
+  - climatic_environment
+  - electromagnetic_environments
+  - power_supply
+  - accuracy_class
+  - operating_speed
+  rows:
+  - maximum_capacity:
+      value: 400
+    minimum_capacity:
+      value: 15
+    scale_interval:
+      value: 0.5
+    tare:
+      value: No tare allowed for Gross≤50g T≤10%Net for Net>50g
+    load_cell_model:
+      value: Vishay Type240C3
+    load_cell_emax:
+      value: 5
+    climatic_environment:
+      value: 0℃ to +40℃
+    electromagnetic_environments:
+      value: E1 and E2
+    power_supply:
+      value: 100-240Va.c.50Hz
+    accuracy_class:
+      value: XIII(1)
+    operating_speed:
+      value: 60
+  description: Technical characteristics of Ultra Lightweight Range variant
+  footnotes: []
+_traceability:
+  raw_labels:
+    number_of_scale_intervals: maximum_number_of_scale_intervals
+    humidity_class: climatic_environment
+    power_supply_voltage: power_supply

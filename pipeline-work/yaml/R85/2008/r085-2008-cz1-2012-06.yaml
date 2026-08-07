@@ -1,0 +1,236 @@
+---
+_meta:
+  cert_id: 3038
+  num: R085/2008-CZ1-2012.06
+  applicant: OPW Fuel Management Systems
+  issuing_year: '2012'
+  status: Valid
+  issuer: CZ1
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-cz1-2012-06.pdf
+certificate:
+  number: R85/2008-CZ-12.06
+  scheme: A
+  page_total: 2
+  member_state: Czech Republic
+  date_issued: '2012-10-16'
+  oiml_issuer_id: CZ1
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+  oiml_issuer_id: CZ1
+applicants:
+- name: OPW Fuel Management Systems
+  address_lines:
+  - 6900 Santa Fe Drive
+  - Hodgkins; IL60525
+  - U.S.A.
+manufacturers:
+- name: OPW Fuel Management Systems
+  address_lines:
+  - 6900 Santa Fe Drive
+  - Hodgkins; IL60525
+  - U.S.A.
+certified_type:
+  category: Magnetostrictive level gauge
+  type_designations:
+  - SiteSentinel iSite (controller) / VSmart (probe sensor controller) / 924B (probe)
+  - SiteSentinel iSite (controller) / VSmart (probe sensor controller) / 7100V (probe)
+  module_designation: N/A
+  description: >-
+    The level sensor 924B is done by a shaft in stainless steel and nickel coated brass cap with nitrophyl or stainless steel
+    floats. The level sensor 7100V is done by a flexible shaft in PVDF with nitrophyl or stainless steel floats. Normal cabinet
+    dimensions of SiteSentinel iSite: height 300 mm; width 370 mm; depth 180 mm. Normal cabinet dimensions of V Smart: height
+    142 mm; width 287 mm; depth 147 mm.
+characteristics:
+  type_level: {}
+  model_level:
+  - attribute: resolution
+    unit_symbol: mm
+    values:
+    - model: N/A
+      value: 0.01
+    unit_id: u:meter
+  - attribute: temperature
+    unit_symbol: "°C"
+    values:
+    - model: N/A
+      value:
+        min: 5
+        max: 40
+    - model: N/A
+      value:
+        min: -40
+        max: 70
+    unit_id: u:degree_Celsius
+  config_level: []
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+  accuracy_classes:
+  - '1'
+test_reports:
+- id: 6015-PT-P3004-12
+  date: '2012-10-16'
+  pages: 33
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: 924B
+  - model_id: 7100V series
+  - model_id: SiteSentinel iSite
+  - model_id: V Smart
+components:
+- role: Probe
+  type_designations:
+  - 924B
+  - 7100V series
+  alternatives: OR
+  characteristics:
+    model_level:
+      value:
+      - attribute: measuring_principle
+        values:
+        - model: 924B
+          value: Magnetostrictive
+        - model: 7100V series
+          value: Magnetostrictive
+      - attribute: probe_body_material
+        values:
+        - model: 924B
+          value: Stainless steel
+        - model: 7100V series
+          value: PVDF
+      - attribute: floats
+        values:
+        - model: 924B
+          value: Nitrophyl or stainless steel
+        - model: 7100V series
+          value: Nitrophyl or stainless steel
+      - attribute: length
+        unit_symbol: mm
+        values:
+        - model: 924B
+          value:
+            max: 3960
+        - model: 7100V series
+          value:
+            max: 21340
+        unit_id: u:meter
+      - attribute: accuracy
+        unit_symbol: mm
+        values:
+        - model: 924B
+          value:
+            max: 1
+        - model: 7100V series
+          value:
+            max: 1
+        unit_id: u:meter
+      - attribute: temperature
+        unit_symbol: "°C"
+        values:
+        - model: 924B
+          value:
+            min: -40
+            max: 70
+        - model: 7100V series
+          value:
+            min: -40
+            max: 70
+        unit_id: u:degree_Celsius
+- role: Controller
+  type_designations:
+  - SiteSentinel iSite
+  characteristics:
+    model_level:
+      value:
+      - attribute: resolution
+        unit_symbol: mm
+        values:
+        - model: SiteSentinel iSite
+          value: 0.01
+        unit_id: u:meter
+      - attribute: temperature
+        unit_symbol: "°C"
+        values:
+        - model: SiteSentinel iSite
+          value:
+            min: 5
+            max: 40
+        unit_id: u:degree_Celsius
+- role: Probe sensor controller
+  type_designations:
+  - V Smart
+  characteristics:
+    model_level:
+      value:
+      - attribute: temperature
+        unit_symbol: "°C"
+        values:
+        - model: V Smart
+          value:
+            min: -40
+            max: 70
+        unit_id: u:degree_Celsius
+matrix_tables:
+- name: Probe characteristics
+  columns:
+  - type
+  - measuring_principle
+  - probe_body_material
+  - floats
+  - length
+  - accuracy
+  - temperature
+  rows:
+  - type:
+      value: 924B
+    measuring_principle:
+      value: Magnetostrictive
+    probe_body_material:
+      value: Stainless steel
+    floats:
+      value: Nitrophyl or stainless steel
+    length:
+      value:
+        min: N/A
+        max: 3960
+    accuracy:
+      value:
+        min: N/A
+        max: 1
+    temperature:
+      value:
+        min: -40
+        max: 70
+  - type:
+      value: 7100V series
+    measuring_principle:
+      value: Magnetostrictive
+    probe_body_material:
+      value: PVDF
+    floats:
+      value: Nitrophyl or stainless steel
+    length:
+      value:
+        min: N/A
+        max: 21340
+    accuracy:
+      value:
+        min: N/A
+        max: 1
+    temperature:
+      value:
+        min: -40
+        max: 70
+  description: Characteristics of the probes
+  footnotes: []

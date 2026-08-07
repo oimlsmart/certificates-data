@@ -1,0 +1,249 @@
+---
+_meta:
+  cert_id: 4053
+  num: R085/2008-FR2-2013.01 Rev. 2
+  applicant: SERAP Industries
+  issuing_year: '2016'
+  status: Valid
+  issuer: FR2
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-fr2-2013-01-rev2.pdf
+  accuracy_class_note: accuracy_class not stated in source PDF
+certificate:
+  number: R85/2008-FR2-13.01 rev.2
+  scheme: A
+  project_number: R85/2008-FR2-13.01
+  page_total: 3
+  member_state: France
+  date_issued: '2016-09-13'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - Laboratoire national de métrologie et d'essais
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Measuring Instruments Division Manager
+  oiml_issuer_id: FR2
+applicants:
+- name: SERAP Industries
+  address_lines:
+  - Route de Fougères
+  - FRANCE 53120 GORRON
+manufacturers:
+- name: MTS Sensor Technology GmbH & CO
+  address_lines:
+  - Auf dem Schüffel 9
+  - DEU 58513 Lüdenscheid
+certified_type:
+  category: Level gauge
+  type_designations:
+  - FIRST LEVEL 2
+  module_designation:
+  description: >-
+    The level gauge SERAP type FIRST LEVEL 2 is basically made of a transducer composed of a level sensor fitted with a float.
+    The level sensor is connected with the local indicating device by a screened cable. The level sensor is directly mounted
+    on a bulk milk cooling tank.
+characteristics:
+  type_level:
+    scale_of_display:
+      value: 1
+      unit_symbol: mm
+      unit_id: u:millimetre
+    measured_liquid:
+      value: milk
+    pressure_of_use:
+      value: atmospheric
+  model_level:
+  - attribute: minimal_range
+    unit_symbol: mm
+    unit_id: u:millimetre
+    values:
+    - model: elliptic_horizontal_tank
+      value: 66
+    - model: vertical_cylindrical_tank
+      value: 66
+  - attribute: maximal_range
+    unit_symbol: mm
+    unit_id: u:millimetre
+    values:
+    - model: elliptic_horizontal_tank
+      value: 925
+    - model: elliptic_horizontal_tank
+      value: 1075
+    - model: elliptic_horizontal_tank
+      value: 1285
+    - model: elliptic_horizontal_tank
+      value: 1460
+    - model: elliptic_horizontal_tank
+      value: 1875
+    - model: vertical_cylindrical_tank
+      value: 2650
+    - model: vertical_cylindrical_tank
+      value: 3050
+    - model: vertical_cylindrical_tank
+      value: 3200
+    - model: vertical_cylindrical_tank
+      value: 3850
+    - model: vertical_cylindrical_tank
+      value: 4800
+    - model: vertical_cylindrical_tank
+      value: 5450
+    - model: vertical_cylindrical_tank
+      value: 6200
+  - attribute: temperature_of_measured_liquid
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    values:
+    - model: elliptic_horizontal_tank
+      value:
+        min: 3
+        max: 8
+    - model: vertical_cylindrical_tank
+      value:
+        min: 3
+        max: 8
+  - attribute: density_of_measured_liquid
+    unit_symbol: kg/m³
+    unit_id: u:kilogram_per_metre_cubed
+    values:
+    - model: elliptic_horizontal_tank
+      value:
+        min: 1026
+        max: 1033
+    - model: vertical_cylindrical_tank
+      value:
+        min: 1026
+        max: 1033
+  - attribute: temperature_of_use
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    values:
+    - model: elliptic_horizontal_tank
+      value:
+        min: -10
+        max: 40
+    - model: vertical_cylindrical_tank
+      value:
+        min: -10
+        max: 40
+  config_level: []
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+  accuracy_classes: []
+test_reports:
+- id: P157226-D1
+  date: N/A
+  pages: 6
+  role: evaluation_report
+- id: P150871-D1
+  date: N/A
+  pages: 6
+  role: evaluation_report
+- id: M061373-D1
+  date: N/A
+  pages: 9
+  role: evaluation_report
+- id: P110932
+  date: N/A
+  pages: 18
+  role: test_report
+- id: M061373
+  date: N/A
+  pages: 22
+  role: test_report
+- id: J100597
+  date: N/A
+  pages: 12
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2013-11-28'
+  changes: First issue
+- revision: '1'
+  date: '2016-02-18'
+  changes: >-
+    Correction of calculator level gauge software version, Update of sealing scheme when calculator level gauge is included
+    into control box
+- revision: '2'
+  date: '2016-09-13'
+  changes: Correction of calculator level gauge software version, Clarification about seal
+model_family:
+  family_name:
+  models:
+  - model_id: elliptic_horizontal_tank
+    label: Elliptic horizontal tank
+  - model_id: vertical_cylindrical_tank
+    label: Vertical cylindrical tank
+components:
+- role: Level sensor
+  type_designations:
+  - TEMPSONICS "G-Series" type CP05013LS
+  - TEMPSONICS "R-Series" type RF
+  alternatives: OR
+  characteristics: {}
+- role: Processor software
+  type_designations:
+  - V1.13, V1.14, V1.16 with checksum 2FB785
+  - V1.15, V2.01 with checksum 3931FF
+  alternatives: OR
+  characteristics: {}
+matrix_tables:
+- name: Maximal range by tank type
+  columns:
+  - tank_type
+  - maximal_range_mm
+  rows:
+  - tank_type:
+      value: elliptic_horizontal_tank
+    maximal_range_mm:
+      value: 925
+  - tank_type:
+      value: elliptic_horizontal_tank
+    maximal_range_mm:
+      value: 1075
+  - tank_type:
+      value: elliptic_horizontal_tank
+    maximal_range_mm:
+      value: 1285
+  - tank_type:
+      value: elliptic_horizontal_tank
+    maximal_range_mm:
+      value: 1460
+  - tank_type:
+      value: elliptic_horizontal_tank
+    maximal_range_mm:
+      value: 1875
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 2650
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 3050
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 3200
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 3850
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 4800
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 5450
+  - tank_type:
+      value: vertical_cylindrical_tank
+    maximal_range_mm:
+      value: 6200
+  description: Maximal range (in mm) for different tank types
+  footnotes: []

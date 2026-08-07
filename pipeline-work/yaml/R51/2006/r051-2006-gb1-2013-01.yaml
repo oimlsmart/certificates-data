@@ -1,0 +1,162 @@
+---
+_meta:
+  cert_id: 3136
+  num: R051/2006-GB1-2013.01
+  applicant: Actronic Ltd
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2013-01.pdf
+certificate:
+  number: R51/2006-GB1-13.01
+  scheme: A
+  project_number: TS0101/0001
+  page_total: 1
+  member_state: United Kingdom
+  date_issued: '2013-03-19'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 20 8943 7272"
+  website: https://www.bis.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Actronic Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale, Auckland
+  - New Zealand
+manufacturers:
+- name: Actronic Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale, Auckland
+  - New Zealand
+certified_type:
+  category: Battery-operated automatic catchweighing instrument (Category Y)
+  type_designations:
+  - L-Series 2180
+  module_designation: N/A
+  description: >-
+    The pattern comprises an electronic indicator, pressure transducer, and sensors mounted on a wheeled loader. It automatically
+    determines the load in the bucket during the lifting process by converting hydraulic pressure to weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: N/A
+        max: 350
+      unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
+    scale_interval:
+      value: 200
+      unit_symbol: kg
+      unit_id: u:kilogram
+    minimum_capacity:
+      value: 10
+      unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
+    pressure_transducer_measuring_range:
+      value:
+        min: 0
+        max: 350
+      unit_symbol: bar
+      unit_id: u:bar
+    pressure_transducer_output_signal:
+      value: 4...20mA
+    humidity_class:
+      value: N/A
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_environment_class:
+      value: E3
+    mechanical_environment_class:
+      value: N/A
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 32
+      unit_symbol: VDC
+      unit_id: u:volt
+    display_keyboard_location:
+      value: Indicator console in cabin
+    accuracy_class:
+      value: N/A
+  model_level: []
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01061
+  date: N/A
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2013-03-19'
+  changes: Certificate first issued
+model_family:
+  family_name:
+  models:
+  - model_id: L-Series 2180
+    label: L-Series 2180
+    attributes: {}
+  - model_id: Express
+    label: Express
+    attributes: {}
+  - model_id: Force
+    label: Force
+    attributes: {}
+  - model_id: L2150
+    label: L2150
+    attributes: {}
+components:
+- role: Pressure transducer
+  type_designations:
+  - Loadrite model LC965C
+  alternatives: OR
+  characteristics: {}
+- role: Position reference / Lift speed / Direction sensor
+  type_designations:
+  - Loadrite Model LM960
+  - Loadrite Model LR908
+  alternatives: OR
+  characteristics: {}
+- role: Load receptor ("Bucket") location sensors
+  type_designations:
+  - Loadrite AAA-20710
+  characteristics: {}
+- role: Inclinometer
+  type_designations:
+  - Loadrite LR966
+  - Loadrite AAA-20709
+  alternatives: OR
+  characteristics:
+    tilt_activation_threshold:
+      value:
+        min: 5
+        max: 6
+- role: Indicator
+  type_designations:
+  - Loadrite L2180 weighing indicator console
+  characteristics: {}
+_traceability:
+  raw_labels:
+    humidity_class: climatic_environment
+    electromagnetic_environment_class: electromagnetic_environment
+    mechanical_environment_class: mechanical_environment
+    power_supply_voltage: power_supply

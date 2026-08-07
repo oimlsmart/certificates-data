@@ -1,0 +1,193 @@
+---
+_meta:
+  cert_id: 6416
+  num: R117/2019-A-NL1-24.05 Rev. 0
+  applicant: SICK Engineering GmbH
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2024-05-rev0.pdf
+certificate:
+  number: R117/2019-A-NL1-24.05 Rev. 0
+  scheme: A
+  project_number: '3575261'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2024-12-06'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  person_responsible: M.Ph.D. Schmidt
+  person_title: N/A
+  phone: N/A
+  email: N/A
+  website: N/A
+  oiml_issuer_id: NL1
+applicants:
+- name: SICK Engineering GmbH
+  address_lines:
+  - Bergener Ring 27
+  - '01458 Ottendorf-Okrilla'
+  - Germany
+manufacturers:
+- name: SICK Engineering GmbH
+  address_lines:
+  - Bergener Ring 27
+  - '01458 Ottendorf-Okrilla'
+  - Germany
+certified_type:
+  category: Measuring system
+  type_designations:
+  - FLOWSIC900 F9L-XXXY
+  module_designation:
+  description: >-
+    An ultrasonic flow meter for measuring the volume of liquified natural gas (LNG) and low viscosity oil. It is based on
+    the measurement of the runtimes of ultrasonic pulses along several measuring paths.
+characteristics:
+  type_level:
+    number_of_sound_path:
+      value: 8(4+4inX-configuration);4(A-Aplane)
+    sound_frequency:
+      value: 1.5
+      unit_symbol: MHz
+      unit_id: u:hertz
+    path_angle:
+      value:
+        min: 42.5
+        max: 62.5
+    approved_quantity:
+      value: Volume at flowing conditions
+    maximum_pressure:
+      value: 20
+      unit_symbol: bar(g)
+      unit_id: u:bar
+    environmental_classes:
+      value:
+        mechanical: M3
+    temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    ambient_temperature_range_local_display:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    product_temperature_range:
+      value:
+        min: -200
+        max: 60
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    intended_for_measurement_of:
+      value: >-
+        Liquified Natural Gas(LNG);Liquid petroleum and related products,liquids food, chemical products any other liquids
+        other than water in liquid state with maximum kinematic viscosity of 2cSt.
+    power_supply_voltage:
+      value:
+        min: 23
+        max: 29
+      unit_symbol: VDC
+      unit_id: u:volt
+    software_identification:
+      value:
+        version_number: 1.1.0.
+        checksum: EFC304FA
+  model_level:
+  - attribute: minimum_flow_rate
+    unit_symbol: m³/hr
+    values:
+    - model: 8 inch (DN200)
+      value: 60
+    - model: 10 inch (DN250)
+      value: 90
+    - model: 12 inch (DN300)
+      value: 130
+    - model: 14 inch (DN350)
+      value: 160
+    unit_id: u:cubic_meter_per_hour
+  - attribute: maximum_flow_rate
+    unit_symbol: m³/hr
+    values:
+    - model: 8 inch (DN200)
+      value: 1500
+    - model: 10 inch (DN250)
+      value: 2300
+    - model: 12 inch (DN300)
+      value: 3300
+    - model: 14 inch (DN350)
+      value: 4100
+    unit_id: u:cubic_meter_per_hour
+  - attribute: mmq
+    unit_symbol: m³
+    values:
+    - model: 8 inch (DN200)
+      value: 2
+    - model: 10 inch (DN250)
+      value: 2
+    - model: 12 inch (DN300)
+      value: 5
+    - model: 14 inch (DN350)
+      value: 5
+    unit_id: u:cubic_meter
+  - attribute: minimum_reynolds_number
+    values:
+    - model: 8 inch (DN200)
+      value: 50000
+    - model: 10 inch (DN250)
+      value: 50000
+    - model: 12 inch (DN300)
+      value: 50000
+    - model: 14 inch (DN350)
+      value: 50000
+  config_level: []
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+  - '1'
+  - '1.5'
+test_reports:
+- id: NMi-3575261-01
+  date: '2024-12-06'
+  pages: 77
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2024-12-06'
+  changes: Initial issue
+model_family:
+  family_name:
+  models:
+  - model_id: 8 inch (DN200)
+  - model_id: 10 inch (DN250)
+  - model_id: 12 inch (DN300)
+  - model_id: 14 inch (DN350)
+components:
+- role: meter body
+  type_designations:
+  - straight pipe section with 4 or 8 ultrasonic measuring paths
+  characteristics: {}
+- role: ultrasonic transducers
+  type_designations:
+  - Two ultrasonic transducers per measuring path
+  characteristics: {}
+- role: signal processing unit
+  type_designations:
+  - SPU
+  characteristics: {}
+footnotes:
+- marker: 1)
+  text: Where Y = D for 8-path and C for 4-path meter. L = Large scale flow meter type.
+_traceability:
+  raw_labels:
+    temperature_range: ambient_temperature_range
