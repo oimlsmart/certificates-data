@@ -18,6 +18,11 @@ releases, consumers pin them, and nothing consumes main.
    hash, and its CI checks the gate against the pinned ref — the pins
    discipline is already live there (PR oimlsmart/ai#547); this task
    moves the pin from the bootstrap SHA to the first `data-v1` tag.
+   cnml joins the same discipline: its cnml-types generation stops
+   reading this repository through a relative path, its cnml-schemas
+   copies re-sync from the pinned tag rather than a manual `cp`, and
+   the corpus facts its copies hardcode (audit C3) are refreshed from
+   the release or dropped.
 4. The breakage rules: schema changes are additive within a tag line;
    a breaking change cuts a new major line and the consumers migrate
    visibly, never silently.
