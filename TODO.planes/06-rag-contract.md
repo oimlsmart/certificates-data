@@ -27,7 +27,7 @@ survives personnel and refactors.
 - The history dataset (04) becomes the status truth — the snapshot's
   status field becomes an observation, and the timeline answers the
   lifecycle questions.
-- The release tag (05) is what the pins file pins.
+- The pins file pins the commit SHA (05): tags are optional ceremony, never a precondition.
 
 ## The laws the consumer holds itself to
 
