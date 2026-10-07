@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/organizations/organizations-v1.json",
+  "title": "OIML-CS organizations",
+  "description": "Issuing authorities and holders/manufacturers resolved by the stated normalization rules (normalization-rules.yaml). Every fact cites its evidence; unresolved variants stay in open-questions.json.",
+  "type": "object",
+  "required": ["id", "kinds", "canonical_name", "name_variants", "evidence"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^(IA|HOLD)-" },
+    "kinds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "enum": ["issuing_authority", "notified_body", "holder", "manufacturer"] }
+    },
+    "oiml_issuer_code": { "type": ["string", "null"], "pattern": "^[A-Z]{2}\\d$" },
+    "canonical_name": { "type": ["string", "null"], "description": "Most frequently observed form; null while no document has named the authority." },
+    "name_variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["form", "count"],
+        "additionalProperties": false,
+        "properties": {
+          "form": { "type": "string" },
+          "count": { "type": "integer", "minimum": 1 },
+          "source": { "type": "string", "enum": ["register", "document", "mixed"] }
+        }
+      }
+    },
+    "country": { "type": ["string", "null"], "description": "Majority member_state over the entity's certificates where documents state one." },
+    "address_lines_observed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lines", "count"],
+        "additionalProperties": false,
+        "properties": { "lines": { "type": "string" }, "count": { "type": "integer", "minimum": 1 } }
+      }
+    },
+    "notified_body_number": { "type": ["string", "null"] },
+    "evidence": {
+      "type": "object",
+      "required": ["certificate_count", "sample_cert_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "certificate_count": { "type": "integer", "minimum": 1 },
+        "sample_cert_ids": { "type": "array", "items": { "type": "integer" } },
+        "notified_body_attested_by": { "type": "string" }
+      }
+    }
+  }
+}

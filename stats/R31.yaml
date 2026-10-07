@@ -9,52 +9,87 @@ summary:
   total_matrix_tables: 6
 type_level_characteristics:
   accuracy_class:
-    fill_rate: 0.205
-    present_count: 8
-    unit_symbol: '%'
-    top_values:
-    - value: '1.5'
-      count: 8
-  maximum_flow_rate:
-    fill_rate: 0.487
-    present_count: 19
-    unit_symbol: m³/h
-    top_values:
-    - value: 4
-      count: 9
-    - value: 6
-      count: 6
-    - value: 2.5
-      count: 3
-    - value: 3
-      count: 1
-  minimum_flow_rate:
-    fill_rate: 0.487
-    present_count: 19
+    fill_rate: 0.359
+    present_count: 14
     by_unit:
-      m³/h:
-        count: 17
+      "%":
+        count: 8
         top_values:
-        - value: 0.025
-          count: 9
-        - value: 0.04
+        - value: '1.5'
+          count: 8
+        unit_id: u:percent
+      'null':
+        count: 6
+        top_values:
+        - value: '1.5'
           count: 5
-        - value: 0.016
-          count: 3
-      dm³/h:
-        count: 2
-        top_values:
-        - value: 16
-          count: 1
-        - value: 40
+        - value: '1'
           count: 1
   cyclic_volume:
     fill_rate: 0.231
     present_count: 9
     unit_symbol: dm³
+    unit_id: u:liter
     top_values:
     - value: 1.2
       count: 9
+  display_type:
+    fill_rate: 0.308
+    present_count: 12
+    unit_symbol:
+    top_values:
+    - value: mechanical
+      count: 10
+    - value: mécanique
+      count: 2
+  integrated_temperature_conversion:
+    fill_rate: 0.026
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: non
+      count: 1
+  integrated_temperature_conversion_device:
+    fill_rate: 0.154
+    present_count: 6
+    unit_symbol:
+    top_values:
+    - value: non
+      count: 4
+    - value: 'no'
+      count: 2
+  maximum_capacity:
+    fill_rate: 0.026
+    present_count: 1
+    unit_symbol: m³/h
+    unit_id: u:cubic_meter_per_hour
+    top_values:
+    - range: min=6, max=6
+      count: 1
+  maximum_flow:
+    fill_rate: 0.051
+    present_count: 2
+    unit_symbol: m³/h
+    unit_id: u:cubic_meter_per_hour
+    top_values:
+    - value: 2.5
+      count: 1
+    - value: 3
+      count: 1
+  maximum_flow_rate:
+    fill_rate: 0.487
+    present_count: 19
+    unit_symbol: m³/h
+    unit_id: u:cubic_meter_per_hour
+    top_values:
+    - range: min=4, max=4
+      count: 9
+    - range: min=6, max=6
+      count: 6
+    - range: min=2.5, max=2.5
+      count: 3
+    - range: min=3, max=3
+      count: 1
   maximum_operating_pressure:
     fill_rate: 0.487
     present_count: 19
@@ -76,58 +111,106 @@ type_level_characteristics:
           count: 2
         - value: 15
           count: 1
-  temperature_range:
-    fill_rate: 0.231
-    present_count: 9
-    unit_symbol: °C
-    unit_id: u:degree_Celsius
-    top_values:
-    - range: min=-10, max=40
-      count: 4
-    - range: min=-10, max=50
-      count: 3
-    - range: min=-20, max=50
-      count: 2
-  maximum_flow:
+        unit_id: u:pascal
+  maximum_pressure:
     fill_rate: 0.051
     present_count: 2
-    unit_symbol: m³/h
+    by_unit:
+      kPa:
+        count: 1
+        top_values:
+        - value: 9.8
+          count: 1
+        unit_id: u:pascal
+      bar:
+        count: 1
+        top_values:
+        - value: 0.5
+          count: 1
+        unit_id: u:bar
+  maximum_use_pressure:
+    fill_rate: 0.026
+    present_count: 1
+    unit_symbol: bar
+    unit_id: u:bar
     top_values:
-    - value: 2.5
+    - value: 0.5
       count: 1
-    - value: 3
+  minimum_capacity:
+    fill_rate: 0.026
+    present_count: 1
+    unit_symbol: m³/h
+    unit_id: u:cubic_meter_per_hour
+    top_values:
+    - value: 0.04
       count: 1
   minimum_flow:
     fill_rate: 0.051
     present_count: 2
     unit_symbol: m³/h
+    unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.016
       count: 2
-  display_type:
-    fill_rate: 0.308
-    present_count: 12
-    unit_symbol: null
+  minimum_flow_rate:
+    fill_rate: 0.487
+    present_count: 19
+    by_unit:
+      m³/h:
+        count: 17
+        top_values:
+        - range: min=0.025, max=0.025
+          count: 9
+        - range: min=0.04, max=0.04
+          count: 5
+        - range: min=0.016, max=0.016
+          count: 3
+        unit_id: u:cubic_meter_per_hour
+      dm³/h:
+        count: 2
+        top_values:
+        - range: min=16, max=16
+          count: 1
+        - range: min=40, max=40
+          count: 1
+        unit_id: u:liter_per_hour
+  number_of_dials_digits:
+    fill_rate: 0.128
+    present_count: 5
+    unit_symbol:
     top_values:
-    - value: mechanical
-      count: 10
-    - value: mécanique
-      count: 2
+    - value: 8
+      count: 5
   number_of_drums_digits:
     fill_rate: 0.205
     present_count: 8
-    unit_symbol: null
+    unit_symbol:
     top_values:
     - value: 8
       count: 8
+  number_of_output_axes:
+    fill_rate: 0.179
+    present_count: 7
+    unit_symbol:
+    top_values:
+    - value: 0
+      count: 7
   prepayment_device:
     fill_rate: 0.179
     present_count: 7
-    unit_symbol: null
+    unit_symbol:
     top_values:
     - value: non
       count: 5
     - value: 'no'
+      count: 2
+  pulse_frequency:
+    fill_rate: 0.051
+    present_count: 2
+    unit_symbol: impulses/m³
+    unit_id: u:impulse_per_cubic_meter
+    top_values:
+    - value: 100
       count: 2
   pulse_generator:
     fill_rate: 0.154
@@ -145,128 +228,70 @@ type_level_characteristics:
         top_values:
         - value: 100
           count: 1
-  number_of_output_axes:
-    fill_rate: 0.179
-    present_count: 7
-    unit_symbol: null
-    top_values:
-    - value: 0
-      count: 7
-  integrated_temperature_conversion:
-    fill_rate: 0.026
-    present_count: 1
-    unit_symbol: null
-    top_values:
-    - value: non
-      count: 1
-  number_of_dials_digits:
-    fill_rate: 0.128
-    present_count: 5
-    unit_symbol: null
-    top_values:
-    - value: 8
-      count: 5
-  type_of_display:
-    fill_rate: 0.026
-    present_count: 1
-    unit_symbol: null
-    top_values:
-    - value: mechanical
-      count: 1
+        unit_id: u:impulse_per_cubic_meter
   pulse_generator_rate:
     fill_rate: 0.051
     present_count: 2
     unit_symbol: pulses/m³
+    unit_id: u:impulse_per_cubic_meter
     top_values:
     - value: 100
       count: 2
-  integrated_temperature_conversion_device:
-    fill_rate: 0.154
-    present_count: 6
-    unit_symbol: null
+  temperature_range:
+    fill_rate: 0.231
+    present_count: 9
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
-    - value: non
+    - range: min=-10, max=40
       count: 4
-    - value: 'no'
+    - range: min=-10, max=50
+      count: 3
+    - range: min=-20, max=50
       count: 2
-  pulse_frequency:
-    fill_rate: 0.051
-    present_count: 2
-    unit_symbol: impulses/m³
-    top_values:
-    - value: 100
-      count: 2
-  maximum_capacity:
+  type_of_display:
     fill_rate: 0.026
     present_count: 1
-    unit_symbol: m³/h
+    unit_symbol:
     top_values:
-    - value: 6
-      count: 1
-  minimum_capacity:
-    fill_rate: 0.026
-    present_count: 1
-    unit_symbol: m³/h
-    top_values:
-    - value: 0.04
-      count: 1
-  maximum_use_pressure:
-    fill_rate: 0.026
-    present_count: 1
-    unit_symbol: bar
-    unit_id: u:bar
-    top_values:
-    - value: 0.5
-      count: 1
-  maximum_pressure:
-    fill_rate: 0.051
-    present_count: 2
-    by_unit:
-      kPa:
-        count: 1
-        top_values:
-        - value: 9.8
-          count: 1
-      bar:
-        count: 1
-        top_values:
-        - value: 0.5
-          count: 1
-        unit_id: u:bar
-  volume_v:
-    fill_rate: 0.026
-    present_count: 1
-    unit_symbol: dm³
-    top_values:
-    - value: 0.7
+    - value: mechanical
       count: 1
   v:
     fill_rate: 0.026
     present_count: 1
     unit_symbol: dm³
+    unit_id: u:liter
     top_values:
     - value: 1.2
+      count: 1
+  volume_v:
+    fill_rate: 0.026
+    present_count: 1
+    unit_symbol: dm³
+    unit_id: u:liter
+    top_values:
+    - value: 0.7
       count: 1
 model_level_attributes:
   maximum_flow_rate: 14
   minimum_flow_rate: 14
-  maximum_pressure: 11
   v: 11
+  maximum_pressure: 11
   maximum_operating_pressure: 5
   temperature_range: 4
   cyclic_volume: 3
   maximum_flow: 2
   minimum_flow: 2
   pulse_generator: 2
-  maximum_flowrate: 1
-  minimum_flowrate: 1
-  display_type: 1
-  number_of_drums_digits: 1
-  additional_devices: 1
-  prepayment_device: 1
-  number_of_output_shafts: 1
-  integrated_temperature_conversion_device: 1
   prmax: 1
+  integrated_temperature_conversion_device: 1
+  number_of_output_shafts: 1
+  prepayment_device: 1
+  additional_devices: 1
+  number_of_drums_digits: 1
+  display_type: 1
+  minimum_flowrate: 1
+  maximum_flowrate: 1
 config_level_attributes: {}
 matrix_table_names:
   Model characteristics: 2

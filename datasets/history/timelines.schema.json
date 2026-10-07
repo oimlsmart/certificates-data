@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/history/timelines-v1.json",
+  "title": "OIML-CS certificate timelines",
+  "description": "One record per manifest register row. The register block is the snapshot's own observation; the document block carries the facts the certificate's own documents state, extracted deterministically from the ocr_md tier. Absent documents yield document: null.",
+  "type": "object",
+  "required": ["cert_id", "num", "register"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer", "description": "The manifest row's id." },
+    "num": { "type": "string", "description": "The register num exactly as the snapshot spells it, including Rev/Annex suffixes." },
+    "recommendation": { "type": ["string", "null"], "pattern": "^R[0-9]+$" },
+    "num_revision": { "type": ["string", "null"], "description": "Revision suffix parsed from num." },
+    "num_annex": { "type": ["string", "null"], "description": "Annex suffix parsed from num." },
+    "register": {
+      "type": "object",
+      "required": ["issuing_year", "status", "id_status", "observed_at"],
+      "additionalProperties": false,
+      "properties": {
+        "issuing_year": { "type": "string" },
+        "status": { "type": "string", "enum": ["Valid", "Suspended"] },
+        "id_status": { "type": "integer" },
+        "observed_at": { "type": ["string", "null"], "description": "The snapshots/YYYYMMDD directory the manifest row was observed in." }
+      }
+    },
+    "document": {
+      "type": ["object", "null"],
+      "required": ["source_md", "extraction_method"],
+      "additionalProperties": false,
+      "properties": {
+        "source_md": { "type": "string" },
+        "extraction_method": { "type": ["string", "null"] },
+        "date_issued_raw": { "type": ["string", "null"], "description": "The document's issue-date line as written." },
+        "date_issued_iso": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$|^0000-00-00$" },
+        "member_state": { "type": ["string", "null"] },
+        "replaces_previous_version": { "type": "boolean" },
+        "supersession_statements": { "type": "array", "items": { "type": "string" } },
+        "revision_history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["revision"],
+            "additionalProperties": false,
+            "properties": {
+              "revision": { "type": "string" },
+              "date_raw": { "type": ["string", "null"] },
+              "date_iso": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$|^0000-00-00$" },
+              "changes": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

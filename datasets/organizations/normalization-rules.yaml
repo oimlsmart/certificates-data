@@ -1,0 +1,31 @@
+# Normalization rules for organization name matching, stated as data per
+# TODO.planes/03-organizations.md item 2. Variants collapse by rule; anything
+# the rules cannot collapse stays distinct and is listed in the dataset's
+# open questions with its evidence. Never an ad-hoc judgment in code.
+
+version: 1
+
+rules:
+  - id: whitespace-collapse
+    description: Any run of whitespace (spaces, tabs, non-breaking spaces) is one space; leading and trailing whitespace is dropped.
+  - id: case-fold
+    description: Comparison is case-insensitive; the canonical form is the most frequently observed casing.
+  - id: punctuation-eqv
+    description: Trailing periods and commas carry no meaning. Internal punctuation except "+" is dropped for the comparison key ("Co., Ltd" = "Co Ltd"); the "+" in names such as Endress+Hauser is significant and kept.
+  - id: legal-suffix-eqv
+    description: |
+      Legal-form suffixes are equivalent within each row of the table. The
+      comparison key uses the row's canonical token.
+      Inc = Inc. = Incorporated
+      Ltd = Ltd. = Limited
+      B.V. = BV = Besloten Vennootschap
+      A/S = A/S.
+      GmbH = G.m.b.H.
+      s.r.o. = spol. s r.o.
+      Co. = Co
+      "&" = and
+
+never-collapse:
+  - different legal entities ("GmbH" vs "GmbH & Co. KG" keep distinct legal forms)
+  - spelling variants that change a word stem ("Intellectualised" vs "Intellectualized" stay open questions, they are resolved by evidence not by rule)
+  - translation pairs stay separate unless a document states the pair on the same certificate (the Norwegian/English doublets are the example; none observed yet in this corpus)
