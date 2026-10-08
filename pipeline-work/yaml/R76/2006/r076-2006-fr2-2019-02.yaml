@@ -1,0 +1,197 @@
+_meta:
+  cert_id: 4865
+  num: R76/2006-A-FR2-19.02
+  applicant: Precia SA
+  issuing_year: '2019'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2019-02.pdf
+certificate:
+  number: R76/2006-FR2-19.02
+  scheme: A
+  page_total: 2
+  member_state: France
+  date_issued: '2019-04-29'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Head of the Instrumentation and IT Certification
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+certified_type:
+  category: Indicator
+  type_designations:
+  - X112-B
+  module_designation:
+  description: >-
+    The indicator type X112-B is a separate module intended to be integrated in a non automatic weighing
+    instrument. It has several versions with commercial designations i20 (general use), i30 and i35 (appropriate
+    for weighing bridges), i40 (weighing in a process) or d20 (as a repeater). The enclosure is metallic
+    and presented as a table, cabinet back panel or front of housing version. It is intended to be connected
+    to a weighing channel comprising analogue or digital strain gauge load cells.
+characteristics:
+  type_level:
+    intended_use_accuracy_class:
+      value: III or IIII
+    number_of_weighing_channels:
+      value: 1
+    power_supply_voltage_mains:
+      value: 230
+      unit_symbol: V
+    power_supply_frequency_mains:
+      value: 50
+      unit_symbol: Hz
+    battery_supply_voltage:
+      value: 24
+      unit_symbol: V
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+    minimum_input_voltage_per_scale_interval_dumin:
+      value: 0.5
+      unit_symbol: µV
+    measuring_range_minimum_voltage:
+      value: 0.0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+    minimum_load_cell_impedance_rlmin:
+      value: 43.75
+      unit_symbol: Ω
+    maximum_load_cell_impedance_rlmax:
+      value: 1245
+      unit_symbol: Ω
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    fraction_of_maximum_permissible_error_pind:
+      value: 0.4
+    maximum_subtractive_tare_effect:
+      value: Max
+    load_cell_connection_type:
+      value: 6-wire shielded
+    load_cell_connection_cable_type:
+      value: PRECIA ref. 4005271 or similar
+    load_cell_connection_cable_cross_section:
+      value: 0.68
+      unit_symbol: mm²
+    enclosure_mounting_versions:
+      value: table, cabinet back panel or front of housing
+  config_level:
+  - attribute: maximum_number_of_weighing_ranges
+    axis: range_configuration
+    values:
+    - condition: multi-range configuration
+      value: 2
+      unit_symbol:
+      footnote_markers:
+      - '2'
+    - condition: multi-interval configuration
+      value: 3
+      unit_symbol:
+      footnote_markers:
+      - '3'
+  - attribute: maximum_number_of_verification_scale_intervals_nind
+    axis: instrument_configuration_and_accuracy_class
+    values:
+    - condition: single-interval instrument, single range or multi-range, class III, per weighing range
+      value: 6000
+      unit_symbol:
+    - condition: single-interval instrument, single range or multi-range, class IIII, per weighing range
+      value: 1000
+      unit_symbol:
+    - condition: multi-interval instrument, class III, per partial weighing range
+      value: 3000
+      unit_symbol:
+  - attribute: load_cell_connection_cable_maximum_length
+    axis: cable_cross_section
+    values:
+    - condition: cross-section of 0.68 mm²
+      value: 150
+      unit_symbol: m
+    - condition: cross-section of 1 mm²
+      value: 220
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-P155229-PCI/2
+  pages: 19
+  role: evaluation_report
+- id: LNE-N121109-DE/2
+  pages: 18
+  role: test_report
+- id: LNE-P109775-DMSI/2
+  pages: 48
+  role: test_report
+- id: LNE-P154576-DE/1
+  pages: 15
+  role: test_report
+- id: LNE-P154576-DE/2
+  pages: 11
+  role: test_report
+- id: LNE-183838-DEC/1
+  pages: 12
+  role: test_report
+- id: LNE-183838-PCITI/1
+  pages: 3
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2019-04-29'
+  changes: Annex Rev.0. This certificate is revision n°3 of OIML-MAA certificate R76/2006-FR2-14.01.
+model_family:
+  family_name: X112-B
+  models:
+  - model_id: i20
+    label: i20
+    attributes:
+      intended_use: general use
+  - model_id: i30
+    label: i30
+    attributes:
+      intended_use: weighing bridges
+  - model_id: i35
+    label: i35
+    attributes:
+      intended_use: weighing bridges
+  - model_id: i40
+    label: i40
+    attributes:
+      intended_use: weighing in a process
+  - model_id: d20
+    label: d20
+    attributes:
+      intended_use: repeater
+footnotes:
+- marker: '2'
+  text: In case of a multi-range configuration
+- marker: '3'
+  text: In case of a multi-interval configuration

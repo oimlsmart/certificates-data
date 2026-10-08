@@ -1,0 +1,252 @@
+_meta:
+  cert_id: 5221
+  num: R60/2000-A-DE1-20.02
+  applicant: Hottinger Bruel & Kjaer GmbH
+  issuing_year: '2020'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2020-02.pdf
+certificate:
+  number: R60/2000-A-DE1-2020.02
+  scheme: A
+  page_total: 3
+  member_state: Germany
+  date_issued: '2020-11-27'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt, Conformity Assessment Body
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - Germany
+  person_responsible: Hon.-Prof. Dr. R. Schwartz
+  oiml_issuer_id:
+applicants:
+- name: Hottinger Brüel & Kjaer GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Brüel & Kjaer GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - C16i...
+  module_designation: Digital load cell
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    optional_minimum_load_cell_verification_interval_vmin:
+      value: Emax/20000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=20t
+      value: 20
+      footnote_markers: []
+    - model: Emax=30t
+      value: 30
+      footnote_markers: []
+    - model: Emax=40t
+      value: 40
+      footnote_markers: []
+    - model: Emax=60t
+      value: 60
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+      unit_symbol:
+      footnote_markers: []
+    - condition: C3
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+    - condition: C4
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+    - condition: C5
+      value: 5000
+      unit_symbol:
+      footnote_markers: []
+    - condition: C6
+      value: 6000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class and maximum_capacity
+    values:
+    - condition: D1 (all Emax)
+      value: Emax/5000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C3, Emax = 20/30/40 t
+      value: Emax/10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C3, Emax = 60 t
+      value: Emax/12000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C4, Emax = 20/30/40 t
+      value: Emax/10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C4, Emax = 60 t
+      value: Emax/12000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C5, Emax = 20/30/40 t
+      value: Emax/10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C5, Emax = 60 t
+      value: Emax/12000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C6, Emax = 20/30/40 t
+      value: Emax/10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C6, Emax = 60 t
+      value: Emax/12000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - D1
+  - C3
+  - C4
+  - C5
+  - C6
+test_reports:
+- id: 1.12-4093933
+  date: '2020-11-27'
+  pages: 7
+  role: type_evaluation_report
+- id: ZDS-R60/2000-A-DE1-2020.02
+  date: '2020-11-27'
+  pages: 2
+  role: documentation_file
+revision_history:
+- revision: First issuance
+  date: '2020-11-27'
+  changes:
+model_family:
+  family_name: C16i
+  models:
+  - model_id: Emax=20t
+  - model_id: Emax=30t
+  - model_id: Emax=40t
+  - model_id: Emax=60t
+components: []
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity_emax
+  - minimum_load_cell_verification_interval_vmin
+  - optional_minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+    maximum_capacity_emax: 20/30/40/60
+    minimum_load_cell_verification_interval_vmin: Emax/5000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C3 (Emax = 20/30/40 t)
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 20/30/40
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C3 (Emax = 60 t)
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 60
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C4 (Emax = 20/30/40 t)
+    max_load_cell_intervals_nlc: 4000
+    maximum_capacity_emax: 20/30/40
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C4 (Emax = 60 t)
+    max_load_cell_intervals_nlc: 4000
+    maximum_capacity_emax: 60
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C5 (Emax = 20/30/40 t)
+    max_load_cell_intervals_nlc: 5000
+    maximum_capacity_emax: 20/30/40
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C5 (Emax = 60 t)
+    max_load_cell_intervals_nlc: 5000
+    maximum_capacity_emax: 60
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C6 (Emax = 20/30/40 t)
+    max_load_cell_intervals_nlc: 6000
+    maximum_capacity_emax: 20/30/40
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C6 (Emax = 60 t)
+    max_load_cell_intervals_nlc: 6000
+    maximum_capacity_emax: 60
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20000
+  description: >-
+    Accuracy classes form the column axis; classes C3-C6 are each split into two sub-columns by Emax (20/30/40
+    t vs 60 t) because vmin differs. vmin is expressed as a ratio of Emax. Minimum dead load: 0% of Emax;
+    safe overload: 150% of Emax.
+  footnotes: []

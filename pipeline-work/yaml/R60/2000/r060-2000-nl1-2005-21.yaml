@@ -1,0 +1,171 @@
+_meta:
+  cert_id: 1559
+  num: R060/2000-NL1-2005.21
+  applicant: AEP Technology S.r.l.
+  issuing_year: '2005'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2005-21.pdf
+certificate:
+  number: R60/2000-NL1-05.21
+  scheme: A
+  project_number: '509578'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2005-12-02'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - P.O. Box 394, 3300 AJ Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: AEP Technology S.r.l.
+  address_lines:
+  - via Bottego 33
+  - 41010 Cognento, Modena
+  - Italy
+manufacturers:
+- name: AEP Transducers S.r.l.
+  address_lines:
+  - via Bottego 33/A
+  - 41010 Cognento, Modena
+  - Italy
+certified_type:
+  category: Load cell
+  type_designations:
+  - TSA
+  module_designation: Analog load cell
+  description: >-
+    Analogue load cell type TSA, accuracy class C, fraction Pi = 0.7, temperature range -10 °C to +40
+    °C.
+characteristics:
+  type_level:
+    apportionment_factor:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: TSA nmax=2000
+      value:
+        min: 100
+        max: 2500
+    - model: TSA nmax=3000
+      value:
+        min: 100
+        max: 2500
+    - model: TSA nmax=4000
+      value:
+        min: 500
+        max: 2500
+  - attribute: max_load_cell_verification_intervals_nmax
+    unit_symbol:
+    values:
+    - model: TSA nmax=2000
+      value: 2000
+    - model: TSA nmax=3000
+      value: 3000
+    - model: TSA nmax=4000
+      value: 4000
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: TSA nmax=2000
+      value: 10000
+    - model: TSA nmax=3000
+      value: 10000
+    - model: TSA nmax=4000
+      value: 15000
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-05.21A
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-05.21B
+  pages: 40
+  role: test_report
+- id: TC6855
+  role: documentation_file
+model_family:
+  family_name: TSA
+  models:
+  - model_id: TSA nmax=2000
+    label: Emax 100 kg up to and including 2.5 t, Y = 10 000
+    attributes:
+      maximum_capacity: 100 kg up to and including 2.5 t
+      accuracy_class: C
+      max_load_cell_verification_intervals_nmax: 2000
+      ratio_y_emax_over_vmin: 10000
+  - model_id: TSA nmax=3000
+    label: Emax 100 kg up to and including 2.5 t, Y = 10 000
+    attributes:
+      maximum_capacity: 100 kg up to and including 2.5 t
+      accuracy_class: C
+      max_load_cell_verification_intervals_nmax: 3000
+      ratio_y_emax_over_vmin: 10000
+  - model_id: TSA nmax=4000
+    label: Emax 500 kg up to and including 2.5 t, Y = 15 000
+    attributes:
+      maximum_capacity: 500 kg up to and including 2.5 t
+      accuracy_class: C
+      max_load_cell_verification_intervals_nmax: 4000
+      ratio_y_emax_over_vmin: 15000
+matrix_tables:
+- name: Metrological characteristics by variant
+  columns:
+  - variant
+  - maximum_capacity
+  - accuracy_class
+  - max_load_cell_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  column_units:
+  -
+  - kg
+  -
+  -
+  -
+  rows:
+  - variant: TSA nmax=2000
+    maximum_capacity: 100 kg up to and including 2.5 t
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 2000
+    ratio_y_emax_over_vmin: 10000
+  - variant: TSA nmax=3000
+    maximum_capacity: 100 kg up to and including 2.5 t
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 3000
+    ratio_y_emax_over_vmin: 10000
+  - variant: TSA nmax=4000
+    maximum_capacity: 500 kg up to and including 2.5 t
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 15000
+  description: >-
+    Original table lists characteristics as rows and three capacity/interval groups as columns; transposed
+    here to one row per variant. The maximum capacity cell spanning the first two columns applies to nmax
+    2000 and 3000 (Y = 10 000); the third column applies to nmax 4000 (Y = 15 000).

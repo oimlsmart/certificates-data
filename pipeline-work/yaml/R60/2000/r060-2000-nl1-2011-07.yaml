@@ -1,0 +1,200 @@
+_meta:
+  cert_id: 2843
+  num: R060/2000-NL1-2011.07
+  applicant: Vishay Israel Ltd. Transducers
+  issuing_year: '2011'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2011-07.pdf
+certificate:
+  number: R60/2000-NL1-11.07
+  project_number: '11200201'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2011-04-13'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Tedea-Huntleigh or Vishay Precision
+  address_lines:
+  - 2 Haofan St.
+  - Holon
+  - Israel
+manufacturers:
+- name: Tedea-Huntleigh or Vishay Precision
+  address_lines:
+  - 2 Haofan St.
+  - Holon
+  - Israel
+certified_type:
+  category: Load cell
+  type_designations:
+  - '1242'
+  description: Bending beam load cell
+characteristics:
+  type_level:
+    fraction_pl:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_number_of_load_cell_verification_intervals_nmax:
+      value:
+        min: 1000
+        max: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: 1242 (Emax 50-250 kg)
+      value:
+        min: 50
+        max: 250
+      footnote_markers: []
+    - model: 1242 (Emax 300-500 kg)
+      value:
+        min: 300
+        max: 500
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: 1242 (Emax 50-250 kg)
+      value: 20000
+      footnote_markers: []
+    - model: 1242 (Emax 300-500 kg)
+      value: 7000
+      footnote_markers: []
+  - attribute: ratio_z_emax_over_2dr
+    unit_symbol:
+    values:
+    - model: 1242 (Emax 50-250 kg)
+      value: 15000
+      footnote_markers: []
+    - model: 1242 (Emax 300-500 kg)
+      value: 8000
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/1991-NL-00.05
+  date: '1999-04-15'
+  pages: 38
+  role: type_evaluation_report
+- id: NM-11200201-01
+  date: '2011-04-13'
+  pages: 29
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: 1242 (Emax 50-250 kg)
+    label: Maximum capacity 50 kg up to and including 250 kg
+    attributes:
+      maximum_capacity:
+        value:
+          min: 50
+          max: 250
+        unit_symbol: kg
+  - model_id: 1242 (Emax 300-500 kg)
+    label: Maximum capacity 300 kg up to and including 500 kg
+    attributes:
+      maximum_capacity:
+        value:
+          min: 300
+          max: 500
+        unit_symbol: kg
+matrix_tables:
+- name: Load cell characteristics by capacity range
+  columns:
+  - type
+  - fraction_pl
+  - maximum_capacity
+  - humidity_class
+  - temperature_range
+  - accuracy_class
+  - max_number_of_load_cell_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  - ratio_z_emax_over_2dr
+  column_units:
+  -
+  -
+  - kg
+  -
+  - "°C"
+  -
+  -
+  -
+  -
+  rows:
+  - type: '1242'
+    fraction_pl: 0.7
+    maximum_capacity:
+      min: 50
+      max: 250
+    humidity_class: CH
+    temperature_range:
+      min: -10
+      max: 40
+    accuracy_class: C
+    max_number_of_load_cell_verification_intervals_nmax:
+      min: 1000
+      max: 6000
+    ratio_y_emax_over_vmin: 20000
+    ratio_z_emax_over_2dr: 15000
+  - type: '1242'
+    fraction_pl: 0.7
+    maximum_capacity:
+      min: 300
+      max: 500
+    humidity_class: CH
+    temperature_range:
+      min: -10
+      max: 40
+    accuracy_class: C
+    max_number_of_load_cell_verification_intervals_nmax:
+      min: 1000
+      max: 6000
+    ratio_y_emax_over_vmin: 7000
+    ratio_z_emax_over_2dr: 8000
+  description: >-
+    Characteristics table repeated on pages 2 and 3 of the certificate for the two capacity ranges; the
+    values for nmax, Y and Z may be reduced separately.
+  footnotes: []

@@ -1,0 +1,236 @@
+_meta:
+  cert_id: 5754
+  num: R76/2006-A-NL1-19.56 Rev. 3
+  applicant: Rice Lake Weighing Systems
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2019-56-rev3.pdf
+certificate:
+  number: R76/2006-A-NL1-19.56
+  scheme: A
+  project_number: '3589954'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2022-10-05'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Rice Lake Weighing Systems
+  address_lines:
+  - 230 West Coleman Street
+  - Rice Lake, WI 54868
+  - United States of America
+manufacturers:
+- name: Rice Lake Weighing Systems
+  address_lines:
+  - 230 West Coleman Street
+  - Rice Lake, WI 54868
+  - United States of America
+certified_type:
+  category: Indicator
+  type_designations:
+  - 680-2x
+  - 680-2x-E
+  - 682-2x
+  - 682-2x-E
+  module_designation: Analog load cells
+characteristics:
+  type_level:
+    accuracy_class:
+      value: "(III) or (IIII)"
+      unit_symbol:
+      unit_id:
+    maximum_number_of_scale_intervals:
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 10
+      unit_symbol: V
+      unit_id:
+    load_cell_excitation_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    minimum_signal_input_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 1
+      unit_symbol: μV
+      unit_id:
+    minimum_load_cell_resistance:
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_resistance:
+      value: 1050
+      unit_symbol: Ω
+      unit_id:
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    load_cell_connection:
+      value: 4-wire or 6-wire (remote sensing)
+      unit_symbol:
+      unit_id:
+    maximum_cable_length_per_cross_section:
+      value: 1320.4
+      unit_symbol: m/mm²
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value:
+        min: 9
+        max: 36
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: weighing_ranges
+    unit_symbol:
+    values:
+    - model: '680'
+      value: Single interval
+    - model: '682'
+      value: Single interval; Multi-interval; Multiple range
+  - attribute: maximum_number_of_weighing_ranges
+    unit_symbol:
+    values:
+    - model: '680'
+      value: 1
+    - model: '682'
+      value: 3
+  - attribute: software_identification
+    unit_symbol:
+    values:
+    - model: '680'
+      value: 1.xx.xx (xx = 00..99)
+    - model: '682'
+      value: 2.xx.xx (xx = 00..99)
+recommendation:
+  id: R76-1
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-2343404-01
+  date: '2019-11-01'
+  pages: 51
+  role: type_evaluation_report
+- id: NMi-2633011-01
+  date: '2022-09-09'
+  pages: 17
+  role: test_report
+- id: NMi-2633011-02
+  date: '2022-09-09'
+  pages: 25
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2019-11-01'
+  changes: "-"
+- revision: '1'
+  date: '2019-11-22'
+  changes: Correction Software version
+- revision: '2'
+  date: '2021-09-06'
+  changes: >-
+    Correction of type from 680 Plus-2A to 680-2A. Added type with external ethernet connection: 680-2A-E.
+    Correction Software version: 1.xx.xx
+- revision: '3'
+  date: '2022-10-05'
+  changes: Adding new model 682. Including new DC/DC power board
+model_family:
+  family_name:
+  models:
+  - model_id: 680-2A
+    label: 680, AC/DC power supply
+    attributes:
+      base_model: '680'
+      power_supply: AC/DC
+      external_ethernet: false
+  - model_id: 680-2D
+    label: 680, DC/DC power supply
+    attributes:
+      base_model: '680'
+      power_supply: DC/DC
+      external_ethernet: false
+  - model_id: 680-2A-E
+    label: 680, AC/DC power supply, external ethernet connection
+    attributes:
+      base_model: '680'
+      power_supply: AC/DC
+      external_ethernet: true
+  - model_id: 680-2D-E
+    label: 680, DC/DC power supply, external ethernet connection
+    attributes:
+      base_model: '680'
+      power_supply: DC/DC
+      external_ethernet: true
+  - model_id: 682-2A
+    label: 682, AC/DC power supply
+    attributes:
+      base_model: '682'
+      power_supply: AC/DC
+      external_ethernet: false
+  - model_id: 682-2D
+    label: 682, DC/DC power supply
+    attributes:
+      base_model: '682'
+      power_supply: DC/DC
+      external_ethernet: false
+  - model_id: 682-2A-E
+    label: 682, AC/DC power supply, external ethernet connection
+    attributes:
+      base_model: '682'
+      power_supply: AC/DC
+      external_ethernet: true
+  - model_id: 682-2D-E
+    label: 682, DC/DC power supply, external ethernet connection
+    attributes:
+      base_model: '682'
+      power_supply: DC/DC
+      external_ethernet: true
+footnotes: []

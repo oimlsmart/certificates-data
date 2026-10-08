@@ -1,0 +1,391 @@
+_meta:
+  cert_id: 6132
+  num: R76/2006-A-FR2-20.02 Rev. 1
+  applicant: Precia SA
+  issuing_year: '2024'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-fr2-2020-02-rev1.pdf
+certificate:
+  number: R76/2006-A-FR2-20.02
+  scheme: A
+  page_total: 4
+  member_state: France
+  date_issued: '2024-01-26'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Emeric MOREL
+  person_title: Head of Instrumentation Certification Department
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas
+  - France
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - France
+certified_type:
+  category: Indicator
+  type_designations:
+  - X241-B
+  - X1104-TG
+  - X241-TR
+  - X241-PMNET
+  - X1104-TR
+  module_designation: Electronic indicator
+  description: >-
+    The indicator type X241-B is an electronic module with digital indication, intended to be integrated
+    in a weighing instrument for regulated uses including or not direct sales to the public (DSP). The
+    X241-B type indicator module systematically consists of a terminal + transmitter combination, which
+    may be in the form of a single box or two. Where there are additional transmitters, they must be identified
+    individually. With the X1104-TG terminal (from software version 3.4.z), X241-B can also calculate
+    the algebraic sum of the values from up to 8 measurement channels, from a dedicated module per channel.
+characteristics:
+  type_level:
+    temperature_operating_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers: []
+    max_algebraic_summation_channels:
+      value: 8
+      unit_symbol:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: intended_use_classes
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: III or IIII
+    - condition: X241-PMNET
+      value: III or IIII
+    - condition: X1104-TR
+      value: III or IIII
+  - attribute: max_number_of_weighing_ranges
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 2
+    - condition: X241-PMNET
+      value: 2
+    - condition: X1104-TR
+      value: 2
+  - attribute: max_number_of_partial_weighing_ranges
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 3
+    - condition: X241-PMNET
+      value: 3
+    - condition: X1104-TR
+      value: 3
+  - attribute: max_verification_scale_intervals_complete_range
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 6000
+    - condition: X241-PMNET
+      value: 6000
+    - condition: X1104-TR
+      value: 6000
+  - attribute: max_verification_scale_intervals_partial_range
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 3000
+    - condition: X241-PMNET
+      value: 3000
+    - condition: X1104-TR
+      value: 3000
+  - attribute: excitation_voltage_for_load_cell
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 5
+      unit_symbol: V
+    - condition: X241-PMNET
+      value: 5
+      unit_symbol: V
+    - condition: X1104-TR
+      value: N/A
+  - attribute: power_supply
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 230 V AC (50 Hz) or 24 V DC
+    - condition: X241-PMNET
+      value: 24 V
+    - condition: X1104-TR
+      value: 24 V
+  - attribute: power_supply_frequency
+    axis: transmitter
+    values:
+    - condition: X241-TR (AC supply)
+      value: 50
+      unit_symbol: Hz
+  - attribute: minimum_dead_load_signal
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 0
+      unit_symbol: mV
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: maximum_dead_load_signal
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 12
+      unit_symbol: mV
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: minimum_signal_voltage_per_verification_scale_interval
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 0.5
+      unit_symbol: µV
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: minimum_voltage_for_weighing_range
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 0
+      unit_symbol: mV
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: maximum_voltage_for_weighing_range
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 12
+      unit_symbol: mV
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: minimum_load_cell_impedance
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 58
+      unit_symbol: Ω
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: maximum_load_cell_impedance
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 1245
+      unit_symbol: Ω
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+  - attribute: fraction_pi
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 0.4
+    - condition: X241-PMNET
+      value: 0
+    - condition: X1104-TR
+      value: 0
+  - attribute: load_cell_connection_type
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 6-wire
+    - condition: X241-PMNET
+      value: 6-wire
+    - condition: X1104-TR
+      value: N/A
+  - attribute: measurement_wire_specification
+    axis: transmitter
+    values:
+    - condition: X241-TR
+      value: 220
+      unit_symbol: m/mm²
+    - condition: X241-PMNET
+      value: N/A
+    - condition: X1104-TR
+      value: N/A
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P205205
+  pages: 3
+  role: evaluation_report
+  applies_to: Indicator X241-B
+- id: P229843-2
+  pages: 4
+  role: evaluation_report
+  applies_to: Indicator X241-B
+- id: LNE-P138676-PCI/4
+  pages: 2
+  role: evaluation_report
+  applies_to: Module X1104-TG
+- id: LNE-P118307-PCI/5
+  pages: 17
+  role: evaluation_report
+  applies_to: Module X1104-TG
+- id: LNE-P118307-DE/3
+  pages: 22
+  role: test_report
+  applies_to: Module X1104-TG
+  description: Disturbance tests
+- id: LNE-P219553
+  pages: 26
+  role: evaluation_report
+  applies_to: Module X1104-TG
+- id: LNE-P141354-PCI/1
+  pages: 17
+  role: evaluation_report
+  applies_to: Module X241-TR
+- id: LNE-H100196-CQPE/1
+  pages: 15
+  role: test_report
+  applies_to: Module X241-TR
+  description: Disturbance tests
+- id: LNE-F031424-CMI/1
+  pages: 33
+  role: test_report
+  applies_to: Module X241-TR
+  description: Performance tests, influence factor tests and span stability tests
+- id: LNE-P141353-PCI/1
+  pages: 16
+  role: evaluation_report
+  applies_to: Module X241-PMNET
+- id: LNE-K121024-DE/1
+  pages: 16
+  role: test_report
+  applies_to: Module X241-PMNET
+  description: Disturbance tests
+- id: LNE-P138676-PCI/1
+  pages: 2
+  role: evaluation_report
+  applies_to: Module X1104-TR
+  description: Additional evaluation report
+- id: LNE-P136125-PCI/1
+  pages: 2
+  role: evaluation_report
+  applies_to: Module X1104-TR
+  description: Additional evaluation report
+- id: LNE-P118307-PCI/1
+  pages: 17
+  role: evaluation_report
+  applies_to: Module X1104-TR
+- id: LNE-P118307-DE/2
+  pages: 17
+  role: test_report
+  applies_to: Module X1104-TR
+  description: Disturbance tests
+revision_history:
+- revision: '0'
+  date: '2020-09-21'
+  changes: Initial certificate
+- revision: '1'
+  date:
+  changes: Clarification of the algebraic summation with X1104-TG module
+components:
+- role: terminal
+  type_designations:
+  - X1104-TG
+  alternatives:
+  characteristics:
+    description: >-
+      I410 terminal. From software version 3.4.0, this terminal can define a specific channel allowing
+      the calculation of the algebraic sum of values from up to 8 measurement channels.
+    software_identification: V3
+- role: transmitter
+  type_designations:
+  - X241-TR
+  alternatives: OR
+  characteristics:
+    description: Analog transmitter
+    software_identification: V1 or 3
+- role: transmitter
+  type_designations:
+  - X241-PMNET
+  alternatives: OR
+  characteristics:
+    description: Digital transmitter, works only with the digital load cell type X970-C
+    software_identification: V1
+- role: transmitter
+  type_designations:
+  - X1104-TR
+  alternatives: OR
+  characteristics:
+    description: >-
+      Summation transmitter. Connected to minimum 2 digital or 2 analog transmitters; it manages a weighing
+      channel gathering the signals from every load cell connected to the other weighing channels.
+    software_identification: V1
+matrix_tables:
+- name: Sealing possibilities by casing type
+  columns:
+  - casing
+  - sticker_seal
+  - wire_and_lead_seal
+  - internal_measuring_cover_plate
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - casing: Desktop version (ABS)
+    sticker_seal: On 1 screw at the bottom
+    wire_and_lead_seal: Yes, connecting 2 screws bottom side
+    internal_measuring_cover_plate: 'Yes'
+  - casing: Stainless steel version
+    sticker_seal: On 1 screw at the back
+    wire_and_lead_seal: Yes, connecting 2 screws back side
+    internal_measuring_cover_plate: 'Yes'
+  - casing: Panel mount version
+    sticker_seal: Internal cover plate
+    wire_and_lead_seal: Internal cover plate
+    internal_measuring_cover_plate: 'Yes'
+  - casing: Transmitter alone
+    sticker_seal: On 1 screw on the top
+    wire_and_lead_seal: Yes, connecting 2 screws
+    internal_measuring_cover_plate: 'Yes'
+  - casing: Internal measuring cover plate
+    sticker_seal: On 1 screw
+    wire_and_lead_seal: Yes, connecting the 2 screws of the cover plate
+    internal_measuring_cover_plate:
+  description: >-
+    It is possible to seal either the entire casing, or the measuring electronics with a proper cover.
+    Both methods can be sealed with a wire seal or a self-destructible sticker.
+  footnotes: []

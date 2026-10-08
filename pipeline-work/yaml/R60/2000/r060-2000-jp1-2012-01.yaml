@@ -1,0 +1,266 @@
+_meta:
+  cert_id: 2744
+  num: R060/2000-JP1-2012.01
+  applicant: A&D Company Ltd.
+  issuing_year: '2012'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2012-01.pdf
+certificate:
+  number: R60/2000-JP1-12.01
+  scheme: B
+  member_state: Japan
+  date_issued: '2012-01-31'
+  page_total: 3
+  oiml_issuer_id: JP1
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+  oiml_issuer_id: JP1
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+manufacturers:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LC1205-K100
+  - LC1205-K200
+  - LC1205-K500
+  module_designation:
+  description: Tension load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_classification:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range_operating:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    safe_load_limit_elim:
+      value: 1.5 * Emax
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_verification_interval_vmin:
+      value: Emax / 10000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance_rlc:
+      value: 440
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    cable_length:
+      value: 3
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    cable_construction:
+      value: 4wire
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: LC1205-K100
+      value: 100
+      footnote_markers: []
+    - model: LC1205-K200
+      value: 200
+      footnote_markers: []
+    - model: LC1205-K500
+      value: 500
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nmax
+    axis: n_max option
+    values:
+    - condition: n_max = 4000
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+    - condition: n_max = 3000
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: ratio_z_emax_over_2dr
+    axis: n_max
+    values:
+    - condition: n_max = 4000
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: 12-02/R60:2000
+  pages: 19
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: LC1205-K100
+    attributes:
+      maximum_capacity_emax:
+        value: 100
+        unit_symbol: kg
+        unit_id:
+        footnote_markers: []
+  - model_id: LC1205-K200
+    attributes:
+      maximum_capacity_emax:
+        value: 200
+        unit_symbol: kg
+        unit_id:
+        footnote_markers: []
+  - model_id: LC1205-K500
+    attributes:
+      maximum_capacity_emax:
+        value: 500
+        unit_symbol: kg
+        unit_id:
+        footnote_markers: []
+matrix_tables:
+- name: Characteristics
+  columns:
+  - model_designation
+  - accuracy_class
+  - max_load_cell_intervals_nmax
+  - humidity_symbol
+  - minimum_dead_load_emin
+  - maximum_capacity_emax
+  - safe_load_limit_elim
+  - minimum_verification_interval_vmin
+  - apportionment_factor_plc
+  - ratio_y_emax_over_vmin
+  - ratio_z_emax_over_2dr
+  - rated_output
+  - maximum_excitation_voltage
+  - input_impedance_rlc
+  - cable_detail
+  column_units:
+  -
+  -
+  -
+  -
+  - kg
+  - kg
+  - kg
+  - kg
+  -
+  -
+  -
+  - mV/V
+  - V
+  - Ω
+  -
+  rows:
+  - model_designation: LC1205-K100
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 4000 or 3000
+    humidity_symbol: CH
+    minimum_dead_load_emin: 0
+    maximum_capacity_emax: 100
+    safe_load_limit_elim: 1.5*Emax
+    minimum_verification_interval_vmin: Emax/10000
+    apportionment_factor_plc: 0.7
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000 in the case of nmax=4000
+    rated_output: 2
+    maximum_excitation_voltage: 15
+    input_impedance_rlc: 440
+    cable_detail: 3 m, 4-wire
+  - model_designation: LC1205-K200
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 4000 or 3000
+    humidity_symbol: CH
+    minimum_dead_load_emin: 0
+    maximum_capacity_emax: 200
+    safe_load_limit_elim: 1.5*Emax
+    minimum_verification_interval_vmin: Emax/10000
+    apportionment_factor_plc: 0.7
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000 in the case of nmax=4000
+    rated_output: 2
+    maximum_excitation_voltage: 15
+    input_impedance_rlc: 440
+    cable_detail: 3 m, 4-wire
+  - model_designation: LC1205-K500
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 4000 or 3000
+    humidity_symbol: CH
+    minimum_dead_load_emin: 0
+    maximum_capacity_emax: 500
+    safe_load_limit_elim: 1.5*Emax
+    minimum_verification_interval_vmin: Emax/10000
+    apportionment_factor_plc: 0.7
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000 in the case of nmax=4000
+    rated_output: 2
+    maximum_excitation_voltage: 15
+    input_impedance_rlc: 440
+    cable_detail: 3 m, 4-wire
+  description: >-
+    Characteristics of the three certified models. Cells with a single value apply to all models; maximum
+    capacity varies per model.
+  footnotes: []

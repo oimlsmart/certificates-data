@@ -1,0 +1,284 @@
+_meta:
+  cert_id: 6367
+  num: R76/2006-A-NL1-24.08 Rev. 1
+  applicant: SysTec Systemtechnik und Industrieautomation
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2024-08-rev1.pdf
+certificate:
+  number: R76/2006-A-NL1-24.08
+  scheme: A
+  project_number: '3535045'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2024-10-11'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: SysTec Systemtechnik und Industrieautomation GmbH
+  address_lines:
+  - Ludwig-Erhard-Strasse 6
+  - D-50129 Bergheim-Glessen
+  - Germany
+manufacturers:
+- name: SysTec Systemtechnik und Industrieautomation GmbH
+  address_lines:
+  - Ludwig-Erhard-Strasse 6
+  - D-50129 Bergheim-Glessen
+  - Germany
+certified_type:
+  category: Indicator
+  type_designations:
+  - IT9-AC
+  - IT9-DC
+  module_designation:
+characteristics:
+  type_level:
+    weighing_ranges:
+      value: single interval, multi-interval, multiple range
+    maximum_number_of_partial_weighing_ranges:
+      value: 3
+    maximum_number_of_load_platforms:
+      value: 8
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    mechanical_environment_class:
+      value: M3
+    electromagnetic_environment_class:
+      value: E3
+    power_supply_type:
+      value: AC or DC
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency_ac:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_dc_note:
+      value: suitable for road vehicle power supply
+  config_level:
+  - attribute: accuracy_class
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: "(III) or (IIII)"
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: "(III) or (IIII)"
+    - condition: digital load cells or weighing module
+      value: matching the accuracy class of the digital load cell or weighing module
+  - attribute: maximum_number_of_scale_intervals
+    axis: configuration
+    values:
+    - condition: analog load cells, without overvoltage protection on the load cell interface
+      value: 10000
+    - condition: analog load cells, with overvoltage protection on the load cell interface
+      value: 8750
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 6000
+    - condition: digital load cells or weighing module
+      value: equal to the maximum number of scale intervals of the digital load cell or weighing module
+  - attribute: load_cell_excitation_voltage
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 5
+      unit_symbol: V
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 2.44
+      unit_symbol: V
+      unit_id:
+  - attribute: load_cell_excitation_waveform
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: square wave
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: square wave
+  - attribute: minimum_signal_input_voltage
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 0
+      unit_symbol: mV
+      unit_id:
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 0.2
+      unit_symbol: µV
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 0.33
+      unit_symbol: µV
+      unit_id:
+  - attribute: minimum_load_cell_resistance
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 87
+      unit_symbol: Ω
+      unit_id:
+  - attribute: maximum_load_cell_resistance
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 3300
+      unit_symbol: Ω
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 3300
+      unit_symbol: Ω
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 0.5
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 0.5
+    - condition: digital load cells or weighing module
+      value: 0
+  - attribute: load_cell_interface
+    axis: configuration
+    values:
+    - condition: analog load cells
+      value: 6-wire with sense technology, may be configured as 4-wire
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 6-wire with sense technology, may be configured as 4-wire
+  - attribute: max_cable_length_per_cross_wire_section_between_indicator_and_junction_box_or_load_cells
+    axis: configuration
+    values:
+    - condition: analog load cells, without overvoltage protection, sense technology used
+      value: 2712.4
+      unit_symbol: m/mm²
+      unit_id:
+    - condition: analog load cells, without overvoltage protection, sense technology not used
+      value: load cells connected directly without junction box or extension cable
+    - condition: analog load cells, with overvoltage protection, with sense technology
+      value: 2909.3
+      unit_symbol: m/mm²
+      unit_id:
+    - condition: analog load cells with zener barriers on the load cell interface
+      value: 5782.5
+      unit_symbol: m/mm²
+      unit_id:
+  - attribute: load_cell_power_supply
+    axis: configuration
+    values:
+    - condition: digital load cells or weighing module, when powered by the indicator
+      value: 12
+      unit_symbol: V
+      unit_id:
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-3535045-01
+  date: '2024-03-13'
+  pages: 42
+  role: test_report
+- id: NMi-3535045-02
+  date: '2024-03-13'
+  pages: 20
+  role: test_report
+- id: NMi-3535045-03
+  date: '2024-03-13'
+  pages: 32
+  role: test_report
+- id: NMi-3535045-04
+  date: '2024-03-13'
+  pages: 26
+  role: test_report
+- id: NMi-3535045-06
+  date: '2024-10-11'
+  pages: 26
+  role: test_report
+- id: NMi-3535045-07
+  date: '2024-10-11'
+  pages: 26
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2024-03-22'
+  changes: Initial issue.
+- revision: '1'
+  date: '2024-10-11'
+  changes: Addition of reports and characteristics to allow the use of zener barriers
+model_family:
+  family_name:
+  models:
+  - model_id: IT9-AC
+    label: IT9-AC
+    attributes: {}
+  - model_id: IT9-DC
+    label: IT9-DC
+    attributes: {}
+matrix_tables:
+- name: Software identification
+  columns:
+  - description
+  - version
+  - checksum
+  column_units:
+  -
+  -
+  -
+  rows:
+  - description: SW ID (Scale driver)
+    version: AWX 1.x.x
+    checksum: 7a78f806
+  - description: SW ID (Scale)
+    version: 5.x.x
+    checksum: 2d582716
+  - description: SW ID (Display)
+    version: 1.x.x
+    checksum: 46dae51c
+  description: >-
+    'x' is a number between 0 and 99 and represents the non-legally relevant part of the software. The
+    version and checksum for the scale driver are displayed via key sequence 'i' → 'compliance info' →
+    'Scales'; the other versions and checksums via 'i' → 'compliance info' → 'Terminal'.
+  footnotes: []

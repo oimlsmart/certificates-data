@@ -1,0 +1,245 @@
+_meta:
+  cert_id: 4413
+  num: R051/2006-GB1-2017.02 Rev. 1
+  applicant: Strainstall UK Limited
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2017-02-rev1.pdf
+certificate:
+  number: R51/2006-GB1-17.02
+  revision: '1'
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2017-09-11'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Strainstall UK Limited
+  address_lines:
+  - 9-10 Mariners Way
+  - Cowes, Isle of Wight
+  - United Kingdom
+manufacturers:
+- name: Strainstall UK Limited
+  address_lines:
+  - 9-10 Mariners Way
+  - Cowes, Isle of Wight
+  - United Kingdom
+certified_type:
+  category: Automatic catchweigher
+  type_designations:
+  - CWS™ Loadpin
+  description: >-
+    Automatic catchweigher designed to weigh containers statically with no operator intervention. The
+    instrument comprises Loadpin digital load cells, an interface unit (spreader unit) and a control and
+    display unit (control unit). The load cells and electronics are permanently installed on the spreader
+    of the container handler; weight values are transmitted from the load cells via the interface unit
+    to the display unit and on to the Terminal Operating System (TOS). The interface and display units
+    have aluminium enclosures; the display unit comprises a communications and display controller with
+    an LCD display and 8 keys (6 functional control keys and 2 navigation keys). The units are powered
+    by the container handler via a nominal 24 V DC external source; the interface unit supplies the strain
+    gauge bridges of the load cells. Devices: semi-automatic zero-setting (≤ 4% Max) via user interface
+    or TOS, long term storage device, display and storage of individual and total weights. Interfaces:
+    link between interface and display unit, RS 232 / RS 422 / RS 485, CANBUS, Ethernet, Wifi. Software
+    is protected by a version number and checksum held on the eMMC memory; access to legally relevant
+    parameters is password-protected with a non-editable Config Version counter.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 45
+      unit_symbol: t
+      unit_id:
+    scale_interval:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: t
+      unit_id:
+    minimum_capacity:
+      value:
+        min: 2.4
+        max:
+      unit_symbol: t
+      unit_id:
+    minimum_number_of_verification_scale_intervals:
+      value:
+        min: 100
+        max:
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    zero_setting_device:
+      value: semi-automatic via user interface or TOS
+      unit_symbol:
+      unit_id:
+    zero_setting_range_percent_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    interfaces:
+      value: RS 232 / RS 422 / RS 485 / CANBUS / Ethernet / Wifi / link between interface and display
+        unit
+      unit_symbol:
+      unit_id:
+    enclosure_material:
+      value: aluminium
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: number_of_load_cells
+    axis: load_cell_configuration
+    values:
+    - condition: 4 load cells
+      value: 4
+      unit_symbol:
+    - condition: 2 load cells
+      value: 2
+      unit_symbol:
+  - attribute: load_cell_maximum_capacity
+    axis: load_cell_configuration
+    values:
+    - condition: 4 load cells
+      value: 15
+      unit_symbol: t
+    - condition: 2 load cells
+      value: 50
+      unit_symbol: t
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01915
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2017-06-16'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2017-09-11'
+  changes: >-
+    Display unit and Interface unit changed to Control unit and Spreader unit. Construction: Spreader
+    and Reach stacker removed. Technical data: Maximum number of verification scale intervals changed
+    to Minimum. Alternatives section added.
+components:
+- role: load cell
+  type_designations:
+  - Loadpin digital load cell
+  characteristics:
+    software_version:
+      value: V2.00
+      unit_symbol:
+      unit_id:
+    checksum:
+      value: 8E69
+      unit_symbol:
+      unit_id:
+- role: spreader unit (interface unit)
+  characteristics:
+    software_version:
+      value: V2.20
+      unit_symbol:
+      unit_id:
+    checksum:
+      value: 23E9
+      unit_symbol:
+      unit_id:
+    alternative_software_version:
+      value: V2.22
+      unit_symbol:
+      unit_id:
+    alternative_checksum:
+      value: 286B
+      unit_symbol:
+      unit_id:
+- role: control unit (control and display unit)
+  characteristics:
+    software_version:
+      value: V2.20
+      unit_symbol:
+      unit_id:
+    checksum:
+      value: FFAE
+      unit_symbol:
+      unit_id:
+    alternative_software_version:
+      value: V2.21
+      unit_symbol:
+      unit_id:
+    alternative_checksum:
+      value: C929
+      unit_symbol:
+      unit_id:
+matrix_tables:
+- name: Software identification
+  columns:
+  - component
+  - software_version_number
+  - checksum
+  rows:
+  - component: Control unit
+    software_version_number: V2.20
+    checksum: FFAE
+  - component: Spreader unit
+    software_version_number: V2.20
+    checksum: 23E9
+  - component: Load cell
+    software_version_number: V2.00
+    checksum: 8E69
+  description: Software modules protected by version number and checksum, held on the eMMC memory.
+  footnotes: []
+- name: Alternative software (Alternatives section)
+  columns:
+  - component
+  - software_version_number
+  - checksum
+  rows:
+  - component: Control unit
+    software_version_number: V2.21
+    checksum: C929
+  - component: Spreader unit
+    software_version_number: V2.22
+    checksum: 286B
+  - component: Load cell
+    software_version_number: V2.00
+    checksum: 8E69
+  description: >-
+    Permitted modified software, identified by version number and checksum, as an alternative to the original
+    software.
+  footnotes: []

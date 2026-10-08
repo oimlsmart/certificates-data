@@ -1,0 +1,532 @@
+_meta:
+  cert_id: 5886
+  num: R137/2012-A-NL1-20.14 Rev. 4
+  applicant: Micro Motion, Inc
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R137
+  edition_year: 2012
+  extraction_method: glm-extract
+  source_pdf: certificates/R137/2012/r137-2012-nl1-2020-14-rev4.pdf
+certificate:
+  number: R137/2012-A-NL1-20.14
+  scheme: A
+  project_number: '3652016'
+  page_total: 5
+  member_state: The Netherlands
+  date_issued: '2023-03-16'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V. (OIML Issuing Authority NL1)
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Micro Motion, Inc.
+  address_lines:
+  - 7070 Winchester Circle
+  - Boulder, CO 80301
+  - United States of America
+manufacturers:
+- name: Micro Motion, Inc.
+  address_lines:
+  - 7070 Winchester Circle
+  - Boulder, CO 80301
+  - United States of America
+- name: F-R Tecnologias De Flujo, S.A. de C.V.
+  address_lines:
+  - Ave. Miguel de Cervantes 111
+  - Chihuahua 31136
+  - Mexico
+- name: Emerson SRL
+  address_lines:
+  - Emerson street no. 4
+  - 400461 Cluj-Napoca
+  - Romania
+certified_type:
+  category: Gas meter
+  type_designations:
+  - '3414'
+  - '3415'
+  - '3416'
+  - '3417'
+  - '3418'
+  module_designation:
+  description: >-
+    Ultrasonic gas meter, manufacturers mark: Rosemount, family designation GUSM or Senior Sonic. Model
+    3414: 4 measuring paths in horizontal configuration. Model 3415: model 3414 path layout and electronics,
+    additionally equipped with one check path connected to a separate set of electronics. Model 3416:
+    model 3414 path layout and electronics, additionally equipped with one check path and one diagnostic
+    path connected to a separate set of electronics. Model 3417: composed of two model 3414 electronics
+    and transducers built into a model 3417 spool piece, usable as two separate gas meters or in pay/check
+    configuration. Model 3418: 8 measuring paths in horizontal configuration. Previously placed on the
+    market by Daniel Measurement and Control, Inc.
+characteristics:
+  type_level:
+    destined_for_measurement:
+      value: Gas volume
+      unit_symbol:
+      unit_id:
+    environmental_classes:
+      value: M1 / E2
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 70
+      unit_symbol: "°C"
+      unit_id:
+    designed_for:
+      value: condensing humidity
+      unit_symbol:
+      unit_id:
+    orientation:
+      value: all orientations
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 10
+        max: 36
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    minimum_velocity_vt:
+      value: 1/10 vmax
+      unit_symbol:
+      unit_id:
+    minimum_velocity_vmin:
+      value: 0.5
+      unit_symbol: m/s
+      unit_id:
+    minimum_measuring_range:
+      value: '1:20'
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: gas_temperature_range
+    axis: transducer type
+    values:
+    - condition: T11, T12, T21
+      value:
+        min: -20
+        max: 55
+      unit_symbol: "°C"
+    - condition: T22, T32
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+    - condition: T41
+      value:
+        min: -50
+        max: 100
+      unit_symbol: "°C"
+    - condition: T200
+      value:
+        min: -50
+        max: 125
+      unit_symbol: "°C"
+  - attribute: operating_pressure_range
+    axis: mount type / transducer type / meter size
+    values:
+    - condition: standard mounts
+      value:
+        min: 7
+        max: 425
+      unit_symbol: bar(g)
+    - condition: isolated mounts on chordal paths, meter size 4 to 12 inch
+      value:
+        min: 0
+        max: 105
+      unit_symbol: bar(g)
+    - condition: isolated mounts on chordal paths, meter size 14 to 42 inch
+      value:
+        min: 8
+        max: 105
+      unit_symbol: bar(g)
+    - condition: T200 transducers with dedicated T200 isolated mounts, meter size 4 to 42 inch
+      value:
+        min: 0
+        max: 259
+      unit_symbol: bar
+  - attribute: qmax_reduction
+    axis: minimum operating pressure / transducer type
+    values:
+    - condition: standard mounts, minimum pressure between 3.5 and 7 bar(g)
+      value: 50
+      unit_symbol: "%"
+    - condition: T32 transducers only, minimum pressure between 7 and 10 bar(g)
+      value: 80
+      unit_symbol: "%"
+  - attribute: maximum_velocity_vmax
+    unit_symbol: m/s
+    axis: meter size (inch / DN) and applicable meter types
+    values:
+    - condition: 4 inch (DN100), types 3414/3415/3416/3417
+      value: 30.5
+    - condition: 6 inch (DN150), types 3414/3415/3416/3417
+      value: 30.5
+    - condition: 8 inch (DN200), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 10 inch (DN250), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 12 inch (DN300), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 14 inch (DN350), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 16 inch (DN400), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 18 inch (DN450), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 20 inch (DN500), types 3414/3415/3416/3417/3418
+      value: 32.5
+    - condition: 24 inch (DN600), types 3414/3415/3416/3417/3418
+      value: 30.5
+    - condition: 30 inch (DN750), types 3414/3415/3416/3417/3418
+      value: 26
+    - condition: 36 inch (DN900), types 3414/3415/3416/3417/3418
+      value: 23
+    - condition: 42 inch (DN1050), types 3414/3415/3416/3417/3418
+      value: 21
+  - attribute: inlet_piping_and_flow_straightener
+    axis: meter type / disturbance condition
+    values:
+    - condition: meter types 3414 / 3415 / 3416 / 3417, mild and severe disturbances
+      value: >-
+        5D piping followed by a CPA 50E or CPA 55E straightener followed by 10D piping at the inlet of
+        the meter
+    - condition: type 3418, mild and severe disturbances
+      value: 5D piping at the inlet of the meter
+recommendation:
+  id: R137-1
+  edition: 2012
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: NMi-15200438-01
+  date: '2015-11-03'
+  pages: 47
+  role: type_evaluation_report
+- id: NMi-15200787-01
+  date: '2016-02-25'
+  pages: 50
+  role: type_evaluation_report
+- id: NMi-16200416-01
+  date: '2016-08-19'
+  pages: 11
+  role: type_evaluation_report
+- id: NMi-16200582-02
+  date: '2016-11-03'
+  pages: 7
+  role: type_evaluation_report
+- id: NMi-1902613-01
+  date: '2018-08-23'
+  pages: 51
+  role: type_evaluation_report
+- id: NMi-1902374-01
+  date: '2018-11-16'
+  pages: 19
+  role: type_evaluation_report
+- id: NMi-2282746-01
+  date: '2019-05-03'
+  pages: 13
+  role: type_evaluation_report
+- id: NMi-2282746-02
+  date: '2019-05-03'
+  pages: 26
+  role: type_evaluation_report
+- id: T11159-3
+  role: documentation_file
+revision_history:
+- revision: initial
+  date: '2020-09-29'
+  changes:
+- revision: '1'
+  date: '2021-09-27'
+  changes: Addition of SW update v1.50
+- revision: '2'
+  date: '2021-09-30'
+  changes: Correction of Applicant and Manufacturer name and address
+- revision: '3'
+  date: '2022-07-18'
+  changes: Change to brand name from "Daniel" to "Rosemount"; change to manufacturer location
+- revision: '4'
+  date: '2023-03-16'
+  changes: Addition of SW update 1.60
+model_family:
+  family_name: GUSM or Senior Sonic
+  models:
+  - model_id: '3414'
+    label: Model 3414
+    attributes:
+      measuring_paths: 4
+      path_configuration: horizontal
+      manufacturable_size_range_inch:
+        min: 4
+        max: 42
+  - model_id: '3415'
+    label: Model 3415
+    attributes:
+      measuring_paths: 4
+      path_configuration: >-
+        model 3414 path layout and electronics, additionally one check path connected to a separate set
+        of electronics
+      manufacturable_size_range_inch:
+        min: 4
+        max: 42
+  - model_id: '3416'
+    label: Model 3416
+    attributes:
+      measuring_paths: 4
+      path_configuration: >-
+        model 3414 path layout and electronics, additionally one check path and one diagnostic path connected
+        to a separate set of electronics
+      manufacturable_size_range_inch:
+        min: 4
+        max: 42
+  - model_id: '3417'
+    label: Model 3417
+    attributes:
+      path_configuration: two model 3414 electronics and transducers built into a model 3417 spool piece
+      usable_configurations:
+      - two separate gas meters
+      - pay / check configuration
+      manufacturable_size_range_inch:
+        min: 4
+        max: 42
+  - model_id: '3418'
+    label: Model 3418
+    attributes:
+      measuring_paths: 8
+      path_configuration: horizontal
+      manufacturable_size_range_inch:
+        min: 8
+        max: 42
+components:
+- role: transducer set
+  type_designations:
+  - T11
+  - T12
+  - T21
+  - T22
+  - T32
+  - T41
+  - T200
+  alternatives: OR
+matrix_tables:
+- name: Table 2 – General characteristics of the family of instruments (flow characteristics by meter
+    size)
+  columns:
+  - meter_types
+  - diameter_size_inch
+  - diameter_size_dn
+  - typical_range_mm
+  - maximum_velocity_vmax
+  - minimum_velocity_vt
+  - minimum_velocity_vmin
+  column_units:
+  -
+  - inch
+  -
+  - mm
+  - m/s
+  - m/s
+  - m/s
+  rows:
+  - meter_types: 3414, 3415, 3416, 3417
+    diameter_size_inch: 4
+    diameter_size_dn: 100
+    typical_range_mm:
+      min: 80
+      max: 108
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417
+    diameter_size_inch: 6
+    diameter_size_dn: 150
+    typical_range_mm:
+      min: 124
+      max: 161
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 8
+    diameter_size_dn: 200
+    typical_range_mm:
+      min: 173
+      max: 212
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 10
+    diameter_size_dn: 250
+    typical_range_mm:
+      min: 216
+      max: 265
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 12
+    diameter_size_dn: 300
+    typical_range_mm:
+      min: 257
+      max: 315
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 14
+    diameter_size_dn: 350
+    typical_range_mm:
+      min: 284
+      max: 343
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 16
+    diameter_size_dn: 400
+    typical_range_mm:
+      min: 325
+      max: 394
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 18
+    diameter_size_dn: 450
+    typical_range_mm:
+      min: 367
+      max: 445
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 20
+    diameter_size_dn: 500
+    typical_range_mm:
+      min: 408
+      max: 495
+    maximum_velocity_vmax: 32.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 24
+    diameter_size_dn: 600
+    typical_range_mm:
+      min: 491
+      max: 597
+    maximum_velocity_vmax: 30.5
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 30
+    diameter_size_dn: 750
+    typical_range_mm:
+      min: 730
+      max: 749
+    maximum_velocity_vmax: 26
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 36
+    diameter_size_dn: 900
+    typical_range_mm:
+      min: 876
+      max: 899
+    maximum_velocity_vmax: 23
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  - meter_types: 3414, 3415, 3416, 3417, 3418
+    diameter_size_inch: 42
+    diameter_size_dn: 1050
+    typical_range_mm:
+      min: 1029
+      max: 1048
+    maximum_velocity_vmax: 21
+    minimum_velocity_vt: 1/10 vmax
+    minimum_velocity_vmin: 0.5
+  description: >-
+    General characteristics of the family of instruments. The flow rates can be calculated as Q = v ·
+    1/4 · π · D² · 3600, where Q = flow rate [m³/h], v = velocity [m/s], and D = diameter [m].
+  footnotes:
+  - marker:
+    text: >-
+      If higher values are chosen for vmin and/or lower values for vmax it has to be taken into account
+      that vmin ≤ 0.05 vmax and vt ≤ 0.2 vmax.
+  - marker:
+    text: Meter type 3414, 3415, 3416 and 3417 can be manufactured from 4 – 42 inch.
+  - marker:
+    text: Meter type 3418 can be manufactured from 8 – 42 inch.
+- name: Software identification (version and checksum)
+  columns:
+  - applicable_models
+  - software_version
+  - checksum
+  column_units:
+  -
+  -
+  -
+  rows:
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.13'
+    checksum: '0386726438'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.22'
+    checksum: '3499386616'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.24'
+    checksum: '1869761847'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.27'
+    checksum: '2717395331'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.30'
+    checksum: '2620208593'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.31'
+    checksum: '3367318398'
+  - applicable_models: 3414, 3415, 3416, 3417
+    software_version: '1.35'
+    checksum: '1438734832'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.41'
+    checksum: '2979557838'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.42'
+    checksum: '3866406840'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.44'
+    checksum: '1021246235'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.45'
+    checksum: '0046001849'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.50'
+    checksum: '0499641914'
+  - applicable_models: 3414, 3415, 3416, 3417, 3418
+    software_version: '1.60'
+    checksum: '0658881759'
+  description: Software identification (version and checksum) of the meter family.
+  footnotes: []

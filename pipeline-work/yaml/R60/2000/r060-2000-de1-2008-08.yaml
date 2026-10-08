@@ -1,0 +1,226 @@
+_meta:
+  cert_id: 2109
+  num: R060/2000-DE1-2008.08
+  applicant: Flintec GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-08.pdf
+certificate:
+  number: R60/2000-DE1-08.08
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-09-16'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - Germany
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - PC42
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge double bending beam load cell. The load cells (LC) of the series PC42 are double bending
+    beam load cells made of aluminium; the strain gauge application is potted.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    maximum_platform_dimensions:
+      value: 400 x 400
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 413
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=5kg
+      value: 5
+    - model: Emax=10kg
+      value: 10
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=30kg
+      value: 30
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: C3
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: C4
+      value: 4000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: C3
+      value: Emax/10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: C4
+      value: Emax/10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: optional_minimum_lc_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/15000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: C4
+      value: Emax/15000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C3
+  - C4
+test_reports:
+- id: 1.12-4013123-1
+  pages: 27
+  role: test_report
+- id: 1.12-4013123-2
+  pages: 21
+  role: test_report
+- id: 1.12-4013123-3
+  pages: 19
+  role: test_report
+model_family:
+  family_name: PC42
+  models:
+  - model_id: Emax=5kg
+  - model_id: Emax=10kg
+  - model_id: Emax=20kg
+  - model_id: Emax=30kg
+  - model_id: Emax=50kg
+  - model_id: Emax=100kg
+  - model_id: Emax=200kg
+footnotes:
+- marker: 1)
+  text: The optional minimum verification interval is indicated on the name plate
+matrix_tables:
+- name: Essential data
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity_emax
+  - minimum_load_cell_verification_interval_vmin
+  - optional_minimum_lc_verification_interval_vmin
+  - max_platform_dimensions
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  -
+  - mm
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity_emax: 5 / 10 / 20 / 30 / 50 / 100 / 200
+    minimum_load_cell_verification_interval_vmin: Emax/5000
+    optional_minimum_lc_verification_interval_vmin:
+    max_platform_dimensions: 400 x 400
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity_emax: 5 / 10 / 20 / 30 / 50 / 100 / 200
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_lc_verification_interval_vmin: Emax/15000
+    max_platform_dimensions: 400 x 400
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity_emax: 5 / 10 / 20 / 30 / 50 / 100 / 200
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    optional_minimum_lc_verification_interval_vmin: Emax/15000
+    max_platform_dimensions: 400 x 400
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed per accuracy
+    class.
+  footnotes:
+  - 1) The optional minimum verification interval is indicated on the name plate

@@ -1,0 +1,144 @@
+_meta:
+  cert_id: 1715
+  num: R060/2000-NL1-2006.10
+  applicant: Vishay Precision or tedea-Huntleigh
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2006-10.pdf
+certificate:
+  number: R60/2000-NL1-06.10
+  scheme: A
+  project_number: '606274'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-07-04'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Vishay Transducers
+  address_lines:
+  - 5a Hatzoran St.
+  - Netanya, 42506
+  - Israel
+manufacturers:
+- name: Tedea-Huntleigh and Vishay Transducers
+  address_lines:
+  - 5a Hatzoran St.
+  - Netanya, 42506
+  - Israel
+certified_type:
+  category: Load cell
+  type_designations:
+  - '1510'
+  module_designation:
+  description: Bending beam load cell
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 100
+        max: 500
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: max_load_cell_intervals_nlc
+    unit_symbol:
+    values:
+    - model: n=1000
+      value: 1000
+      footnote_markers: []
+    - model: n=2000
+      value: 2000
+      footnote_markers: []
+    - model: n=3000
+      value: 3000
+      footnote_markers: []
+    - model: n=4000
+      value: 4000
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: n=1000
+      value: 4000
+      footnote_markers: []
+    - model: n=2000
+      value: 8000
+      footnote_markers: []
+    - model: n=3000
+      value: 12500
+      footnote_markers: []
+    - model: n=4000
+      value: 12500
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/1991-NL-99.17
+  pages: 38
+  role: type_evaluation_report
+- id: R60/2000-NL1-06.10
+  pages: 38
+  role: test_report
+- id: TC5623
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: n=1000
+  - model_id: n=2000
+  - model_id: n=3000
+  - model_id: n=4000
+matrix_tables:
+- name: Load cell intervals and minimum load cell verification interval ratio
+  columns:
+  - max_load_cell_intervals_nlc
+  - ratio_y_emax_over_vmin
+  rows:
+  - max_load_cell_intervals_nlc: 1000
+    ratio_y_emax_over_vmin: 4000
+  - max_load_cell_intervals_nlc: 2000
+    ratio_y_emax_over_vmin: 8000
+  - max_load_cell_intervals_nlc: 3000
+    ratio_y_emax_over_vmin: 12500
+  - max_load_cell_intervals_nlc: 4000
+    ratio_y_emax_over_vmin: 12500
+  description: >-
+    Maximum number of load cell intervals paired with ratio Y = Emax/Vmin for the four certified variants
+    of type 1510.
+  footnotes: []

@@ -1,0 +1,122 @@
+_meta:
+  cert_id: 2191
+  num: R060/2000-DE1-2009.05
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-05.pdf
+certificate:
+  number: R60/2000-DE1-09.05
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-03-11'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - MP70
+  module_designation:
+  description: >-
+    Strain gauge single point load cell. The load cells (LC) of the series MP70 are single point load
+    cells made of aluminium. The strain gauge application is potted.
+characteristics:
+  type_level:
+    max_load_cell_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value: 413
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=5kg
+      value: 5
+    - model: Emax=10kg
+      value: 10
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=30kg
+      value: 30
+    - model: Emax=40kg
+      value: 40
+  config_level:
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/6000
+      unit_symbol:
+    - condition: C3MR
+      value: Emax/12000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C3MR
+test_reports:
+- id: 1.12-4039337-1
+  pages: 24
+  role: test_report
+- id: 1.12-4039337-2
+  pages: 19
+  role: test_report
+model_family:
+  family_name: MP70
+  models:
+  - model_id: Emax=5kg
+  - model_id: Emax=10kg
+  - model_id: Emax=20kg
+  - model_id: Emax=30kg
+  - model_id: Emax=40kg

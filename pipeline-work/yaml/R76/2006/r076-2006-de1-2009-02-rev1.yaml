@@ -1,0 +1,252 @@
+_meta:
+  cert_id: 4024
+  num: R076/2006-DE1-2009.02 Rev. 1
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2016'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-de1-2009-02-rev1.pdf
+certificate:
+  number: R76/2006-DE1-09.02
+  page_total: 3
+  member_state: Germany
+  date_issued: '2016-08-24'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Member of Certification Body
+applicants:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+manufacturers:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+certified_type:
+  category: Nonautomatic weighing instrument
+  type_designations:
+  - WM...
+  - WM-ITC...
+  module_designation: Not applicable
+  description: Nonautomatic electromechanical weighing instrument with or without lever system
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 0.1
+        max: 120000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers:
+      - 3)
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers:
+      - 3)
+  config_level:
+  - attribute: max_number_of_intervals_n
+    axis: accuracy class and load cell technology
+    values:
+    - condition: "(II), (III), (IIII), strain gauge load cell"
+      value: 10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: "(II), (III), (IIII), EMFR load cell (EMFR-LC)"
+      value: 82000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: "(III)"
+      value: 6000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: "(IIII)"
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+  - attribute: max_number_of_intervals_ni
+    axis: accuracy class
+    values:
+    - condition: "(III)"
+      value: 3000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: "(IIII)"
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+  - attribute: tare_balancing_range_percent_of_max
+    axis: tare type
+    values:
+    - condition: subtractive tare
+      value: 100
+      unit_symbol: "%"
+      footnote_markers: []
+    - condition: additive tare
+      value: 500
+      unit_symbol: "%"
+      footnote_markers:
+      - 4)
+  - attribute: tare_input_range_percent_of_max
+    axis: instrument range type
+    values:
+    - condition: all accuracy classes; each range of single- and multiple range instruments
+      value: 100
+      unit_symbol: "%"
+      footnote_markers:
+      - 1)
+  - attribute: tare_input_range_percent_of_max1
+    axis: instrument range type
+    values:
+    - condition: multi-interval instruments, accuracy classes (III) and (IIII)
+      value: 100
+      unit_symbol: "%"
+      footnote_markers:
+      - 2)
+recommendation:
+  id: R76-1
+  edition: 2006
+  accuracy_classes:
+  - II
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4043571
+  pages: 36
+  role: type_evaluation_report
+- id: '1007051104'
+  pages: 48
+  role: test_report
+- id: '1105081104'
+  pages: 17
+  role: test_report
+- id: '1207011104'
+  pages: 51
+  role: test_report
+- id: '1211041104'
+  pages: 15
+  role: test_report
+- id: '1204081104'
+  pages: 17
+  role: test_report
+- id: '1204091104'
+  pages: 15
+  role: test_report
+- id: '1406032104'
+  pages: 17
+  role: test_report
+- id: '1406022104'
+  pages: 17
+  role: test_report
+- id: '1503031104'
+  pages: 18
+  role: test_report
+- id: '1510011104'
+  pages: 18
+  role: test_report
+- id: '1604020104'
+  pages: 17
+  role: test_report
+- id: '1604030104'
+  pages: 17
+  role: test_report
+- id: '1602040104'
+  pages: 56
+  role: test_report
+- id: '1604040104'
+  pages: 23
+  role: test_report
+- id: '1604021104'
+  pages: 21
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2016-08-24'
+  changes: >-
+    Issued because new software-IDs, new types, alternative supply voltages, weighing module iL Precision
+    35F/HY, expansion of Max-load, supplement for type designation and for display dimensions and supplement
+    of documentation were added. The test results of the former Test Reports No. 1.12-4043571/1 to 1.12-4043571/3
+    remain valid.
+components:
+- role: weighing module
+  type_designations:
+  - iL Precision 35F/HY
+footnotes:
+- marker: 1)
+  text: This applies to each range of single- and multiple range instruments
+- marker: 2)
+  text: This applies only to multi-interval instruments
+- marker: 3)
+  text: This is limited to the least amount of data of the weighing module used
+- marker: 4)
+  text: >-
+    Additive tare doesn't apply for type series WM-ITC... designed as multi-range scale with two separate
+    load cells
+matrix_tables:
+- name: Table 1 - Metrological characteristics by accuracy class
+  columns:
+  - accuracy_class
+  - max
+  - n_max
+  - ni_max
+  - temperature_range
+  - tare_balancing_range
+  - tare_input_range
+  column_units:
+  -
+  - kg / t
+  -
+  -
+  - "°C"
+  - "% of Max"
+  - "% of Max"
+  rows:
+  - accuracy_class: "(II), (III), (IIII)"
+    max: 0.1 kg ... 120 t
+    n_max: 10000 (strain gauge load cell) / 82000 (EMFR-LC)
+    ni_max:
+    temperature_range: "-10 °C / +40 °C"
+    tare_balancing_range: 100 % of Max (subtractive) / 500 % (additive)
+    tare_input_range: 100 % of Max
+  - accuracy_class: "(III)"
+    max: 0.1 kg ... 120 t
+    n_max: 6000
+    ni_max: 3000
+    temperature_range: "-10 °C / +40 °C"
+    tare_balancing_range: 100 % of Max (subtractive) / 500 % (additive)
+    tare_input_range: 100 % of Max; 100 % of Max1
+  - accuracy_class: "(IIII)"
+    max: 0.1 kg ... 120 t
+    n_max: 1000
+    ni_max: 1000
+    temperature_range: "-10 °C / +40 °C"
+    tare_balancing_range: 100 % of Max (subtractive) / 500 % (additive)
+    tare_input_range: 100 % of Max; 100 % of Max1
+  description: >-
+    Metrological and technical characteristics of the certified type per accuracy class. The first column
+    applies to all classes (II), (III), (IIII); the following columns give the class-specific limits.
+  footnotes:
+  - 1) This applies to each range of single- and multiple range instruments
+  - 2) This applies only to multi-interval instruments
+  - 3) This is limited to the least amount of data of the weighing module used
+  - >-
+    4) Additive tare doesn't apply for type series WM-ITC... designed as multi-range scale with two separate
+    load cells

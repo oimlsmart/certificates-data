@@ -1,0 +1,256 @@
+_meta:
+  cert_id: 4571
+  num: R76/2006-A-NL1-18.03
+  applicant: Shanghai Teraoka Electronic Co. Ltd.
+  issuing_year: '2018'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2018-03.pdf
+certificate:
+  number: R76/2006-A-NL1-18.03
+  scheme: A
+  project_number: '1901725'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2018-01-24'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan County
+  - Shanghai 201505
+  - P.R. of China
+manufacturers:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan County
+  - Shanghai 201505
+  - P.R. of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - RM-5800
+  - SM-120 (LL) BS PLUS
+  module_designation: Not applicable
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_ranges:
+      value: Single interval and/or Multi-interval
+      unit_symbol:
+      unit_id:
+    maximum_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    application:
+      value: Integrated POS software; intended to be used for direct sales to the public
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing range configuration
+    values:
+    - condition: single interval, with A/D board STB-2236
+      value:
+        min:
+        max: 6000
+      unit_symbol: divisions
+    - condition: per partial weighing range (multi-interval)
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+  - attribute: tare_limit
+    axis: weighing range configuration
+    values:
+    - condition: instruments with one weighing range
+      value:
+        min:
+        max: -50
+      unit_symbol: "%"
+    - condition: multi-interval instruments
+      value: "-Max1"
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/2006-NL1-10.06
+  date: '2010-03-22'
+  pages: 59
+  role: type_evaluation_report
+- id: NMi-12200263-01
+  date: '2012-09-28'
+  pages: 23
+  role: test_report
+- id: NMi-12200684-01
+  date: '2012-12-06'
+  pages: 11
+  role: test_report
+- id: NMi-13200468-01
+  date: '2013-10-21'
+  pages: 21
+  role: test_report
+- id: NMi-14200357-01
+  date: '2014-10-10'
+  pages: 37
+  role: test_report
+- id: NMi-14200490-01
+  date: '2014-10-10'
+  pages: 17
+  role: test_report
+- id: NMi-15200739-01
+  date: '2016-02-24'
+  pages: 35
+  role: test_report
+- id: NMi-1900734-01
+  date: '2017-04-20'
+  pages: 42
+  role: test_report
+- id: NMi-1901725-01
+  date: '2018-01-24'
+  pages: 15
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: RM-5800
+    label: RM-5800
+    attributes: {}
+  - model_id: SM-120 (LL) BS PLUS
+    label: SM-120 (LL) BS PLUS
+    attributes: {}
+components:
+- role: analog-to-digital board
+  type_designations:
+  - STB-2236
+  alternatives:
+  characteristics: {}
+matrix_tables:
+- name: Software identification
+  columns:
+  - software
+  - operating_system
+  - filenames
+  - version
+  - checksum
+  - remarks
+  rows:
+  - software: Scale software
+    operating_system:
+    filenames:
+    - libwm.jar
+    version:
+    - 1.1.0.release_build:59
+    - 1.1.0.release_build:51
+    - 1 (Maxlabel software)
+    checksum:
+    - '00085704'
+    - '00077148'
+    - 14015C4F
+    remarks: "-"
+  - software: Scale software
+    operating_system:
+    filenames:
+    - libscale.jar
+    - libprice.jar
+    version:
+    - 1.1.0.release_build:26
+    - 1.1.0.release_build:5
+    checksum: '00064855'
+    remarks: one checksum calculated over two files
+  - software: POS software
+    operating_system: Windows
+    filenames:
+    - libscale.dll
+    - libprice.dll
+    version:
+    - '1'
+    - '1'
+    checksum:
+    - '00459169'
+    - 41047A60
+    remarks: one checksum calculated over two files
+  - software: POS software
+    operating_system: Linux
+    filenames:
+    - libscale.so
+    - libprice.so
+    version:
+    - '1'
+    - '1'
+    checksum:
+    - '00747997'
+    - 169330BA
+    remarks: one checksum calculated over two files
+  - software: POS software
+    operating_system: Linux
+    filenames:
+    - Rm5800drv.so
+    version: 1.0b145
+    checksum: 8293B120200D92BF5F86EC2A4D099F9E
+    remarks: "-"
+  description: >-
+    Approved software versions and checksums for scale software and POS software (Windows and Linux);
+    each checksum entry corresponds positionally to the listed filename/version.
+  footnotes: []

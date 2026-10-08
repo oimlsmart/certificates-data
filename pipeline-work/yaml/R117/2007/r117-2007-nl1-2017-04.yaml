@@ -1,0 +1,404 @@
+_meta:
+  cert_id: 4508
+  num: R117/2007-NL1-2017.04
+  applicant: Endress + Hauser Flowtec AG
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2017-04.pdf
+certificate:
+  number: R117/2007-NL1-17.04
+  scheme: A
+  project_number: '1901185'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2017-11-03'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kägenstrasse 7
+  - CH-4153 Reinach
+  - Switzerland
+manufacturers:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kägenstrasse 7
+  - CH-4153 Reinach
+  - Switzerland
+certified_type:
+  category: Measuring transducer
+  type_designations:
+  - Promass Q 300 DNxxx
+  - Promass Q 500 DNxxx
+  module_designation:
+  description: >-
+    Measurement transducer (flow transmitter) for dynamic measuring systems for liquids other than water.
+    The Promass 300 and Promass 500 flow transmitter is solely to be used in combination with dynamic
+    mass meters (Coriolis meters) of brand Endress + Hauser.
+characteristics:
+  type_level:
+    maximum_pressure:
+      value: 100
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    density_range:
+      value:
+        min: 400
+        max: 1400
+      unit_symbol: kg/m³
+      unit_id:
+      footnote_markers: []
+    maximum_viscosity:
+      value: 440
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_dc:
+      value: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_flow_rate
+    unit_symbol: t/h
+    values:
+    - model: DN25
+      value: 20
+    - model: DN50
+      value: 80
+    - model: DN80
+      value: 200
+    - model: DN100
+      value: 400
+  - attribute: minimum_flow_rate
+    unit_symbol: t/h
+    values:
+    - model: DN25
+      value: 0.45
+    - model: DN50
+      value: 2
+    - model: DN80
+      value: 6
+    - model: DN100
+      value: 14
+  - attribute: minimum_measured_quantity
+    unit_symbol: kg
+    values:
+    - model: DN25
+      value: 10
+    - model: DN50
+      value: 20
+    - model: DN80
+      value: 100
+    - model: DN100
+      value: 200
+  config_level:
+  - attribute: product_temperature_range
+    axis: measurement mode
+    values:
+    - condition: mass, density and volume measurement
+      value:
+        min: -10
+        max: 90
+      unit_symbol: "°C"
+    - condition: mass measurement
+      value:
+        min: -200
+        max: 90
+      unit_symbol: "°C"
+  - attribute: software_version
+    axis: transmitter variant
+    values:
+    - condition: Promass 300
+      value: 01.00.02
+      unit_symbol:
+    - condition: Promass 300
+      value: 01.01.01
+      unit_symbol:
+    - condition: Promass 500
+      value: 01.01.01
+      unit_symbol:
+recommendation:
+  id: R117-1
+  edition: 2007
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - 0.3
+  - 0.5
+  - 1.0
+  - 1.5
+test_reports:
+- id: NMi-15200323-01
+  date: '2016-10-25'
+  pages: 94
+  role: test_report
+- id: NMi-16200475-01
+  date: '2016-12-22'
+  pages: 247
+  role: test_report
+- id: NMi-16200475-02
+  date: '2016-12-22'
+  pages: 16
+  role: test_report
+- id: NMi-1901185-01
+  date: '2017-11-01'
+  pages: 269
+  role: test_report
+- id: TC7149-7
+  role: documentation_file
+- id: TC10822-2
+  role: documentation_file
+model_family:
+  family_name: Promass Q
+  models:
+  - model_id: DN25
+    attributes:
+      transmitter_variants:
+      - Promass 300
+      - Promass 500
+  - model_id: DN50
+    attributes:
+      transmitter_variants:
+      - Promass 300
+      - Promass 500
+  - model_id: DN80
+    attributes:
+      transmitter_variants:
+      - Promass 300
+      - Promass 500
+  - model_id: DN100
+    attributes:
+      transmitter_variants:
+      - Promass 300
+      - Promass 500
+components:
+- role: measurement sensor
+  type_designations:
+  - Promass Q DN25
+  - Promass Q DN50
+  - Promass Q DN80
+  - Promass Q DN100
+  alternatives:
+  characteristics:
+    documentation_folder:
+      value: TC7149-7
+      unit_symbol:
+      footnote_markers: []
+    environment_class:
+      value: M3/E2/H3
+      unit_symbol:
+      footnote_markers: []
+- role: flow transmitter electronics
+  type_designations:
+  - Promass 300
+  alternatives: OR
+  characteristics:
+    documentation_folder:
+      value: TC10822-2
+      unit_symbol:
+      footnote_markers: []
+    environment_class:
+      value: M3/E2
+      unit_symbol:
+      footnote_markers: []
+- role: flow transmitter electronics
+  type_designations:
+  - Promass 500
+  alternatives: OR
+  characteristics:
+    documentation_folder:
+      value: TC10822-2
+      unit_symbol:
+      footnote_markers: []
+    environment_class:
+      value: M3/E2/H3
+      unit_symbol:
+      footnote_markers: []
+footnotes:
+- marker: '1'
+  text: With xxx denoting the size of the Promass Q measurement sensor
+matrix_tables:
+- name: General characteristics of the Promass Q measurement sensor
+  columns:
+  - sensor_size
+  - maximum_flow_rate
+  - minimum_flow_rate
+  - minimum_measured_quantity
+  - maximum_pressure
+  - density_range
+  - maximum_viscosity
+  - ambient_temperature_range
+  - product_temperature_range
+  - accuracy_class
+  - environment_class
+  column_units:
+  -
+  - t/h
+  - t/h
+  - kg
+  - bar
+  - kg/m³
+  - mPa·s
+  - "°C"
+  - "°C"
+  -
+  -
+  rows:
+  - sensor_size: DN25
+    maximum_flow_rate: 20
+    minimum_flow_rate: 0.45
+    minimum_measured_quantity: 10
+    maximum_pressure: 100
+    density_range:
+      min: 400
+      max: 1400
+    maximum_viscosity: 440
+    ambient_temperature_range:
+      min: -40
+      max: 55
+    product_temperature_range:
+      mass_density_volume_measurement:
+        min: -10
+        max: 90
+      mass_measurement:
+        min: -200
+        max: 90
+    accuracy_class: 0.3/0.5/1.0/1.5
+    environment_class: M3/E2/H3
+  - sensor_size: DN50
+    maximum_flow_rate: 80
+    minimum_flow_rate: 2
+    minimum_measured_quantity: 20
+    maximum_pressure: 100
+    density_range:
+      min: 400
+      max: 1400
+    maximum_viscosity: 440
+    ambient_temperature_range:
+      min: -40
+      max: 55
+    product_temperature_range:
+      mass_density_volume_measurement:
+        min: -10
+        max: 90
+      mass_measurement:
+        min: -200
+        max: 90
+    accuracy_class: 0.3/0.5/1.0/1.5
+    environment_class: M3/E2/H3
+  - sensor_size: DN80
+    maximum_flow_rate: 200
+    minimum_flow_rate: 6
+    minimum_measured_quantity: 100
+    maximum_pressure: 100
+    density_range:
+      min: 400
+      max: 1400
+    maximum_viscosity: 440
+    ambient_temperature_range:
+      min: -40
+      max: 55
+    product_temperature_range:
+      mass_density_volume_measurement:
+        min: -10
+        max: 90
+      mass_measurement:
+        min: -200
+        max: 90
+    accuracy_class: 0.3/0.5/1.0/1.5
+    environment_class: M3/E2/H3
+  - sensor_size: DN100
+    maximum_flow_rate: 400
+    minimum_flow_rate: 14
+    minimum_measured_quantity: 200
+    maximum_pressure: 100
+    density_range:
+      min: 400
+      max: 1400
+    maximum_viscosity: 440
+    ambient_temperature_range:
+      min: -40
+      max: 55
+    product_temperature_range:
+      mass_density_volume_measurement:
+        min: -10
+        max: 90
+      mass_measurement:
+        min: -200
+        max: 90
+    accuracy_class: 0.3/0.5/1.0/1.5
+    environment_class: M3/E2/H3
+  description: >-
+    Values from maximum_pressure onward are common to all sensor sizes. Product temperature range: -10…+90
+    °C for mass, density and volume measurement; -200…+90 °C for mass measurement.
+  footnotes: []
+- name: General characteristics of the Promass 300 and Promass 500 electronics
+  columns:
+  - transmitter
+  - environmental_classes
+  - ambient_temperature_range
+  - power_supply
+  - software_identification
+  column_units:
+  -
+  -
+  - "°C"
+  -
+  -
+  rows:
+  - transmitter: Promass 300
+    environmental_classes: M3/E2
+    ambient_temperature_range: "-40…+55 °C; condensing humidity"
+    power_supply: 24 V DC; 100…240 V AC; 50…60 Hz
+    software_identification: >-
+      Version 01.00.02: CRC 0xE87F (Modbus), 0x321F (Hart); Version 01.01.01: CRC 0xA476 (Modbus), 0x977D
+      (Hart)
+  - transmitter: Promass 500
+    environmental_classes: M3/E2/H3
+    ambient_temperature_range: "-40…+55 °C; condensing humidity"
+    power_supply: 24 V DC; 100…240 V AC; 50…60 Hz
+    software_identification: 'Version 01.01.01: CRC 0xA476 (Modbus), 0x977D (Hart)'
+  description: >-
+    The Promass 300 and Promass 500 flow transmitter is solely to be used in combination with dynamic
+    mass meters (Coriolis meters) of brand Endress + Hauser. Documentation folder for the electronics:
+    TC10822-2.
+  footnotes: []

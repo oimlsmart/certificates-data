@@ -1,0 +1,175 @@
+_meta:
+  cert_id: 2406
+  num: R076/1992-NL1-2008.12 Rev. 1
+  applicant: Mettler-Toledo (Albstadt) GmbH
+  issuing_year: '2010'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2008-12-rev1.pdf
+certificate:
+  number: R76/1992-NL1-08.12
+  project_number: '812507'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2010-02-24'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler-Toledo (Albstadt) GmbH
+  address_lines:
+  - Unter dem Malesfelsen 34
+  - D-72458 Albstadt
+  - Germany
+manufacturers:
+- name: Mettler-Toledo (Albstadt) GmbH
+  address_lines:
+  - Unter dem Malesfelsen 34
+  - D-72458 Albstadt
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - BBK4
+  - VIPER
+  description: >-
+    Non-automatic weighing instruments for accuracy class II or class III multi-interval; types BBK4 and
+    VIPER
+characteristics:
+  config_level:
+  - attribute: max_number_of_verification_scale_intervals_n
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min:
+        max: 61000
+      unit_symbol: divisions
+    - condition: III multi-interval (per weighing range)
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 0.61
+        max: 35.1
+      unit_symbol: kg
+    - condition: III multi-interval
+      value:
+        min: 1.5
+        max: 60
+      unit_symbol: kg
+  - attribute: maximum_capacity_additional_load_receptor
+    axis: accuracy_class
+    values:
+    - condition: III multi-interval
+      value:
+        min: 1.5
+        max: 6000
+      unit_symbol: kg
+  - attribute: verification_scale_interval_e
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 10
+        max:
+      unit_symbol: mg
+    - condition: III multi-interval
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+  - attribute: scale_interval_relation
+    axis: accuracy_class
+    values:
+    - condition: II
+      value: e = d or e = 10d
+    - condition: III multi-interval
+      value: e = d
+  - attribute: temperature_range
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 10
+        max: 30
+      unit_symbol: "°C"
+    - condition: III multi-interval
+      value:
+        min: 5
+        max: 35
+      unit_symbol: "°C"
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - II
+  - III
+test_reports:
+- id: R76/1992-NL-00.22A
+  pages: 52
+  role: test_report
+- id: R76/1992-NL-00.22B
+  pages: 31
+  role: test_report
+- id: R76/1992-NL-01.23A
+  pages: 39
+  role: test_report
+- id: R76/1992-NL-01.23B
+  pages: 10
+  role: test_report
+- id: R76/1992-NL1-04.32
+  pages: 30
+  role: test_report
+- id: R76/1992-NL1-08-12
+  pages: 31
+  role: test_report
+- id: T5627
+  role: documentation_file
+revision_history:
+- revision: '1'
+  date: '2010-02-24'
+matrix_tables:
+- name: Characteristics by accuracy class
+  columns:
+  - accuracy_class
+  - max_number_of_verification_scale_intervals_n
+  - maximum_capacity
+  - verification_scale_interval_e
+  - scale_interval_relation
+  - temperature_range
+  rows:
+  - accuracy_class: II
+    max_number_of_verification_scale_intervals_n: 61000
+    maximum_capacity: 610 g – 35.1 kg
+    verification_scale_interval_e: "≥ 10 mg"
+    scale_interval_relation: e = d or e = 10d
+    temperature_range: "+10 °C / +30 °C"
+  - accuracy_class: III multi-interval
+    max_number_of_verification_scale_intervals_n: 10000
+    maximum_capacity: '1.5 kg – 60 kg (additional load receptor: 1.5 kg – 6000 kg)'
+    verification_scale_interval_e: "≥ 1 g"
+    scale_interval_relation: e = d
+    temperature_range: "+5 °C / +35 °C"
+  description: >-
+    Limits for class III multi-interval apply per weighing range; the maximum capacity for the additional
+    load receptor extends to 6000 kg.
+  footnotes: []

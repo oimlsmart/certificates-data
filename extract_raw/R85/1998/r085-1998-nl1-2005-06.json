@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026100822024527a42621f1ea46f2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this OIML Certificate of Conformity.\n\nCertificate details:\n- Number: R85/1998-NL1-05.06\n- Scheme: The certificate doesn't explicitly mention scheme A or B. It's a basic OIML certificate. I'll omit or infer... R85/1998-NL1-05.06 — the format suggests it's issued by NMi Netherlands. Scheme isn't stated, so omit.\n- Project number: 500019\n- Page total: 2\n- Member state: The Netherlands\n- Date issued: March 17th, 2005 (Issuing Authority signature date). The CIML member signed March 18th, 2005. Typically the date issued would be the issuing authority date: 2005-03-17.\n- OIML issuer id: not given explicitly. Omit.\n\nIssuing authority:\n- Name: NMi Certin B.V.\n- Address lines: [\"Hugo de Grootplein 1\", \"3314 EG  Dordrecht\"]\n- Person responsible: Ing. C. Oosterman\n- Phone/email/website: not present\n- oiml_issuer_id: not present\n\nApplicants:\n- Endress + Hauser GmbH + Co. KG, Hauptstrasse 1, Maulburg, Germany\n\nManufacturers:\n- Endress + Hauser GmbH + Co. KG, same address\n\nCertified type:\n- Category: \"Automatic level gauge\" — the schema categories examples: \"Load cell\", \"Indicator\", \"Measuring system\", \"Fuel dispenser\", \"Taximeter\", \"Gas meter\"... For R85 it's an automatic level gauge. Use \"Automatic level gauge\".\n- Type designations: [\"Micropilot S FMR 531 DN 150\"] — model Micropilot S FMR 531 DN 150. Perhaps \"Micropilot S FMR 531\" with DN 150 as attribute? The text says \"model Micropilot S FMR 531 DN 150\". I'll include \"Micropilot S FMR 531 DN 150\" as type designation. Could also add \"Micropilot S FMR 531\".\n- Module designation: not applicable — omit (not present).\n- Description: \"Automatic level gauge for measuring the level of liquid in fixed storage tanks\"\n\nModel family: only one model, so omit.\n\nComponents: none named. Omit.\n\nCharacteristics: none given numerically. Omit.\n\nMatrix tables: none.\n\nRecommendation:\n- id: \"R85\"\n- edition: 1998\n- amendment: not present\n- scheme: not stated; could omit.\n- accuracy_classes: [\"2\"] — \"for accuracy class 2\". Probably [2] as number or \"2\". I'll use [\"2\"] or [2]. Schema says accuracy_classes[] — I'll use [\"2\"] as string? The class 2 — numeric 2. Hmm. I'll use [2]? Let's use [\"2\"] to be safe? Actually accuracy class is typically a designation like \"C\", \"2\", \"III\". For R85 level gauges, accuracy classes are numbered 1, 2, 3. I'll use [2]... Schema doesn't specify type. Use [\"2\"]? I'll go with [2] as integer? Safer: [\"2\"]. Hmm. I'll use [2].\n\nActually, let me just use [\"2\"] — no wait, many implementations expect numbers or strings. I'll use [2] since class is numeric.\n\nTest reports:\n- R85/1998-NL-01.06, 33 pages, role: test_report (the text says \"associated Test Report\")\n- CPC/500091/01, 22 pages, role: test_report\n- CPC/500091/02, 24 pages, test_report\n- CPC/500091/03, 21 pages, test_report\n- CPC/500091/04, 21 pages, test_report\n\nDates for test reports not given.\n\nRevision history: none.\n\nFootnotes: none.\n\nOutput JSON.",
+      "signature": "58664c9aae334013ab4733ba"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"certificate\": {\n    \"number\": \"R85/1998-NL1-05.06\",\n    \"project_number\": \"500019\",\n    \"page_total\": 2,\n    \"member_state\": \"The Netherlands\",\n    \"date_issued\": \"2005-03-17\"\n  },\n  \"issuing_authority\": {\n    \"name\": \"NMi Certin B.V.\",\n    \"address_lines\": [\n      \"Hugo de Grootplein 1\",\n      \"3314 EG  Dordrecht\"\n    ],\n    \"person_responsible\": \"Ing. C. Oosterman\",\n    \"oiml_issuer_id\": null\n  },\n  \"applicants\": [\n    {\n      \"name\": \"Endress + Hauser GmbH + Co. KG\",\n      \"address_lines\": [\n        \"Hauptstrasse 1\",\n        \"Maulburg\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"manufacturers\": [\n    {\n      \"name\": \"Endress + Hauser GmbH + Co. KG\",\n      \"address_lines\": [\n        \"Hauptstrasse 1\",\n        \"Maulburg\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"certified_type\": {\n    \"category\": \"Automatic level gauge\",\n    \"type_designations\": [\n      \"Micropilot S FMR 531 DN 150\"\n    ],\n    \"description\": \"Automatic level gauge for measuring the level of liquid in fixed storage tanks\"\n  },\n  \"recommendation\": {\n    \"id\": \"R85\",\n    \"edition\": 1998,\n    \"accuracy_classes\": [2]\n  },\n  \"test_reports\": [\n    {\n      \"id\": \"R85/1998-NL-01.06\",\n      \"pages\": 33,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/01\",\n      \"pages\": 22,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/02\",\n      \"pages\": 24,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/03\",\n      \"pages\": 21,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/04\",\n      \"pages\": 21,\n      \"role\": \"test_report\"\n    }\n  ]\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 771,
+    "output_tokens": 1391,
+    "cache_read_input_tokens": 2880,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

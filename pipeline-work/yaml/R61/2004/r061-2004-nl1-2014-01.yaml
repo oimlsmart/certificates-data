@@ -1,0 +1,227 @@
+_meta:
+  cert_id: 3430
+  num: R061/2004-NL1-2014.01
+  applicant: Immea Dosatrici S.R.L.
+  issuing_year: '2014'
+  status: Valid
+  issuer: NL1
+  recommendation: R61
+  edition_year: 2004
+  extraction_method: glm-extract
+  source_pdf: certificates/R61/2004/r061-2004-nl1-2014-01.pdf
+certificate:
+  number: R61/2004-NL1-14.01
+  scheme: A
+  project_number: '13200362'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2014-02-21'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Immea Dosatrici S.R.L.
+  address_lines:
+  - Via Borsellino 27
+  - 25038 Rovato (BS)
+  - Italy
+manufacturers:
+- name: Immea Dosatrici S.R.L.
+  address_lines:
+  - Via Borsellino 27
+  - 25038 Rovato (BS)
+  - Italy
+certified_type:
+  category: Automatic gravimetric filling instrument
+  type_designations:
+  - DAP...
+  module_designation:
+  description: >-
+    Automatic gravimetric filling instrument destined to be used as single load weigher. Reference accuracy
+    class X(1); the actual class X(x) is determined at the time of putting into use. The weighing instrument
+    can be used in non-automatic mode as control weighing instrument.
+characteristics:
+  type_level:
+    intended_use:
+      value: single load weigher
+      unit_symbol:
+      unit_id:
+    reference_accuracy_class:
+      value: X(1)
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    maximum_capacity:
+      value:
+        min:
+        max: 3000
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value: "≤ MinFill (see minimum fill table)"
+      unit_symbol:
+      unit_id:
+    number_of_verification_scale_intervals:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    software_identification:
+      value: As mentioned in the certificates involved
+      unit_symbol:
+      unit_id:
+    use_in_non_automatic_mode:
+      value: control weighing instrument
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: minimum_fill_minfill
+    axis: discrimination_d and reference_accuracy_class
+    values:
+    - condition: d = 1 g, X(1)
+      value: 130
+      unit_symbol: g
+    - condition: d = 1 g, X(2)
+      value: 32
+      unit_symbol: g
+    - condition: d = 2 g, X(1)
+      value: 390
+      unit_symbol: g
+    - condition: d = 2 g, X(2)
+      value: 130
+      unit_symbol: g
+    - condition: d = 5 g, X(1)
+      value: 1945
+      unit_symbol: g
+    - condition: d = 5 g, X(2)
+      value: 485
+      unit_symbol: g
+    - condition: d = 10 g, X(1)
+      value: 3890
+      unit_symbol: g
+    - condition: d = 10 g, X(2)
+      value: 1950
+      unit_symbol: g
+    - condition: d = 20 g, X(1)
+      value: 7780
+      unit_symbol: g
+    - condition: d = 20 g, X(2)
+      value: 3900
+      unit_symbol: g
+    - condition: d = 50 g, X(1)
+      value: 29200
+      unit_symbol: g
+    - condition: d = 50 g, X(2)
+      value: 9750
+      unit_symbol: g
+    - condition: d ≥ 100 g, X(1)
+      value: 584*d
+      unit_symbol: g
+    - condition: d ≥ 100 g, X(2)
+      value: 292*d
+      unit_symbol: g
+recommendation:
+  id: R61
+  edition: 2004
+  scheme: A
+  accuracy_classes:
+  - X(1)
+test_reports:
+- id: NMi-13200362-01
+  date: '2014-01-08'
+  pages: 20
+  role: type_evaluation_report
+- id: 504169A
+  date: '2005-10-21'
+  pages: 45
+  role: test_report
+- id: 504169B
+  date: '2005-10-21'
+  pages: 16
+  role: test_report
+- id: PTB 1.12-4047802-1
+  date: '2010-07-21'
+  pages: 24
+  role: test_report
+- id: PTB 1.12-4047802-2
+  date: '2010-07-22'
+  pages: 19
+  role: test_report
+- id: PTB 1.12-4047802-3
+  date: '2010-07-22'
+  pages: 19
+  role: test_report
+- id: PTB 1.12-4047802-4
+  date: '2010-07-21'
+  pages: 20
+  role: test_report
+matrix_tables:
+- name: Rated minimum fill (MinFill) based on a typical number of one weighing container
+  columns:
+  - discrimination_d
+  - minfill_x1
+  - minfill_x2
+  column_units:
+  - g
+  - g
+  - g
+  rows:
+  - discrimination_d: 1
+    minfill_x1: 130
+    minfill_x2: 32
+  - discrimination_d: 2
+    minfill_x1: 390
+    minfill_x2: 130
+  - discrimination_d: 5
+    minfill_x1: 1945
+    minfill_x2: 485
+  - discrimination_d: 10
+    minfill_x1: 3890
+    minfill_x2: 1950
+  - discrimination_d: 20
+    minfill_x1: 7780
+    minfill_x2: 3900
+  - discrimination_d: 50
+    minfill_x1: 29200
+    minfill_x2: 9750
+  - discrimination_d:
+      min: 100
+      max:
+    minfill_x1: 584*d
+    minfill_x2: 292*d
+  description: >-
+    Rated minimum fill (MinFill) in grams as a function of the discrimination d, for reference accuracy
+    classes X(1) and X(2).
+  footnotes: []

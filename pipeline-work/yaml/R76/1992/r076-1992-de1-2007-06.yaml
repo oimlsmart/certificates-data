@@ -1,0 +1,184 @@
+_meta:
+  cert_id: 1913
+  num: R076/1992-DE1-2007.06
+  applicant: Soehnle-Waagen GmbH + Co.
+  issuing_year: '2007'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2007-06.pdf
+certificate:
+  number: R76/1992-DE1-07.06
+  page_total: 2
+  member_state: Germany
+  date_issued: '2007-08-23'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirektor
+applicants:
+- name: Soehnle Professional GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Soehnle-Straße 2
+  - 71540 Murrhardt
+  - Germany
+manufacturers:
+- name: Soehnle Professional GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Soehnle-Straße 2
+  - 71540 Murrhardt
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - 301x
+  module_designation: Not applicable
+  description: >-
+    Non-automatic electromechanical weighing instrument with or without lever system. Design as flight
+    baggage, vehicle, platform or container scale, wall-mounted or overhead track scale, with or without
+    lever system, also as multi-interval or multiple range weighing instrument; introduces the force into
+    one or more load cells. The weighing ranges with Max, Min, verification scale interval and number
+    of verification scale intervals may be selected within the limiting values of Table 1, Nos. 3.2 and
+    3.3 of the associated Report, in accordance with Nos. 2 and 3 of R76-1. Due to the modular construction,
+    the fractions p_i of the maximum permissible error of the individual modules must comply with: 1 ≥
+    p_i1² + p_i2² + ... + p_in² (No. 3.5.4 of R76-1).
+characteristics:
+  type_level:
+    maximum_capacity_lower_limit:
+      value: 0.1
+      unit_symbol: kg
+      unit_id:
+    maximum_capacity_upper_limit:
+      value: 120
+      unit_symbol: t
+      unit_id:
+    tare_compensating_range_subtractive:
+      value: 100
+      unit_symbol: "%"
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  config_level:
+  - attribute: max_number_of_verification_scale_intervals_n
+    axis: accuracy_class
+    unit_symbol:
+    values:
+    - condition: III
+      value:
+        min:
+        max: 8000
+      footnote_markers:
+      - 1)
+    - condition: IIII
+      value:
+        min:
+        max: 1000
+      footnote_markers:
+      - 1)
+  - attribute: max_number_of_partial_verification_scale_intervals_ni
+    axis: accuracy_class
+    unit_symbol:
+    values:
+    - condition: III
+      value:
+        min:
+        max: 8000
+      footnote_markers:
+      - 2)
+      - 3)
+    - condition: IIII
+      value:
+        min:
+        max: 1000
+      footnote_markers:
+      - 2)
+      - 3)
+  - attribute: preset_tare_range
+    axis: interval_configuration
+    unit_symbol: "%"
+    values:
+    - condition: single-interval (of Max)
+      value: 100
+    - condition: multi-interval (of Max1)
+      value: 100
+      footnote_markers:
+      - 2)
+recommendation:
+  id: R76-1
+  edition: 1992
+  amendment: Amendment 1 (1994)
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4030044
+  pages: 10
+  role: type_evaluation_report
+- id: 1.12-4030044/1
+  pages: 43
+  role: test_report
+- id: 1.12-4030044/2
+  pages: 15
+  role: test_report
+footnotes:
+- marker: 1)
+  text: Valid for each range of single- and multiple range weighing instruments
+- marker: 2)
+  text: Valid for multi-interval instruments only
+- marker: 3)
+  text: acc. to the data of the load cells used
+matrix_tables:
+- name: Table 1 - Limiting values for selectable weighing ranges by accuracy class
+  columns:
+  - attribute
+  - class_III
+  - class_IIII
+  rows:
+  - attribute: max
+    class_III: 0.1 kg ... 120 t
+    class_IIII: 0.1 kg ... 120 t
+  - attribute: "n"
+    class_III: "≤ 8000"
+    class_IIII: "≤ 1000"
+    footnotes:
+    - 1)
+  - attribute: ni_max
+    class_III: "≤ 8000"
+    class_IIII: "≤ 1000"
+    footnotes:
+    - 2)
+    - 3)
+  - attribute: max_over_e1_max
+    class_III:
+    class_IIII:
+    footnotes:
+    - 2)
+    - 3)
+  - attribute: tare_compensating_range_subtractive
+    class_III: 100% of Max
+    class_IIII: 100% of Max
+  - attribute: preset_tare_range
+    class_III: 100% of Max; 100% of Max1
+    class_IIII: 100% of Max; 100% of Max1
+    footnotes:
+    - 2)
+  - attribute: temperature_range
+    class_III: "-10 °C / +40 °C"
+    class_IIII: "-10 °C / +40 °C"
+  description: >-
+    Limiting values within which the weighing ranges (Max, Min, verification scale interval, number of
+    verification scale intervals) may be selected. The Max/e1 row carries no numeric values in the certificate;
+    it is subject to footnote 3 (acc. to the data of the load cells used).
+  footnotes:
+  - 1)
+  - 2)
+  - 3)

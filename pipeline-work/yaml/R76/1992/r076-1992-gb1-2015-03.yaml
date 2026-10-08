@@ -1,0 +1,231 @@
+_meta:
+  cert_id: 3652
+  num: R076/1992-GB1-2015.03
+  applicant: Dini Argeo Srl
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-gb1-2015-03.pdf
+certificate:
+  number: R76/1992-GB1-15.03
+  scheme: B
+  project_number: T1138/0015
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2015-02-20'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Dini Argeo S.r.l.
+  address_lines:
+  - Via della Fisica 20
+  - 41042 Spezzano di Fiorano
+  - Modena
+  - Italy
+manufacturers:
+- name: Dini Argeo S.r.l.
+  address_lines:
+  - Via della Fisica 20
+  - 41042 Spezzano di Fiorano
+  - Modena
+  - Italy
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - GP
+  - GPE
+  module_designation: Not applicable
+  description: >-
+    GP and GPE series of multi-divisional non-automatic weighing instruments, mains or battery powered,
+    accuracy class III, price-computing, stand-alone instruments intended for direct sales to the public.
+    Maximum capacities are between 3 kg and 3000 kg. Construction depends on the model number; the designation
+    follows the format 'Family'+'suffix', where the family is GP or GPE and the suffix comprises alphanumeric
+    characters identifying different variants. Features include environmental protection against dust,
+    water and insects; LCD, LED and touch displays; high-speed thermal printer; die-cast chassis and plastic
+    housing containing the load cell and electronics; stainless steel and aluminium load receptor; mechanical
+    and membrane keyboard; level indicator.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 3000
+      unit_symbol: kg
+      unit_id:
+    mains_supply_voltage:
+      value:
+        min: 230
+        max: 240
+      unit_symbol: V
+      unit_id:
+    mains_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    mains_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: power interface, serial port, cashier box interface, Ethernet (wired or RF), USB, WiFi
+      unit_symbol:
+      unit_id:
+    legally_relevant_software_version:
+      value: 230100000.1.09
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: dc_supply_voltage
+    axis: DC power source
+    values:
+    - condition: internal accumulators
+      value:
+        min: 6
+        max: 24
+      unit_symbol: V
+    - condition: external DC source
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+  - attribute: maximum_capacity
+    axis: approved load cell combination
+    values:
+    - condition: HBM SP4C3MR, Emax 20 kg
+      value: 15
+      unit_symbol: kg
+    - condition: TEDEA 1042C3, Emax 20 kg
+      value: 15
+      unit_symbol: kg
+    - condition: TEDEA 1042C3 or 1042C6, Emax 50 kg
+      value: 30
+      unit_symbol: kg
+    - condition: HBM SP4C3MR, Emax 50 kg
+      value: 30
+      unit_symbol: kg
+    - condition: HBM SP4C6MR, Emax 36 kg
+      value: 30
+      unit_symbol: kg
+    - condition: HBM PW2C6MR, Emax 36 kg
+      value: 30
+      unit_symbol: kg
+    - condition: TRANSDUTEC TPF1-6D, Emax 35 kg
+      value: 35
+      unit_symbol: kg
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+test_reports:
+- id: PM01/03
+  pages: 127
+  role: type_evaluation_report
+- id: PM02/03
+  pages: 33
+  role: type_evaluation_report
+- id: PM03/03
+  role: type_evaluation_report
+revision_history:
+- revision: '15.03'
+  date: '2015-02-20'
+  changes: Type approval first issued
+model_family:
+  family_name: GP and GPE
+  models:
+  - model_id: GP
+  - model_id: GPE
+components:
+- role: load cell
+  type_designations:
+  - SP4C3MR
+  - 1042C3
+  - 1042C6
+  - SP4C6MR
+  - PW2C6MR
+  - TPF1-6D
+  alternatives: OR
+  characteristics:
+    type_level:
+      approval_requirement:
+        value: >-
+          OIML R60 Certificate of Conformity or EC Test Certificate (EN45501) issued by a Notified Body;
+          NH-marked cells only if humidity tested to EN45501
+        unit_symbol:
+        unit_id:
+matrix_tables:
+- name: Approved alternative load cells
+  columns:
+  - manufacturer
+  - load_cell_model
+  - load_cell_emax
+  - scale_model
+  - max_capacity
+  column_units:
+  -
+  -
+  - kg
+  -
+  - kg
+  rows:
+  - manufacturer: HBM
+    load_cell_model: SP4C3MR
+    load_cell_emax: 20
+    scale_model: GP, GPE
+    max_capacity: 15
+  - manufacturer: TEDEA
+    load_cell_model: 1042C3
+    load_cell_emax: 20
+    scale_model: GP, GPE
+    max_capacity: 15
+  - manufacturer: TEDEA
+    load_cell_model: 1042C3, 1042C6
+    load_cell_emax: 50
+    scale_model: GP, GPE
+    max_capacity: 30
+  - manufacturer: HBM
+    load_cell_model: SP4C3MR
+    load_cell_emax: 50
+    scale_model: GP, GPE
+    max_capacity: 30
+  - manufacturer: HBM
+    load_cell_model: SP4C6MR
+    load_cell_emax: 36
+    scale_model: GP, GPE
+    max_capacity: 30
+  - manufacturer: HBM
+    load_cell_model: PW2C6MR
+    load_cell_emax: 36
+    scale_model: GP, GPE
+    max_capacity: 30
+  - manufacturer: TRANSDUTEC
+    load_cell_model: TPF1-6D
+    load_cell_emax: 35
+    scale_model: GP, GPE
+    max_capacity: 35
+  description: >-
+    The instruments approved under this certificate may use the following alternative load cells. All
+    load cells listed have an OIML Certificate of Conformity (R60); as an alternative, Dini Argeo S.r.l.
+    model load cells covered by parallel certificates issued for the load cells detailed in the table
+    may also be used under this approval.
+  footnotes: []

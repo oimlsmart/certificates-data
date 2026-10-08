@@ -1,0 +1,232 @@
+_meta:
+  cert_id: 1791
+  num: R076/1992-DE1-2005.08 Rev. 1
+  applicant: Mettler-Toledo Engineering Labs GmbH
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2005-08-rev1.pdf
+certificate:
+  number: R76/1992-DE1-05.08
+  scheme: B
+  page_total: 2
+  member_state: Germany
+  date_issued: '2006-12-05'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - Germany
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirektor
+  oiml_issuer_id:
+applicants:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher
+  - 8606 Greifensee
+  - Switzerland
+manufacturers:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher
+  - 8606 Greifensee
+  - Switzerland
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - JL…-C
+  - PL…-S
+  module_designation: Not applicable
+  description: >-
+    Non-automatic electromechanical weighing instrument with or without lever works; compact weighing
+    instrument with built-in display, keyboard and data interface. The weighing ranges (Max, verification
+    scale intervals, number of verification scale intervals and scale intervals) may be selected within
+    the limiting values of table 1. The JL…-C is meant for use as a 'jeweller instrument' and differs
+    metrologically from a PL…-S instrument only in that carat is preset as a fixed unit; in all other
+    respects the two instruments do not differ metrologically.
+characteristics:
+  type_level:
+    tare_balancing_range:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    tare_balancing_range_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 10
+        max: 30
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: accuracy_class
+    axis: weighing_unit
+    values:
+    - condition: unit = ct
+      value: I or II
+      unit_symbol:
+    - condition: unit = g
+      value: II
+      unit_symbol:
+  - attribute: maximum_capacity
+    axis: weighing_unit
+    values:
+    - condition: unit = ct
+      value:
+        min: 110
+        max: 1510
+      unit_symbol: ct
+    - condition: unit = g
+      value:
+        min: 22
+        max: 302
+      unit_symbol: g
+  - attribute: verification_scale_interval
+    axis: weighing_unit
+    values:
+    - condition: unit = ct
+      value: 0.01
+      unit_symbol: ct
+    - condition: unit = g
+      value: 0.01
+      unit_symbol: g
+  - attribute: scale_interval
+    axis: weighing_unit
+    values:
+    - condition: unit = ct
+      value:
+        min: 0.001
+        max: 0.01
+      unit_symbol: ct
+    - condition: unit = g
+      value:
+        min: 0.001
+        max: 0.01
+      unit_symbol: g
+  - attribute: number_of_verification_scale_intervals
+    axis: weighing_unit
+    values:
+    - condition: unit = ct
+      value:
+        min:
+        max: 151000
+      unit_symbol:
+    - condition: unit = g
+      value:
+        min:
+        max: 30200
+      unit_symbol:
+recommendation:
+  id: R76-1
+  edition: 1992
+  amendment: Amendment 1 (1994)
+  scheme: B
+  accuracy_classes:
+  - I
+  - II
+test_reports:
+- id: 1.12-4019164
+  date:
+  pages: 7
+  role: type_evaluation_report
+- id: 1.12-4019164/1
+  date:
+  pages: 36
+  role: test_report
+- id: 1.12-4019164/2
+  date:
+  pages: 47
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2006-12-05'
+  changes: >-
+    2nd revision: model PL…-S is added. The instrument JL…-C is meant for use as 'jeweller instrument'
+    and differs metrologically from a PL…-S instrument only in that carat is preset as a fixed unit; in
+    all other respects both instruments do not differ metrologically.
+model_family:
+  family_name:
+  models:
+  - model_id: JL…-C
+    label: Jeweller instrument with carat preset as fixed unit
+    attributes:
+      preset_unit: carat (fixed unit)
+  - model_id: PL…-S
+    label:
+    attributes: {}
+footnotes: []
+matrix_tables:
+- name: 'Table 1: Weighing ranges and limiting values by weighing unit'
+  columns:
+  - unit
+  - accuracy_class
+  - max
+  - verification_scale_interval_e
+  - scale_interval_d
+  - number_of_verification_scale_intervals_n
+  - tare_balancing_range
+  - temperature_range
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  -
+  - "%"
+  - "°C"
+  rows:
+  - unit: ct
+    accuracy_class: I or II
+    max:
+      min: 110
+      max: 1510
+    verification_scale_interval_e: 0.01
+    scale_interval_d:
+      min: 0.001
+      max: 0.01
+    number_of_verification_scale_intervals_n:
+      min:
+      max: 151000
+    tare_balancing_range:
+      min:
+      max: 100
+    temperature_range:
+      min: 10
+      max: 30
+  - unit: g
+    accuracy_class: II
+    max:
+      min: 22
+      max: 302
+    verification_scale_interval_e: 0.01
+    scale_interval_d:
+      min: 0.001
+      max: 0.01
+    number_of_verification_scale_intervals_n:
+      min:
+      max: 30200
+    tare_balancing_range:
+      min:
+      max: 100
+    temperature_range:
+      min: 10
+      max: 30
+  description: >-
+    Weighing ranges comprising Max, verification scale intervals, number of verification scale intervals
+    and scale intervals may be selected within these limiting values. Max, e and d are expressed in the
+    unit given in the 'unit' column (ct or g). Tare-balancing range is ≤ 100 % of Max. Applies to both
+    certified models JL…-C and PL…-S.
+  footnotes: []

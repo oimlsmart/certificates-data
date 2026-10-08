@@ -1,0 +1,226 @@
+_meta:
+  cert_id: 2548
+  num: R049/2006-FR2-2010.05
+  applicant: Sappel
+  issuing_year: '2010'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-fr2-2010-05.pdf
+certificate:
+  number: R49/2006-FR2-10.05
+  project_number: LNE-19881
+  page_total: 2
+  member_state: FRANCE
+  date_issued: '2010-10-13'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Person responsible
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: SAPPEL
+  address_lines:
+  - 67 rue du Rhône
+  - 68304 SAINT LOUIS CEDEX
+  - FRANCE
+manufacturers:
+- name: SAPPEL
+  address_lines:
+  - 67 rue du Rhône
+  - 68304 SAINT LOUIS CEDEX
+  - FRANCE
+certified_type:
+  category: Water meter
+  type_designations:
+  - A2
+  description: >-
+    Water meter type A2, linear version, with register (Plastic / Plastic G1 / Glass / Glass G1) and body
+    (Brass / Composite), all positions, measurement of reverse flow: no.
+characteristics:
+  type_level:
+    nominal_diameter_dn:
+      value: 15
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    connections:
+      value: Threads 1/2", 5/8", 3/4", 7/8", 1", 1 1/8", 1 1/4"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    q2_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    position:
+      value: All positions
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    length:
+      value: 105, 110, 114, 115, 130, 134, 135, 145, 165, 170, 175, 180, 190, 191
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    max_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    water_temperature_range_t30:
+      value:
+        min: 0.1
+        max: 30
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    water_temperature_range_t50:
+      value:
+        min: 0.1
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    register_indicating_range:
+      value: 9999/99999
+      unit_symbol: m³
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value: 0.02
+      unit_symbol: dm³
+      unit_id:
+      footnote_markers: []
+    cycle_volume:
+      value: 38
+      unit_symbol: cm³
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mechanical_influence_class:
+      value: Not applicable
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    climatic_temperature_range:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    electromagnetic_influence_class:
+      value: Not applicable
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    reverse_flow_measurement:
+      value: 'No'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: permanent_flowrate_q3
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6
+      value: 1.6
+      footnote_markers: []
+    - model: Q3=2.5
+      value: 2.5
+      footnote_markers: []
+  - attribute: overload_flowrate_q4
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6
+      value: 2.0
+      footnote_markers: []
+    - model: Q3=2.5
+      value: 3.125
+      footnote_markers: []
+  - attribute: q3_q1_ratio
+    unit_symbol:
+    values:
+    - model: Q3=1.6
+      value: 80, 100, 125, 160, 200, 250, 315, 400, 500, 630
+      footnote_markers: []
+    - model: Q3=2.5
+      value: 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800
+      footnote_markers: []
+recommendation:
+  id: R49
+  edition: 2006
+  accuracy_classes:
+  - 2
+test_reports:
+- id: LBA2003
+  date: '2008-06-13'
+  pages: 137
+  role: test_report
+- id: LBA2002
+  date: '2007-06-28'
+  pages: 70
+  role: test_report
+- id: LBA1002
+  date: '2007-01-16'
+  pages: 182
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2010-10-13'
+model_family:
+  family_name: A2
+  models:
+  - model_id: Q3=1.6
+  - model_id: Q3=2.5
+components:
+- role: register
+  type_designations:
+  - Plastic
+  - Plastic G1
+  - Glass
+  - Glass G1
+  alternatives: OR
+- role: body
+  type_designations:
+  - Brass
+  - Composite
+  alternatives: OR
+matrix_tables:
+- name: Metrological characteristics by model
+  columns:
+  - model
+  - permanent_flowrate_q3
+  - overload_flowrate_q4
+  - q3_q1_ratio
+  column_units:
+  -
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - model: Q3=1.6
+    permanent_flowrate_q3: 1.6
+    overload_flowrate_q4: 2.0
+    q3_q1_ratio: 80, 100, 125, 160, 200, 250, 315, 400, 500, 630
+  - model: Q3=2.5
+    permanent_flowrate_q3: 2.5
+    overload_flowrate_q4: 3.125
+    q3_q1_ratio: 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800
+  description: >-
+    Two linear-version water meter variants of type A2 differing in permanent flowrate Q3; each variant
+    offers a range of selectable Q3/Q1 ratios.
+  footnotes: []

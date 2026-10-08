@@ -1,0 +1,206 @@
+_meta:
+  cert_id: 2201
+  num: R050/1997-GB1-2009.01
+  applicant: Siemens Milltronics
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R50
+  edition_year: 1997
+  extraction_method: glm-extract
+  source_pdf: certificates/R50/1997/r050-1997-gb1-2009-01.pdf
+certificate:
+  number: R50/1997-GB1-09.01
+  scheme: A
+  project_number: T1134/0001
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2009-03-20'
+issuing_authority:
+  name: National Weights and Measures Laboratory
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+applicants:
+- name: Siemens Milltronics
+  address_lines:
+  - 1954 Technology Drive
+  - Peterborough ON K9J 6X7
+  - Canada
+manufacturers:
+- name: Siemens Milltronics
+  address_lines:
+  - 1954 Technology Drive
+  - Peterborough ON K9J 6X7
+  - Canada
+certified_type:
+  category: Automatic continuous totaliser (belt weigher)
+  type_designations:
+  - Milltronics MSI
+  - Milltronics MMI
+  module_designation:
+  description: >-
+    Automatic continuous totaliser (belt weigher) designed to weigh large quantities of loose material
+    from bulk to bulk. Comprises a weighing platform type MSI or MMI, a speed sensor, and an integrator
+    type BW 500. The MMI weighing platform comprises two or three MSI weighing platforms installed in
+    succession. Load cells are single-ended beam (bending) G4-TBSP models manufactured by Group Four Transducers
+    as described in OIML Certificate of Conformity R60/2000-GB-01.02. Provided devices: main totalising
+    device, semi-automatic zero-setting device, indication of flow rate (Q), indication of belt speed,
+    indication of totalised weight, error messages and alarms. Interfaces: load cell connection (hardwired),
+    speed sensor, RS232, RS485, digital I/O, Modbus connection.
+characteristics:
+  type_level:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    totalisation_scale_interval:
+      value:
+        min: 0.001
+        max:
+      unit_symbol: t
+      unit_id:
+    qmax:
+      value: Dependent upon application
+      unit_symbol:
+      unit_id:
+    qmin:
+      value: "≥ 20% Qmax"
+      unit_symbol:
+      unit_id:
+    sum_min:
+      value: Dependent upon application
+      unit_symbol:
+      unit_id:
+    operating_speed:
+      value:
+        min: 0.2
+        max: 5.0
+      unit_symbol: m/s
+      unit_id:
+    weigh_length:
+      value: Dependent upon application
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 10
+      unit_symbol: V
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 28
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 2
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 2.6
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 50
+      unit_symbol: mV
+      unit_id:
+    climatic_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    climatic_environment_class:
+      value: Condensing (open)
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E1 and E2
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value:
+        min: 1
+        max:
+      unit_symbol:
+      unit_id:
+    load_cell_cable:
+      value: 4 wire and screen
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: power_supply_voltage
+    axis: power supply option
+    values:
+    - condition: option 1
+      value:
+        min: 100
+        max: 120
+      unit_symbol: V
+      unit_id:
+    - condition: option 2
+      value:
+        min: 200
+        max: 240
+      unit_symbol: V
+      unit_id:
+recommendation:
+  id: R50
+  edition: 1997
+  scheme: A
+  accuracy_classes:
+  - 1
+test_reports:
+- id: TR524
+  pages: 46
+  role: test_report
+- id: A2080
+  pages: 10
+  role: evaluation_report
+model_family:
+  family_name: Milltronics
+  models:
+  - model_id: MSI
+    label: Milltronics MSI
+    attributes:
+      weighing_platforms: 1
+  - model_id: MMI
+    label: Milltronics MMI
+    attributes:
+      weighing_platforms:
+        min: 2
+        max: 3
+components:
+- role: weighing platform
+  type_designations:
+  - MSI
+  - MMI
+  alternatives: OR
+  characteristics:
+    configuration: The MMI weighing platform comprises two or three MSI weighing platforms installed in
+      succession
+- role: speed sensor
+  type_designations: []
+- role: integrator
+  type_designations:
+  - BW 500
+- role: load cell
+  type_designations:
+  - G4-TBSP
+  characteristics:
+    construction: single-ended beam (bending)
+    manufacturer: Group Four Transducers
+    reference_certificate: OIML R60/2000-GB-01.02

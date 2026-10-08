@@ -1,0 +1,273 @@
+_meta:
+  cert_id: 5652
+  num: R60/2000-A-NL1-19.07 Rev. 1
+  applicant: Mettler-Toledo (Changzhou) Precision Instrument Ltd.
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2019-07-rev1.pdf
+certificate:
+  number: R60/2000-A-NL1-19-07
+  revision: '1'
+  scheme: A
+  project_number: '2611823'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2022-05-13'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssesweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler-Toledo (Changzhou) Precision Instruments Ltd.
+  address_lines:
+  - 22 ZhengQiang Road, ChangZhou
+  - JiangSu, 213125
+  - P.R.China
+manufacturers:
+- name: Mettler-Toledo (Changzhou) Precision Instruments Ltd.
+  address_lines:
+  - 22 ZhengQiang Road, ChangZhou
+  - JiangSu, 213125
+  - P.R.China
+certified_type:
+  category: Load cell
+  type_designations:
+  - SLC820
+  - PDX
+  module_designation:
+  description: Compression load cell, with strain gauges, equipped with electronics
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 50
+      unit_symbol: kg
+      unit_id:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    fraction_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+    recommended_excitation_voltage:
+      value:
+        min: 7.5
+        max: 24
+      unit_symbol: V
+      unit_id:
+    excitation_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    excitation_maximum:
+      value: 24
+      unit_symbol: V
+      unit_id:
+    transducer_material:
+      value: Stainless steel
+      unit_symbol:
+      unit_id:
+    atmospheric_protection:
+      value: Hermetically welded
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+    number_of_counts_for_emax:
+      value: Y * 5 / pLC
+      unit_symbol:
+      unit_id:
+    software_identification:
+      value: 2.xx
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=20t-90t
+      value:
+        min: 20
+        max: 90
+    - model: Emax=100t-500t
+      value:
+        min: 100
+        max: 500
+  - attribute: max_load_cell_intervals_n
+    unit_symbol:
+    values:
+    - model: Emax=20t-90t
+      value: 6000
+      footnote_markers:
+      - 1)
+    - model: Emax=100t-500t
+      value: 3000
+      footnote_markers:
+      - 1)
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: Emax=20t-90t
+      value: 25000
+      footnote_markers:
+      - 1)
+    - model: Emax=100t-500t
+      value: 10000
+      footnote_markers:
+      - 1)
+  - attribute: ratio_z_emax_over_dr
+    unit_symbol:
+    values:
+    - model: Emax=20t-90t
+      value: 6000
+      footnote_markers:
+      - 1)
+    - model: Emax=100t-500t
+      value: 3000
+      footnote_markers:
+      - 1)
+  - attribute: safe_overload
+    unit_symbol: "%"
+    values:
+    - model: Emax=20t-90t
+      value: 200
+    - model: Emax=100t-500t
+      value: 150
+recommendation:
+  id: R60
+  edition: 2000
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-09.08
+  date: '2009-06-11'
+  pages: 53
+  role: type_evaluation_report
+- id: NMi-15200551-01
+  date: '2016-04-15'
+  pages: 15
+  role: test_report
+- id: NMi-2611823-02
+  date: '2022-05-13'
+  pages: 23
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2019-06-26'
+  changes:
+- revision: '1'
+  date: '2022-05-13'
+  changes: Updated main board, Additional EMC test done
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=20t-90t
+    label: 20 t up to and including 90 t
+  - model_id: Emax=100t-500t
+    label: 100 t up to and including 500 t
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax, Y and Z can be reduced separately.
+- marker: 2)
+  text: >-
+    xx is a number between 00 and 99 representing updates of the non legally relevant part of the software.
+matrix_tables:
+- name: Characteristics of the load cell
+  description: Load cell characteristics grouped by maximum capacity range (Emax 20-90 t vs 100-500 t).
+  columns:
+  - attribute
+  - Emax_20t_to_90t
+  - Emax_100t_to_500t
+  column_units:
+  -
+  -
+  -
+  rows:
+  - attribute: maximum_capacity
+    Emax_20t_to_90t: 20-90 t
+    Emax_100t_to_500t: 100-500 t
+  - attribute: minimum_dead_load
+    Emax_20t_to_90t: 50 kg
+    Emax_100t_to_500t: 50 kg
+  - attribute: accuracy_class
+    Emax_20t_to_90t: C
+    Emax_100t_to_500t: C
+  - attribute: max_load_cell_intervals_n
+    Emax_20t_to_90t: '6000'
+    Emax_100t_to_500t: '3000'
+  - attribute: ratio_y_emax_over_vmin
+    Emax_20t_to_90t: '25000'
+    Emax_100t_to_500t: '10000'
+  - attribute: ratio_z_emax_over_dr
+    Emax_20t_to_90t: '6000'
+    Emax_100t_to_500t: '3000'
+  - attribute: temperature_range
+    Emax_20t_to_90t: "-10/+40 °C"
+    Emax_100t_to_500t: "-10/+40 °C"
+  - attribute: fraction_plc
+    Emax_20t_to_90t: '0.8'
+    Emax_100t_to_500t: '0.8'
+  - attribute: humidity_class
+    Emax_20t_to_90t: CH
+    Emax_100t_to_500t: CH
+  - attribute: safe_overload
+    Emax_20t_to_90t: 200 % of Emax
+    Emax_100t_to_500t: 150 % of Emax
+  - attribute: recommended_excitation
+    Emax_20t_to_90t: 7.5-24 V DC
+    Emax_100t_to_500t: 7.5-24 V DC
+  - attribute: excitation_maximum
+    Emax_20t_to_90t: 24 V DC
+    Emax_100t_to_500t: 24 V DC
+  - attribute: transducer_material
+    Emax_20t_to_90t: Stainless steel
+    Emax_100t_to_500t: Stainless steel
+  - attribute: atmospheric_protection
+    Emax_20t_to_90t: Hermetically welded
+    Emax_100t_to_500t: Hermetically welded
+  - attribute: electromagnetic_environment_class
+    Emax_20t_to_90t: E2
+    Emax_100t_to_500t: E2
+  - attribute: number_of_counts_for_emax
+    Emax_20t_to_90t: Y * 5 / pLC
+    Emax_100t_to_500t: Y * 5 / pLC
+  - attribute: software_identification
+    Emax_20t_to_90t: 2.xx
+    Emax_100t_to_500t: 2.xx
+  footnotes:
+  - 1) The characteristics for nmax, Y and Z can be reduced separately.
+  - >-
+    2) xx is a number between 00 and 99 representing updates of the non legally relevant part of the software.

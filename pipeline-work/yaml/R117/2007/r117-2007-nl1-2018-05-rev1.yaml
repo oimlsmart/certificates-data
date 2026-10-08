@@ -1,0 +1,318 @@
+_meta:
+  cert_id: 5504
+  num: R117/2007-B-NL1-18.05 Rev. 1
+  applicant: Advanced Flow Solutions Inc.,d/b/a Liquid Controls
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2018-05-rev1.pdf
+certificate:
+  number: R 117/2007-B-NL1-18.05
+  scheme: B
+  project_number: '2655407'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2021-09-10'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Advanced Flow Solutions d/b/a Liquid Controls
+  address_lines:
+  - 9201 N I-35 Service Rd
+  - Oklahoma City, OK 73131
+  - United States of America
+manufacturers:
+- name: Advanced Flow Solutions d/b/a Liquid Controls
+  address_lines:
+  - 9201 N I-35 Service Rd
+  - Oklahoma City, OK 73131
+  - United States of America
+- name: Liquid Controls LLC
+  address_lines:
+  - 105 Albrecht Drive
+  - IL-60044, Lake Bluff
+  - United States of America
+certified_type:
+  category: Gas extractor
+  type_designations:
+  - EGS_1
+  - EGS_2
+  description: >-
+    Special gas extractor (gas elimination device) with two configurations, EGS_1 and EGS_2. Intended
+    for hydrocarbon based oils, fuels, chemical and industrial liquids with a viscosity of 1 to 5 mPa·s
+    at 20 °C, and for LPG. Production location: Liquid Controls LLC, 105 Albrecht Drive, IL-60044, Lake
+    Bluff, United States of America. Documentation folder: TC7329-5.
+characteristics:
+  type_level:
+    intended_liquids:
+      value: Hydrocarbon based oils, fuels, chemical and industrial liquids; LPG
+      unit_symbol:
+      footnote_markers: []
+    viscosity:
+      value:
+        min: 1
+        max: 5
+      unit_symbol: mPa·s
+      footnote_markers: []
+    viscosity_reference_temperature:
+      value: 20
+      unit_symbol: "°C"
+      footnote_markers: []
+    gas_eliminator_types:
+      value: 421xx; A8xxx
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    pe_max_upper_limit:
+      value: 5100
+      unit_symbol: kPa
+      footnote_markers: []
+  model_level:
+  - attribute: filter_type
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: F; FD; FMP
+      footnote_markers:
+      - 3)
+    - model: EGS_2
+      value: F
+      footnote_markers: []
+  - attribute: number_of_lc_sound_gas_indicators
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: 2
+      footnote_markers:
+      - 5)
+    - model: EGS_2
+      value: 1
+      footnote_markers:
+      - 5)
+  - attribute: two_stage_valve
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: 'Yes'
+      footnote_markers: []
+    - model: EGS_2
+      value: 'Yes'
+      footnote_markers:
+      - 4)
+  config_level:
+  - attribute: maximum_flowrate
+    axis: >-
+      test configuration (number of LC-sound gas indicators, inlet pipe, meter on which the extractor
+      is mounted)
+    values:
+    - condition: 2 LCS and 500 mm inlet pipe, mounted on M7 meter
+      value: 500
+      unit_symbol: L/min
+    - condition: 1 LCS and 500 mm inlet pipe, mounted on M15 meter
+      value: 800
+      unit_symbol: L/min
+    - condition: 2 LCS and 500 mm inlet pipe, mounted on M30 meter
+      value: 1500
+      unit_symbol: L/min
+    - condition: 2 LCS, mounted on MS75 meter
+      value: 3300
+      unit_symbol: L/min
+  - attribute: maximum_pe_max_pressure
+    axis: filter type
+    values:
+    - condition: F and FD filters
+      value: 1024
+      unit_symbol: kPa
+    - condition: F and FD filters
+      value: 2413
+      unit_symbol: kPa
+    - condition: FMP filters
+      value: 1930
+      unit_symbol: kPa
+    - condition: FMP filters
+      value: 5100
+      unit_symbol: kPa
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: B
+test_reports:
+- id: CPC-9200487-01
+  date: '2010-11-22'
+  pages: 14
+  role: type_evaluation_report
+- id: NMi-1901947-01
+  date: '2018-11-26'
+  pages: 25
+  role: type_evaluation_report
+- id: TC7329-5
+  role: documentation_file
+revision_history:
+- revision: Initial
+  date: '2018-11-26'
+  changes: Initial issue
+- revision: '1'
+  date: '2021-09-10'
+  changes: Company name changed
+model_family:
+  family_name:
+  models:
+  - model_id: EGS_1
+    attributes: {}
+  - model_id: EGS_2
+    attributes: {}
+components:
+- role: Gas eliminator
+  type_designations:
+  - '42100'
+  - '42101'
+  - '42104'
+  - A8170
+  - A8180
+  - A8200
+  - A8340A
+  alternatives: OR
+  characteristics:
+    mounting:
+      value: Mounted on top of the filter; depending on the size, one or more gas eliminators are used
+      unit_symbol:
+      footnote_markers:
+      - 1)
+- role: Filter
+  type_designations:
+  - F
+  - FD
+  - FMP
+  alternatives: OR
+  characteristics:
+    fd_filter_applicability:
+      value: Only used for the 4 inch diameter
+      unit_symbol:
+      footnote_markers:
+      - 3)
+- role: Two stage valve
+  characteristics:
+    control:
+      value: Pneumatically or hydraulically controlled
+      unit_symbol:
+      footnote_markers:
+      - 4)
+    air_check_valve_required_for_egs2:
+      value: true
+      unit_symbol:
+      footnote_markers:
+      - 4)
+- role: LC-sound gas indicator
+  characteristics:
+    operating_principle:
+      value: Ultra sonic principle
+      unit_symbol:
+      footnote_markers:
+      - 5)
+footnotes:
+- marker: 1)
+  text: >-
+    The gas eliminator is mounted on top of the filter. Depending on the size, one or more gas eliminators
+    are used.
+- marker: 2)
+  text: Types 42100, 42101, 42104, A8170, A8180, A8200 and A8340A.
+- marker: 3)
+  text: FD filter is only used for the 4 inch diameter.
+- marker: 4)
+  text: >-
+    A two stage valve is used which is either pneumatically or hydraulically controlled. For the EGS_2
+    a so called air check valve is required. See the documentation folder 7329-5.
+- marker: 5)
+  text: The LC-sound gas indicator operates on the ultra sonic principle.
+matrix_tables:
+- name: General characteristics of the gas elimination device type EGS_1 and EGS_2
+  columns:
+  - characteristic
+  - EGS_1
+  - EGS_2
+  - description
+  rows:
+  - characteristic: gas_eliminator
+    EGS_1: 421xx; A8xxx
+    EGS_2: 421xx; A8xxx
+    description: >-
+      The gas eliminator is mounted on top of the filter. Depending on the size, one or more gas eliminators
+      are used. Types: 42100, 42101, 42104, A8170, A8180, A8200 and A8340A.
+  - characteristic: filter_type
+    EGS_1: F; FD; FMP
+    EGS_2: F
+    description: FD filter is only used for the 4 inch diameter.
+  - characteristic: number_of_lc_sound_gas_indicators
+    EGS_1: 2
+    EGS_2: 1
+    description: The LC-sound gas indicator operates on the ultra sonic principle.
+  - characteristic: two_stage_valve
+    EGS_1: 'Yes'
+    EGS_2: 'Yes'
+    description: >-
+      A two stage valve is used which is either pneumatically or hydraulically controlled. For the EGS_2
+      a so called air check valve is required.
+  - characteristic: intended_for
+    EGS_1: >-
+      Hydrocarbon based oils, fuels, chemical and industrial liquids with a viscosity of 1 to 5 mPa·s
+      at 20 °C; LPG
+    EGS_2: >-
+      Hydrocarbon based oils, fuels, chemical and industrial liquids with a viscosity of 1 to 5 mPa·s
+      at 20 °C; LPG
+    description:
+  - characteristic: qmax
+    EGS_1: See Table 2
+    EGS_2: See Table 2
+    description:
+  - characteristic: pe_max
+    EGS_1: 1024; 2413 kPa with F and FD filters; 1930; 5100 kPa with FMP filters
+    EGS_2: 1024; 2413 kPa with F and FD filters; 1930; 5100 kPa with FMP filters
+    description: >-
+      Equal to the maximum P(e) max of the measuring system in which the Special Gas Extractor is used
+      and not above 5100 kPa.
+  description: 'There are two configurations of the special gas extractor: EGS_1 and EGS_2.'
+  footnotes:
+  - 1)
+  - 2)
+  - 3)
+  - 4)
+  - 5)
+- name: Maximum flowrate of the gas elimination device type EGS_1 and EGS_2
+  columns:
+  - maximum_flowrate
+  - test_characteristics
+  - remarks
+  column_units:
+  - L/min
+  -
+  -
+  rows:
+  - maximum_flowrate: 500
+    test_characteristics: 2 LCS and 500 mm inlet pipe
+    remarks: Mounted on M7 meter
+  - maximum_flowrate: 800
+    test_characteristics: 1 LCS and 500 mm inlet pipe
+    remarks: Mounted on M15 meter
+  - maximum_flowrate: 1500
+    test_characteristics: 2 LCS and 500 mm inlet pipe
+    remarks: Mounted on M30 meter
+  - maximum_flowrate: 3300
+    test_characteristics: 2 LCS
+    remarks: Mounted on MS75 meter
+  description: >-
+    Maximum flowrate depending on test configuration (number of LC-sound gas indicators, inlet pipe length
+    and meter on which the extractor is mounted).
+  footnotes: []

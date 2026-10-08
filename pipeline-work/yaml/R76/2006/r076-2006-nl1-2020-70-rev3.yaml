@@ -1,0 +1,575 @@
+_meta:
+  cert_id: 5522
+  num: R76/2006-A-NL1-20.70 Rev. 3
+  applicant: Mettler-Toledo GmbH
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2020-70-rev3.pdf
+certificate:
+  number: R76/2006-A-NL1-20.70
+  scheme: A
+  project_number: '2659880'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2021-10-29'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher 44
+  - CH-8606 Greifensee
+  - Switzerland
+manufacturers:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher 44
+  - CH-8606 Greifensee
+  - Switzerland
+certified_type:
+  category: Indicator
+  type_designations:
+  - IND360
+  module_designation:
+  description: >-
+    Indicator / Terminal. Supports digital load cells or weighing modules via CANbus interface or SICSPro
+    interface, and analog load cells optionally with ISB (Intrinsic Safety Barrier).
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    climatic_environment_humidity:
+      value: non-condensing
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    intended_location:
+      value: Closed
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id: u:hertz
+      footnote_markers: []
+    power_supply_voltage_dc:
+      value:
+        min: 20
+        max: 28
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac_applicability:
+      value: Harsh version only
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_dc_applicability:
+      value: All versions
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    road_vehicle_power_supply_suitable:
+      value: false
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: accuracy_class_oiml_r76
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: "(III) or (IIII)"
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: "(I), (II), (III) or (IIII)"
+      unit_symbol:
+      unit_id:
+  - attribute: accuracy_class_oiml_r51
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: Y(I), Y(II), Y(a) or Y(b); XI(x), XII(x), XIII(x) or XIII(2)
+      unit_symbol:
+      unit_id:
+  - attribute: accuracy_class_oiml_r61
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: Ref(0,2)
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: Ref(0,2)
+      unit_symbol:
+      unit_id:
+  - attribute: weighing_ranges
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: Single interval
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: Single interval; Multi-interval; Multiple range
+      unit_symbol:
+      unit_id:
+  - attribute: max_number_of_scale_intervals_one_weighing_range
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+      unit_id:
+    - condition: SICSPro interface
+      value:
+        min:
+        max: 1000000
+      unit_symbol: divisions
+      unit_id:
+  - attribute: max_number_of_scale_intervals_multi_interval_or_multiple_range
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value:
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value:
+        min:
+        max: 100000
+      unit_symbol: divisions
+      unit_id:
+  - attribute: max_number_of_weighing_ranges
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: 1
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: 3
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_power_supply_voltage
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: 12
+      unit_symbol: V
+      unit_id:
+    - condition: SICSPro interface
+      value: 12
+      unit_symbol: V
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error
+    axis: interface (digital load cells or weighing modules)
+    values:
+    - condition: CANbus interface
+      value: 0
+      unit_symbol:
+      unit_id:
+    - condition: SICSPro interface
+      value: 0
+      unit_symbol:
+      unit_id:
+  - attribute: accuracy_class_oiml_r76
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: "(III) or (IIII)"
+      unit_symbol:
+      unit_id:
+  - attribute: accuracy_class_oiml_r51
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+      unit_id:
+  - attribute: accuracy_class_oiml_r61
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: Ref(0,2)
+      unit_symbol:
+      unit_id:
+  - attribute: weighing_ranges
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: Single interval
+      unit_symbol:
+      unit_id:
+  - attribute: max_number_of_scale_intervals
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+      unit_id:
+  - attribute: minimum_signal_input_voltage_umin
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: 0
+      unit_symbol: mV
+      unit_id:
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells
+      value: 0.3
+      unit_symbol: µV
+      unit_id:
+    - condition: Analog load cells with ISB
+      value: 0.25
+      unit_symbol: µV
+      unit_id:
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells
+      value: 5
+      unit_symbol: V
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 1.5 V DC)
+      value: 1.5
+      unit_symbol: V
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 2.3 V DC)
+      value: 2.3
+      unit_symbol: V
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 3.9 V DC)
+      value: 3.9
+      unit_symbol: V
+      unit_id:
+  - attribute: minimum_load_cell_resistance
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 1.5 V DC)
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 2.3 V DC)
+      value: 87
+      unit_symbol: Ω
+      unit_id:
+    - condition: Analog load cells with ISB (excitation 3.9 V DC)
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+  - attribute: maximum_load_cell_resistance
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: 1245
+      unit_symbol: Ω
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: 0.5
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_connection_type
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB)
+      value: 6-wire (remote sensing)
+      unit_symbol:
+      unit_id:
+  - attribute: max_cable_length_per_cross_wire_section
+    axis: load_cell_connection (analog)
+    values:
+    - condition: Analog load cells (with or without ISB), between indicator and junction box or load cells
+      value: 1571
+      unit_symbol: m/mm²
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - I
+  - II
+  - III
+  - IIII
+test_reports:
+- id: NMi-2493052-01
+  date: '2021-03-01'
+  pages: 56
+  role: type_evaluation_report
+- id: NMi-2493052-02
+  date: '2021-03-01'
+  pages: 15
+  role: type_evaluation_report
+- id: NMi-2493052-03
+  date: '2021-03-01'
+  pages: 21
+  role: type_evaluation_report
+- id: NMi-2493052-04
+  date: '2021-03-01'
+  pages: 20
+  role: type_evaluation_report
+- id: NMi-2659880-01
+  date: '2021-10-27'
+  pages: 24
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2020-12-24'
+  changes: Initial issue
+- revision: '1'
+  date: '2021-03-02'
+  changes: Type evaluation reports revised because of editorial changes
+- revision: '2'
+  date: '2021-09-15'
+  changes: Editorial change to include DC power supply voltage for all versions
+- revision: '3'
+  date: '2021-10-29'
+  changes: Adding optional ISB (Intrinsic safety barrier)
+footnotes: []
+matrix_tables:
+- name: Characteristics of the indicator / terminal — Digital load cells or weighing modules
+  columns:
+  - attribute
+  - canbus_interface
+  - sicspro_interface
+  rows:
+  - attribute: Accuracy class (OIML R 76)
+    canbus_interface: "(III) or (IIII)"
+    sicspro_interface: "(I), (II), (III) or (IIII)"
+  - attribute: Accuracy class (OIML R 51)
+    canbus_interface: Y(a) or Y(b); XIII(x) or XIII(2)
+    sicspro_interface: Y(I), Y(II), Y(a) or Y(b); XI(x), XII(x), XIII(x) or XIII(2)
+  - attribute: Accuracy class (OIML R 61)
+    canbus_interface: Ref(0,2)
+    sicspro_interface: Ref(0,2)
+  - attribute: Weighing range(s)
+    canbus_interface: Single interval
+    sicspro_interface: Single interval; Multi-interval; Multiple range
+  - attribute: Maximum number of scale intervals (one weighing range)
+    canbus_interface: n ≤ 10000 divisions
+    sicspro_interface: n ≤ 1000000 divisions
+  - attribute: Maximum number of scale intervals (multi-interval or multiple range)
+    canbus_interface: "-"
+    sicspro_interface: n ≤ 100000 divisions (per (partial) weighing range)
+  - attribute: Maximum number of weighing ranges
+    canbus_interface: '1'
+    sicspro_interface: '3'
+  - attribute: Load cell power supply
+    canbus_interface: 12 V DC
+    sicspro_interface: 12 V DC
+  - attribute: Fraction of the maximum permissible error
+    canbus_interface: '0'
+    sicspro_interface: '0'
+  - attribute: Temperature range
+    canbus_interface: "-10 °C / +40 °C"
+    sicspro_interface: "-10 °C / +40 °C"
+  - attribute: Climatic environment — humidity
+    canbus_interface: non-condensing
+    sicspro_interface: non-condensing
+  - attribute: Climatic environment — intended location
+    canbus_interface: Closed
+    sicspro_interface: Closed
+  - attribute: Electromagnetic environment class
+    canbus_interface: E2
+    sicspro_interface: E2
+  - attribute: Power supply voltage
+    canbus_interface: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+    sicspro_interface: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+  description:
+  footnotes: []
+- name: Characteristics — Analog load cells / Analog load cells with ISB
+  columns:
+  - attribute
+  - analog_load_cells
+  - analog_with_isb_config_1
+  - analog_with_isb_config_2
+  - analog_with_isb_config_3
+  rows:
+  - attribute: Accuracy class (OIML R 76)
+    analog_load_cells: "(III) or (IIII)"
+    analog_with_isb_config_1: "(III) or (IIII)"
+    analog_with_isb_config_2: "(III) or (IIII)"
+    analog_with_isb_config_3: "(III) or (IIII)"
+  - attribute: Accuracy class (OIML R 51)
+    analog_load_cells: Y(a) or Y(b); XIII(x) or XIII(2)
+    analog_with_isb_config_1: Y(a) or Y(b); XIII(x) or XIII(2)
+    analog_with_isb_config_2: Y(a) or Y(b); XIII(x) or XIII(2)
+    analog_with_isb_config_3: Y(a) or Y(b); XIII(x) or XIII(2)
+  - attribute: Accuracy class (OIML R 61)
+    analog_load_cells: Ref(0,2)
+    analog_with_isb_config_1: Ref(0,2)
+    analog_with_isb_config_2: Ref(0,2)
+    analog_with_isb_config_3: Ref(0,2)
+  - attribute: Weighing range(s)
+    analog_load_cells: Single interval
+    analog_with_isb_config_1: Single interval
+    analog_with_isb_config_2: Single interval
+    analog_with_isb_config_3: Single interval
+  - attribute: Maximum number of scale intervals
+    analog_load_cells: n ≤ 10000 divisions
+    analog_with_isb_config_1: n ≤ 10000 divisions
+    analog_with_isb_config_2: n ≤ 10000 divisions
+    analog_with_isb_config_3: n ≤ 10000 divisions
+  - attribute: Minimum signal input voltage
+    analog_load_cells: Umin = 0 mV
+    analog_with_isb_config_1: Umin = 0 mV
+    analog_with_isb_config_2: Umin = 0 mV
+    analog_with_isb_config_3: Umin = 0 mV
+  - attribute: Minimum input voltage per verification scale interval
+    analog_load_cells: 0,3 µV
+    analog_with_isb_config_1: 0,25 µV
+    analog_with_isb_config_2: 0,25 µV
+    analog_with_isb_config_3: 0,25 µV
+  - attribute: Load cell excitation voltage
+    analog_load_cells: 5 V DC
+    analog_with_isb_config_1: 1,5 V DC
+    analog_with_isb_config_2: 2,3 V DC
+    analog_with_isb_config_3: 3,9 V DC
+  - attribute: Minimum load cell resistance
+    analog_load_cells: 43 Ω
+    analog_with_isb_config_1: 43 Ω
+    analog_with_isb_config_2: 87 Ω
+    analog_with_isb_config_3: 350 Ω
+  - attribute: Maximum load cell resistance
+    analog_load_cells: 1245 Ω
+    analog_with_isb_config_1: 1245 Ω
+    analog_with_isb_config_2: 1245 Ω
+    analog_with_isb_config_3: 1245 Ω
+  - attribute: Fraction of the maximum permissible error
+    analog_load_cells: '0,5'
+    analog_with_isb_config_1: '0,5'
+    analog_with_isb_config_2: '0,5'
+    analog_with_isb_config_3: '0,5'
+  - attribute: Load cell connection
+    analog_load_cells: 6-wire (remote sensing)
+    analog_with_isb_config_1: 6-wire (remote sensing)
+    analog_with_isb_config_2: 6-wire (remote sensing)
+    analog_with_isb_config_3: 6-wire (remote sensing)
+  - attribute: >-
+      Maximum value of the cable length per cross wire section between the indicator and the junction
+      box or load cells
+    analog_load_cells: 1571 m/mm²
+    analog_with_isb_config_1: 1571 m/mm²
+    analog_with_isb_config_2: 1571 m/mm²
+    analog_with_isb_config_3: 1571 m/mm²
+  - attribute: Temperature range
+    analog_load_cells: "-10 °C / +40 °C"
+    analog_with_isb_config_1: "-10 °C / +40 °C"
+    analog_with_isb_config_2: "-10 °C / +40 °C"
+    analog_with_isb_config_3: "-10 °C / +40 °C"
+  - attribute: Climatic environment — humidity
+    analog_load_cells: non-condensing
+    analog_with_isb_config_1: non-condensing
+    analog_with_isb_config_2: non-condensing
+    analog_with_isb_config_3: non-condensing
+  - attribute: Climatic environment — intended location
+    analog_load_cells: Closed
+    analog_with_isb_config_1: Closed
+    analog_with_isb_config_2: Closed
+    analog_with_isb_config_3: Closed
+  - attribute: Electromagnetic environment class
+    analog_load_cells: E2
+    analog_with_isb_config_1: E2
+    analog_with_isb_config_2: E2
+    analog_with_isb_config_3: E2
+  - attribute: Power supply voltage
+    analog_load_cells: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+    analog_with_isb_config_1: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+    analog_with_isb_config_2: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+    analog_with_isb_config_3: >-
+      100 – 240 V AC 50 - 60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); (not suitable
+      for a road vehicle power supply)
+  description: >-
+    ISB = Intrinsic Safety Barrier. The three ISB configurations correspond to load cell excitation options:
+    config 1 = 1.5 V DC (min load cell resistance 43 Ω), config 2 = 2.3 V DC (87 Ω), config 3 = 3.9 V
+    DC (350 Ω).
+  footnotes: []
+- name: Software identification
+  columns:
+  - description
+  - version
+  - remarks
+  rows:
+  - description: Analog mainboard
+    version: 1.xx.yyyy
+    remarks: "-"
+  - description: POWERCELL mainboard
+    version: 1.xx.yyyy
+    remarks: CANbus interface
+  - description: Precision mainboard
+    version: 1.xx.yyyy
+    remarks: SICSPro interface
+  description: >-
+    xx is a number between 00 and 99 representing major updates of the legally non relevant part of the
+    software and yyyy is a number between 0000 and 9999 representing minor updates of the legally non
+    relevant part of the software.
+  footnotes: []

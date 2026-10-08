@@ -1,0 +1,231 @@
+_meta:
+  cert_id: 6418
+  num: R76/2006-A-NL1-24.28 Rev. 0
+  applicant: Mettler-Toledo AG
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2024-28-rev0.pdf
+certificate:
+  number: R76/2006-A-NL1-24.28
+  scheme: A
+  project_number: '3899439'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2024-12-12'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher 44
+  - 8606 Greifensee
+  - Switzerland
+manufacturers:
+- name: Mettler-Toledo (Changzhou) Measurement Technology Ltd.
+  address_lines:
+  - 111 West Taihu Road
+  - Xinbei District, Changzhou
+  - Jiangsu 213125
+  - Peoples Republic of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - BBA256x-...
+  - BBA256xx-...
+  module_designation:
+  description: >-
+    For each model, the compatibility of load cells and indicator is established by the manufacturer by
+    means of the compatibility of modules form, contained in OIML R 76-1:2006 Annex F.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 600
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_ranges:
+      value: Single interval; Multi-interval; Multiple range
+      unit_symbol:
+      unit_id:
+    maximum_number_of_scale_intervals_one_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    maximum_number_of_scale_intervals_multi_interval_per_partial_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    maximum_number_of_partial_weighing_ranges:
+      value: 3
+      unit_symbol:
+      unit_id:
+    maximum_number_of_scale_intervals_multiple_range_per_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    maximum_number_of_weighing_ranges:
+      value: 3
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  config_level:
+  - attribute: tare
+    axis: range_configuration
+    values:
+    - condition: one weighing range
+      value:
+        min:
+        max: -50
+      unit_symbol: "%"
+    - condition: multi-interval
+      value: "-Max1"
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: power_supply
+    values:
+    - condition: AC mains
+      value:
+        min: 187
+        max: 250
+      unit_symbol: V
+    - condition: DC (only for IND256x)
+      value:
+        min: 18
+        max: 30
+      unit_symbol: V
+    - condition: battery
+      value: 10
+      unit_symbol: V
+  - attribute: power_supply_frequency
+    axis: power_supply
+    values:
+    - condition: AC mains
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+  - attribute: power_supply_type
+    axis: power_supply
+    values:
+    - condition: AC mains
+      value: AC
+      unit_symbol:
+    - condition: DC (only for IND256x)
+      value: DC
+      unit_symbol:
+    - condition: battery
+      value: battery
+      unit_symbol:
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-16200595-01
+  date: '2017-03-14'
+  pages: 52
+  role: test_report
+- id: NMi-16200595-02
+  date: '2017-03-14'
+  pages: 11
+  role: test_report
+- id: NMi-16200595-03
+  date: '2017-03-14'
+  pages: 9
+  role: test_report
+- id: NMi-3756754-01
+  date: '2024-06-06'
+  pages: 9
+  role: test_report
+- id: NMi-3756754-03
+  date: '2024-06-06'
+  pages: 17
+  role: test_report
+- id: NMi-2517421-04
+  date: '2021-01-05'
+  pages: 51
+  role: test_report
+- id: NMi-2517421-05
+  date: '2021-01-05'
+  pages: 46
+  role: test_report
+- id: NMi-2517421-06
+  date: '2021-01-05'
+  pages: 46
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2024-12-12'
+  changes: Initial issue.
+model_family:
+  family_name:
+  models:
+  - model_id: BBA256x-...
+  - model_id: BBA256xx-...
+components:
+- role: Indicator
+  type_designations:
+  - IND256x
+  - IND256xx
+  characteristics:
+    software_versions:
+      IND256x:
+      - 1.xx.xxxx
+      - 2.xx.xxxx
+      IND256xx:
+      - 1.xx.xxxx
+    software_note: x is a number between 0 and 9; the identification number will be displayed at start-up
+- role: Analog load cell
+  type_designations:
+  - SLP84X
+matrix_tables:
+- name: Software identification
+  columns:
+  - type
+  - version
+  rows:
+  - type: IND256x
+    version: 1.xx.xxxx
+  - type: IND256x
+    version: 2.xx.xxxx
+  - type: IND256xx
+    version: 1.xx.xxxx
+  description: "(x is a number between 0 and 9). The identification number will be displayed at start-up."

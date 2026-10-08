@@ -1,0 +1,172 @@
+_meta:
+  cert_id: 1946
+  num: R060/2000-NL1-2007.12
+  applicant: Minebea Co. Ltd.
+  issuing_year: '2007'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2007-12.pdf
+certificate:
+  number: R60/2000-NL1-07.12
+  scheme:
+  project_number: '700383'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2007-09-13'
+  oiml_issuer_id:
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id:
+applicants:
+- name: Minebea Co., Ltd
+  address_lines:
+  - Karuizawa Factory Miyota-Machi
+  - Kitasaku-Gun, Nagano
+  - JAPAN
+manufacturers:
+- name: Minebea Co., Ltd
+  address_lines:
+  - Karuizawa Factory Miyota-Machi
+  - Kitasaku-Gun, Nagano
+  - JAPAN
+certified_type:
+  category: Load cell
+  type_designations:
+  - CB004-xxx-NS
+  - CB004-xxx
+  module_designation:
+  description: A single point bending beam load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    fraction_pi:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: CB004-xxx-NS
+      value:
+        min: 10
+        max: 100
+    - model: CB004-xxx (10-45 kg)
+      value:
+        min: 10
+        max: 45
+    - model: CB004-xxx (60-100 kg)
+      value:
+        min: 60
+        max: 100
+  - attribute: max_number_of_load_cell_verification_intervals_nmax
+    unit_symbol:
+    values:
+    - model: CB004-xxx-NS
+      value: 3000
+    - model: CB004-xxx (10-45 kg)
+      value: 4000
+    - model: CB004-xxx (60-100 kg)
+      value: 6000
+recommendation:
+  id: R60
+  edition: 2000
+  scheme:
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/1991-NL-98.15A
+  pages: 35
+  role: test_report
+  note: Sample CB004-100K-NS, class C3
+- id: R60/1991-NL-98.15B
+  pages: 38
+  role: test_report
+  note: Sample CB004-10K-NS, class C3
+- id: R60/2000-NL1-04.18A
+  pages: 37
+  role: test_report
+  note: Sample CB004-60K, class C6
+- id: R60/2000-NL1-04.18B
+  pages: 18
+  role: test_report
+  note: Sample CB004-10K, class C6
+- id: R60/2000-NL1-07.11
+  pages: 37
+  role: test_report
+  note: Sample CB004-10K, class C6
+- id: TC5376
+  role: documentation_file
+  note: Description of the type with the appertaining documentation folder
+model_family:
+  family_name: CB004
+  models:
+  - model_id: CB004-xxx-NS
+    label: Emax 10-100 kg, nmax 3000
+  - model_id: CB004-xxx (10-45 kg)
+    label: Emax 10-45 kg, nmax 4000
+  - model_id: CB004-xxx (60-100 kg)
+    label: Emax 60-100 kg, nmax 6000
+matrix_tables:
+- name: Certified type characteristics per variant
+  columns:
+  - variant
+  - emax_min
+  - emax_max
+  - accuracy_class
+  - nmax
+  column_units:
+  -
+  - kg
+  - kg
+  -
+  -
+  rows:
+  - variant: CB004-xxx-NS
+    emax_min: 10
+    emax_max: 100
+    accuracy_class: C
+    nmax: 3000
+  - variant: CB004-xxx (10-45 kg)
+    emax_min: 10
+    emax_max: 45
+    accuracy_class: C
+    nmax: 4000
+  - variant: CB004-xxx (60-100 kg)
+    emax_min: 60
+    emax_max: 100
+    accuracy_class: C
+    nmax: 6000
+  description: >-
+    Maximum capacity (Emax), accuracy class and maximum number of load cell verification intervals (nmax)
+    per type variant; the ratio Y = Emax/Vmin = 10000 and fraction Pi = 0.7 apply to all variants.
+  footnotes: []

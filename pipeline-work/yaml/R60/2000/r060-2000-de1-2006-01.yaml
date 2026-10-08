@@ -1,0 +1,219 @@
+_meta:
+  cert_id: 1788
+  num: R060/2000-DE1-2006.01
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2006-01.pdf
+certificate:
+  number: R60/2000-DE1-06.01
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2006-03-17'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+  person_title: Direktor und Professor
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - Z7
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge shear beam load cell. Load cells of the type Z7 are shear beam load cells. The load cell
+    body is made of alloyed or stainless steel. The strain gauge application is protected by potted metal
+    plates or by welded caps.
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_load:
+      value:
+        min: 150
+        max:
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    input_resistance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=0.5t
+      value: 0.5
+      footnote_markers: []
+    - model: Emax=1t
+      value: 1
+      footnote_markers: []
+    - model: Emax=2t
+      value: 2
+      footnote_markers: []
+    - model: Emax=5t
+      value: 5
+      footnote_markers: []
+    - model: Emax=10t
+      value: 10
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: Emax/2800
+      unit_symbol:
+    - condition: C3
+      value: Emax/10000
+      unit_symbol:
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value:
+      - 0.5
+      - 1
+      - 2
+      - 5
+      - 10
+      unit_symbol: t
+    - condition: C3
+      value:
+      - 2
+      - 5
+      - 10
+      unit_symbol: t
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - D1
+  - C3
+test_reports:
+- id: PTB-1.12-4021126/1
+  date:
+  pages: 19
+  role: test_report
+- id: PTB-1.12-4021126/2
+  date:
+  pages: 18
+  role: test_report
+- id: PTB-1.12-4021126/3
+  date:
+  pages: 18
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=0.5t
+    label: 0.5 t
+    attributes:
+      accuracy_classes:
+      - D1
+  - model_id: Emax=1t
+    label: 1 t
+    attributes:
+      accuracy_classes:
+      - D1
+  - model_id: Emax=2t
+    label: 2 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=5t
+    label: 5 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=10t
+    label: 10 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+footnotes: []
+matrix_tables:
+- name: Table 1 – Metrological characteristics for application in approved weighing instruments
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - t
+  -
+  rows:
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+    maximum_capacity:
+    - 0.5
+    - 1
+    - 2
+    - 5
+    - 10
+    minimum_load_cell_verification_interval_vmin: Emax/2800
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity:
+    - 2
+    - 5
+    - 10
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+  description: >-
+    Load cells of the type Z7 are shear beam load cells; characteristics apply per accuracy class, with
+    Emax given as a list of capacity variants per class.
+  footnotes: []

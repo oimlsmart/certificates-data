@@ -1,0 +1,204 @@
+_meta:
+  cert_id: 4313
+  num: R051/2006-GB1-2017.02
+  applicant: Strainstall UK Limited
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2017-02.pdf
+certificate:
+  number: R51/2006-GB1-17.02
+  project_number: P01915
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-06-16'
+  oiml_issuer_id: '0135'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: '0135'
+applicants:
+- name: Strainstall UK Limited
+  address_lines:
+  - 9-10 Mariners Way
+  - Cowes, Isle of Wight
+  - United Kingdom
+manufacturers:
+- name: Strainstall UK Limited
+  address_lines:
+  - 9-10 Mariners Way
+  - Cowes, Isle of Wight
+  - United Kingdom
+certified_type:
+  category: Automatic catchweigher
+  type_designations:
+  - CWS™ Loadpin
+  module_designation:
+  description: >-
+    The CWS™ Loadpin is an automatic catchweigher designed to weigh containers statically with no operator
+    intervention. The instrument comprises digital load cells, an interface unit and a control and display
+    unit. The load cells and electronics are permanently installed on the spreader of container handlers;
+    weight values are transmitted via the interface unit to the display unit (typically in the operator's
+    cab) and to the Terminal Operating System (TOS). Enclosures are aluminium; the display unit has an
+    LCD display and 8 keys (6 functional control keys, 2 navigation keys). Interfaces: RS 232 / RS 422
+    / RS 485, CANBUS, Ethernet, Wifi. Devices: semi-automatic zero-setting (≤ 4% Max) via user interface
+    or TOS, long term storage device, display and storage of individual and total weights. Securing: seal
+    on electronics enclosures, indelible load cell serial numbers on data plate, tamper-evident label
+    with Config Version counter.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 45
+      unit_symbol: t
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: t
+      footnote_markers: []
+    minimum_capacity:
+      value:
+        min: 2.4
+        max:
+      unit_symbol: t
+      footnote_markers: []
+    maximum_number_of_verification_scale_intervals:
+      value:
+        min: 100
+        max:
+      unit_symbol:
+      footnote_markers: []
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      footnote_markers: []
+    power_supply_voltage:
+      value: 24
+      unit_symbol: V
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers: []
+    semi_automatic_zero_setting:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      footnote_markers: []
+    semi_automatic_zero_setting_reference:
+      value: Max
+      unit_symbol:
+      footnote_markers: []
+  config_level:
+  - attribute: number_of_load_cells
+    axis: installation_configuration
+    values:
+    - condition: Spreader
+      value: 4
+      unit_symbol:
+      footnote_markers: []
+    - condition: Reach stacker
+      value: 2
+      unit_symbol:
+      footnote_markers: []
+  - attribute: load_cell_maximum_capacity_emax
+    axis: installation_configuration
+    values:
+    - condition: Spreader
+      value: 15
+      unit_symbol: t
+      footnote_markers: []
+    - condition: Reach stacker
+      value: 50
+      unit_symbol: t
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01915
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2017-06-16'
+  changes: Certificate first issued.
+components:
+- role: Load cell (digital Loadpin)
+  type_designations:
+  - CWS™ Loadpin
+  characteristics:
+    software_version_number:
+      value: V2.00
+      unit_symbol:
+      footnote_markers: []
+    checksum:
+      value: 8E69
+      unit_symbol:
+      footnote_markers: []
+- role: Interface unit
+  type_designations: []
+  characteristics:
+    software_version_number:
+      value: V2.20
+      unit_symbol:
+      footnote_markers: []
+    checksum:
+      value: 23E9
+      unit_symbol:
+      footnote_markers: []
+- role: Control and display unit
+  type_designations: []
+  characteristics:
+    software_version_number:
+      value: V2.20
+      unit_symbol:
+      footnote_markers: []
+    checksum:
+      value: FFAE
+      unit_symbol:
+      footnote_markers: []
+footnotes: []
+matrix_tables:
+- name: Software identification
+  columns:
+  - component
+  - software_version_number
+  - checksum
+  rows:
+  - component: Display unit
+    software_version_number: V2.20
+    checksum: FFAE
+  - component: Interface unit
+    software_version_number: V2.20
+    checksum: 23E9
+  - component: Load cell
+    software_version_number: V2.00
+    checksum: 8E69
+  description: >-
+    Software is protected by a version number and checksum held on the eMMC memory; a non-editable Config
+    Version counter increments on each change of a legally relevant parameter.
+  footnotes: []

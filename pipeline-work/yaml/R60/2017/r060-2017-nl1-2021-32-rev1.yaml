@@ -1,0 +1,228 @@
+_meta:
+  cert_id: 5575
+  num: R60/2017-A-NL1-21.32 Rev. 1
+  applicant: Flintec UK Limited
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2017
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2017/r060-2017-nl1-2021-32-rev1.pdf
+certificate:
+  number: R60/2017-A-NL1-21.32
+  scheme: A
+  project_number: '2619873'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2022-01-11'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssesweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Flintec UK Limited
+  address_lines:
+  - Caxton House, Caxton Place
+  - CF23 8HG Cardiff
+  - United Kingdom
+manufacturers:
+- name: Flintec UK Limited
+  address_lines:
+  - Caxton House, Caxton Place
+  - CF23 8HG Cardiff
+  - United Kingdom
+certified_type:
+  category: Load cell
+  type_designations:
+  - PBW
+  module_designation: Analog-passive load cell
+  description: >-
+    Bending beam load cell with strain gauges, tested as a part of a weighing instrument. Registered trade
+    name: Flintec.
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output_tolerance:
+      value: 0.1
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    max_load_cell_intervals_n:
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    ratio_z_emax_over_2dr:
+      value: 5000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    input_impedance:
+      value: 1180
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    input_impedance_tolerance:
+      value: 50
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_class:
+      value: SH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    output_impedance:
+      value: 1000
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    output_impedance_tolerance:
+      value: 10
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    recommended_excitation:
+      value: 10
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_maximum:
+      value: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transducer_material:
+      value: Aluminium
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    atmospheric_protection:
+      value: Potted with silicone
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax 5.7-45.4 kg
+      value:
+        min: 5.7
+        max: 45.4
+      footnote_markers: []
+    - model: Emax 45.4-227 kg
+      value:
+        min: 45.4
+        max: 227
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: Emax 5.7-45.4 kg
+      value: 9000
+      footnote_markers:
+      - 1)
+    - model: Emax 45.4-227 kg
+      value: 13000
+      footnote_markers:
+      - 1)
+  config_level:
+  - attribute: rated_output
+    axis: Emax
+    values:
+    - condition: Emax ≤ 109 kg
+      value: 0.9
+      unit_symbol: mV/V
+      footnote_markers: []
+    - condition: Emax > 109 kg
+      value: 1.09
+      unit_symbol: mV/V
+      footnote_markers: []
+  - attribute: safe_overload
+    axis: Emax
+    values:
+    - condition: Emax ≤ 109 kg
+      value: 300
+      unit_symbol: "%"
+      footnote_markers: []
+    - condition: Emax > 109 kg
+      value: 250
+      unit_symbol: "%"
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2017
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: NMi-2619873-01
+  date: '2022-01-10'
+  pages: 55
+  role: type_evaluation_report
+- id: NMi-2619873-02
+  date: '2022-01-10'
+  pages: 46
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2021-09-10'
+  changes: Initial issue
+- revision: '1'
+  date: '2022-01-11'
+  changes: Revision to include reports with NTEP annex and update with Z=5000
+model_family:
+  family_name:
+  models:
+  - model_id: Emax 5.7-45.4 kg
+    label: Emax 5.7 kg up to 45.4 kg
+    attributes: {}
+  - model_id: Emax 45.4-227 kg
+    label: Emax 45.4 kg up to and including 227 kg
+    attributes: {}
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax, Y and Z can be reduced separately.

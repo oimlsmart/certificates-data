@@ -1,0 +1,324 @@
+_meta:
+  cert_id: 3208
+  num: R117/1995-SE1-2013.01
+  applicant: Dresser Wayne Pignone
+  issuing_year: '2013'
+  status: Valid
+  issuer: SE1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-se1-2013-01.pdf
+certificate:
+  number: R117/1995-SE1-13.01
+  scheme: B
+  page_total: 4
+  member_state: Sweden
+  date_issued: '2013-07-03'
+issuing_authority:
+  name: SP Technical Research Institute of Sweden
+  address_lines:
+  - PO Box 857
+  - SE-501 15 Borås
+  - Sweden
+  person_responsible: Lennart Aronsson
+  person_title: Product Certification Manager
+  phone: "+46 10-516 50 00"
+  email: info@sp.se
+  website: www.sp.se
+applicants:
+- name: Dresser Wayne AB
+  address_lines:
+  - Hanögatan 10
+  - SE-211 24 Malmö
+  - Sweden
+manufacturers:
+- name: Dresser Wayne AB
+  address_lines:
+  - Hanögatan 10
+  - SE-211 24 Malmö
+  - Sweden
+- name: Dresser Wayne Brazil
+  address_lines:
+  - 126 Estrada Timbó Higienópolis
+  - 2106-280 Rio de Janeiro
+  - Brazil
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Wayne Helix 2000
+  - Wayne Helix 4000
+  - Wayne Helix 5000
+  - Wayne Helix 6000
+  module_designation:
+  description: >-
+    One or two sided fuel pumps/dispensers for motor vehicles for one customer per side. Optionally equipped
+    with a built-in payment terminal (Wayne iXPay secure payment platform) for cards, a preset function,
+    and a display (Wayne iX Media platform) at the same position as the payment terminal. May be equipped
+    with a vapour recovery system with vapour pump, regulating proportional valves and an electronic board
+    (e.g. VR Driver board WM029182-0001) connected to the iGEM CPU board; optionally a vapour recovery
+    monitoring system consisting of a vapour meter and belonging intrinsic safe barrier. A complete measuring
+    system consists of one electronic module (iGEM) and one to four hydraulic modules in the same housing.
+    If one pump and air separator serves more than one nozzle simultaneously, the total maximum flow rate
+    through these nozzles is limited by the air separator (90 l/min per air separator) and the volume
+    sensor.
+characteristics:
+  type_level:
+    maximum_flow_rate_qmax:
+      value:
+        min: 40
+        max: 130
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    minimum_flow_rate_qmin:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity_mmq:
+      value: 2.0 or 5.0
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    scale_interval_volume_display:
+      value: 0.01
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    maximum_volume_6_digits:
+      value: 9999.0
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    maximum_price_7_digits:
+      value: 99990.0
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_5_digits:
+      value: 999.99
+      unit_symbol: Price/l
+      unit_id:
+      footnote_markers: []
+    pressure_range:
+      value:
+        min: 0.12
+        max: 0.3
+      unit_symbol: MPa
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 60
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    type_of_liquids_volume_sensor_imeter_and_xflo:
+      value: Petrol, kerosene, diesel, ethanol or FAME/RME
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mixture_conditions_two_liquids:
+      value:
+        min: 5
+        max: 95
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    mixture_designation_note:
+      value: designation only, e.g. 92, 95, 98 octane, not 50/50, 70/30 etc
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    hydraulic_modules_per_measuring_system:
+      value:
+        min: 1
+        max: 4
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_measuring_modules_per_liquid_quality:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_flow_rate_per_measuring_module:
+      value:
+        min:
+        max: 70
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    max_flow_rate_per_air_separator:
+      value:
+        min:
+        max: 90
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: liquid_temperature_range
+    axis: liquid_type
+    values:
+    - condition: general
+      value:
+        min: -30
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    - condition: FAME/RME
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+  - attribute: volume_sensor_flow_rate_range
+    axis: volume_sensor_type_and_liquid_type
+    values:
+    - condition: iMeter Duplex (each meter) and Single, general
+      value:
+        min: 0.2
+        max: 70
+      unit_symbol: l/min
+      unit_id:
+    - condition: iMeter Duplex (each meter) and Single, FAME/RME
+      value:
+        min: 4
+        max: 70
+      unit_symbol: l/min
+      unit_id:
+    - condition: Xflo Duplex (each meter) and Single, general
+      value:
+        min: 4
+        max: 80
+      unit_symbol: l/min
+      unit_id:
+    - condition: Xflo Duplex (each meter) and Single, FAME/RME
+      value:
+        min: 4
+        max: 70
+      unit_symbol: l/min
+      unit_id:
+  - attribute: minimum_ratio_qmax_over_qmin
+    axis: product_quality
+    values:
+    - condition: single quality
+      value:
+        min: 10
+        max:
+      unit_symbol:
+      unit_id:
+    - condition: blending quality
+      value:
+        min: 5
+        max:
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R117
+  edition: 1995
+  amendment:
+  scheme: B
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: 3P02046
+  date: '2013-07-03'
+  pages: 21
+  role: type_evaluation_report
+revision_history:
+- revision: '1'
+  date: '2013-07-03'
+  changes:
+model_family:
+  family_name: Wayne Helix
+  models:
+  - model_id: Wayne Helix 2000
+    label: Wayne Helix 2000 Fuel dispenser
+    attributes: {}
+  - model_id: Wayne Helix 4000
+    label: Wayne Helix 4000 Fuel dispenser
+    attributes: {}
+  - model_id: Wayne Helix 5000
+    label: Wayne Helix 5000 Fuel dispenser
+    attributes: {}
+  - model_id: Wayne Helix 6000
+    label: Wayne Helix 6000 Fuel dispenser
+    attributes: {}
+components:
+- role: Electronic module (calculator, indicating device, keyboard with preset)
+  type_designations:
+  - iGEM
+  characteristics:
+    max_motors:
+      value: 4
+      unit_symbol:
+      unit_id:
+    max_pulse_transmitters:
+      value: 4
+      unit_symbol:
+      unit_id:
+    max_nozzles:
+      value: 8
+      unit_symbol:
+      unit_id:
+    max_solenoid_valves:
+      value: 10
+      unit_symbol:
+      unit_id:
+    max_customers_served_simultaneously:
+      value: 2
+      unit_symbol:
+      unit_id:
+- role: Measurement transducer function (volume sensor and pulse transmitter)
+  type_designations:
+  - iMeter
+  - Xflo
+  alternatives: OR
+  characteristics:
+    volume_sensor_configurations:
+      value: single equipped (side A) OR single equipped (side B) OR duplex
+      unit_symbol:
+      unit_id:
+- role: >-
+    Pump and air separator function (Compact Pumping Unit including air separator, motor and non-return
+    valve)
+  type_designations:
+  - Compact Pumping Unit (CPU)
+  characteristics:
+    max_flow_rate_per_air_separator:
+      value:
+        min:
+        max: 90
+      unit_symbol: l/min
+      unit_id:
+- role: Regulating function (solenoid valves for flow rate regulation, blending and on/off)
+  type_designations:
+  - solenoid valve
+- role: Delivery function (hoses, nozzles and nozzle switch, including satellite function)
+  type_designations:
+  - hose
+  - nozzle
+  - nozzle switch
+- role: >-
+    Central pump function (optional, additional 'R'): external central pump delivering air free liquid
+    per OIML R117 item 5.1.3, with security valve
+  type_designations: []
+- role: Optional built-in payment terminal
+  type_designations:
+  - Wayne iXPay
+- role: Optional display platform (installed at the same position as the payment terminal)
+  type_designations:
+  - Wayne iX Media
+- role: Vapour recovery electronic board (example, connected to the iGEM CPU board)
+  type_designations:
+  - VR Driver board WM029182-0001
+- role: Optional vapour recovery monitoring system
+  type_designations:
+  - Vapour meter
+  - Intrinsic safe barrier
+  alternatives: AND

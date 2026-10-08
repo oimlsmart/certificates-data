@@ -1,0 +1,568 @@
+_meta:
+  cert_id: 5355
+  num: R49/2013-A-DK2-21.02
+  applicant: Kamstrup A/S
+  issuing_year: '2021'
+  status: Valid
+  issuer: DK2
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-dk2-2021-02.pdf
+certificate:
+  number: R49/2013-A-DK2-2021.02
+  scheme: A
+  project_number: 121-22696.03
+  page_total: 6
+  member_state: Denmark
+  date_issued: '2021-04-08'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Lars Poder
+  phone: "+45 43 25 01 77"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Kamstrup A/S
+  address_lines:
+  - Industrivej 28
+  - 8660 Skanderborg
+  - Denmark
+manufacturers:
+- name: Kamstrup A/S
+  address_lines:
+  - Industrivej 28
+  - 8660 Skanderborg
+  - Denmark
+certified_type:
+  category: Water meter
+  type_designations:
+  - KWM2230
+  - flowIQ® 2200
+  module_designation: Not applicable
+  description: >-
+    KWM2230 is a family of integrated and hermetically sealed static water meters based on the ultrasonic
+    measuring principle ranging from 1.6 m³/h to 4.0 m³/h. The meter body is made of PPS composite material.
+    The volume measurements are made by means of bidirectional ultrasonic technique according to the transit
+    time method. KWM2230 has a display indicating the registered volume, measuring unit, error codes and
+    more. Furthermore, an optical eye is located on the front, whereby data reading of data loggers and
+    configuration of the meter can be made for service and diagnostic purposes. KWM2230 is power supplied
+    from an internal lithium D-cell providing long battery life, even with high performance communication.
+    A separate pulse interface can be used for converting the data telegram into volume pulses during
+    calibration of the meter.
+characteristics:
+  type_level:
+    instrument_type:
+      value: Complete water meter
+    water_pressure_class:
+      value: MAP 16
+    accuracy_class:
+      value: 2
+    electromagnetic_environment_class:
+      value: E1, E2
+    mechanical_environment_class:
+      value: M1, Class B and O (building and outdoors)
+    ambient_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    upstream_velocity_field_sensitivity_class:
+      value: U0
+    downstream_velocity_field_sensitivity_class:
+      value: D0
+    protection_class:
+      value: IP68
+    orientation_requirements:
+      value: Horizontal, vertical or at an intermediate angle
+    power_supply_voltage:
+      value: 3.65
+      unit_symbol: V
+    power_supply_type:
+      value: DC, internal lithium D-cell battery
+    battery_lifetime:
+      value:
+        min:
+        max: 20
+      unit_symbol: years
+  model_level:
+  - attribute: q3_permanent_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6 m³/h
+      value: 1.6
+    - model: Q3=2.5 m³/h
+      value: 2.5
+    - model: Q3=4.0 m³/h
+      value: 4.0
+  - attribute: q4_overload_flow_rate
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6 m³/h
+      value: 2.0
+    - model: Q3=2.5 m³/h
+      value: 3.125
+    - model: Q3=4.0 m³/h
+      value: 5.0
+  config_level:
+  - attribute: medium_temperature_range
+    axis: temperature_class
+    values:
+    - condition: T50
+      value:
+        min: 0.1
+        max: 50
+      unit_symbol: "°C"
+    - condition: T70
+      value:
+        min: 0.1
+        max: 70
+      unit_symbol: "°C"
+  - attribute: dynamic_range_q3_q1
+    axis: temperature_class
+    values:
+    - condition: T50
+      value: 1600
+    - condition: T70
+      value: 400
+recommendation:
+  id: R49
+  edition: 2013
+  scheme: A
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 120-22308
+  date: '2021-04-08'
+  role: type_evaluation_report
+- id: 120-31757-1
+  date: '2020-12-20'
+  role: test_report
+- id: 121-22696
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2021-04-08'
+  changes: Original certificate
+model_family:
+  family_name: KWM2230
+  models:
+  - model_id: Q3=1.6 m³/h
+  - model_id: Q3=2.5 m³/h
+  - model_id: Q3=4.0 m³/h
+matrix_tables:
+- name: Meter dimensions by permanent flow rate and connection
+  columns:
+  - q3
+  - overall_meter_length
+  - meter_connection
+  - diameter_dn
+  column_units:
+  - m³/h
+  - mm
+  -
+  -
+  rows:
+  - q3: 4.0
+    overall_meter_length:
+    - 130
+    - 190
+    meter_connection: G1B
+    diameter_dn: 20
+  - q3: 2.5
+    overall_meter_length:
+    - 105
+    - 130
+    - 190
+    meter_connection: G1B
+    diameter_dn: 20
+  - q3: 2.5
+    overall_meter_length:
+    - 110
+    - 170
+    meter_connection: G¾B
+    diameter_dn: 15
+  - q3: 1.6
+    overall_meter_length:
+    - 110
+    - 170
+    meter_connection: G¾B
+    diameter_dn: 15
+- name: Flow designation for T50 (Q1 and Q2 by dynamic range Q3/Q1 and Q3)
+  columns:
+  - q3
+  - dynamic_range_q3_q1
+  - q1
+  - q2
+  - q3_permanent
+  - q4_overload
+  column_units:
+  - m³/h
+  -
+  - l/h
+  - l/h
+  - m³/h
+  - m³/h
+  rows:
+  - q3: '4.0'
+    dynamic_range_q3_q1: 1600
+    q1: 2.5
+    q2: 4
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 1000
+    q1: 4
+    q2: 6.4
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 800
+    q1: 5
+    q2: 8
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 630
+    q1: 6.3
+    q2: 10.2
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 500
+    q1: 8
+    q2: 12.8
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 400
+    q1: 10
+    q2: 16
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 315
+    q1: 12.7
+    q2: 20.3
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 250
+    q1: 16
+    q2: 25.6
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 200
+    q1: 20
+    q2: 32
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 160
+    q1: 25
+    q2: 40
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 125
+    q1: 32
+    q2: 51.2
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 100
+    q1: 40
+    q2: 64
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '2.5'
+    dynamic_range_q3_q1: 1600
+    q1: 1.6
+    q2: 2.5
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 1000
+    q1: 2.5
+    q2: 4
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 800
+    q1: 3.1
+    q2: 5
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 630
+    q1: 4
+    q2: 6.3
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 500
+    q1: 5
+    q2: 8
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 400
+    q1: 6.3
+    q2: 10
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 315
+    q1: 7.9
+    q2: 12.7
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 250
+    q1: 10
+    q2: 16
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 200
+    q1: 12.5
+    q2: 20
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 160
+    q1: 15.6
+    q2: 25
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 125
+    q1: 20
+    q2: 32
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 100
+    q1: 25
+    q2: 40
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '1.6'
+    dynamic_range_q3_q1: 1600
+    q1: 1
+    q2: 1.6
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 1000
+    q1: 1.6
+    q2: 2.6
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 800
+    q1: 2
+    q2: 3.2
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 630
+    q1: 2.6
+    q2: 4
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 500
+    q1: 3.2
+    q2: 5.1
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 400
+    q1: 4
+    q2: 6.4
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 315
+    q1: 5.1
+    q2: 8.1
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 250
+    q1: 6.4
+    q2: 10.2
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 200
+    q1: 8
+    q2: 12.8
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 160
+    q1: 10
+    q2: 16
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 125
+    q1: 12.8
+    q2: 20.5
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 100
+    q1: 16
+    q2: 25.6
+    q3_permanent: 1.6
+    q4_overload: 2.0
+- name: Flow designation for T70 (Q1 and Q2 by dynamic range Q3/Q1 and Q3)
+  columns:
+  - q3
+  - dynamic_range_q3_q1
+  - q1
+  - q2
+  - q3_permanent
+  - q4_overload
+  column_units:
+  - m³/h
+  -
+  - l/h
+  - l/h
+  - m³/h
+  - m³/h
+  rows:
+  - q3: '4.0'
+    dynamic_range_q3_q1: 400
+    q1: 10
+    q2: 16
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 315
+    q1: 12.7
+    q2: 20.3
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 250
+    q1: 16
+    q2: 25.6
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 200
+    q1: 20
+    q2: 32
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 160
+    q1: 25
+    q2: 40
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 125
+    q1: 32
+    q2: 51.2
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '4.0'
+    dynamic_range_q3_q1: 100
+    q1: 40
+    q2: 64
+    q3_permanent: 4.0
+    q4_overload: 5.0
+  - q3: '2.5'
+    dynamic_range_q3_q1: 400
+    q1: 6.3
+    q2: 10
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 315
+    q1: 7.9
+    q2: 12.7
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 250
+    q1: 10
+    q2: 16
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 200
+    q1: 12.5
+    q2: 20
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 160
+    q1: 15.6
+    q2: 25
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 125
+    q1: 20
+    q2: 32
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '2.5'
+    dynamic_range_q3_q1: 100
+    q1: 25
+    q2: 40
+    q3_permanent: 2.5
+    q4_overload: 3.125
+  - q3: '1.6'
+    dynamic_range_q3_q1: 400
+    q1: 4
+    q2: 6.4
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 315
+    q1: 5.1
+    q2: 8.1
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 250
+    q1: 6.4
+    q2: 10.2
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 200
+    q1: 8
+    q2: 12.8
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 160
+    q1: 10
+    q2: 16
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 125
+    q1: 12.8
+    q2: 20.5
+    q3_permanent: 1.6
+    q4_overload: 2.0
+  - q3: '1.6'
+    dynamic_range_q3_q1: 100
+    q1: 16
+    q2: 25.6
+    q3_permanent: 1.6
+    q4_overload: 2.0

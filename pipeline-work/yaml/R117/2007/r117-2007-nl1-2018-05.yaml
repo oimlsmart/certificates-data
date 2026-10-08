@@ -1,0 +1,257 @@
+_meta:
+  cert_id: 4746
+  num: R117/2007-B-NL1-18.05
+  applicant: Liquid controls, LLC
+  issuing_year: '2018'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2018-05.pdf
+certificate:
+  number: R 117/2007-B-NL1-18.05
+  scheme: B
+  project_number: '1901947'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2018-11-26'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Liquid Controls LLC
+  address_lines:
+  - 105 Albrecht Drive
+  - IL-60044, Lake Bluff
+  - United States of America
+manufacturers:
+- name: Liquid Controls LLC
+  address_lines:
+  - 105 Albrecht Drive
+  - IL-60044, Lake Bluff
+  - United States of America
+certified_type:
+  category: Special gas extractor
+  type_designations:
+  - EGS_1
+  - EGS_2
+  description: >-
+    Special gas extractor (gas elimination device) for dynamic measuring systems for liquids other than
+    water
+characteristics:
+  type_level:
+    intended_liquids:
+      value: Hydrocarbon based oils, fuels, chemical and industrial liquids; LPG
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    viscosity:
+      value:
+        min: 1
+        max: 5
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+    viscosity_reference_temperature:
+      value: 20
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_allowable_pressure_pemax_note:
+      value: >-
+        Equal to the maximum P(e)max of the measuring system in which the special gas extractor is used
+        and not above 5100 kPa
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: filter_type
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: F; FD; FMP
+      footnote_markers:
+      - 3)
+    - model: EGS_2
+      value: F
+      footnote_markers: []
+  - attribute: number_of_lc_sound_gas_indicators
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: 2
+      footnote_markers:
+      - 5)
+    - model: EGS_2
+      value: 1
+      footnote_markers:
+      - 5)
+  - attribute: two_stage_valve
+    unit_symbol:
+    values:
+    - model: EGS_1
+      value: 'Yes'
+      footnote_markers: []
+    - model: EGS_2
+      value: 'Yes'
+      footnote_markers:
+      - 4)
+  config_level:
+  - attribute: maximum_flowrate
+    axis: test_configuration
+    values:
+    - condition: 2 LCS and 500 mm inlet pipe, mounted on M7 meter
+      value: 500
+      unit_symbol: L/min
+    - condition: 1 LCS and 500 mm inlet pipe, mounted on M15 meter
+      value: 800
+      unit_symbol: L/min
+    - condition: 2 LCS and 500 mm inlet pipe, mounted on M30 meter
+      value: 1500
+      unit_symbol: L/min
+    - condition: 2 LCS, mounted on MS75 meter
+      value: 3300
+      unit_symbol: L/min
+  - attribute: maximum_allowable_pressure_pemax
+    axis: filter_type
+    values:
+    - condition: F and FD filters
+      value: 1024
+      unit_symbol: kPa
+    - condition: F and FD filters
+      value: 2413
+      unit_symbol: kPa
+    - condition: FMP filters
+      value: 1930
+      unit_symbol: kPa
+    - condition: FMP filters
+      value: 5100
+      unit_symbol: kPa
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: B
+test_reports:
+- id: CPC-9200487-01
+  date: '2010-11-22'
+  pages: 14
+  role: type_evaluation_report
+- id: NMi-1901947-01
+  date: '2018-11-26'
+  pages: 25
+  role: type_evaluation_report
+- id: TC7329-5
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: EGS_1
+    label: EGS_1
+    attributes: {}
+  - model_id: EGS_2
+    label: EGS_2
+    attributes: {}
+components:
+- role: gas eliminator
+  type_designations:
+  - '42100'
+  - '42101'
+  - '42104'
+  - A8170
+  - A8180
+  - A8200
+  - A8340A
+  alternatives: OR
+  characteristics:
+    type_series:
+    - 421xx
+    - A8xxx
+    footnote_markers:
+    - 1)
+    - 2)
+    mounting: Mounted on top of the filter; depending on the size, one or more gas eliminators are used
+- role: filter
+  type_designations:
+  - F
+  - FD
+  - FMP
+  alternatives: OR
+  characteristics:
+    footnote_markers:
+    - 3)
+    applicable_filters_by_model:
+      EGS_1:
+      - F
+      - FD
+      - FMP
+      EGS_2:
+      - F
+    note: FD filter is only used for the 4 inch diameter
+- role: LC-sound gas indicator
+  type_designations: []
+  characteristics:
+    operating_principle: ultra sonic
+    count_by_model:
+      EGS_1: 2
+      EGS_2: 1
+    footnote_markers:
+    - 5)
+- role: two stage valve
+  type_designations: []
+  characteristics:
+    present: 'Yes'
+    control: pneumatically or hydraulically controlled
+    note: For the EGS_2 a so called air check valve is required (see documentation folder 7329-5)
+    footnote_markers:
+    - 4)
+footnotes:
+- marker: 1)
+  text: >-
+    The gas eliminator is mounted on top of the filter. Depending on the size, one or more gas eliminators
+    are used.
+- marker: 2)
+  text: Types 42100, 42101, 42104, A8170, A8180, A8200 and A8340A
+- marker: 3)
+  text: FD filter is only used for the 4 inch diameter.
+- marker: 4)
+  text: >-
+    A two stage valve is used which is either pneumatically or hydraulically controlled. For the EGS_2
+    a so called air check valve is required. See the documentation folder 7329-5.
+- marker: 5)
+  text: The LC-sound gas indicator operates on the ultra sonic principle.
+matrix_tables:
+- name: Maximum flowrate of the gas elimination device type EGS_1 and EGS_2
+  columns:
+  - maximum_flowrate
+  - test_characteristics
+  - remarks
+  column_units:
+  - L/min
+  -
+  -
+  rows:
+  - maximum_flowrate: 500
+    test_characteristics: 2 LCS and 500 mm inlet pipe
+    remarks: Mounted on M7 meter
+  - maximum_flowrate: 800
+    test_characteristics: 1 LCS and 500 mm inlet pipe
+    remarks: Mounted on M15 meter
+  - maximum_flowrate: 1500
+    test_characteristics: 2 LCS and 500 mm inlet pipe
+    remarks: Mounted on M30 meter
+  - maximum_flowrate: 3300
+    test_characteristics: 2 LCS
+    remarks: Mounted on MS75 meter
+  description:
+  footnotes: []

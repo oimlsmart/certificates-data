@@ -1,0 +1,220 @@
+_meta:
+  cert_id: 2215
+  num: R051/2006-DE1-2009.01
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2009-01.pdf
+certificate:
+  number: R51/2006-DE1-09.01
+  scheme: A
+  page_total: 3
+  member_state: Germany
+  date_issued: '2009-04-27'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - GERMANY
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - GERMANY
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - GLM-E
+  module_designation:
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped with electro-dynamic force compensation load cell (EFC-LC) with lever work,
+    performed as single or multi-interval instrument or single or multiple range instrument.
+characteristics:
+  type_level:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    maximum_load:
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+  config_level:
+  - attribute: maximum_belt_speed
+    axis: weighing_module_type_and_operation_mode
+    values:
+    - condition: weighing module WS10CW (Tab. 1)
+      value:
+        min:
+        max: 1.47
+      unit_symbol: m/s
+    - condition: weighing modules WS10E or WS20E (Tab. 2), operation in motion
+      value:
+        min:
+        max: 0.59
+      unit_symbol: m/s
+    - condition: weighing modules WS10E or WS20E (Tab. 2), start-stop operation
+      value:
+        min:
+        max: 1
+      unit_symbol: m/s
+  - attribute: number_of_verification_scale_intervals
+    axis: weighing_module_type_and_range_configuration
+    values:
+    - condition: WS10CW (Tab. 1), multiple range or multi-interval
+      value: 6000 / 5000
+    - condition: WS10CW (Tab. 1), single range or single-interval
+      value:
+        min:
+        max: 5000
+    - condition: WS10E or WS20E (Tab. 2), multiple range or multi-interval
+      value:
+        min:
+        max: 3000
+    - condition: WS10E or WS20E (Tab. 2), single range or single-interval
+      value:
+        min:
+        max: 6000
+  - attribute: minimum_load
+    axis: accuracy_class
+    values:
+    - condition: Y(a), Y(b)
+      value:
+        min: 20
+        max:
+      unit_symbol: g
+    - condition: XIII(1), XIII(x ≥ 2)
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+  - attribute: tare
+    axis: weighing_module_type
+    values:
+    - condition: WS10CW (Tab. 1)
+      value: "-0.5 × Max"
+    - condition: WS10E or WS20E (Tab. 2)
+      value: "-0.4 × Max"
+recommendation:
+  id: R51-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+  - XIII(x ≥ 2)
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: PTB-1.12-4040215
+  pages: 19
+  role: type_evaluation_report
+- id: PTB-1.12-4040215/1
+  pages: 71
+  role: test_report
+- id: PTB-1.12-4040215/2
+  pages: 76
+  role: test_report
+components:
+- role: load cell
+  type_designations:
+  - EFC-LC
+  characteristics:
+    measuring_principle: electro-dynamic force compensation
+    force_transmission: lever work
+- role: weighing module
+  type_designations:
+  - WS10CW
+  characteristics:
+    technical_data_reference: Tab. 1
+- role: weighing module
+  type_designations:
+  - WS10E
+  - WS20E
+  alternatives: OR
+  characteristics:
+    technical_data_reference: Tab. 2
+matrix_tables:
+- name: 'Tab. 1: Technical data of the weighing instrument with the weighing module of type WS10CW'
+  columns:
+  - attribute
+  - category_y_a_y_b
+  - category_xiii_1_xiii_x_ge_2
+  rows:
+  - attribute: maximum_belt_speed
+    category_y_a_y_b: "≤ 1.47 m/s"
+    category_xiii_1_xiii_x_ge_2: "≤ 1.47 m/s"
+  - attribute: number_of_verification_scale_intervals
+    category_y_a_y_b: 'multiple range / multi-interval: ≤ 6000/5000; single range / interval: ≤ 5000'
+    category_xiii_1_xiii_x_ge_2: 'multiple range / multi-interval: ≤ 6000/5000; single range / interval:
+      ≤ 5000'
+  - attribute: verification_scale_interval
+    category_y_a_y_b: "≥ 1 g"
+    category_xiii_1_xiii_x_ge_2: "≥ 1 g"
+  - attribute: maximum_load
+    category_y_a_y_b: "≤ 15 kg"
+    category_xiii_1_xiii_x_ge_2: "≤ 15 kg"
+  - attribute: minimum_load
+    category_y_a_y_b: "≥ 20 g"
+    category_xiii_1_xiii_x_ge_2: "≥ 50 g"
+  - attribute: temperature_range
+    category_y_a_y_b: 0 °C / +40 °C
+    category_xiii_1_xiii_x_ge_2: 0 °C / +40 °C
+  - attribute: tare
+    category_y_a_y_b: T ≤ -0.5 × Max
+    category_xiii_1_xiii_x_ge_2: T ≤ -0.5 × Max
+  description: Values with colspan apply to both accuracy-class category columns.
+  footnotes: []
+- name: 'Tab. 2: Technical data of the weighing instrument with the weighing modules of type WS10E and
+    WS20E'
+  columns:
+  - attribute
+  - category_y_a_y_b
+  - category_xiii_1_xiii_x_ge_2
+  rows:
+  - attribute: maximum_belt_speed
+    category_y_a_y_b: "≤ 0.59 m/s (operation in motion); ≤ 1 m/s (start-stop operation)"
+    category_xiii_1_xiii_x_ge_2: "≤ 0.59 m/s (operation in motion); ≤ 1 m/s (start-stop operation)"
+  - attribute: number_of_verification_scale_intervals
+    category_y_a_y_b: 'multiple range / multi-interval: ≤ 3000/3000; single range / interval: ≤ 6000'
+    category_xiii_1_xiii_x_ge_2: 'multiple range / multi-interval: ≤ 3000/3000; single range / interval:
+      ≤ 6000'
+  - attribute: verification_scale_interval
+    category_y_a_y_b: "≥ 1 g"
+    category_xiii_1_xiii_x_ge_2: "≥ 1 g"
+  - attribute: maximum_load
+    category_y_a_y_b: "≤ 15 kg"
+    category_xiii_1_xiii_x_ge_2: "≤ 15 kg"
+  - attribute: minimum_load
+    category_y_a_y_b: "≥ 20 g"
+    category_xiii_1_xiii_x_ge_2: "≥ 50 g"
+  - attribute: temperature_range
+    category_y_a_y_b: 0 °C / +40 °C
+    category_xiii_1_xiii_x_ge_2: 0 °C / +40 °C
+  - attribute: tare
+    category_y_a_y_b: T ≤ -0.4 × Max
+    category_xiii_1_xiii_x_ge_2: T ≤ -0.4 × Max
+  description: >-
+    Values with colspan apply to both accuracy-class category columns; maximum belt speed depends on operation
+    mode rather than accuracy class.
+  footnotes: []

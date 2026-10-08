@@ -1,0 +1,488 @@
+_meta:
+  cert_id: 4842
+  num: R137/2012-B-NL1-19.02
+  applicant: Cameron
+  issuing_year: '2019'
+  status: Valid
+  issuer: NL1
+  recommendation: R137
+  edition_year: 2012
+  extraction_method: glm-extract
+  source_pdf: certificates/R137/2012/r137-2012-nl1-2019-02.pdf
+certificate:
+  number: R137/2012-B-NL1-19.02
+  scheme: B
+  project_number: '1902506'
+  page_total: 6
+  member_state: The Netherlands
+  date_issued: '2019-04-29'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 88 636 2332"
+  email: certin@nmi.n
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Cameron
+  address_lines:
+  - 1000 McClaren Woods Drive
+  - Coraopolis PA 15108, Pennsylvania
+  - United States of America
+manufacturers:
+- name: Cameron
+  address_lines:
+  - 1000 McClaren Woods Drive
+  - Coraopolis PA 15108, Pennsylvania
+  - United States of America
+certified_type:
+  category: Gas meter
+  type_designations:
+  - Caldon LEFM 38xCi
+  - Caldon LEFM 34xCi
+  - LEFM 340Ci
+  - LEFM 341Ci
+  - LEFM 342Ci
+  - LEFM 343Ci
+  - LEFM 344Ci
+  - LEFM 380Ci
+  - LEFM 388Ci
+  module_designation:
+  description: >-
+    Ultrasonic gas meter (multi-path transit-time). LEFM 34xCi configurations: LEFM 340Ci - four measurement
+    paths in one plane; LEFM 341Ci/342Ci/343Ci - four measurement paths in one plane with an additional
+    horizontal check path and/or vertical diagnostic path; LEFM 344Ci - two four-path meters in one body,
+    used either as two separate gas meters or in a pay or check arrangement, each with all four paths
+    in one vertical plane. LEFM 38xCi: eight-path meter with eight measuring paths in a horizontal configuration;
+    one long path and/or one short path may fail and the meter still meets custody-transfer requirements.
+    LEFM 388Ci (dual 8-path): two eight-path meters in one body, used either as two separate gas meters
+    or in a pay and check arrangement. Measuring principle described in document 10504/0-06. Bi-directional
+    flow measurement supported (meter must be calibrated in both directions for bi-directional use). Standard
+    electronic display; diagnostic data viewable via Modbus; totalizers indicate the volume with 9 integers.
+characteristics:
+  type_level:
+    minimum_velocity_vmin:
+      value: 0.3
+      unit_symbol: m/s
+      unit_id:
+    maximum_velocity_vmax:
+      value: 36.6
+      unit_symbol: m/s
+      unit_id:
+    operating_pressure_absolute:
+      value:
+        min: 8
+        max: 255
+      unit_symbol: bar
+      unit_id:
+    flow_rate_formula:
+      value: Q = v · 1/4 · π · D² · 3600
+      unit_symbol: m³/h
+      unit_id:
+    software_type:
+      value: P
+      unit_symbol:
+      unit_id:
+    software_risk_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    software_extensions_not_applicable:
+      value: S, L, D and T
+      unit_symbol:
+      unit_id:
+    totalizer_volume_integer_digits:
+      value: 9
+      unit_symbol:
+      unit_id:
+    minimum_straight_pipe_downstream:
+      value: 3
+      unit_symbol: D
+      unit_id:
+    pipe_diameter_match_tolerance:
+      value:
+        min:
+        max: 3
+      unit_symbol: "%"
+      unit_id:
+  model_level:
+  - attribute: accuracy_class
+    unit_symbol:
+    values:
+    - model: LEFM 38xCi
+      value: 0.5
+      footnote_markers:
+      - 1)
+    - model: LEFM 34xCi
+      value: 1.0
+      footnote_markers:
+      - 2)
+  - attribute: measurement_paths
+    unit_symbol:
+    values:
+    - model: LEFM 34xCi
+      value: 4
+    - model: LEFM 38xCi
+      value: 8
+  config_level:
+  - attribute: minimum_transition_velocity_vt
+    axis: diameter_size
+    values:
+    - condition: 4 in - 10 in (DN100 - DN250)
+      value: 3.05
+      unit_symbol: m/s
+      footnote_markers:
+      - 3)
+    - condition: 12 in - 42 in (DN300 - DN1050)
+      value: 1.5
+      unit_symbol: m/s
+  - attribute: minimum_straight_pipe_upstream
+    axis: model_and_inlet_piping_configuration
+    values:
+    - condition: LEFM 34xCi - configuration no. 1 (without flow conditioner, mild disturbances)
+      value: 10
+      unit_symbol: D
+    - condition: LEFM 34xCi - configuration no. 2 (inclusive of flow conditioner, severe disturbances)
+      value: 15
+      unit_symbol: D
+    - condition: LEFM 38xCi - configuration no. 1 (without flow conditioner, mild disturbances excluding
+        expanders)
+      value: 5
+      unit_symbol: D
+    - condition: LEFM 38xCi - configuration no. 2 (without flow conditioner, mild disturbances including
+        expanders)
+      value: 10
+      unit_symbol: D
+    - condition: LEFM 38xCi - configuration no. 3 (without flow conditioner, severe disturbances)
+      value: 15
+      unit_symbol: D
+    - condition: LEFM 38xCi - configuration no. 4 (inclusive of flow conditioner, severe disturbances)
+      value: 15
+      unit_symbol: D
+  - attribute: thermowell_distance_from_downstream_flange
+    axis: flow_direction
+    values:
+    - condition: unidirectional
+      value:
+        min: 2
+        max: 5
+      unit_symbol: D
+    - condition: bidirectional
+      value:
+        min: 3
+        max: 5
+      unit_symbol: D
+recommendation:
+  id: R137-1
+  edition: 2012
+  scheme: B
+  accuracy_classes:
+  - 0.5
+  - 1.0
+test_reports:
+- id: NMi-12200428-01
+  date: '2014-01-15'
+  pages: 40
+  role: type_evaluation_report
+- id: NMi-12200428-02
+  date: '2014-01-16'
+  pages: 8
+  role: type_evaluation_report
+- id: NMi-14200132-01
+  date: '2015-09-30'
+  pages: 30
+  role: type_evaluation_report
+- id: NMi-1902506-01
+  date: '2019-04-29'
+  pages: 18
+  role: type_evaluation_report
+model_family:
+  family_name: Caldon LEFM 3xxCi
+  models:
+  - model_id: LEFM 38xCi
+    label: Caldon LEFM 38xCi
+    attributes:
+      accuracy_class: 0.5
+      measurement_paths: 8
+  - model_id: LEFM 34xCi
+    label: Caldon LEFM 34xCi
+    attributes:
+      accuracy_class: 1.0
+      measurement_paths: 4
+components:
+- role: electronics
+  type_designations:
+  - G2 electronics
+  - G3 electronics
+- role: ultrasonic transducers
+  type_designations: []
+footnotes:
+- marker: 1)
+  text: LEFM 38xCi meter approved for accuracy class 0.5
+- marker: 2)
+  text: LEFM 34xCi meter approved for accuracy class 1.0
+- marker: 3)
+  text: Only applicable for the LEFM 38xCi meter and not for the LEFM 34xCi
+matrix_tables:
+- name: Table 1 General characteristics (velocity per diameter size)
+  columns:
+  - diameter_size_inch
+  - diameter_size_dn
+  - typical_bore_range
+  - minimum_velocity_vmin
+  - minimum_transition_velocity_vt
+  - maximum_velocity_vmax
+  column_units:
+  -
+  -
+  - mm
+  - m/s
+  - m/s
+  - m/s
+  rows:
+  - diameter_size_inch: 4
+    diameter_size_dn: 100
+    typical_bore_range:
+      min: 80
+      max: 110
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 3.05
+    maximum_velocity_vmax: 36.6
+    footnote_markers:
+    - 3)
+  - diameter_size_inch: 6
+    diameter_size_dn: 150
+    typical_bore_range:
+      min: 124
+      max: 163
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 3.05
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 8
+    diameter_size_dn: 200
+    typical_bore_range:
+      min: 173
+      max: 214
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 3.05
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 10
+    diameter_size_dn: 250
+    typical_bore_range:
+      min: 215
+      max: 267
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 3.05
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 12
+    diameter_size_dn: 300
+    typical_bore_range:
+      min: 257
+      max: 316
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 14
+    diameter_size_dn: 350
+    typical_bore_range:
+      min: 284
+      max: 348
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 16
+    diameter_size_dn: 400
+    typical_bore_range:
+      min: 325
+      max: 398
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 18
+    diameter_size_dn: 450
+    typical_bore_range:
+      min: 366
+      max: 449
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 20
+    diameter_size_dn: 500
+    typical_bore_range:
+      min: 408
+      max: 499
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 22
+    diameter_size_dn: 550
+    typical_bore_range:
+      min: 450
+      max: 550
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 24
+    diameter_size_dn: 600
+    typical_bore_range:
+      min: 490
+      max: 599
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 26
+    diameter_size_dn: 650
+    typical_bore_range:
+      min: 635
+      max: 645
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 28
+    diameter_size_dn: 700
+    typical_bore_range:
+      min: 679
+      max: 696
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 30
+    diameter_size_dn: 750
+    typical_bore_range:
+      min: 730
+      max: 750
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 32
+    diameter_size_dn: 800
+    typical_bore_range:
+      min: 777
+      max: 797
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 34
+    diameter_size_dn: 850
+    typical_bore_range:
+      min: 801
+      max: 851
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 36
+    diameter_size_dn: 900
+    typical_bore_range:
+      min: 851
+      max: 901
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 38
+    diameter_size_dn: 950
+    typical_bore_range:
+      min: 902
+      max: 949
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 40
+    diameter_size_dn: 1000
+    typical_bore_range:
+      min: 953
+      max: 1000
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  - diameter_size_inch: 42
+    diameter_size_dn: 1050
+    typical_bore_range:
+      min: 1004
+      max: 1045
+    minimum_velocity_vmin: 0.3
+    minimum_transition_velocity_vt: 1.5
+    maximum_velocity_vmax: 36.6
+  description: >-
+    Velocity characteristics per diameter size. Vmin = 0.30 m/s and Vmax = 36.6 m/s apply to all sizes;
+    Vt = 3.05 m/s for 4-10 inch and 1.5 m/s for 12-42 inch. Flow rate Q = v · 1/4 · π · D² · 3600 with
+    Q in m³/h, v in m/s and D in m.
+  footnotes:
+  - 3) Only applicable for the LEFM 38xCi meter and not for the LEFM 34xCi
+- name: Approved software versions (WELMEC 7.2)
+  columns:
+  - electronics
+  - software_version
+  - checksum
+  - release_date
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - electronics: G2
+    software_version: 101A960 03.01.02
+    checksum: FCEE
+    release_date: January 29, 2014
+  - electronics: G2
+    software_version: 101A960 03.01.03
+    checksum: 185E
+    release_date: March 17, 2014
+  - electronics: G2
+    software_version: 101A960 04.01.01
+    checksum: 13F8
+    release_date: October 14, 2014
+  - electronics: G3
+    software_version: SW00062 01.01.01
+    checksum: E4781D8F
+    release_date: April 30, 2015
+  - electronics: G3
+    software_version: SW00070 01.02.01
+    checksum: E2E72794
+    release_date: September 3, 2015
+  - electronics: G3
+    software_version: SW00082 01.01.03
+    checksum: 48CDDFA8
+    release_date: February 22, 2016
+  - electronics: G3
+    software_version: SW000082 01.01.04
+    checksum: 106F0E18
+    release_date: June 14, 2016
+  - electronics: G3
+    software_version: SW000082 01.01.05
+    checksum: C92E28DF
+    release_date: June 27, 2016
+  - electronics: G3
+    software_version: SW000082 01.01.06
+    checksum: 881927E2
+    release_date: August 8, 2016
+  - electronics: G3
+    software_version: SW000082 01.01.07
+    checksum: 2CF3D2F1
+    release_date: December 19, 2016
+  - electronics: G3
+    software_version: SW000082 01.01.08
+    checksum: 669F8ED9
+    release_date: January 11, 2017
+  - electronics: G3
+    software_version: SW000082 01.01.10
+    checksum: AB14ADF4
+    release_date: January 23, 2017
+  - electronics: G3
+    software_version: SW000082 01.01.11
+    checksum: 21AB2489
+    release_date: November 2, 2017
+  - electronics: G3
+    software_version: SW000082 01.01.12
+    checksum: 674D72F2
+    release_date: February 6, 2018
+  description: >-
+    The software version and checksum can be read out via Modbus or on the display after (re)powering
+    the meter.
+  footnotes: []

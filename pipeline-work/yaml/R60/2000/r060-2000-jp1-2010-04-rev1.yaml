@@ -1,0 +1,142 @@
+_meta:
+  cert_id: 2678
+  num: R060/2000-JP1-2010.04 Rev. 1
+  applicant: A&D Company Ltd.
+  issuing_year: '2011'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2010-04-rev1.pdf
+certificate:
+  number: R60/2000-JP1-10.04
+  scheme: A
+  page_total: 3
+  member_state: Japan
+  date_issued: '2011-08-09'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+manufacturers:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LCC11T010-KC
+  - LCC11T020-KC
+  - LCC11T030-KC
+  module_designation:
+  description: Compression load cells
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+    humidity_symbol:
+      value: CH
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+    apportionment_factor_plc:
+      value: 0.7
+    ratio_y_emax_over_vmin:
+      value: 10000
+    rated_output:
+      value: 1.96
+      unit_symbol: mV/V
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V
+    maximum_excitation_voltage_type:
+      value: DC
+    input_rlc:
+      value: 800
+      unit_symbol: Ω
+    cable_length:
+      value: 12
+      unit_symbol: m
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: LCC11T010-KC
+      value: 10
+    - model: LCC11T020-KC
+      value: 20
+    - model: LCC11T030-KC
+      value: 30
+  - attribute: safe_load_limit
+    unit_symbol: t
+    values:
+    - model: LCC11T010-KC
+      value: 15
+    - model: LCC11T020-KC
+      value: 30
+    - model: LCC11T030-KC
+      value: 45
+  - attribute: minimum_verification_interval_vmin
+    unit_symbol: kg
+    values:
+    - model: LCC11T010-KC
+      value: 1
+    - model: LCC11T020-KC
+      value: 2
+    - model: LCC11T030-KC
+      value: 3
+  - attribute: max_load_cell_intervals_nmax
+    unit_symbol:
+    values:
+    - model: LCC11T010-KC
+      value: 4000
+    - model: LCC11T020-KC
+      value: 5000
+    - model: LCC11T030-KC
+      value: 6000
+  config_level:
+  - attribute: ratio_z_emax_over_2dr
+    axis: max_load_cell_intervals_nmax
+    values:
+    - condition: nmax=6000
+      value: 6000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: 11-08/R60:2000
+  pages: 27
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2011-08-09'
+model_family:
+  family_name:
+  models:
+  - model_id: LCC11T010-KC
+    label: LCC11T010-KC
+    attributes: {}
+  - model_id: LCC11T020-KC
+    label: LCC11T020-KC
+    attributes: {}
+  - model_id: LCC11T030-KC
+    label: LCC11T030-KC
+    attributes: {}

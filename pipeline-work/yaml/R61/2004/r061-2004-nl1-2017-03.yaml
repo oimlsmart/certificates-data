@@ -1,0 +1,186 @@
+_meta:
+  cert_id: 4542
+  num: R061/2004-NL1-2017.03
+  applicant: CFT S.p.A.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R61
+  edition_year: 2004
+  extraction_method: glm-extract
+  source_pdf: certificates/R61/2004/r061-2004-nl1-2017-03.pdf
+certificate:
+  number: R61/2004-NL1-17.03
+  project_number: '1901064'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2017-12-07'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: CFT S.p.A.
+  address_lines:
+  - Via Paradigna, 94/A
+  - 43122 Parma
+  - Italy
+manufacturers:
+- name: CFT S.p.A.
+  address_lines:
+  - Via Paradigna, 94/A
+  - 43122 Parma
+  - Italy
+certified_type:
+  category: Automatic gravimetric filling instrument
+  type_designations:
+  - RPR
+  module_designation: Not applicable
+  description: Automatic gravimetric filling instrument, filling by one weighing cycle
+characteristics:
+  type_level:
+    method_of_operation:
+      value: filling by one weighing cycle
+    reference_accuracy_class:
+      value: Ref(x) = 1
+    number_of_scale_intervals_per_load_receptor:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: rated_minimum_fill
+    axis: accuracy_class_and_scale_interval
+    values:
+    - condition: class X(1), d = 0.5 g
+      value: 22
+      unit_symbol: g
+    - condition: class X(2), d = 0.5 g
+      value: 11
+      unit_symbol: g
+    - condition: class X(1), d = 1 g
+      value: 44
+      unit_symbol: g
+    - condition: class X(2), d = 1 g
+      value: 22
+      unit_symbol: g
+    - condition: class X(1), d = 2 g
+      value: 178
+      unit_symbol: g
+    - condition: class X(2), d = 2 g
+      value: 44
+      unit_symbol: g
+    - condition: class X(1), d = 5 g
+      value: 1335
+      unit_symbol: g
+    - condition: class X(2), d = 5 g
+      value: 335
+      unit_symbol: g
+    - condition: class X(1), d = 10 g
+      value: 2670
+      unit_symbol: g
+    - condition: class X(2), d = 10 g
+      value: 1330
+      unit_symbol: g
+    - condition: class X(1), d = 20 g
+      value: 5340
+      unit_symbol: g
+    - condition: class X(2), d = 20 g
+      value: 2660
+      unit_symbol: g
+    - condition: class X(1), d = 50 g
+      value: 20000
+      unit_symbol: g
+    - condition: class X(2), d = 50 g
+      value: 6650
+      unit_symbol: g
+    - condition: class X(1), d >= 100 g
+      value: 400 d
+      unit_symbol: g
+    - condition: class X(2), d >= 100 g
+      value: 200 d
+      unit_symbol: g
+recommendation:
+  id: R61
+  edition: 2004
+  scheme:
+  accuracy_classes:
+  - Ref(x) = 1
+  - X(1)
+  - X(2)
+test_reports:
+- id: NMi-16200191-01
+  date: '2016-07-25'
+  pages: 25
+  role: test_report
+- id: NMi-16200191-02
+  date: '2016-07-25'
+  pages: 20
+  role: test_report
+- id: 1.12-4055178-1
+  date: '2012-01-10'
+  pages: 33
+  role: test_report
+- id: 1.12-4055178-2
+  date: '2012-01-10'
+  pages: 27
+  role: test_report
+- id: 1.12-4055178-3
+  date: '2012-01-10'
+  pages: 13
+  role: test_report
+- id: NMi-1901064-02
+  date: '2017-12-07'
+  pages: 22
+  role: test_report
+matrix_tables:
+- name: Rated minimum fill (Minfill)
+  columns:
+  - d
+  - minfill_class_x1
+  - minfill_class_x2
+  column_units:
+  - g
+  - g
+  - g
+  rows:
+  - d: 0.5
+    minfill_class_x1: 22
+    minfill_class_x2: 11
+  - d: 1
+    minfill_class_x1: 44
+    minfill_class_x2: 22
+  - d: 2
+    minfill_class_x1: 178
+    minfill_class_x2: 44
+  - d: 5
+    minfill_class_x1: 1335
+    minfill_class_x2: 335
+  - d: 10
+    minfill_class_x1: 2670
+    minfill_class_x2: 1330
+  - d: 20
+    minfill_class_x1: 5340
+    minfill_class_x2: 2660
+  - d: 50
+    minfill_class_x1: 20000
+    minfill_class_x2: 6650
+  - d:
+      min: 100
+      max:
+    minfill_class_x1: 400 d
+    minfill_class_x2: 200 d
+  description: >-
+    Rated minimum fill as a function of scale interval d for accuracy classes X(1) and X(2). For d >=
+    100 g, Minfill is expressed as a multiple of d (400 d for class X(1), 200 d for class X(2)).
+  footnotes: []

@@ -1,0 +1,245 @@
+_meta:
+  cert_id: 2675
+  num: R051/2006-DE1-2007.07 Rev. 2
+  applicant: Mettler-Toledo Garvens GmbH
+  issuing_year: '2011'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2007-07-rev2.pdf
+certificate:
+  number: R51/2006-DE1-07.07
+  page_total: 3
+  member_state: Germany
+  date_issued: '2011-08-31'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Head of Department
+applicants:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+manufacturers:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - AB C
+  module_designation: Not applicable
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped with electrodynamic force compensation load cell or strain gauge load cell,
+    and performed as single or multi interval instrument.
+characteristics:
+  type_level:
+    design:
+      value: single- or multi-interval instrument
+    lever_work:
+      value: none
+    ratio_between_verification_scale_intervals:
+      value: e(i+1)/e(i) < 3
+    maximum_load:
+      value:
+        min:
+        max: 600
+      unit_symbol: kg
+      unit_id:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    maximum_belt_speed:
+      value:
+        min:
+        max: 3.0
+      unit_symbol: m/s
+      unit_id:
+  config_level:
+  - attribute: number_of_intervals
+    axis: weighing_mode
+    values:
+    - condition: static weighing
+      value:
+        min:
+        max: 4
+      unit_symbol:
+    - condition: dynamic weighing
+      value:
+        min:
+        max: 2
+      unit_symbol:
+  - attribute: accuracy_classes
+    axis: weighing_mode
+    values:
+    - condition: static weighing
+      value: XII (x < 1), XIII (x = 1), XIII (x ≥ 2), Y(II), Y(a), Y(b)
+    - condition: dynamic weighing
+      value: XIII (x = 1), XIII (x ≥ 2), Y(a), Y(b)
+  - attribute: verification_scale_interval
+    axis: weighing_mode
+    values:
+    - condition: static weighing
+      value:
+        min: 0.05
+        max:
+      unit_symbol: g
+    - condition: dynamic weighing
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+  - attribute: number_of_verification_scale_intervals
+    axis: weighing_mode
+    values:
+    - condition: static weighing
+      value:
+        min:
+        max: 40000
+      unit_symbol:
+    - condition: dynamic weighing
+      value:
+        min:
+        max: 20000
+      unit_symbol:
+  - attribute: minimum_load
+    axis: weighing_mode
+    values:
+    - condition: static weighing
+      value: "≥ 20 e1"
+      unit_symbol:
+    - condition: dynamic weighing
+      value:
+        min: 3
+        max:
+      unit_symbol: g
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - XII (x < 1)
+  - XIII (x = 1)
+  - XIII (x ≥ 2)
+  - Y(II)
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: 1.12-4032862
+  pages: 31
+  role: type_evaluation_report
+- id: 1.12-4032862/1
+  pages: 41
+  role: test_report
+- id: 1.12-4032862/2
+  pages: 45
+  role: test_report
+- id: 1.12-4032862/3
+  pages: 40
+  role: test_report
+- id: 1.12-4032862/4
+  pages: 49
+  role: test_report
+- id: 1.12-4032862/5
+  pages: 70
+  role: test_report
+- id: 1.12-4032862/6
+  pages: 13
+  role: test_report
+- id: 1.12-4032862/7
+  pages: 13
+  role: test_report
+- id: 1.12-4032862/8
+  pages: 63
+  role: test_report
+- id: 1.12-4032862/9
+  pages: 63
+  role: test_report
+- id: 1.12-4032862/10
+  pages: 16
+  role: test_report
+- id: 1.12-4032862/11
+  pages: 16
+  role: test_report
+- id: 1.12-4032862/12
+  pages: 39
+  role: test_report
+- id: 1.12-4032862/13
+  pages: 32
+  role: test_report
+- id: 1.12-4032862/14
+  pages: 50
+  role: test_report
+- id: 1.12-4032862/15
+  pages: 37
+  role: test_report
+- id: 1.12-4032862/16
+  pages: 50
+  role: test_report
+revision_history:
+- revision: '2'
+  date: '2011-08-31'
+  changes:
+components:
+- role: load_cell
+  type_designations: []
+  alternatives: OR
+  characteristics:
+    variants:
+    - electrodynamic force compensation load cell
+    - strain gauge load cell
+footnotes: []
+matrix_tables:
+- name: Technical data of weighing instruments of the type series AB C
+  columns:
+  - attribute
+  - static_weighing
+  - dynamic_weighing
+  rows:
+  - attribute: design
+    static_weighing: single- or multi-interval instrument
+    dynamic_weighing: single- or multi-interval instrument
+  - attribute: lever_work
+    static_weighing: none
+    dynamic_weighing: none
+  - attribute: number_of_intervals
+    static_weighing: "≤ 4"
+    dynamic_weighing: "≤ 2"
+  - attribute: accuracy_classes
+    static_weighing: XII (x < 1), XIII (x = 1), XIII (x ≥ 2), Y(II), Y(a), Y(b)
+    dynamic_weighing: XIII (x = 1), XIII (x ≥ 2), Y(a), Y(b)
+  - attribute: verification_scale_interval
+    static_weighing: "≥ 0.05 g"
+    dynamic_weighing: "≥ 0.1 g"
+  - attribute: ratio_between_verification_scale_intervals
+    static_weighing: e(i+1)/e(i) < 3
+    dynamic_weighing: e(i+1)/e(i) < 3
+  - attribute: number_of_verification_scale_intervals
+    static_weighing: "≤ 40000"
+    dynamic_weighing: "≤ 20000"
+  - attribute: maximum_load
+    static_weighing: "≤ 600 kg"
+    dynamic_weighing: "≤ 600 kg"
+  - attribute: minimum_load
+    static_weighing: "≥ 20 e1"
+    dynamic_weighing: "≥ 3 g"
+  - attribute: temperature_range
+    static_weighing: 0 °C / +40 °C
+    dynamic_weighing: 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    static_weighing: "≤ 3.0 m/s"
+    dynamic_weighing: "≤ 3.0 m/s"
+  description: >-
+    Single table on page 3; attributes span both weighing modes except where values differ. Accuracy classes
+    occupy two sub-columns per weighing mode (X/XIII classes and Y classes).
+  footnotes: []

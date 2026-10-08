@@ -1,0 +1,233 @@
+_meta:
+  cert_id: 6552
+  num: R76/2006-A-DE1-24.03
+  applicant: Mettler-Toledo AG
+  issuing_year: '2025'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-de1-2024-03.pdf
+certificate:
+  number: R76/2006-A-DE1-24.03
+  scheme: A
+  page_total: 4
+  member_state: Germany
+  date_issued: '2025-04-10'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt, Conformity Assessment Body
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - GERMANY
+  person_responsible: Dr.-Ing. Prof. h. c. Frank Härtig
+applicants:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher 44
+  - CH 8606 Greifensee
+  - Switzerland
+manufacturers:
+- name: Mettler-Toledo GmbH
+  address_lines:
+  - Im Langacher 44
+  - CH 8606 Greifensee
+  - Switzerland
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - IND400
+  - PBK98x
+  - PFK98x
+  - MPGI
+  - MPXI
+  module_designation:
+  description: Non-automatic electromechanical weighing instrument, type IND400 with PBK98x or PFK98x
+characteristics:
+  type_level:
+    verification_scale_interval_e:
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    tare_balancing_range_subtractive:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    initial_zero_setting_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 3
+        max: 3000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: III
+      value:
+        min: 3
+        max: 60000
+      unit_symbol: kg
+      footnote_markers:
+      - a)
+  - attribute: minimum_load
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 50
+        max:
+      unit_symbol: e
+      footnote_markers:
+      - b)
+    - condition: III
+      value:
+        min: 20
+        max:
+      unit_symbol: e
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min:
+        max: 30000
+      unit_symbol:
+      footnote_markers: []
+    - condition: III
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals_ni
+    axis: accuracy_class
+    values:
+    - condition: III
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      footnote_markers:
+      - c)
+  - attribute: max_over_ei
+    axis: accuracy_class
+    values:
+    - condition: III
+      value:
+        min:
+        max: 30000
+      unit_symbol:
+      footnote_markers:
+      - d)
+  - attribute: temperature_range
+    axis: accuracy_class
+    values:
+    - condition: II
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers:
+      - e)
+    - condition: III
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers:
+      - f)
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - II
+  - III
+test_reports:
+- id: PTB-1.12-4118583
+  date: '2025-04-10'
+  pages: 15
+  role: type_evaluation_report
+- id: ZDS-R76/2006-A-DE-24.03
+  date: '2025-04-10'
+  pages: 3
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2025-04-10'
+  changes: Initial Issuing
+model_family:
+  family_name: IND400
+  models:
+  - model_id: IND400 with PBK98x
+    label: Terminal IND400 with weighing module PBK98x
+    attributes: {}
+  - model_id: IND400 with PFK98x
+    label: Terminal IND400 with weighing module PFK98x
+    attributes: {}
+components:
+- role: terminal
+  type_designations:
+  - IND400
+  alternatives:
+  characteristics:
+    test_reports:
+    - NMi-3699033-1
+    - NMi-3699033-2
+    - NMi-3699033-3
+- role: weighing_module
+  type_designations:
+  - PBK98x
+  - PFK98x
+  alternatives: OR
+  characteristics:
+    test_reports:
+    - 20141101.A04.01
+    - 20141102.A04.01
+    - 20141103.A04.01
+    - 20140728.AMNufer
+- role: digital_load_cell
+  type_designations:
+  - MPGI
+  - MPXI
+  alternatives: OR
+  characteristics:
+    test_reports:
+    - 20141088.A04.01
+    - 20141088.A04.02
+    - 20141088.A04.03
+    - 20141088.A04.11
+    - 20161072.A01.01
+    - 20161072.A01.02
+    - 20161072.A01.03
+    - 1.12-4075006/1
+footnotes:
+- marker: a)
+  text: Maximum load from > 3 t to 60 t load only with load receptors as per 6.3.2, 6.3.3 and 6.3.4 of
+    R76
+- marker: b)
+  text: if e = 10 d; e can be replaced by d => ≥ 5 e
+- marker: c)
+  text: For multiple range instruments and multi-interval instruments
+- marker: d)
+  text: Only for multi-interval instruments
+- marker: e)
+  text: Accuracy class II; Accuracy class III (PBK987/PBK989 [A3/A6])
+- marker: f)
+  text: Accuracy class III

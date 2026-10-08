@@ -1,0 +1,247 @@
+_meta:
+  cert_id: 2195
+  num: R060/2000-DE1-2009.09
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-09.pdf
+certificate:
+  number: R60/2000-DE1-09.09
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-03-13'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - MP79
+  - MP79T
+  module_designation:
+  description: >-
+    Strain gauge bending beam load cells (series MP79, MP79T) made of stainless steel. The strain gauge
+    application is hermetical metallic encapsulated.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    input_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: Emax=227kg
+      value: 227
+    - model: Emax=454kg
+      value: 454
+    - model: Emax=1134kg
+      value: 1134
+    - model: Emax=2268kg
+      value: 2268
+    - model: Emax=4536kg
+      value: 4536
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+    - condition: C3MR
+      value: 3000
+      unit_symbol:
+    - condition: C3MR+
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C5
+      value: 5000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5800
+      unit_symbol:
+    - condition: C3MR
+      value: Emax/11500
+      unit_symbol:
+    - condition: C3MR+
+      value: Emax/11500
+      unit_symbol:
+    - condition: C4
+      value: Emax/23000
+      unit_symbol:
+    - condition: C5
+      value: Emax/23000
+      unit_symbol:
+    - condition: C6
+      value: Emax/23000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C1
+  - C3MR
+  - C3MR+
+  - C4
+  - C5
+  - C6
+test_reports:
+- id: 1.12-4039341-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039341-2
+  pages: 21
+  role: test_report
+model_family:
+  family_name: MP79 / MP79T
+  models:
+  - model_id: Emax=227kg
+    label: 227 kg capacity
+    attributes:
+      applicable_accuracy_classes:
+      - C1
+      - C3MR
+      - C3MR+
+  - model_id: Emax=454kg
+    label: 454 kg capacity
+    attributes:
+      applicable_accuracy_classes:
+      - C1
+      - C3MR
+      - C3MR+
+  - model_id: Emax=1134kg
+    label: 1134 kg capacity
+    attributes:
+      applicable_accuracy_classes:
+      - C1
+      - C3MR
+      - C3MR+
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=2268kg
+    label: 2268 kg capacity
+    attributes:
+      applicable_accuracy_classes:
+      - C1
+      - C3MR
+      - C3MR+
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=4536kg
+    label: 4536 kg capacity
+    attributes:
+      applicable_accuracy_classes:
+      - C1
+      - C3MR
+      - C3MR+
+      - C4
+      - C5
+      - C6
+matrix_tables:
+- name: Essential data (Table 1)
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity_emax
+  - minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity_emax: 227 / 454 / 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/5800
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity_emax: 227 / 454 / 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/11500
+  - accuracy_class: C3MR+
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity_emax: 227 / 454 / 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/11500
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity_emax: 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/23000
+  - accuracy_class: C5
+    max_load_cell_intervals_nlc: 5000
+    rated_output: 2
+    maximum_capacity_emax: 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/23000
+  - accuracy_class: C6
+    max_load_cell_intervals_nlc: 6000
+    rated_output: 2
+    maximum_capacity_emax: 1134 / 2268 / 4536
+    minimum_load_cell_verification_interval_vmin: Emax/23000
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed per accuracy
+    class. Dead load 0%·Emax, safe overload 200%·Emax, input impedance 1100 Ω, apportionment factor pLC
+    = 0.7.
+  footnotes: []

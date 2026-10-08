@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261008203542df54b3bad21e42db",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the certificate markdown.\n\nCertificate details:\n- Number: R76/2006-A-DE1-23.02\n- Scheme: A (from \"OIML CERTIFICATE ISSUED UNDER SCHEME A\")\n- Member State: Germany\n- Page total: 2\n- Date issued: 20.02.2024 (from signature date)\n- OIML issuer ID: not explicitly present... The PTB has an OIML issuer ID sometimes. Not in markdown, so omit.\n\nIssuing authority:\n- Name: Physikalisch-Technische Bundesanstalt, Conformity Assessment Body\n- Address lines: [\"Bundesallee 100\", \"38116 Braunschweig\", \"GERMANY\"] or as single line \"Bundesallee 100, 38116 Braunschweig, GERMANY\". I'll split into lines.\n- Person responsible: Dr.-Ing. Prof. h. c. Frank Härtig\n- Person title: not given for him. Signature person: Jonas Mecke, \"Member of Conformity Assessment Body\". The person_responsible field is Frank Härtig. The signing person Jonas Mecke — schema has person_responsible, person_title. Maybe person_responsible = \"Dr.-Ing. Prof. h. c. Frank Härtig\", person_title null. Could add signatory? Schema doesn't have signatory. Stick to schema: person_responsible: Frank Härtig.\n- Phone, email, website: not present.\n\nApplicants: ESPERA-WERKE GMBH, address Moltkestr. 17-33, 47058 Duisburg, Deutschland.\n\nManufacturers: same.\n\nCertified type:\n- category: non-automatic weighing instrument (R76). Category examples given include \"Load cell\", \"Indicator\", ... For R76, it's a weighing instrument. The type is ES-R. Category could be \"Non-automatic weighing instrument\". I'll use that.\n- type_designations: [\"ES-R\"]\n- module_designation: \"Not applicable\"\n\nRecommendation:\n- id: \"R76\"\n- edition: 2006 (as int? schema says edition (int) — but here it's year 2006. The schema says edition (int). Use 2006.)\n- scheme: \"A\"\n- accuracy_classes: [\"III\"]\n\nTest reports:\n- id: \"1.12-4114299\", date: 20.02.2024, pages: 16, role: \"type_evaluation_report\"\n- documentation file: ZDS-R76/2006-A-DE1-23.02, date 20.02.2024, pages 2, role: \"documentation_file\"\n\nRevision history:\n- revision \"0\", date 20.02.2024, changes \"First certificate\"\n\nNo model family, no characteristics tables present. So omit characteristics, model_family, matrix_tables, components, footnotes.\n\nproject_number: not present. Omit.\n\nOutput JSON.",
+      "signature": "824e5821cb694ddf80543528"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"certificate\": {\n    \"number\": \"R76/2006-A-DE1-23.02\",\n    \"scheme\": \"A\",\n    \"page_total\": 2,\n    \"member_state\": \"Germany\",\n    \"date_issued\": \"20.02.2024\"\n  },\n  \"issuing_authority\": {\n    \"name\": \"Physikalisch-Technische Bundesanstalt, Conformity Assessment Body\",\n    \"address_lines\": [\n      \"Bundesallee 100\",\n      \"38116 Braunschweig\",\n      \"GERMANY\"\n    ],\n    \"person_responsible\": \"Dr.-Ing. Prof. h. c. Frank Härtig\",\n    \"oiml_issuer_id\": null\n  },\n  \"applicants\": [\n    {\n      \"name\": \"ESPERA-WERKE GMBH\",\n      \"address_lines\": [\n        \"Moltkestr. 17-33\",\n        \"47058 Duisburg\",\n        \"Deutschland\"\n      ]\n    }\n  ],\n  \"manufacturers\": [\n    {\n      \"name\": \"ESPERA-WERKE GMBH\",\n      \"address_lines\": [\n        \"Moltkestr. 17-33\",\n        \"47058 Duisburg\",\n        \"Deutschland\"\n      ]\n    }\n  ],\n  \"certified_type\": {\n    \"category\": \"Non-automatic weighing instrument\",\n    \"type_designations\": [\n      \"ES-R\"\n    ],\n    \"module_designation\": \"Not applicable\"\n  },\n  \"characteristics\": {\n    \"type_level\": {}\n  },\n  \"recommendation\": {\n    \"id\": \"R76\",\n    \"edition\": 2006,\n    \"scheme\": \"A\",\n    \"accuracy_classes\": [\n      \"III\"\n    ]\n  },\n  \"test_reports\": [\n    {\n      \"id\": \"1.12-4114299\",\n      \"date\": \"20.02.2024\",\n      \"pages\": 16,\n      \"role\": \"type_evaluation_report\"\n    },\n    {\n      \"id\": \"ZDS-R76/2006-A-DE1-23.02\",\n      \"date\": \"20.02.2024\",\n      \"pages\": 2,\n      \"role\": \"documentation_file\"\n    }\n  ],\n  \"revision_history\": [\n    {\n      \"revision\": \"0\",\n      \"date\": \"20.02.2024\",\n      \"changes\": \"First certificate\"\n    }\n  ]\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 4816,
+    "output_tokens": 1152,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

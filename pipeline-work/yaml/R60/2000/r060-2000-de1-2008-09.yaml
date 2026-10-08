@@ -1,0 +1,216 @@
+_meta:
+  cert_id: 2111
+  num: R060/2000-DE1-2008.09
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-09.pdf
+certificate:
+  number: R60/2000-DE1-08.09
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-09-19'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - 011xxK
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge double bending beam load cell. The load cells of the series 011xxK are double bending
+    beam load cells made of stainless steel; the strain gauge application is hermetically sealed.
+characteristics:
+  type_level:
+    rated_output:
+      value: 1.94
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value:
+        min: 350
+        max:
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=220kg
+      value: 220
+    - model: Emax=1760kg
+      value: 1760
+    - model: Emax=2200kg
+      value: 2200
+    - model: Emax=4400kg
+      value: 4400
+    - model: Emax=550kg
+      value: 550
+    - model: Emax=1100kg
+      value: 1100
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: "%·Emax"
+    values:
+    - model: Emax=220kg
+      value: 0.01
+    - model: Emax=1760kg
+      value: 0.01
+    - model: Emax=2200kg
+      value: 0.01
+    - model: Emax=4400kg
+      value: 0.01
+    - model: Emax=550kg
+      value: 0.009
+    - model: Emax=1100kg
+      value: 0.009
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C4
+  - C6
+test_reports:
+- id: PTB 1.12-4037198-1
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4037198-2
+  pages: 18
+  role: test_report
+model_family:
+  family_name: 011xxK
+  models:
+  - model_id: Emax=220kg
+    label: range 1
+    attributes:
+      capacity_range: range 1
+  - model_id: Emax=1760kg
+    label: range 1
+    attributes:
+      capacity_range: range 1
+  - model_id: Emax=2200kg
+    label: range 1
+    attributes:
+      capacity_range: range 1
+  - model_id: Emax=4400kg
+    label: range 1
+    attributes:
+      capacity_range: range 1
+  - model_id: Emax=550kg
+    label: range 2
+    attributes:
+      capacity_range: range 2
+  - model_id: Emax=1100kg
+    label: range 2
+    attributes:
+      capacity_range: range 2
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - characteristic
+  - capacity_range
+  - unit
+  - C3
+  - C4
+  - C6
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - characteristic: max_load_cell_intervals_nlc
+    capacity_range:
+    unit:
+    C3: 3000
+    C4: 4000
+    C6: 6000
+  - characteristic: rated_output
+    capacity_range:
+    unit: mV/V
+    C3: 1.94
+    C4: 1.94
+    C6: 1.94
+  - characteristic: maximum_capacity_emax
+    capacity_range: range 1
+    unit: kg
+    C3: 220 / 1760 / 2200 / 4400
+    C4: 220 / 1760 / 2200 / 4400
+    C6: 220 / 1760 / 2200 / 4400
+  - characteristic: minimum_load_cell_verification_interval_vmin
+    capacity_range: range 1
+    unit: "%·Emax"
+    C3: 0.01
+    C4: 0.01
+    C6: 0.01
+  - characteristic: maximum_capacity_emax
+    capacity_range: range 2
+    unit: kg
+    C3: 550 / 1100
+    C4: 550 / 1100
+    C6: 550 / 1100
+  - characteristic: minimum_load_cell_verification_interval_vmin
+    capacity_range: range 2
+    unit: "%·Emax"
+    C3: 0.009
+    C4: 0.009
+    C6: 0.009
+  description: >-
+    Cells spanning the C3/C4/C6 columns (colspan in the source) apply the same value to all accuracy classes.
+  footnotes: []

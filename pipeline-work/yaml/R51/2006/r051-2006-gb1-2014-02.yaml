@@ -1,0 +1,251 @@
+_meta:
+  cert_id: 3425
+  num: R051/2006-GB1-2014.02
+  applicant: Marel Ltd
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-02.pdf
+certificate:
+  number: R51/2006-GB1-14.02
+  project_number: TS0101/0026
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2014-04-24'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Certification Services
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Marel Limited
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+manufacturers:
+- name: Marel Limited
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+certified_type:
+  category: Automatic checkweighing/catchweighing instrument
+  type_designations:
+  - MCheck2
+  description: >-
+    Mains-powered automatic checkweighing/catchweighing instrument designated the MCheck2, with in-feed,
+    weigh head and out-feed conveyors (driven by DC motors) fitted with photocells for pack detection,
+    and a touchscreen control and display pod.
+characteristics:
+  type_level:
+    minimum_capacity:
+      value: 40
+      unit_symbol: g
+      unit_id:
+    interval_type:
+      value: single or multi-interval (any combination of the stated capacity/scale-interval variants)
+      unit_symbol:
+      unit_id:
+    maximum_preset_tare_single_interval:
+      value: "≤ 23% of Gross"
+      unit_symbol:
+      unit_id:
+    maximum_preset_tare_multi_interval:
+      value: "≤ 23% of Gross and PT ≤ Max1"
+      unit_symbol:
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: 0
+        max: 35
+      unit_symbol: "°C"
+      unit_id:
+    humidity_environment:
+      value: non-condensing (closed)
+      unit_symbol:
+      unit_id:
+    electromagnetic_environments:
+      value: E1 and E2
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 14
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    accuracy_classes:
+      value: XIII(1) and Y(a)
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: Ethernet; 2 core for reject; RS232; CAN; external stop (4 core); E-Stop switch loop
+      unit_symbol:
+      unit_id:
+    devices:
+      value: >-
+        Automatic zero-setting device active during automatic operation (≤ 4% max, overdue zero message
+        and packs rejected, at least every 15 min if no zero tracking); zero tracking (≤ 4% max); initial
+        zero-setting (≤ 20% max); pre-set tare device (subtractive); static calibration, not accessible
+        to the user; belt speed setting, accessible to the user; internal memory for storage of batch
+        data (category X); device acting upon significant faults; screen check at power-up; program editing
+        (restricted to access levels higher than operator); high resolution mode (0.1e) for testing purposes,
+        not accessible to the user; operation under category Y only or X and Y selection device, accessible
+        to the user (restricted to access levels higher than operator)
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: 1.0.0
+      unit_symbol:
+      unit_id:
+    sealing:
+      value: >-
+        Legally relevant parameters protected by two event counters ("Calibration Changes" and "Configuration
+        Changes"); weighing unit physically sealed
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Max ≤ 1 kg
+      value:
+        min:
+        max: 1
+    - model: Max ≤ 3 kg
+      value:
+        min:
+        max: 3
+    - model: Max ≤ 6 kg
+      value:
+        min:
+        max: 6
+  - attribute: minimum_scale_interval
+    unit_symbol: g
+    values:
+    - model: Max ≤ 1 kg
+      value:
+        min: 0.5
+        max:
+    - model: Max ≤ 3 kg
+      value:
+        min: 1
+        max:
+    - model: Max ≤ 6 kg
+      value:
+        min: 2
+        max:
+  config_level:
+  - attribute: operating_speed
+    axis: weighing range (weight in motion)
+    values:
+    - condition: 40 g to 250 g
+      value:
+        min: 0.3
+        max: 1.33
+      unit_symbol: m/s
+    - condition: 250 g to 1000 g
+      value:
+        min: 0.3
+        max: 1.1
+      unit_symbol: m/s
+    - condition: 1000 g to 3000 g
+      value:
+        min: 0.3
+        max: 1.0
+      unit_symbol: m/s
+    - condition: 3000 g to 6000 g
+      value:
+        min: 0.3
+        max: 0.8
+      unit_symbol: m/s
+  - attribute: minimum_voltage_input_per_scale_interval
+    axis: capacity range
+    values:
+    - condition: Min to 1 kg range
+      value:
+        min: 0.46
+        max:
+      unit_symbol: μV/e
+    - condition: 1 kg to 6 kg range
+      value:
+        min: 1.87
+        max:
+      unit_symbol: μV/e
+  - attribute: control_and_display_pod_configuration
+    axis: installation variant
+    values:
+    - condition: remote pod
+      value: control and display pod connected to the electrical cabinet via a conduit
+      unit_symbol:
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - XIII(1)
+  - Y(a)
+test_reports:
+- id: P01261
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: R51/2006-GB1-14.02
+  date: '2014-04-24'
+  changes: OIML certificate first issued.
+model_family:
+  family_name: MCheck2
+  models:
+  - model_id: Max ≤ 1 kg
+  - model_id: Max ≤ 3 kg
+  - model_id: Max ≤ 6 kg
+components:
+- role: load cell
+  type_designations:
+  - PC1 C3
+  alternatives: OR
+  characteristics:
+    manufacturer: Flintec
+    technology: strain gauge, analogue output (load cells with digital output not permitted)
+    maximum_capacity:
+      value: 30
+      unit_symbol: kg
+      unit_id:
+    location: below the centre of the weigh conveyor
+    dynamically_tested_reference: Tedea 1040 C3 (capacity 15 kg)
+    replacement_conditions: >-
+      Any compatible load cell(s) may be used provided: a respective OIML R60 Certificate of Conformity
+      is issued for the load cell; the certificate contains the load cell types and the necessary load
+      cell data required for the manufacturer's declaration of compatibility of modules and any particular
+      installation requirements; a load cell marked NH is allowed only if humidity testing to R76 has
+      been conducted; it is not a load cell with digital output; characteristics such as n_lc, Y, Z are
+      the same or better than the load cell tested dynamically (Tedea 1040 C3, capacity 15 kg); design
+      and material are the same; no oil damper is used.
+footnotes: []

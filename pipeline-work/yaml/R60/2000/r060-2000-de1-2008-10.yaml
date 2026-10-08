@@ -1,0 +1,239 @@
+_meta:
+  cert_id: 2110
+  num: R060/2000-DE1-2008.10
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-10.pdf
+certificate:
+  number: R60/2000-DE1-08.10
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-09-19'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - 011xxH
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge double bending beam load cell. The load cells (LC) of the series 011xxH are double bending
+    beam load cells made of stainless steel. The strain gauge application is hermetically sealed by means
+    of a welded on metal bellow.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%·Emax"
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%·Emax"
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value:
+        min: 350
+        max: 480
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+    - model: Emax=500kg
+      value: 500
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+    - condition: C3MI7.5
+      value: 3000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 0.009
+      unit_symbol: "%·Emax"
+    - condition: C4
+      value: 0.0066
+      unit_symbol: "%·Emax"
+    - condition: C6
+      value: 0.0066
+      unit_symbol: "%·Emax"
+    - condition: C3MI7.5
+      value: 0.009
+      unit_symbol: "%·Emax"
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: "½Emax/3000"
+      unit_symbol:
+    - condition: C4
+      value: "½Emax/4000"
+      unit_symbol:
+    - condition: C6
+      value: "½Emax/6000"
+      unit_symbol:
+    - condition: C3MI7.5
+      value: "½Emax/7500"
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C4
+  - C6
+  - C3MI7.5
+test_reports:
+- id: PTB 1.12-4037197-1
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4037197-3
+  pages: 18
+  role: test_report
+model_family:
+  family_name: 011xxH
+  models:
+  - model_id: Emax=50kg
+    label:
+    attributes:
+      applicable_accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=100kg
+    label:
+    attributes:
+      applicable_accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=200kg
+    label:
+    attributes:
+      applicable_accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=500kg
+    label:
+    attributes:
+      applicable_accuracy_classes:
+      - C3
+      - C4
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  - minimum_dead_load_output_return_dr
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  - "%·Emax"
+  -
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    - 500
+    minimum_load_cell_verification_interval_vmin: 0.009
+    minimum_dead_load_output_return_dr: "½Emax/3000"
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    - 500
+    minimum_load_cell_verification_interval_vmin: 0.0066
+    minimum_dead_load_output_return_dr: "½Emax/4000"
+  - accuracy_class: C6
+    max_load_cell_intervals_nlc: 6000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: 0.0066
+    minimum_dead_load_output_return_dr: "½Emax/6000"
+  - accuracy_class: C3MI7.5
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: 0.009
+    minimum_dead_load_output_return_dr: "½Emax/7500"
+  description: >-
+    Metrological characteristics of the 011xxH load cells for application in approved weighing instruments,
+    given per accuracy class. Capacity range 50/100/200/500 kg applies to classes C3 and C4; 50/100/200
+    kg applies to classes C6 and C3MI7.5.
+  footnotes: []

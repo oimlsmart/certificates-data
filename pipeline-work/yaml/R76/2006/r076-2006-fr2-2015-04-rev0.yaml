@@ -1,0 +1,153 @@
+_meta:
+  cert_id: 3761
+  num: R076/2006-FR2-2015.04 Rev. 0
+  applicant: Precia SA
+  issuing_year: '2015'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2015-04-rev0.pdf
+certificate:
+  number: R76/2006-FR2-15.04
+  project_number: P133689
+  page_total: 2
+  member_state: France
+  date_issued: '2015-06-03'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Measuring Instruments Division Manager
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+manufacturers:
+- name: PRECIA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+certified_type:
+  category: Indicator
+  type_designations:
+  - X1309-TR
+  module_designation: Analogue data processing unit
+  description: >-
+    Analogue data processing unit type X1309-TR is a separate module intended to be integrated in a non
+    automatic weighing instrument. It is in the form of an electronic card that is closed with a metallic
+    cover. It is intended to be connected to a weighing channel comprising strain gauges load-cells with
+    analogue output. It performs analogue to digital conversion of the signal and has in its memory all
+    setting parameters of the whole instrument as well as the signature of the associated terminal. Sealing
+    is by a sealing sticker intended to prevent access to the card.
+characteristics:
+  type_level:
+    intended_accuracy_class:
+      value: III or IIII
+    max_number_of_weighing_ranges:
+      value: 2
+    number_of_weighing_channels:
+      value: 1
+    weighing_channel_type:
+      value: analogue
+    power_supply_voltage:
+      value:
+        min: 230
+        max: 240
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    output_voltage:
+      value:
+        min: 8
+        max: 30
+      unit_symbol: V
+    output_voltage_type:
+      value: DC
+    load_cell_excitation_voltage_eexc:
+      value: 5
+      unit_symbol: V
+    min_input_voltage_per_scale_interval_dumin:
+      value: 0.5
+      unit_symbol: µV
+    measuring_range_minimum_voltage:
+      value: 0.0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+    min_load_cell_impedance_rlmin:
+      value: 43.75
+      unit_symbol: Ω
+    max_load_cell_impedance_rlmax:
+      value: 1245
+      unit_symbol: Ω
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    fraction_of_maximum_permitted_error_pind:
+      value: 0.4
+    load_cell_connection:
+      value: 6-wire shielded system
+    load_cell_connection_cable_reference:
+      value: PRECIA ref. 4005271 or similar
+  config_level:
+  - attribute: max_verification_scale_intervals_nind_per_weighing_range
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 6000
+    - condition: class IIII
+      value: 1000
+  - attribute: max_verification_scale_intervals_nind_multi_interval_configuration
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 2*3000 or 3*3000
+  - attribute: maximum_subtractive_tare_effect_t
+    axis: weighing_range_configuration
+    values:
+    - condition: single range
+      value: Max
+    - condition: multi-interval version
+      value: Max1
+  - attribute: maximum_load_cell_connection_cable_length
+    axis: cable_cross_section
+    values:
+    - condition: section 0.68 mm²
+      value: 150
+      unit_symbol: m
+    - condition: section 1 mm²
+      value: 220
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-P133689-PCI/1
+  pages: 15
+  role: evaluation_report
+- id: LNE-P133689-DE/2
+  pages: 23
+  role: test_report
+- id: LNE-P133689-DMSI/3
+  pages: 48
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2015-06-03'

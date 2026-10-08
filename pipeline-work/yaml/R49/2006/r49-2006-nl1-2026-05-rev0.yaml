@@ -1,0 +1,413 @@
+_meta:
+  cert_id: 6872
+  num: R49/2006-A-NL1-26.05 Rev. 0
+  applicant: Elster Water Metering Ltd.
+  issuing_year: '2026'
+  status: Valid
+  issuer: NL1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r49-2006-nl1-2026-05-rev0.pdf
+certificate:
+  number: R 49/2006-A-NL1-26.05
+  scheme: A
+  project_number: '3719708'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2026-04-13'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V., OIML Issuing Authority NL1
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  person_title: Certification Board
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Elster Water Metering Ltd.
+  address_lines:
+  - 130 Camford Way, Sundon Park, Luton
+  - Bedfordshire, LU3 3AN
+  - United Kingdom
+manufacturers:
+- name: Elster Water Metering Ltd.
+  address_lines:
+  - 130 Camford Way, Sundon Park, Luton, Bedfordshire, LU3 3AN
+  - United Kingdom
+- name: Elster S.R.O
+  address_lines:
+  - Dr. Alberta Schweitzera 194, 916 01 Stara Tura
+  - Slovakia
+- name: Elster Metering (Pty) Ltd
+  address_lines:
+  - 55 Northcorp Boulevard, Broadmeadows, Melbourne, Victoria, 3047
+  - Australia
+certified_type:
+  category: Water meter
+  type_designations:
+  - V100
+  - V110
+  - V200
+  - V210
+  module_designation:
+  description: A volumetric water meter, types V100 and V200, with nominal capacity of 5.5 rev/liter
+characteristics:
+  type_level:
+    measuring_principle:
+      value: Volumetric
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+    temperature_range_ambient:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    water_temperature_class:
+      value: T30
+      unit_symbol:
+      unit_id:
+    water_temperature_range:
+      value:
+        min: 0.1
+        max: 30
+      unit_symbol: "°C"
+      unit_id:
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+      unit_id:
+    maximum_admissible_pressure_bar:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+    orientation:
+      value: All positions (horizontal, vertical or diagonal)
+      unit_symbol:
+      unit_id:
+    flow_profile_sensitivity_class:
+      value: U0 and D0 (0 x DN upstream and 0 x DN downstream)
+      unit_symbol:
+      unit_id:
+    reverse_flow:
+      value: The sensor is not intended to measure reverse flow
+      unit_symbol:
+      unit_id:
+    pressure_loss_class:
+      value: Δp 63
+      unit_symbol:
+      unit_id:
+    pressure_loss:
+      value: 0.63
+      unit_symbol: bar
+      unit_id:
+  model_level:
+  - attribute: revs_per_liter
+    unit_symbol: rev/liter
+    values:
+    - model: V100
+      value: 5.5
+    - model: V200
+      value: 5.5
+  - attribute: minimum_flow_rate_q1
+    unit_symbol: m³/h
+    values:
+    - model: V100
+      value: 0.04
+    - model: V200
+      value: 0.04
+  - attribute: transitional_flow_rate_q2
+    unit_symbol: m³/h
+    values:
+    - model: V100
+      value: 0.064
+    - model: V200
+      value: 0.064
+  - attribute: permanent_flow_rate_q3
+    unit_symbol: m³/h
+    values:
+    - model: V100
+      value: 10
+    - model: V200
+      value: 10
+  - attribute: overload_flow_rate_q4
+    unit_symbol: m³/h
+    values:
+    - model: V100
+      value: 12.5
+    - model: V200
+      value: 12.5
+  - attribute: ratio_q3_q1
+    unit_symbol:
+    values:
+    - model: V100
+      value: 250
+    - model: V200
+      value: 250
+  config_level:
+  - attribute: indicating_range_minimum_value
+    axis: meter model and register variant
+    values:
+    - condition: V100 / 4x4 Register
+      value: 9999.99999
+      unit_symbol: m³
+    - condition: V100 / 5x3 Register
+      value: 99999.9999
+      unit_symbol: m³
+    - condition: V110 / 4x4 Register
+      value: 9999.99999
+      unit_symbol: m³
+    - condition: V110 / 5x3 Register
+      value: 99999.9999
+      unit_symbol: m³
+    - condition: V200 / Mechanical
+      value: 99999.99998
+      unit_symbol: m³
+    - condition: V200 / Hybrid III, IV or V Register
+      value: 999999.99999
+      unit_symbol: m³
+    - condition: V210 / Mechanical
+      value: 99999.99998
+      unit_symbol: m³
+    - condition: V210 / Hybrid III, IV or V Register
+      value: 999999.99999
+      unit_symbol: m³
+  - attribute: verification_scale_interval_minimum_resolution
+    axis: meter model and register variant
+    values:
+    - condition: V100 / 4x4 Register
+      value: 1.0e-05
+      unit_symbol: m³
+    - condition: V100 / 5x3 Register
+      value: 0.0001
+      unit_symbol: m³
+    - condition: V110 / 4x4 Register
+      value: 1.0e-05
+      unit_symbol: m³
+    - condition: V110 / 5x3 Register
+      value: 0.0001
+      unit_symbol: m³
+    - condition: V200 / Mechanical
+      value: 2.0e-05
+      unit_symbol: m³
+    - condition: V200 / Hybrid III, IV or V Register
+      value: 1.0e-05
+      unit_symbol: m³
+    - condition: V210 / Mechanical
+      value: 2.0e-05
+      unit_symbol: m³
+    - condition: V210 / Hybrid III, IV or V Register
+      value: 1.0e-05
+      unit_symbol: m³
+recommendation:
+  id: R49-1
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - 2
+test_reports:
+- id: NMi-3719708-01
+  date: '2026-04-13'
+  pages: 41
+  role: type_evaluation_report
+- id: 3719708-1
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2026-04-13'
+  changes: Initial issue
+model_family:
+  family_name:
+  models:
+  - model_id: V100
+    label: V100
+    attributes:
+      register_variants:
+      - 4x4 Register
+      - 5x3 Register
+  - model_id: V110
+    label: V110
+    attributes:
+      register_variants:
+      - 4x4 Register
+      - 5x3 Register
+  - model_id: V200
+    label: V200
+    attributes:
+      register_variants:
+      - Mechanical
+      - Hybrid III, IV or V Register
+  - model_id: V210
+    label: V210
+    attributes:
+      register_variants:
+      - Mechanical
+      - Hybrid III, IV or V Register
+components:
+- role: indicating device (register)
+  type_designations:
+  - 4x4 Register
+  - 5x3 Register
+  - Mechanical
+  - Hybrid III
+  - Hybrid IV
+  - Hybrid V
+  alternatives: OR
+  characteristics:
+    applicability:
+      value: Hybrid III, Hybrid IV and Hybrid V registers only
+      unit_symbol:
+      unit_id:
+    environmental_class:
+      value: M1 / O (installed outdoors)
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E1
+      unit_symbol:
+      unit_id:
+    power_supply:
+      value: Non-replaceable battery
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 2.5
+        max: 3.75
+      unit_symbol: V
+      unit_id:
+footnotes:
+- marker: "*"
+  text: The software version and checksum are displayed on the meter during the circular sequence.
+matrix_tables:
+- name: Table 3 – General characteristics of the family of instruments
+  columns:
+  - meter_name
+  - revs_per_liter
+  - minimum_flow_rate_q1
+  - transitional_flow_rate_q2
+  - permanent_flow_rate_q3
+  - overload_flow_rate_q4
+  - ratio_q3_q1
+  column_units:
+  -
+  - rev/liter
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_name: V100
+    revs_per_liter: 5.5
+    minimum_flow_rate_q1: 0.04
+    transitional_flow_rate_q2: 0.064
+    permanent_flow_rate_q3: 10
+    overload_flow_rate_q4: 12.5
+    ratio_q3_q1: 250
+  - meter_name: V200
+    revs_per_liter: 5.5
+    minimum_flow_rate_q1: 0.04
+    transitional_flow_rate_q2: 0.064
+    permanent_flow_rate_q3: 10
+    overload_flow_rate_q4: 12.5
+    ratio_q3_q1: 250
+  description: >-
+    Flow rates Q1, Q2, Q3 and Q4 can be freely chosen as long as: Q3 and ratio Q3/Q1 are selected from
+    paragraph 3.1 of OIML R49-1:2006(E); Q1 and Q2 values are minimum values with ratio Q2/Q1 = 1.6; Q3
+    and Q4 values are maximum values with ratio Q4/Q3 = 1.25; the ratio Q3/Q1 is at least 10.
+  footnotes: []
+- name: Table 4 – General characteristics of the indicating device
+  columns:
+  - meter_name
+  - register_variant
+  - indicating_range_minimum_value
+  - verification_scale_interval_minimum_resolution
+  column_units:
+  -
+  -
+  - m³
+  - m³
+  rows:
+  - meter_name: V100
+    register_variant: 4x4 Register
+    indicating_range_minimum_value: 9999.99999
+    verification_scale_interval_minimum_resolution: 1.0e-05
+  - meter_name: V100
+    register_variant: 5x3 Register
+    indicating_range_minimum_value: 99999.9999
+    verification_scale_interval_minimum_resolution: 0.0001
+  - meter_name: V110
+    register_variant: 4x4 Register
+    indicating_range_minimum_value: 9999.99999
+    verification_scale_interval_minimum_resolution: 1.0e-05
+  - meter_name: V110
+    register_variant: 5x3 Register
+    indicating_range_minimum_value: 99999.9999
+    verification_scale_interval_minimum_resolution: 0.0001
+  - meter_name: V200
+    register_variant: Mechanical
+    indicating_range_minimum_value: 99999.99998
+    verification_scale_interval_minimum_resolution: 2.0e-05
+  - meter_name: V200
+    register_variant: Hybrid III, IV or V Register
+    indicating_range_minimum_value: 999999.99999
+    verification_scale_interval_minimum_resolution: 1.0e-05
+  - meter_name: V210
+    register_variant: Mechanical
+    indicating_range_minimum_value: 99999.99998
+    verification_scale_interval_minimum_resolution: 2.0e-05
+  - meter_name: V210
+    register_variant: Hybrid III, IV or V Register
+    indicating_range_minimum_value: 999999.99999
+    verification_scale_interval_minimum_resolution: 1.0e-05
+  description: >-
+    Indicating range (minimum value) and verification scale interval (minimum resolution) per meter name
+    and register variant.
+  footnotes: []
+- name: Table 2 – Software identification (Hybrid III, Hybrid IV and Hybrid V registers)
+  columns:
+  - register_name
+  - version_number
+  - checksum
+  column_units:
+  -
+  -
+  -
+  rows:
+  - register_name: Hybrid III
+    version_number: V03
+    checksum: 2A5E
+  - register_name: Hybrid IV
+    version_number: V60.00
+    checksum: 3E 77 3A D6
+  - register_name: Hybrid IV
+    version_number: V60.01
+    checksum: 5D D3 A0 2F
+  - register_name: Hybrid IV
+    version_number: V60.02
+    checksum: 32 2A C1 1D
+  - register_name: Hybrid IV
+    version_number: V60.03
+    checksum: A4 97 40 30
+  - register_name: Hybrid V
+    version_number: V61.00
+    checksum: 29 06 EA 26
+  - register_name: Hybrid V
+    version_number: V61.01
+    checksum: E2 60 10 41
+  description: Software identification of the register variants Hybrid III, Hybrid IV and Hybrid V.
+  footnotes:
+  - marker: "*"
+    text: The software version and checksum are displayed on the meter during the circular sequence.

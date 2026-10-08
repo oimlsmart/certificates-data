@@ -1,0 +1,309 @@
+_meta:
+  cert_id: 4054
+  num: R051/2006-GB1-2014.03 Rev. 1
+  applicant: RDS Technology Ltd
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-03-rev1.pdf
+certificate:
+  number: R51/2006-GB1-14.03
+  scheme:
+  project_number: TS0101/0028
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2016-09-22'
+  oiml_issuer_id:
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Max Linnemann
+  person_title: Head of Certification Body
+  phone: "+44 (0) 20 8943 7272"
+  email:
+  website: www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id:
+applicants:
+- name: RDS Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+manufacturers:
+- name: RDS Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - Loadmaster Alpha 100
+  module_designation:
+  description: >-
+    Battery-operated automatic catchweighing instrument, designated the Loadmaster Alpha 100, comprising
+    a weighing module, “Terminator” junction box, Head unit control and display module, pressure transducers
+    and sensors mounted on a wheeled loader. The instrument automatically determines the load in the bucket
+    during the lifting process; the hydraulic pressure in the loader's arms is converted by a pressure
+    transducer, the output being used by the indicator to display the corresponding weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 50000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 10
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_capacity:
+      value: 10
+      unit_symbol: e
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_scale_intervals:
+      value: 250
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transducer_output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+      footnote_markers: []
+    minimum_sensitivity:
+      value: 35
+      unit_symbol: μV/div
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -25
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    closed_environment_modules:
+      value: Head unit, printer
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    open_environment_modules:
+      value: Weighing module, junction box, transducers, sensors
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment:
+      value: E3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 30
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: transducer_measuring_range
+    axis: pressure_transducer_variant
+    values:
+    - condition: 0…250 bar transducer
+      value:
+        min: 0
+        max: 250
+      unit_symbol: bar
+      footnote_markers: []
+    - condition: 0…400 bar transducer
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  scheme:
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01289
+  date:
+  pages: 12
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2014-09-19'
+  changes: OIML certificate first issued.
+- revision: '1'
+  date: '2016-09-22'
+  changes: >-
+    Corrected Database DBIS version number from 003 under Software. Added 5 alternatives: alternative
+    legally relevant software, Reference and Direction sensor or Gyro sensor in place of Inclinometer,
+    Gyro sensor or inclinometer in place of Bucket sensor.
+components:
+- role: pressure_transducer
+  type_designations:
+  - Danfoss MBS 1250
+  alternatives:
+  characteristics:
+    transducer_output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+      footnote_markers: []
+    measuring_range:
+    - condition: 0…250 bar transducer
+      value:
+        min: 0
+        max: 250
+      unit_symbol: bar
+      footnote_markers: []
+    - condition: 0…400 bar transducer
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+      footnote_markers: []
+- role: boom_inclinometer
+  type_designations: []
+  alternatives:
+  characteristics: {}
+- role: bucket_sensor
+  type_designations: []
+  alternatives:
+  characteristics: {}
+- role: boom_sensor
+  type_designations: []
+  alternatives:
+  characteristics:
+    applicability:
+      value: Telescopic loaders only
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: temperature_sensor
+  type_designations: []
+  alternatives:
+  characteristics: {}
+- role: chassis_inclinometer
+  type_designations: []
+  alternatives:
+  characteristics: {}
+- role: weighing_module
+  type_designations: []
+  alternatives:
+  characteristics: {}
+- role: junction_box
+  type_designations:
+  - Terminator
+  alternatives:
+  characteristics: {}
+- role: head_unit_control_and_display_module
+  type_designations:
+  - Isocan
+  alternatives:
+  characteristics: {}
+- role: weighing_process_trigger_sensor
+  type_designations:
+  - Boom inclinometer
+  - Reference and Direction sensor
+  - Gyro sensor
+  alternatives: OR
+  characteristics:
+    note:
+      value: >-
+        Reference and Direction sensor or Gyro sensor trigger the weighing process in place of the boom
+        inclinometer, at a certain linear position instead of angular position
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: angular_limit_prevention_sensor
+  type_designations:
+  - Bucket sensor
+  - Gyro sensor
+  - Inclinometer
+  alternatives: OR
+  characteristics:
+    note:
+      value: >-
+        Gyro sensor or inclinometer may be fitted in place of the bucket sensor, preventing weighing outside
+        of angular limits
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+footnotes: []
+matrix_tables:
+- name: Legally relevant software identification
+  columns:
+  - variant
+  - software_type
+  - designation
+  - version_number
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - variant: primary
+    software_type: Weighing module
+    designation: LX100
+    version_number: '003'
+  - variant: primary
+    software_type: Isocan
+    designation: IS100
+    version_number: '005'
+  - variant: primary
+    software_type: Database
+    designation: DBIS100
+    version_number: '001'
+  - variant: alternative
+    software_type: Weighing module
+    designation: LX100
+    version_number: '004'
+  - variant: alternative
+    software_type: Isocan
+    designation: IS100
+    version_number: '006'
+  - variant: alternative
+    software_type: Database
+    designation: DBIS100
+    version_number: '001'
+  description: >-
+    Alternative legally relevant software identification permitted in addition to the primary designations.
+  footnotes: []

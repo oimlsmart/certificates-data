@@ -1,0 +1,222 @@
+_meta:
+  cert_id: 4872
+  num: R51/2006-B-SE1-19.01
+  applicant: Konecranes Lifttrucks AB
+  issuing_year: '2019'
+  status: Valid
+  issuer: SE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-se1-2019-01.pdf
+certificate:
+  number: R51/2006-B-SE1-19.01
+  scheme: B
+  project_number: 6P09600-4
+  page_total: 4
+  member_state: Sweden
+  date_issued: '2019-06-24'
+issuing_authority:
+  name: RISE Research Institutes of Sweden AB
+  address_lines:
+  - Box 857
+  - SE-501 15 Borås
+  - Sweden
+  person_responsible: Lennart Aronsson
+  phone: "+46 10-516 50 00"
+  email: certifiering@ri.se
+  website: www.ri.se
+applicants:
+- name: Konecranes Lifttrucks AB
+  address_lines:
+  - Box 103
+  - SE-285 23 Markaryd
+  - Sweden
+manufacturers:
+- name: Konecranes Lifttrucks AB
+  address_lines:
+  - Box 103
+  - SE-285 23 Markaryd
+  - Sweden
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - CMGV
+  - CGMV
+  module_designation: Not applicable
+  description: >-
+    Graduated, self-indicating, electronic, single-interval automatic catchweighing instrument (Container
+    Gross Mass Verification), designed for weighing of containers. The system weighs containers statically
+    during a regular lift cycle with top pick spreader and is based on pressure sensors in the lifting
+    cylinders, a boom angle sensor and a proximity switch identifying the retracted boom position.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    number_of_verification_scale_intervals:
+      value:
+        min: 100
+        max: 200
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value: e*100 <= Max <= e*200
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    minimum_capacity:
+      value: 10 e (2 t)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_class:
+      value: E3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    semi_automatic_zero_setting:
+      value: true
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    protective_interfaces:
+      value: CAN (J1939)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_lateral_inclination:
+      value:
+        min:
+        max: 6
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: temperature_range
+    axis: indicating unit variant
+    values:
+    - condition: standard
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    - condition: MC3
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: B
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: 6P09600-1
+  role: type_evaluation_report
+- id: 6P09600-1—5
+  role: type_evaluation_report
+revision_history:
+- revision: '1'
+  date: '2019-06-20'
+  changes: First issue
+components:
+- role: Indicating unit with built-in A/D converters for sensors
+  type_designations:
+  - MC3
+  alternatives:
+  characteristics: {}
+- role: Display unit
+  type_designations:
+  - MD4
+  - '6043.128'
+  alternatives:
+  characteristics: {}
+- role: >-
+    Hydraulic pressure sensor (pressure in both lift cylinders, + and -; two sensors on the left cylinder
+    and one on the right)
+  type_designations:
+  - '6043.177'
+  alternatives:
+  characteristics:
+    measuring_range:
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    n_max:
+      value: 200
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Boom angle sensor (redundant angle sensor giving the angle of the boom)
+  type_designations:
+  - '6043.135'
+  alternatives:
+  characteristics:
+    measuring_range:
+      value:
+        min: 0
+        max: 90
+      unit_symbol: "°"
+      unit_id:
+      footnote_markers: []
+    n_max:
+      value: 200
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Tilt sensor (checks lateral inclination of the machine is less than 6%)
+  type_designations:
+  - '6043.165'
+  alternatives:
+  characteristics:
+    measuring_range:
+      value:
+        min: -15
+        max: 15
+      unit_symbol: "°"
+      unit_id:
+      footnote_markers: []
+    n_max:
+      value: 200
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Logic controller
+  type_designations:
+  - '6043.132'
+  alternatives:
+  characteristics: {}
+- role: Electrical/proximity switch (indicates the boom is in the retracted position)
+  type_designations: []
+  alternatives:
+  characteristics: {}

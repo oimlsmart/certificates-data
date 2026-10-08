@@ -1,0 +1,152 @@
+_meta:
+  cert_id: 1796
+  num: R076/1992-DE1-2006.07
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2007'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2006-07.pdf
+certificate:
+  number: R76/1992-DE1-06.07
+  page_total: 2
+  member_state: Germany
+  date_issued: '2007-01-25'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirktor
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+certified_type:
+  category: Nonautomatic weighing instrument
+  type_designations:
+  - GLP-W...
+  description: >-
+    Nonautomatic, electromechanical, pricecomputing weighing instrument. The weighing instrument consists
+    of an indicator, comprising a microprocessor-system for further signal processing and control of the
+    balance operation with thermal printer, LC-display, indicating weight with price, tare values and
+    additional information, and of a weighing module, comprising the load receptor and the strain gauge
+    load cell. The A/D converter for signal processing may be incorporated either in the indicator or
+    in the weighing module. The weighing ranges with Max, Min, e, d and number of verification scale intervals
+    may be chosen within the limits of No. 3.2 of R 76-1 and of table 1.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value: 300
+      unit_symbol: kg
+      unit_id:
+    max_number_of_verification_scale_intervals_n:
+      value: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    max_number_of_verification_scale_intervals_ni:
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    tare_balancing_range:
+      value: 100
+      unit_symbol: "%"
+      unit_id:
+    tare_balancing_range_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  config_level:
+  - attribute: preset_tare_range
+    axis: instrument_type
+    values:
+    - condition: each weighing range of single and multiple range instruments
+      value: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: multi-interval instruments
+      value: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers:
+      - 2)
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: Amendment 1 (1994)
+  accuracy_classes:
+  - III
+test_reports:
+- id: 1.12-4023377
+  pages: 12
+  role: type_evaluation_report
+- id: 1.12-4023377/1
+  pages: 51
+  role: test_report
+- id: 1.12-4023377/2
+  pages: 13
+  role: test_report
+- id: 1.12-4023377/3
+  pages: 33
+  role: test_report
+components:
+- role: indicator
+  type_designations: []
+  characteristics:
+    signal_processing:
+      value: microprocessor-system for further signal processing and control of the balance operation
+      unit_symbol:
+      unit_id:
+    display:
+      value: LC-display
+      unit_symbol:
+      unit_id:
+    printer:
+      value: thermal printer
+      unit_symbol:
+      unit_id:
+    indicated_values:
+      value: weight with price, tare values and additional information
+      unit_symbol:
+      unit_id:
+- role: weighing module
+  type_designations: []
+  characteristics:
+    includes:
+      value: load receptor and strain gauge load cell
+      unit_symbol:
+      unit_id:
+    load_cell_technology:
+      value: strain gauge
+      unit_symbol:
+      unit_id:
+footnotes:
+- marker: 1)
+  text: This applies to each weighing range of single and multiple range instruments
+- marker: 2)
+  text: This applies only to multi-interval instruments

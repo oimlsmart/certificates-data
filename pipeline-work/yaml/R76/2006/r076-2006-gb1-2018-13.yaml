@@ -1,0 +1,294 @@
+_meta:
+  cert_id: 5640
+  num: R76/2006-A-GB1-18.13
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2018'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2018-13.pdf
+certificate:
+  number: R76/2006-A-GB1-18.13
+  scheme: A
+  page_total: 5
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2018-08-23'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+applicants:
+- name: Società Cooperativa Bilanciai Campogalliano
+  address_lines:
+  - Via S. Ferrari n.16
+  - 41011 Campogalliano (MO)
+  - Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai Campogalliano
+  address_lines:
+  - Via S. Ferrari n.16
+  - 41011 Campogalliano (MO)
+  - Italy
+certified_type:
+  category: Indicator
+  type_designations:
+  - DD700
+  - DD700I
+  - DD700IC
+  description: >-
+    The indicating devices are designated the DD700, DD700IC and DD700I indicators. The indicators are
+    self-indicating, mains or DC-powered, and are designed to be used as part of a Class III or IIII,
+    non-automatic weighing instrument.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    maximum_tare:
+      value: Max
+      unit_symbol:
+      unit_id:
+    minimum_load_cell_impedance_per_weighing_module:
+      value: 29
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_scale_interval:
+      value: 0.5
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value:
+        min: 27
+        max: 30
+      unit_symbol: mV
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    analog_load_cell_connection:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    maximum_load_cell_cable_length_per_cross_section:
+      value: 15.162
+      unit_symbol: m/mm²
+      unit_id:
+    interfaces:
+      value: >-
+        Load cell 6-wire shielded connection (analogue/digital); RS232/422/485; Ethernet; 0-10 V / 0-20
+        mA analogue input/output; digital I/O; field bus (Profibus...); USB host; USB client
+      unit_symbol:
+      unit_id:
+    sealing:
+      value: >-
+        Access to the calibration and metrological configuration is only possible via a protected switch
+        located on the instrument
+      unit_symbol:
+      unit_id:
+    device_functions:
+      value: >-
+        Initial zero setting; semi-automatic zero setting; zero tracking; automatic zero setting (negative
+        load indications for more than 5 s); semi-automatic subtractive tare weighing; preset tare; determination
+        and indication of stability of equilibrium; zero indicator; MPP Alibi storage device; multiplexed
+        scale inputs (up to 2 scales via function key); counting mode; load receptors summation; weighbridge
+        modes AdR/RDA, RcD, RpD/RCP; identification of weighing boards, digital load cells and DILINK
+        junction box; encrypted weight data transmission; optional connection to external PC
+      unit_symbol:
+      unit_id:
+    load_cell_compatibility_requirements:
+      value: >-
+        Any compatible load cell(s) may be used providing a respective OIML R60 Certificate of Conformity
+        exists containing the load cell types and data required for the manufacturer's declaration of
+        compatibility of modules; a load cell marked NH is allowed only if humidity testing to R76 has
+        been conducted; compatibility established by the manufacturer's module compatibility calculation
+        at verification; load cell transmission conforms to a standard type
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: enclosure
+    unit_symbol:
+    values:
+    - model: DD700
+      value: ABS
+    - model: DD700 Panel mount version
+      value: Stainless steel with cable connectors
+    - model: DD700IC
+      value: Stainless steel with cable connectors
+    - model: DD700I
+      value: Stainless steel with cable glands
+  - attribute: power_supply
+    unit_symbol:
+    values:
+    - model: DD700
+      value: External
+    - model: DD700 Panel mount version
+      value: External
+    - model: DD700IC
+      value: External
+    - model: DD700I
+      value: Internal
+  - attribute: optional_equipment
+    unit_symbol:
+    values:
+    - model: DD700I
+      value: Multicolour LED bar
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy class and interval configuration
+    values:
+    - condition: Class III, single interval
+      value: 6000
+    - condition: Class III, multi-interval/range (2 partial ranges)
+      value: 4000
+    - condition: Class III, multi-interval/range (3 partial ranges)
+      value: 3000
+    - condition: Class IIII, single and multi-interval/range (2 and 3 partial ranges)
+      value: 1000
+  - attribute: maximum_preset_tare
+    axis: instrument configuration
+    values:
+    - condition: single and multi-range
+      value: Max
+    - condition: multi-interval
+      value: Max₁
+  - attribute: load_cell_excitation_voltage
+    axis: load cell type
+    values:
+    - condition: analog load cells
+      value: 5
+      unit_symbol: V
+    - condition: digital load cells
+      value:
+        min: 10
+        max: 18
+      unit_symbol: V
+  - attribute: fraction_of_maximum_permitted_error_p_ind
+    axis: load cell configuration
+    values:
+    - condition: analog load cells
+      value: 0.5
+    - condition: digital load cells
+      value: 0
+    - condition: analog load cells with junction box DILINK
+      value: 0
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P02479
+  date: '2018-08-23'
+  pages: 18
+  role: type_evaluation_report
+- id: P02479-D
+  date: '2018-08-23'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2018-08-23'
+  changes: OIML Certificate first issued.
+model_family:
+  family_name:
+  models:
+  - model_id: DD700
+    label: DD700
+    attributes:
+      enclosure: ABS
+      display: 240x64 graphics LCD display
+      keyboard: 18 keys
+      power_supply: External
+      electronics: Main board with processor with A/D converter (2 multiplexed inputs)
+  - model_id: DD700 Panel mount version
+    label: DD700 Panel mount version
+    attributes:
+      enclosure: Stainless steel with cable connectors
+      mounting: Panel construction designed for placement in a rack
+      display: 240x64 graphics LCD display
+      keyboard: 18 keys
+      power_supply: External
+      electronics: Main board with processor with A/D converter (2 multiplexed inputs)
+  - model_id: DD700IC
+    label: DD700IC
+    attributes:
+      enclosure: Stainless steel with cable connectors
+      display: 240x64 graphics LCD display
+      keyboard: 18 keys
+      power_supply: External
+      electronics: Main board with processor with A/D converter (2 multiplexed inputs)
+  - model_id: DD700I
+    label: DD700I
+    attributes:
+      enclosure: Stainless steel with cable glands
+      display: 240x64 graphics LCD display
+      keyboard: 18 keys
+      power_supply: Internal
+      electronics: Main board with processor with A/D converter (2 multiplexed inputs)
+      optional_equipment: Multicolour LED bar
+components:
+- role: connectable digital load cell
+  type_designations:
+  - CPD-M
+  alternatives:
+  characteristics: {}
+- role: connectable smart junction box
+  type_designations:
+  - DILINK
+  alternatives:
+  characteristics: {}
+matrix_tables:
+- name: Legally relevant software modules
+  columns:
+  - module
+  - identification
+  - release
+  - checksum
+  rows:
+  - module: Metrological software
+    identification: BIL001
+    release: 1.x
+    checksum: 1CA3
+  - module: Boot
+    identification: '59300003'
+    release: 1.x
+    checksum: '1691'
+  description: >-
+    The legally-relevant software comprises the following modules (with x reflecting minor, non-legally-relevant
+    changes). The software information can be displayed by pressing the right arrow key and simultaneously
+    switching on the indicator.
+  footnotes: []

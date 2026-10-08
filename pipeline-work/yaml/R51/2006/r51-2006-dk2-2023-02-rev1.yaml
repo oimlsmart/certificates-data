@@ -1,0 +1,175 @@
+_meta:
+  cert_id: 6092
+  num: R51/2006-A-DK2-23.02 Rev. 1
+  applicant: Shanghai Teraoka Electronic Co., Ltd.
+  issuing_year: '2023'
+  status: Valid
+  issuer: DK2
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r51-2006-dk2-2023-02-rev1.pdf
+certificate:
+  number: R51/2006-A-DK2-2023.02 Rev. 1
+  scheme: A
+  project_number: 123-33553.90.20
+  page_total: 3
+  member_state: Denmark
+  date_issued: '2023-12-08'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Per Rafn Crety
+  phone: "+45 43 25 01 77"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - No. 6058 of Nanting Road
+  - Tingling town
+  - Jinshan District
+  - Shanghai
+  - CHINA
+manufacturers:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - SCG-3000
+  - SCG-6000
+  - SCG-15000
+  module_designation: Automatic Catchweighing instrument
+  description: >-
+    Catchweigher family SCG-xxxxx (models SCG-3000, SCG-6000, SCG-15000). Uses HBM PW15AH C3 load cell.
+    Software version identification is performed during power-up; approved software version is v4.xx,
+    where xx = 00-99 represents minor non-legal changes. Devices: power up test, initial zero setting
+    device, automatic zero setting device (dynamic mode only), semiautomatic zero setting device (static
+    mode only), zero tracking device (static mode only), no motion detection and indication, detection
+    of significant fault. Interfaces: Ethernet for communication to peripherals, USB (for setup of the
+    instrument only); the interface does not have to be secured.
+characteristics:
+  type_level:
+    weighing_range:
+      value: Single-interval
+      unit_symbol:
+    weighing_mode:
+      value: Static and Dynamic
+      unit_symbol:
+    minimum_capacity:
+      value: 50×e
+      unit_symbol:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    number_of_verification_scale_intervals_n:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+    belt_speed:
+      value: 20
+      unit_symbol: m/min
+    warmup_time:
+      value: None
+      unit_symbol:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    supply_voltage:
+      value: 230
+      unit_symbol: V
+    supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    power_supply_type:
+      value: AC
+      unit_symbol:
+    electromagnetic_class:
+      value: E2
+      unit_symbol:
+    humidity:
+      value: Non-condensing
+      unit_symbol:
+    software_version:
+      value: v4.xx
+      unit_symbol:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: SCG-3000
+      value: 3
+    - model: SCG-6000
+      value: 6
+    - model: SCG-15000
+      value: 15
+  config_level:
+  - attribute: automatic_zero_setting_device_max
+    axis: weighing_mode
+    values:
+    - condition: dynamic
+      value: 4
+      unit_symbol: "%"
+  - attribute: semiautomatic_zero_setting_device_max
+    axis: weighing_mode
+    values:
+    - condition: static
+      value: 4
+      unit_symbol: "%"
+  - attribute: zero_tracking_device_max
+    axis: weighing_mode
+    values:
+    - condition: static
+      value: 4
+      unit_symbol: "%"
+  - attribute: initial_zero_setting_device_max
+    axis: weighing_mode
+    values:
+    - condition: static and dynamic
+      value: 20
+      unit_symbol: "%"
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - X(III)
+  - Y(a)
+test_reports:
+- id: 121-34103.10
+  date: '2022-12-21'
+  pages: 90
+  role: type_evaluation_report
+- id: 121-34103.90.20
+  date: '2023-02-07'
+  pages: 16
+  role: evaluation_report
+- id: 121-34103
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2023-02-09'
+  changes: Initial version
+- revision: '1'
+  date: '2023-12-08'
+  changes: Static mode added
+model_family:
+  family_name: SCG-xxxxx
+  models:
+  - model_id: SCG-3000
+  - model_id: SCG-6000
+  - model_id: SCG-15000
+components:
+- role: load cell
+  type_designations:
+  - HBM PW15AH C3

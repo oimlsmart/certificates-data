@@ -1,0 +1,212 @@
+_meta:
+  cert_id: 5544
+  num: R60/2017-A-NL1-21.20 Rev. 1
+  applicant: Ohaus Corporation
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2017
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2017/r060-2017-nl1-2021-20-rev1.pdf
+certificate:
+  number: R60/2017-A-NL1-21.20
+  scheme: A
+  project_number: '3147076'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2021-11-18'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+manufacturers:
+- name: Ohaus Corporation
+  address_lines:
+  - 7 Campus Drive, Suite 310
+  - Parsippany, New Jersey 07054
+  - United States of America
+certified_type:
+  category: Load cell
+  type_designations:
+  - LBZ3-B-xx-xxx-xx-xx
+  module_designation: Analog-passive load cell
+  description: A single point load cell, with strain gauges. Type LBZ3-B-xx-xxx-xx-xx series.
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2.0
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    rated_output_tolerance:
+      value: 0.2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    ratio_y_emax_over_vmin:
+      value: 20000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    ratio_z_emax_over_2dr:
+      value: 7500
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    input_impedance:
+      value: 406
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    input_impedance_tolerance:
+      value: 6
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    output_impedance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    output_impedance_tolerance:
+      value: 3
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    recommended_excitation_voltage:
+      value:
+        min: 5
+        max: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_maximum:
+      value: 18
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transducer_material:
+      value: Aluminium alloy
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    atmospheric_protection:
+      value: Silicon rubber
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=50-250kg
+      value:
+        min: 50
+        max: 250
+      footnote_markers: []
+    - model: Emax=300-500kg
+      value:
+        min: 300
+        max: 500
+      footnote_markers: []
+  - attribute: max_load_cell_intervals_nlc
+    unit_symbol:
+    values:
+    - model: Emax=50-250kg
+      value: 4000
+      footnote_markers:
+      - 1)
+    - model: Emax=300-500kg
+      value: 5000
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2017
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-10.20
+  date: '2010-11-10'
+  pages: 64
+  role: test_report
+- id: NMi-10200947-06
+  date: '2010-12-24'
+  pages: 59
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2021-04-30'
+  changes:
+- revision: '1'
+  date: '2021-11-18'
+  changes: Y value change to 20000 in accordance with test certificate
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=50-250kg
+    label: 50 kg up to and including 250 kg
+    attributes:
+      max_load_cell_intervals_nlc: 4000
+  - model_id: Emax=300-500kg
+    label: 300 kg up to and including 500 kg
+    attributes:
+      max_load_cell_intervals_nlc: 5000
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax and Y and can be reduced separately. Z is proportional or equal to
+    nmax

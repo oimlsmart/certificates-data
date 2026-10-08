@@ -1,0 +1,227 @@
+_meta:
+  cert_id: 6656
+  num: R60/2000-A-NL1-17.58 Rev. 3
+  applicant: Flintec UK Limited
+  issuing_year: '2025'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r60-2000-nl1-2017-58-rev3.pdf
+certificate:
+  number: R60/2000-A-NL1-17.58
+  scheme: A
+  project_number: '3987199'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2025-09-08'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Flintec UK Ltd
+  address_lines:
+  - Caxton House
+  - Pentwyn, Cardiff
+  - CF62 8HA
+  - United Kingdom
+manufacturers:
+- name: Flintec UK Ltd
+  address_lines:
+  - Caxton House
+  - Pentwyn, Cardiff
+  - CF62 8HA
+  - United Kingdom
+certified_type:
+  category: Load cell
+  type_designations:
+  - RC3D
+  - RC3D-A
+  - RC3D-B
+  - RC3D-C
+  module_designation: Digital load cell
+  description: A compression load cell, with strain gauges, equipped with electronics.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 25
+        max: 100
+      unit_symbol: t
+      unit_id:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    max_load_cell_intervals_n:
+      value: 4000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    ratio_y_emax_over_vmin:
+      value: 15000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    ratio_z_emax_over_2dr:
+      value: 9000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    fraction_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    recommended_excitation_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    recommended_excitation_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    excitation_maximum_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    excitation_maximum_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    transducer_material:
+      value: Stainless steel
+      unit_symbol:
+      unit_id:
+    atmospheric_protection:
+      value: Hermetically Welded
+      unit_symbol:
+      unit_id:
+    number_of_counts_for_emax:
+      value:
+        min: Y*5/pLC
+        max:
+      unit_symbol:
+      unit_id:
+    software_identification:
+      value: 'Version number: XRC1xxxxxxxx or XRCv2xxxxxxx'
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+  config_level:
+  - attribute: rated_output
+    axis: maximum_capacity
+    values:
+    - condition: Emax = 25 t
+      value: 166666
+      unit_symbol: cts
+      unit_id:
+    - condition: Emax > 25 t
+      value: 200000
+      unit_symbol: cts
+      unit_id:
+  - attribute: electromagnetic_environment_class
+    axis: electronics board
+    values:
+    - condition: models with PCB900
+      value: N.A.
+      unit_symbol:
+      unit_id:
+    - condition: models with XRCv2 board
+      value: E2
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-04.16
+  date: '2004-09-27'
+  pages: 53
+  role: type_evaluation_report
+- id: NMi-1901068-01
+  date: '2017-08-22'
+  pages: 89
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2017-09-05'
+  changes: Initial issue.
+- revision: '1'
+  date: '2021-11-30'
+  changes: Revision to include reports with NTEP annex.
+- revision: '2'
+  date: '2023-12-19'
+  changes: Addition of firmware XRC1xxxxxxx and change of address.
+- revision: '3'
+  date: '2025-09-08'
+  changes: Adding sub types and address correction.
+model_family:
+  family_name: RC3D
+  models:
+  - model_id: RC3D
+  - model_id: RC3D-A
+  - model_id: RC3D-B
+  - model_id: RC3D-C
+components:
+- role: electronics board
+  type_designations:
+  - PCB900
+  alternatives: OR
+  characteristics:
+    electromagnetic_environment_class:
+      value: N.A.
+      unit_symbol:
+      unit_id:
+- role: electronics board
+  type_designations:
+  - XRCv2
+  alternatives: OR
+  characteristics:
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax, Y and Z can be reduced separately.
+- marker: 2)
+  text: x is a number between 0 and 9 representing updates of the non-legally relevant part of the software.

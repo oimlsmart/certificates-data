@@ -1,0 +1,240 @@
+_meta:
+  cert_id: 3399
+  num: R076/2006-GB1-2012.02 Rev. 3
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2012-02-rev3.pdf
+certificate:
+  number: R76/2006-GB1-12.02
+  revision: '3'
+  project_number: T1138/0018
+  page_total: 5
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2014-03-21'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+certified_type:
+  category: Indicator
+  type_designations:
+  - DD1050
+  - DD1050i
+  - DD2050
+  module_designation:
+  description: >-
+    Indicating devices designed to be used as part of a Class III or IIII non-automatic weighing instrument.
+    They operate as single interval, multi-interval or multi-range, are self-indicating and mains or DC-powered.
+characteristics:
+  type_level:
+    power_supply_voltage_ac:
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_tare:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_excitation_voltage:
+      value:
+        min: 9
+        max: 10
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    minimum_load_cell_impedance_per_weighing_module:
+      value: 29
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_per_scale_interval:
+      value: 0.6
+      unit_symbol: µV
+      unit_id:
+      footnote_markers: []
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+      footnote_markers: []
+    measuring_range_maximum_voltage:
+      value:
+        min: 27
+        max: 30
+      unit_symbol: mV
+      unit_id:
+      footnote_markers: []
+    fraction_of_maximum_permissible_error_p_ind:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    load_cell_connection_analogue:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_cable_length:
+      value: 3.358
+      unit_symbol: m/mm²
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: max_scale_intervals
+    axis: accuracy_class_and_interval_configuration
+    values:
+    - condition: single interval, accuracy class III
+      value: 6000
+      unit_symbol:
+    - condition: multi-interval/range (2 partial ranges), accuracy class III
+      value: 4000
+      unit_symbol:
+    - condition: multi-interval/range (3 partial ranges), accuracy class III
+      value: 3000
+      unit_symbol:
+    - condition: single and multi-interval/range (2 and 3 partial ranges), accuracy class IIII
+      value: 1000
+      unit_symbol:
+  - attribute: maximum_preset_tare
+    axis: interval_configuration
+    values:
+    - condition: single and multi-range
+      value: "-Max"
+      unit_symbol:
+    - condition: multi-interval
+      value: "-Max1"
+      unit_symbol:
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_type
+    values:
+    - condition: digital load cells
+      value:
+        min: 10
+        max: 18
+      unit_symbol: V
+  - attribute: fraction_of_maximum_permissible_error_p_ind
+    axis: load_cell_type
+    values:
+    - condition: digital load cells
+      value: 0
+      unit_symbol:
+    - condition: analogue load cells with junction box DILINK
+      value: 0
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P00780
+  pages: 13
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2012-03-02'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2012-05-15'
+  changes: >-
+    Load cell excitation voltage and measuring range maximum voltage values corrected in technical data
+    table.
+- revision: '2'
+  date: '2013-05-02'
+  changes: Cable length modified in technical data table.
+- revision: '3'
+  date: '2014-03-21'
+  changes: Alternatives section added.
+model_family:
+  family_name:
+  models:
+  - model_id: DD1050
+    attributes:
+      enclosure: Stainless steel and ABS
+      display: 10.4" graphic LCD display
+      a_d_conversion_modules: up to 4
+  - model_id: DD1050i
+    attributes:
+      enclosure: Stainless steel
+      display: 10.4" graphic LCD display
+      a_d_conversion_modules: up to 4
+      power_supply: Enclosed external power supply
+  - model_id: DD2050
+    attributes:
+      enclosure: Stainless steel
+      display: 10.4" graphic LCD display
+      a_d_conversion_modules: up to 4
+      printer: Integrated printer
+components:
+- role: connectable digital load cell
+  type_designations:
+  - CPD-M
+  alternatives:
+  characteristics: {}
+- role: connectable smart junction box
+  type_designations:
+  - DILINK
+  alternatives:
+  characteristics: {}

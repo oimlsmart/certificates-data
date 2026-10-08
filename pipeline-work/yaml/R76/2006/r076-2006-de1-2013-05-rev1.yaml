@@ -1,0 +1,260 @@
+_meta:
+  cert_id: 3890
+  num: R076/2006-DE1-2013.05 Rev. 1
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2016'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-de1-2013-05-rev1.pdf
+certificate:
+  number: R76/2006-DE1-13.05
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2016-02-24'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - Germany
+  person_responsible: Dr. Oliver Mack
+  person_title: Member of Certification Body
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+certified_type:
+  category: Non automatic electromechanical weighing instrument
+  type_designations:
+  - eS…
+  - iS1…
+  - iS2…
+  module_designation: Not applicable
+characteristics:
+  type_level:
+    tare_balancing_range_subtractive:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    tare_balancing_range_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: load cell type
+    values:
+    - condition: analog load cells
+      value:
+        min: 1
+        max: 120000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: digital load cells
+      value:
+        min: 1
+        max: 6000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals_single_multiple_range
+    axis: load cell type and accuracy class
+    values:
+    - condition: analog load cells, class III
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: analog load cells, class IIII
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: digital load cells, class III
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+  - attribute: number_of_verification_scale_intervals_multi_interval
+    axis: load cell type and accuracy class
+    values:
+    - condition: analog load cells, class III
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    - condition: analog load cells, class IIII
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    - condition: digital load cells, class III
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+recommendation:
+  id: R76-1
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4058218
+  role: type_evaluation_report
+- id: 1.12-4058218/1
+  pages: 48
+  role: test_report
+- id: 1.12-4058218/2
+  pages: 54
+  role: test_report
+- id: '1307040104'
+  pages: 17
+  role: test_report
+- id: '1403030104'
+  pages: 16
+  role: test_report
+- id: '1503050104'
+  pages: 18
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2016-02-24'
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: eS…
+  - model_id: iS1…
+  - model_id: iS2…
+footnotes:
+- marker: 1)
+  text: This applies to each range of single- and multiple range instruments.
+- marker: 2)
+  text: This applies for multi-interval instruments
+matrix_tables:
+- name: Technical data when using analog load cells
+  columns:
+  - characteristic
+  - accuracy_class_III
+  - accuracy_class_IIII
+  rows:
+  - characteristic: maximum_capacity
+    accuracy_class_III:
+      value:
+        min: 1
+        max: 120000
+      unit_symbol: kg
+    accuracy_class_IIII:
+      value:
+        min: 1
+        max: 120000
+      unit_symbol: kg
+  - characteristic: number_of_verification_scale_intervals_single_multiple_range
+    accuracy_class_III:
+      value:
+        min:
+        max: 10000
+    accuracy_class_IIII:
+      value:
+        min:
+        max: 1000
+    footnote_markers:
+    - 1)
+  - characteristic: number_of_verification_scale_intervals_multi_interval
+    accuracy_class_III:
+      value:
+        min:
+        max: 3000
+    accuracy_class_IIII:
+      value:
+        min:
+        max: 1000
+    footnote_markers:
+    - 2)
+  - characteristic: tare_balancing_range_subtractive
+    accuracy_class_III:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+    accuracy_class_IIII:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+  description: Tare-balancing range (subtractive) is expressed as percentage of Max.
+  footnotes:
+  - 1)
+  - 2)
+- name: Technical data when using digital load cells
+  columns:
+  - characteristic
+  - accuracy_class_III
+  rows:
+  - characteristic: maximum_capacity
+    accuracy_class_III:
+      value:
+        min: 1
+        max: 6000
+      unit_symbol: kg
+  - characteristic: number_of_verification_scale_intervals_single_multiple_range
+    accuracy_class_III:
+      value:
+        min:
+        max: 7500
+    footnote_markers:
+    - 1)
+  - characteristic: number_of_verification_scale_intervals_multi_interval
+    accuracy_class_III:
+      value:
+        min:
+        max: 3000
+    footnote_markers:
+    - 2)
+  - characteristic: tare_balancing_range_subtractive
+    accuracy_class_III:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+  description: Tare-balancing range (subtractive) is expressed as percentage of Max.
+  footnotes:
+  - 1)
+  - 2)

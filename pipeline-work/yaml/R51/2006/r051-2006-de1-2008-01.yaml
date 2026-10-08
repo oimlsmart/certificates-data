@@ -1,0 +1,378 @@
+_meta:
+  cert_id: 2021
+  num: R051/2006-DE1-2008.01
+  applicant: Leich und Mehl und Co. GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2008-01.pdf
+certificate:
+  number: R51/2006-DE1-08.01
+  scheme: A
+  page_total: 3
+  member_state: Germany
+  date_issued: '2008-04-14'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: LEICH und MEHL und Co. GmbH
+  address_lines:
+  - Porschestraße 7
+  - 71394 Kernen im Remstal
+  - Germany
+manufacturers:
+- name: LEICH und MEHL und Co. GmbH
+  address_lines:
+  - Porschestraße 7
+  - 71394 Kernen im Remstal
+  - Germany
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - PAW 2000
+  module_designation:
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped with electrodynamic force compensation load cell (EFC-LC) and performed
+    as single or multi interval instrument.
+characteristics:
+  type_level:
+    weighing_mode:
+      value: static and dynamic
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval_ratio:
+      value: e(i+1)/e(i) < 3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_load:
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_tare:
+      value: 0.25 × Max
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 5)
+  config_level:
+  - attribute: number_of_verification_scale_intervals
+    axis: table column group (as printed)
+    values:
+    - condition: 'columns 1-2: XIII(x); x = 1 or x ≥ 2, Y(a); Y(b) — single interval'
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: 'columns 1-2: XIII(x); x = 1 or x ≥ 2, Y(a); Y(b) — multi interval'
+      value: 2 × 3750
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: 'columns 3-4: XIII(x); x = 1 or x ≥ 2, Y(a); Y(b)'
+      value:
+        min:
+        max: 3750
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+  - attribute: minimum_load
+    axis: weighing mode × accuracy class
+    values:
+    - condition: static weighing — XIII(x); x = 1 or x ≥ 2
+      value: 20e
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    - condition: static weighing — Y(a); Y(b)
+      value: 20e
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 2)
+    - condition: dynamic weighing — XIII(x); x = 1 or x ≥ 2
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers:
+      - 3)
+    - condition: dynamic weighing — Y(a); Y(b)
+      value:
+        min: 20
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers:
+      - 3)
+  - attribute: maximum_belt_speed
+    axis: accuracy class (table column)
+    values:
+    - condition: XIII(x); x = 1 or x ≥ 2 (columns 1 and 3)
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a); Y(b) (column 2)
+      value:
+        min:
+        max: 0.9
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a); Y(b) (column 4)
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers:
+      - 4)
+  - attribute: maximum_put_through
+    axis: accuracy class (table column)
+    values:
+    - condition: XIII(x); x = 1 or x ≥ 2 (columns 1 and 3)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a); Y(b) (column 2)
+      value:
+        min:
+        max: 120
+      unit_symbol: pcs/min
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a); Y(b) (column 4)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+      unit_id:
+      footnote_markers:
+      - 4)
+  - attribute: maximum_belt_speed
+    axis: load L (Tab. 2)
+    values:
+    - condition: 10 g ≤ L ≤ 3 kg
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+    - condition: L > 3 kg
+      value:
+        min:
+        max: 0.9
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+  - attribute: maximum_put_through
+    axis: load L (Tab. 2)
+    values:
+    - condition: 10 g ≤ L ≤ 3 kg
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+      unit_id:
+      footnote_markers: []
+    - condition: L > 3 kg
+      value:
+        min:
+        max: 120
+      unit_symbol: pcs/min
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+  - XIII(x ≥ 2)
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: 1.12-4033567
+  pages: 16
+  role: type_evaluation_report
+- id: 1.12-4033567/1
+  pages: 70
+  role: test_report
+- id: 1.12-4033567/2
+  pages: 70
+  role: test_report
+- id: 1.12-4033567/3
+  pages: 70
+  role: test_report
+components:
+- role: load cell
+  type_designations:
+  - BF20-L
+  - BF20-L-P-I
+  alternatives: OR
+  characteristics:
+    type_level:
+      technology:
+        value: electrodynamic force compensation (EFC)
+        unit_symbol:
+        unit_id:
+        footnote_markers: []
+footnotes:
+- marker: 1)
+  text: >-
+    For weighing instruments of the category XIII and Y(b) the number of verification scale intervals
+    is limited to n_i ≤ 1000.
+- marker: 2)
+  text: >-
+    This value is valid for static weighing. The minimum capacity in case of static weighing for category
+    Y depends on the specification according to R51-1:2006 No 2.2.2. In that case it may be applied to
+    corresponding category X in the same way in order to achieve smaller minimum capacities.
+- marker: 3)
+  text: >-
+    This value is valid for dynamic weighing. For weighing instruments of the category X the minimum loads
+    depend on the used digital LC and for weighing instruments of the category Y additionally on the specification
+    under 2). In case of category Y the greater value has to be taken. Greater minimum loads may also
+    result from the metrological test of the LMC.
+- marker: 4)
+  text: Cf. Tab. 2
+- marker: 5)
+  text: >-
+    This specification applies only to weighing instruments with parameters being generally valid over
+    the complete weighing range for all products and weighing in motion (dynamic weighing). For single
+    products having especially their own product data storage and/or their own product-specific parameters
+    greater tare loads are allowed if they are approved by the LMC. A tare load ≤ - Max is allowed for
+    start stop operation (static weighing).
+matrix_tables:
+- name: 'Tab 1: Technical data of the weighing instrument PAW 2000 (EFC-LC of the type BF20-L or BF20-L-P-I)'
+  columns:
+  - parameter
+  - column_1
+  - column_2
+  - column_3
+  - column_4
+  rows:
+  - parameter: weighing_mode
+    column_1: static and dynamic weighing
+    column_2: static and dynamic weighing
+    column_3: static and dynamic weighing
+    column_4: static and dynamic weighing
+  - parameter: accuracy_class
+    column_1: XIII(x); x = 1 / XIII(x); x ≥ 2
+    column_2: Y(a); Y(b)
+    column_3: XIII(x); x = 1 / XIII(x); x ≥ 2
+    column_4: Y(a); Y(b)
+  - parameter: verification_scale_interval
+    column_1: "≥ 1 g"
+    column_2: "≥ 1 g"
+    column_3: "≥ 1 g"
+    column_4: "≥ 1 g"
+  - parameter: verification_scale_interval_ratio
+    column_1: e(i+1)/e(i) < 3
+    column_2: e(i+1)/e(i) < 3
+    column_3: e(i+1)/e(i) < 3
+    column_4: e(i+1)/e(i) < 3
+  - parameter: number_of_verification_scale_intervals
+    column_1: "≤ 7500 / ≤ 2 × 3750"
+    column_2: "≤ 7500 / ≤ 2 × 3750"
+    column_3: "≤ 3750"
+    column_4: "≤ 3750"
+  - parameter: maximum_load
+    column_1: "≤ 15 kg"
+    column_2: "≤ 15 kg"
+    column_3: "≤ 15 kg"
+    column_4: "≤ 15 kg"
+  - parameter: minimum_load
+    column_1: "≥ 20e (static) / ≥ 50 g (dynamic)"
+    column_2: "≥ 20e (static) / ≥ 20 g (dynamic)"
+    column_3: "≥ 20e (static) / ≥ 50 g (dynamic)"
+    column_4: "≥ 20e (static) / ≥ 20 g (dynamic)"
+  - parameter: temperature_range
+    column_1: 0 °C / +40 °C
+    column_2: 0 °C / +40 °C
+    column_3: 0 °C / +40 °C
+    column_4: 0 °C / +40 °C
+  - parameter: maximum_belt_speed
+    column_1: "≤ 1.2 m/s"
+    column_2: "≤ 0.9 m/s"
+    column_3: "≤ 1.2 m/s"
+    column_4: "≤ 1.2 m/s"
+  - parameter: put_through
+    column_1: "≤ 160 pcs/min"
+    column_2: "≤ 120 pcs/min"
+    column_3: "≤ 160 pcs/min"
+    column_4: "≤ 160 pcs/min"
+  - parameter: maximum_tare
+    column_1: "≤ 0.25 × Max"
+    column_2: "≤ 0.25 × Max"
+    column_3: "≤ 0.25 × Max"
+    column_4: "≤ 0.25 × Max"
+  description: >-
+    Column 4 belt speed and put-through values are limited by footnote 4 (see Tab 2); tare limited by
+    footnote 5; number of verification scale intervals by footnote 1; minimum loads by footnotes 2 and
+    3.
+  footnotes:
+  - 1)
+  - 2)
+  - 3)
+  - 4)
+  - 5)
+- name: 'Tab 2: Belt speed and the put through in dependence of the load L'
+  columns:
+  - load_range
+  - maximum_belt_speed
+  - put_through
+  column_units:
+  -
+  - m/s
+  - pcs/min
+  rows:
+  - load_range: 10 g ≤ L ≤ 3 kg
+    maximum_belt_speed: 1.2
+    put_through: 160
+  - load_range: L > 3 kg
+    maximum_belt_speed: 0.9
+    put_through: 120
+  description: 'Referenced by footnote 4 of Tab 1: load-dependent limits for belt speed and put-through.'
+  footnotes: []

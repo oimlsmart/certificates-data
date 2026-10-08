@@ -1,0 +1,256 @@
+_meta:
+  cert_id: 2467
+  num: R060/2000-JP1-2010.12
+  applicant: Kubota Corporation
+  issuing_year: '2010'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2010-12.pdf
+certificate:
+  number: R60/2000-JP1-10.12
+  scheme:
+  page_total: 3
+  member_state: Japan
+  date_issued: '2010-07-15'
+  oiml_issuer_id:
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563
+  - Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+  phone:
+  email:
+  website:
+  oiml_issuer_id:
+applicants:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi
+  - Naniwa-ku, Osaka
+  - 556-8601
+  - Japan
+manufacturers:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi
+  - Naniwa-ku, Osaka
+  - 556-8601
+  - Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - CC1-H-10T
+  - CC1-H-20T
+  - CC1-H-25T
+  - CC1-H-30T
+  - CC1-H-40T
+  - CC1-H-50T
+  module_designation:
+  description: Compression load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    safe_load_limit_elim:
+      value: 1.5*Emax
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ratio_z_emax_over_2dr:
+      value: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    excitation_voltage:
+      value:
+        min: 6
+        max: 8
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    cable_length_maximum:
+      value: 15
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: t
+    values:
+    - model: CC1-H-10T
+      value: 10
+      footnote_markers: []
+    - model: CC1-H-20T
+      value: 20
+      footnote_markers: []
+    - model: CC1-H-25T
+      value: 25
+      footnote_markers: []
+    - model: CC1-H-30T
+      value: 30
+      footnote_markers: []
+    - model: CC1-H-40T
+      value: 40
+      footnote_markers: []
+    - model: CC1-H-50T
+      value: 50
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_verification_intervals_nmax
+    axis: nmax_alternative
+    values:
+    - condition: nmax=6000
+      value: 6000
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=5000
+      value: 5000
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=4000
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=3000
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: minimum_verification_interval_vmin
+    axis: nmax_alternative
+    values:
+    - condition: nmax=6000
+      value: 1000*Emax/15000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: nmax=5000
+      value: 1000*Emax/12500
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: nmax=4000
+      value: 1000*Emax/10000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: nmax=3000
+      value: 1000*Emax/8000
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    axis: nmax_alternative
+    values:
+    - condition: nmax=6000
+      value: 15000
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=5000
+      value: 12500
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=4000
+      value: 10000
+      unit_symbol:
+      footnote_markers: []
+    - condition: nmax=3000
+      value: 8000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  amendment:
+  scheme:
+  accuracy_classes:
+  - C
+test_reports:
+- id: 10-14/R60:2000
+  date:
+  pages: 33
+  role: test_report
+model_family:
+  family_name: CC1-H
+  models:
+  - model_id: CC1-H-10T
+    label: CC1-H-10T (Emax = 10 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 10
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []
+  - model_id: CC1-H-20T
+    label: CC1-H-20T (Emax = 20 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 20
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []
+  - model_id: CC1-H-25T
+    label: CC1-H-25T (Emax = 25 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 25
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []
+  - model_id: CC1-H-30T
+    label: CC1-H-30T (Emax = 30 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 30
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []
+  - model_id: CC1-H-40T
+    label: CC1-H-40T (Emax = 40 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 40
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []
+  - model_id: CC1-H-50T
+    label: CC1-H-50T (Emax = 50 t)
+    attributes:
+      maximum_capacity_emax:
+        value: 50
+        unit_symbol: t
+        unit_id:
+        footnote_markers: []

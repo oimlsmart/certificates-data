@@ -1,0 +1,273 @@
+_meta:
+  cert_id: 1853
+  num: R129/2000-NL1-2006.01 Rev. 1
+  applicant: SICK AG.
+  issuing_year: '2007'
+  status: Valid
+  issuer: NL1
+  recommendation: R129
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R129/2000/r129-2000-nl1-2006-01-rev1.pdf
+certificate:
+  number: R129/2000-NL1-06.01
+  project_number: '601851'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2007-02-13'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: SICK AG
+  address_lines:
+  - Nimburger Strasse 11
+  - D-79276 Reute
+  - Germany
+manufacturers:
+- name: SICK AG
+  address_lines:
+  - Nimburger Strasse 11
+  - D-79276 Reute
+  - Germany
+certified_type:
+  category: Multi-dimensional measuring instrument
+  type_designations:
+  - VMS 510
+  description: >-
+    Multi-dimensional measuring instrument for measuring cubic and rectangular, non-irregular shaped,
+    non-reflective and opaque boxes. The smallest rectangular box that fully encloses the object shall
+    be determined. May be connected to an automatic weighing instrument provided this fulfils OIML R51.
+characteristics:
+  type_level:
+    maximum_objects_processed:
+      value: 960
+      unit_symbol: 1/min
+      unit_id:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    power_supply_voltage_dc:
+      value: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage_tolerance_dc:
+      value: 15
+      unit_symbol: "%"
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 110
+        max: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: DC or AC
+      unit_symbol:
+      unit_id:
+    maximum_length:
+      value: 2000
+      unit_symbol: mm
+      unit_id:
+    maximum_width:
+      value: 1000
+      unit_symbol: mm
+      unit_id:
+    maximum_height:
+      value: 1000
+      unit_symbol: mm
+      unit_id:
+    program_version:
+      value: V1.20.xxxx
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: minimum_length
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 50
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 100
+      unit_symbol: mm
+      unit_id:
+  - attribute: minimum_width
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 50
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 100
+      unit_symbol: mm
+      unit_id:
+  - attribute: minimum_height
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 50
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 50
+      unit_symbol: mm
+      unit_id:
+  - attribute: scale_interval_length
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 5
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 10
+      unit_symbol: mm
+      unit_id:
+  - attribute: scale_interval_width
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 5
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 10
+      unit_symbol: mm
+      unit_id:
+  - attribute: scale_interval_height
+    axis: maximum_conveyor_speed
+    values:
+    - condition: "≤ 1.2 m/s"
+      value: 5
+      unit_symbol: mm
+      unit_id:
+    - condition: "≤ 2 m/s"
+      value: 5
+      unit_symbol: mm
+      unit_id:
+recommendation:
+  id: R129
+  edition: 2000
+test_reports:
+- id: R129/2000-NL1-06.01A
+  pages: 64
+  role: test_report
+- id: R129/2000-NL1-06.01B
+  pages: 64
+  role: test_report
+- id: R129/2000-NL1-06.01
+  role: documentation_file
+revision_history:
+- revision: '1'
+  date: '2007-02-13'
+  changes: This revision replaces the earlier version.
+components:
+- role: processor with indicator
+  type_designations: []
+  characteristics:
+    protective_interfaces:
+      value: RS-232/RS-422, CAN, Ethernet, I/O connector
+      unit_symbol:
+      unit_id:
+    output_telegram_format:
+      value: M;LLLL;WWWW;HHHH;AAAAAAAA;BBBBBBBB;CCCC;DDDD;EEEE
+      unit_symbol:
+      unit_id:
+    main_assembly_drawing:
+      value: Grundeinheit 9070317 rev. 6
+      unit_symbol:
+      unit_id:
+- role: laser measuring scanner (sensors)
+  type_designations:
+  - VMD510
+  characteristics:
+    measured_dimensions:
+      value: height and width
+      unit_symbol:
+      unit_id:
+    drawings:
+      value: 9070318, 9070319
+      unit_symbol:
+      unit_id:
+- role: incremental encoder
+  type_designations:
+  - DKV 60-E1Z0-S03
+  characteristics:
+    measured_dimensions:
+      value: length and belt displacement
+      unit_symbol:
+      unit_id:
+    belt_displacement_accuracy:
+      value: 0.2
+      unit_symbol: mm
+      unit_id:
+    drawing:
+      value: '9105303'
+      unit_symbol:
+      unit_id:
+footnotes: []
+matrix_tables:
+- name: Measuring range and scale interval versus maximum conveyor speed
+  columns:
+  - conveyor_speed_condition
+  - limit
+  - length
+  - width
+  - height
+  column_units:
+  -
+  -
+  - mm
+  - mm
+  - mm
+  rows:
+  - conveyor_speed_condition:
+    limit: maximum
+    length: 2000
+    width: 1000
+    height: 1000
+  - conveyor_speed_condition: "≤ 1.2 m/s"
+    limit: minimum
+    length: 50
+    width: 50
+    height: 50
+  - conveyor_speed_condition: "≤ 1.2 m/s"
+    limit: scale_interval_d
+    length: 5
+    width: 5
+    height: 5
+  - conveyor_speed_condition: "≤ 2 m/s"
+    limit: minimum
+    length: 100
+    width: 100
+    height: 50
+  - conveyor_speed_condition: "≤ 2 m/s"
+    limit: scale_interval_d
+    length: 10
+    width: 10
+    height: 5
+  description: >-
+    Maximum box dimensions L×W×H apply to both conveyor speed configurations. Minimum dimensions and scale
+    interval d depend on the maximum conveyor speed Vmax.
+  footnotes: []

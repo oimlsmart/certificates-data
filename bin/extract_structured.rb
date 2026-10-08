@@ -30,12 +30,13 @@ system_prompt = File.read(SOURCE_FILE)[/SYSTEM_PROMPT = """\\(.*?)"""/m, 1]
 raise "could not read SYSTEM_PROMPT from #{SOURCE_FILE}" if system_prompt.to_s.empty?
 system_prompt = system_prompt.gsub('\\\\', '\\')
 
-options = { workers: 4, limit: nil, family: nil, dry_run: false }
+options = { workers: 4, limit: nil, family: nil, dry_run: false, refetch: false }
 OptionParser.new do |o|
   o.on("--workers N", Integer) { |v| options[:workers] = v }
   o.on("--limit N", Integer) { |v| options[:limit] = v }
   o.on("--family RXXX") { |v| options[:family] = v }
   o.on("--dry-run") { options[:dry_run] = true }
+  o.on("--refetch") { |v| options[:refetch] = v }
 end.parse!
 
 def api_key
@@ -133,10 +134,15 @@ def call_extract(key, system_prompt, body)
       req.body = payload
       res = http.request(req)
       parsed = JSON.parse(res.body)
-      # 429 / 1302 rate limits are retriable with backoff, not instant fails
+      # 429 / 1302 rate limits are retriable; the plan's throttle windows
+      # outlast short backoffs, so wait generously before the next attempt
       retryable = res.code.to_i == 429 || parsed.dig("error", "code").to_s == "1302"
       return parsed if res.code.to_i < 500 && !retryable
       last_err = "HTTP #{res.code}: #{res.body[0, 200]}"
+      if retryable
+        sleep(20 * (attempt + 1))
+        next
+      end
     rescue JSON::ParserError
       return { "error" => "non-JSON response" }
     rescue => e
@@ -187,7 +193,15 @@ workers = Array.new(options[:workers]) do
         header, body = md_header_and_body(md)
         if File.exist?(raw_path)
           response = JSON.parse(File.read(raw_path))
-        else
+          # a raw whose model JSON cannot parse traps the document forever;
+          # --refetch sets it aside (never deleted) and calls fresh
+          if options[:refetch] && parse_model_json(content_of(response)).nil?
+            attempts = Dir.glob("#{raw_path}.attempt*").size
+            File.rename(raw_path, "#{raw_path}.attempt#{attempts + 1}")
+            response = nil
+          end
+        end
+        if response.nil?
           response = call_extract(key, system_prompt, body)
           if response["error"] || content_of(response).to_s.empty?
             raise "API error for #{rel}: #{response.to_s[0, 250]}"

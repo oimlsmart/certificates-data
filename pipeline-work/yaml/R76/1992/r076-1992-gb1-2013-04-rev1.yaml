@@ -1,0 +1,158 @@
+_meta:
+  cert_id: 3388
+  num: R076/1992-GB1-2013.04 Rev. 1
+  applicant: Motorola Solutions, Inc.
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-gb1-2013-04-rev1.pdf
+certificate:
+  number: R76/1992-GB1-13.04
+  scheme: A
+  project_number: TS1201/0057
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2014-03-05'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Motorola Solutions, Inc.
+  address_lines:
+  - One Motorola Plaza
+  - Holtsville, NY
+  - 11742-1300
+  - USA
+manufacturers:
+- name: Motorola Solutions, Inc.
+  address_lines:
+  - One Motorola Plaza
+  - Holtsville, NY
+  - 11742-1300
+  - USA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - MP62xx
+  - MP65xx
+  module_designation: Not applicable
+  description: >-
+    Scanner/scale, Class III, mains operated, self-indicating, weight only, non-automatic weighing instrument.
+    Designed for flush-mounting in checkout surface with frame extensions to support the instrument in
+    the checkout counter; intended to be installed in a fixed position, so no levelling device or level
+    indicator is provided. Stainless steel load receptor, pole-mounted display. Devices: initial zero
+    setting device, semi-automatic zero setting device, zero tracking device, automatic zero setting device,
+    zero indicator, gravity compensation. Interfaces: DC voltage input, RS-232, IMB-485, control inputs/outputs,
+    USB. Audit trail via two event counters ('C' calibration counter and 'P' configuration parameter counter)
+    shown on an integrated seven segment display and simultaneously on the Motorola Solutions remote display
+    when installed.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    initial_zero_setting_range_percent_of_max:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    semi_automatic_zero_setting_range_percent_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    zero_tracking_range_percent_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    load_cell_count:
+      value: 1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: '1261'
+  role: test_report
+- id: P01015
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2013-06-19'
+  changes: Type approval first issued
+- revision: '1'
+  date: '2014-03-05'
+  changes: Flintec load cell modules 20-M30-05 and 20-M30-07 added to certificate.
+model_family:
+  family_name: Motorola MP62xx & MP65xx
+  models:
+  - model_id: MP6210
+    label: MP62xx with xx = 10
+  - model_id: MP6220
+    label: MP62xx with xx = 20
+  - model_id: MP6230
+    label: MP62xx with xx = 30
+  - model_id: MP6510
+    label: MP65xx with xx = 10
+  - model_id: MP6520
+    label: MP65xx with xx = 20
+  - model_id: MP6530
+    label: MP65xx with xx = 30
+components:
+- role: load_cell
+  type_designations:
+  - 20-M30-06
+  - 20-M30-08
+  alternatives: OR
+  characteristics:
+    manufacturer: Flintec
+    authorised_alternatives:
+    - 20-M30-05
+    - 20-M30-07
+    note: >-
+      Scale module contains one load cell, mounting bracket and U-bar. Alternative load cell modules 20-M30-05
+      and 20-M30-07 share the same technical specification and characteristics; devices employing them
+      additionally have the means to attach a physical security seal threaded through the bolt head and
+      scale frame.
+- role: remote_power_supply_unit
+  type_designations:
+  - HP-A0502R3D
+  characteristics:
+    manufacturer: HIPRO
+    output: regulated DC voltage of +12 V to the weighing module, customer display and the barcode scanner
+footnotes: []

@@ -1,0 +1,71 @@
+=== closing sweep 2026-10-08T02:38:55Z ===
+--- sweep pass: retry rate-limit failures ---
+15:33:55 [00687/01853] R76/2006/r076-2006-dk3-2016-05 (332.6s)
+15:35:03 [00688/01853] R76/2006/r076-2006-dk3-2017-08 (146.1s)
+15:35:06 [00689/01853] R76/2006/r076-2006-dk3-2017-09 (145.2s)
+=== closing sweep 2026-10-08T07:41:12Z ===
+--- sweep pass: retry rate-limit failures ---
+22:09:13 [01221/01221] R85/2008/r085-2008-nl1-2020-04 (230.6s)
+FAIL R85/2008/r085-2008-gb1-2011-01-rev1: API error for R85/2008/r085-2008-gb1-2011-01-rev1: {"error" => "HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"code\":\"1302\",\"message\":\"[1302][Rate limit reached for requests][2026100822081828877a519db349a6]\"},\"reques
+done: 1143 extracted, 78 failed
+--- refetch pass: stuck raws (broken model JSON) ---
+23:15:28 [00078/00078] R76/2006/r76-2006-nl1-2026-31-rev0 (104.0s)
+FAIL R85/2008/r085-2008-gb1-2011-01-rev1: API error for R85/2008/r085-2008-gb1-2011-01-rev1: {"error" => "HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"code\":\"1302\",\"message\":\"[1302][Rate limit reached for requests][202610082318042793f3ffceed4d12]\"},\"reques
+done: 36 extracted, 42 failed
+--- repair pass: model-assisted JSON repair ---
+  repaired: r076-2006-gb1-2012-05-rev2.json
+  repaired: r076-2006-gb1-2018-07.json
+repaired: 28; still broken: 11
+--- rederive _meta ---
+regenerated _meta: 4; no raw / unusable: 0
+--- regenerate history ---
+rows: 6476 (snapshot observed_at: 20261005)
+with document: 5109
+  date_issued raw/iso: 1521 / 1444
+  member_state: 3871
+  revision_history non-empty: 1141
+  replaces-previous statements: 649
+wrote /Users/mulgogi/src/oimlsmart/oiml-cs-certificates/datasets/history/timelines.jsonl
+--- regenerate organizations ---
+organizations: 1623 (authorities 38, holder-role 1402, manufacturer-role 1191)
+open questions (document-vs-register variants): 1136
+wrote /Users/mulgogi/src/oimlsmart/oiml-cs-certificates/datasets/organizations/organizations.jsonl
+--- regenerate stats ---
+R61: sample_size=53 attrs=190
+R76: sample_size=1991 attrs=2099
+R85: sample_size=126 attrs=139
+R99: sample_size=2 attrs=13
+--- denominators report ---
+# The denominators report
+# generated: 2026-10-08T17:29:55Z
+
+The register (manifest.jsonl)                       6476 rows
+Document-backed rows (local_path)                   5109
+Distinct PDFs on disk                               5085
+Register-only rows (no file ever existed)           1367
+
+Vision tier: raws committed                          4127
+  + legacy md-era extractions                        961 (approx; md files without vision raws)
+  filter-blocked certificates (page-level markers)   12
+
+Structured records (pipeline-work/yaml)             5046
+  coverage of document-backed rows                   99.2%
+
+History dataset: rows                                6476
+  rows with a joined document                        5109 (78.9% of register)
+
+Organizations dataset: entities                      1623
+
+Completion arithmetic:
+  6476 register rows
+    = 5085 document-backed  → vision-extracted via glm-5.3-flash + 961 legacy
+      → 5046 structured records today
+    + 1367 register-only rows (name, applicant, year, status — no document exists)
+wrote datasets/DENOMINATORS.md
+=== closing sweep complete 2026-10-08T17:29:55Z ===
+[endgame 01:32:55] closing sweep detected complete — gating
+[endgame 01:32:56] coverage: 0.9923 (records/PDFs)
+[endgame 01:32:56] COVERAGE GATE FAILED (0.9923 < 0.99) — NOT committing, NOT merging. Manual review required.
+[endgame 01:33:28] closing sweep detected complete — gating
+[endgame 01:33:29] coverage: 0.9923 (records/PDFs)
+[endgame 01:33:29] coverage gate passed

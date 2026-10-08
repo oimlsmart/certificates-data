@@ -1,0 +1,502 @@
+_meta:
+  cert_id: 5433
+  num: R76/2006-A-GB1-19.01 Rev. 2
+  applicant: Avery Weigh-Tronix
+  issuing_year: '2021'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2019-01-rev2.pdf
+certificate:
+  number: R76/2006-A-GB1-19.01
+  revision: '2'
+  scheme: A
+  page_total: 7
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2021-06-28'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+  oiml_issuer_id: GB1
+applicants:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+manufacturers:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+certified_type:
+  category: Indicator
+  type_designations:
+  - ZM505
+  - ZM510
+  - ZM605
+  - ZM615
+  description: >-
+    Family of programmable, self-indicating indicators, mains, DC or battery-powered, designated the Avery
+    Weigh-Tronix ZM505 / ZM510 / ZM605 / ZM615 Series, designed to be used as part of a Class III or IIII
+    Non-Automatic Weighing Instrument. Interfaces: load cell 4-wire or 6-wire shielded connection, 3 x
+    logic level inputs, 3 x open collector outputs, 3 x RS232 serial ports, 10/100 Ethernet, 2 x USB Host.
+characteristics:
+  type_level:
+    maximum_tare:
+      value: -100
+      unit_symbol: "%"
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 15
+      unit_symbol: mV
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    maximum_partial_ranges:
+      value: 3
+      note: single or multi-range / multi-interval
+    maximum_connected_load_receptors:
+      value: 4
+    load_cell_connection:
+      value: 4 or 6-core with braided outer screen, flexible PVC overall jacket
+    software_designation:
+      value: AWT30-500208 version 2.x.x.x
+  model_level:
+  - attribute: number_of_operational_keys
+    unit_symbol:
+    values:
+    - model: ZM505
+      value: 29
+    - model: ZM510
+      value: 48
+    - model: ZM605
+      value: 29
+    - model: ZM615
+      value: 29
+  config_level:
+  - attribute: power_supply_voltage
+    axis: power_supply_variant
+    values:
+    - condition: ZM505-SP3, ZM510-SP4, ZM605-SP4, ZM615-SP5 (via mains adaptor or external battery pack)
+      value:
+        min: 12
+        max: 36
+      unit_symbol: V
+    - condition: ZM505-SD3, ZM510-SD4, ZM605-SD4, ZM615-SD5
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+  - attribute: power_supply_frequency
+    axis: power_supply_variant
+    values:
+    - condition: ZM505-SD3, ZM510-SD4, ZM605-SD4, ZM615-SD5 (AC supply)
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+  - attribute: power_supply_type
+    axis: power_supply_variant
+    values:
+    - condition: ZM505-SP3, ZM510-SP4, ZM605-SP4, ZM615-SP5
+      value: DC
+    - condition: ZM505-SD3, ZM510-SD4, ZM605-SD4, ZM615-SD5
+      value: AC
+  - attribute: maximum_number_of_scale_intervals
+    axis: load_cell_input_variant
+    values:
+    - condition: Standard build or fitted with 10V EXC analogue load cell interface option card(s)
+      value: 10000
+    - condition: Fitted with 5V EXC analogue load cell interface option card(s)
+      value: 6000
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_input_variant
+    values:
+    - condition: Standard build or fitted with 10V EXC analogue load cell interface option card(s)
+      value: 10
+      unit_symbol: V
+    - condition: Fitted with 5V EXC analogue load cell interface option card(s)
+      value: 5
+      unit_symbol: V
+  - attribute: minimum_load_cell_impedance
+    axis: load_cell_input_variant
+    values:
+    - condition: ZM605, ZM615 standard build or with 10V EXC option card(s)
+      value: 10.94
+      unit_symbol: Ω
+    - condition: ZM505, ZM510 standard build or with 10V EXC option card(s)
+      value: 14.58
+      unit_symbol: Ω
+    - condition: Fitted with 5V EXC analogue load cell interface option card(s)
+      value: 58.33
+      unit_symbol: Ω
+  - attribute: minimum_input_voltage_per_scale_interval
+    axis: load_cell_input_variant
+    values:
+    - condition: Standard build or fitted with 10V EXC analogue load cell interface option card(s)
+      value: 0.5
+      unit_symbol: µV
+    - condition: Fitted with 5V EXC analogue load cell interface option card(s)
+      value: 0.8
+      unit_symbol: µV
+  - attribute: load_cell_connection_maximum_length_6_wire
+    axis: load_cell_input_variant
+    values:
+    - condition: ZM605, ZM615 standard build or with 10V EXC option card(s)
+      value: 212
+      unit_symbol: m/mm²
+    - condition: ZM505, ZM510 standard build or with 10V EXC option card(s)
+      value: 143
+      unit_symbol: m/mm²
+    - condition: Fitted with 5V EXC analogue load cell interface option card(s) (limited to 30 m)
+      value: 196
+      unit_symbol: m/mm²
+  - attribute: maximum_preset_tare
+    axis: range_configuration
+    values:
+    - condition: single interval
+      value: -100
+      unit_symbol: "%"
+    - condition: multi-interval/multi-range
+      value: "-Max1"
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P02554B
+  revision: '1'
+  date: '2021-06-28'
+  pages: 20
+  role: type_evaluation_report
+- id: P02554B-D
+  date: '2019-06-12'
+  role: documentation_file
+- id: P02802-D
+  date: '2021-06-28'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2019-06-12'
+  changes: OIML Certificate first issued.
+- revision: '1'
+  date: '2020-06-29'
+  changes: Date of type evaluation report P02554B updated.
+- revision: '2'
+  date: '2021-06-28'
+  changes: Addition of alternative 3.
+model_family:
+  family_name: Avery Weigh-Tronix ZM505 / ZM510 / ZM605 / ZM615 Series
+  models:
+  - model_id: ZM505
+    label: ZM505
+  - model_id: ZM510
+    label: ZM510
+  - model_id: ZM605
+    label: ZM605
+  - model_id: ZM615
+    label: ZM615
+components:
+- role: Digital base (Alternative 1)
+  type_designations:
+  - Avery Weigh-Tronix BSQ series
+  alternatives:
+  characteristics:
+    maximum_number_of_bases:
+      value: 2
+    operating_mode:
+      value: Raw, unprocessed digital counts
+    max_scale_intervals_class_iii_single_interval:
+      value: 10000
+    max_scale_intervals_class_iii_multi_range_per_weighing_range:
+      value: 10000
+      note: maximum of three weighing ranges
+    max_scale_intervals_class_iiii_single_interval:
+      value: 1000
+    applicable_indicators:
+      value: ZM505 / ZM510 / ZM605 / ZM615
+- role: Digital junction box (Alternative 2)
+  type_designations:
+  - ZB210
+  alternatives:
+  characteristics:
+    applicable_indicators:
+      value: ZM510, ZM605 or ZM615 fitted with firmware AWT30-500205 v2.x.x.x
+    power_supply_voltage:
+      value:
+        min: 12
+        max: 36
+      unit_symbol: V
+      note: Supplied by digital indicating device via RS485 interface cable
+    maximum_number_of_scale_intervals_class_iii:
+      value: 6000
+      note: single or multi-interval
+    maximum_number_of_scale_intervals_class_iiii:
+      value: 1000
+      note: single or multi-interval
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+    minimum_load_cell_impedance_per_channel:
+      value: 350
+      unit_symbol: Ω
+    maximum_load_cell_impedance_per_channel:
+      value: 1100
+      unit_symbol: Ω
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.8
+      unit_symbol: µV
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 25
+      unit_symbol: mV
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    load_cell_cable_maximum_length_4_wire:
+      unit_symbol: m
+      by_load_cell_impedance:
+        350Ω: 15
+        700Ω: 30
+        1000Ω: 42
+        1100Ω: 47
+      footnote_markers:
+      - Note
+    software:
+      value: AWT30-500235, Version 1.x.x.x
+- role: Digital load cell (Alternative 3)
+  type_designations:
+  - Avery T301x
+  alternatives: OR
+  characteristics:
+    maximum_number_of_load_cells:
+      value: 32
+      note: connected via two optional cards, each driving 16 load cells
+    variants:
+    - emax:
+        value: 30000
+        unit_symbol: kg
+      mounting_drawing: AWT15-000226
+      vmin: Emax/9375
+      nmax:
+        value: 6000
+    - emax:
+        value: 45000
+        unit_symbol: kg
+      mounting_drawing: AWT15-000283
+      vmin: Emax/9375
+      nmax:
+        value: 6000
+    interface_option_card:
+      value: ZT Digital Option Card, part no. AWT05-100018
+    max_scale_intervals_class_iii_single_interval:
+      value: 6000
+    max_scale_intervals_class_iii_multi_range_or_multi_interval_per_range:
+      value: 3000
+      note: maximum of three weighing ranges
+    max_scale_intervals_class_iiii_single_interval:
+      value: 1000
+    separate_scales_zm510:
+      value: 4
+    separate_scales_zm605_zm615:
+      value: 8
+    software:
+      value: AWT30-500999, V1.x.x.x
+- role: Analogue load cell interface option board (5V excitation)
+  type_designations:
+  - Load cell interface board with 5V excitation
+  alternatives: OR
+  characteristics:
+    purpose:
+      value: Connection of a second platform
+    maximum_load_cells:
+      value: 6
+- role: Analogue load cell interface option board (10V excitation)
+  type_designations:
+  - Load cell interface board with 10V excitation
+  alternatives: OR
+  characteristics:
+    purpose:
+      value: Connection of a second platform
+    maximum_load_cells:
+      value: 16
+- role: Optional interface and PCB cards
+  type_designations:
+  - Analogue output card
+  - Current loop card
+  - Internal Wireless LAN card
+  - USB Device card
+  - Bluetooth card
+  - DeviceNet card
+  - Profibus card
+  - Ethernet to PoE Supply side card
+  - Quad DC input card
+  - Quad DC output card
+  - Quad AC input card
+  - Quad AC output card
+  - External I/O Expansion Card
+  - Programmable Digital I/O card
+  alternatives:
+  characteristics:
+    analogue_output:
+      voltage:
+        value:
+          min: 0
+          max: 10
+        unit_symbol: V
+      current:
+        value:
+          min: 4
+          max: 20
+        unit_symbol: mA
+    current_loop:
+      value: 4-20 mA loop and RS485 / RS422
+    quad_dc_input:
+      value:
+        min: 4
+        max: 30
+      unit_symbol: V
+      note: four opto-isolated inputs
+    quad_dc_output:
+      value:
+        min: 3
+        max: 60
+      unit_symbol: V
+      note: four solid state relay outputs
+    quad_ac_input:
+      value:
+        min: 120
+        max: 240
+      unit_symbol: V
+      note: four opto-isolated inputs
+    quad_ac_output:
+      value:
+        min: 20
+        max: 240
+      unit_symbol: V
+      note: four solid state relay outputs
+footnotes:
+- marker: Note
+  text: All load cell cables to an individual ZB210 must be of equal length.
+matrix_tables:
+- name: Indicator technical data by load cell input variant
+  columns:
+  - characteristic
+  - zm605_zm615_standard_or_10v_exc
+  - zm505_zm510_standard_or_10v_exc
+  - five_v_exc_option_card
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - characteristic: maximum_number_of_scale_intervals
+    zm605_zm615_standard_or_10v_exc: 10000
+    zm505_zm510_standard_or_10v_exc: 10000
+    five_v_exc_option_card: 6000
+  - characteristic: maximum_tare
+    zm605_zm615_standard_or_10v_exc: "-100% Max"
+    zm505_zm510_standard_or_10v_exc: "-100% Max"
+    five_v_exc_option_card: "-100% Max"
+  - characteristic: load_cell_excitation_voltage
+    zm605_zm615_standard_or_10v_exc: 10 VDC
+    zm505_zm510_standard_or_10v_exc: 10 VDC
+    five_v_exc_option_card: 5 VDC
+  - characteristic: minimum_load_cell_impedance
+    zm605_zm615_standard_or_10v_exc: 10.94 Ω
+    zm505_zm510_standard_or_10v_exc: 14.58 Ω
+    five_v_exc_option_card: 58.33 Ω
+  - characteristic: maximum_load_cell_impedance
+    zm605_zm615_standard_or_10v_exc: 1100 Ω
+    zm505_zm510_standard_or_10v_exc: 1100 Ω
+    five_v_exc_option_card: 1100 Ω
+  - characteristic: minimum_input_voltage_per_scale_interval
+    zm605_zm615_standard_or_10v_exc: 0.5 µV
+    zm505_zm510_standard_or_10v_exc: 0.5 µV
+    five_v_exc_option_card: 0.8 µV
+  - characteristic: measuring_range_minimum_voltage
+    zm605_zm615_standard_or_10v_exc: 0 mV
+    zm505_zm510_standard_or_10v_exc: 0 mV
+    five_v_exc_option_card: 0 mV
+  - characteristic: measuring_range_maximum_voltage
+    zm605_zm615_standard_or_10v_exc: 15 mV
+    zm505_zm510_standard_or_10v_exc: 15 mV
+    five_v_exc_option_card: 15 mV
+  - characteristic: fraction_of_maximum_permitted_error
+    zm605_zm615_standard_or_10v_exc: Pind = 0.5
+    zm505_zm510_standard_or_10v_exc: Pind = 0.5
+    five_v_exc_option_card: Pind = 0.5
+  - characteristic: operating_temperature_range
+    zm605_zm615_standard_or_10v_exc: "-10 °C to +40 °C"
+    zm505_zm510_standard_or_10v_exc: "-10 °C to +40 °C"
+    five_v_exc_option_card: "-10 °C to +40 °C"
+  - characteristic: load_cell_connection_maximum_length_6_wire
+    zm605_zm615_standard_or_10v_exc: 212 m/mm²
+    zm505_zm510_standard_or_10v_exc: 143 m/mm²
+    five_v_exc_option_card: 196 m/mm² (limited to 30 m)
+  description: >-
+    Technical data of the ZM505/ZM510/ZM605/ZM615 indicator depending on the load cell input variant (standard
+    build / 10V EXC option card vs 5V EXC option card).
+  footnotes: []
+- name: Alternative 3 compatible digital load cells
+  columns:
+  - load_cell
+  - emax
+  - mounting_drawing
+  - vmin
+  - nmax
+  column_units:
+  -
+  - kg
+  -
+  -
+  -
+  rows:
+  - load_cell: Avery T301x
+    emax: 30000
+    mounting_drawing: AWT15-000226
+    vmin: Emax/9375
+    nmax: 6000
+  - load_cell: Avery T301x
+    emax: 45000
+    mounting_drawing: AWT15-000283
+    vmin: Emax/9375
+    nmax: 6000
+  description: >-
+    Avery Weigh-Tronix T301x digital load cells usable with ZM510/ZM605/ZM615 indicators via ZT Digital
+    Option Card (AWT05-100018).
+  footnotes: []

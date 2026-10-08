@@ -1,0 +1,545 @@
+_meta:
+  cert_id: 2746
+  num: R051/2006-DE1-2008.01 Rev. 1
+  applicant: Leich und Mehl und Co. GmbH
+  issuing_year: '2012'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2008-01-rev1.pdf
+certificate:
+  number: R51/2006-DE1-08.01
+  scheme: A
+  page_total: 4
+  member_state: Germany
+  date_issued: '2012-02-10'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Head of Department
+applicants:
+- name: LEICH und MEHL GmbH
+  address_lines:
+  - Porschestraße 7
+  - 71394 Kernen im Remstal
+manufacturers:
+- name: LEICH und MEHL GmbH
+  address_lines:
+  - Porschestraße 7
+  - 71394 Kernen im Remstal
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - PAW2000
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped with electrodynamic force compensation load cell (EFC-LC) and performed
+    as single or multi interval instrument.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    maximum_load:
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    ratio_between_verification_scale_intervals:
+      value:
+        min:
+        max: 3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_tare:
+      value: 0.25 × Max
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 5)
+  config_level:
+  - attribute: verification_scale_interval
+    axis: load_cell_type_and_weighing_mode
+    values:
+    - condition: EFC-LC BF20-L or BF20-L-P-I; static and dynamic weighing (Tab 1)
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min: 0.5
+        max:
+      unit_symbol: g
+    - condition: EFC-LC TF20...; dynamic weighing; Tab 3 column group 2
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value: 0.5 / 1.0
+      unit_symbol: g
+    - condition: EFC-LC TF20...; static weighing; multi-interval (Tab 3 continuation)
+      value: 0.2 / 0.5 / 1.0 / 2.0
+      unit_symbol: g
+  - attribute: number_of_verification_scale_intervals
+    axis: accuracy_class_and_configuration
+    values:
+    - condition: EFC-LC BF20-L or BF20-L-P-I; static and dynamic weighing; Tab 1 column group 1
+      value: "≤ 7500 / ≤ 2 × 3750"
+      footnote_markers:
+      - 1)
+    - condition: EFC-LC BF20-L or BF20-L-P-I; static and dynamic weighing; Tab 1 column group 2
+      value:
+        min:
+        max: 3750
+      footnote_markers:
+      - 1)
+    - condition: accuracy class XIII(x); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 7500
+      footnote_markers:
+      - 1)
+    - condition: accuracy class Y(a), Y(b); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 6000
+      footnote_markers:
+      - 1)
+    - condition: EFC-LC TF20...; dynamic weighing; Tab 3 column group 2
+      value:
+        min:
+        max: 3750
+      footnote_markers:
+      - 1)
+    - condition: EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value: "≤ 2 × 3750"
+      footnote_markers:
+      - 1)
+    - condition: EFC-LC TF20...; static weighing; multi-interval (Tab 3 continuation)
+      value: "≤ 4 × 10000"
+      footnote_markers:
+      - 1)
+  - attribute: minimum_load
+    axis: accuracy_class_and_weighing_mode
+    values:
+    - condition: static weighing; all accuracy classes; relative to verification scale interval
+      value: 20e
+      footnote_markers:
+      - 2)
+    - condition: dynamic weighing; accuracy class XIII(x)
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+      footnote_markers:
+      - 3)
+    - condition: dynamic weighing; accuracy class Y(a), Y(b)
+      value:
+        min: 20
+        max:
+      unit_symbol: g
+      footnote_markers:
+      - 3)
+  - attribute: maximum_belt_speed
+    axis: accuracy_class_and_configuration
+    values:
+    - condition: accuracy class XIII(x); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 1
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+    - condition: accuracy class Y(a), Y(b); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 1
+      value:
+        min:
+        max: 0.9
+      unit_symbol: m/s
+    - condition: >-
+        accuracy class XIII(x); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 2 (load-dependent, see
+        Tab 2)
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+      footnote_markers:
+      - 4)
+    - condition: >-
+        accuracy class Y(a), Y(b); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 2 (load-dependent,
+        see Tab 2)
+      value:
+        min:
+        max: 1.2
+      unit_symbol: m/s
+      footnote_markers:
+      - 4)
+    - condition: accuracy class XIII(x); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 1.22
+      unit_symbol: m/s
+      footnote_markers:
+      - 4)
+    - condition: accuracy class Y(a), Y(b); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 0.92
+      unit_symbol: m/s
+    - condition: accuracy classes XIII(x) and Y(a), Y(b); EFC-LC TF20...; dynamic weighing; Tab 3 column
+        group 2
+      value:
+        min:
+        max: 1.22
+      unit_symbol: m/s
+    - condition: accuracy class XIII(x); EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 1.22
+      unit_symbol: m/s
+    - condition: accuracy class Y(a), Y(b); EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 0.92
+      unit_symbol: m/s
+    - condition: static weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 1.22
+      unit_symbol: m/s
+  - attribute: maximum_put_through_rate
+    axis: accuracy_class_and_configuration
+    values:
+    - condition: accuracy class XIII(x); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 1
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+    - condition: accuracy class Y(a), Y(b); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 1
+      value:
+        min:
+        max: 120
+      unit_symbol: pcs/min
+    - condition: >-
+        accuracy class XIII(x); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 2 (load-dependent, see
+        Tab 2)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+      footnote_markers:
+      - 4)
+    - condition: >-
+        accuracy class Y(a), Y(b); EFC-LC BF20-L or BF20-L-P-I; Tab 1 column group 2 (load-dependent,
+        see Tab 2)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+      footnote_markers:
+      - 4)
+    - condition: accuracy class XIII(x); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+    - condition: accuracy class Y(a), Y(b); EFC-LC TF20...; dynamic weighing; Tab 3 column group 1
+      value:
+        min:
+        max: 120
+      unit_symbol: pcs/min
+    - condition: accuracy classes XIII(x) and Y(a), Y(b); EFC-LC TF20...; dynamic weighing; Tab 3 column
+        group 2
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+    - condition: accuracy class XIII(x); EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+    - condition: accuracy class Y(a), Y(b); EFC-LC TF20...; dynamic weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 120
+      unit_symbol: pcs/min
+    - condition: static weighing; multi-interval (Tab 3 continuation)
+      value:
+        min:
+        max: 160
+      unit_symbol: pcs/min
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - XIII(1)
+  - XIII(x ≥ 2)
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: 1.12-4033567
+  pages: 16
+  role: type_evaluation_report
+- id: 1.12-4033567/1
+  pages: 70
+  role: test_report
+- id: 1.12-4033567/2
+  pages: 70
+  role: test_report
+- id: 1.12-4033567/3
+  pages: 70
+  role: test_report
+- id: 1.12-4033567/4
+  pages: 39
+  role: test_report
+- id: 1.12-4033567/5
+  pages: 58
+  role: test_report
+- id: 1.12-4033567/6
+  pages: 58
+  role: test_report
+- id: 1.12-4033567/7
+  pages: 58
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2012-02-10'
+  changes:
+components:
+- role: load_cell
+  type_designations:
+  - BF20-L
+  - BF20-L-P-I
+  - TF20...
+  alternatives: OR
+  characteristics:
+    technology:
+      value: electrodynamic force compensation
+footnotes:
+- marker: 1)
+  text: >-
+    For weighing instruments of the category XIII and Y(b) the number of verification scale intervals
+    is limited to ni ≤ 1000.
+- marker: 2)
+  text: >-
+    This value is valid for static weighing. The minimum capacity in case of static weighing for category
+    Y depends on the specification according to R51-1:2006 No 2.2.2. In that case it may be applied to
+    corresponding category X in the same way in order to achieve smaller minimum capacities.
+- marker: 3)
+  text: >-
+    This value is valid for dynamic weighing. For weighing instruments of the category X the minimum loads
+    depend on the used digital LC and for weighing instruments of the category Y additionally on the specification
+    under 2). In case of category Y the greater value has to be taken. Greater minimum loads may also
+    result from the metrological test of the LMC.
+- marker: 4)
+  text: Cf. Tab. 2
+- marker: 5)
+  text: >-
+    This specification applies only to weighing instruments with parameters being generally valid over
+    the complete weighing range for all products and weighing in motion (dynamic weighing). For single
+    products having especially their own product data storage and/or their own product-specific parameters
+    greater tare loads are allowed if they are approved by the LMC. A tare load ≤ - Max is allowed for
+    start stop operation (static weighing).
+matrix_tables:
+- name: 'Tab 1: Technical data of the weighing instrument PAW 2000 (EFC-LC of the type BF20-L or BF20-L-P-I)'
+  description: >-
+    Static and dynamic weighing. The table has two column groups (group 1 and group 2); colspan cells
+    apply to both accuracy classes of the group.
+  columns:
+  - attribute
+  - class_XIII_group_1
+  - class_Y_group_1
+  - class_XIII_group_2
+  - class_Y_group_2
+  rows:
+  - attribute: weighing_mode
+    class_XIII_group_1: Static and dynamic weighing
+    class_Y_group_1: Static and dynamic weighing
+    class_XIII_group_2: Static and dynamic weighing
+    class_Y_group_2: Static and dynamic weighing
+  - attribute: verification_scale_interval_e
+    class_XIII_group_1: "≥ 1 g"
+    class_Y_group_1: "≥ 1 g"
+    class_XIII_group_2: "≥ 1 g"
+    class_Y_group_2: "≥ 1 g"
+  - attribute: ratio_between_verification_scale_intervals
+    class_XIII_group_1: e(i+1)/e(i) < 3
+    class_Y_group_1: e(i+1)/e(i) < 3
+    class_XIII_group_2: e(i+1)/e(i) < 3
+    class_Y_group_2: e(i+1)/e(i) < 3
+  - attribute: number_of_verification_scale_intervals_n
+    class_XIII_group_1: "≤ 7500 (1) / ≤ 2 × 3750 (1)"
+    class_Y_group_1: "≤ 7500 (1) / ≤ 2 × 3750 (1)"
+    class_XIII_group_2: "≤ 3750 (1)"
+    class_Y_group_2: "≤ 3750 (1)"
+  - attribute: maximum_load_max
+    class_XIII_group_1: "≤ 15 kg"
+    class_Y_group_1: "≤ 15 kg"
+    class_XIII_group_2: "≤ 15 kg"
+    class_Y_group_2: "≤ 15 kg"
+  - attribute: minimum_load_min
+    class_XIII_group_1: "≥ 20e (2); ≥ 50 g (3)"
+    class_Y_group_1: "≥ 20e (2); ≥ 20 g (3)"
+    class_XIII_group_2: "≥ 20e (2); ≥ 50 g (3)"
+    class_Y_group_2: "≥ 20e (2); ≥ 20 g (3)"
+  - attribute: temperature_range
+    class_XIII_group_1: 0 °C / +40 °C
+    class_Y_group_1: 0 °C / +40 °C
+    class_XIII_group_2: 0 °C / +40 °C
+    class_Y_group_2: 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    class_XIII_group_1: "≤ 1.2 m/s"
+    class_Y_group_1: "≤ 0.9 m/s"
+    class_XIII_group_2: "≤ 1.2 m/s (4)"
+    class_Y_group_2: "≤ 1.2 m/s (4)"
+  - attribute: maximum_put_through_rate
+    class_XIII_group_1: "≤ 160 pcs/min"
+    class_Y_group_1: "≤ 120 pcs/min"
+    class_XIII_group_2: "≤ 160 pcs/min (4)"
+    class_Y_group_2: "≤ 160 pcs/min (4)"
+  - attribute: tare
+    class_XIII_group_1: "≤ 0.25 × Max (5)"
+    class_Y_group_1: "≤ 0.25 × Max (5)"
+    class_XIII_group_2: "≤ 0.25 × Max (5)"
+    class_Y_group_2: "≤ 0.25 × Max (5)"
+- name: 'Tab 2: Belt speed and the put through in dependence of the load L'
+  description: Referenced by footnote 4) of Tab 1.
+  columns:
+  - load_L
+  - maximum_belt_speed
+  - maximum_put_through_rate
+  rows:
+  - load_L: 10 g ≤ L ≤ 3 kg
+    maximum_belt_speed: "≤ 1.2 m/s"
+    maximum_put_through_rate: "≤ 160 pcs/min"
+  - load_L: L > 3 kg
+    maximum_belt_speed: "≤ 0.9 m/s"
+    maximum_put_through_rate: "≤ 120 pcs/min"
+- name: 'Tab 3 (beginning): Technical data of the weighing instrument PAW 2000 (EFC-LC of the type TF20...)'
+  description: >-
+    Dynamic weighing. The table has two column groups (group 1 and group 2); colspan cells apply to both
+    accuracy classes of the group.
+  columns:
+  - attribute
+  - class_XIII_group_1
+  - class_Y_group_1
+  - class_XIII_group_2
+  - class_Y_group_2
+  rows:
+  - attribute: weighing_mode
+    class_XIII_group_1: Dynamic weighing
+    class_Y_group_1: Dynamic weighing
+    class_XIII_group_2: Dynamic weighing
+    class_Y_group_2: Dynamic weighing
+  - attribute: verification_scale_interval_e
+    class_XIII_group_1: "≥ 0.5 g"
+    class_Y_group_1: "≥ 0.5 g"
+    class_XIII_group_2: "≥ 1 g"
+    class_Y_group_2: "≥ 1 g"
+  - attribute: number_of_verification_scale_intervals_n
+    class_XIII_group_1: "≤ 7500 (1)"
+    class_Y_group_1: "≤ 6000 (1)"
+    class_XIII_group_2: "≤ 3750 (1)"
+    class_Y_group_2: "≤ 3750 (1)"
+  - attribute: maximum_load_max
+    class_XIII_group_1: "≤ 15 kg"
+    class_Y_group_1: "≤ 15 kg"
+    class_XIII_group_2: "≤ 15 kg"
+    class_Y_group_2: "≤ 15 kg"
+  - attribute: minimum_load_min
+    class_XIII_group_1: "≥ 20e (2); ≥ 50 g (3)"
+    class_Y_group_1: "≥ 20e (2); ≥ 20 g (3)"
+    class_XIII_group_2: "≥ 20e (2); ≥ 50 g (3)"
+    class_Y_group_2: "≥ 20e (2); ≥ 20 g (3)"
+  - attribute: temperature_range
+    class_XIII_group_1: 0 °C / +40 °C
+    class_Y_group_1: 0 °C / +40 °C
+    class_XIII_group_2: 0 °C / +40 °C
+    class_Y_group_2: 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    class_XIII_group_1: "≤ 1.22 m/s (4)"
+    class_Y_group_1: "≤ 0.92 m/s"
+    class_XIII_group_2: "≤ 1.22 m/s"
+    class_Y_group_2: "≤ 1.22 m/s"
+  - attribute: maximum_put_through_rate
+    class_XIII_group_1: "≤ 160 pcs/min"
+    class_Y_group_1: "≤ 120 pcs/min"
+    class_XIII_group_2: "≤ 160 pcs/min"
+    class_Y_group_2: "≤ 160 pcs/min"
+  - attribute: tare
+    class_XIII_group_1: "≤ 0.25 × Max (5)"
+    class_Y_group_1: "≤ 0.25 × Max (5)"
+    class_XIII_group_2: "≤ 0.25 × Max (5)"
+    class_Y_group_2: "≤ 0.25 × Max (5)"
+- name: >-
+    Tab 3 (continuation): Technical data of the weighing instrument PAW 2000 (EFC-LC of the type TF20...)
+  description: Dynamic weighing (multi-interval) and static weighing (multi-interval).
+  columns:
+  - attribute
+  - class_XIII_dynamic
+  - class_Y_dynamic
+  - class_XIII_static
+  - class_Y_static
+  rows:
+  - attribute: weighing_mode
+    class_XIII_dynamic: Dynamic weighing
+    class_Y_dynamic: Dynamic weighing
+    class_XIII_static: Static weighing
+    class_Y_static: Static weighing
+  - attribute: verification_scale_interval_e
+    class_XIII_dynamic: "≥ 0.5 g / 1.0 g"
+    class_Y_dynamic: "≥ 0.5 g / 1.0 g"
+    class_XIII_static: "≥ 0.2 g / 0.5 g / 1.0 g / 2.0 g"
+    class_Y_static: "≥ 0.2 g / 0.5 g / 1.0 g / 2.0 g"
+  - attribute: ratio_between_verification_scale_intervals
+    class_XIII_dynamic: e(i+1)/e(i) < 3
+    class_Y_dynamic: e(i+1)/e(i) < 3
+    class_XIII_static: e(i+1)/e(i) < 3
+    class_Y_static: e(i+1)/e(i) < 3
+  - attribute: number_of_verification_scale_intervals_n
+    class_XIII_dynamic: "≤ 2 × 3750 (1)"
+    class_Y_dynamic: "≤ 2 × 3750 (1)"
+    class_XIII_static: "≤ 4 × 10000 (1)"
+    class_Y_static: "≤ 4 × 10000 (1)"
+  - attribute: maximum_load_max
+    class_XIII_dynamic: "≤ 15 kg"
+    class_Y_dynamic: "≤ 15 kg"
+    class_XIII_static: "≤ 15 kg"
+    class_Y_static: "≤ 15 kg"
+  - attribute: minimum_load_min
+    class_XIII_dynamic: "≥ 20e (2); ≥ 50 g (3)"
+    class_Y_dynamic: "≥ 20e (2); ≥ 20 g (3)"
+    class_XIII_static: "≥ 20e (2)"
+    class_Y_static: "≥ 20e (2)"
+  - attribute: temperature_range
+    class_XIII_dynamic: 0 °C / +40 °C
+    class_Y_dynamic: 0 °C / +40 °C
+    class_XIII_static: 0 °C / +40 °C
+    class_Y_static: 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    class_XIII_dynamic: "≤ 1.22 m/s"
+    class_Y_dynamic: "≤ 0.92 m/s"
+    class_XIII_static: "≤ 1.22 m/s"
+    class_Y_static: "≤ 1.22 m/s"
+  - attribute: maximum_put_through_rate
+    class_XIII_dynamic: "≤ 160 pcs/min"
+    class_Y_dynamic: "≤ 120 pcs/min"
+    class_XIII_static: "≤ 160 pcs/min"
+    class_Y_static: "≤ 160 pcs/min"
+  - attribute: tare
+    class_XIII_dynamic: "≤ 0.25 × Max (5)"
+    class_Y_dynamic: "≤ 0.25 × Max (5)"
+    class_XIII_static: "≤ 0.25 × Max (5)"
+    class_Y_static: "≤ 0.25 × Max (5)"

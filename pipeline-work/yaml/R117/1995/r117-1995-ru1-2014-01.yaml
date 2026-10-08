@@ -1,0 +1,283 @@
+_meta:
+  cert_id: 3396
+  num: R117/1995-RU1-2014.01
+  applicant: Midco Ltd.
+  issuing_year: '2014'
+  status: Valid
+  issuer: RU1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-ru1-2014-01.pdf
+certificate:
+  number: R 117/1995-RU1-14.01
+  page_total: 3
+  member_state: Russian Federation
+  date_issued: '2014-02-25'
+issuing_authority:
+  name: VNIIMS
+  address_lines:
+  - 46, Ozernaya str, G-361
+  - Moscow, 119361
+  - Russian Federation
+  person_responsible: Prof. Dr. S.A. Kononogov
+  person_title: Director
+applicants:
+- name: MIDCO LIMITED
+  address_lines:
+  - Metro Estate, Vidyanagari Marg, Kalina
+  - Mumbai, 400 098
+  - India
+manufacturers:
+- name: MIDCO LIMITED
+  address_lines:
+  - Metro Estate, Vidyanagari Marg, Kalina
+  - Mumbai, 400 098
+  - India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - SureFill
+  - AccueFill
+  module_designation: Not applicable
+  description: >-
+    MIDCO SureFill/AccueFill fuel dispensers of suction and remote types. Each dispenser consists of one
+    or more systems in each housing, and each subsystem consists of: A. Hydraulics - MIDCO flowmeter (one
+    for flow rates 50 and 80, two for flow rate 140) including integrated/combined pulser; MIDCO fuel
+    pump; MIDCO combined pump and gas separator (other than pressure system); breakaway valve, hose, nozzle
+    and flow indicator. B. Electronics - MIDCO calculator, Electronic Registering Assembly (ERA); MIDCO
+    customer electronic interfaces (payment card reader, printer, keyboard, combined or separate display,
+    electronic or electromechanical totalizer, density and oil percentage reading, buttons, RFID, speaker,
+    payment terminal, automation, remote automation, touch screen, preset, IFSF provision, provision for
+    advertising or remote display, provision for temperature/pressure sensors, delivery rate), which may
+    be present or absent according to customer requirements.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    dispenser_type:
+      value: suction and remote
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_volume_display:
+      value: 999999.99
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    maximum_unit_price_display:
+      value: 9999.99
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    maximum_total_price_display:
+      value: 999999.99
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    liquids:
+      value: >-
+        Petrol, diesel fuel, kerosene, petrol blended with max. 25% ethanol, 25% MTBE and 25% methanol,
+        petrol + oil mixture (fixed/variable) up to 5%, biodiesel up to 100%, E-85
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: qmax
+    unit_symbol: L/min
+    values:
+    - model: Qmax=50 L/min
+      value: 50
+      footnote_markers: []
+    - model: Qmax=80 L/min
+      value: 80
+      footnote_markers: []
+    - model: Qmax=140 L/min
+      value: 140
+      footnote_markers: []
+  - attribute: qmin
+    unit_symbol: L/min
+    values:
+    - model: Qmax=50 L/min
+      value: 2
+      footnote_markers: []
+    - model: Qmax=80 L/min
+      value: 2
+      footnote_markers: []
+    - model: Qmax=140 L/min
+      value:
+        min: 5
+        max:
+      footnote_markers: []
+  - attribute: mmq
+    unit_symbol: L
+    values:
+    - model: Qmax=50 L/min
+      value: 1 or 2 or 5
+      footnote_markers: []
+    - model: Qmax=80 L/min
+      value: 1 or 2 or 5
+      footnote_markers: []
+    - model: Qmax=140 L/min
+      value: 2 or 5 or 10
+      footnote_markers: []
+recommendation:
+  id: R117
+  edition: 1995
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: 401-14.01
+  pages: 72
+  role: test_report
+model_family:
+  family_name: SureFill/AccueFill
+  models:
+  - model_id: Qmax=50 L/min
+  - model_id: Qmax=80 L/min
+  - model_id: Qmax=140 L/min
+components:
+- role: flowmeter
+  type_designations:
+  - MIDCO flowmeter
+  alternatives:
+  characteristics:
+    pulser: integrated/combined pulser included
+    quantity_per_system:
+      Qmax=50 L/min: 1
+      Qmax=80 L/min: 1
+      Qmax=140 L/min: 2
+- role: pump
+  type_designations:
+  - MIDCO fuel pump
+  alternatives:
+  characteristics: {}
+- role: combined_pump_and_gas_separator
+  type_designations:
+  - MIDCO combined pump and gas separator
+  alternatives:
+  characteristics:
+    system_type: other than pressure system
+- role: delivery_hose_assembly
+  type_designations:
+  - breakaway valve
+  - hose
+  - nozzle
+  - flow indicator
+  alternatives: AND
+  characteristics: {}
+- role: calculator
+  type_designations:
+  - MIDCO Electronic Registering Assembly (ERA)
+  alternatives:
+  characteristics: {}
+- role: customer_electronic_interface
+  type_designations:
+  - payment card reader
+  - printer
+  - keyboard
+  - combined or separate display
+  - electronic or electromechanical totalizer
+  - density and oil percentage reading
+  - buttons
+  - RFID
+  - speaker
+  - payment terminal
+  - automation
+  - remote automation
+  - touch screen
+  - preset
+  - IFSF provision
+  - provision for advertising or remote display
+  - provision for temperature/pressure sensors
+  - delivery rate
+  alternatives: OR
+  characteristics:
+    availability: optional, may be present or absent according to customer requirements
+footnotes:
+- marker: "#"
+  text: >-
+    The number of displayed digits, display size and number of displays may be changed according to customer
+    requirements.
+matrix_tables:
+- name: Metrological characteristics by flow rate (accuracy class 0.5)
+  columns:
+  - accuracy_class
+  - qmax
+  - qmin
+  - mmq
+  - temperature_range
+  - max_volume_display
+  - max_unit_price_display
+  - max_total_price_display
+  - liquids
+  column_units:
+  -
+  - L/min
+  - L/min
+  - L
+  - "°C"
+  -
+  -
+  -
+  -
+  rows:
+  - accuracy_class: 0.5
+    qmax: 50
+    qmin: 2
+    mmq: 1 or 2 or 5
+    temperature_range:
+      min: -25
+      max: 55
+    max_volume_display: 999999.99
+    max_unit_price_display: 9999.99
+    max_total_price_display: 999999.99
+    liquids: >-
+      Petrol, diesel fuel, kerosene, petrol blended with max. 25% ethanol, 25% MTBE and 25% methanol,
+      petrol + oil mixture (fixed/variable) up to 5%, biodiesel up to 100%, E-85
+  - accuracy_class: 0.5
+    qmax: 80
+    qmin: 2
+    mmq: 1 or 2 or 5
+    temperature_range:
+      min: -25
+      max: 55
+    max_volume_display: 999999.99
+    max_unit_price_display: 9999.99
+    max_total_price_display: 999999.99
+    liquids: >-
+      Petrol, diesel fuel, kerosene, petrol blended with max. 25% ethanol, 25% MTBE and 25% methanol,
+      petrol + oil mixture (fixed/variable) up to 5%, biodiesel up to 100%, E-85
+  - accuracy_class: 0.5
+    qmax: 140
+    qmin:
+      min: 5
+      max:
+    mmq: 2 or 5 or 10
+    temperature_range:
+      min: -25
+      max: 55
+    max_volume_display: 999999.99
+    max_unit_price_display: 9999.99
+    max_total_price_display: 999999.99
+    liquids: >-
+      Petrol, diesel fuel, kerosene, petrol blended with max. 25% ethanol, 25% MTBE and 25% methanol,
+      petrol + oil mixture (fixed/variable) up to 5%, biodiesel up to 100%, E-85
+  description: >-
+    Maximum volume, unit price and total price indications are programmable/floating. Accuracy class,
+    temperature range and liquids columns apply to all three Qmax variants.
+  footnotes:
+  - "#"

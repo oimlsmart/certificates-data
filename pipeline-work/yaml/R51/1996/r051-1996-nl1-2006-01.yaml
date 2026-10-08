@@ -1,0 +1,165 @@
+_meta:
+  cert_id: 1632
+  num: R051/1996-NL1-2006.01
+  applicant: Hasma Nederland B.V
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R51
+  edition_year: 1996
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/1996/r051-1996-nl1-2006-01.pdf
+certificate:
+  number: R51/1996-NL1-06.01
+  project_number: '409174'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-02-15'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Hasma Nederland B.V.
+  address_lines:
+  - Lamalaan 8
+  - 5691 GJ Son
+  - The Netherlands
+manufacturers:
+- name: Hasma Nederland B.V.
+  address_lines:
+  - Lamalaan 8
+  - 5691 GJ Son
+  - The Netherlands
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - LA46-pc
+  module_designation:
+  description: >-
+    Automatic catchweighing instrument of accuracy class Y(a) or Y(b), represented by the sample(s) identified
+    in the associated Test Reports, the type-approval certificate and the description with number T6853
+    and the appertaining documentation folder.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: Y(a) or Y(b)
+    pt:
+      value: "<= -1/3 Max"
+    temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: LA46-pc (Max <= 3 kg)
+      value:
+        min:
+        max: 3
+    - model: LA46-pc (Max <= 30 kg)
+      value:
+        min:
+        max: 30
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: LA46-pc (Max <= 3 kg)
+      value:
+        min: 50
+        max:
+    - model: LA46-pc (Max <= 30 kg)
+      value:
+        min: 200
+        max:
+  - attribute: verification_scale_interval
+    unit_symbol: g
+    values:
+    - model: LA46-pc (Max <= 3 kg)
+      value:
+        min: 1
+        max:
+    - model: LA46-pc (Max <= 30 kg)
+      value:
+        min: 10
+        max:
+  config_level:
+  - attribute: maximum_belt_speed
+    axis: load (within the Max <= 3 kg model) and model
+    values:
+    - condition: LA46-pc (Max <= 3 kg), load < 2 kg
+      value: 47
+      unit_symbol: m/min
+    - condition: LA46-pc (Max <= 3 kg), load > 2 kg
+      value: 35
+      unit_symbol: m/min
+    - condition: LA46-pc (Max <= 30 kg)
+      value: 35
+      unit_symbol: m/min
+  - attribute: maximum_number_of_divisions
+    axis: accuracy_class
+    values:
+    - condition: Y(a)
+      value: 3000
+    - condition: Y(b)
+      value: 1000
+recommendation:
+  id: R51
+  edition: 1996
+  accuracy_classes:
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: R51/1996-NL1-06.01A
+  pages: 30
+  role: test_report
+- id: R51/1996-NL1-06.01B
+  pages: 12
+  role: test_report
+- id: R60/2000-NL-01-12A
+  pages: 57
+  role: test_report
+- id: R60/2000-NL-01-12B
+  pages: 37
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: LA46-pc (Max <= 3 kg)
+    label: LA46-pc, Max <= 3 kg, Min >= 50 g, e >= 1 g
+  - model_id: LA46-pc (Max <= 30 kg)
+    label: LA46-pc, Max <= 30 kg, Min >= 200 g, e >= 10 g
+matrix_tables:
+- name: Capacity variants of type LA46-pc
+  columns:
+  - maximum_capacity
+  - minimum_capacity
+  - verification_scale_interval
+  - maximum_belt_speed
+  column_units:
+  - kg
+  - g
+  - g
+  - m/min
+  rows:
+  - maximum_capacity: 3
+    minimum_capacity: 50
+    verification_scale_interval: 1
+    maximum_belt_speed: 47 (load < 2 kg); 35 (load > 2 kg)
+  - maximum_capacity: 30
+    minimum_capacity: 200
+    verification_scale_interval: 10
+    maximum_belt_speed: 35
+  description: >-
+    Two-column table of variants: first column is the variant with Max <= 3 kg (belt speed load-dependent),
+    second column the variant with Max <= 30 kg. Limits are Max <= value, Min >= value, e >= value.
+  footnotes: []

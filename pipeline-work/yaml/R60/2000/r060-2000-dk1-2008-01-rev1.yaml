@@ -1,0 +1,202 @@
+_meta:
+  cert_id: 2124
+  num: R060/2000-DK1-2008.01 Rev. 1
+  applicant: ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi
+  issuing_year: '2008'
+  status: Valid
+  issuer: DK1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-dk1-2008-01-rev1.pdf
+certificate:
+  number: R60/2000-DK1-08.01
+  scheme: A
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2003-10-15'
+issuing_authority:
+  name: The Danish Accreditation and Metrology Fund
+  address_lines:
+  - Dyregårdsvej 5B
+  - 2740 Skovlunde
+  - Denmark
+  person_responsible: P. Claudi Johansen
+  person_title: CIML member
+  phone: "+45 77 33 95 00"
+  email: danak@danak.dk
+  website: www.dansk-metrologi.dk
+applicants:
+- name: Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi
+  address_lines:
+  - Nişantepe Mah. Fabrikalar Sk. No:8 Alemdağ
+  - Ümraniye
+  - 34794 İstanbul
+  - Turkey
+manufacturers:
+- name: Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi
+  address_lines:
+  - Nişantepe Mah. Fabrikalar Sk. No:8 Alemdağ
+  - Ümraniye
+  - 34794 İstanbul
+  - Turkey
+certified_type:
+  category: Load cell
+  type_designations:
+  - SSP
+  description: Single point, strain gauge load cell
+characteristics:
+  type_level:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_output_return_dr:
+      value: 0.00429
+      unit_symbol: "%Emax"
+      unit_id:
+    relative_dr_z:
+      value: 11655
+      unit_symbol:
+      unit_id:
+    rated_output_sensitivity_c:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    excitation_voltage_uexc:
+      value:
+        min: 5
+        max: 15
+      unit_symbol: V
+      unit_id:
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_relative_emin_over_emax:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_limit_lim:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    temperature_rating_tmin_tmax:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    input_resistance:
+      value: 380/350
+      unit_symbol: Ω
+      unit_id:
+    humidity_condition:
+      value: CH
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=40kg
+      value: 40
+    - model: Emax=80kg
+      value: 80
+    - model: Emax=100kg
+      value: 100
+  config_level:
+  - attribute: maximum_number_of_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: minimum_verification_interval_vmin
+    axis: accuracy_class
+    unit_symbol: "%Emax"
+    values:
+    - condition: C3
+      value: 0.01
+      unit_symbol: "%Emax"
+    - condition: C4
+      value: 0.00833
+      unit_symbol: "%Emax"
+    - condition: C6
+      value: 0.00723
+      unit_symbol: "%Emax"
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 10000
+      unit_symbol:
+    - condition: C4
+      value: 12000
+      unit_symbol:
+    - condition: C6
+      value: 13831
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C4
+  - C6
+test_reports:
+- id: DANAK-1910279
+  pages: 35
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2003-10-15'
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=20kg
+  - model_id: Emax=40kg
+  - model_id: Emax=80kg
+  - model_id: Emax=100kg
+matrix_tables:
+- name: Characteristics by accuracy class
+  columns:
+  - accuracy_class
+  - maximum_number_of_intervals_nlc
+  - minimum_verification_interval_vmin
+  - ratio_y_emax_over_vmin
+  column_units:
+  -
+  -
+  - "%Emax"
+  -
+  rows:
+  - accuracy_class: C3
+    maximum_number_of_intervals_nlc: 3000
+    minimum_verification_interval_vmin: 0.01
+    ratio_y_emax_over_vmin: 10000
+  - accuracy_class: C4
+    maximum_number_of_intervals_nlc: 4000
+    minimum_verification_interval_vmin: 0.00833
+    ratio_y_emax_over_vmin: 12000
+  - accuracy_class: C6
+    maximum_number_of_intervals_nlc: 6000
+    minimum_verification_interval_vmin: 0.00723
+    ratio_y_emax_over_vmin: 13831
+  description: >-
+    Load cell SSP: class-dependent metrological characteristics; maximum capacity, apportionment factor
+    and other characteristics are common across classes.
+  footnotes: []

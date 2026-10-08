@@ -1,0 +1,401 @@
+_meta:
+  cert_id: 3852
+  num: R117/1995-SE1-2013.01 Rev. 1
+  applicant: Wayne Fueling System Sweden AB
+  issuing_year: '2015'
+  status: Valid
+  issuer: SE1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-se1-2013-01-rev1.pdf
+certificate:
+  number: R117/1995-SE1-13.01 Revision 1
+  scheme: B
+  page_total: 5
+  member_state: Sweden
+  date_issued: '2015-12-14'
+issuing_authority:
+  name: SP Technical Research Institute of Sweden
+  address_lines:
+  - PO Box 857
+  - SE-501 15 Borås
+  - Sweden
+  person_responsible: Lennart Aronsson
+  person_title: Supervisor
+  phone: "+46 10-516 50 00"
+  email: info@sp.se
+  website: www.sp.se
+applicants:
+- name: Wayne Fueling Systems Sweden AB
+  address_lines:
+  - Hanögatan 10
+  - SE-211 24 Malmö
+  - Sweden
+manufacturers:
+- name: Wayne Fueling Systems Sweden AB
+  address_lines:
+  - Hanögatan 10
+  - SE-211 24 Malmö
+  - Sweden
+- name: Wayne Industria e Comercio Ltda
+  address_lines:
+  - Estrada Timbó 126, Higienópolis
+  - 2106-280 Rio de Janeiro, RJ
+  - Brazil
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Wayne Helix 1000
+  - Wayne Helix 2000
+  - Wayne Helix 4000
+  - Wayne Helix 5000
+  - Wayne Helix 6000
+  module_designation: Not applicable
+  description: >-
+    One or two sided fuel pumps/dispensers for motor vehicles for one or two customers per side. May be
+    equipped with a built-in payment terminal (Wayne iXPay secure payment platform), preset function,
+    Wayne iX Media display and a printer for receipt printing at the pump/dispenser. For DEF, heating
+    is installed to keep the liquid from freezing; optionally a pump circulates liquid downstream of the
+    meter through the coax hose (max volume 2.55 litre in circulation system) to avoid freezing. May be
+    equipped with a vapour recovery system with vapour pump, regulating proportional valves and an electronic
+    board connected to the iGEM CPU board; optionally a vapour recovery monitoring system consisting of
+    a vapour meter and belonging intrinsic safe barrier. A complete measuring system consists of one or
+    two electronic modules and one to six hydraulic modules in the same housing.
+characteristics:
+  type_level:
+    maximum_flow_rate:
+      value:
+        min: 40
+        max: 200
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    minimum_flow_rate:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    scale_interval_volume_display:
+      value: 0.01
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    maximum_volume:
+      value: 9999
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    maximum_price:
+      value: 99990
+      unit_symbol: Price
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 999.99
+      unit_symbol: Price/l
+      unit_id:
+      footnote_markers: []
+    pressure_range:
+      value:
+        min: 0.12
+        max: 0.3
+      unit_symbol: MPa
+      unit_id:
+      footnote_markers: []
+    mixture_conditions_two_liquids:
+      value:
+        min: 5
+        max: 95
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    air_separator_max_flow_rate:
+      value: 90
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    measuring_module_max_flow_rate:
+      value: 70
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    circulation_system_max_volume:
+      value: 2.55
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: style
+    unit_symbol:
+    values:
+    - model: Wayne Helix 1000
+      value: Small Style
+    - model: Wayne Helix 2000
+      value: Small Style
+    - model: Wayne Helix 4000
+      value: H-Style Narrow
+    - model: Wayne Helix 5000
+      value: H-Style Wide
+    - model: Wayne Helix 6000
+      value: C-Style
+  config_level:
+  - attribute: minimum_measured_quantity
+    axis: configuration
+    values:
+    - condition: standard
+      value: 2.0
+      unit_symbol: l
+    - condition: standard
+      value: 20
+      unit_symbol: l
+    - condition: option (any configuration except hose longer than 10 m)
+      value: 5.0
+      unit_symbol: l
+    - condition: DEF only
+      value: 5.0
+      unit_symbol: l
+  - attribute: liquid_temperature_range
+    axis: liquid_type
+    values:
+    - condition: general
+      value:
+        min: -30
+        max: 55
+      unit_symbol: "°C"
+    - condition: FAME/RME only
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    - condition: DEF only
+      value:
+        min: -5
+        max: 35
+      unit_symbol: "°C"
+  - attribute: ambient_temperature_range
+    axis: configuration
+    values:
+    - condition: general
+      value:
+        min: -40
+        max: 60
+      unit_symbol: "°C"
+    - condition: DEF
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    - condition: iGEM printer
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+  - attribute: type_of_liquids
+    axis: volume_sensor
+    values:
+    - condition: volume sensor iMeter and Xflo
+      value: Petrol, kerosene, diesel, ethanol or FAME/RME
+      unit_symbol:
+    - condition: volume sensor iMeter DM2-X UREA
+      value: DEF (Diesel Exhaust Fluid, e.g. AdBlue)
+      unit_symbol:
+  - attribute: volume_sensor_flow_rate_range
+    axis: volume_sensor
+    values:
+    - condition: iMeter Duplex (each meter) and Single
+      value:
+        min: 0.2
+        max: 70
+      unit_symbol: l/min
+    - condition: iMeter, FAME/RME only
+      value:
+        min: 4
+        max: 70
+      unit_symbol: l/min
+    - condition: iMeter, DEF only
+      value:
+        min: 2
+        max: 40
+      unit_symbol: l/min
+    - condition: iMeter2 Duplex (each meter) and Single
+      value:
+        min: 1.6
+        max: 70
+      unit_symbol: l/min
+    - condition: iMeter2, FAME/RME only
+      value:
+        min: 4
+        max: 70
+      unit_symbol: l/min
+    - condition: iMeter2, Petrol only
+      value:
+        min: 0.2
+        max: 70
+      unit_symbol: l/min
+    - condition: Xflo Duplex (each meter) and Single
+      value:
+        min: 4
+        max: 80
+      unit_symbol: l/min
+    - condition: Xflo, FAME/RME only
+      value:
+        min: 4
+        max: 70
+      unit_symbol: l/min
+  - attribute: ratio_max_to_min_flow_rate
+    axis: product_quality
+    values:
+    - condition: single quality
+      value:
+        min: 10
+        max:
+      unit_symbol:
+    - condition: blending quality
+      value:
+        min: 5
+        max:
+      unit_symbol:
+recommendation:
+  id: R117
+  edition: 1995
+  scheme: B
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: 3P02046Rev1
+  date: '2015-12-14'
+  pages: 27
+  role: type_evaluation_report
+revision_history:
+- revision: '1'
+  date: '2013-07-03'
+  changes:
+- revision: '2'
+  date: '2015-12-14'
+  changes: >-
+    Added models Helix 1000, Helix 6000 B2B, Helix 4U, volume sensor iMeter2 and iMeter DM2-X UREA, metallic
+    head, printer at dispenser, NPCL/SINP communication, new displays, liquid DEF, increased max flow
+    rate to 200 l/min
+model_family:
+  family_name: Wayne Helix
+  models:
+  - model_id: Wayne Helix 1000
+    label: Fuel dispenser (Small Style)
+  - model_id: Wayne Helix 2000
+    label: Fuel dispenser (Small Style)
+  - model_id: Wayne Helix 4000
+    label: Fuel dispenser (H-Style Narrow)
+  - model_id: Wayne Helix 5000
+    label: Fuel dispenser (H-Style Wide)
+  - model_id: Wayne Helix 6000
+    label: Fuel dispenser (C-Style)
+components:
+- role: electronic_module
+  type_designations:
+  - iGEM
+  characteristics:
+    description: >-
+      Electronic subsystem consisting mainly of calculator, indicating device and keyboard with preset;
+      able to serve up to two customers at a time
+    max_motors: 6
+    max_pulse_transmitters: 6
+    max_nozzles: 12
+    max_solenoid_valves: 14
+    max_customers_served_simultaneously: 2
+- role: measurement_transducer
+  type_designations:
+  - iMeter
+  - iMeter2
+  - iMeter DM2-X UREA
+  - Xflo
+  alternatives: OR
+  characteristics:
+    sub_assemblies:
+    - volume sensor (single equipped side A, single equipped side B or duplex)
+    - pulse transmitter
+- role: pump_and_air_separator
+  type_designations:
+  - CPU (Compact Pumping Unit)
+  characteristics:
+    includes:
+    - air separator
+    - motor
+    - non-return valve
+    max_flow_rate_per_air_separator:
+      value: 90
+      unit_symbol: l/min
+- role: regulating_function
+  characteristics:
+    includes:
+    - solenoid valves for flow rate regulation, blending and on/off
+- role: delivery_function
+  characteristics:
+    includes:
+    - hoses
+    - nozzles
+    - nozzle switch
+    - satellite function
+- role: central_pump
+  characteristics:
+    description: >-
+      Optional central pump (additional 'R'): an external (central) pump is used instead of an internal
+      pump; delivers air-free liquid according to OIML R117 item 5.1.3; includes security valve
+- role: payment_terminal
+  type_designations:
+  - Wayne iXPay
+  characteristics:
+    optional: true
+- role: media_display
+  type_designations:
+  - Wayne iX
+  characteristics:
+    optional: true
+- role: printer
+  characteristics:
+    optional: true
+    location: at the pump/dispenser
+- role: vapour_recovery_system
+  characteristics:
+    optional: true
+    includes:
+    - vapour pump
+    - regulating proportional valves
+    - electronic board connected to the iGEM CPU board
+    optional_monitoring_system: vapour meter and belonging intrinsic safe barrier
+matrix_tables:
+- name: Product designation code legend
+  description: >-
+    Sample product designation code: X(XX/XXX-XX//////X — fields in order: Design, Orientation, # Hoses/Nozzle
+    positions per side, Style, Basic technical features, # Grades in, # Hydraulic positions, # Grades
+    out, Hydraulic cabinet module
+  columns:
+  - design
+  - orientation
+  - hoses_nozzle_positions_per_side
+  - style
+  - basic_technical_features
+  - grades_in
+  - hydraulic_positions
+  - grades_out
+  - hydraulic_cabinet_module
+  rows:
+  - design: W = Wide; N = Narrow; H = High Hose; L = Low Hose
+    orientation: ID = Island Dual Sided UI; IS = Island Single Sided UI; LM = Lane Mirrored; LU = Lane
+      UnMirrored
+    hoses_nozzle_positions_per_side: >-
+      1 digit = symmetric (same number, solution and flows on both sides A and B); 2 digits = asymmetric
+      (different number, solutions or flows on side A and B; 1st digit = side A, 2nd digit = side B)
+    style: C = C-style; H = H-style; S = Small style
+    basic_technical_features: >-
+      L = LPG; M = Media; P = Payment; R = Remote; S = Suction; Y = Master (Satellite); Z = SAT (Satellite)
+    grades_in: 1-5
+    hydraulic_positions: 0-5
+    grades_out: 1-8 (if blender, count up +1 per each blending possibility between 2 grades)
+    hydraulic_cabinet_module: 'T = ATC; # = number of'
+  footnotes: []
+additional_recommendations:
+- id: R118
+  edition: 1995

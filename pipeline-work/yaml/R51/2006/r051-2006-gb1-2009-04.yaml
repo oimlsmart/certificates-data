@@ -1,0 +1,259 @@
+_meta:
+  cert_id: 2271
+  num: R051/2006-GB1-2009.04
+  applicant: Thermo Ramsey Italia S.R.L.
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2009-04.pdf
+certificate:
+  number: R51/2006-GB1-09.04
+  scheme: A
+  project_number: T1108/0053
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2009-07-22'
+issuing_authority:
+  name: National Weights and Measures Laboratory (Part of the National Measurement Office)
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+applicants:
+- name: Thermo Ramsey Italia S.R.L.
+  address_lines:
+  - Strada Rivoltana km 6/7 Rodano (MI)
+  - '20090'
+  - Italy
+manufacturers:
+- name: Thermo Ramsey Italia S.R.L.
+  address_lines:
+  - Strada Rivoltana km 6/7 Rodano (MI)
+  - '20090'
+  - Italy
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - VersaWeigh
+  - VersaGP
+  module_designation: Not applicable
+  description: Mains-powered automatic checkweighing instrument designated the VersaWeigh or VersaGP.
+characteristics:
+  type_level:
+    maximum_number_of_scale_intervals_n:
+      value: 2400
+      unit_symbol:
+      unit_id:
+    tare:
+      value: "-500e (single-range instruments); -500e1 (multi-range instruments)"
+      unit_symbol:
+      unit_id:
+    belt_speed:
+      value: 1.2
+      unit_symbol: m/s
+      unit_id:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    humidity_conditions:
+      value: Non-condensing (closed)
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 115
+        max: 250
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+    accuracy_class:
+      value: XIII(1)
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 1200
+    - model: Max=2400g
+      value: 2400
+    - model: Max=4800g
+      value: 4800
+    - model: Max=12000g
+      value: 12000
+    - model: Max=24000g
+      value: 24000
+    - model: Max=48000g
+      value: 48000
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 35
+    - model: Max=2400g
+      value: 70
+    - model: Max=4800g
+      value: 140
+    - model: Max=12000g
+      value: 350
+    - model: Max=24000g
+      value: 700
+    - model: Max=48000g
+      value: 1400
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: Max=1200g
+      value: 0.5
+    - model: Max=2400g
+      value: 1
+    - model: Max=4800g
+      value: 2
+    - model: Max=12000g
+      value: 5
+    - model: Max=24000g
+      value: 10
+    - model: Max=48000g
+      value: 20
+  - attribute: load_cell_emax
+    unit_symbol: kg
+    values:
+    - model: Max=1200g
+      value: 10
+    - model: Max=2400g
+      value: 20
+    - model: Max=4800g
+      value: 30
+    - model: Max=12000g
+      value: 100
+    - model: Max=24000g
+      value: 100
+    - model: Max=48000g
+      value: 100
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: TR 547
+  pages: 38
+  role: test_report
+- id: P00143
+  pages: 11
+  role: evaluation_report
+model_family:
+  family_name:
+  models:
+  - model_id: Max=1200g
+    label: Max 1200 g, Min 35 g, e = 0.5 g
+  - model_id: Max=2400g
+    label: Max 2400 g, Min 70 g, e = 1 g
+  - model_id: Max=4800g
+    label: Max 4800 g, Min 140 g, e = 2 g
+  - model_id: Max=12000g
+    label: Max 12000 g, Min 350 g, e = 5 g
+  - model_id: Max=24000g
+    label: Max 24000 g, Min 700 g, e = 10 g
+  - model_id: Max=48000g
+    label: Max 48000 g, Min 1400 g, e = 20 g
+components:
+- role: load_cell
+  type_designations:
+  - Tedea Huntleigh 1042 C3
+  - Tedea Huntleigh 1250 C3
+  alternatives: OR
+  characteristics:
+    capacity: according to capacity table
+    tested_reference: Tedea 1042 C3, capacity 10 kg
+    digital_output_allowed: false
+    oil_damper_allowed: false
+    compatibility_requirements:
+    - respective OIML Certificate of Conformity (R60) issued for the load cell
+    - >-
+      certificate contains the load cell types and data required for the manufacturer's declaration of
+      compatibility of modules and any particular installation requirements
+    - load cell marked NH allowed only if humidity testing to R76 has been conducted on this load cell
+    - >-
+      characteristics of the replacement load cell such as nlc, Y, Z are the same or better than the load
+      cell tested dynamically
+    - design of the load cells and the material are the same
+    - no oil damper is used
+- role: interfaces
+  type_designations:
+  - RS 232
+  - USB
+  - Ethernet
+  - Parallel
+  alternatives: AND
+  characteristics: {}
+matrix_tables:
+- name: Capacities and load cell data by model
+  columns:
+  - model
+  - maximum_capacity
+  - minimum_capacity
+  - scale_interval
+  - load_cell_emax
+  column_units:
+  -
+  - g
+  - g
+  - g
+  - kg
+  rows:
+  - model: Max=1200g
+    maximum_capacity: 1200
+    minimum_capacity: 35
+    scale_interval: 0.5
+    load_cell_emax: 10
+  - model: Max=2400g
+    maximum_capacity: 2400
+    minimum_capacity: 70
+    scale_interval: 1
+    load_cell_emax: 20
+  - model: Max=4800g
+    maximum_capacity: 4800
+    minimum_capacity: 140
+    scale_interval: 2
+    load_cell_emax: 30
+  - model: Max=12000g
+    maximum_capacity: 12000
+    minimum_capacity: 350
+    scale_interval: 5
+    load_cell_emax: 100
+  - model: Max=24000g
+    maximum_capacity: 24000
+    minimum_capacity: 700
+    scale_interval: 10
+    load_cell_emax: 100
+  - model: Max=48000g
+    maximum_capacity: 48000
+    minimum_capacity: 1400
+    scale_interval: 20
+    load_cell_emax: 100
+  description: >-
+    Six capacity variants of the VersaWeigh/VersaGP checkweigher. The OCR of the third maximum-capacity
+    cell reads '48 00 g', consistent with 4800 g since Max/e = 2400 for all variants.
+  footnotes: []

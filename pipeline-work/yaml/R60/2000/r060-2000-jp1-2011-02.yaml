@@ -1,0 +1,267 @@
+_meta:
+  cert_id: 2605
+  num: R060/2000-JP1-2011.02
+  applicant: Kubota Corporation
+  issuing_year: '2011'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2011-02.pdf
+certificate:
+  number: R60/2000-JP1-11.02
+  scheme: A
+  page_total: 3
+  member_state: Japan
+  date_issued: '2011-01-07'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi, Naniwa-ku, Osaka, 556-8601, Japan
+manufacturers:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi, Naniwa-ku, Osaka, 556-8601, Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LB-XD-300L-HC
+  - LB-XD-600L-HC
+  - LB-XD-1.5T-HC
+  module_designation:
+  description: Beam (shear) load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    excitation_voltage:
+      value:
+        min: 6
+        max: 8
+      unit_symbol: V
+      unit_id:
+    excitation_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    cable_length_maximum:
+      value: 15
+      unit_symbol: m
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: LB-XD-300L-HC
+      value: 300
+    - model: LB-XD-600L-HC
+      value: 600
+    - model: LB-XD-1.5T-HC
+      value: 1500
+  - attribute: safe_load_limit
+    unit_symbol: kg
+    values:
+    - model: LB-XD-300L-HC
+      value: 450
+    - model: LB-XD-600L-HC
+      value: 900
+    - model: LB-XD-1.5T-HC
+      value: 2250
+  config_level:
+  - attribute: maximum_number_of_load_cell_verification_intervals
+    axis: verification_interval_option
+    values:
+    - condition: n_max=4000
+      value: 4000
+    - condition: n_max=3000
+      value: 3000
+  - attribute: minimum_verification_interval
+    axis: verification_interval_option
+    unit_symbol: kg
+    values:
+    - condition: n_max=4000, model=LB-XD-300L-HC
+      value: 0.03
+    - condition: n_max=3000, model=LB-XD-300L-HC
+      value: 0.0375
+    - condition: n_max=4000, model=LB-XD-600L-HC
+      value: 0.06
+    - condition: n_max=3000, model=LB-XD-600L-HC
+      value: 0.075
+    - condition: n_max=4000, model=LB-XD-1.5T-HC
+      value: 0.15
+    - condition: n_max=3000, model=LB-XD-1.5T-HC
+      value: 0.1875
+  - attribute: ratio_y_emax_over_vmin
+    axis: verification_interval_option
+    values:
+    - condition: n_max=4000
+      value: 10000
+    - condition: n_max=3000
+      value: 8000
+  - attribute: ratio_z_emax_over_2dr
+    axis: verification_interval_option
+    values:
+    - condition: n_max=4000
+      value: 4000
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: 10-28/R60:2000
+  pages: 33
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: LB-XD-300L-HC
+    attributes:
+      maximum_capacity_kg: 300
+  - model_id: LB-XD-600L-HC
+    attributes:
+      maximum_capacity_kg: 600
+  - model_id: LB-XD-1.5T-HC
+    attributes:
+      maximum_capacity_kg: 1500
+matrix_tables:
+- name: Characteristics by model and verification interval option
+  columns:
+  - model_designation
+  - accuracy_class
+  - humidity_symbol
+  - n_max
+  - emin
+  - emax
+  - elim
+  - vmin
+  - plc
+  - "y"
+  - z
+  - excitation_voltage_v_dc
+  - cable_length_max_m
+  column_units:
+  -
+  -
+  -
+  -
+  - kg
+  - kg
+  - kg
+  - kg
+  -
+  -
+  -
+  - V
+  - m
+  rows:
+  - model_designation: LB-XD-300L-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 4000
+    emin: 0
+    emax: 300
+    elim: 450
+    vmin: 0.03
+    plc: 0.8
+    "y": 10000
+    z: 4000
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  - model_designation: LB-XD-300L-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 3000
+    emin: 0
+    emax: 300
+    elim: 450
+    vmin: 0.0375
+    plc: 0.8
+    "y": 8000
+    z:
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  - model_designation: LB-XD-600L-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 4000
+    emin: 0
+    emax: 600
+    elim: 900
+    vmin: 0.06
+    plc: 0.8
+    "y": 10000
+    z: 4000
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  - model_designation: LB-XD-600L-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 3000
+    emin: 0
+    emax: 600
+    elim: 900
+    vmin: 0.075
+    plc: 0.8
+    "y": 8000
+    z:
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  - model_designation: LB-XD-1.5T-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 4000
+    emin: 0
+    emax: 1500
+    elim: 2250
+    vmin: 0.15
+    plc: 0.8
+    "y": 10000
+    z: 4000
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  - model_designation: LB-XD-1.5T-HC
+    accuracy_class: C
+    humidity_symbol: CH
+    n_max: 3000
+    emin: 0
+    emax: 1500
+    elim: 2250
+    vmin: 0.1875
+    plc: 0.8
+    "y": 8000
+    z:
+    excitation_voltage_v_dc: 6~8
+    cable_length_max_m: 15
+  description: Z = Emax/(2*DR) = 4000 is specified only in the case of n_max=4000.
+  footnotes: []

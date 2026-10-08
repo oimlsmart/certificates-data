@@ -1,0 +1,228 @@
+_meta:
+  cert_id: 6860
+  num: R85/2008-A-NL1-26.01
+  applicant: Qingdao Aubon Instruments Co., Ltd
+  issuing_year: '2026'
+  status: Valid
+  issuer: NL1
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r85-2008-nl1-2026-01.pdf
+certificate:
+  number: R85/2008-A-NL1-26.01
+  scheme: A
+  project_number: '3806928'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2026-04-07'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Qingdao Aubon Instrument Co., Ltd.
+  address_lines:
+  - 13 (b) Hancheng Road
+  - Qianwan Bonded Port Area
+  - Qingdao Area
+  - China (Shandong) Pilot Free Trade Zone
+  - Qingdao 266000
+  - P.R. China
+manufacturers:
+- name: Qingdao Aubon Instrument Co., Ltd.
+  address_lines:
+  - 13 (b) Hancheng Road
+  - Qianwan Bonded Port Area
+  - Qingdao Area
+  - China (Shandong) Pilot Free Trade Zone
+  - Qingdao 266000
+  - P.R. China
+certified_type:
+  category: Automatic level gauge
+  type_designations:
+  - CS-MI
+  description: >-
+    Automatic level gauge (ALG) with temperature and density displacer sensor. Manufacturers mark: Aubon.
+characteristics:
+  type_level:
+    maximum_measuring_range_level:
+      value: 55
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 70
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    ambient_humidity:
+      value: condensing humidity
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    data_communication_inputs:
+      value: HART communication; RS485 communication
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    data_communication_outputs:
+      value: >-
+        RS485 interface with transmission protocol; HART communication; Digital Output K1 (not for legal
+        metrology); Digital Output K2 (not for legal metrology); 4-20 mA output (not for legal metrology)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transmission_protocols:
+      value: Modbus protocol; GPU protocol
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: temperature_displacer_measuring_range
+    axis: displacer_type
+    values:
+    - condition: VTM-I
+      value:
+        min: -5
+        max: 35
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    - condition: DSM-CS
+      value:
+        min: -45
+        max: 75
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  - attribute: density_displacer_measuring_range
+    axis: displacer_type
+    values:
+    - condition: DSM-CS
+      value:
+        min: 600
+        max: 1100
+      unit_symbol: kg/m³
+      unit_id:
+      footnote_markers: []
+  - attribute: maximum_viscosity
+    axis: displacer_type
+    values:
+    - condition: DSM-CS
+      value: 15
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_voltage
+    axis: power_supply_type
+    values:
+    - condition: AC
+      value: 220
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: DC
+      value:
+        min: 20
+        max: 60
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_frequency
+    axis: power_supply_type
+    values:
+    - condition: AC
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R85-1&2
+  edition: 2008
+  scheme: A
+test_reports:
+- id: NMi-3806928-01
+  date: '2026-04-07'
+  pages: 36
+  role: type_evaluation_report
+- id: R85-2008-A-NL1-26.01-1
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2026-04-07'
+  changes: Initial version
+components:
+- role: displacer
+  type_designations:
+  - LF1
+  - LF13
+  alternatives: OR
+  characteristics:
+    sensors_included:
+      value: none
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: displacer
+  type_designations:
+  - VTM-I
+  alternatives: OR
+  characteristics:
+    sensors_included:
+      value: temperature sensor
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: displacer
+  type_designations:
+  - DSM-CS
+  alternatives: OR
+  characteristics:
+    sensors_included:
+      value: temperature and density sensors
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+footnotes:
+- marker: 1)
+  text: >-
+    In type evaluation report NMi-3806928-01 annex 4 includes performance test on the displacer for liquid
+    density and temperature. The maximum permissible error is based on OIML R117-1:2019.
+matrix_tables:
+- name: Software identification
+  columns:
+  - component
+  - sw_version
+  - crc_checksum
+  column_units:
+  -
+  -
+  -
+  rows:
+  - component: Main Control Board
+    sw_version: V1.01675
+    crc_checksum: '11123'
+  - component: Display Board
+    sw_version: '2076'
+    crc_checksum: '42800'
+  - component: VTM-I Floater
+    sw_version: '1.53'
+    crc_checksum: '27251'
+  - component: DSM-CS Floater
+    sw_version: '1.0'
+    crc_checksum: '19977'
+  description: Software versions and CRC checksums per board and displacer floater.
+  footnotes: []

@@ -1,0 +1,161 @@
+_meta:
+  cert_id: 3277
+  num: R060/2000-DE1-2013.02
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2013'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2013-02.pdf
+certificate:
+  number: R60/2000-DE1-13.02
+  page_total: 2
+  member_state: Germany
+  date_issued: '2013-10-14'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Head of Working Group
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - Z16A
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 700
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=7.5t
+      value: 7.5
+      footnote_markers: []
+    - model: Emax=15t
+      value: 15
+      footnote_markers: []
+    - model: Emax=20t
+      value: 20
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: D1
+      value: 1000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/12000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: D1
+      value: Emax/5000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - D1
+test_reports:
+- id: 1.12-4062385-1
+  pages: 33
+  role: test_report
+model_family:
+  family_name: Z16A
+  models:
+  - model_id: Emax=7.5t
+  - model_id: Emax=15t
+  - model_id: Emax=20t
+footnotes: []
+matrix_tables:
+- name: Essential data
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - mV/V
+  - t
+  -
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 7.5
+    - 15
+    - 20
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity:
+    - 7.5
+    - 15
+    - 20
+    minimum_load_cell_verification_interval_vmin: Emax/5000
+  description: >-
+    Essential data per accuracy class; rated output and maximum capacity (7.5 t, 15 t, 20 t) apply to
+    both classes (colspan cells).
+  footnotes: []

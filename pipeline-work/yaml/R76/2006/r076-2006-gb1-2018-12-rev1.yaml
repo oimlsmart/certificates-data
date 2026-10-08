@@ -1,0 +1,489 @@
+_meta:
+  cert_id: 4774
+  num: R76/2006-A-GB1-18.12 Rev. 1
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2019'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2018-12-rev1.pdf
+certificate:
+  number: R76/2006-A-GB1-18.12
+  scheme: A
+  page_total: 8
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2019-01-28'
+  oiml_issuer_id:
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+  oiml_issuer_id:
+applicants:
+- name: Società Cooperativa Bilanciai Campogalliano
+  address_lines:
+  - Via S. Ferrari n.16
+  - 41011 Campogalliano (MO)
+  - Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai Campogalliano
+  address_lines:
+  - Via S. Ferrari n.16
+  - 41011 Campogalliano (MO)
+  - Italy
+certified_type:
+  category: Indicator
+  type_designations:
+  - DD1050
+  - DD1050i
+  - DD2050
+  - DD2060X-Series
+  module_designation:
+  description: >-
+    These indicating devices are designated the DD1050, DD1050i, DD2050 and DD2060X-Series. They are designed
+    to be used as part of a Class III or IIII non-automatic weighing instrument. They operate as single
+    interval, multi-interval or multi-range, are self-indicating and mains or DC-powered. Any compatible
+    load cell with a valid OIML R60 Certificate of Conformity may be used, subject to the manufacturer's
+    compatibility of modules calculation; a load cell marked NH is allowed only if humidity testing to
+    R76 has been conducted on it.
+characteristics:
+  type_level:
+    display_type:
+      value: graphic LCD
+      unit_symbol:
+      unit_id:
+    display_size:
+      value: 10.4
+      unit_symbol: in
+      unit_id:
+    max_ad_conversion_modules:
+      value: 4
+      unit_symbol:
+      unit_id:
+    max_load_receptors:
+      value: 4
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    maximum_tare_value:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 29
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.6
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value:
+        min: 27
+        max: 30
+      unit_symbol: mV
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    load_cell_cable_type:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    load_cell_cable_maximum_length:
+      value: 3358
+      unit_symbol: m/mm²
+      unit_id:
+    interfaces:
+      value: >-
+        load cell 6-wire shielded connection (analogue/digital), TTL 5V, RS232/422/485, Ethernet, USB,
+        USB host, 0-10 V / 0-20 mA analogue output, digital I/O, Profibus, SD card, audio
+      unit_symbol:
+      unit_id:
+    analogue_output_voltage_range:
+      value:
+        min: 0
+        max: 10
+      unit_symbol: V
+      unit_id:
+    analogue_output_current_range:
+      value:
+        min: 0
+        max: 20
+      unit_symbol: mA
+      unit_id:
+    ttl_interface_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: interval_type_and_accuracy_class
+    values:
+    - condition: single interval, Class III
+      value: 6000
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval/range (2 partial ranges), Class III
+      value: 4000
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval/range (3 partial ranges), Class III
+      value: 3000
+      unit_symbol:
+      unit_id:
+    - condition: single and multi-interval/range (2 and 3 partial ranges), Class IIII
+      value: 1000
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_preset_tare_value
+    axis: interval_type
+    values:
+    - condition: single and multi-range
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval
+      value: "-Max1"
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_type
+    values:
+    - condition: analogue load cell
+      value:
+        min: 9
+        max: 10
+      unit_symbol: V
+      unit_id:
+    - condition: digital load cell
+      value:
+        min: 10
+        max: 18
+      unit_symbol: V
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error_pi
+    axis: load_cell_configuration
+    values:
+    - condition: analogue load cell
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    - condition: digital load cell
+      value: 0
+      unit_symbol:
+      unit_id:
+    - condition: analogue load cell with DILINK junction box
+      value: 0
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P02477
+  date: '2019-01-28'
+  pages: 18
+  role: type_evaluation_report
+- id: P02477-D
+  date: '2019-01-28'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2018-08-28'
+  changes: OIML Certificate first issued.
+- revision: '1'
+  date: '2019-01-28'
+  changes: Added alternative software parts. Added alternative "Legally Relevant Printout" parameter.
+model_family:
+  family_name:
+  models:
+  - model_id: DD1050
+    label: DD1050
+    attributes:
+      enclosure: stainless steel and ABS
+  - model_id: DD1050i
+    label: DD1050i
+    attributes:
+      enclosure: stainless steel
+      power_supply: enclosed external power supply
+  - model_id: DD2050
+    label: DD2050
+    attributes:
+      enclosure: stainless steel
+      integrated_printer: true
+  - model_id: DD2060X-Series
+    label: DD2060X-Series
+    attributes:
+      enclosure: stainless steel
+      processor: CPU based on x86 Architecture and Windows 10 IOT
+components:
+- role: digital load cell
+  type_designations:
+  - CPD-M
+  alternatives:
+  characteristics: {}
+- role: smart junction box
+  type_designations:
+  - DILINK
+  alternatives:
+  characteristics: {}
+footnotes:
+- marker: "(*)"
+  text: Denotes programmable software; software versions without this marker are embedded.
+matrix_tables:
+- name: Weighing board software versions for verification
+  columns:
+  - version
+  - identification
+  - release
+  - checksum
+  - programmable
+  rows:
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.0.x.x
+    checksum: 85E2
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.1.x.x
+    checksum: CE47
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.2.x.x
+    checksum: EF21
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.3.x.x
+    checksum: FEE8
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.4.x.x
+    checksum: E18A
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.5.x.x
+    checksum: 86A2
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 1.6.x.x
+    checksum: B6C1
+    programmable: false
+  - version: Analogue version 10 VDC
+    identification: '491039'
+    release: 2.0.x.x
+    checksum: 8F57
+    programmable: true
+  - version: Analogue version 5 VDC
+    identification: '491032'
+    release: 1.6.x.x
+    checksum: 5A3E
+    programmable: false
+  - version: Analogue version 5 VDC
+    identification: '491032'
+    release: 2.0.x.x
+    checksum: 63A8
+    programmable: true
+  - version: Digital version
+    identification: '491040'
+    release: 1.0.x.x
+    checksum: B664
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.1.x.x
+    checksum: 7C08
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.2.x.x
+    checksum: AE4E
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.3.x.x
+    checksum: '0201'
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.4.x.x
+    checksum: E8A2
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.5.x.x
+    checksum: E69F
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 1.6.x.x
+    checksum: D6FC
+    programmable: false
+  - version: Digital version
+    identification: '491040'
+    release: 2.0.x.x
+    checksum: EF64
+    programmable: true
+  - version: TTL Digital version
+    identification: '491059'
+    release: 1.0.x.x
+    checksum: '5643'
+    programmable: false
+  - version: TTL Digital version
+    identification: '491059'
+    release: 1.1.x.x
+    checksum: 4BC7
+    programmable: false
+  - version: TTL Digital version
+    identification: '491059'
+    release: 1.2.x.x
+    checksum: 7BA4
+    programmable: false
+  - version: TTL Digital version
+    identification: '491059'
+    release: 2.0.x.x
+    checksum: 02B6
+    programmable: true
+  description: >-
+    Software identification of the weighing board, displayed via Menu > Info > Metrological Info > Scales
+    Firmware.
+  footnotes:
+  - marker: "(*)"
+    text: Programmable software; all other listed versions are embedded.
+- name: Main board software versions (DD1050, DD1050i, DD2050)
+  columns:
+  - module
+  - release
+  - checksum
+  - programmable
+  rows:
+  - module: PluginBilancia.dll
+    release: 3.1.x.x
+    checksum: EEC0414D99D9D4E74F236E407455B68A047937B5
+    programmable: false
+  - module: PluginBilancia.dll
+    release: 4.0.x.x
+    checksum: C0D2388F1D9C4C2C52026EB3F060B3A3076DA858
+    programmable: false
+  - module: PluginBilancia.dll
+    release: 4.1.x.x
+    checksum: 2548BD87795BB40111CE508BF14D6055F061AB19
+    programmable: false
+  - module: PluginBilancia.dll
+    release: 5.0.x.x
+    checksum: 9009568EBA9265C128E004005EF638AE1E1E0912
+    programmable: true
+  - module: PluginCBWeightViewer.dll
+    release: 4.1.x.x
+    checksum: 5B74C8C918B84ABC5BB713D867D45710A1B42591
+    programmable: false
+  - module: PluginCBWeightViewer.dll
+    release: 5.0.x.x
+    checksum: A5E7CCD1ADD6FDC8E302A7805A9734C5D50E3852
+    programmable: false
+  - module: PluginCBWeightViewer.dll
+    release: 6.0.x.x
+    checksum: '00094AB2D8EE8E558630857CC3781735517D320E'
+    programmable: true
+  - module: PluginCBMpp.dll
+    release: 3.1.x.x
+    checksum: 6FE313655513FACF1DB5C12174CDB24E2DC8C8C6
+    programmable: false
+  - module: PluginCBMpp.dll
+    release: 4.0.x.x
+    checksum: 3007FF9D56DA679E60D40997C13EBCF83D1D6347
+    programmable: false
+  description: >-
+    Embedded or programmable software on the main board of the DD1050, DD1050i and DD2050, displayed via
+    Menu > Info > Metrological Info > Metrological modules.
+  footnotes:
+  - marker: "(*)"
+    text: Programmable software; all other listed versions are embedded.
+- name: Main board software versions (DD2060X-Series)
+  columns:
+  - module
+  - release
+  - checksum
+  rows:
+  - module: Bilanciai.WeightIndicator.exe
+    release: 1.0.x.x
+    checksum: D4234307
+  - module: Bilanciai.ServiceLibrary.exe
+    release: 1.0.x.x
+    checksum: C3930FF5
+  description: >-
+    Programmable software on the main board of the DD2060X-Series, identified by pressing the scale name
+    button 5 times.
+- name: Alternative software parts (main board)
+  columns:
+  - module
+  - release
+  - checksum
+  - programmable
+  rows:
+  - module: Bilanciai.WeightIndicator.exe
+    release: 2.0.x.x
+    checksum: A31EB348
+    programmable: true
+  - module: Bilanciai.ServiceLibrary.exe
+    release: 2.0.x.x
+    checksum: 81FEF1FC
+    programmable: true
+  - module: PluginBilancia.dll
+    release: 5.1.x.x
+    checksum: 57BFF1EF4AF5B8DA9EEA794B94AE677476CCEE09A
+    programmable: true
+  - module: PluginCBWeightViewer.dll
+    release: 7.0.x.x
+    checksum: 01F91D37B5B6938F943930BDFCF2DB501388FDC1
+    programmable: true
+  - module: PluginCBMpp.dll
+    release: 4.1.x.x
+    checksum: F654A2B459BAEEE6F736D2CC36D992E8E31F282E
+    programmable: false
+  description: Alternative modified software parts (Revision 1).

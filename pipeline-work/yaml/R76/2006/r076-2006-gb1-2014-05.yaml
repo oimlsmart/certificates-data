@@ -1,0 +1,168 @@
+_meta:
+  cert_id: 3503
+  num: R076/2006-GB1-2014.05
+  applicant: CAS Corporation
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2014-05.pdf
+certificate:
+  number: R76/2006-GB1-14.05
+  scheme: A
+  project_number: TS1201/0071
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2014-05-15'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+manufacturers:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+certified_type:
+  category: Indicator
+  type_designations:
+  - CI-600 Series
+  - CI-601A
+  - CI-605A
+  description: >-
+    Family of instruments designated the CI-600 Series, utilising the CI-601A or CI-605A digital indicating
+    devices connected to a weighing platform to form a single or dual-interval, Class III or IIII, non-automatic
+    weighing instrument. Main features: plastic enclosure, 4.3" LCD display, operator keypad with numerical,
+    navigation and function keys, Relay In/Out option card (CI-605A), Analogue Out option card (CI-601A,
+    CI-605A). Devices: initial zero setting device on power up, semi-automatic zero setting, zero tracking
+    (optional), semi-automatic subtractive tare weighing, preset tare, gross/net indication, zero-indicator,
+    indication of stable equilibrium, net indicator, gravity compensation, hold function, soft function
+    keys (F1, F2, F3), memory storage. Interfaces: load cell connection, RS232/485, Relay In/Out (CI-605A),
+    Analogue Out (CI-601A, CI-605A). Software is held in firmware with identification number V1.xx; access
+    to setup/configuration mode is only allowed via a jumper located on the circuit board, sealed with
+    a wire-and-seal solution. Not designed for direct sales to the public. Any compatible R60-certified
+    load cell may be used subject to compatibility of modules.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+    minimum_load_cell_impedance:
+      value: 43
+      unit_symbol: Ω
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.5
+      unit_symbol: μV
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+    fraction_of_maximum_permissible_error:
+      value: 0.5
+      unit_symbol:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    maximum_tare_value:
+      value: Max
+      unit_symbol:
+    software_version:
+      value: V1.xx
+      unit_symbol:
+  model_level:
+  - attribute: option_card_relay_in_out
+    unit_symbol:
+    values:
+    - model: CI-601A
+      value: Not available
+    - model: CI-605A
+      value: Available
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: Class III (single or dual interval)
+      value: 10000
+      unit_symbol:
+    - condition: Class IIII (single or dual interval)
+      value: 1000
+      unit_symbol:
+  - attribute: maximum_preset_tare_value
+    axis: scale_interval_configuration
+    values:
+    - condition: single interval
+      value: Max
+      unit_symbol:
+    - condition: dual interval
+      value: Max_1
+      unit_symbol:
+  - attribute: load_cell_cable_maximum_length
+    axis: load_cell_cable_configuration
+    values:
+    - condition: 6-wire configuration
+      value: 183
+      unit_symbol: m/mm²
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P01095
+  pages: 13
+  role: type_evaluation_report
+revision_history:
+- revision: R76/2006-GB1-14.05
+  date: '2014-05-15'
+  changes: Certificate first issued
+model_family:
+  family_name: CI-600 Series
+  models:
+  - model_id: CI-601A
+    label: Digital indicating device CI-601A
+    attributes: {}
+  - model_id: CI-605A
+    label: Digital indicating device CI-605A
+    attributes: {}

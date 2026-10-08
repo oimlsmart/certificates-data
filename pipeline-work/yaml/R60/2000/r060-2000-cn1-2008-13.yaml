@@ -1,0 +1,104 @@
+_meta:
+  cert_id: 2179
+  num: R060/2000-CN1-2008.13
+  applicant: Ningbo Benui Electric Co., Ltd
+  issuing_year: '2008'
+  status: Valid
+  issuer: CN1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-cn1-2008-13.pdf
+certificate:
+  number: R60/2000-CN1-08.13
+  scheme: A
+  member_state: P.R.China
+  date_issued: '2008-03-30'
+issuing_authority:
+  name: Office of OIML Affairs, General Administration of Quality Supervision, Inspection and Quarantine
+  address_lines:
+  - No.9 Madiandonglu, Haidian District, Beijing, 100088, China
+  person_responsible: 蒲长城
+  person_title: The CIML member
+applicants:
+- name: Ningbo Benwei Electric Co., Ltd
+  address_lines:
+  - No. 8 Laoshan Road, Dagang Industry Zone, Ningbo City, China
+certified_type:
+  category: Load cell
+  type_designations:
+  - SQC (NH)
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id: u:kilogram
+    max_load_cell_intervals_nmax:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    unit_id: u:kilogram
+    values:
+    - model: Emax=1000kg
+      value: 1000
+    - model: Emax=2000kg
+      value: 2000
+    - model: Emax=3000kg
+      value: 3000
+    - model: Emax=5000kg
+      value: 5000
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: g
+    unit_id: u:gram
+    values:
+    - model: Emax=1000kg
+      value: 333
+    - model: Emax=2000kg
+      value: 666
+    - model: Emax=3000kg
+      value: 1000
+    - model: Emax=5000kg
+      value: 1666
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+test_reports:
+- id: LSfc2007-6004
+  pages: 17
+  role: test_report
+model_family:
+  family_name: SQC
+  models:
+  - model_id: Emax=1000kg
+  - model_id: Emax=2000kg
+  - model_id: Emax=3000kg
+  - model_id: Emax=5000kg

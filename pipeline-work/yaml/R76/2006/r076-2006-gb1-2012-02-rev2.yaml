@@ -1,0 +1,235 @@
+_meta:
+  cert_id: 3165
+  num: R076/2006-GB1-2012.02 Rev. 2
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2012-02-rev2.pdf
+certificate:
+  number: R76/2006-GB1-12.02
+  scheme: B
+  project_number: T1138/0018
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2013-05-02'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+certified_type:
+  category: Indicator
+  type_designations:
+  - DD1050
+  - DD1050i
+  - DD2050
+  module_designation:
+  description: >-
+    Indicating devices for use as part of Class III or IIII non-automatic weighing instruments; single
+    interval, multi-interval or multi-range; self-indicating; mains or DC-powered.
+characteristics:
+  type_level:
+    power_supply_voltage_ac:
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    minimum_load_cell_impedance_per_weighing_module:
+      value: 29
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_scale_interval:
+      value: 0.6
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value:
+        min: 27
+        max: 30
+      unit_symbol: mV
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    load_cell_connection_analogue:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    maximum_load_cell_cable_length:
+      value: 3.358
+      unit_symbol: m/mm²
+      unit_id:
+    maximum_tare:
+      value: Max
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy class and interval/range configuration
+    values:
+    - condition: single interval, Class III
+      value: 6000
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval/range (2 partial ranges), Class III
+      value: 4000
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval/range (3 partial ranges), Class III
+      value: 3000
+      unit_symbol:
+      unit_id:
+    - condition: single and multi-interval/range (2 and 3 partial ranges), Class IIII
+      value: 1000
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_excitation_voltage
+    axis: load cell type
+    values:
+    - condition: analogue load cells
+      value:
+        min: 9
+        max: 10
+      unit_symbol: V
+      unit_id:
+    - condition: digital load cells
+      value:
+        min: 10
+        max: 18
+      unit_symbol: V
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error_pind
+    axis: load cell configuration
+    values:
+    - condition: analogue load cells
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    - condition: digital load cells
+      value: 0
+      unit_symbol:
+      unit_id:
+    - condition: analogue load cells with junction box DILINK
+      value: 0
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_preset_tare
+    axis: range configuration
+    values:
+    - condition: single and multi-range
+      value: Max
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval
+      value: Max1
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P00780
+  date:
+  pages: 13
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2012-03-02'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2012-05-15'
+  changes: >-
+    Load cell excitation voltage and measuring range maximum voltage values corrected in technical data
+    table.
+- revision: '2'
+  date: '2013-05-02'
+  changes: Cable length modified in technical data table.
+model_family:
+  family_name:
+  models:
+  - model_id: DD1050
+    label: DD1050
+    attributes:
+      enclosure: Stainless steel and ABS
+      display: 10.4" graphic LCD
+      max_ad_conversion_modules: 4
+  - model_id: DD1050i
+    label: DD1050i
+    attributes:
+      enclosure: Stainless steel
+      power_supply: Enclosed external power supply
+      display: 10.4" graphic LCD
+      max_ad_conversion_modules: 4
+  - model_id: DD2050
+    label: DD2050
+    attributes:
+      enclosure: Stainless steel
+      display: 10.4" graphic LCD
+      max_ad_conversion_modules: 4
+      integrated_printer: optional
+components:
+- role: A/D conversion module
+  type_designations: []
+  characteristics:
+    maximum_number_per_indicator:
+      value: 4
+      unit_symbol:
+      unit_id:
+- role: Main board with processor
+  type_designations: []
+  characteristics: {}
+- role: MPP Alibi storage device
+  type_designations: []
+  characteristics: {}

@@ -1,0 +1,154 @@
+_meta:
+  cert_id: 3688
+  num: R117/1995-NL1-2015.01
+  applicant: Medicion y Transporte, S.A.
+  issuing_year: '2015'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-nl1-2015-01.pdf
+certificate:
+  number: R117/1995-NL1-15.01
+  scheme: A
+  project_number: SO15200890
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2015-03-06'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Medición y Transporte, S.A.
+  address_lines:
+  - Calle Pelaya, 29
+  - Pol. Ind. Río de Janeiro
+  - 28110 Algete, Madrid
+  - Spain
+manufacturers:
+- name: Medición y Transporte, S.A.
+  address_lines:
+  - Calle Pelaya, 29
+  - Pol. Ind. Río de Janeiro
+  - 28110 Algete, Madrid
+  - Spain
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - E30"x" "xxx"
+  brand: CETIL
+  description: >-
+    Fuel Dispenser for Motor Vehicles, comprising of one or more measuring systems in the same housing,
+    with one "CPSF" or "CPHF" gas elimination device, one "CM4P" measurement transducer and one "EAS2"
+    calculating/indicating device.
+characteristics:
+  type_level:
+    maximum_flowrate:
+      value: 80
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    minimum_flowrate:
+      value: 5.0
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 2 / 5 / 10
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    liquid:
+      value: gasoline/gasoil
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication:
+      value: 999999.99
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 9999.99
+      unit_symbol: EURO/L
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 99999.999
+      unit_symbol: EURO/L
+      unit_id:
+      footnote_markers: []
+    number_of_measuring_systems:
+      value:
+        min: 1
+        max:
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: number of gas separators and measurement transducers connected in parallel
+    values:
+    - condition: one gas separator with one CM4P measurement transducer and one delivery point
+      value: 80
+      unit_symbol: L/min
+    - condition: >-
+        two gas separators and two CM4P measurement transducers in parallel, delivery via one hose with
+        nozzle
+      value: 160
+      unit_symbol: L/min
+recommendation:
+  id: R117
+  edition: 1995
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: NMi-13200508-01
+  role: type_evaluation_report
+  associated_with: '"CM4P" measurement transducer; "CPSF"/"CPHF" gas elimination device'
+- id: NMi-13200508-02
+  role: type_evaluation_report
+  associated_with: '"CPSF" or "CPHF" gas elimination device'
+- id: NMi-13200749-01
+  role: type_evaluation_report
+  associated_with: '"EAS2" calculating/indicating device'
+- id: NMi-13200749-02
+  role: type_evaluation_report
+  associated_with: '"EAS2" calculating/indicating device'
+components:
+- role: Measurement transducer
+  type_designations:
+  - CM4P
+  alternatives:
+- role: Gas elimination device (gas separator)
+  type_designations:
+  - CPSF
+  - CPHF
+  alternatives: OR
+- role: Calculating / indicating device
+  type_designations:
+  - EAS2
+  alternatives:
+footnotes:
+- marker: "*"
+  text: '"xxx" is a non-essential indication.'
+additional_recommendations:
+- id: R118
+  edition: 1995

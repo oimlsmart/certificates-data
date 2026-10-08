@@ -1,0 +1,194 @@
+_meta:
+  cert_id: 2396
+  num: R060/2000-DE1-2010.01
+  applicant: Flintec GmbH
+  issuing_year: '2010'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2010-01.pdf
+certificate:
+  number: R60/2000-DE1-10.01
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2010-03-24'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Oberregierungsrat
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+certified_type:
+  category: Load cell
+  type_designations:
+  - PB
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge planar beam load cell. The load cells of the series PB are planar beam load cells. They
+    are made of aluminium; the strain gauge application is sealed with plastics.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    max_load_cell_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    rated_output:
+      value: 0.9
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+    safe_overload:
+      value: 300
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+    input_impedance:
+      value: 1180
+      unit_symbol: Ω
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=3.75kg
+      value: 3.75
+    - model: Emax=7.5kg
+      value: 7.5
+    - model: Emax=15kg
+      value: 15
+    - model: Emax=37.5kg
+      value: 37.5
+    - model: Emax=75kg
+      value: 75
+    - model: Emax=150kg
+      value: 150
+    - model: Emax=375kg
+      value: 375
+  config_level:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: "%Emax"
+    axis: range
+    values:
+    - condition: Range 1
+      value: Emax/7500
+      unit_symbol: "%Emax"
+    - condition: Range 2
+      value: Emax/6500
+      unit_symbol: "%Emax"
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+test_reports:
+- id: 1.12 4039206-1
+  pages: 22
+  role: test_report
+- id: 1.12 4039206-2
+  pages: 18
+  role: test_report
+- id: 1.12 4039206-3
+  pages: 18
+  role: test_report
+model_family:
+  family_name: PB
+  models:
+  - model_id: Emax=3.75kg
+    label: PB, Range 1, Emax 3.75 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=7.5kg
+    label: PB, Range 1, Emax 7.5 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=15kg
+    label: PB, Range 1, Emax 15 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=37.5kg
+    label: PB, Range 1, Emax 37.5 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=75kg
+    label: PB, Range 1, Emax 75 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=150kg
+    label: PB, Range 1, Emax 150 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=375kg
+    label: PB, Range 2, Emax 375 kg
+    attributes:
+      range: Range 2
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - range
+  - attribute
+  - symbol
+  - unit_symbol
+  - value
+  rows:
+  - range:
+    attribute: accuracy_class
+    symbol:
+    unit_symbol:
+    value: C3
+  - range:
+    attribute: max_load_cell_intervals_nlc
+    symbol: nLC
+    unit_symbol:
+    value: 3000
+  - range:
+    attribute: rated_output
+    symbol:
+    unit_symbol: mV/V
+    value: 0.9
+  - range: Range 1
+    attribute: maximum_capacity
+    symbol: Emax
+    unit_symbol: kg
+    value: 3.75 / 7.5 / 15 / 37.5 / 75 / 150
+  - range: Range 1
+    attribute: minimum_load_cell_verification_interval_vmin
+    symbol: vmin = (Emax/Y)
+    unit_symbol: "%Emax"
+    value: Emax/7500
+  - range: Range 2
+    attribute: maximum_capacity
+    symbol: Emax
+    unit_symbol: kg
+    value: 375
+  - range: Range 2
+    attribute: minimum_load_cell_verification_interval_vmin
+    symbol: vmin = (Emax/Y)
+    unit_symbol: "%Emax"
+    value: Emax/6500
+  description: Metrological characteristics for application in approved weighing instruments.
+  footnotes: []

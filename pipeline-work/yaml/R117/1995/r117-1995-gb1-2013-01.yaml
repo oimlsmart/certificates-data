@@ -1,0 +1,358 @@
+_meta:
+  cert_id: 3364
+  num: R117/1995-GB1-2013.01
+  applicant: Pumptronics Europe Ltd.
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-gb1-2013-01.pdf
+certificate:
+  number: R117/1995-GB1-13.01
+  project_number: T1117/0045
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2013-12-18'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Pumptronics Europe Ltd
+  address_lines:
+  - Folgate Road
+  - North Walsham
+  - Norwich
+manufacturers:
+- name: Pumptronics Europe Ltd
+  address_lines:
+  - Folgate Road
+  - North Walsham
+  - Norwich
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - C Series
+  module_designation: Not applicable
+  description: >-
+    Liquids other than water dispenser, C Series. Measured liquids: petrol, ethanol blended petrol, petrol
+    with up to 5% methanol, petrol with up to 15% MTBE, diesel and biodiesel blends.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    mechanical_environment_class:
+      value: M1
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment_class:
+      value: E1
+      unit_symbol:
+      unit_id:
+    measured_liquids:
+      value: >-
+        Petrol, ethanol blended petrol, petrol with up to 5% methanol, petrol with up to 15% MTBE, diesel
+        and biodiesel blends
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: minimum_measured_quantity_vmin
+    axis: maximum_flow_rate
+    values:
+    - condition: Qmax ≤ 90 lpm
+      value: 2
+      unit_symbol: L
+      unit_id:
+    - condition: Qmax > 90 lpm
+      value: 5
+      unit_symbol: L
+      unit_id:
+    - condition: otherwise
+      value: often determined by national re-verification practices
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_flow_rate
+    axis: configuration
+    values:
+    - condition: two 90 lpm pumps and two meters combined into a single outlet
+      value: 180
+      unit_symbol: lpm
+      unit_id:
+recommendation:
+  id: R117
+  edition: 1995
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: P00529
+  role: type_evaluation_report
+revision_history:
+- revision: '13.01'
+  date: '2013-12-18'
+  changes: Certificate first issued
+components:
+- role: Meter
+  type_designations:
+  - FM1007
+  - FM-00H101
+  alternatives: OR
+  characteristics:
+    ambient_temperature:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    liquid_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    viscosity_range:
+      value:
+        min: 0.4
+        max: 17
+      unit_symbol: mPa·s
+      unit_id:
+    minimum_flow_rate_qmin:
+      value: 3
+      unit_symbol: lpm
+      unit_id:
+    maximum_flow_rate_qmax:
+      value: 90
+      unit_symbol: lpm
+      unit_id:
+    maximum_operating_pressure_pmax:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+    manufacturers:
+      FM1007: Tatsuno
+      FM-00H101: Pumptronics
+    evaluation_certificates:
+      FM1007: GB-1502
+      FM-00H101: GB-1503
+- role: Gas separator
+  type_designations:
+  - FP1012
+  - FP1001
+  - FP-00H102
+  alternatives: OR
+  characteristics:
+    ambient_temperature:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    liquid_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    viscosity_range:
+      value:
+        min: 0.4
+        max: 17
+      unit_symbol: mPa·s
+      unit_id:
+    maximum_flow_rate_qmax:
+      value: 90
+      unit_symbol: lpm
+      unit_id:
+    maximum_operating_pressure_pmax:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+    manufacturers:
+      FP1012: Tatsuno
+      FP1001: Tatsuno
+      FP-00H102: Pumptronics
+    evaluation_certificates:
+      FP1012: GB-1506
+      FP1001: GB-1505
+      FP-00H102: GB-1504
+    gas_indicator_requirement:
+      FP1012: Gas indicator (sight glass) required at flow-rates above 40 lpm
+      FP1001: Gas indicator (sight glass) required at all flow-rates
+      FP-00H102: Gas indicator (sight glass) required at all flow-rates
+- role: Electronic calculator
+  type_designations:
+  - MCU
+  characteristics:
+    ambient_temperature:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    manufacturer: Pumptronics
+    evaluation_certificate: GB-1507
+- role: Prime component
+  type_designations:
+  - PTF Adblue
+  characteristics:
+    ambient_temperature:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    liquid_temperature:
+      value:
+        min: -10
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    minimum_flow_rate_qmin:
+      value: 4
+      unit_symbol: lpm
+      unit_id:
+    maximum_flow_rate_qmax:
+      value: 40
+      unit_symbol: lpm
+      unit_id:
+    maximum_operating_pressure_pmax:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+footnotes:
+- marker: "*"
+  text: Gas indicator (sight glass) required at flow-rates above 40 lpm
+- marker: "**"
+  text: Gas indicator (sight glass) required at all flow-rates
+matrix_tables:
+- name: Prime Component Characteristics
+  columns:
+  - component
+  - ambient_temp
+  - liquid_temp
+  - viscosity_range
+  - qmin
+  - qmax
+  - pmax
+  column_units:
+  -
+  - "°C"
+  - "°C"
+  - mPa·s
+  - lpm
+  - lpm
+  - bar
+  rows:
+  - component: FM1007 meter
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 40
+    viscosity_range:
+      min: 0.4
+      max: 17
+    qmin: 3
+    qmax: 90
+    pmax: 3.5
+    footnote_markers: []
+  - component: FM-00H101 meter
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 40
+    viscosity_range:
+      min: 0.4
+      max: 17
+    qmin: 3
+    qmax: 90
+    pmax: 3.5
+    footnote_markers: []
+  - component: PTF Adblue
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 50
+    viscosity_range:
+    qmin: 4
+    qmax: 40
+    pmax: 3.5
+    footnote_markers: []
+  - component: FP1012
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 40
+    viscosity_range:
+      min: 0.4
+      max: 17
+    qmin:
+    qmax: 90
+    pmax: 3.5
+    footnote_markers:
+    - "*"
+  - component: FP1001
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 40
+    viscosity_range:
+      min: 0.4
+      max: 17
+    qmin:
+    qmax: 90
+    pmax: 3.5
+    footnote_markers:
+    - "**"
+  - component: FP-00H102
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+      min: -10
+      max: 40
+    viscosity_range:
+      min: 0.4
+      max: 17
+    qmin:
+    qmax: 90
+    pmax: 3.5
+    footnote_markers:
+    - "**"
+  - component: MCU (calculator)
+    ambient_temp:
+      min: -25
+      max: 55
+    liquid_temp:
+    viscosity_range:
+    qmin:
+    qmax:
+    pmax:
+    footnote_markers: []
+  description: >-
+    Ambient temperature, liquid temperature, viscosity range, flow limits and maximum operating pressure
+    of the prime components of the C Series dispenser; footnote markers apply to the qmax column.
+  footnotes:
+  - marker: "*"
+    text: Gas indicator (sight glass) required at flow-rates above 40 lpm
+  - marker: "**"
+    text: Gas indicator (sight glass) required at all flow-rates

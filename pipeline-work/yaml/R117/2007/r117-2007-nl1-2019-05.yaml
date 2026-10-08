@@ -1,0 +1,227 @@
+_meta:
+  cert_id: 4838
+  num: R117/2007-B-NL1-19.05
+  applicant: Total Control Systems
+  issuing_year: '2019'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2019-05.pdf
+certificate:
+  number: R 117/2007-B-NL1-19.05
+  scheme: B
+  project_number: '2353542'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2019-04-15'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Total Control Systems
+  address_lines:
+  - 2515 Charleston Place
+  - Fort Wayne, IN 46805
+  - United States of America
+manufacturers:
+- name: Total Control Systems
+  address_lines:
+  - 2515 Charleston Place
+  - Fort Wayne, IN 46805
+  - United States of America
+certified_type:
+  category: Measurement transducer (piston meter)
+  type_designations:
+  - TCS-682-15
+  module_designation:
+  description: A measurement transducer (piston meter) for dynamic measuring systems for liquids other
+    than water
+characteristics:
+  type_level:
+    maximum_pressure:
+      value: 10.5
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    environmental_classes:
+      value: M3 / E3 (including E2)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    ambient_conditions:
+      value: condensing, open location
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    intended_liquids:
+      value: >-
+        Adblue (aqueous liquid), liquid petroleum and related products, liquids food and chemical products
+        in liquid state (except for liquefied gasses)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    viscosity_range:
+      value:
+        min: 1
+        max: 740
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+    minimum_inlet_straight_pipe_length:
+      value: 2D
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_outlet_straight_pipe_length:
+      value: 1D
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_flow_rate:
+      value: 190
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 10
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_viscosity
+    axis: accuracy_class
+    values:
+    - condition: accuracy class 0.3
+      value: 5
+      unit_symbol: mPa·s
+    - condition: accuracy class 0.5
+      value: 740
+      unit_symbol: mPa·s
+  - attribute: liquid_temperature_range
+    axis: accuracy_class
+    values:
+    - condition: accuracy class 0.3
+      value:
+        min: -5
+        max: 50
+      unit_symbol: "°C"
+    - condition: accuracy class 0.5, liquid temperature -40/+50 °C configuration
+      value:
+        min: -40
+        max: 50
+      unit_symbol: "°C"
+    - condition: accuracy class 0.5, liquid temperature -5/+50 °C configuration
+      value:
+        min: -5
+        max: 50
+      unit_symbol: "°C"
+  - attribute: minimum_flow_rate
+    axis: accuracy_class_and_liquid_temperature
+    values:
+    - condition: accuracy class 0.3, liquid temperature -5/+50 °C
+      value: 25
+      unit_symbol: L/min
+    - condition: accuracy class 0.5, liquid temperature -40/+50 °C
+      value: 25
+      unit_symbol: L/min
+    - condition: accuracy class 0.5, liquid temperature -5/+50 °C
+      value: 8
+      unit_symbol: L/min
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: B
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+test_reports:
+- id: 2007/224
+  date: '2007-09-20'
+  pages: 5
+  role: test_report
+- id: 2007/225
+  date: '2007-09-20'
+  pages: 5
+  role: test_report
+- id: NMi-12200329-02
+  date: '2014-02-07'
+  pages: 7
+  role: test_report
+- id: NMi-12200507-01
+  date: '2013-07-16'
+  pages: 9
+  role: test_report
+- id: NMi-13200200-01
+  date: '2014-02-28'
+  pages: 12
+  role: test_report
+- id: NMi-1901787-02
+  date: '2018-08-20'
+  pages: 15
+  role: test_report
+- id: TC8195-2
+  role: documentation_file
+matrix_tables:
+- name: Flow characteristics of the measurement transducer (Table 2)
+  columns:
+  - accuracy_class
+  - maximum_viscosity
+  - liquid_temperature
+  - minimum_flow_rate
+  - maximum_flow_rate
+  - minimum_measured_quantity_mmq
+  column_units:
+  -
+  - mPa·s
+  - "°C"
+  - L/min
+  - L/min
+  - L
+  rows:
+  - accuracy_class: '0.3'
+    maximum_viscosity: 5
+    liquid_temperature:
+      min: -5
+      max: 50
+    minimum_flow_rate: 25
+    maximum_flow_rate: 190
+    minimum_measured_quantity_mmq: 10
+  - accuracy_class: '0.5'
+    maximum_viscosity: 740
+    liquid_temperature:
+      min: -40
+      max: 50
+    minimum_flow_rate: 25
+    maximum_flow_rate: 190
+    minimum_measured_quantity_mmq: 10
+  - accuracy_class: '0.5'
+    maximum_viscosity: 740
+    liquid_temperature:
+      min: -5
+      max: 50
+    minimum_flow_rate: 8
+    maximum_flow_rate: 190
+    minimum_measured_quantity_mmq: 10
+  description: >-
+    Rowspans resolved: maximum flow rate (190 L/min) and MMQ (10 L) apply to all rows; maximum viscosity
+    740 mPa·s applies to both accuracy class 0.5 rows.
+  footnotes: []

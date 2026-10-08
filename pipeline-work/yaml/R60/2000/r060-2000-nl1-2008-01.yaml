@@ -1,0 +1,234 @@
+_meta:
+  cert_id: 1989
+  num: R060/2000-NL1-2008.01
+  applicant: Scaime S.A.S
+  issuing_year: '2008'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2008-01.pdf
+certificate:
+  number: R60/2000-NL1-08.01
+  scheme: A
+  project_number: '710547'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2008-01-15'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Scaime S.A.S.
+  address_lines:
+  - 'Siège Social: Le Bois de Juvigny'
+  - BP 501 F-74105, Annemasse
+  - FRANCE
+manufacturers:
+- name: Scaime S.A.S.
+  address_lines:
+  - 'Siège Social: Le Bois de Juvigny'
+  - BP 501 F-74105, Annemasse
+  - FRANCE
+certified_type:
+  category: Load cell
+  type_designations:
+  - SK30X...
+  - SK30A...
+  module_designation:
+  description: A shear beam load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_pi:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+  model_level:
+  - attribute: humidity_classification
+    values:
+    - model: SK30A-300-5000
+      value: SH
+    - model: SK30X-300-500
+      value: CH
+    - model: SK30X-500-2000
+      value: CH
+    - model: SK30X-2000-10000
+      value: CH
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: SK30A-300-5000
+      value:
+        min: 300
+        max: 5000
+    - model: SK30X-300-500
+      value:
+        min: 300
+        max: 500
+    - model: SK30X-500-2000
+      value:
+        min: 500
+        max: 2000
+    - model: SK30X-2000-10000
+      value:
+        min: 2000
+        max: 10000
+  - attribute: max_load_cell_verification_intervals_nmax
+    values:
+    - model: SK30A-300-5000
+      value: 3000
+    - model: SK30X-300-500
+      value: 4000
+    - model: SK30X-500-2000
+      value: 6000
+    - model: SK30X-2000-10000
+      value: 4000
+  - attribute: ratio_y_emax_over_vmin
+    values:
+    - model: SK30A-300-5000
+      value: 10000
+    - model: SK30X-300-500
+      value: 12000
+    - model: SK30X-500-2000
+      value: 15000
+    - model: SK30X-2000-10000
+      value: 10000
+  - attribute: ratio_z_emax_over_2dr
+    values:
+    - model: SK30A-300-5000
+      value: 3000
+    - model: SK30X-300-500
+      value: 4000
+    - model: SK30X-500-2000
+      value: 8000
+    - model: SK30X-2000-10000
+      value: 4000
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-04.04
+  pages: 40
+  role: test_report
+- id: R60/2000-NL1-05.10
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-06.05
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-06.13
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-08.01
+  pages: 20
+  role: test_report
+- id: TC6480
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: SK30A-300-5000
+    label: SK30A..., Emax 300 kg up to and including 5000 kg
+    attributes:
+      humidity_classification: SH
+      maximum_capacity_kg:
+        min: 300
+        max: 5000
+  - model_id: SK30X-300-500
+    label: SK30X..., Emax 300 kg up to and including 500 kg
+    attributes:
+      humidity_classification: CH
+      maximum_capacity_kg:
+        min: 300
+        max: 500
+  - model_id: SK30X-500-2000
+    label: SK30X..., Emax 500 kg up to and including 2000 kg
+    attributes:
+      humidity_classification: CH
+      maximum_capacity_kg:
+        min: 500
+        max: 2000
+  - model_id: SK30X-2000-10000
+    label: SK30X..., Emax 2000 kg up to and including 10000 kg
+    attributes:
+      humidity_classification: CH
+      maximum_capacity_kg:
+        min: 2000
+        max: 10000
+matrix_tables:
+- name: Load cell specifications
+  columns:
+  - model
+  - type
+  - humidity_classification
+  - maximum_capacity_min_kg
+  - maximum_capacity_max_kg
+  - accuracy_class
+  - max_load_cell_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  - ratio_z_emax_over_2dr
+  rows:
+  - model: SK30A-300-5000
+    type: SK30A...
+    humidity_classification: SH
+    maximum_capacity_min_kg: 300
+    maximum_capacity_max_kg: 5000
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 3000
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 3000
+  - model: SK30X-300-500
+    type: SK30X...
+    humidity_classification: CH
+    maximum_capacity_min_kg: 300
+    maximum_capacity_max_kg: 500
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 12000
+    ratio_z_emax_over_2dr: 4000
+  - model: SK30X-500-2000
+    type: SK30X...
+    humidity_classification: CH
+    maximum_capacity_min_kg: 500
+    maximum_capacity_max_kg: 2000
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 6000
+    ratio_y_emax_over_vmin: 15000
+    ratio_z_emax_over_2dr: 8000
+  - model: SK30X-2000-10000
+    type: SK30X...
+    humidity_classification: CH
+    maximum_capacity_min_kg: 2000
+    maximum_capacity_max_kg: 10000
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000
+  description: >-
+    Original table is transposed: specification attributes are rows and the four model variants (SK30A
+    plus three SK30X capacity ranges) are columns; reproduced here with one row per model variant.
+  footnotes: []

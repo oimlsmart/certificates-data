@@ -1,0 +1,173 @@
+_meta:
+  cert_id: 2193
+  num: R060/2000-DE1-2009.07
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-07.pdf
+certificate:
+  number: R60/2000-DE1-09.07
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-03-11'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+  oiml_issuer_id:
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - MP72
+  module_designation:
+  description: >-
+    Strain gauge single point load cell. The load cells (LC) of the series MP72 are single point load
+    cells made of aluminium. The strain gauge application is potted.
+characteristics:
+  type_level:
+    max_load_cell_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 413
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=30kg
+      value: 30
+      footnote_markers: []
+    - model: Emax=50kg
+      value: 50
+      footnote_markers: []
+    - model: Emax=100kg
+      value: 100
+      footnote_markers: []
+    - model: Emax=200kg
+      value: 200
+      footnote_markers: []
+    - model: Emax=300kg
+      value: 300
+      footnote_markers: []
+    - model: Emax=500kg
+      value: 500
+      footnote_markers: []
+    - model: Emax=750kg
+      value: 750
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/7500
+      unit_symbol:
+      footnote_markers: []
+    - condition: C3MR
+      value: Emax/15000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C3MR
+test_reports:
+- id: 1.12-4039339-1
+  pages: 27
+  role: test_report
+- id: 1.12-4039339-2
+  pages: 19
+  role: test_report
+model_family:
+  family_name: MP72
+  models:
+  - model_id: Emax=30kg
+  - model_id: Emax=50kg
+  - model_id: Emax=100kg
+  - model_id: Emax=200kg
+  - model_id: Emax=300kg
+  - model_id: Emax=500kg
+  - model_id: Emax=750kg
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - attribute
+  - unit
+  - C3
+  - C3MR
+  rows:
+  - attribute: max_load_cell_intervals_nlc
+    unit:
+    C3: 3000
+    C3MR: 3000
+  - attribute: rated_output
+    unit: mV/V
+    C3: 2
+    C3MR: 2
+  - attribute: maximum_capacity
+    unit: kg
+    C3: 30/50/100/200/300/500/750
+    C3MR: 30/50/100/200/300/500/750
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit:
+    C3: Emax/7500
+    C3MR: Emax/15000
+  description: Metrological characteristics for application in approved weighing instruments, per accuracy
+    class.
+  footnotes: []

@@ -1,0 +1,262 @@
+_meta:
+  cert_id: 1766
+  num: R060/2000-DE1-2006.02
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2006-02.pdf
+certificate:
+  number: R60/2000-DE1-06.02
+  page_total: 2
+  member_state: Germany
+  date_issued: '2006-09-14'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungs Direktor
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - PW15xH...
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge single point load cell. The platform load cells of series PW15xH are beam load cells
+    with lateral parallel guiding and a centered bending eye made of stainless steel. The strain gauge
+    application area is encapsulated hermetically.
+characteristics:
+  type_level:
+    max_load_cell_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    input_resistance:
+      value: 380
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value:
+        min: 150
+        max:
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=10kg
+      value: 10
+      footnote_markers: []
+    - model: Emax=20kg
+      value: 20
+      footnote_markers: []
+    - model: Emax=50kg
+      value: 50
+      footnote_markers: []
+    - model: Emax=100kg
+      value: 100
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: g
+    axis: accuracy_class
+    values:
+    - condition: C3, Emax=10kg
+      value: 2
+      footnote_markers: []
+    - condition: C3, Emax=20kg
+      value: 5
+      footnote_markers: []
+    - condition: C3, Emax=50kg
+      value: 10
+      footnote_markers: []
+    - condition: C3, Emax=100kg
+      value: 20
+      footnote_markers: []
+    - condition: C3MR, Emax=10kg
+      value: 1
+      footnote_markers:
+      - 1)
+    - condition: C3MR, Emax=20kg
+      value: 2
+      footnote_markers:
+      - 1)
+    - condition: C3MR, Emax=50kg
+      value: 5
+      footnote_markers:
+      - 1)
+    - condition: C3MR, Emax=100kg
+      value: 10
+      footnote_markers:
+      - 1)
+    - condition: C3MI8, Emax=10kg
+      value: 1
+      footnote_markers:
+      - 1)
+    - condition: C3MI8, Emax=20kg
+      value: 2
+      footnote_markers:
+      - 1)
+    - condition: C3MI8, Emax=50kg
+      value: 5
+      footnote_markers:
+      - 1)
+    - condition: C3MI8, Emax=100kg
+      value: 10
+      footnote_markers:
+      - 1)
+  - attribute: minimum_dead_load_output_return_dr_z
+    unit_symbol:
+    axis: accuracy_class
+    values:
+    - condition: C3MI8
+      value: "½Emax/8000"
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C3MR
+  - C3MI8
+test_reports:
+- id: PTB1.12-4023659/10kg
+  pages: 23
+  role: test_report
+- id: PTB1.12-4023659/10kg
+  pages: 19
+  role: test_report
+model_family:
+  family_name: PW15xH
+  models:
+  - model_id: Emax=10kg
+  - model_id: Emax=20kg
+  - model_id: Emax=50kg
+  - model_id: Emax=100kg
+footnotes:
+- marker: 1)
+  text: vmin is indicated on the nameplate.
+matrix_tables:
+- name: Table 1 - Metrological characteristics by accuracy class and maximum capacity
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity_emax
+  - minimum_load_cell_verification_interval_vmin
+  - minimum_dead_load_output_return_dr_z
+  column_units:
+  -
+  -
+  - kg
+  - g
+  -
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 10
+    minimum_load_cell_verification_interval_vmin: 2
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 20
+    minimum_load_cell_verification_interval_vmin: 5
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 50
+    minimum_load_cell_verification_interval_vmin: 10
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 100
+    minimum_load_cell_verification_interval_vmin: 20
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 10
+    minimum_load_cell_verification_interval_vmin: 1
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 20
+    minimum_load_cell_verification_interval_vmin: 2
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 50
+    minimum_load_cell_verification_interval_vmin: 5
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 100
+    minimum_load_cell_verification_interval_vmin: 10
+    minimum_dead_load_output_return_dr_z:
+  - accuracy_class: C3MI8
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 10
+    minimum_load_cell_verification_interval_vmin: 1
+    minimum_dead_load_output_return_dr_z: "½Emax/8000"
+  - accuracy_class: C3MI8
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 20
+    minimum_load_cell_verification_interval_vmin: 2
+    minimum_dead_load_output_return_dr_z: "½Emax/8000"
+  - accuracy_class: C3MI8
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 50
+    minimum_load_cell_verification_interval_vmin: 5
+    minimum_dead_load_output_return_dr_z: "½Emax/8000"
+  - accuracy_class: C3MI8
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax: 100
+    minimum_load_cell_verification_interval_vmin: 10
+    minimum_dead_load_output_return_dr_z: "½Emax/8000"
+  description: >-
+    Minimum dead load output return (DR) is not specified ('--') for accuracy classes C3 and C3MR; it
+    applies only to class C3MI8. Classes C3MR and C3MI8 carry footnote 1).
+  footnotes:
+  - 1) vmin is indicated on the nameplate.

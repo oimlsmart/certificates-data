@@ -1,0 +1,233 @@
+_meta:
+  cert_id: 1672
+  num: R076/1992-DE1-2006.03
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2006-03.pdf
+certificate:
+  number: R76/1992-DE1-06.03
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2006-04-21'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirrektor
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Straße 65
+  - D-72336 Balingen
+  - Bundesrepublik Deutschland
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Straße 65
+  - D-72336 Balingen
+  - Bundesrepublik Deutschland
+certified_type:
+  category: Nonautomatic weighing instrument
+  type_designations:
+  - NT...
+  description: >-
+    Nonautomatic electromechanical weighing instrument. The weighing instrument consists of a weighing
+    platform with strain-gauge load cell and/or a weighing module, comprising the load receptor, the strain
+    gauge load cell or the electromagnetic force compensation load cell, and the electronics with AD-converter
+    for signal processing, the microprocessor system with software module 'NT-Scale' for further signal
+    processing and control of the balance operation, LC-display, indicating weight, tare values and additional
+    information. Weighing ranges with Max, Min, e, d and number of verification scale intervals may be
+    chosen within the limits of No. 3.2 of R 76-1 and of Table 1. Class (II) only with digital weighing
+    module and Max <= 65 kg.
+characteristics:
+  type_level: {}
+  config_level:
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: class II
+      value:
+        min: 1
+        max: 65
+      unit_symbol: kg
+      footnote_markers:
+      - 3)
+    - condition: class III
+      value:
+        min: 1
+        max: 120000
+      unit_symbol: kg
+    - condition: class IIII
+      value:
+        min: 1
+        max: 120000
+      unit_symbol: kg
+  - attribute: max_verification_scale_intervals_n
+    axis: accuracy_class
+    values:
+    - condition: class II
+      value: 60000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: class III
+      value: 10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: class IIII
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+  - attribute: max_partial_range_intervals_ni
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 3000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: class IIII
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+  - attribute: max_ratio_maxr_over_e1
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 6000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: class IIII
+      value: 3000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+  - attribute: temperature_range
+    axis: accuracy_class
+    values:
+    - condition: class II, option 1
+      value:
+        min: 5
+        max: 30
+      unit_symbol: "°C"
+    - condition: class II, option 2
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    - condition: class III or class IIII
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  scheme: A
+  accuracy_classes:
+  - II
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4022773
+  pages: 12
+  role: type_evaluation_report
+- id: 1.12-4022773/1
+  pages: 53
+  role: test_report
+- id: 1.12-4022773/2
+  pages: 14
+  role: test_report
+model_family:
+  family_name: NT
+  models: []
+components:
+- role: weighing platform / weighing module
+  type_designations: []
+  characteristics:
+    load_cell_types:
+    - strain-gauge load cell
+    - electromagnetic force compensation load cell
+    includes_load_receptor: true
+- role: electronic indicator
+  type_designations: []
+  characteristics:
+    software_module: NT-Scale
+    display: LC-display
+    signal_processing: AD-converter with microprocessor system
+    functions:
+    - indicating weight
+    - tare values
+    - additional information
+footnotes:
+- marker: 1)
+  text: This applies to each range of single- and multiple range instruments
+- marker: 2)
+  text: This applies only to multi-interval instruments
+- marker: 3)
+  text: Class (II) only with digital weighing modul
+matrix_tables:
+- name: Table 1 - Permitted weighing ranges by accuracy class
+  columns:
+  - accuracy_class
+  - maximum_capacity
+  - max_verification_scale_intervals_n
+  - max_partial_range_intervals_ni
+  - max_ratio_maxr_over_e1
+  - temperature_range
+  column_units:
+  -
+  - kg
+  -
+  -
+  -
+  - "°C"
+  rows:
+  - accuracy_class: "(II)"
+    maximum_capacity:
+      min: 1
+      max: 65
+    max_verification_scale_intervals_n: 60000
+    max_partial_range_intervals_ni:
+    max_ratio_maxr_over_e1:
+    temperature_range: 5–30 or 0–40
+  - accuracy_class: "(III)"
+    maximum_capacity:
+      min: 1
+      max: 120000
+    max_verification_scale_intervals_n: 10000
+    max_partial_range_intervals_ni: 3000
+    max_ratio_maxr_over_e1: 6000
+    temperature_range:
+      min: -10
+      max: 40
+  - accuracy_class: "(IIII)"
+    maximum_capacity:
+      min: 1
+      max: 120000
+    max_verification_scale_intervals_n: 1000
+    max_partial_range_intervals_ni: 1000
+    max_ratio_maxr_over_e1: 3000
+    temperature_range:
+      min: -10
+      max: 40
+  description: >-
+    Weighing ranges with Max, Min, e, d and number of verification scale intervals may be chosen within
+    the limits of No. 3.2 of R 76-1 and of Table 1. Class (II) only with digital weighing module.
+  footnotes:
+  - 1)
+  - 2)
+  - 3)

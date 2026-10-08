@@ -1,0 +1,217 @@
+_meta:
+  cert_id: 3945
+  num: R061/2004-NL1-2016.03
+  applicant: Yamato Scale GmbH
+  issuing_year: '2016'
+  status: Valid
+  issuer: NL1
+  recommendation: R61
+  edition_year: 2004
+  extraction_method: glm-extract
+  source_pdf: certificates/R61/2004/r061-2004-nl1-2016-03.pdf
+certificate:
+  number: R61/2004-NL1-16.03
+  scheme: A
+  project_number: '14200070'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2016-04-12'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Yamato Scale GmbH
+  address_lines:
+  - Hanns-Martin-Schleyer-Str. 13
+  - D-47877 Willich 1
+  - Germany
+manufacturers:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5 – 22 Saenba-cho
+  - Akashi, 673-8688
+  - Japan
+certified_type:
+  category: Automatic gravimetric filling instrument
+  type_designations:
+  - ADW-A-…
+  description: Automatic gravimetric filling instrument
+characteristics:
+  type_level:
+    method_of_operation:
+      value: cumulative weighing; selective combination weighing
+      unit_symbol:
+      unit_id:
+    reference_accuracy_class:
+      value: Ref(1)
+      unit_symbol:
+      unit_id:
+    operational_accuracy_class:
+      value: X(x), determined at the time of putting into use
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    maximum_capacity:
+      value:
+        min:
+        max: 500
+      unit_symbol: g
+      unit_id:
+    minimum_capacity:
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+      unit_id:
+    number_of_scale_intervals:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    number_of_load_receptors:
+      value:
+        min: 8
+        max:
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 200
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    average_number_of_loads_per_fill:
+      value: 4
+      unit_symbol:
+      unit_id:
+    software_version_display:
+      value: by selecting "TROUBLE SHOOTING", "SOFTWARE VERSION"
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: rated_minimum_fill_minfill
+    axis: accuracy_class × scale_interval_d (average number of loads per fill = 4)
+    unit_symbol: g
+    values:
+    - condition: class X(1), d = 0.1 g
+      value: 50.0
+      unit_symbol: g
+    - condition: class X(1), d = 0.2 g
+      value: 184.8
+      unit_symbol: g
+    - condition: class X(1), d = 0.5 g
+      value: 1386.5
+      unit_symbol: g
+    - condition: class X(1), d = 1 g
+      value: 2773
+      unit_symbol: g
+    - condition: class X(1), d = 2 g
+      value: 5546
+      unit_symbol: g
+    - condition: class X(2), d = 0.1 g
+      value: 50.0
+      unit_symbol: g
+    - condition: class X(2), d = 0.2 g
+      value: 50.0
+      unit_symbol: g
+    - condition: class X(2), d = 0.5 g
+      value: 346.5
+      unit_symbol: g
+    - condition: class X(2), d = 1 g
+      value: 1387
+      unit_symbol: g
+    - condition: class X(2), d = 2 g
+      value: 2774
+      unit_symbol: g
+recommendation:
+  id: R61
+  edition: 2004
+  scheme: A
+  accuracy_classes:
+  - Ref(1)
+test_reports:
+- id: NMi-14200070-01
+  date: '2016-03-30'
+  pages: 51
+  role: type_evaluation_report
+components:
+- role: measurement electronics
+  type_designations:
+  - A-ADV
+  characteristics:
+    software_identification:
+      value: 603400E8
+      unit_symbol:
+      unit_id:
+- role: controller PC / PLC
+  type_designations:
+  - A-SUB
+  characteristics:
+    software_identification:
+      value: 027E13D8
+      unit_symbol:
+      unit_id:
+- role: controller PC / PLC
+  type_designations:
+  - RCU920
+  characteristics:
+    software_identification:
+      value: 4C2C3174
+      unit_symbol:
+      unit_id:
+matrix_tables:
+- name: Rated minimum fill (Minfill) for average number of loads per fill = 4
+  columns:
+  - scale_interval_d
+  - minfill_class_x1
+  - minfill_class_x2
+  column_units:
+  - g
+  - g
+  - g
+  rows:
+  - scale_interval_d: 0.1
+    minfill_class_x1: 50.0
+    minfill_class_x2: 50.0
+  - scale_interval_d: 0.2
+    minfill_class_x1: 184.8
+    minfill_class_x2: 50.0
+  - scale_interval_d: 0.5
+    minfill_class_x1: 1386.5
+    minfill_class_x2: 346.5
+  - scale_interval_d: 1
+    minfill_class_x1: 2773
+    minfill_class_x2: 1387
+  - scale_interval_d: 2
+    minfill_class_x1: 5546
+    minfill_class_x2: 2774
+  description: >-
+    Rated minimum fill (Minfill) in grams as a function of scale interval d for accuracy classes X(1)
+    and X(2), with an average of 4 loads per fill.
+  footnotes: []

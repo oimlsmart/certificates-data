@@ -1,0 +1,305 @@
+_meta:
+  cert_id: 4028
+  num: R049/2013-CZ1-2015.01 Rev. 2
+  applicant: Spire Metering Technology
+  issuing_year: '2016'
+  status: Valid
+  issuer: CZ1
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-cz1-2015-01-rev2.pdf
+certificate:
+  number: R49/2013-CZ-15.01
+  scheme: A
+  page_total: 4
+  member_state: Czech Republic
+  date_issued: '2016-08-01'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+applicants:
+- name: SPIRE METERING TECHNOLOGY
+  address_lines:
+  - 249 Cedar Hill street
+  - Marlborough, MA 01752
+  - USA
+manufacturers:
+- name: SPIRE METERING TECHNOLOGY
+  address_lines:
+  - 249 Cedar Hill street
+  - Marlborough, MA 01752
+  - USA
+certified_type:
+  category: Water meter
+  type_designations:
+  - 280W-…
+  - 280W-R
+  - 280W-D
+  description: >-
+    Ultrasonic water meter for metering cold potable water, based on an ultrasonic transit-time principle,
+    with straight inlet (5 times the diameter) and outlet (3 times the diameter) length, without flow
+    conditioner, equipped with an electronic calculating/indicating device. Two modifications: type 280W-R
+    intended for residential applications and type 280W-D for sub-metering. The digital display shows
+    volume in m³ and flow rate in m³/h, up to 9 digits, with a high-resolution (calibration) mode and
+    a normal resolution mode. The meter is not designed to measure reverse flow. Intended for mounting
+    to horizontal, vertical and diagonal pipework with the indicating device positioned at the top and
+    at the side. May optionally be equipped with an M-bus transmitter for remote reading.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+    ratio_q3_over_q1:
+      value: 250
+      unit_symbol:
+    ratio_q2_over_q1:
+      value: 1.6
+      unit_symbol:
+    ratio_q4_over_q3:
+      value: 1.25
+      unit_symbol:
+    mpe_lower_flowrate_zone:
+      value:
+        min: -5
+        max: 5
+      unit_symbol: "%"
+    temperature_class:
+      value: T30, T50
+      unit_symbol:
+    indicating_range:
+      value: 999999
+      unit_symbol: m³
+    flow_profile_sensitivity_classes:
+      value: U5 D3
+      unit_symbol:
+    orientation_limitation:
+      value: horizontal, vertical and diagonal position, forward flow
+      unit_symbol:
+    climatic_environment_class:
+      value: C
+      unit_symbol:
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+    software_version:
+      value: '31.0'
+      unit_symbol:
+    checksum:
+      value: A4532301
+      unit_symbol:
+    minimum_battery_life_time:
+      value: 15
+      unit_symbol: years
+    maximum_admissible_pressure:
+      value: MAP16
+      unit_symbol:
+  model_level:
+  - attribute: nominal_diameter
+    unit_symbol: mm
+    values:
+    - model: 280W-R DN15
+      value: 15
+    - model: 280W-R DN20
+      value: 20
+    - model: 280W-R DN25
+      value: 25
+  - attribute: overload_flowrate_q4
+    unit_symbol: m³/h
+    values:
+    - model: 280W-R DN15
+      value: 3.13
+    - model: 280W-R DN20
+      value: 3.13
+    - model: 280W-R DN25
+      value: 5.0
+  - attribute: permanent_flowrate_q3
+    unit_symbol: m³/h
+    values:
+    - model: 280W-R DN15
+      value: 2.5
+    - model: 280W-R DN20
+      value: 2.5
+    - model: 280W-R DN25
+      value: 4.0
+  - attribute: transitional_flowrate_q2
+    unit_symbol: m³/h
+    values:
+    - model: 280W-R DN15
+      value: 0.016
+    - model: 280W-R DN20
+      value: 0.016
+    - model: 280W-R DN25
+      value: 0.026
+  - attribute: minimum_flowrate_q1
+    unit_symbol: m³/h
+    values:
+    - model: 280W-R DN15
+      value: 0.01
+    - model: 280W-R DN20
+      value: 0.01
+    - model: 280W-R DN25
+      value: 0.016
+  - attribute: pressure_loss_class
+    unit_symbol:
+    values:
+    - model: 280W-R DN15
+      value: ΔP 63
+    - model: 280W-R DN20
+      value: ΔP 40
+    - model: 280W-R DN25
+      value: ΔP 25
+  - attribute: length_horizontal_water_meter
+    unit_symbol: mm
+    values:
+    - model: 280W-R DN15
+      value: 165
+    - model: 280W-R DN20
+      value: 190
+    - model: 280W-R DN25
+      value: 260
+  - attribute: connection_type_screw_thread_size
+    unit_symbol:
+    values:
+    - model: 280W-R DN15
+      value: G 3/4 B
+    - model: 280W-R DN20
+      value: G 1 B
+    - model: 280W-R DN25
+      value: G 1 ¼ B
+  config_level:
+  - attribute: mpe_upper_flowrate_zone
+    axis: water temperature
+    values:
+    - condition: "≤ 30 °C"
+      value:
+        min: -2
+        max: 2
+      unit_symbol: "%"
+    - condition: "> 30 °C"
+      value:
+        min: -3
+        max: 3
+      unit_symbol: "%"
+  - attribute: resolution_of_indicating_device
+    axis: indication mode
+    values:
+    - condition: normal mode
+      value: 0.01
+      unit_symbol: m³
+    - condition: calibration mode (high resolution)
+      value: 1.0e-06
+      unit_symbol: m³
+recommendation:
+  id: R49
+  edition: 2013
+  scheme: A
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 6015-PT-P3010-15
+  date: '2015-06-12'
+  pages: 87
+  role: test_report
+- id: 8551-PT-P0101-15
+  date: '2015-06-01'
+  pages: 37
+  role: test_report
+- id: 6015-PT-P3021-15
+  date: '2015-11-05'
+  pages: 38
+  role: test_report
+- id: 8551-PT-P0140-15
+  date: '2015-06-26'
+  pages: 14
+  role: test_report
+- id: 8551-PT-P0145-15
+  date: '2015-07-10'
+  pages: 13
+  role: test_report
+- id: 6015-PT-P3019-16
+  date: '2015-07-12'
+  pages: 37
+  role: test_report
+revision_history:
+- revision: '2'
+  date:
+  changes:
+model_family:
+  family_name: 280W
+  models:
+  - model_id: 280W-R DN15
+  - model_id: 280W-R DN20
+  - model_id: 280W-R DN25
+components:
+- role: calculating_indicating_device
+  type_designations:
+  - electronic calculating/indicating device
+  alternatives:
+  characteristics:
+    display:
+      value: digital, up to 9 digits
+      unit_symbol:
+    volume_resolution_normal_mode:
+      value: 0.01
+      unit_symbol: m³
+    volume_resolution_high_resolution_mode:
+      value: 1.0e-06
+      unit_symbol: m³
+- role: optional_remote_reading_transmitter
+  type_designations:
+  - M-bus transmitter
+  alternatives:
+  characteristics: {}
+matrix_tables:
+- name: Basic technical data of water meters type 280W-… DN15 to DN25
+  columns:
+  - nominal_diameter
+  - overload_flowrate_q4
+  - permanent_flowrate_q3
+  - transitional_flowrate_q2
+  - minimum_flowrate_q1
+  - pressure_loss_class
+  - length_horizontal_water_meter
+  - connection_type_screw_thread_size
+  column_units:
+  - mm
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  - mm
+  -
+  rows:
+  - nominal_diameter: 15
+    overload_flowrate_q4: 3.13
+    permanent_flowrate_q3: 2.5
+    transitional_flowrate_q2: 0.016
+    minimum_flowrate_q1: 0.01
+    pressure_loss_class: ΔP 63
+    length_horizontal_water_meter: 165
+    connection_type_screw_thread_size: G 3/4 B
+  - nominal_diameter: 20
+    overload_flowrate_q4: 3.13
+    permanent_flowrate_q3: 2.5
+    transitional_flowrate_q2: 0.016
+    minimum_flowrate_q1: 0.01
+    pressure_loss_class: ΔP 40
+    length_horizontal_water_meter: 190
+    connection_type_screw_thread_size: G 1 B
+  - nominal_diameter: 25
+    overload_flowrate_q4: 5.0
+    permanent_flowrate_q3: 4.0
+    transitional_flowrate_q2: 0.026
+    minimum_flowrate_q1: 0.016
+    pressure_loss_class: ΔP 25
+    length_horizontal_water_meter: 260
+    connection_type_screw_thread_size: G 1 ¼ B
+  description: >-
+    Manufacturer: SPIRE METERING TECHNOLOGY, 249 Cedar Hill street, Marlborough, MA 01752 USA. Model number:
+    280W-R. Ratios common to all sizes: Q3/Q1 = 250, Q2/Q1 = 1.6, Q4/Q3 = 1.25. Accuracy class 2.
+  footnotes: []

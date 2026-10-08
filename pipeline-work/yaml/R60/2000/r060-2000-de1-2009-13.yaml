@@ -1,0 +1,217 @@
+_meta:
+  cert_id: 2236
+  num: R060/2000-DE1-2009.13
+  applicant: Flintec GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-13.pdf
+certificate:
+  number: R60/2000-DE1-09.13
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-06-09'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - PC46
+  module_designation: Analog load cell
+  description: >-
+    The load cells (LC) of the series PC46 are double bending beam load cells made of aluminium. The strain
+    gauge application is potted.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 413
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_platform_dimensions:
+      value: 600 x 600
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=150kg
+      value: 150
+    - model: Emax=200kg
+      value: 200
+    - model: Emax=250kg
+      value: 250
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/7500
+      unit_symbol:
+    - condition: C4
+      value: Emax/12500
+      unit_symbol:
+  - attribute: optional_ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/15000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C4
+      value: Emax/25000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C4
+test_reports:
+- id: 1.12-4039176-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039176-2
+  pages: 18
+  role: test_report
+model_family:
+  family_name: PC46
+  models:
+  - model_id: Emax=50kg
+    attributes:
+      accuracy_classes:
+      - C3
+  - model_id: Emax=100kg
+    attributes:
+      accuracy_classes:
+      - C3
+  - model_id: Emax=150kg
+    attributes:
+      accuracy_classes:
+      - C3
+  - model_id: Emax=200kg
+    attributes:
+      accuracy_classes:
+      - C3
+  - model_id: Emax=250kg
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+footnotes:
+- marker: 1)
+  text: The optional minimum verification interval is indicated on the name plate
+matrix_tables:
+- name: Essential data
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity_emax
+  - ratio_y_emax_over_vmin
+  - optional_ratio_y_emax_over_vmin
+  - maximum_platform_dimensions
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  -
+  - mm
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity_emax:
+    - 50
+    - 100
+    - 150
+    - 200
+    - 250
+    ratio_y_emax_over_vmin: Emax/7500
+    optional_ratio_y_emax_over_vmin: Emax/15000
+    maximum_platform_dimensions: 600 x 600
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity_emax:
+    - 250
+    ratio_y_emax_over_vmin: Emax/12500
+    optional_ratio_y_emax_over_vmin: Emax/25000
+    maximum_platform_dimensions: 600 x 600
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, given per accuracy
+    class (table 1 of the certificate).
+  footnotes:
+  - 1) The optional minimum verification interval is indicated on the name plate

@@ -1,0 +1,283 @@
+_meta:
+  cert_id: 3855
+  num: R076/2006-FR2-2012.01 Rev. 2
+  applicant: Arpege Master K
+  issuing_year: '2015'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2012-01-rev2.pdf
+certificate:
+  number: R76/2006-FR2-12.01 rev.2
+  scheme: B
+  project_number: 23067 rev. 2
+  page_total: 3
+  member_state: FRANCE
+  date_issued: '2015-12-17'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Thomas LOMMATZSCH
+  person_title: >-
+    Responsable du Pôle Certification (Measuring Instruments Division Manager), signing for the General
+    Director
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: ARPEGE MASTER K
+  address_lines:
+  - 15 rue du Dauphiné Bat 6 CS40216
+  - 69800 SAINT PRIEST
+  - FRANCE
+manufacturers:
+- name: ARPEGE MASTER K
+  address_lines:
+  - 15 rue du Dauphiné - Bat 6 - CS 40216
+  - 69800 SAINT PRIEST
+  - FRANCE
+certified_type:
+  category: Indicator
+  type_designations:
+  - IDL
+  - IDL 40
+  - IDL 50
+  - IDL 55
+  module_designation:
+  description: >-
+    Indicator type IDL for non automatic weighing instruments, presented as a separate module intended
+    to be integrated in a non automatic weighing instrument. It has 3 versions designated IDL 40, IDL
+    50 and IDL 55 that differ by the display resolution of their graphic screen. The box may be made of
+    metal+plastic or of stainless steel. It may be connected either to a weighing channel comprising analog
+    load cells or to a weighing channel comprising digital load cells.
+characteristics:
+  type_level:
+    max_number_of_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    maximum_subtractive_tare_effect:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+    number_of_weighing_channels:
+      value: 1
+      unit_symbol:
+      unit_id:
+    weighing_channel_types:
+      value: analog or digital
+      unit_symbol:
+      unit_id:
+    enclosure_material:
+      value: metal+plastic or stainless steel
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: graphic_display_resolution
+    unit_symbol: pixels
+    values:
+    - model: IDL 40
+      value: 240x64
+    - model: IDL 50
+      value: 240x128
+    - model: IDL 55
+      value: 320x240
+  config_level:
+  - attribute: max_verification_scale_intervals_per_range_nind
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 6000
+      unit_symbol:
+    - condition: class IIII
+      value: 1000
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: supply_alternative
+    values:
+    - condition: 230 V AC
+      value: 230
+      unit_symbol: V
+    - condition: 110 V AC (50/60 Hz)
+      value: 110
+      unit_symbol: V
+    - condition: 12 V
+      value: 12
+      unit_symbol: V
+  - attribute: load_cell_excitation_voltage
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 5
+      unit_symbol: V
+  - attribute: load_cell_excitation_waveform
+    axis: channel_type
+    values:
+    - condition: analog
+      value: square wave
+      unit_symbol:
+  - attribute: digital_load_cell_supply_voltage
+    axis: channel_type
+    values:
+    - condition: digital
+      value: 12
+      unit_symbol: V
+  - attribute: digital_load_cell_supply_voltage_tolerance
+    axis: channel_type
+    values:
+    - condition: digital
+      value:
+        min: -20
+        max: 30
+      unit_symbol: "%"
+  - attribute: minimum_input_voltage_per_scale_interval_dumin
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 0.5
+      unit_symbol: µV
+  - attribute: measuring_range_minimum_voltage
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 0.01
+      unit_symbol: mV
+  - attribute: measuring_range_maximum_voltage
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 20
+      unit_symbol: mV
+  - attribute: minimum_load_cell_impedance_rlmin
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 45
+      unit_symbol: Ω
+  - attribute: maximum_load_cell_impedance_rlmax
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 1100
+      unit_symbol: Ω
+  - attribute: operating_temperature_range
+    axis: channel_type
+    values:
+    - condition: analog
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+  - attribute: fraction_of_maximum_permitted_error_pind
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 0.5
+      unit_symbol:
+    - condition: digital
+      value: 0
+      unit_symbol:
+  - attribute: load_cell_connection_type
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 6-wire shielded
+      unit_symbol:
+    - condition: digital
+      value: CAN/485
+      unit_symbol:
+  - attribute: load_cell_connection_cable_max_length
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 100
+      unit_symbol: m
+    - condition: digital
+      value: 1000
+      unit_symbol: m
+  - attribute: load_cell_cable_conductor_count
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 6
+      unit_symbol:
+    - condition: digital
+      value: 4
+      unit_symbol:
+  - attribute: load_cell_cable_conductor_cross_section
+    axis: channel_type
+    values:
+    - condition: analog
+      value: 0.34
+      unit_symbol: mm²
+    - condition: digital
+      value:
+        min: 0.34
+        max:
+      unit_symbol: mm²
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-DCF/M101349 - Document PCI/3
+  date:
+  pages: 15
+  role: evaluation_report
+- id: LNE-M101349 - Document DE/50 (disturbances)
+  date:
+  pages: 33
+  role: test_report
+- id: LNE-M101349 - Document DMSI/2 (performance, influence factors, span stability)
+  date:
+  pages: 32
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2012-05-04'
+  changes: Initial certificate
+- revision: '1'
+  date: '2014-12-01'
+  changes: Change of address of the manufacturer. No modification of the metrological characteristics.
+- revision: '2'
+  date: '2015-12-18'
+  changes: >-
+    Correction of a translation error: in title 'characteristics for a digital channel', 'analogic' has
+    been replaced by 'digital'.
+model_family:
+  family_name: IDL
+  models:
+  - model_id: IDL 40
+    label: Graphic display 240x64 pixels
+    attributes:
+      graphic_display_resolution: 240x64 pixels
+  - model_id: IDL 50
+    label: Graphic display 240x128 pixels
+    attributes:
+      graphic_display_resolution: 240x128 pixels
+  - model_id: IDL 55
+    label: Graphic display 320x240 pixels
+    attributes:
+      graphic_display_resolution: 320x240 pixels
+components: []
+footnotes: []
+matrix_tables: []

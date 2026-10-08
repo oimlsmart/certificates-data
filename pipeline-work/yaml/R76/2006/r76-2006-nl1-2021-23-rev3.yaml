@@ -1,0 +1,223 @@
+_meta:
+  cert_id: 6162
+  num: R76/2006-A-NL1-21.23 Rev. 3
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2021-23-rev3.pdf
+certificate:
+  number: R76/2006-A-NL1-21.23
+  scheme: A
+  project_number: '3741110'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2024-03-12'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+manufacturers:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+certified_type:
+  category: Weighing module
+  type_designations:
+  - QBase
+  module_designation: Weighing module
+  description: Weighing module, type QBase
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III or IIII
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min:
+        max: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: single interval or multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_number_of_scale_intervals
+    axis: weighing range configuration
+    values:
+    - condition: single interval (one weighing range)
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+    - condition: multi-interval (per partial weighing range)
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: CPU board variant
+    values:
+    - condition: variant without CPU board (supplied through USB)
+      value:
+        min: 4.4
+        max: 5.25
+      unit_symbol: V
+    - condition: variant with CPU board
+      value: 12
+      unit_symbol: V
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-2477454-01 revision 1
+  date: '2023-09-15'
+  pages: 51
+  role: type_evaluation_report
+- id: NMi-2477454-02
+  date: '2021-04-15'
+  pages: 18
+  role: test_report
+- id: NMi-2529842-01
+  date: '2021-04-15'
+  pages: 17
+  role: test_report
+- id: NMi-3532583-02
+  date: '2023-04-14'
+  pages: 21
+  role: test_report
+- id: NMi-3532583-03
+  date: '2023-04-14'
+  pages: 21
+  role: test_report
+- id: NMi-3680753-01
+  date: '2023-12-21'
+  pages: 36
+  role: test_report
+- id: NMi-3680753-02
+  date: '2023-12-21'
+  pages: 17
+  role: test_report
+- id: NMi-3741110-01
+  date: '2024-03-12'
+  pages: 22
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2021-04-15'
+  changes: Initial issue.
+- revision: '1'
+  date: '2023-09-18'
+  changes: Replace type evaluation report NMi-2477454-01 with NMi-2477454-01 revision 1.
+- revision: '2'
+  date: '2023-12-21'
+  changes: Adding test reports concerning tested additional CPU board and tilt compensation function.
+- revision: '3'
+  date: '2024-03-12'
+  changes: Adding test report concerning tested additional I/O board and power adapter.
+components:
+- role: A/D board
+  type_designations: []
+  alternatives:
+  characteristics:
+    legally_relevant_software_versions:
+    - '010'
+    - '011'
+    - '030'
+- role: CPU board
+  type_designations:
+  - QBase C2
+  alternatives:
+  characteristics:
+    legally_relevant_software_versions:
+    - '001'
+footnotes:
+- marker: 1)
+  text: >-
+    The identification of the non-legally relevant software version can optionally be added to the identification
+    of the legally relevant software version, separated by :: (example: 010::x.y or 011::x.y).
+matrix_tables:
+- name: Software identification
+  columns:
+  - board
+  - version_number_legally_relevant
+  - software_id
+  rows:
+  - board: A/D board
+    version_number_legally_relevant: '010'
+    software_id: '6153'
+    footnote_markers:
+    - 1)
+  - board: A/D board
+    version_number_legally_relevant: '011'
+    software_id: '5232'
+    footnote_markers:
+    - 1)
+  - board: A/D board
+    version_number_legally_relevant: '030'
+    software_id: '1446'
+    footnote_markers:
+    - 1)
+  - board: CPU board (QBase C2)
+    version_number_legally_relevant: '001'
+    software_id: '8324'
+  description: >-
+    Legally relevant software version numbers and associated software IDs for the A/D board and the CPU
+    board.
+  footnotes:
+  - >-
+    1) The identification of the non-legally relevant software version can optionally be added to the
+    identification of the legally relevant software version, separated by :: (example: 010::x.y or 011::x.y).

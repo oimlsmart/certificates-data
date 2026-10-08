@@ -1,0 +1,230 @@
+_meta:
+  cert_id: 1512
+  num: R076/1992-DE1-2005.04
+  applicant: Seca GmbH & Co. kg.
+  issuing_year: '2005'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2005-04.pdf
+certificate:
+  number: R76/1992-DE1-05.04
+  page_total: 2
+  member_state: Germany
+  date_issued: '2005-10-10'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+  person_title: Direktor und Professor
+applicants:
+- name: seca gmbh & co. kg.
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+manufacturers:
+- name: seca gmbh & co. kg.
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - M375x1
+  - M376x1
+  module_designation:
+  description: >-
+    Non-automatic electromechanical baby weighing instruments. The weighing instrument consists of a weighing
+    platform with four strain gauge planar beam load cells, an indication for displaying the weighing
+    result and membrane switches to operate the instrument. The weighing ranges with Max, Min, e, d and
+    number of verification scale intervals may be chosen within the limits of No. 3.2 of R 76-1 and of
+    Table 1.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: 10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    platform_length:
+      value: 615
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    platform_width:
+      value: 270
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: accuracy_class
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: IIII
+      footnote_markers: []
+    - model: M376x1
+      value: III
+      footnote_markers: []
+  - attribute: minimum_capacity_range_1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.1
+      footnote_markers: []
+    - model: M376x1
+      value: 0.1
+      footnote_markers: []
+  - attribute: minimum_capacity_range_2
+    unit_symbol: kg
+    values:
+    - model: M376x1
+      value: 0.2
+      footnote_markers: []
+  - attribute: maximum_capacity_range_1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 10
+      footnote_markers: []
+    - model: M376x1
+      value: 7.5
+      footnote_markers: []
+  - attribute: maximum_capacity_range_2
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 15
+      footnote_markers: []
+    - model: M376x1
+      value: 15
+      footnote_markers: []
+  - attribute: verification_scale_interval_range_1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.01
+      footnote_markers: []
+    - model: M376x1
+      value: 0.005
+      footnote_markers: []
+  - attribute: verification_scale_interval_range_2
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.02
+      footnote_markers: []
+    - model: M376x1
+      value: 0.01
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals_range_1
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: 1000
+      footnote_markers: []
+    - model: M376x1
+      value: 1500
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals_range_2
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: 750
+      footnote_markers: []
+    - model: M376x1
+      value: 1500
+      footnote_markers: []
+  - attribute: subtractive_tare_balancing_range
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: Max_1
+      footnote_markers: []
+    - model: M376x1
+      value: Max_1 | Max_2
+      footnote_markers: []
+  config_level: []
+recommendation:
+  id: R76-1
+  edition: 1992
+  amendment: Amendment 1 (1994)
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4018840
+  pages: 8
+  role: type_evaluation_report
+- id: 1.12-4018840/1
+  pages: 48
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: M375x1
+    label: Multi-interval instrument
+    attributes: {}
+  - model_id: M376x1
+    label: Multiple range instrument
+    attributes: {}
+components:
+- role: weighing platform
+  characteristics:
+    load_cell_quantity: 4
+    load_cell_technology: strain gauge
+    load_cell_mechanical_format: planar beam
+- role: indicating device
+  characteristics:
+    function: displaying the weighing result
+- role: membrane switches
+  characteristics:
+    function: operating the instrument
+matrix_tables:
+- name: Table 1 - Weighing ranges
+  columns:
+  - parameter
+  - m375x1
+  - m376x1
+  column_units:
+  -
+  -
+  -
+  rows:
+  - parameter: accuracy_class
+    m375x1: "(IIII)"
+    m376x1: "(III)"
+  - parameter: min (min_1 | min_2)
+    m375x1: 0.1 kg
+    m376x1: 0.1 kg | 0.2 kg
+  - parameter: max (max_1 | max_2)
+    m375x1: 10 kg | 15 kg
+    m376x1: 7.5 kg | 15 kg
+  - parameter: e=d (e_1 | e_2)
+    m375x1: 0.01 kg | 0.02 kg
+    m376x1: 0.005 kg | 0.01 kg
+  - parameter: n (n_1 | n_2)
+    m375x1: 1000 | 750
+    m376x1: 1500 | 1500
+  - parameter: tare_balancing_range_subtractive
+    m375x1: Max_1
+    m376x1: Max_1 | Max_2
+  - parameter: temperature_range
+    m375x1: 10 °C ... 40 °C
+    m376x1: 10 °C ... 40 °C
+  - parameter: platform_size
+    m375x1: synclinal 615 mm x 270 mm
+    m376x1: synclinal 615 mm x 270 mm
+  description: >-
+    Permitted weighing ranges (Max, Min, e, d and number of verification scale intervals) may be chosen
+    within the limits of No. 3.2 of R 76-1 and this table. Values with subscripts 1 | 2 refer to weighing
+    range 1 | range 2.
+  footnotes: []

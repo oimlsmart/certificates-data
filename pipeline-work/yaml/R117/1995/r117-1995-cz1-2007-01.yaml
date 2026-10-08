@@ -1,0 +1,230 @@
+_meta:
+  cert_id: 1797
+  num: R117/1995-CZ1-2007.01
+  applicant: Chen Fuel Systems LTD
+  issuing_year: '2007'
+  status: Valid
+  issuer: CZ1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-cz1-2007-01.pdf
+certificate:
+  number: R117/1995-CZ-07.01
+  scheme: A
+  page_total: 2
+  member_state: Czech Republic
+  date_issued: '2007-02-08'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+  person_title: The Issuing Authority
+applicants:
+- name: Chen Fuel Systems LTD
+  address_lines:
+  - Industrial Zone No. 5, P.O.B. 262
+  - Maalot
+  - 21071 Israel
+manufacturers:
+- name: Chen Fuel Systems LTD
+  address_lines:
+  - Industrial Zone No. 5, P.O.B. 262
+  - Maalot
+  - 21071 Israel
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - CFS Fuel Star Series
+  module_designation:
+  description: >-
+    The CFS Fuel Star Series fuel dispensers consist of a FSU pumping unit with gas elimination device,
+    FMU measuring transducer, CPS electronic calculator, electromagnetic valve, sight glass and house
+    with delivery nozzle. There is version for installation in centrally pumped system. Satellite delivery
+    point can be present.
+characteristics:
+  type_level:
+    maximum_unit_price:
+      value: 99.99
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_digits:
+      value: 4
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 9999.99
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay_digits:
+      value: 6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 50
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    environmental_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: meter_type
+    unit_symbol:
+    values:
+    - model: Standard Duty
+      value: FMU-50
+      footnote_markers: []
+    - model: Heavy Duty
+      value: FMU-90
+      footnote_markers: []
+  - attribute: pumping_unit_type
+    unit_symbol:
+    values:
+    - model: Standard Duty
+      value: FSU-50
+      footnote_markers: []
+    - model: Heavy Duty
+      value: FSU-90
+      footnote_markers: []
+  - attribute: liquids
+    unit_symbol:
+    values:
+    - model: Standard Duty
+      value: Gasoline and Diesel
+      footnote_markers: []
+    - model: Heavy Duty
+      value: Diesel
+      footnote_markers: []
+  - attribute: qmax
+    unit_symbol: dm³/min
+    values:
+    - model: Standard Duty
+      value: 50
+      footnote_markers: []
+    - model: Heavy Duty
+      value: 90
+      footnote_markers: []
+  - attribute: qmin
+    unit_symbol: dm³/min
+    values:
+    - model: Standard Duty
+      value: 5
+      footnote_markers: []
+    - model: Heavy Duty
+      value: 9
+      footnote_markers: []
+  - attribute: vmin
+    unit_symbol: dm³
+    values:
+    - model: Standard Duty
+      value: 2
+      footnote_markers: []
+    - model: Heavy Duty
+      value: 5
+      footnote_markers: []
+recommendation:
+- id: R117
+  edition: 1995
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - 0.5
+- id: R118
+  edition: 1995
+  amendment:
+  scheme: A
+test_reports:
+- id: 6015-PT-P001-07
+  date:
+  pages: 48
+  role: test_report
+revision_history: []
+model_family:
+  family_name: CFS Fuel Star Series
+  models:
+  - model_id: Standard Duty
+    label: Standard Duty (Qmax 50 L/min)
+    attributes:
+      meter_type: FMU-50
+      pumping_unit_type: FSU-50
+      liquids: Gasoline and Diesel
+  - model_id: Heavy Duty
+    label: Heavy Duty (Qmax 90 L/min)
+    attributes:
+      meter_type: FMU-90
+      pumping_unit_type: FSU-90
+      liquids: Diesel
+components:
+- role: pumping unit
+  type_designations:
+  - FSU-50
+  - FSU-90
+  alternatives: OR
+  characteristics: {}
+- role: measuring transducer (meter)
+  type_designations:
+  - FMU-50
+  - FMU-90
+  alternatives: OR
+  characteristics: {}
+- role: electronic calculator
+  type_designations:
+  - CPS
+  alternatives:
+  characteristics: {}
+footnotes: []
+matrix_tables:
+- name: Characteristics by measuring system type
+  columns:
+  - measuring_system_type
+  - meter_type
+  - pumping_units_type
+  - liquids
+  - qmax
+  - qmin
+  - vmin
+  column_units:
+  -
+  -
+  -
+  -
+  - dm³/min
+  - dm³/min
+  - dm³
+  rows:
+  - measuring_system_type: Standard Duty
+    meter_type: FMU-50
+    pumping_units_type: FSU-50
+    liquids: Gasoline and Diesel
+    qmax: 50
+    qmin: 5
+    vmin: 2
+  - measuring_system_type: Heavy Duty
+    meter_type: FMU-90
+    pumping_units_type: FSU-90
+    liquids: Diesel
+    qmax: 90
+    qmin: 9
+    vmin: 5
+  description: >-
+    Two subsystem types: Standard Duty with Qmax 50 L/min contains one FSU-50 pumping unit and one FMU-50
+    measuring transducer; Heavy Duty with Qmax 90 L/min contains one FSU-90 pumping unit and one FMU-90
+    measuring transducer. Shared characteristics: maximum unit price 99.99 (4 digits), maximum price to
+    pay 9999.99 (6 digits), temperature range (-10 to +50) °C, environmental class C, accuracy class 0.5.
+  footnotes: []

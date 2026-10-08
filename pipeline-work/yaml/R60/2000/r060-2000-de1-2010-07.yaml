@@ -1,0 +1,190 @@
+_meta:
+  cert_id: 2487
+  num: R060/2000-DE1-2010.07
+  applicant: Zhonghang Electronic Measuring Instruments Co.Ltd (ZEMIC)
+  issuing_year: '2010'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2010-07.pdf
+certificate:
+  number: R60/2000-DE1-10.07
+  scheme: B
+  page_total: 2
+  member_state: Germany
+  date_issued: '2010-08-10'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Oberregierungsrat
+applicants:
+- name: Zhonghang Electronic Measuring Instruments Co., Ltd. (ZEMIC)
+  address_lines:
+  - 2 PO Box
+  - 723007 Hanzhong, Shaanxi
+  - China
+manufacturers:
+- name: Zhonghang Electronic Measuring Instruments Co., Ltd. (ZEMIC)
+  address_lines:
+  - 2 PO Box
+  - 723007 Hanzhong, Shaanxi
+  - China
+certified_type:
+  category: Load cell
+  type_designations:
+  - BM8G
+  module_designation:
+  description: >-
+    Strain gauge shear beam load cell. The load cells of the series BM8G are shear beam load cells. They
+    are made of stainless steel and the strain gauge application is hermetically sealed.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    minimum_dead_load_output_return_dr:
+      value: "½ Emax/6000"
+      unit_symbol:
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=0.5t
+      value: 0.5
+    - model: Emax=1t
+      value: 1
+    - model: Emax=2t
+      value: 2
+    - model: Emax=5t
+      value: 5
+    - model: Emax=7.5t
+      value: 7.5
+    - model: Emax=10t
+      value: 10
+  - attribute: accuracy_classes
+    unit_symbol:
+    values:
+    - model: Emax=0.5t
+      value: C3, C4
+    - model: Emax=1t
+      value: C3, C4
+    - model: Emax=2t
+      value: C3, C4
+    - model: Emax=5t
+      value: C3
+    - model: Emax=7.5t
+      value: C3
+    - model: Emax=10t
+      value: C3
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+      unit_id:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+      unit_id:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: Emax/10000
+      unit_symbol:
+      unit_id:
+    - condition: C4
+      value: Emax/15000
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: B
+  accuracy_classes:
+  - C3
+  - C4
+test_reports:
+- id: 1.12-4047315-1
+  date:
+  pages: 22
+  role: test_report
+- id: 1.12-4047315-2
+  date:
+  pages: 18
+  role: test_report
+model_family:
+  family_name: BM8G
+  models:
+  - model_id: Emax=0.5t
+  - model_id: Emax=1t
+  - model_id: Emax=2t
+  - model_id: Emax=5t
+  - model_id: Emax=7.5t
+  - model_id: Emax=10t
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  - minimum_dead_load_output_return_dr
+  column_units:
+  -
+  -
+  - mV/V
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity: 0.5 / 1 / 2 / 5 / 7.5 / 10
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+    minimum_dead_load_output_return_dr: "½ Emax/6000"
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity: 0.5 / 1 / 2
+    minimum_load_cell_verification_interval_vmin: Emax/15000
+    minimum_dead_load_output_return_dr: "½ Emax/6000"
+  description: >-
+    Metrological characteristics of the BM8G shear beam load cells for application in approved weighing
+    instruments, listed per accuracy class.
+  footnotes: []

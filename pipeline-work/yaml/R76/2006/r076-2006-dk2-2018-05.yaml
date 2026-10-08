@@ -1,0 +1,214 @@
+_meta:
+  cert_id: 4674
+  num: R76/2006-A-DK2-18.05
+  applicant: Flintec GmbH
+  issuing_year: '2018'
+  status: Valid
+  issuer: DK2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-dk2-2018-05.pdf
+certificate:
+  number: R76/2006-A-DK2-2018.05
+  scheme: A
+  page_total: 4
+  member_state: Denmark
+  date_issued: '2018-09-14'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Leif Madsen
+  email: jhje@force.dk
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Indicator
+  type_designations:
+  - FT-111 panel
+  - FT-112 panel
+  module_designation: Non-automatic electronic weighing indicator
+characteristics:
+  type_level:
+    weighing_range:
+      value: Single-interval, multi-interval (up to 3 intervals), multi-range (up to 3 ranges)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 1
+        max: 500000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    maximum_subtractive_tare_effect:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_additive_tare_effect:
+      value: >-
+        not exceeding the maximum value possible according to OIML R 76-1:2006 Annex A for the actual
+        weighing instrument configuration
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    fractional_factor_pi:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_per_vsi:
+      value: 0.4
+      unit_symbol: µV
+      unit_id:
+      footnote_markers: []
+    excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    minimum_input_impedance:
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    maximum_input_impedance:
+      value: 1200
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    mains_power_supply_voltage_ac:
+      value:
+        min: 90
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    mains_power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    mains_power_supply_voltage_dc:
+      value:
+        min: 10
+        max: 30
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    internal_rechargeable_battery:
+      value: optional
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operational_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_6_wire_cable_length_between_indicator_and_junction_box:
+      value: 4012
+      unit_symbol: m/mm²
+      unit_id:
+      footnote_markers: []
+    legally_relevant_software_version:
+      value: 01.xx
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    supported_interfaces:
+      value: >-
+        RS232, RS485, RS422/RS485, Ethernet, USB, Digital inputs/outputs; optional: Profinet, Canopen,
+        Wifi, Bluetooth
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_verification_scale_intervals_ni
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value: 10000
+      unit_symbol:
+    - condition: class IIII
+      value: 1000
+      unit_symbol:
+  - attribute: circuit_for_remote_sense
+    axis: connector_type
+    values:
+    - condition: model with 7-terminal connector
+      value: present
+      unit_symbol:
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: DANAK-1919104
+  date: '2018-04-28'
+  pages: 69
+  role: type_evaluation_report
+- id: 118-21979
+  date: '2018-04-28'
+  role: documentation_file
+revision_history:
+- revision: First issuance
+  date: '2018-09-14'
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: FT-111 panel
+    label: FT-111 panel
+  - model_id: FT-112 panel
+    label: FT-112 panel
+components:
+- role: supported digital load cell
+  type_designations:
+  - BR030SD
+  - BR032SD
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Baykon
+      unit_symbol:
+      unit_id:
+- role: supported digital load cell
+  type_designations:
+  - RC3D
+  alternatives:
+  characteristics:
+    manufacturer:
+      value: Flintec
+      unit_symbol:
+      unit_id:
+footnotes: []

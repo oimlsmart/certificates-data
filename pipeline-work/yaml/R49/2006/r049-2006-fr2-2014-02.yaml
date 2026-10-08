@@ -1,0 +1,265 @@
+_meta:
+  cert_id: 3442
+  num: R049/2006-FR2-2014.02
+  applicant: ITRON France
+  issuing_year: '2014'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-fr2-2014-02.pdf
+certificate:
+  number: 2006-FR2-14.02
+  project_number:
+  page_total: 1
+  member_state: FRANCE
+  date_issued: '2014-05-26'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Responsable du Pôle Certification (Measuring Instruments Division Manager)
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71031 MACON
+  - FRANCE
+manufacturers:
+- name: Itron Indonesia - PT Mecoindo
+  address_lines:
+  - EJIP Plot 6B-2
+  - Lemah Aban
+  - Jawa Barat
+  - Indonesia
+certified_type:
+  category: Water meter
+  type_designations:
+  - TD88
+  module_designation:
+  description: Water meter ITRON type TD88
+characteristics:
+  type_level:
+    indicating_device:
+      value: Standard or pre-equipped
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    version:
+      value: In line
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    nominal_diameter:
+      value: 15
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    q2_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mounting_position:
+      value: all
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: '2'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    length:
+      value:
+        min: 115
+        max: 165
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    connections:
+      value: Thread G3/4"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    indicating_range:
+      value: 9999.99998
+      unit_symbol: m³
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value: 0.02
+      unit_symbol: dm³
+      unit_id:
+      footnote_markers: []
+    reverse_flow_measurement:
+      value: 'no'
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "**"
+    temperature_class:
+      value: T50
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    environmental_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    flow_profile_sensitivity_class:
+      value: U0D0
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: permanent_flowrate_q3
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6m³/h
+      value: 1.6
+      footnote_markers: []
+    - model: Q3=2.5m³/h
+      value: 2.5
+      footnote_markers: []
+  - attribute: q3_q1_ratio
+    unit_symbol:
+    values:
+    - model: Q3=1.6m³/h
+      value: 100
+      footnote_markers:
+      - "*"
+    - model: Q3=2.5m³/h
+      value: 160
+      footnote_markers:
+      - "*"
+  - attribute: pressure_loss_at_q3
+    unit_symbol: bar
+    values:
+    - model: Q3=1.6m³/h
+      value: 0.25
+      footnote_markers: []
+    - model: Q3=2.5m³/h
+      value: 0.63
+      footnote_markers: []
+  config_level: []
+recommendation:
+  id: R49
+  edition: 2006
+  scheme:
+  accuracy_classes:
+  - '2'
+test_reports:
+- id: D7009175-AA
+  date:
+  pages: 9
+  role: type_evaluation_report
+- id: TD88 Performance Test Report-OIML Sirim NML
+  date:
+  pages: 13
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: Q3=1.6m³/h
+    label: Permanent flowrate 1.6 m³/h
+  - model_id: Q3=2.5m³/h
+    label: Permanent flowrate 2.5 m³/h
+footnotes:
+- marker: "*"
+  text: >-
+    For a given nominal flowrate (Q3) values of Q3/Q1 lower than those listed in the table above are permitted.
+    However, values of this ratio cannot be below 10.
+- marker: "**"
+  text: >-
+    This meter is not designed to measure reverse flow but it is capable of withstanding an accidental
+    reverse flow without any deterioration or change in metrological properties for forward flow.
+matrix_tables:
+- name: Characteristics by flowrate variant
+  columns:
+  - permanent_flowrate_q3
+  - q3_q1_ratio
+  - q2_q1_ratio
+  - position
+  - accuracy_class
+  - pressure_loss_at_q3
+  - length
+  - connections
+  - maximum_admissible_pressure
+  - indicating_range
+  - verification_scale_interval
+  - reverse_flow_measurement
+  - temperature_class
+  - environmental_class
+  - flow_profile_sensitivity_class
+  column_units:
+  - m³/h
+  -
+  -
+  -
+  -
+  - bar
+  - mm
+  -
+  - bar
+  - m³
+  - dm³
+  -
+  -
+  -
+  -
+  rows:
+  - permanent_flowrate_q3: 1.6
+    q3_q1_ratio: 100
+    q2_q1_ratio: 1.6
+    position: all
+    accuracy_class: '2'
+    pressure_loss_at_q3: 0.25
+    length: 115...165
+    connections: Thread G3/4"
+    maximum_admissible_pressure: 16
+    indicating_range: 9999.99998
+    verification_scale_interval: 0.02
+    reverse_flow_measurement: 'no'
+    temperature_class: T50
+    environmental_class: C
+    flow_profile_sensitivity_class: U0D0
+  - permanent_flowrate_q3: 2.5
+    q3_q1_ratio: 160
+    q2_q1_ratio: 1.6
+    position: all
+    accuracy_class: '2'
+    pressure_loss_at_q3: 0.63
+    length: 115...165
+    connections: Thread G3/4"
+    maximum_admissible_pressure: 16
+    indicating_range: 9999.99998
+    verification_scale_interval: 0.02
+    reverse_flow_measurement: 'no'
+    temperature_class: T50
+    environmental_class: C
+    flow_profile_sensitivity_class: U0D0
+  description: >-
+    Certified type TD88 covers two variants differing in permanent flowrate Q3; Q3/Q1 ratio and pressure
+    loss at Q3 vary accordingly. Other characteristics are common.
+  footnotes:
+  - >-
+    For a given nominal flowrate (Q3) values of Q3/Q1 lower than those listed in the table above are permitted.
+    However, values of this ratio cannot be below 10.
+  - >-
+    This meter is not designed to measure reverse flow but it is capable of withstanding an accidental
+    reverse flow without any deterioration or change in metrological properties for forward flow.

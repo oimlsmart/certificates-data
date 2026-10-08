@@ -1,0 +1,218 @@
+_meta:
+  cert_id: 5535
+  num: R117/1995-A-JP1-21.01
+  applicant: Tatsuno (Thailand) Co., Ltd.
+  issuing_year: '2021'
+  status: Valid
+  issuer: JP1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-jp1-2021-01.pdf
+certificate:
+  number: R117/1995-A-JP1-21.01
+  scheme: A
+  page_total: 4
+  member_state: Japan
+  date_issued: '2021-11-02'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: ISHIMURA Kazuhiko
+  person_title: President of AIST
+applicants:
+- name: TATSUNO (THAILAND) CO., LTD.
+  address_lines:
+  - 1/8 MU 3 LADSAWAI, LAMLUKKA, PATHUMTHANI, THAILAND 12150
+manufacturers:
+- name: TATSUNO (THAILAND) CO., LTD.
+  address_lines:
+  - 1/8 MU 3 LADSAWAI, LAMLUKKA, PATHUMTHANI, THAILAND 12150
+- name: TATSUNO CORPORATION
+  address_lines:
+  - 3-2-6, Mita, Minato-ku, Tokyo, 108-8520, Japan
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Sunny-Celeste series
+  module_designation: Not applicable
+  description: >-
+    Fuel dispenser for motor vehicles, Sunny-Celeste series. Liquids: Petrol (Qmax: 50 L/min), Diesel
+    (Qmax: 80 L/min).
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_flowrate:
+      value: 3
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication:
+      value: 7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: liquid (flowrate configuration)
+    values:
+    - condition: Petrol (low flowrate)
+      value: 50
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: Diesel (high flowrate)
+      value: 80
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R117
+  edition: 1995
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: 2021-004
+  date: '2021-10-26'
+  pages: 3
+  role: type_evaluation_report
+- id: 2021-004-D
+  date: '2021-10-26'
+  pages:
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2021-11-02'
+  changes: OIML Certificate first issued
+components:
+- role: Meter
+  type_designations:
+  - FM-1007
+  alternatives:
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Gas elimination device (integrated with pump)
+  type_designations:
+  - FP-1001
+  alternatives:
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Measuring transducer
+  type_designations:
+  - EP-1850
+  alternatives:
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Calculator
+  type_designations:
+  - EP-1796
+  alternatives:
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Hose
+  type_designations:
+  - ZH-1237
+  - ZH-1238
+  alternatives: OR
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Hose
+  type_designations:
+  - SLIMLINE16
+  alternatives:
+  manufacturers:
+  - ELAFLEX
+- role: Nozzle
+  type_designations:
+  - FN-1001
+  - FN-1002
+  - FN-1021
+  - FN-1024
+  alternatives: OR
+  manufacturers:
+  - TATSUNO CORPORATION
+- role: Nozzle
+  type_designations:
+  - ZVA Slimline 2
+  - ZVA 25
+  alternatives: OR
+  manufacturers:
+  - ELAFLEX
+- role: Nozzle
+  type_designations:
+  - TYPE11
+  - TYPE 7
+  alternatives: OR
+  manufacturers:
+  - OPW
+- role: Nozzle
+  type_designations:
+  - A2500
+  - A2501
+  alternatives: OR
+  manufacturers:
+  - EMCO
+matrix_tables:
+- name: Technical data by flowrate configuration
+  columns:
+  - configuration
+  - accuracy_class
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  column_units:
+  -
+  -
+  - L/min
+  - L/min
+  - L
+  -
+  -
+  -
+  rows:
+  - configuration: Low flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 50
+    minimum_flowrate: 3
+    minimum_measured_quantity: 2
+    maximum_volume_indication: 7
+    maximum_unit_price: 5
+    maximum_price_to_pay: 7
+  - configuration: High flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 80
+    minimum_flowrate: 3
+    minimum_measured_quantity: 2
+    maximum_volume_indication: 7
+    maximum_unit_price: 5
+    maximum_price_to_pay: 7
+  description: >-
+    Low flowrate configuration applies to Petrol (Qmax 50 L/min); High flowrate configuration applies
+    to Diesel (Qmax 80 L/min).
+  footnotes: []

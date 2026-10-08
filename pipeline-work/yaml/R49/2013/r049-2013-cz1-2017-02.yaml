@@ -1,0 +1,328 @@
+_meta:
+  cert_id: 4184
+  num: R049/2013-CZ1-2017.02
+  applicant: DH Metering Europe S.A.
+  issuing_year: '2017'
+  status: Valid
+  issuer: CZ1
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-cz1-2017-02.pdf
+certificate:
+  number: R49/2013-CZ-17.02
+  scheme: B
+  page_total: 4
+  member_state: Czech Republic
+  date_issued: '2017-02-08'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+applicants:
+- name: DH Metering Europe S.A.
+  address_lines:
+  - Rue Henry Lemaire, 22
+  - B – 7911 Frasnes-Lez-Anvaing
+  - Belgium
+manufacturers:
+- name: DH Metering Europe S.A.
+  address_lines:
+  - Rue Henry Lemaire, 22
+  - B – 7911 Frasnes-Lez-Anvaing
+  - Belgium
+certified_type:
+  category: Water meter
+  type_designations:
+  - DHV3000
+  - DHV3200
+  description: >-
+    Semi positive displacement rotary piston water meters with wet mechanical indicating device with protected
+    registered drums. DHV3000 has a brass body and DHV3200 a composite body, each divided into two parts
+    connected by screw, with connecting screw threads, an inlet strainer, a wet measuring unit with a
+    piston and mechanical transmission, rubber O-ring, and a mechanical indicating device protected by
+    a plastic cover. The mechanical indicating device is formed by numbered rollers with eight drums installed
+    in a capsule filled with special liquid. The meters are not designed to measure reverse flow. Intended
+    for mounting on pipework with the flow axis in the horizontal or vertical (bottom-to-top and top-to-bottom)
+    plane, with the indicating device positioned at the top or at the side.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+    mpe_lower_flowrate_zone:
+      value:
+        min: -5
+        max: 5
+      unit_symbol: "%"
+      unit_id:
+    mpe_upper_flowrate_zone:
+      value:
+        min: -2
+        max: 2
+      unit_symbol: "%"
+      unit_id:
+    mpe_upper_flowrate_zone_applicability:
+      value: water temperature ≤ 30 °C
+      unit_symbol:
+      unit_id:
+    temperature_class:
+      value: T30
+      unit_symbol:
+      unit_id:
+    water_pressure_class:
+      value: MAP 16
+      unit_symbol:
+      unit_id:
+    pressure_loss_class:
+      value: ΔP63
+      unit_symbol:
+      unit_id:
+    orientation_limitation:
+      value: all positions
+      unit_symbol:
+      unit_id:
+    indicating_range:
+      value: 9999
+      unit_symbol: m³
+      unit_id:
+    indicating_device_resolution:
+      value: 2.0e-05
+      unit_symbol: m³
+      unit_id:
+    q2_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+    q3_q4_ratio:
+      value: 1.25
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: body_material
+    values:
+    - model: DHV3000
+      value: brass
+    - model: DHV3200
+      value: composite
+  config_level:
+  - attribute: nominal_diameter
+    axis: size designation
+    unit_symbol: mm
+    values:
+    - condition: DN15
+      value: 15
+    - condition: DN20
+      value: 20
+  - attribute: q1
+    axis: nominal_diameter × Q3/Q1 ratio
+    unit_symbol: m³/h
+    values:
+    - condition: DN15, Q3/Q1=200
+      value: 0.013
+    - condition: DN15, Q3/Q1=160
+      value: 0.016
+    - condition: DN15, Q3/Q1=100
+      value: 0.025
+    - condition: DN15, Q3/Q1=80
+      value: 0.031
+    - condition: DN20, Q3/Q1=315
+      value: 0.013
+    - condition: DN20, Q3/Q1=250
+      value: 0.016
+    - condition: DN20, Q3/Q1=200
+      value: 0.02
+    - condition: DN20, Q3/Q1=160
+      value: 0.025
+    - condition: DN20, Q3/Q1=100
+      value: 0.04
+    - condition: DN20, Q3/Q1=80
+      value: 0.05
+  - attribute: q2
+    axis: nominal_diameter × Q3/Q1 ratio
+    unit_symbol: m³/h
+    values:
+    - condition: DN15, Q3/Q1=200
+      value: 0.02
+    - condition: DN15, Q3/Q1=160
+      value: 0.025
+    - condition: DN15, Q3/Q1=100
+      value: 0.04
+    - condition: DN15, Q3/Q1=80
+      value: 0.05
+    - condition: DN20, Q3/Q1=315
+      value: 0.02
+    - condition: DN20, Q3/Q1=250
+      value: 0.026
+    - condition: DN20, Q3/Q1=200
+      value: 0.032
+    - condition: DN20, Q3/Q1=160
+      value: 0.04
+    - condition: DN20, Q3/Q1=100
+      value: 0.064
+    - condition: DN20, Q3/Q1=80
+      value: 0.08
+  - attribute: q3
+    axis: nominal_diameter
+    unit_symbol: m³/h
+    values:
+    - condition: DN15
+      value: 2.5
+    - condition: DN20
+      value: 4.0
+  - attribute: q4
+    axis: nominal_diameter
+    unit_symbol: m³/h
+    values:
+    - condition: DN15
+      value: 3.13
+    - condition: DN20
+      value: 5.0
+  - attribute: connection_type
+    axis: nominal_diameter
+    unit_symbol:
+    values:
+    - condition: DN15
+      value: G 3/4" B
+    - condition: DN20
+      value: G 1" B
+  - attribute: length
+    axis: nominal_diameter × body material
+    unit_symbol: mm
+    values:
+    - condition: DN15, brass body
+      value: 110, 115, 165
+    - condition: DN15, composite body
+      value: 110, 115, 165
+    - condition: DN20, brass body
+      value: 165, 190
+    - condition: DN20, composite body
+      value: '165'
+recommendation:
+  id: R49
+  edition: 2013
+  scheme: B
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 6015-PT-P3001-17
+  date: '2017-01-04'
+  pages: 131
+  role: type_evaluation_report
+model_family:
+  family_name:
+  models:
+  - model_id: DHV3000
+    label: Rotary piston water meter, brass body
+    attributes:
+      body_material: brass
+  - model_id: DHV3200
+    label: Rotary piston water meter, composite body
+    attributes:
+      body_material: composite
+matrix_tables:
+- name: Basic technical data DN15
+  columns:
+  - nominal_diameter
+  - q3_q1_ratio
+  - q1
+  - q2
+  - q3
+  - q4
+  column_units:
+  - mm
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - nominal_diameter: 15
+    q3_q1_ratio: 200
+    q1: 0.013
+    q2: 0.02
+    q3: 2.5
+    q4: 3.13
+  - nominal_diameter: 15
+    q3_q1_ratio: 160
+    q1: 0.016
+    q2: 0.025
+    q3: 2.5
+    q4: 3.13
+  - nominal_diameter: 15
+    q3_q1_ratio: 100
+    q1: 0.025
+    q2: 0.04
+    q3: 2.5
+    q4: 3.13
+  - nominal_diameter: 15
+    q3_q1_ratio: 80
+    q1: 0.031
+    q2: 0.05
+    q3: 2.5
+    q4: 3.13
+  description: >-
+    Water meters type DHV3000, DHV3200, DN15. Constant across variants: Q2/Q1 = 1.6, Q3/Q4 = 1.25, accuracy
+    class 2, temperature class T30, MAP 16, ΔP63, connection G 3/4" B, length 110/115/165 mm for both
+    brass and composite bodies.
+  footnotes: []
+- name: Basic technical data DN20
+  columns:
+  - nominal_diameter
+  - q3_q1_ratio
+  - q1
+  - q2
+  - q3
+  - q4
+  column_units:
+  - mm
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - nominal_diameter: 20
+    q3_q1_ratio: 315
+    q1: 0.013
+    q2: 0.02
+    q3: 4.0
+    q4: 5.0
+  - nominal_diameter: 20
+    q3_q1_ratio: 250
+    q1: 0.016
+    q2: 0.026
+    q3: 4.0
+    q4: 5.0
+  - nominal_diameter: 20
+    q3_q1_ratio: 200
+    q1: 0.02
+    q2: 0.032
+    q3: 4.0
+    q4: 5.0
+  - nominal_diameter: 20
+    q3_q1_ratio: 160
+    q1: 0.025
+    q2: 0.04
+    q3: 4.0
+    q4: 5.0
+  - nominal_diameter: 20
+    q3_q1_ratio: 100
+    q1: 0.04
+    q2: 0.064
+    q3: 4.0
+    q4: 5.0
+  - nominal_diameter: 20
+    q3_q1_ratio: 80
+    q1: 0.05
+    q2: 0.08
+    q3: 4.0
+    q4: 5.0
+  description: >-
+    Water meters type DHV3000, DHV3200, DN20. Constant across variants: Q2/Q1 = 1.6, Q3/Q4 = 1.25, accuracy
+    class 2, temperature class T30, MAP 16, ΔP63, connection G 1" B, length 165/190 mm (brass body) or
+    165 mm (composite body).
+  footnotes: []

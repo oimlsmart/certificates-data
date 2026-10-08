@@ -1,0 +1,400 @@
+_meta:
+  cert_id: 3979
+  num: R139/2014-CZ1-2016.01
+  applicant: Tatsuno-Benc Europe a.s.
+  issuing_year: '2016'
+  status: Valid
+  issuer: CZ1
+  recommendation: R139
+  edition_year: 2014
+  extraction_method: glm-extract
+  source_pdf: certificates/R139/2014/r139-2014-cz1-2016-01.pdf
+certificate:
+  number: R139/2014-CZ-16.01
+  scheme: B
+  page_total: 13
+  member_state: Czech Republic
+  date_issued: '2016-05-31'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+applicants:
+- name: TATSUNO EUROPE a.s.
+  address_lines:
+  - Pražská 2325/68
+  - 678 01 Blansko
+  - Czech Republic
+manufacturers:
+- name: TATSUNO EUROPE a.s.
+  address_lines:
+  - Pražská 2325/68
+  - 678 01 Blansko
+  - Czech Republic
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - OCEAN BMP 40xx.Oxx/CNG
+  - BMP40ab.Oxy/CNG
+  - OCEAN MOD 40xx.OEx/CNG
+  - MOD40ab.Oxy/CNG
+  module_designation: Not applicable
+  description: >-
+    CNG dispenser type OCEAN BMP 40xx.Oxx/CNG is designed for measurement of quantities of the natural
+    compressed gas. The dispenser may be designed for one to three sequential fillings and consists of
+    shut off valves, strainers, electromagnetic valves, back valves, mass meters, pressure transducers,
+    manometers, hoses with break away couplings, delivery nozzles with three way valve, measurement transducers
+    with electronic transmitters, electronic calculator and indicating devices. The CNG dispenser type
+    OCEAN MOD 40xx.OEx/CNG is a module which is incorporated into a standard liquid dispenser and/or LPG
+    dispenser, with calculator(s) and indicating device(s) mounted beside the indicating device of the
+    main dispenser. The CNG dispenser can be equipped with up to four measurement systems, each connected
+    to its own electronic calculator, and can fill up to four cars simultaneously.
+characteristics:
+  type_level:
+    measured_gas:
+      value: natural gas (CNG)
+    number_of_pressure_banks:
+      value:
+        min: 1
+        max: 3
+    sequential_filling:
+      value:
+        min: 1
+        max: 3
+    max_number_of_measurement_systems:
+      value: 4
+    max_number_of_simultaneous_vehicles:
+      value: 4
+    min_measured_quantity_mmq:
+      value: 2
+      unit_symbol: kg
+    scale_interval_mass_display:
+      value: 0.01 or 0.001
+      unit_symbol: kg
+    max_storage_pressure_pst:
+      value: 30.0
+      unit_symbol: MPa
+    max_pressure_of_gas_pmax:
+      value: 30.0
+      unit_symbol: MPa
+    min_pressure_of_gas_pmin:
+      value: 2.0
+      unit_symbol: MPa
+    max_filling_pressure_pv:
+      value: 20.0
+      unit_symbol: MPa
+    max_filling_pressure_reference_temperature:
+      value: 15
+      unit_symbol: "°C"
+    max_filling_pressure_pvmax:
+      value: 26.5
+      unit_symbol: MPa
+    environment_classes:
+      value: M1 / E1
+    accuracy_class:
+      value: 1.5
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+  config_level:
+  - attribute: max_flow_rate_qmax
+    axis: used measurement transducer
+    values:
+    - condition: CNG050
+      value: 30 / 70
+      unit_symbol: kg/min
+    - condition: CNGmass
+      value: 30 / 70
+      unit_symbol: kg/min
+  - attribute: min_flow_rate_qmin
+    axis: used measurement transducer
+    values:
+    - condition: CNG050
+      value: 2
+      unit_symbol: kg/min
+    - condition: CNGmass
+      value: 0.8
+      unit_symbol: kg/min
+  - attribute: gas_temperature_range
+    axis: used measurement transducer
+    values:
+    - condition: CNG050
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    - condition: CNGmass
+      value:
+        min: -50
+        max: 80
+      unit_symbol: "°C"
+  - attribute: ambient_temperature_range
+    axis: used measurement transducer
+    values:
+    - condition: CNG050
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+    - condition: CNGmass
+      value:
+        min: -40
+        max: 60
+      unit_symbol: "°C"
+recommendation:
+  id: R139
+  edition: 2014
+  scheme: B
+  accuracy_classes:
+  - '1.5'
+test_reports:
+- id: 6015-PT-P3011-16
+  date: '2016-05-23'
+  pages: 9
+  role: type_evaluation_report
+model_family:
+  family_name: OCEAN
+  models:
+  - model_id: BMP4014.OED/CNG/H2
+    label: OCEAN dispenser, 1 pressure bank, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: BMP (dispenser)
+      number_of_pressure_banks: 1
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: BMP4024.OED/CNG/H2
+    label: OCEAN dispenser, 2 pressure banks, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: BMP (dispenser)
+      number_of_pressure_banks: 2
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: BMP4034.OED/CNG/H2
+    label: OCEAN dispenser, 3 pressure banks, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: BMP (dispenser)
+      number_of_pressure_banks: 3
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: MOD4014.OED/CNG/H2
+    label: OCEAN additional dispensing module, 1 pressure bank, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: MOD (additional dispensing module)
+      number_of_pressure_banks: 1
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: MOD4024.OED/CNG/H2
+    label: OCEAN additional dispensing module, 2 pressure banks, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: MOD (additional dispensing module)
+      number_of_pressure_banks: 2
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: MOD4034.OED/CNG/H2
+    label: OCEAN additional dispensing module, 3 pressure banks, 4 hoses, EURO, double-sided
+    attributes:
+      product_line: MOD (additional dispensing module)
+      number_of_pressure_banks: 3
+      number_of_dispensing_hoses: 4
+      design: E (EURO)
+      orientation: D (double-sided)
+  - model_id: BMP4031.OER/CNG
+    label: OCEAN dispenser, 3 pressure banks, 1 hose, EURO, single-sided right (type plate example)
+    attributes:
+      product_line: BMP (dispenser)
+      number_of_pressure_banks: 3
+      number_of_dispensing_hoses: 1
+      design: E (EURO)
+      orientation: R (single-sided, right)
+components:
+- role: measurement_transducer
+  type_designations:
+  - CNG050
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Micro Motion
+    flow_sensor_type:
+      value: CNG050
+    core_processor_types:
+      value: 700 or 800
+    diameter:
+      value: 12
+      unit_symbol: mm
+    flow_rate:
+      value:
+        min: 1.92
+        max: 77.0
+      unit_symbol: kg/min
+    maximum_pressure:
+      value: 345
+      unit_symbol: bar
+    gas_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+    environment_classes:
+      value: M3 / E3
+    sw_versions_700_800:
+      value: See actual Evaluation certificate TC7057
+    previous_certification:
+      value: >-
+        NMI EC type examination certificate no. T10020 rev. 8; CMI Certifikát o schválení typu měřidla
+        addition 2 no. TCM 141/13-5026
+- role: measurement_transducer
+  type_designations:
+  - CNGmass
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Endress + Hauser
+    flow_sensor_type:
+      value: CNGmass
+    diameter:
+      value: 15
+      unit_symbol: mm
+    flow_rate:
+      value:
+        min: 0.8
+        max: 80.0
+      unit_symbol: kg/min
+    maximum_pressure:
+      value: 350
+      unit_symbol: bar
+    gas_temperature_range:
+      value:
+        min: -50
+        max: 125
+      unit_symbol: "°C"
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 60
+      unit_symbol: "°C"
+    environment_classes:
+      value: B / C
+    sw_version:
+      value: V1.00.00 / CRC 0xE3C94248
+    previous_certification:
+      value: PTB type approval certificate under German law no. PTB-1.5-4029117
+- role: electronic_calculator
+  type_designations:
+  - TBELTM
+  characteristics:
+    manufacturer:
+      value: TATSUNO EUROPE a.s.
+    display_type:
+      value: Electronic LCD
+    scale_interval:
+      value: 0.01 or 0.001
+      unit_symbol: kg
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: kg
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+    environment_classes:
+      value: M1 / E1 / H3
+    sw_version:
+      value: 1.01 / CRC 4092
+    previous_certification:
+      value: CMI Evaluation certificate no. ZR 141/15-0119
+- role: delivery_hose
+  type_designations:
+  - PARKER 5CNG
+  - PARKER 5PGH
+  alternatives: OR
+  characteristics:
+    maximum_length:
+      value: 6
+      unit_symbol: m
+- role: delivery_nozzle
+  type_designations:
+  - STÄUBLI GMV 06 (NGV1)
+  - STÄUBLI GMV09 (NGV1)
+  - STÄUBLI GMV12 (NGV2)
+  - WEH TK17 (NGV1)
+  - WEH TK26 (NGV2)
+  - OPW CT1000 (NGV1)
+  - OPW CT5000 (NGV2)
+  alternatives: OR
+matrix_tables:
+- name: Basic technical data by used measurement transducer
+  columns:
+  - attribute
+  - unit
+  - CNG050
+  - CNGmass
+  rows:
+  - attribute: max_flow_rate_qmax
+    unit: kg/min
+    CNG050: 30 / 70
+    CNGmass: 30 / 70
+  - attribute: min_flow_rate_qmin
+    unit: kg/min
+    CNG050: 2
+    CNGmass: 0.8
+  - attribute: gas_temperature_range
+    unit: "°C"
+    CNG050: "-25 to +55"
+    CNGmass: "-50 to +80"
+  - attribute: ambient_temperature_range
+    unit: "°C"
+    CNG050: "-40 to +55"
+    CNGmass: "-40 to +60"
+  - attribute: min_measured_quantity_mmq
+    unit: kg
+    CNG050: 2
+    CNGmass: 2
+  - attribute: scale_interval_mass_display
+    unit: kg
+    CNG050: 0.01 or 0.001
+    CNGmass: 0.01 or 0.001
+  - attribute: max_storage_pressure_pst
+    unit: MPa
+    CNG050: 30.0
+    CNGmass: 30.0
+  - attribute: max_pressure_of_gas_pmax
+    unit: MPa
+    CNG050: 30.0
+    CNGmass: 30.0
+  - attribute: min_pressure_of_gas_pmin
+    unit: MPa
+    CNG050: 2.0
+    CNGmass: 2.0
+  - attribute: max_filling_pressure_pv
+    unit: MPa
+    CNG050: 20.0 @ 15 °C / 26.5
+    CNGmass: 20.0 @ 15 °C / 26.5
+  - attribute: environment_classes
+    unit:
+    CNG050: M1 / E1
+    CNGmass: M1 / E1
+  - attribute: accuracy_class
+    unit:
+    CNG050: 1.5
+    CNGmass: 1.5
+  description: >-
+    Values depend on the installed measurement transducer (Micro Motion CNG050 or Endress + Hauser CNGmass).
+    Rows for MMQ, scale interval, pressures, environment class and accuracy class are shared (colspan)
+    in the original table.
+  footnotes: []

@@ -1,0 +1,220 @@
+_meta:
+  cert_id: 4997
+  num: R137/2012-B-NL1-19.14
+  applicant: Tokyo Keiso Co., Ltd.
+  issuing_year: '2019'
+  status: Valid
+  issuer: NL1
+  recommendation: R137
+  edition_year: 2012
+  extraction_method: glm-extract
+  source_pdf: certificates/R137/2012/r137-2012-nl1-2019-14.pdf
+certificate:
+  number: R 137/2012-B-NL1-19.14
+  scheme: B
+  project_number: '2301193'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2019-12-20'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: F. van Booma - de Smit
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Tokyo Keiso Co., Ltd.
+  address_lines:
+  - Shiba Toho Bldg 1-7-24 Shibakoen
+  - 105-8558 Minato-ku
+  - Japan
+manufacturers:
+- name: Tokyo Keiso Co., Ltd.
+  address_lines:
+  - Shiba Toho Bldg 1-7-24 Shibakoen
+  - 105-8558 Minato-ku
+  - Japan
+certified_type:
+  category: Gas meter
+  type_designations:
+  - UGT-1000
+  description: Ultrasonic gas meter
+characteristics:
+  type_level:
+    measurement_quantity:
+      value: Gas volume
+      unit_symbol:
+      unit_id:
+    environmental_classes:
+      value: M2 / E2
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    pressure_range:
+      value:
+        min: 4
+        max: 16
+      unit_symbol: bar(a)
+      unit_id:
+    gas_ambient_and_transducer_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers:
+      - 1)
+    designed_for:
+      value: Condensing humidity
+      unit_symbol:
+      unit_id:
+    orientation:
+      value: All orientations
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 20
+        max: 30
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: 1.0.2.3
+      unit_symbol:
+      unit_id:
+    minimum_straight_outlet_pipe_length:
+      value: 5DN
+      unit_symbol:
+      unit_id:
+    flow_conditioner_type:
+      value: Spearman
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: qmax
+    unit_symbol: m³/h
+    values:
+    - model: DN150
+      value: 2000
+    - model: DN200
+      value: 3600
+    - model: DN250
+      value: 5600
+  - attribute: qt
+    unit_symbol: m³/h
+    values:
+    - model: DN150
+      value: 200
+    - model: DN200
+      value: 360
+    - model: DN250
+      value: 560
+  - attribute: qmin
+    unit_symbol: m³/h
+    values:
+    - model: DN150
+      value: 65
+    - model: DN200
+      value: 120
+    - model: DN250
+      value: 180
+  config_level:
+  - attribute: minimum_straight_inlet_pipe_length
+    axis: flow_disturbance_condition
+    values:
+    - condition: mild disturbance
+      value: 10D
+      unit_symbol:
+    - condition: mild and severe disturbance
+      value: 20D
+      unit_symbol:
+    - condition: mild and severe disturbance with flow conditioner
+      value: 5D+FC+5D
+      unit_symbol:
+recommendation:
+  id: R137-1
+  edition: 2012
+  scheme: B
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: NMi-2301193-01
+  date: '2019-12-20'
+  pages: 45
+  role: type_evaluation_report
+model_family:
+  family_name:
+  models:
+  - model_id: DN150
+    label: 6 inch / DN150
+    attributes:
+      diameter_size_inch: 6
+      diameter_size_dn: 150
+  - model_id: DN200
+    label: 8 inch / DN200
+    attributes:
+      diameter_size_inch: 8
+      diameter_size_dn: 200
+  - model_id: DN250
+    label: 10 inch / DN250
+    attributes:
+      diameter_size_inch: 10
+      diameter_size_dn: 250
+footnotes:
+- marker: 1)
+  text: >-
+    The maximum temperature tests are performed at +60 °C. The instrument fully complied with the requirements
+    at +60 °C. However, OIML R 137 section 5.1 limits this temperature to four specific values, in this
+    case +55 °C.
+- marker: 2)
+  text: >-
+    If higher values are chosen for Qmin or Qt and/or lower values for Qmax, it has to be taken into account
+    that the ratio Qmax / Qmin ≥ 20 and ratio Qmax / Qt ≥ 5.
+matrix_tables:
+- name: General characteristics of the family of instruments
+  columns:
+  - diameter_size_inch
+  - diameter_size_dn
+  - qmax
+  - qt
+  - qmin
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - diameter_size_inch: 6
+    diameter_size_dn: 150
+    qmax: 2000
+    qt: 200
+    qmin: 65
+  - diameter_size_inch: 8
+    diameter_size_dn: 200
+    qmax: 3600
+    qt: 360
+    qmin: 120
+  - diameter_size_inch: 10
+    diameter_size_dn: 250
+    qmax: 5600
+    qt: 560
+    qmin: 180
+  description: >-
+    Maximum flow rate Qmax, transition flow rate Qt and minimum flow rate Qmin per diameter size of the
+    instrument family.
+  footnotes:
+  - 2)

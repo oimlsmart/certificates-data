@@ -1,0 +1,251 @@
+_meta:
+  cert_id: 4264
+  num: R076/2006-GB1-2017.07
+  applicant: ArjoHuntleigh AB
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2017-07.pdf
+certificate:
+  number: R76/2006-GB1-17.07
+  scheme: B
+  project_number: P01747
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-04-28'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: GB1
+applicants:
+- name: ArjoHuntleigh AB
+  address_lines:
+  - Hans Michelsensgatan 10
+  - 211 20 Malmö
+  - Sweden
+manufacturers:
+- name: ArjoHuntleigh AB
+  address_lines:
+  - Hans Michelsensgatan 10
+  - 211 20 Malmö
+  - Sweden
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - Enterprise 9000
+  - Enterprise 9100
+  - 9000X
+  - Citadel
+  - Citadel Plus
+  module_designation:
+  description: >-
+    Huntleigh Healthcare Enterprise 9000, Enterprise 9100, 9000X, Citadel and Citadel Plus hospital beds
+    incorporating a Class III, mains operated, self-indicating non-automatic weighing instrument with
+    a CDI-1600 indicator, four load cells, contour control and weighing functions, safety sides incorporating
+    attendant controls including weighing control buttons, identical weight displays and associated control
+    buttons on both sides of the bed, semi-automatic zero setting device, BED EXIT alarm function and
+    AUTO-COMP function.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    battery_backup:
+      value: optional
+    number_of_load_cells:
+      value: 4
+    zero_setting_device:
+      value: semi-automatic
+    verification_scale_interval:
+      value: 0.5
+      unit_symbol: kg
+    extended_indicating_scale_interval:
+      value: 0.1
+      unit_symbol: kg
+    bed_exit_alarm_threshold:
+      value:
+        min:
+        max: 50
+      unit_symbol: "%"
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 250
+    - model: Enterprise 9100
+      value: 250
+    - model: 9000X
+      value: 250
+    - model: Citadel
+      value: 270
+    - model: Citadel Plus
+      value: 522
+  - attribute: minimum_capacity
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 10
+    - model: Enterprise 9100
+      value: 10
+    - model: 9000X
+      value: 10
+    - model: Citadel
+      value: 10
+    - model: Citadel Plus
+      value: 10
+  - attribute: scale_interval
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 0.5
+    - model: Enterprise 9100
+      value: 0.5
+    - model: 9000X
+      value: 0.5
+    - model: Citadel
+      value: 0.5
+    - model: Citadel Plus
+      value: 0.5
+  - attribute: number_of_divisions
+    unit_symbol:
+    values:
+    - model: Enterprise 9000
+      value: 500
+    - model: Enterprise 9100
+      value: 500
+    - model: 9000X
+      value: 500
+    - model: Citadel
+      value: 540
+    - model: Citadel Plus
+      value: 1044
+  config_level: []
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+test_reports:
+- id: P01747b
+  pages: 14
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2017-04-28'
+  changes: Certificate first issued.
+model_family:
+  family_name:
+  models:
+  - model_id: Enterprise 9000
+    label: ArjoHuntleigh Healthcare Enterprise 9000
+  - model_id: Enterprise 9100
+    label: ArjoHuntleigh Healthcare Enterprise 9100
+  - model_id: 9000X
+    label: ArjoHuntleigh Healthcare Enterprise 9000X
+  - model_id: Citadel
+    label: ArjoHuntleigh Healthcare Citadel
+  - model_id: Citadel Plus
+    label: ArjoHuntleigh Healthcare Citadel Plus
+components:
+- role: Indicator
+  type_designations:
+  - CDI-1600
+  alternatives:
+  characteristics:
+    mounting:
+      value: integrated in hospital bed with contour control and weighing functions
+- role: Load cell
+  type_designations:
+  - '3410'
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Vishay Tedea Huntleigh
+    technology:
+      value: shear beam
+    capacity:
+      value: 1000
+      unit_symbol: lb
+    applicable_models:
+      value: all models
+- role: Load cell
+  type_designations:
+  - H8C
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Zemic (Zhonghang Electronic Measuring Instruments Co Ltd)
+    technology:
+      value: shear beam
+    capacity:
+      value: 500
+      unit_symbol: kg
+    applicable_models:
+      value: all models except Citadel Plus
+- role: Software - weighing module (QLCI)
+  type_designations:
+  - '0077730'
+  alternatives:
+  characteristics:
+    application_version_number:
+      value: '1.81'
+    function:
+      value: >-
+        four channel weighing module capable of sampling, digitizing and processing up to 4 load cells
+        individually
+- role: Software - display / control unit
+  type_designations:
+  - '070152'
+  - '070213'
+  - '070230'
+  alternatives:
+  characteristics:
+    application_version_number_enterprise:
+      value: 1.XX
+    application_version_number_citadel:
+      value: 2.XX
+    application_version_number_citadel_plus:
+      value: 2.XX
+    function:
+      value: >-
+        controls all functions of the electronic control system incorporating single button push controls
+        and nurse call
+footnotes: []
+matrix_tables:
+- name: Display software by model
+  columns:
+  - model
+  - software_name
+  - application_version_number
+  rows:
+  - model: Enterprise
+    software_name: '070152'
+    application_version_number: 1.XX
+  - model: Citadel
+    software_name: '070213'
+    application_version_number: 2.XX
+  - model: Citadel Plus
+    software_name: '070230'
+    application_version_number: 2.XX
+  description: >-
+    In the software release numbers, XX represents changes to the non-legally-relevant software which
+    may be modified by the manufacturer and do not affect the metrology parts of the software. The version
+    number can be displayed via the user interface.
+  footnotes: []

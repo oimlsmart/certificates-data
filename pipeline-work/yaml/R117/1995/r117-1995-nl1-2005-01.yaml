@@ -1,0 +1,231 @@
+_meta:
+  cert_id: 1377
+  num: R117/1995-NL1-2005.01
+  applicant: Tokheim Netherlands B.V.
+  issuing_year: '2005'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-nl1-2005-01.pdf
+certificate:
+  number: R117/1995-NL1-05.01
+  project_number: '412354'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2005-03-04'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  phone: "+31 78 6332 332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Tokheim, Retail Petroleum Systems
+  address_lines:
+  - Unit 6320
+  - Industrieweg 5
+  - 5531 AD Bladel
+  - The Netherlands
+manufacturers:
+- name: Tokheim UK Ltd
+  address_lines:
+  - Unit 3 Baker Road
+  - DD5 3RT Dundee
+  - Scotland
+- name: Tokheim Sofitam
+  address_lines:
+  - Route de Soliers
+  - 1450 Grentheville
+  - France
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - QUANTIUM-xxxT
+  description: Fuel Dispensers for Motor Vehicles, model QUANTIUM-xxxT (with PAS V2 gas elimination device)
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    maximum_volume_indication:
+      value: 9999.99
+      unit_symbol: L
+      unit_id:
+    maximum_unit_price:
+      value: 9.999
+      unit_symbol: "€/L"
+      unit_id:
+    maximum_price_to_pay:
+      value: 9999.99
+      unit_symbol: "€/L"
+      unit_id:
+  config_level:
+  - attribute: maximum_flowrate
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 130
+      unit_symbol: L/min
+      unit_id:
+    - condition: Gasoline
+      value: 80
+      unit_symbol: L/min
+      unit_id:
+  - attribute: minimum_flowrate
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 4
+      unit_symbol: L/min
+      unit_id:
+    - condition: Gasoline
+      value: 2
+      unit_symbol: L/min
+      unit_id:
+  - attribute: minimum_measured_quantity
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 2
+      unit_symbol: L
+      unit_id:
+    - condition: Gasoline
+      value: 2
+      unit_symbol: L
+      unit_id:
+  - attribute: number_of_volume_sensors
+    axis: configuration
+    values:
+    - condition: Configuration 1
+      value: 2
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 2
+      value: 2
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 3
+      value: 1
+      unit_symbol:
+      unit_id:
+  - attribute: number_of_pulsers
+    axis: configuration
+    values:
+    - condition: Configuration 1
+      value: 2
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 2
+      value: 2
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 3
+      value: 1
+      unit_symbol:
+      unit_id:
+  - attribute: installation_mode
+    axis: configuration
+    values:
+    - condition: Configuration 1
+      value: one installation
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 2
+      value: two installations
+      unit_symbol:
+      unit_id:
+    - condition: Configuration 3
+      value: one installation
+      unit_symbol:
+      unit_id:
+recommendation:
+- id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+- id: R118
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: R117/1995-NL1-05.01
+  pages: 60
+  role: test_report
+- id: CVN-10107397-01
+  pages: 27
+  role: test_report
+- id: CVN-307754
+  pages: 14
+  role: test_report
+- id: R117/1995-NL-01.08
+  role: documentation_file
+components:
+- role: combined pump and gas eliminator device
+  type_designations:
+  - PAS V2
+  alternatives:
+  characteristics: {}
+- role: volume sensor
+  type_designations:
+  - MA26
+  alternatives:
+  characteristics: {}
+- role: pulser
+  type_designations:
+  - MP-T1
+  alternatives:
+  characteristics: {}
+- role: calculator and indicating device
+  type_designations:
+  - World Wide Calculator (WWC)
+  alternatives:
+  characteristics: {}
+matrix_tables:
+- name: Metrological characteristics by liquid
+  columns:
+  - accuracy_class
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - liquid
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  column_units:
+  -
+  - L/min
+  - L/min
+  - L
+  -
+  - L
+  - "€/L"
+  - "€/L"
+  rows:
+  - accuracy_class: 0.5
+    maximum_flowrate: 130
+    minimum_flowrate: 4
+    minimum_measured_quantity: 2
+    liquid: Gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 9.999
+    maximum_price_to_pay: 9999.99
+  - accuracy_class: 0.5
+    maximum_flowrate: 80
+    minimum_flowrate: 2
+    minimum_measured_quantity: 2
+    liquid: Gasoline
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 9.999
+    maximum_price_to_pay: 9999.99
+  description: >-
+    Characteristics of the QUANTIUM-xxxT fuel dispenser, accuracy class 0.5, per liquid type (Gasoil,
+    Gasoline). Maximum volume indication, maximum unit price and maximum price to pay apply to both rows
+    (rowspan in source table).
+  footnotes: []

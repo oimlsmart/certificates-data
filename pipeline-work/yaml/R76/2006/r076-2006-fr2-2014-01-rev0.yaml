@@ -1,0 +1,194 @@
+_meta:
+  cert_id: 3387
+  num: R076/2006-FR2-2014.01 Rev. 0
+  applicant: Precia SA
+  issuing_year: '2014'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2014-01-rev0.pdf
+certificate:
+  number: R76/2006-FR2-14.01
+  project_number: '26566'
+  page_total: 2
+  member_state: France
+  date_issued: '2014-03-06'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Thomas LOMMAZSCH
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - France
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - France
+certified_type:
+  category: Indicator
+  type_designations:
+  - X112-B
+  - i20
+  - i30
+  - i35
+  - i40
+  - d20
+  module_designation:
+  description: >-
+    The indicator type X112-B is a separate module intended to be integrated in a non automatic weighing
+    instrument. It has several versions with the commercial designations i20 (general use), i30 and i35
+    (appropriate for weighbridges), i40 (weighing in a process context) or d20 (as a repeater). The housing
+    is metallic and presented as a table version, a cabinet back panel version or a front of housing version.
+    It is intended to be connected to a weighing channel comprising analogue load cells.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III or IIII
+      unit_symbol:
+    maximum_number_of_weighing_ranges:
+      value: 2
+      unit_symbol:
+    maximum_subtractive_tare_effect_t:
+      value: "-Max"
+      unit_symbol:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+      unit_symbol:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+    battery_supply_voltage:
+      value: 24
+      unit_symbol: V
+    number_of_weighing_channels:
+      value: 1
+      unit_symbol:
+    weighing_channel_type:
+      value: analogue
+      unit_symbol:
+    load_cell_excitation_voltage_eexc:
+      value: 5
+      unit_symbol: V
+    minimum_input_voltage_per_scale_interval_dumin:
+      value: 0.5
+      unit_symbol: µV
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+    minimum_load_cell_impedance_rlmin:
+      value: 43.75
+      unit_symbol: Ω
+    maximum_load_cell_impedance_rlmax:
+      value: 1245
+      unit_symbol: Ω
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    fraction_of_maximum_permissible_error_pind:
+      value: 0.4
+      unit_symbol:
+    load_cell_connection:
+      value: 6-wire shielded system
+      unit_symbol:
+    load_cell_connection_cable_reference:
+      value: PRECIA ref. 4005271 or similar
+      unit_symbol:
+    connection_cable_cross_section:
+      value: 0.68
+      unit_symbol: mm²
+    housing_material:
+      value: metallic
+      unit_symbol:
+    housing_mounting_versions:
+      value: table version, cabinet back panel version or front of housing version
+      unit_symbol:
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals_nind
+    axis: accuracy class / weighing range configuration
+    values:
+    - condition: class III, per weighing range
+      value: 6000
+      unit_symbol:
+    - condition: class IIII, per weighing range
+      value: 1000
+      unit_symbol:
+    - condition: class III, multi-interval configuration
+      value: 3 x 3000
+      unit_symbol:
+  - attribute: load_cell_connection_cable_maximum_length
+    axis: cable cross-section
+    values:
+    - condition: standard cross-section
+      value: 150
+      unit_symbol: m
+    - condition: 1 mm² cross-section
+      value: 220
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-P109775 – Document PCI/1
+  pages: 18
+  role: evaluation_report
+- id: LNE-N121109 – Document DE/2
+  pages: 18
+  role: test_report
+- id: LNE-P109775 – Document DMSI/2
+  pages: 48
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2014-03-06'
+  changes:
+model_family:
+  family_name: X112-B
+  models:
+  - model_id: i20
+    label: general use
+    attributes:
+      intended_use: general use
+  - model_id: i30
+    label: appropriate for weighbridges
+    attributes:
+      intended_use: weighbridges
+  - model_id: i35
+    label: appropriate for weighbridges
+    attributes:
+      intended_use: weighbridges
+  - model_id: i40
+    label: weighing in a process context
+    attributes:
+      intended_use: weighing in a process
+  - model_id: d20
+    label: as a repeater
+    attributes:
+      intended_use: repeater
+footnotes: []

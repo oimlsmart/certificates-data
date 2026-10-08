@@ -1,0 +1,252 @@
+_meta:
+  cert_id: 2250
+  num: R076/1992-GB1-2009.07
+  applicant: Datalogic Scanning, Inc.
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-gb1-2009-07.pdf
+certificate:
+  number: R76/1992-GB1-09.07
+  project_number: T1128/0174
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2009-06-24'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Weights and Measures Laboratory
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  oiml_issuer_id: GB1
+applicants:
+- name: Datalogic Scanning, Inc
+  address_lines:
+  - 959 Terry Street
+  - Eugene
+  - Oregon 97402
+  - USA
+manufacturers:
+- name: Datalogic Scanning, Inc
+  address_lines:
+  - 959 Terry Street
+  - Eugene
+  - Oregon 97402
+  - USA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - Magellan 8502
+  - Magellan 8504
+  description: >-
+    Class III, mains-powered, self-indicating non-automatic weighing instruments fitted with a barcode
+    scanner. The diecast base unit supports the load cell, barcode scanner assembly, main board and analogue
+    boards; the scale sub-assembly is mounted on the load cell and the steel L-shaped load receptor is
+    mounted on the four supporting points on the scale sub-assembly. Protected interfaces: POS terminal
+    (RJ10), remote display (RJ4), auxiliary port (RJ10), scale host (RJ10), EAS port (RJ4), power (Molex
+    6). Optional one-piece Sensormatic EAS coil assembly. Additional LCD customer/operator display model
+    8300RD with single or dual display configuration.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_verification_scale_intervals:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 9.99
+        max: 15
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_capacity:
+      value: 20
+      unit_symbol: e
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min:
+        max: 5
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC mains
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    output_supply_voltage:
+      value: "+5 V DC and +12 V DC"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: weighing_range_lower_limit
+    axis: interval_mode
+    values:
+    - condition: Single
+      value: 0
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Lower)
+      value: 0
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Upper)
+      value: 6
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: weighing_range_upper_limit
+    axis: interval_mode
+    values:
+    - condition: Single
+      value: 15
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Lower)
+      value: 6
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Upper)
+      value: 15
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: verification_scale_interval
+    axis: interval_mode
+    values:
+    - condition: Single
+      value: 0.005
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Lower)
+      value: 0.002
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: Dual (Upper)
+      value: 0.005
+      unit_symbol: kg
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - III
+test_reports:
+- id: R2002/104 (NSC)
+  pages: 68
+  role: test_report
+- id: R2003/148 (NSC)
+  pages: 68
+  role: test_report
+- id: SN 1093 (NWML)
+  pages: 49
+  role: test_report
+- id: P00093 (NWML)
+  pages: 12
+  role: documentation_file
+revision_history:
+- revision: '09.07'
+  date: '2009-06-24'
+  changes: Certificate first issued
+model_family:
+  family_name: Magellan
+  models:
+  - model_id: Magellan 8502
+    label: Magellan 8502 scanner scale
+  - model_id: Magellan 8504
+    label: Magellan 8504 scanner scale
+components:
+- role: load cell
+  type_designations:
+  - Shekel Scales load cell (Datalogic part number 8-0929)
+  - Mettler Toledo load cell (Datalogic part number 8-0575)
+  alternatives: OR
+  characteristics:
+    note: >-
+      With the Shekel Scales load cell the permitted weighing ranges apply as listed; with the Mettler
+      Toledo load cell the weighing parameters are as defined on page 2.
+- role: additional LCD customer/operator display
+  type_designations:
+  - 8300RD
+  alternatives:
+  characteristics:
+    optional: true
+    display_configurations:
+    - single
+    - dual
+- role: EAS coil assembly
+  type_designations:
+  - Sensormatic EAS coil assembly (one piece)
+  alternatives:
+  characteristics:
+    optional: true
+- role: mains power adapter
+  type_designations:
+  - C&C Jetronic PSU25A-13
+  - Philong PSM28U-201
+  alternatives: OR
+  characteristics:
+    input: 100-240 V AC, 50/60 Hz mains supply
+    output: "+5 V DC and +12 V DC supply to the weighing instrument and barcode scanner"
+footnotes: []
+matrix_tables:
+- name: Permitted weighing ranges with the Shekel Scales load cell (Datalogic part number 8-0929)
+  columns:
+  - interval_mode
+  - lower_weight_limit
+  - upper_weight_limit
+  - verification_scale_interval
+  column_units:
+  -
+  - kg
+  - kg
+  - kg
+  rows:
+  - interval_mode: Single
+    lower_weight_limit: 0
+    upper_weight_limit: 15
+    verification_scale_interval: 0.005
+  - interval_mode: Dual (Lower)
+    lower_weight_limit: 0
+    upper_weight_limit: 6
+    verification_scale_interval: 0.002
+  - interval_mode: Dual (Upper)
+    lower_weight_limit: 6
+    upper_weight_limit: 15
+    verification_scale_interval: 0.005
+  description: >-
+    Weighing ranges permitted when using the Shekel Scales load cell. When using the Mettler Toledo load
+    cell (Datalogic part number 8-0575), the weighing parameters are as defined on page 2.
+  footnotes: []

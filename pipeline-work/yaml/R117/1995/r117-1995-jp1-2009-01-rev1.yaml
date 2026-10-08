@@ -1,0 +1,236 @@
+_meta:
+  cert_id: 2552
+  num: R117/1995-JP1-2009.01 Rev. 1
+  applicant: Tatsuno Corporation Yokohama plant
+  issuing_year: '2010'
+  status: Valid
+  issuer: JP1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-jp1-2009-01-rev1.pdf
+certificate:
+  number: R117/1995-JP1-09.01
+  scheme: A
+  page_total: 4
+  member_state: Japan
+  date_issued: '2010-10-22'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563
+  - Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: TATSUNO CORPORATION
+  address_lines:
+  - 2-12-13, Shibaura Minato-ku, TOKYO, 108-8520, Japan
+manufacturers:
+- name: TATSUNO CORPORATION Yokohama plant
+  address_lines:
+  - 200, Iijima-cho, Sakae-ku, Yokohama 244-8501, Japan
+- name: TATSUNO ENGINEERING & SERVICE CO., LTD.
+  address_lines:
+  - 19/79 Mu 18 Kukot Lamlukka Pathumthani Thailand 12130
+- name: TATSUNO INDIA PRIVATE LIMITED
+  address_lines:
+  - >-
+    Plot No. B-31 & B-32 MIDC, Taloja Industrial Area Village - Pendhar, Taluka - Panvel, Dist - Kolaba,
+    Navi Mumbai, Maharashtra, India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Tatsuno Sunny-G II series
+  - Tatsuno Sunny-XE series
+  module_designation: Not applicable
+  description: Fuel dispenser for motor vehicles, Tatsuno Sunny-G II series and Sunny-XE series
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    liquids:
+      value: Petrol, Diesel, Kerosene
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_flow_rate:
+      value: 3
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication_digits:
+      value: 7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_digits:
+      value: 5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay_digits:
+      value: 7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: calculator_pattern
+    unit_symbol:
+    values:
+    - model: Sunny-G II series
+      value: ER-1261
+    - model: Sunny-XE series
+      value: ER-1000
+  config_level:
+  - attribute: maximum_flow_rate
+    axis: flowrate_configuration
+    values:
+    - condition: Low flowrate
+      value: 50
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: High flowrate
+      value: 80
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+recommendation:
+- id: R117
+  edition: 1995
+  scheme: A
+  accuracy_classes:
+  - 0.5
+- id: R118
+  edition: 1995
+test_reports:
+- id: R117/1995-JP1-2009-01
+  role: test_report
+- id: R117/1995-JP1-2010-01
+  role: test_report
+revision_history:
+- revision: '1'
+model_family:
+  family_name:
+  models:
+  - model_id: Sunny-G II series
+    attributes:
+      calculator: ER-1261
+  - model_id: Sunny-XE series
+    attributes:
+      calculator: ER-1000
+components:
+- role: Meter
+  type_designations:
+  - FM-1007
+  characteristics:
+    manufacturer: TATSUNO CORPORATION Yokohama plant
+- role: Gas elimination device (integral with pump)
+  type_designations:
+  - FP-1001
+  characteristics:
+    manufacturer: TATSUNO CORPORATION Yokohama plant
+- role: Measuring transducer
+  type_designations:
+  - EK-1025
+  characteristics:
+    manufacturer: TATSUNO CORPORATION Yokohama plant
+- role: Calculator
+  type_designations:
+  - ER-1261
+  - ER-1000
+  alternatives: OR
+  characteristics:
+    manufacturer: TATSUNO CORPORATION Yokohama plant
+    model_association:
+      Sunny-G II series: ER-1261
+      Sunny-XE series: ER-1000
+- role: Hose
+  type_designations:
+  - ZH-1140
+  - ZH-1141
+  - ZH-1142
+  - ZH-1143
+  - SLIMLINE16
+  - SLIMLINE19
+  - SLIMLINE25
+  - FLEXSTEEL HARDWALL 5/8
+  - FLEXSTEEL HARDWALL 3/4
+  - FLEXSTEEL HARDWALL 1
+  - 2BRADE BC SOFTWALL 5/8
+  - 2BRADE BC SOFTWALL 3/4
+  alternatives: OR
+  characteristics:
+    manufacturers:
+      TATSUNO CORPORATION Yokohama plant:
+      - ZH-1140
+      - ZH-1141
+      - ZH-1142
+      - ZH-1143
+      ELAFLEX:
+      - SLIMLINE16
+      - SLIMLINE19
+      - SLIMLINE25
+      Goodyear:
+      - FLEXSTEEL HARDWALL 5/8
+      - FLEXSTEEL HARDWALL 3/4
+      - FLEXSTEEL HARDWALL 1
+      - 2BRADE BC SOFTWALL 5/8
+      - 2BRADE BC SOFTWALL 3/4
+- role: Nozzle
+  type_designations:
+  - FN-1001
+  - FN-1002
+  - FN-1021
+  - FN-1024
+  - ZVA Slimline
+  - ZVA25
+  - TYPE11
+  - TYPE7
+  - A2500
+  - A2501
+  alternatives: OR
+  characteristics:
+    manufacturers:
+      TATSUNO CORPORATION Yokohama plant:
+      - FN-1001
+      - FN-1002
+      - FN-1021
+      - FN-1024
+      ELAFLEX:
+      - ZVA Slimline
+      - ZVA25
+      OPW:
+      - TYPE11
+      - TYPE7
+      EMCO:
+      - A2500
+      - A2501
+- role: Break valve
+  type_designations:
+  - Safety Break Swivels SSB 16
+  - ESB 16
+  - TYPE 66
+  - A2219
+  alternatives: OR
+  characteristics:
+    manufacturers:
+      ELAFLEX:
+      - Safety Break Swivels SSB 16
+      - ESB 16
+      OPW:
+      - TYPE 66
+      EMCO:
+      - A2219

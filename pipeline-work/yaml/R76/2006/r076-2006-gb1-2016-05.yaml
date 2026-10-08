@@ -1,0 +1,191 @@
+_meta:
+  cert_id: 3892
+  num: R076/2006-GB1-2016.05
+  applicant: CAS Corporation
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2016-05.pdf
+certificate:
+  number: R76/2006-GB1-16.05
+  scheme: B
+  project_number: TS1201/0122
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2016-02-24'
+  oiml_issuer_id: '0135'
+issuing_authority:
+  name: National Measurement and Regulation Office
+  address_lines:
+  - 1 Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/nmro
+  oiml_issuer_id: '0135'
+applicants:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+manufacturers:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+- name: Shanghai CAS Electronics Co., Ltd
+  address_lines:
+  - Maixinroad 448, Xinqiaozhen, Songjiangqu
+  - Shanghai
+  - China
+- name: CAS (Zhejiang) Electronics Co., Ltd
+  address_lines:
+  - 99# Changjiang Road, Jiashan County
+  - Zhejiang Province
+  - China
+certified_type:
+  category: Indicator
+  type_designations:
+  - WTM Series
+  - WTM-200
+  - WTM-500
+  module_designation:
+  description: >-
+    Family of indicating device / weighing module designated the WTM Series, designed to be used as part
+    of a single-interval, Class III or IIII, non-automatic weighing instrument. The family comprises the
+    WTM-200 (weighing module) and WTM-500 (indicator) models. The indicators are self-indicating and DC-powered.
+    The instruments are not designed for direct sales to the public. Plastic enclosure; WTM-500 has a
+    7 segment 0.3" LED display, 4 operating buttons and 6 enunciator LEDs. Devices: initial zero setting
+    device on power up, semi-automatic zero setting, zero tracking (optional), semi-automatic subtractive
+    tare balancing, zero-indicator, indication of stable equilibrium, net indicator, gravity compensation,
+    printing. Interfaces: load cell connection (6-wire), RS232/485, analogue output, external I/O, Ethernet,
+    Profibus. Software is held in firmware with identification number V1.xx; download of software is prevented
+    by a jumper (JP1) on the main board; access to legally relevant parameters is only allowed via a jumper
+    on the circuit board. Sealing: access to the setup/configuration jumper is prevented by sealing the
+    enclosure via a tamper-evident solution; the load cell connection is sealed via a tamper-evident solution.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 9
+        max: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    maximum_tare_value:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 40
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.36
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+      unit_id:
+    fraction_of_maximum_permissible_error_pi:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    software_identification:
+      value: V1.xx
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: Class III
+      value: 10000
+      unit_symbol:
+    - condition: Class IIII
+      value: 1000
+      unit_symbol:
+  - attribute: load_cell_cable_maximum_length
+    axis: load_cell_connection
+    values:
+    - condition: 6-wire configuration
+      value: 74
+      unit_symbol: m/mm²
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P01501
+  pages: 14
+  role: evaluation_report
+revision_history:
+- revision: R76/2006-GB1-16.05
+  date: '2016-02-24'
+  changes: Certificate first issued.
+model_family:
+  family_name: WTM Series
+  models:
+  - model_id: WTM-200
+    label: weighing module
+    attributes:
+      display: requires connection to a suitable display and operating device (e.g. keypad)
+  - model_id: WTM-500
+    label: indicator
+    attributes:
+      display: 7 segment 0.3" LED
+      operating_buttons: 4
+      enunciator_leds: 6
+components:
+- role: load_cell
+  type_designations: []
+  alternatives:
+  characteristics:
+    approval_requirement: >-
+      A respective OIML Certificate of Conformity (R60) must be issued for the load cell, containing the
+      load cell types and necessary load cell data required for the manufacturer's declaration of compatibility
+      of modules and any particular installation requirements
+    humidity_requirement: >-
+      A load cell marked NH is allowed only if humidity testing to R76 has been conducted on this load
+      cell
+    compatibility: >-
+      Compatibility of the load cells and indicator is established by the manufacturer by means of the
+      compatibility of modules calculation at the time of verification
+    transmission: Standard type

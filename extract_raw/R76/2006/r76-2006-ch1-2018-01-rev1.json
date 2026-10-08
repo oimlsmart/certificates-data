@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610082008239ed95aace09549f5",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this certificate markdown.\n\nCertificate details:\n- Number: R76/2006-A-CH1-18.01 Rev. 1\n- Scheme: A\n- Member State: Switzerland\n- OIML Issuer ID: CH1\n- Date issued: 2026-06-02\n- Page total: 2\n\nIssuing authority:\n- Name: Federal Institute of Metrology METAS\n- Address lines: Lindenweg 50, 3003 Bern-Wabern, Switzerland\n- Person responsible: Gulian Couvreur, Head of METAS-Cert\n- Phone: +41 58 387 01 11\n- Website: www.metas.ch\n- OIML issuer ID: CH1\n\nApplicant:\n- seca gmbh & co. kg\n- Hammer Steindamm 3-25, 22089 Hamburg, Deutschland\n\nManufacturer: same as applicant (seca gmbh & co. kg)\n\nCertified type:\n- Category: The description says \"Interface module with integrated data storage (alibi storage) and separate reading software with integrated primary indicator\". This is a scale-related module — likely category could be \"Interface module\" or under R76 it would be a module of a non-automatic weighing instrument. Category: could be \"Interface module\" — but per the schema, category examples: \"Load cell\", \"Indicator\", \"Measuring system\"... This is an interface module with integrated data storage and separate reading software with integrated primary indicator. Best fit: \"Indicator\" or \"Interface module\". I'll use \"Interface module\" as it's described that way. Actually, given R76-1 covers non-automatic weighing instruments, this is likely classified as an \"electronic interface module\" with primary indicator. I'll put category \"Interface module\" and description as given.\n- Type designations: [\"seca 452\"]\n- Module designation: not explicitly stated; it says \"interface module with integrated data storage ... and separate reading software with integrated primary indicator\". Not clearly \"Analog load cell\" etc. I'll omit or set null. The schema says \"Not applicable\" | \"Analog load cell\" | null. Since not mentioned, omit.\n\nRecommendation: R76, edition 2006, scheme A. Accuracy classes not mentioned — omit. Actually recommendation id canonical: \"R76\". Edition: 2006 (int). It's R 76-1 edition 2006. Edition as int: 2006.\n\nTest reports:\n- CH-MIER-26002-00, date 2026-06-02, pages 8, role: type_evaluation_report\n- CH-MIPC-26001-00_LERD, date 2026-06-02, pages 2, role: documentation_file\n\nRevision history:\n- Revision \"00\", date 2018-04-30, changes \"First issue\"\n- Revision \"01\", date 2026-06-02, changes \"Adjustment of Type examination certificate numbers; Addition of a S2B Interface; Type plate with new certificate number\"\n\nCertificate: page_total 2, date_issued 2026-06-02, project_number? Not given. Scheme A.\n\nCharacteristics: no measurable characteristics given. Omit.\n\nNo matrix tables, no models, no components.\n\nOutput JSON.",
+      "signature": "54ad99229374492f9fe72dc4"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"certificate\": {\n    \"number\": \"R76/2006-A-CH1-18.01 Rev. 1\",\n    \"scheme\": \"A\",\n    \"page_total\": 2,\n    \"member_state\": \"Switzerland\",\n    \"date_issued\": \"2026-06-02\",\n    \"oiml_issuer_id\": \"CH1\"\n  },\n  \"issuing_authority\": {\n    \"name\": \"Federal Institute of Metrology METAS\",\n    \"address_lines\": [\n      \"Lindenweg 50\",\n      \"3003 Bern-Wabern\",\n      \"Switzerland\"\n    ],\n    \"person_responsible\": \"Gulian Couvreur\",\n    \"person_title\": \"Head of METAS-Cert\",\n    \"phone\": \"+41 58 387 01 11\",\n    \"website\": \"www.metas.ch\",\n    \"oiml_issuer_id\": \"CH1\"\n  },\n  \"applicants\": [\n    {\n      \"name\": \"seca gmbh & co. kg\",\n      \"address_lines\": [\n        \"Hammer Steindamm 3-25\",\n        \"22089 Hamburg\",\n        \"Deutschland\"\n      ]\n    }\n  ],\n  \"manufacturers\": [\n    {\n      \"name\": \"seca gmbh & co. kg\",\n      \"address_lines\": [\n        \"Hammer Steindamm 3-25\",\n        \"22089 Hamburg\",\n        \"Deutschland\"\n      ]\n    }\n  ],\n  \"certified_type\": {\n    \"category\": \"Interface module\",\n    \"type_designations\": [\n      \"seca 452\"\n    ],\n    \"description\": \"Interface module with integrated data storage (alibi storage) and separate reading software with integrated primary indicator\"\n  },\n  \"recommendation\": {\n    \"id\": \"R76\",\n    \"edition\": 2006,\n    \"scheme\": \"A\"\n  },\n  \"test_reports\": [\n    {\n      \"id\": \"CH-MIER-26002-00\",\n      \"date\": \"2026-06-02\",\n      \"pages\": 8,\n      \"role\": \"type_evaluation_report\"\n    },\n    {\n      \"id\": \"CH-MIPC-26001-00_LERD\",\n      \"date\": \"2026-06-02\",\n      \"pages\": 2,\n      \"role\": \"documentation_file\"\n    }\n  ],\n  \"revision_history\": [\n    {\n      \"revision\": \"00\",\n      \"date\": \"2018-04-30\",\n      \"changes\": \"First issue\"\n    },\n    {\n      \"revision\": \"01\",\n      \"date\": \"2026-06-02\",\n      \"changes\": \"Adjustment of Type examination certificate numbers; Addition of a S2B Interface; Type plate with new certificate number\"\n    }\n  ]\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 4053,
+    "output_tokens": 1293,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

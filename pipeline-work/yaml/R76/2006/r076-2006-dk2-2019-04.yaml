@@ -1,0 +1,171 @@
+_meta:
+  cert_id: 4783
+  num: R76/2006-A-DK2-19.04
+  applicant: Avery Weigh-Tronix
+  issuing_year: '2019'
+  status: Valid
+  issuer: DK2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-dk2-2019-04.pdf
+certificate:
+  number: R76/2006-A-DK2-2019.04
+  scheme: A
+  page_total: 4
+  member_state: Denmark
+  date_issued: '2019-02-27'
+  oiml_issuer_id: DK2
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Leif Madsen
+  email: jhje@force.dk
+applicants:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands
+  - B66 2LP
+  - England
+manufacturers:
+- name: Avery Weigh-Tronix
+certified_type:
+  category: Indicator
+  type_designations:
+  - ZM110
+  module_designation: Non-automatic electronic weighing indicator
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III and IIII
+    weighing_range:
+      value: Single-interval or multi-range (2 ranges)
+    maximum_tare_effect:
+      value: "-Max within display limits"
+    fractional_factor:
+      value: 0.5
+    minimum_input_voltage_per_vsi:
+      value: 1
+      unit_symbol: μV
+    excitation_voltage:
+      value: 5
+      unit_symbol: V
+    excitation_voltage_type:
+      value: DC
+    remote_sense_circuit:
+      value: Present using 6-wire connection
+    minimum_input_impedance:
+      value: 87
+      unit_symbol: Ω
+    maximum_input_impedance:
+      value: 1100
+      unit_symbol: Ω
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    power_supply_adapter:
+      value: external AC to 12 VDC adapter
+    operational_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    max_6_wire_cable_length_between_indicator_and_junction_box:
+      value: 21913
+      unit_symbol: m/mm²
+    approved_software_version:
+      value: '100115'
+  config_level:
+  - attribute: max_number_of_verification_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 4200
+      unit_symbol:
+    - condition: IIII
+      value: 1000
+      unit_symbol:
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 118-33963.10
+  date: '2019-01-23'
+  pages: 69
+  role: evaluation_report
+- id: 118-33963.90
+  date: '2019-01-23'
+  pages: 3
+  role: type_evaluation_report
+- id: 118-33963
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2019-02-27'
+  changes: First issuance
+components:
+- role: interface
+  type_designations:
+  - RS232C
+  alternatives:
+  characteristics:
+    optional:
+      value: true
+    connection:
+      value: separate interface board
+- role: interface
+  type_designations:
+  - Bluetooth
+  alternatives:
+  characteristics:
+    optional:
+      value: true
+    connection:
+      value: separate interface board
+- role: initial_zero_setting_device
+  characteristics:
+    range:
+      value:
+        min: -10
+        max: 10
+      unit_symbol: "%"
+    range_reference:
+      value: Max
+- role: semi_automatic_zero_setting_device
+  characteristics:
+    range:
+      value:
+        min: -2
+        max: 2
+      unit_symbol: "%"
+    range_reference:
+      value: Max
+- role: semi_automatic_subtractive_tare_device
+- role: gross_net_display
+- role: printing_device
+  characteristics:
+    connection:
+      value: optional serial data port
+- role: gravity_compensation_device
+- role: status_indicators
+  characteristics:
+    indicators:
+      value: Stable equilibrium, Zero, Gross, Net and active range

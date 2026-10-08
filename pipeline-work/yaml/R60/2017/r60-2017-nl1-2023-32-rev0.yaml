@@ -1,0 +1,208 @@
+_meta:
+  cert_id: 6077
+  num: R60/2017-A-NL1-23.32 Rev. 0
+  applicant: Mettler-Toledo Inc.
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2017
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2017/r60-2017-nl1-2023-32-rev0.pdf
+certificate:
+  number: R60/2017-A-NL1-23.32
+  scheme: A
+  project_number: '3747976'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2023-11-20'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler Toledo, LLC
+  address_lines:
+  - 1150 Dearborn Drive
+  - Worthington, OH 43805
+  - United States of America
+manufacturers:
+- name: Mettler Toledo, LLC
+  address_lines:
+  - 1150 Dearborn Drive
+  - Worthington, OH 43805
+  - United States of America
+certified_type:
+  category: Load cell
+  type_designations:
+  - '61037713'
+  - '61038019'
+  - '61036052'
+  - '61037137'
+  - '61037854'
+  - '61038020'
+  - '61038876'
+  - '61038021'
+  - '61037497'
+  - '61038948'
+  - '61037496'
+  module_designation: Analog load cell
+  description: 'A compression load cell, with strain gauges. Registered trade name: Mettler Toledo'
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    rated_output:
+      value: 2.0 ± 0.1
+      unit_symbol: mV/V
+      unit_id:
+    ratio_z_emax_over_2dr:
+      value: 11000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    input_impedance:
+      value: 1110 ± 50
+      unit_symbol: Ω
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    output_impedance:
+      value: 1025 ± 25
+      unit_symbol: Ω
+      unit_id:
+    recommended_excitation:
+      value: 10
+      unit_symbol: V
+      unit_id:
+    maximum_excitation:
+      value: 30
+      unit_symbol: V
+      unit_id:
+    excitation_type:
+      value: AC / DC
+      unit_symbol:
+      unit_id:
+    transducer_material:
+      value: Stainless steel
+      unit_symbol:
+      unit_id:
+    atmospheric_protection:
+      value: Hermetically welded
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=250-2000kg
+      value:
+        min: 250
+        max: 2000
+    - model: Emax=2000-10000kg
+      value:
+        min: 2000
+        max: 10000
+  - attribute: max_load_cell_intervals_n
+    values:
+    - model: Emax=250-2000kg
+      value: 4000
+      footnote_markers:
+      - 1)
+    - model: Emax=2000-10000kg
+      value: 6000
+      footnote_markers:
+      - 1)
+  - attribute: ratio_y_emax_over_vmin
+    values:
+    - model: Emax=250-2000kg
+      value: 10000
+      footnote_markers:
+      - 1)
+    - model: Emax=2000-10000kg
+      value: 20000
+      footnote_markers:
+      - 1)
+  config_level:
+  - attribute: rated_output_alternative
+    axis: sample
+    values:
+    - condition: 250 kg sample
+      value: 1.75 ± 0.1
+      unit_symbol: mV/V
+  - attribute: input_impedance_alternative
+    axis: sample
+    values:
+    - condition: 250 kg and 10000 kg samples
+      value: 1100 ± 50
+      unit_symbol: Ω
+  - attribute: output_impedance_alternative
+    axis: sample
+    values:
+    - condition: 250 kg and 10000 kg samples
+      value: 1025 ± 50
+      unit_symbol: Ω
+recommendation:
+  id: R60
+  edition: 2017
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: NMi-2402506-01
+  date: '2021-05-27'
+  pages: 74
+  role: test_report
+- id: NMi-2402506-02
+  date: '2021-05-27'
+  pages: 68
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2023-11-20'
+  changes: Initial issue.
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=250-2000kg
+    label: 250 kg up to 2000 kg
+  - model_id: Emax=2000-10000kg
+    label: 2000 kg up to and including 10000 kg
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax, Y and Z can be reduced separately.

@@ -1,0 +1,277 @@
+_meta:
+  cert_id: 4140
+  num: R076/2006-GB1-2017.02
+  applicant: Avery Weigh-Tronix
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2017-02.pdf
+certificate:
+  number: R76/2006-GB1-17.02
+  project_number: P01948
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-01-19'
+  oiml_issuer_id: '0135'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: '0135'
+applicants:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+manufacturers:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+certified_type:
+  category: Indicator
+  type_designations:
+  - ZK830
+  - ZK830-PK0
+  module_designation:
+  description: >-
+    The certified pattern is the Avery Weigh-Tronix ZK830, a self-indicating electronic indicator powered
+    from mains (via PSU), DC or an external battery pack, designed to be used as part of a Class III non-automatic
+    weighing instrument. It consists of a plastic (ABS) enclosure that may either be mounted to a BSQ
+    base or alternatively desk/wall mounted using an optional bracket. An IBN LCD display (black background
+    with green digits) is provided. The indicator features 6 operational keys, with an optional ZK830-PK0
+    add-on keypad providing 15 additional operational keys including a numeric keypad and LED indicators.
+    Load cell input variants: BSQ digital base interface, or a 5 V excitation analogue load cell interface
+    option card (allows connection of a second platform, maximum 6 load cells). Interfaces: BSQ digital
+    base interface, keypad option interface, 3 logic level inputs, 3 open collector outputs, 2 RS232 serial
+    ports, 10/100 Ethernet and USB virtual serial port; optional internal wireless LAN card (802.11b/g).
+    Devices: semi-automatic zero setting (max 4% of Max), zero tracking (max 4% of Max), semi-automatic
+    subtractive tare weighing, pre-set tare, recall of gross indication when tare is active, determination
+    and indication of stability of equilibrium, checking of display, printing, gravity compensation, real
+    time clock, command via external device (PC), counting, accumulation, checkweighing, target weighing,
+    percentage weighing, and Gross/Net/Tare/Print/Zero/Motion/Over-Under weight/%PCWT/Battery indicators;
+    the ZK830-PK0 keypad option additionally provides connection to an additional load receptor with load
+    receptor indicator, preset tare indicator, PLUs, piece weight selection and extended indicating. Software
+    is designated AWT30-500195 version 1.x.x.x (x.x.x identifies non-legally relevant software that may
+    be modified by the manufacturer); calibration and legally relevant parameters are protected via physical
+    means (sealed jumper on main board) or software means (password and incrementing counters).
+characteristics:
+  type_level:
+    operating_temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    maximum_tare:
+      value: -100
+      unit_symbol: "%"
+      unit_id:
+    semi_automatic_zero_setting_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    zero_tracking_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    number_of_operational_keys:
+      value: 6
+      unit_symbol:
+      unit_id:
+    software_designation:
+      value: AWT30-500195
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: 1.x.x.x
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: power_supply_voltage
+    axis: power_supply_variant
+    values:
+    - condition: mains via PSU (AC)
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+    - condition: DC
+      value:
+        min: 12
+        max: 36
+      unit_symbol: V
+      unit_id:
+    - condition: external battery pack
+      value: external battery pack
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_number_of_scale_intervals
+    axis: load_cell_input_variant
+    values:
+    - condition: BSQ Digital Base
+      value: 10000
+      unit_symbol:
+      unit_id:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 6000
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_preset_tare
+    axis: scale_configuration
+    values:
+    - condition: single interval
+      value: -100
+      unit_symbol: "%"
+      unit_id:
+    - condition: multi-interval/range
+      value: "-Max1"
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_connection_cable
+    axis: load_cell_input_variant
+    values:
+    - condition: BSQ Digital Base
+      value: BSQ Digital Base interface
+      unit_symbol:
+      unit_id:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 4 or 6-core with braided outer screen, flexible PVC overall jacket
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 5
+      unit_symbol: V
+      unit_id:
+  - attribute: minimum_load_cell_impedance
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 58.33
+      unit_symbol: Ω
+      unit_id:
+  - attribute: maximum_load_cell_impedance
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+  - attribute: minimum_input_voltage_per_scale_interval
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 0.8
+      unit_symbol: µV
+      unit_id:
+  - attribute: measuring_range_minimum_voltage
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 0
+      unit_symbol: mV
+      unit_id:
+  - attribute: measuring_range_maximum_voltage
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 15
+      unit_symbol: mV
+      unit_id:
+  - attribute: fraction_of_maximum_permitted_error_pind
+    axis: load_cell_input_variant
+    values:
+    - condition: 5V EXC analogue load cell interface option card
+      value: 0.5
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_cable_length_per_conductor_cross_section
+    axis: load_cell_input_variant
+    values:
+    - condition: 6-wire (5V EXC analogue load cell interface option card)
+      value: 196
+      unit_symbol: m/mm²
+      unit_id:
+  - attribute: maximum_load_cell_cable_length
+    axis: load_cell_input_variant
+    values:
+    - condition: 6-wire (5V EXC analogue load cell interface option card), limited
+      value: 30
+      unit_symbol: m
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+test_reports:
+- id: P01948
+  pages: 18
+  role: evaluation_report
+revision_history:
+- revision: R76/2006-GB1-17.02
+  date: '2017-01-19'
+  changes: Certificate first issued.
+components:
+- role: digital load cell input variant (BSQ digital base interface)
+  type_designations:
+  - BSQ Digital Base
+  alternatives: OR
+  characteristics:
+    maximum_number_of_scale_intervals:
+      value: 10000
+      unit_symbol:
+      unit_id:
+- role: >-
+    analogue load cell input variant (option card with 5 V excitation, allows connection of a second platform)
+  type_designations:
+  - 5V EXC analogue load cell interface option card
+  alternatives: OR
+  characteristics:
+    maximum_number_of_load_cells:
+      value: 6
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+- role: optional add-on keypad
+  type_designations:
+  - ZK830-PK0
+  alternatives:
+  characteristics:
+    additional_operational_keys:
+      value: 15
+      unit_symbol:
+      unit_id:
+- role: optional internal wireless LAN card
+  type_designations: []
+  alternatives:
+  characteristics:
+    wireless_standard:
+      value: 802.11b/g
+      unit_symbol:
+      unit_id:

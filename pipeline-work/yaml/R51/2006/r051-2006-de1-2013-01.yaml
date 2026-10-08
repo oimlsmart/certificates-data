@@ -1,0 +1,482 @@
+_meta:
+  cert_id: 3189
+  num: R051/2006-DE1-2013.01
+  applicant: Robert BOSCH GmbH
+  issuing_year: '2013'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2013-01.pdf
+certificate:
+  number: R51/2006-DE1-13.01
+  page_total: 3
+  member_state: Germany
+  date_issued: '2013-06-21'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Head of Department
+applicants:
+- name: Robert Bosch GmbH
+  address_lines:
+  - Stuttgarter Str. 130
+  - 71332 Waiblingen
+  - Germany
+manufacturers:
+- name: Robert Bosch GmbH
+  address_lines:
+  - Stuttgarter Str. 130
+  - 71332 Waiblingen
+  - Germany
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - KWE6xxx
+  - KWI6xxx
+  - KPI3xxx
+  - KWE6000
+  - KWI6000
+  - KPI3000
+  - KWE6010
+  - KWI6010
+  - KPI3010
+  - KWE6020
+  - KWI6020
+  - KPI3020
+  module_designation:
+  description: >-
+    Automatic electromechanical weighing instrument equipped with a digital strain gauge load cell, performed
+    as single interval and single range instrument.
+characteristics:
+  type_level:
+    mode_of_weighing:
+      value: static or dynamic
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: XIII(1)
+      unit_symbol:
+      unit_id:
+    preset_tare_range:
+      value:
+        min:
+        max: 10
+      unit_symbol: "%"
+      unit_id:
+    temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    humidity:
+      value:
+        min:
+        max: 85
+      unit_symbol: "%"
+      unit_id:
+    humidity_conditions:
+      value: at 40 °C, not condensing
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E2
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment_standard:
+      value: OIML D11
+      unit_symbol:
+      unit_id:
+    mechanical_environment:
+      value: not applicable
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: KWE6000
+      value:
+        min:
+        max: 2
+    - model: KWI6000
+      value:
+        min:
+        max: 2
+    - model: KPI3000
+      value:
+        min:
+        max: 2
+    - model: KWE6010
+      value:
+        min:
+        max: 4
+    - model: KWI6010
+      value:
+        min:
+        max: 4
+    - model: KPI3010
+      value:
+        min:
+        max: 4
+    - model: KWE6020
+      value:
+        min:
+        max: 10
+    - model: KWI6020
+      value:
+        min:
+        max: 10
+    - model: KPI3020
+      value:
+        min:
+        max: 10
+  - attribute: verification_scale_interval
+    unit_symbol: g
+    values:
+    - model: KWE6000
+      value:
+        min: 0.5
+        max:
+    - model: KWI6000
+      value:
+        min: 0.5
+        max:
+    - model: KPI3000
+      value:
+        min: 0.5
+        max:
+    - model: KWE6010
+      value:
+        min: 2
+        max:
+    - model: KWI6010
+      value:
+        min: 2
+        max:
+    - model: KPI3010
+      value:
+        min: 2
+        max:
+    - model: KWE6020
+      value:
+        min: 5
+        max:
+    - model: KWI6020
+      value:
+        min: 5
+        max:
+    - model: KPI3020
+      value:
+        min: 5
+        max:
+  config_level:
+  - attribute: number_of_verification_scale_intervals
+    axis: load_cell_identifier
+    values:
+    - condition: KWE6000 / KWI6000 / KPI3000, load cell identifier A
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    - condition: KWE6000 / KWI6000 / KPI3000, load cell identifier D
+      value:
+        min:
+        max: 4000
+      unit_symbol:
+      unit_id:
+    - condition: KWE6010 / KWI6010 / KPI3010, load cell identifier B
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    - condition: KWE6010 / KWI6010 / KPI3010, load cell identifier E
+      value:
+        min:
+        max: 4000
+      unit_symbol:
+      unit_id:
+    - condition: KWE6020 / KWI6020 / KPI3020, load cell identifier C
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    - condition: KWE6020 / KWI6020 / KPI3020, load cell identifier F
+      value:
+        min:
+        max: 4000
+      unit_symbol:
+      unit_id:
+  - attribute: minimum_capacity
+    axis: maximum_belt_speed
+    values:
+    - condition: vmax = 1.35 m/s
+      value:
+        min: 10
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: vmax = 1.80 m/s
+      value:
+        min: 20
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers:
+      - 1)
+  - attribute: maximum_belt_speed
+    axis: minimum_capacity
+    values:
+    - condition: 10 g <= Min < 20 g
+      value:
+        min:
+        max: 1.35
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: Min >= 20 g
+      value:
+        min:
+        max: 1.8
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: '4055315'
+  pages: 16
+  role: type_evaluation_report
+- id: 4055315/1
+  pages: 77
+  role: test_report
+- id: 4055315/2
+  pages: 14
+  role: test_report
+- id: 4055315/5
+  pages: 33
+  role: test_report
+model_family:
+  family_name: KWE6xxx / KWI6xxx / KPI3xxx
+  models:
+  - model_id: KWE6000
+    attributes:
+      load_cell_identifiers:
+      - A
+      - D
+  - model_id: KWI6000
+    attributes:
+      load_cell_identifiers:
+      - A
+      - D
+  - model_id: KPI3000
+    attributes:
+      load_cell_identifiers:
+      - A
+      - D
+  - model_id: KWE6010
+    attributes:
+      load_cell_identifiers:
+      - B
+      - E
+  - model_id: KWI6010
+    attributes:
+      load_cell_identifiers:
+      - B
+      - E
+  - model_id: KPI3010
+    attributes:
+      load_cell_identifiers:
+      - B
+      - E
+  - model_id: KWE6020
+    attributes:
+      load_cell_identifiers:
+      - C
+      - F
+  - model_id: KWI6020
+    attributes:
+      load_cell_identifiers:
+      - C
+      - F
+  - model_id: KPI3020
+    attributes:
+      load_cell_identifiers:
+      - C
+      - F
+components:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB30/5KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: A
+      unit_symbol:
+      unit_id:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB30/10KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: B
+      unit_symbol:
+      unit_id:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB30/20KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: C
+      unit_symbol:
+      unit_id:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB40/5KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C4
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: D
+      unit_symbol:
+      unit_id:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB40/10KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C4
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: E
+      unit_symbol:
+      unit_id:
+- role: digital strain gauge load cell
+  type_designations:
+  - 1-FIT/1SB40/20KGBO1
+  alternatives: OR
+  characteristics:
+    accuracy_class:
+      value: C4
+      unit_symbol:
+      unit_id:
+    load_cell_identifier:
+      value: F
+      unit_symbol:
+      unit_id:
+footnotes:
+- marker: 1)
+  text: >-
+    The maximum belt speed depends on the minimum capacity Min chosen and applies to the complete load
+    range up to the maximum capacity.
+matrix_tables:
+- name: Characteristics by instrument type and load cell
+  description: >-
+    Common technical characteristics of the weighing instruments; the load cell identifier determines
+    the limit for the number of verification scale intervals.
+  columns:
+  - instrument_types
+  - load_cell_identifier
+  - accuracy_class
+  - number_of_verification_scale_intervals_max
+  - maximum_capacity_max_kg
+  - verification_scale_interval_min_g
+  rows:
+  - instrument_types: KWE6000, KWI6000, KPI3000
+    load_cell_identifier: A
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 3000
+    maximum_capacity_max_kg: 2
+    verification_scale_interval_min_g: 0.5
+  - instrument_types: KWE6000, KWI6000, KPI3000
+    load_cell_identifier: D
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 4000
+    maximum_capacity_max_kg: 2
+    verification_scale_interval_min_g: 0.5
+  - instrument_types: KWE6010, KWI6010, KPI3010
+    load_cell_identifier: B
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 3000
+    maximum_capacity_max_kg: 4
+    verification_scale_interval_min_g: 2
+  - instrument_types: KWE6010, KWI6010, KPI3010
+    load_cell_identifier: E
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 4000
+    maximum_capacity_max_kg: 4
+    verification_scale_interval_min_g: 2
+  - instrument_types: KWE6020, KWI6020, KPI3020
+    load_cell_identifier: C
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 3000
+    maximum_capacity_max_kg: 10
+    verification_scale_interval_min_g: 5
+  - instrument_types: KWE6020, KWI6020, KPI3020
+    load_cell_identifier: F
+    accuracy_class: XIII(1)
+    number_of_verification_scale_intervals_max: 4000
+    maximum_capacity_max_kg: 10
+    verification_scale_interval_min_g: 5
+  footnotes:
+  - >-
+    Minimum capacity: >= 10 g (vmax = 1.35 m/s) or >= 20 g (vmax = 1.80 m/s); maximum belt speed <= 1.35
+    m/s (10 g <= Min < 20 g) or <= 1.80 m/s (Min >= 20 g) — see footnote 1)
+- name: Digital strain gauge load cell variants (type 1-FIT/1...)
+  columns:
+  - variant
+  - accuracy_class
+  - load_cell_identifier
+  rows:
+  - variant: 1-FIT/1SB30/5KGBO1
+    accuracy_class: C3
+    load_cell_identifier: A
+  - variant: 1-FIT/1SB30/10KGBO1
+    accuracy_class: C3
+    load_cell_identifier: B
+  - variant: 1-FIT/1SB30/20KGBO1
+    accuracy_class: C3
+    load_cell_identifier: C
+  - variant: 1-FIT/1SB40/5KGBO1
+    accuracy_class: C4
+    load_cell_identifier: D
+  - variant: 1-FIT/1SB40/10KGBO1
+    accuracy_class: C4
+    load_cell_identifier: E
+  - variant: 1-FIT/1SB40/20KGBO1
+    accuracy_class: C4
+    load_cell_identifier: F

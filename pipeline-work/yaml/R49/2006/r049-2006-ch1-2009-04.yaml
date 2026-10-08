@@ -1,0 +1,467 @@
+_meta:
+  cert_id: 2305
+  num: R049/2006-CH1-2009.04
+  applicant: E. Wehrle GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: CH1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-ch1-2009-04.pdf
+certificate:
+  number: R49/2006-CH1-09.04
+  page_total: 4
+  member_state: Switzerland
+  date_issued: '2009-10-14'
+  oiml_issuer_id: CH1
+issuing_authority:
+  name: Federal Office of Metrology METAS
+  address_lines:
+  - Lindenweg 50
+  - CH-3003 Bern-Wabern
+  person_responsible: Jürg Ramseyer
+  person_title: Head of METAS-Cert
+  phone: "+41 31 32 33 111"
+  website: www.metas.ch
+applicants:
+- name: E.WEHRLE GmbH
+  address_lines:
+  - Obertalstrasse 8
+  - D-78120 Furtwangen
+manufacturers:
+- name: E.WEHRLE GmbH
+  address_lines:
+  - Obertalstrasse 8
+  - D-78120 Furtwangen
+certified_type:
+  category: Water meter
+  type_designations:
+  - RTK-OPV
+  - RTK-OPX
+  - RTK-HPV
+  - RTK-HPX
+  - RTK-SPV
+  - RTK-SPX
+  - RTK-APV
+  - RTK-APX
+  module_designation:
+  description: >-
+    Cylindrical piston meter intended for the metering of cold water (T30). The meter is a cylindrical
+    piston meter based on the measuring cartridge system with various threading. The body, the measuring
+    cartridge system and the register are tightly interconnected to prevent any unauthorized opening and
+    manipulation of the meter.
+characteristics:
+  type_level:
+    q2_over_q1:
+      value: 1.6
+      unit_symbol:
+      footnote_markers: []
+    calibration_value:
+      value: 0.05
+      unit_symbol: l
+      footnote_markers: []
+    maximum_admissible_pressure_map:
+      value: 16
+      unit_symbol: bar
+      footnote_markers: []
+    temperature_class:
+      value: T30
+      unit_symbol:
+      footnote_markers: []
+    water_temperature_range:
+      value:
+        min: 0.1
+        max: 30
+      unit_symbol: "°C"
+      footnote_markers: []
+    environmental_classification:
+      value: B
+      unit_symbol:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+      footnote_markers: []
+  model_level:
+  - attribute: q3
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 2.5
+    - model: DN20
+      value: 4.0
+  - attribute: q4
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 3.125
+    - model: DN20
+      value: 5.0
+  - attribute: nominal_diameter
+    unit_symbol: DN
+    values:
+    - model: DN15
+      value: 15
+    - model: DN20
+      value: 20
+  - attribute: overall_length
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value:
+        min: 145
+        max:
+      footnote_markers:
+      - "*"
+    - model: DN20
+      value:
+        min: 165
+        max:
+      footnote_markers:
+      - "*"
+  - attribute: threaded_connector_of_body
+    unit_symbol:
+    values:
+    - model: DN15
+      value: "≥ G 3/4 B"
+    - model: DN20
+      value: "≥ G 1 B"
+  - attribute: threaded_connector_of_cartridge_system
+    unit_symbol:
+    values:
+    - model: DN15
+      value: G1½B / G3B
+    - model: DN20
+      value: G3B
+  - attribute: pressure_loss_class
+    unit_symbol:
+    values:
+    - model: DN15
+      value: 40
+    - model: DN20
+      value: 63
+  config_level:
+  - attribute: maximum_permissible_error
+    axis: flow_rate_zone
+    values:
+    - condition: Q2 ≤ Q ≤ Q4
+      value: 2
+      unit_symbol: "%"
+    - condition: Q1 ≤ Q ≤ Q2
+      value: 5
+      unit_symbol: "%"
+  - attribute: q1_minimum_flowrate
+    axis: model and measuring range Q3/Q1 (horizontal / vertical mounting)
+    values:
+    - condition: DN15, Q3/Q1=160
+      value: 15.6
+    - condition: DN15, Q3/Q1=125
+      value: 20
+    - condition: DN15, Q3/Q1=100
+      value: 25
+    - condition: DN15, Q3/Q1=80
+      value: 31.3
+    - condition: DN15, Q3/Q1=63
+      value: 39.7
+    - condition: DN15, Q3/Q1=50
+      value: 50
+    - condition: DN15, Q3/Q1=40
+      value: 62.5
+    - condition: DN15, Q3/Q1=31.5
+      value: 79.4
+    - condition: DN15, Q3/Q1=25
+      value: 100
+    - condition: DN15, Q3/Q1=20
+      value: 125
+    - condition: DN15, Q3/Q1=16
+      value: 156.3
+    - condition: DN15, Q3/Q1=12.5
+      value: 200
+    - condition: DN15, Q3/Q1=10
+      value: 250
+    - condition: DN20, Q3/Q1=250
+      value: 16
+    - condition: DN20, Q3/Q1=200
+      value: 20.8
+    - condition: DN20, Q3/Q1=160
+      value: 25
+    - condition: DN20, Q3/Q1=125
+      value: 32
+    - condition: DN20, Q3/Q1=100
+      value: 40
+    - condition: DN20, Q3/Q1=80
+      value: 50
+    - condition: DN20, Q3/Q1=63
+      value: 63.5
+    - condition: DN20, Q3/Q1=50
+      value: 80
+    - condition: DN20, Q3/Q1=40
+      value: 100
+    - condition: DN20, Q3/Q1=31.5
+      value: 127
+    - condition: DN20, Q3/Q1=25
+      value: 160
+    - condition: DN20, Q3/Q1=20
+      value: 200
+    - condition: DN20, Q3/Q1=16
+      value: 250
+    - condition: DN20, Q3/Q1=12.5
+      value: 320
+    - condition: DN20, Q3/Q1=10
+      value: 400
+  - attribute: q2_transition_flowrate
+    axis: model and measuring range Q3/Q1 (horizontal / vertical mounting)
+    values:
+    - condition: DN15, Q3/Q1=160
+      value: 25
+    - condition: DN15, Q3/Q1=125
+      value: 32
+    - condition: DN15, Q3/Q1=100
+      value: 40
+    - condition: DN15, Q3/Q1=80
+      value: 50
+    - condition: DN15, Q3/Q1=63
+      value: 63.5
+    - condition: DN15, Q3/Q1=50
+      value: 80
+    - condition: DN15, Q3/Q1=40
+      value: 100
+    - condition: DN15, Q3/Q1=31.5
+      value: 127
+    - condition: DN15, Q3/Q1=25
+      value: 160
+    - condition: DN15, Q3/Q1=20
+      value: 200
+    - condition: DN15, Q3/Q1=16
+      value: 250
+    - condition: DN15, Q3/Q1=12.5
+      value: 320
+    - condition: DN15, Q3/Q1=10
+      value: 400
+    - condition: DN20, Q3/Q1=250
+      value: 25.6
+    - condition: DN20, Q3/Q1=200
+      value: 32
+    - condition: DN20, Q3/Q1=160
+      value: 40
+    - condition: DN20, Q3/Q1=125
+      value: 51.2
+    - condition: DN20, Q3/Q1=100
+      value: 64
+    - condition: DN20, Q3/Q1=80
+      value: 80
+    - condition: DN20, Q3/Q1=63
+      value: 100.8
+    - condition: DN20, Q3/Q1=50
+      value: 128
+    - condition: DN20, Q3/Q1=40
+      value: 160
+    - condition: DN20, Q3/Q1=31.5
+      value: 203.2
+    - condition: DN20, Q3/Q1=25
+      value: 256
+    - condition: DN20, Q3/Q1=20
+      value: 320
+    - condition: DN20, Q3/Q1=16
+      value: 400
+    - condition: DN20, Q3/Q1=12.5
+      value: 512
+    - condition: DN20, Q3/Q1=10
+      value: 640
+recommendation:
+  id: R49-1
+  edition: 2006
+  accuracy_classes:
+  - '2'
+test_reports:
+- id: 135-10982
+  pages: 3
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: DN15
+    label: Q3 = 2.5 m³/h, DN 15
+    attributes:
+      nominal_diameter_dn: 15
+      q3_m3_h: 2.5
+  - model_id: DN20
+    label: Q3 = 4.0 m³/h, DN 20
+    attributes:
+      nominal_diameter_dn: 20
+      q3_m3_h: 4.0
+components:
+- role: body
+  type_designations:
+  - K 38.0942
+  - K 38.0982
+  - K 38.1020
+  - K 38.1038
+  - K 38.0983
+  alternatives: OR
+- role: measuring_cartridge_system
+- role: register
+footnotes:
+- marker: "*"
+  text: Overall length of meter for downflow and ascending piping is 105 mm
+matrix_tables:
+- name: Flowrates by model and measuring range
+  columns:
+  - model
+  - measuring_range_q3_over_q1
+  - q1
+  - q2
+  column_units:
+  -
+  -
+  - l/h
+  - l/h
+  rows:
+  - model: DN15
+    measuring_range_q3_over_q1: 160
+    q1: 15.6
+    q2: 25
+  - model: DN15
+    measuring_range_q3_over_q1: 125
+    q1: 20
+    q2: 32
+  - model: DN15
+    measuring_range_q3_over_q1: 100
+    q1: 25
+    q2: 40
+  - model: DN15
+    measuring_range_q3_over_q1: 80
+    q1: 31.3
+    q2: 50
+  - model: DN15
+    measuring_range_q3_over_q1: 63
+    q1: 39.7
+    q2: 63.5
+  - model: DN15
+    measuring_range_q3_over_q1: 50
+    q1: 50
+    q2: 80
+  - model: DN15
+    measuring_range_q3_over_q1: 40
+    q1: 62.5
+    q2: 100
+  - model: DN15
+    measuring_range_q3_over_q1: 31.5
+    q1: 79.4
+    q2: 127
+  - model: DN15
+    measuring_range_q3_over_q1: 25
+    q1: 100
+    q2: 160
+  - model: DN15
+    measuring_range_q3_over_q1: 20
+    q1: 125
+    q2: 200
+  - model: DN15
+    measuring_range_q3_over_q1: 16
+    q1: 156.3
+    q2: 250
+  - model: DN15
+    measuring_range_q3_over_q1: 12.5
+    q1: 200
+    q2: 320
+  - model: DN15
+    measuring_range_q3_over_q1: 10
+    q1: 250
+    q2: 400
+  - model: DN20
+    measuring_range_q3_over_q1: 250
+    q1: 16
+    q2: 25.6
+  - model: DN20
+    measuring_range_q3_over_q1: 200
+    q1: 20.8
+    q2: 32
+  - model: DN20
+    measuring_range_q3_over_q1: 160
+    q1: 25
+    q2: 40
+  - model: DN20
+    measuring_range_q3_over_q1: 125
+    q1: 32
+    q2: 51.2
+  - model: DN20
+    measuring_range_q3_over_q1: 100
+    q1: 40
+    q2: 64
+  - model: DN20
+    measuring_range_q3_over_q1: 80
+    q1: 50
+    q2: 80
+  - model: DN20
+    measuring_range_q3_over_q1: 63
+    q1: 63.5
+    q2: 100.8
+  - model: DN20
+    measuring_range_q3_over_q1: 50
+    q1: 80
+    q2: 128
+  - model: DN20
+    measuring_range_q3_over_q1: 40
+    q1: 100
+    q2: 160
+  - model: DN20
+    measuring_range_q3_over_q1: 31.5
+    q1: 127
+    q2: 203.2
+  - model: DN20
+    measuring_range_q3_over_q1: 25
+    q1: 160
+    q2: 256
+  - model: DN20
+    measuring_range_q3_over_q1: 20
+    q1: 200
+    q2: 320
+  - model: DN20
+    measuring_range_q3_over_q1: 16
+    q1: 250
+    q2: 400
+  - model: DN20
+    measuring_range_q3_over_q1: 12.5
+    q1: 320
+    q2: 512
+  - model: DN20
+    measuring_range_q3_over_q1: 10
+    q1: 400
+    q2: 640
+  description: >-
+    Q1 and Q2 values for horizontal / vertical mounting, per available measuring range (Q3/Q1) for each
+    model.
+  footnotes: []
+- name: Water meter body variants
+  columns:
+  - part_number
+  - overall_length_mm
+  - thread
+  - note
+  rows:
+  - part_number: K 38.0942
+    overall_length_mm: 190
+    thread: G 1
+    note:
+  - part_number: K 38.0982
+    overall_length_mm: 145
+    thread: G 3/4
+    note:
+  - part_number: K 38.1020
+    overall_length_mm: 165
+    thread: G 3/4
+    note:
+  - part_number: K 38.1038
+    overall_length_mm:
+    thread:
+    note:
+  - part_number: K 38.0983
+    overall_length_mm:
+    thread: G 1
+    note: ascending pipe
+  description: Available body types for the water meter.
+  footnotes: []

@@ -1,0 +1,309 @@
+_meta:
+  cert_id: 2166
+  num: R049/2006-FR2-2008.02 Rev. 3
+  applicant: CONTAZARA S.A
+  issuing_year: '2009'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-fr2-2008-02-rev3.pdf
+certificate:
+  number: 2006-FR2-08.02
+  project_number: CMA-16-92-03-2008
+  page_total: 2
+  member_state: FRANCE
+  date_issued: '2009-02-03'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Jean-Luc LAURENT
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: CONTAZARA
+  address_lines:
+  - Carretera Castellon - Km 5,5
+  - 50720 Zaragoza
+  - Spain
+manufacturers:
+- name: CONTAZARA
+  address_lines:
+  - Carretera Castellon - Km 5,5
+  - 50720 Zaragoza
+  - Spain
+certified_type:
+  category: Water meter
+  type_designations:
+  - CZ 3000 S
+  - CZ 3000 D
+  module_designation:
+  description: Electronic cold potable water meter for the measurement of cold potable water, type CZ
+    3000 S or D.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+    q2_over_q1:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+    mounting_position:
+      value: any
+      unit_symbol:
+      unit_id:
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+    water_temperature_class:
+      value: T30
+      unit_symbol:
+      unit_id:
+    indicating_range:
+      value: 99999999
+      unit_symbol: m³
+      unit_id:
+    minimum_upstream_straight_pipe_length:
+      value: 0
+      unit_symbol: mm
+      unit_id:
+    minimum_downstream_straight_pipe_length:
+      value: 0
+      unit_symbol: mm
+      unit_id:
+    environmental_class:
+      value: B extended
+      unit_symbol:
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_influence_class:
+      value: E1
+      unit_symbol:
+      unit_id:
+    power_supply_type:
+      value: replaceable battery
+      unit_symbol:
+      unit_id:
+    battery_voltage:
+      value:
+        min: 3.3
+        max: 3.67
+      unit_symbol: V
+      unit_id:
+    battery_lifetime:
+      value: 12
+      unit_symbol: years
+      unit_id:
+    software_version:
+      value: P03v20
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: nominal_diameter
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value: 15
+    - model: DN20
+      value: 20
+    - model: DN32
+      value: 32
+    - model: DN40
+      value: 40
+    - model: DN50
+      value: 50
+  - attribute: permanent_flow_rate_q3
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 2.5
+    - model: DN20
+      value: 4
+    - model: DN32
+      value: 10
+    - model: DN40
+      value: 16
+    - model: DN50
+      value: 25
+  - attribute: overload_flow_rate_q4
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 3.125
+    - model: DN20
+      value: 5
+    - model: DN32
+      value: 12.5
+    - model: DN40
+      value: 20
+    - model: DN50
+      value: 31.25
+  - attribute: q3_over_q1
+    unit_symbol:
+    values:
+    - model: DN15
+      value: 200
+    - model: DN20
+      value: 200
+    - model: DN32
+      value: 200
+    - model: DN40
+      value: 200
+    - model: DN50
+      value: 315
+  - attribute: length
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value: 115, 190, 130, 150, 165
+    - model: DN20
+      value: 190
+    - model: DN32
+      value: 260
+    - model: DN40
+      value: 300
+    - model: DN50
+      value: 300
+  - attribute: verification_scale_interval
+    unit_symbol: dm³
+    values:
+    - model: DN15
+      value: 0.1
+    - model: DN20
+      value: 0.1
+    - model: DN32
+      value: 1
+    - model: DN40
+      value: 1
+    - model: DN50
+      value: 5
+  config_level:
+  - attribute: reverse_flow_measurement
+    axis: type variant (S/D)
+    values:
+    - condition: CZ 3000 D
+      value: true
+      unit_symbol:
+    - condition: CZ 3000 S
+      value: false
+      unit_symbol:
+      footnote_markers:
+      - "*"
+recommendation:
+  id: R49
+  edition: 2006
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 1/06 (CZ3000-s)
+  pages: 156
+  role: test_report
+- id: 2/06 (cz3000-d)
+  pages: 160
+  role: test_report
+- id: 1/06 PA
+  pages: 95
+  role: test_report
+revision_history:
+- revision: '3'
+  date: '2009-02-03'
+  changes: This revision replaces the preceding one
+model_family:
+  family_name: CZ 3000
+  models:
+  - model_id: DN15
+    label: CZ 3000 S/D, DN 15
+    attributes:
+      nominal_diameter_mm: 15
+  - model_id: DN20
+    label: CZ 3000 S/D, DN 20
+    attributes:
+      nominal_diameter_mm: 20
+  - model_id: DN32
+    label: CZ 3000 S/D, DN 32
+    attributes:
+      nominal_diameter_mm: 32
+  - model_id: DN40
+    label: CZ 3000 S/D, DN 40
+    attributes:
+      nominal_diameter_mm: 40
+  - model_id: DN50
+    label: CZ 3000, DN 50
+    attributes:
+      nominal_diameter_mm: 50
+footnotes:
+- marker: "*"
+  text: >-
+    The water meter is not designed to measure reverse flow but can withstand an accidental reverse flow
+    without any deterioration or change in metrological properties.
+matrix_tables:
+- name: Metrological characteristics by nominal diameter
+  columns:
+  - nominal_diameter_dn
+  - permanent_flow_rate_q3
+  - overload_flow_rate_q4
+  - q3_over_q1
+  - q2_over_q1
+  - length
+  - verification_scale_interval
+  column_units:
+  - mm
+  - m³/h
+  - m³/h
+  -
+  -
+  - mm
+  - dm³
+  rows:
+  - nominal_diameter_dn: 15
+    permanent_flow_rate_q3: 2.5
+    overload_flow_rate_q4: 3.125
+    q3_over_q1: 200
+    q2_over_q1: 1.6
+    length: 115, 190, 130, 150, 165
+    verification_scale_interval: 0.1
+  - nominal_diameter_dn: 20
+    permanent_flow_rate_q3: 4
+    overload_flow_rate_q4: 5
+    q3_over_q1: 200
+    q2_over_q1: 1.6
+    length: 190
+    verification_scale_interval: 0.1
+  - nominal_diameter_dn: 32
+    permanent_flow_rate_q3: 10
+    overload_flow_rate_q4: 12.5
+    q3_over_q1: 200
+    q2_over_q1: 1.6
+    length: 260
+    verification_scale_interval: 1
+  - nominal_diameter_dn: 40
+    permanent_flow_rate_q3: 16
+    overload_flow_rate_q4: 20
+    q3_over_q1: 200
+    q2_over_q1: 1.6
+    length: 300
+    verification_scale_interval: 1
+  - nominal_diameter_dn: 50
+    permanent_flow_rate_q3: 25
+    overload_flow_rate_q4: 31.25
+    q3_over_q1: 315
+    q2_over_q1: 1.6
+    length: 300
+    verification_scale_interval: 5
+  description: >-
+    Metrological characteristics of the CZ 3000 S/D family grouped by nominal diameter; DN 15-40 covered
+    by test reports 1/06 (CZ3000-s) and 2/06 (cz3000-d), DN 50 covered by test report 1/06 PA.
+  footnotes: []

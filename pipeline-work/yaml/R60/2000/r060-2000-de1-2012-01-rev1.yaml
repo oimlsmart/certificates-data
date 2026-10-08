@@ -1,0 +1,371 @@
+_meta:
+  cert_id: 3130
+  num: R060/2000-DE1-2012.01 Rev. 1
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2013'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2012-01-rev1.pdf
+certificate:
+  number: R60/2000-DE1-12.01
+  scheme: B
+  page_total: 3
+  member_state: Germany
+  date_issued: '2013-02-22'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Oliver Mack
+  person_title: Head of Working group
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meendorfer Str. 205
+  - 22145 Hamburg
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meendorfer Str. 205
+  - 22145 Hamburg
+certified_type:
+  category: Load cell
+  type_designations:
+  - PR 6204
+  module_designation: Digital load cell
+  description: >-
+    Digital strain gauge compression load cell. The load cells of the series PR 6204 are compact compression
+    load cells for self-centering pendulum applications. The strain gauge application is hermetically
+    sealed; the deep-drawn and micro plasma welded housing is made of stainless steel and filled with
+    inert gas. The analog signal of the strain gauge bridge is amplified, scaled and filtered by the integrated
+    module. The load cell is equipped with an interface RS485. The load cell can only be used in combination
+    with a data processing device of manufacturer Sartorius.
+characteristics:
+  type_level:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=0.5t
+      value: 0.5
+    - model: Emax=1t
+      value: 1
+    - model: Emax=2t
+      value: 2
+    - model: Emax=3t
+      value: 3
+    - model: Emax=5t
+      value: 5
+    - model: Emax=10t
+      value: 10
+    - model: Emax=12.5t
+      value: 12.5
+    - model: Emax=20t
+      value: 20
+    - model: Emax=25t
+      value: 25
+    - model: Emax=30t
+      value: 30
+    - model: Emax=50t
+      value: 50
+    - model: Emax=60t
+      value: 60
+  - attribute: available_accuracy_classes
+    unit_symbol:
+    values:
+    - model: Emax=0.5t
+      value: D1
+    - model: Emax=1t
+      value: D1
+    - model: Emax=2t
+      value: D1, C3
+    - model: Emax=3t
+      value: D1, C3
+    - model: Emax=5t
+      value: D1, C3
+    - model: Emax=10t
+      value: D1, C3
+    - model: Emax=12.5t
+      value: D1, C3, C6
+    - model: Emax=20t
+      value: D1, C3, C6
+    - model: Emax=25t
+      value: D1, C3, C6
+    - model: Emax=30t
+      value: D1, C3, C6
+    - model: Emax=50t
+      value: D1, C3, C6
+    - model: Emax=60t
+      value: D1, C3, C6
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: Emax/5000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: C3
+      value: Emax/14000
+      unit_symbol:
+      footnote_markers:
+      - 3)
+    - condition: C6
+      value: Emax/20000
+      unit_symbol:
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: "½·Emax/1000"
+      unit_symbol:
+    - condition: C3
+      value: "½·Emax/3000"
+      unit_symbol:
+    - condition: C6
+      value: "½·Emax/8000"
+      unit_symbol:
+  - attribute: apportionment_factor_plc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 0.7
+      unit_symbol:
+    - condition: C3
+      value: 0.7
+      unit_symbol:
+    - condition: C6
+      value: 0.8
+      unit_symbol:
+  - attribute: temperature_range
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      footnote_markers:
+      - 1)
+  - attribute: safe_overload
+    axis: Emax
+    values:
+    - condition: Emax < 25 t
+      value: 200
+      unit_symbol: "%"
+    - condition: Emax ≥ 25 t
+      value: 150
+      unit_symbol: "%"
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: B
+  accuracy_classes:
+  - D1
+  - C3
+  - C6
+test_reports:
+- id: 1.12-4051023-3
+  pages: 20
+  role: test_report
+- id: 1.12-4051023-4
+  pages: 32
+  role: test_report
+- id: 1.12-4051023-5
+  pages: 33
+  role: test_report
+- id: 1.12-4051023-6
+  pages: 20
+  role: test_report
+- id: 1.12-4051023-7
+  pages: 19
+  role: test_report
+- id: 1.12-4051023-8
+  pages: 18
+  role: test_report
+- id: 1.12-4051023-9
+  pages: 18
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2013-02-22'
+  changes:
+model_family:
+  family_name: PR 6204
+  models:
+  - model_id: Emax=0.5t
+    label: 0.5 t
+    attributes:
+      accuracy_classes:
+      - D1
+  - model_id: Emax=1t
+    label: 1 t
+    attributes:
+      accuracy_classes:
+      - D1
+  - model_id: Emax=2t
+    label: 2 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=3t
+    label: 3 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=5t
+    label: 5 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=10t
+    label: 10 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+  - model_id: Emax=12.5t
+    label: 12.5 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+  - model_id: Emax=20t
+    label: 20 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+  - model_id: Emax=25t
+    label: 25 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+  - model_id: Emax=30t
+    label: 30 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+  - model_id: Emax=50t
+    label: 50 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+  - model_id: Emax=60t
+    label: 60 t
+    attributes:
+      accuracy_classes:
+      - D1
+      - C3
+      - C6
+footnotes:
+- marker: 1)
+  text: 'Extended temperature range: -25°C to 55°C'
+- marker: 2)
+  text: 'For Emax = 0.5 t: vmin = Emax / 2500'
+- marker: 3)
+  text: 'For Emax = 2 t: vmin = Emax / 10000'
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity_emax
+  - minimum_load_cell_verification_interval_vmin
+  - minimum_dead_load_output_return_dr
+  column_units:
+  -
+  -
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+    maximum_capacity_emax:
+    - 0.5
+    - 1
+    - 2
+    - 3
+    - 5
+    - 10
+    - 12.5
+    - 20
+    - 25
+    - 30
+    - 50
+    - 60
+    minimum_load_cell_verification_interval_vmin: Emax/5000
+    minimum_dead_load_output_return_dr: "½·Emax/1000"
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax:
+    - 2
+    - 3
+    - 5
+    - 10
+    - 12.5
+    - 20
+    - 25
+    - 30
+    - 50
+    - 60
+    minimum_load_cell_verification_interval_vmin: Emax/14000
+    minimum_dead_load_output_return_dr: "½·Emax/3000"
+  - accuracy_class: C6
+    max_load_cell_intervals_nlc: 6000
+    maximum_capacity_emax:
+    - 12.5
+    - 20
+    - 25
+    - 30
+    - 50
+    - 60
+    minimum_load_cell_verification_interval_vmin: Emax/20000
+    minimum_dead_load_output_return_dr: "½·Emax/8000"
+  description: Metrological characteristics for application in approved weighing instruments, per accuracy
+    class
+  footnotes:
+  - 1)
+  - 2)
+  - 3)

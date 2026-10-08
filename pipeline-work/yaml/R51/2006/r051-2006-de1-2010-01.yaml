@@ -1,0 +1,172 @@
+_meta:
+  cert_id: 2378
+  num: R051/2006-DE1-2010.01
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2010'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2010-01.pdf
+certificate:
+  number: R51/2006-DE1-10.01
+  page_total: 3
+  member_state: Germany
+  date_issued: '2010-03-05'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. D. Ratschko
+  person_title: Oberregierungsrat
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - GERMANY
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - GERMANY
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - WM-CWL
+  description: >-
+    Automatic electromechanical weighing instrument equipped with a vibrating string load cell, performed
+    as single or multi-interval instrument.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: Y(a)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min:
+        max: 60
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval_ei:
+      value:
+        min: 10
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_belt_speed
+    axis: weighing_mode
+    values:
+    - condition: start-stop operation
+      value:
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: operation in motion
+      value:
+        min:
+        max: 2.0
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_capacity
+    axis: application
+    values:
+    - condition: standard
+      value:
+        min: 200
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    - condition: as postal scale
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals
+    axis: instrument_configuration
+    values:
+    - condition: single-interval
+      value:
+        min:
+        max: 3200
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: multi-interval
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R51-1
+  edition: 2006
+  accuracy_classes:
+  - Y(a)
+test_reports:
+- id: PTB-1.12-4043718
+  pages: 14
+  role: type_evaluation_report
+- id: PTB-1.12-4043718/1
+  pages: 66
+  role: test_report
+components:
+- role: load cell
+  characteristics:
+    transducer_type:
+      value: vibrating string
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+matrix_tables:
+- name: 'Tab. 1: Metrological characteristics of the weighing instrument WM-CWL'
+  columns:
+  - characteristic
+  - start-stop operation
+  - operation in motion
+  rows:
+  - characteristic: belt_speed
+    start-stop operation:
+    operation in motion: "≤ 2.00 m/s"
+  - characteristic: accuracy_class
+    start-stop operation: Y(a)
+    operation in motion: Y(a)
+  - characteristic: minimum_capacity
+    start-stop operation: "≥ 200 g (≥ 50 g as postal scale)"
+    operation in motion: "≥ 200 g (≥ 50 g as postal scale)"
+  - characteristic: number_of_verification_scale_intervals
+    start-stop operation: "≤ 3200 / 3000"
+    operation in motion: "≤ 3200 / 3000"
+  - characteristic: maximum_capacity
+    start-stop operation: "≤ 60 kg"
+    operation in motion: "≤ 60 kg"
+  - characteristic: temperature_range
+    start-stop operation: 0 °C / +40 °C
+    operation in motion: 0 °C / +40 °C
+  - characteristic: verification_scale_interval_ei
+    start-stop operation: "≥ 10 g"
+    operation in motion: "≥ 10 g"
+  description: >-
+    Metrological characteristics of the weighing instrument WM-CWL; the two value columns correspond to
+    the weighing modes start-stop operation and operation in motion.
+  footnotes: []

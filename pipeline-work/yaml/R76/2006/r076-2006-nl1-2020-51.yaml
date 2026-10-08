@@ -1,0 +1,222 @@
+_meta:
+  cert_id: 5189
+  num: R76/2006-A-NL1-20.51
+  applicant: Shanghai Teraoka Electronic Co., Ltd.
+  issuing_year: '2020'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2020-51.pdf
+certificate:
+  number: R76/2006-A-NL1-20.51
+  scheme: A
+  project_number: '2526315'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2020-10-16'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan County
+  - Shanghai 201505
+  - P.R. of China
+manufacturers:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan County
+  - Shanghai 201505
+  - P.R. of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DS-673(SS)
+  - DS-673
+  - DS-673SS
+  description: >-
+    Non-automatic weighing instrument, accuracy class (III), available as single-interval or multi-interval
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 1.5
+        max: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: single interval or multi interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_battery:
+      value: optional rechargeable battery
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    software_identification:
+      value: 1.xx (xx = 00…99)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    software_identification_display:
+      value: displayed during start-up or after pressing the key sequence Re-zero + On/Off, On/Off, On/Off
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing_range_type
+    values:
+    - condition: single interval
+      value:
+        min:
+        max: 7500
+      unit_symbol: divisions
+    - condition: multi interval, per partial weighing range
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+  - attribute: tare
+    axis: weighing_range_type
+    values:
+    - condition: single interval instrument
+      value: T ≤ -50%
+      unit_symbol:
+    - condition: multi interval instrument
+      value: T ≤ -Max₁
+      unit_symbol:
+  model_level:
+  - attribute: temperature_range
+    unit_symbol: "°C"
+    values:
+    - model: DS-673
+      value:
+        min: -10
+        max: 40
+    - model: DS-673SS
+      value:
+        min: 0
+        max: 40
+  - attribute: power_supply_voltage
+    unit_symbol: V
+    values:
+    - model: DS-673
+      value:
+        min: 220
+        max: 240
+    - model: DS-673SS
+      value:
+        min: 220
+        max: 240
+  - attribute: power_supply_frequency
+    unit_symbol: Hz
+    values:
+    - model: DS-673
+      value:
+        min: 50
+        max: 60
+    - model: DS-673SS
+      value:
+        min: 50
+        max: 60
+  - attribute: ac_dc_adapter_output_voltage
+    unit_symbol: V
+    values:
+    - model: DS-673SS
+      value:
+        min: 9
+        max: 12
+  - attribute: battery_supply_voltage
+    unit_symbol: V
+    values:
+    - model: DS-673
+      value: 6
+    - model: DS-673SS
+      value: 6
+  - attribute: power_supply_type
+    unit_symbol:
+    values:
+    - model: DS-673
+      value: AC mains
+    - model: DS-673SS
+      value: AC/DC adapter
+  - attribute: application
+    unit_symbol:
+    values:
+    - model: DS-673
+      value: intended to be used for direct sales to the public
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-07.38
+  date: '2007-11-22'
+  pages: 56
+  role: type_evaluation_report
+- id: R76/1992-NL1-07.38b
+  date: '2009-11-19'
+  pages: 28
+  role: test_report
+- id: NMi-12200371-01
+  date: '2012-08-01'
+  pages: 29
+  role: test_report
+- id: NMi-12200371-02
+  date: '2012-08-01'
+  pages: 14
+  role: test_report
+- id: NMi-1901688-02
+  date: '2018-01-24'
+  pages: 12
+  role: test_report
+- id: NMi-2526315-01
+  date: '2020-10-16'
+  pages: 33
+  role: test_report
+model_family:
+  family_name: DS-673(SS)
+  models:
+  - model_id: DS-673
+    label: DS-673
+    attributes:
+      application: intended to be used for direct sales to the public
+  - model_id: DS-673SS
+    label: DS-673SS
+    attributes: {}

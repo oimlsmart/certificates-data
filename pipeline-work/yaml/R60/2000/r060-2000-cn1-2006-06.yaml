@@ -1,0 +1,159 @@
+_meta:
+  cert_id: 1668
+  num: R060/2000-CN1-2006.06
+  applicant: Zhonghang Electronic Measuring Instruments Co.Ltd (ZEMIC)
+  issuing_year: '2006'
+  status: Valid
+  issuer: CN1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-cn1-2006-06.pdf
+certificate:
+  number: R60/2000-CN1-06.06
+  member_state: P.R.China
+  date_issued: '2006-03-28'
+issuing_authority:
+  name: Office of OIML Affairs, General Administration of Quality Supervision, Inspection and Quarantine
+  address_lines:
+  - No.9 Madiandonglu
+  - Haidian District, Beijing, 100088
+  - China
+  person_responsible: 王秦平
+  person_title: CIML member
+applicants:
+- name: Zhonghang Electronic Measuring Instrument CO.,LTD
+  address_lines:
+  - P.O.Box 2, Hanzhong 723007
+  - ShaanXi, China
+certified_type:
+  category: Load cell
+  type_designations:
+  - HM9B
+  module_designation:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    max_load_cell_intervals_nmax:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+    compensating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=10t
+      value: 10
+    - model: Emax=20t
+      value: 20
+    - model: Emax=25t
+      value: 25
+    - model: Emax=40t SE
+      value: 40
+    - model: Emax=30t
+      value: 30
+    - model: Emax=40t
+      value: 40
+    - model: Emax=50t
+      value: 50
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: Emax=10t
+      value: 6000, 7500, 10000, 12000, 15000
+    - model: Emax=20t
+      value: 6000, 7500, 10000, 12000, 15000
+    - model: Emax=25t
+      value: 6000, 7500, 10000, 12000, 15000
+    - model: Emax=40t SE
+      value: 6000, 7500, 10000, 12000, 15000
+    - model: Emax=30t
+      value: 6000, 7500
+    - model: Emax=40t
+      value: 6000, 7500
+    - model: Emax=50t
+      value: 6000, 7500
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+test_reports:
+- id: 2004-W-0059
+  pages: 18
+  role: test_report
+- id: 2004-W-0060
+  pages: 17
+  role: test_report
+model_family:
+  family_name: HM9B
+  models:
+  - model_id: Emax=10t
+  - model_id: Emax=20t
+  - model_id: Emax=25t
+  - model_id: Emax=40t SE
+  - model_id: Emax=30t
+  - model_id: Emax=40t
+  - model_id: Emax=50t
+matrix_tables:
+- name: Identification of the certified type
+  columns:
+  - parameter
+  - group_1
+  - group_2
+  rows:
+  - parameter: model_designation
+    group_1: HM9B
+    group_2: HM9B
+  - parameter: accuracy_class
+    group_1: C3
+    group_2: C3
+  - parameter: maximum_capacity_emax
+    group_1: 10t, 20t, 25t, 40t SE
+    group_2: 30t, 40t, 50t
+  - parameter: ratio_y_emax_over_vmin
+    group_1: 6000, 7500, 10000, 12000 or 15000
+    group_2: 6000, 7500
+  - parameter: minimum_dead_load_emin
+    group_1: 0 kg
+    group_2: 0 kg
+  - parameter: max_load_cell_intervals_nmax
+    group_1: '3000'
+    group_2: '3000'
+  - parameter: apportionment_factor_plc
+    group_1: '0.7'
+    group_2: '0.7'
+  - parameter: safe_overload
+    group_1: 150% Emax
+    group_2: 150% Emax
+  - parameter: compensating_temperature_range
+    group_1: "-10°C to +40°C"
+    group_2: "-10°C to +40°C"
+  description: >-
+    Two capacity groups of the HM9B load cell: group 1 covers 10 t, 20 t, 25 t and 40 t (SE) with Y =
+    Emax/Vmin options 6000 to 15000; group 2 covers 30 t, 40 t and 50 t with Y options limited to 6000
+    and 7500.
+  footnotes: []

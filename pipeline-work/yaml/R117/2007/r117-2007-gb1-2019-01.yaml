@@ -1,0 +1,268 @@
+_meta:
+  cert_id: 4848
+  num: R117/2007-B-GB1-19.01
+  applicant: Gilbarco Veeder Root
+  issuing_year: '2019'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-gb1-2019-01.pdf
+certificate:
+  number: R117/2007-B-GB1-19.01
+  scheme: B
+  project_number: P02581
+  page_total: 5
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2019-04-17'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+  oiml_issuer_id: GB1
+applicants:
+- name: Gilbarco Veeder-Root
+  address_lines:
+  - Crompton Close
+  - Basildon
+  - Essex SS14 3BA
+  - United Kingdom
+manufacturers:
+- name: Gilbarco Veeder-Root India Pvt. Ltd.
+  address_lines:
+  - Coimbatore Campus
+  - Coimbatore Ind. Estate
+  - Coimbatore 641021
+  - Tamil Nadu
+  - India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Orion
+  - Frontier II
+  - Frontier F2
+  description: >-
+    Liquid fuel dispenser type Orion, alternative name Frontier II or Frontier F2. Each hydraulic module
+    consists of one or two measurement sensors (types C+, V or V+ from the C series family of positive
+    displacement meters) and one GPU90 pump and gas separator, except for use in pressurized systems.
+    The dispenser chassis is primarily manufactured from sheet steel, with glass or plastic windows providing
+    visibility of the indicators. Two dispenser chassis sizes are available: the smaller housing may contain
+    one or two hydraulic modules (1 to 4 measuring systems) and the larger housing may contain up to four
+    hydraulic modules (1 to 8 measuring systems). Fuel is transferred by a hose and nozzle assembly. All
+    measuring transducers share a common calculator, type Apollo-2. Indicators allow a maximum of 7 digits
+    for price to pay, 7 digits for volume, and 6 digits for unit price; decimal positions are programmable.
+    When temperature compensation is used, the temperature probe shall meet the requirements in R117-1
+    (2007) clause 3.7.7 and be located in close vicinity of the sensors. Optional features and functions:
+    communications (remote automation), temperature conversion (ATC), keypads for preset control or use
+    by site attendants, delivery speed selection either by pushbutton or nozzle selection, electronic
+    or electromechanical totalizers, 4 active hose dispenser allowing dispensing from 4 transfer points
+    simultaneously and having 4 associated indicators (displays).
+characteristics:
+  type_level:
+    minimum_flowrate:
+      value: 1.6
+      unit_symbol: L/min
+    maximum_flowrate:
+      value: 80
+      unit_symbol: L/min
+    accuracy_class:
+      value: 0.5
+    environmental_class:
+      value: M1/E1/H3
+    ambient_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    product_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    intended_media:
+      value: Petroleum, ethanol blends, methanol blends, diesel, heating oil, biodiesel and biodiesel
+        blends
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    optional_motor_supply_voltage:
+      value: 400
+      unit_symbol: V
+    software_version:
+      value: A31.1.01 (displayed as A31101)
+    software_checksum:
+      value: '8564'
+    communication_protocol:
+      value: Gilbarco Two-Wire protocol
+  config_level:
+  - attribute: minimum_measured_quantity
+    axis: maximum_flowrate
+    values:
+    - condition: Qmax <= 40 L/min
+      value: 1, 2 or 5
+      unit_symbol: L
+    - condition: 40 < Qmax <= 60 L/min
+      value: 2 or 5
+      unit_symbol: L
+    - condition: Qmax > 60 L/min
+      value: 2, 5 or 10
+      unit_symbol: L
+  - attribute: hydraulic_modules
+    axis: chassis_size
+    values:
+    - condition: smaller housing
+      value:
+        min: 1
+        max: 2
+    - condition: larger housing
+      value:
+        min: 1
+        max: 4
+  - attribute: measuring_systems
+    axis: chassis_size
+    values:
+    - condition: smaller housing
+      value:
+        min: 1
+        max: 4
+    - condition: larger housing
+      value:
+        min: 1
+        max: 8
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: B
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: P02581
+  date: '2019-04-17'
+  pages: 61
+  role: type_evaluation_report
+- id: P02581-D
+  date: '2019-04-17'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2019-04-17'
+  changes: OIML Certificate first issued.
+components:
+- role: Measurement sensor (positive displacement meter)
+  type_designations:
+  - C+
+  - V
+  - V+
+  alternatives: OR
+  characteristics:
+    type_level:
+      minimum_flowrate:
+        value: 1.6
+        unit_symbol: L/min
+      maximum_flowrate:
+        value: 80
+        unit_symbol: L/min
+      environmental_class:
+        value: M2
+      ambient_temperature_range:
+        value:
+          min: -10
+          max: 40
+        unit_symbol: "°C"
+      product_temperature_range:
+        value:
+          min: -10
+          max: 40
+        unit_symbol: "°C"
+      viscosity_range:
+        value:
+          min: 0.4
+          max: 17
+        unit_symbol: mPa.s
+      cyclic_volume:
+        value: 0.47
+        unit_symbol: L
+      quantity_per_hydraulic_module:
+        value:
+          min: 1
+          max: 2
+- role: Pump and gas separator
+  type_designations:
+  - GPU90
+  characteristics:
+    type_level:
+      maximum_flowrate:
+        value: 80
+        unit_symbol: L/min
+      environmental_class:
+        value: M2
+      ambient_temperature_range:
+        value:
+          min: -10
+          max: 40
+        unit_symbol: "°C"
+      product_temperature_range:
+        value:
+          min: -10
+          max: 40
+        unit_symbol: "°C"
+      viscosity_range:
+        value:
+          min: 0.4
+          max: 17
+        unit_symbol: mPa.s
+      quantity_per_hydraulic_module:
+        value: 1
+    config_level:
+    - attribute: pmax
+      axis: product
+      values:
+      - condition: diesel/gasoil/biodiesel blends
+        value: 2.5
+        unit_symbol: bar
+      - condition: petrol/ethanol blends
+        value: 1.9
+        unit_symbol: bar
+    - attribute: pmin
+      axis: product
+      values:
+      - condition: diesel/gasoil/biodiesel blends
+        value: 1.9
+        unit_symbol: bar
+      - condition: petrol/ethanol blends
+        value: 1.4
+        unit_symbol: bar
+- role: Calculator
+  type_designations:
+  - Apollo-2
+  characteristics:
+    type_level:
+      environmental_class:
+        value: M1/E1/H3
+      ambient_temperature_range:
+        value:
+          min: -25
+          max: 55
+        unit_symbol: "°C"
+      maximum_volume_indication_digits:
+        value: 7
+      maximum_price_to_pay_indication_digits:
+        value: 7
+      maximum_unit_price_indication_digits:
+        value: 6
