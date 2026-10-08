@@ -1,0 +1,140 @@
+_meta:
+  cert_id: 1927
+  num: R076/1992-NL1-2007.31
+  applicant: Shanghai Teraoka Electronic Co., Ltd.
+  issuing_year: '2007'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2007-31.pdf
+certificate:
+  number: R76/1992-NL1-07.31
+  project_number: '704821'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2007-08-27'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Shanghai Teraoka Electronic CO., LTD.
+  address_lines:
+  - Tinglin Industry Development Zone
+  - Jin Shan Country
+  - Shanghai 201505
+  - PR of China
+manufacturers:
+- name: Shanghai Teraoka Electronic CO., LTD.
+  address_lines:
+  - Tinglin Industry Development Zone
+  - Jin Shan Country
+  - Shanghai 201505
+  - PR of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DS-500
+  module_designation: Not applicable
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 1.5
+        max: 30
+      unit_symbol: kg
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_verification_scale_interval
+    axis: weighing_range_configuration
+    values:
+    - condition: single_interval
+      value:
+        min: 0.5
+        max:
+      unit_symbol: g
+    - condition: multi_interval
+      value:
+        min: 0.5
+        max:
+      unit_symbol: g
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: weighing_range_configuration
+    values:
+    - condition: single_interval
+      value:
+        min:
+        max: 3000
+    - condition: multi_interval_per_partial_weighing_range
+      value:
+        min:
+        max: 1000
+  - attribute: maximum_subtractive_tare
+    axis: weighing_range_configuration
+    values:
+    - condition: single_interval
+      value: "-Max"
+    - condition: multi_interval
+      value: "-Max1"
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-03.06
+  pages: 51
+  role: test_report
+- id: R76/1992-NL1-07.31
+  pages: 10
+  role: test_report
+- id: T6195
+  role: documentation_file
+matrix_tables:
+- name: Scale interval and division limits by weighing range configuration
+  columns:
+  - configuration
+  - verification_scale_interval
+  - number_of_verification_scale_intervals
+  - maximum_subtractive_tare
+  column_units:
+  -
+  - g
+  - divisions
+  -
+  rows:
+  - configuration: single_interval
+    verification_scale_interval:
+      min: 0.5
+      max:
+    number_of_verification_scale_intervals:
+      min:
+      max: 3000
+    maximum_subtractive_tare: "-Max"
+  - configuration: multi_interval
+    verification_scale_interval:
+      min: 0.5
+      max:
+    number_of_verification_scale_intervals:
+      min:
+      max: 1000
+    maximum_subtractive_tare: "-Max1"
+  description: >-
+    Multi-interval values apply per partial weighing range; the instrument may have a maximum of two partial
+    weighing ranges.
+  footnotes: []

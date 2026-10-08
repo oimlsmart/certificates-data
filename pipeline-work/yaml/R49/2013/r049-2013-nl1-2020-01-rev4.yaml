@@ -1,0 +1,1533 @@
+_meta:
+  cert_id: 5468
+  num: R49/2013-A-NL1-20.01 Rev. 4
+  applicant: ABB Limited
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-nl1-2020-01-rev4.pdf
+certificate:
+  number: R49/2013-A-NL1-20.01
+  revision: '4'
+  scheme: A
+  project_number: '2496280'
+  page_total: 10
+  member_state: The Netherlands
+  date_issued: '2021-08-26'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  person_title: Certification Board
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: ABB Limited
+  address_lines:
+  - Oldends Lane
+  - GL10 3TA Stonehouse
+  - United Kingdom
+manufacturers:
+- name: ABB Limited
+  address_lines:
+  - Oldends Lane
+  - GL10 3TA Stonehouse
+  - United Kingdom
+- name: ABB Engineering (Shanghai) Ltd.
+  address_lines:
+  - No. 4528, Kangxin Highway
+  - Pudong New District, Shanghai, 201319
+  - P.R. China
+- name: ABB Inc.
+  address_lines:
+  - 125 E. County Line Road
+  - Warminster, PA 18974
+  - United States of America (USA)
+certified_type:
+  category: Water meter
+  type_designations:
+  - AquaMaster4 FEW4XY.Z
+  - AquaMaster4 FET4
+  module_designation:
+  description: >-
+    Electromagnetic water meter, family AquaMaster4. Type designations FEW4XY.Z and FET4, where X is 1
+    or 3 (standard or advanced), Y is 1, 2, 8 or 9 (integral/remote version, optionally sensor only) and
+    Z is R (reduced bore), V (virtual full bore) or F (full bore).
+characteristics:
+  type_level:
+    measuring_principle:
+      value: Electromagnetic
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: 1 and 2
+      unit_symbol:
+      unit_id:
+    environmental_class:
+      value: O (installed outdoors)
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E2
+      unit_symbol:
+      unit_id:
+    mechanical_class:
+      value: M1
+      unit_symbol:
+      unit_id:
+    temperature_range_ambient:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    water_temperature_class:
+      value: T50
+      unit_symbol:
+      unit_id:
+    water_temperature_range:
+      value:
+        min: 0.1
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+      unit_id:
+    orientation:
+      value: All positions (horizontal, vertical, or diagonal)
+      unit_symbol:
+      unit_id:
+    reverse_flow:
+      value: The sensor is intended to measure reverse flow
+      unit_symbol:
+      unit_id:
+    checking_facility:
+      value: Type P (permanent) automatic checking facility
+      unit_symbol:
+      unit_id:
+    software_identification:
+      value: 03.00.03 (checksum B26AFE6B), 03.00.04 (checksum 6E98963A), 03.02.00 (checksum E12E5C04)
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 85
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value:
+        min: 6
+        max: 32
+      unit_symbol: V
+      unit_id:
+    battery_configuration:
+      value: 2 x 3.6 V
+      unit_symbol:
+      unit_id:
+    battery_operating_voltage_range:
+      value:
+        min: 2.9
+        max: 3.6
+      unit_symbol: V
+      unit_id:
+  config_level:
+  - attribute: flow_profile_sensitivity_class
+    axis: bore_type_and_meter_size
+    values:
+    - condition: default (0 x DN upstream and 0 x DN downstream)
+      value: U0 and D0
+      unit_symbol:
+    - condition: full bore DN250 and larger (3 x DN upstream and 0 x DN downstream)
+      value: U3 and D0
+      unit_symbol:
+  - attribute: pressure_loss_class
+    axis: bore_type_and_meter_size
+    values:
+    - condition: reduced bore, DN40 and DN50
+      value: Δp 40
+      unit_symbol:
+    - condition: reduced bore, larger than DN50
+      value: Δp 63
+      unit_symbol:
+    - condition: "(virtual) full bore, DN40 and DN50"
+      value: Δp 10
+      unit_symbol:
+    - condition: "(virtual) full bore, DN65 to DN200"
+      value: Δp 16
+      unit_symbol:
+    - condition: "(virtual) full bore, DN250 and larger"
+      value: Δp 10
+      unit_symbol:
+  - attribute: maximum_pressure_loss
+    axis: bore_type_and_meter_size
+    values:
+    - condition: reduced bore, DN40 and DN50
+      value: 0.4
+      unit_symbol: bar
+    - condition: reduced bore, larger than DN50
+      value: 0.63
+      unit_symbol: bar
+    - condition: "(virtual) full bore, DN40 and DN50"
+      value: 0.1
+      unit_symbol: bar
+    - condition: "(virtual) full bore, DN65 to DN200"
+      value: 0.16
+      unit_symbol: bar
+    - condition: "(virtual) full bore, DN250 and larger"
+      value: 0.1
+      unit_symbol: bar
+recommendation:
+  id: R49-1
+  edition: 2013
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - 1
+  - 2
+test_reports:
+- id: NMi-2254799-01
+  date: '2020-08-14'
+  pages: 235
+  role: type_evaluation_report
+- id: NMi-2254799-03
+  date: '2020-09-30'
+  pages: 44
+  role: type_evaluation_report
+- id: NMi-2254799-04
+  date: '2020-12-24'
+  pages: 180
+  role: type_evaluation_report
+- id: NMi-2564429-01
+  date: '2021-08-02'
+  pages: 26
+  role: type_evaluation_report
+- id: NMi-2496280-01
+  date: '2021-08-26'
+  pages: 26
+  role: type_evaluation_report
+- id: T11851-5
+  date:
+  pages:
+  role: documentation_file
+revision_history:
+- revision: initial
+  date: '2020-08-14'
+  changes: First issue.
+- revision: '1'
+  date: '2020-09-30'
+  changes: Additional evaluation of reduced bore larger sizes up to DN600
+- revision: '2'
+  date: '2020-12-24'
+  changes: Additional evaluation of (virtual) full bore sensor and additional software version
+- revision: '3'
+  date: '2021-08-02'
+  changes: >-
+    Additional evaluation for extending temperature to -25 °C and for E2 class and O class for the flow
+    transmitter. Addition of software version.
+- revision: '4'
+  date: '2021-08-26'
+  changes: Addition of full-bore sizes up to DN1200.
+model_family:
+  family_name: AquaMaster4
+  models:
+  - model_id: DN40
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN50
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN65
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN80
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN100
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN125
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN150
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN200
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN250
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN300
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN350
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN400
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN450
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN500
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN600
+    attributes:
+      bore_variants:
+      - reduced
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN700
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN750
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN800
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable
+  - model_id: DN900
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable (accuracy class 2 only)
+  - model_id: DN1000
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable (accuracy class 2 only)
+  - model_id: DN1050
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable (accuracy class 2 only)
+  - model_id: DN1100
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable (accuracy class 2 only)
+  - model_id: DN1200
+    attributes:
+      bore_variants:
+      - virtual_full_bore
+      - full
+      power_supply_variants:
+      - AC mains
+      - battery/renewable (accuracy class 2 only)
+components:
+- role: flow sensor
+  type_designations:
+  - FEW4XY.Z
+  alternatives:
+  characteristics: {}
+- role: flow transmitter / indicating device
+  type_designations:
+  - FET4
+  alternatives:
+  characteristics: {}
+footnotes:
+- marker: "*"
+  text: >-
+    With X being 1 or 3 (standard or advanced), Y being 1, 2, 8 or 9 (integral/remote version, optionally
+    sensor only) and Z being R (reduced bore), V (virtual full bore) or F (full bore).
+matrix_tables:
+- name: 'Table 2 - General characteristics of the family of instruments: Reduced bore - AC mains powered'
+  columns:
+  - meter_size
+  - accuracy_class
+  - q1
+  - q2
+  - q3
+  - q4
+  - ratio_q3_q1
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_size: DN40
+    accuracy_class: '1'
+    q1: 0.05
+    q2: 0.08
+    q3: 25
+    q4: 31.25
+    ratio_q3_q1: 500
+  - meter_size: DN40
+    accuracy_class: '2'
+    q1: 0.025
+    q2: 0.04
+    q3: 25
+    q4: 31.25
+    ratio_q3_q1: 1000
+  - meter_size: DN50
+    accuracy_class: '1'
+    q1: 0.08
+    q2: 0.128
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 500
+  - meter_size: DN50
+    accuracy_class: '2'
+    q1: 0.04
+    q2: 0.064
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 1000
+  - meter_size: DN65
+    accuracy_class: 1 & 2
+    q1: 0.063
+    q2: 0.1008
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 1000
+  - meter_size: DN80
+    accuracy_class: 1 & 2
+    q1: 0.1
+    q2: 0.16
+    q3: 100
+    q4: 125
+    ratio_q3_q1: 1000
+  - meter_size: DN100
+    accuracy_class: '1'
+    q1: 0.32
+    q2: 0.512
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 500
+  - meter_size: DN100
+    accuracy_class: '2'
+    q1: 0.16
+    q2: 0.256
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 1000
+  - meter_size: DN125
+    accuracy_class: '1'
+    q1: 0.32
+    q2: 0.512
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 500
+  - meter_size: DN125
+    accuracy_class: '2'
+    q1: 0.16
+    q2: 0.256
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 1000
+  - meter_size: DN150
+    accuracy_class: 1 & 2
+    q1: 0.4
+    q2: 0.64
+    q3: 400
+    q4: 500
+    ratio_q3_q1: 1000
+  - meter_size: DN200
+    accuracy_class: 1 & 2
+    q1: 0.63
+    q2: 1.008
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 1000
+  - meter_size: DN250
+    accuracy_class: '1'
+    q1: 2
+    q2: 3.2
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 500
+  - meter_size: DN250
+    accuracy_class: '2'
+    q1: 1
+    q2: 1.6
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 1000
+  - meter_size: DN300
+    accuracy_class: '1'
+    q1: 3.2
+    q2: 5.12
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 500
+  - meter_size: DN300
+    accuracy_class: '2'
+    q1: 1.6
+    q2: 2.56
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 1000
+  - meter_size: DN350
+    accuracy_class: '1'
+    q1: 3.2
+    q2: 5.12
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 500
+  - meter_size: DN350
+    accuracy_class: '2'
+    q1: 1.6
+    q2: 2.56
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 1000
+  - meter_size: DN400
+    accuracy_class: 1 & 2
+    q1: 5
+    q2: 8
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 500
+  - meter_size: DN450
+    accuracy_class: 1 & 2
+    q1: 5
+    q2: 8
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 500
+  - meter_size: DN500
+    accuracy_class: '1'
+    q1: 8
+    q2: 12.8
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 500
+  - meter_size: DN500
+    accuracy_class: '2'
+    q1: 4
+    q2: 6.4
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 1000
+  - meter_size: DN600
+    accuracy_class: '1'
+    q1: 12.6
+    q2: 20.16
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 500
+  - meter_size: DN600
+    accuracy_class: '2'
+    q1: 6.3
+    q2: 10.08
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 1000
+  description: >-
+    Flow rates Q1, Q2, Q3 and Q4 can be freely chosen as long as: Q3 and ratio Q3/Q1 are selected from
+    paragraph 4.1 of OIML R49-1:2013; Q1 and Q2 are minimum values and Q2/Q1 = 1.6; Q3 and Q4 are maximum
+    values and Q4/Q3 = 1.25; Q3/Q1 is at least 40.
+  footnotes: []
+- name: >-
+    Table 3 - General characteristics of the family of instruments: Reduced bore - Battery / Renewable
+    energy powered
+  columns:
+  - meter_size
+  - accuracy_class
+  - q1
+  - q2
+  - q3
+  - q4
+  - ratio_q3_q1
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_size: DN40
+    accuracy_class: 1 & 2
+    q1: 0.0625
+    q2: 0.1
+    q3: 25
+    q4: 31.25
+    ratio_q3_q1: 400
+  - meter_size: DN50
+    accuracy_class: 1 & 2
+    q1: 0.1
+    q2: 0.16
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 400
+  - meter_size: DN65
+    accuracy_class: '1'
+    q1: 0.39375
+    q2: 0.63
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 160
+  - meter_size: DN65
+    accuracy_class: '2'
+    q1: 0.1575
+    q2: 0.252
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 400
+  - meter_size: DN80
+    accuracy_class: '1'
+    q1: 0.625
+    q2: 1
+    q3: 100
+    q4: 125
+    ratio_q3_q1: 160
+  - meter_size: DN80
+    accuracy_class: '2'
+    q1: 0.25
+    q2: 0.4
+    q3: 100
+    q4: 125
+    ratio_q3_q1: 400
+  - meter_size: DN100
+    accuracy_class: '1'
+    q1: 1
+    q2: 1.6
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 160
+  - meter_size: DN100
+    accuracy_class: '2'
+    q1: 0.4
+    q2: 0.64
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 400
+  - meter_size: DN125
+    accuracy_class: '1'
+    q1: 1
+    q2: 1.6
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 160
+  - meter_size: DN125
+    accuracy_class: '2'
+    q1: 0.4
+    q2: 0.64
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 400
+  - meter_size: DN150
+    accuracy_class: 1 & 2
+    q1: 1
+    q2: 1.6
+    q3: 400
+    q4: 500
+    ratio_q3_q1: 400
+  - meter_size: DN200
+    accuracy_class: 1 & 2
+    q1: 1.575
+    q2: 2.52
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 400
+  - meter_size: DN250
+    accuracy_class: '1'
+    q1: 6.25
+    q2: 10
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 160
+  - meter_size: DN250
+    accuracy_class: '2'
+    q1: 2.5
+    q2: 4
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 400
+  - meter_size: DN300
+    accuracy_class: '1'
+    q1: 10
+    q2: 16
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 160
+  - meter_size: DN300
+    accuracy_class: '2'
+    q1: 4
+    q2: 6.4
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 400
+  - meter_size: DN350
+    accuracy_class: '1'
+    q1: 10
+    q2: 16
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 160
+  - meter_size: DN350
+    accuracy_class: '2'
+    q1: 4
+    q2: 6.4
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 400
+  - meter_size: DN400
+    accuracy_class: '1'
+    q1: 15.625
+    q2: 25
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 160
+  - meter_size: DN400
+    accuracy_class: '2'
+    q1: 12.5
+    q2: 20
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 200
+  - meter_size: DN450
+    accuracy_class: '1'
+    q1: 15.625
+    q2: 25
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 160
+  - meter_size: DN450
+    accuracy_class: '2'
+    q1: 12.5
+    q2: 20
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 200
+  - meter_size: DN500
+    accuracy_class: '1'
+    q1: 100
+    q2: 160
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 40
+  - meter_size: DN500
+    accuracy_class: '2'
+    q1: 40
+    q2: 64
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 100
+  - meter_size: DN600
+    accuracy_class: '1'
+    q1: 157.5
+    q2: 252
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 40
+  - meter_size: DN600
+    accuracy_class: '2'
+    q1: 63
+    q2: 100.8
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 100
+  description: >-
+    Flow rates Q1, Q2, Q3 and Q4 can be freely chosen as long as: Q3 and ratio Q3/Q1 are selected from
+    paragraph 4.1 of OIML R49-1:2013; Q1 and Q2 are minimum values and Q2/Q1 = 1.6; Q3 and Q4 are maximum
+    values and Q4/Q3 = 1.25; Q3/Q1 is at least 40.
+  footnotes: []
+- name: 'Table 4 - General characteristics of the family of instruments: Full bore - AC mains powered'
+  columns:
+  - meter_size
+  - accuracy_class
+  - q1
+  - q2
+  - q3
+  - q4
+  - ratio_q3_q1
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_size: DN40
+    accuracy_class: 1 & 2
+    q1: 0.08
+    q2: 0.128
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 500
+  - meter_size: DN50
+    accuracy_class: 1 & 2
+    q1: 0.126
+    q2: 0.2016
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 500
+  - meter_size: DN65
+    accuracy_class: 1 & 2
+    q1: 0.2
+    q2: 0.32
+    q3: 100
+    q4: 125
+    ratio_q3_q1: 500
+  - meter_size: DN80
+    accuracy_class: 1 & 2
+    q1: 0.32
+    q2: 0.512
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 500
+  - meter_size: DN100
+    accuracy_class: 1 & 2
+    q1: 0.5
+    q2: 0.8
+    q3: 250
+    q4: 312.5
+    ratio_q3_q1: 500
+  - meter_size: DN125
+    accuracy_class: 1 & 2
+    q1: 0.5
+    q2: 0.8
+    q3: 250
+    q4: 312.5
+    ratio_q3_q1: 500
+  - meter_size: DN150
+    accuracy_class: '1'
+    q1: 2.52
+    q2: 4.032
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 250
+  - meter_size: DN150
+    accuracy_class: '2'
+    q1: 1.26
+    q2: 2.016
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 500
+  - meter_size: DN200
+    accuracy_class: '1'
+    q1: 4
+    q2: 6.4
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 250
+  - meter_size: DN200
+    accuracy_class: '2'
+    q1: 2
+    q2: 3.2
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 500
+  - meter_size: DN250
+    accuracy_class: '1'
+    q1: 6.4
+    q2: 10.24
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 250
+  - meter_size: DN250
+    accuracy_class: '2'
+    q1: 3.2
+    q2: 5.12
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 500
+  - meter_size: DN300
+    accuracy_class: '1'
+    q1: 10
+    q2: 16
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 250
+  - meter_size: DN300
+    accuracy_class: '2'
+    q1: 5
+    q2: 8
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 500
+  - meter_size: DN350
+    accuracy_class: 1 & 2
+    q1: 40
+    q2: 64
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 100
+  - meter_size: DN400
+    accuracy_class: 1 & 2
+    q1: 40
+    q2: 64
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 100
+  - meter_size: DN450
+    accuracy_class: 1 & 2
+    q1: 63
+    q2: 100.8
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 100
+  - meter_size: DN500
+    accuracy_class: 1 & 2
+    q1: 63
+    q2: 100.8
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 100
+  - meter_size: DN600
+    accuracy_class: 1 & 2
+    q1: 63
+    q2: 100.8
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 100
+  - meter_size: DN700
+    accuracy_class: '1'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN700
+    accuracy_class: '2'
+    q1: 50
+    q2: 80
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 200
+  - meter_size: DN750
+    accuracy_class: '1'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN750
+    accuracy_class: '2'
+    q1: 50
+    q2: 80
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 200
+  - meter_size: DN800
+    accuracy_class: '1'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN800
+    accuracy_class: '2'
+    q1: 50
+    q2: 80
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 200
+  - meter_size: DN900
+    accuracy_class: '1'
+    q1: 158.7
+    q2: 253.9
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 63
+  - meter_size: DN900
+    accuracy_class: '2'
+    q1: 80
+    q2: 128
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 125
+  - meter_size: DN1000
+    accuracy_class: '1'
+    q1: 160
+    q2: 256
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 100
+  - meter_size: DN1000
+    accuracy_class: '2'
+    q1: 80
+    q2: 128
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 200
+  - meter_size: DN1050
+    accuracy_class: '1'
+    q1: 160
+    q2: 256
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 100
+  - meter_size: DN1050
+    accuracy_class: '2'
+    q1: 80
+    q2: 128
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 200
+  - meter_size: DN1100
+    accuracy_class: '1'
+    q1: 253.9
+    q2: 406.2
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 63
+  - meter_size: DN1100
+    accuracy_class: '2'
+    q1: 128
+    q2: 204.8
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 125
+  - meter_size: DN1200
+    accuracy_class: '1'
+    q1: 253.9
+    q2: 406.2
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 63
+  - meter_size: DN1200
+    accuracy_class: '2'
+    q1: 128
+    q2: 204.8
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 125
+  description: >-
+    Flow rates Q1, Q2, Q3 and Q4 can be freely chosen as long as: Q3 and ratio Q3/Q1 are selected from
+    paragraph 4.1 of OIML R49-1:2013; Q1 and Q2 are minimum values and Q2/Q1 = 1.6; Q3 and Q4 are maximum
+    values and Q4/Q3 = 1.25; Q3/Q1 is at least 40.
+  footnotes: []
+- name: >-
+    Table 5 - General characteristics of the family of instruments: Full bore - Battery / Renewable energy
+    powered
+  columns:
+  - meter_size
+  - accuracy_class
+  - q1
+  - q2
+  - q3
+  - q4
+  - ratio_q3_q1
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_size: DN40
+    accuracy_class: '1'
+    q1: 0.32
+    q2: 0.512
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 125
+  - meter_size: DN40
+    accuracy_class: '2'
+    q1: 0.16
+    q2: 0.256
+    q3: 40
+    q4: 50
+    ratio_q3_q1: 250
+  - meter_size: DN50
+    accuracy_class: '1'
+    q1: 0.504
+    q2: 0.8064
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 125
+  - meter_size: DN50
+    accuracy_class: '2'
+    q1: 0.252
+    q2: 0.4032
+    q3: 63
+    q4: 78.75
+    ratio_q3_q1: 250
+  - meter_size: DN65
+    accuracy_class: 1 & 2
+    q1: 0.4
+    q2: 0.64
+    q3: 100
+    q4: 125
+    ratio_q3_q1: 250
+  - meter_size: DN80
+    accuracy_class: 1 & 2
+    q1: 0.64
+    q2: 1.024
+    q3: 160
+    q4: 200
+    ratio_q3_q1: 250
+  - meter_size: DN100
+    accuracy_class: 1 & 2
+    q1: 1
+    q2: 1.6
+    q3: 250
+    q4: 312.5
+    ratio_q3_q1: 250
+  - meter_size: DN125
+    accuracy_class: 1 & 2
+    q1: 1
+    q2: 1.6
+    q3: 250
+    q4: 312.5
+    ratio_q3_q1: 250
+  - meter_size: DN150
+    accuracy_class: '1'
+    q1: 5.04
+    q2: 8.064
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 125
+  - meter_size: DN150
+    accuracy_class: '2'
+    q1: 2.52
+    q2: 4.032
+    q3: 630
+    q4: 787.5
+    ratio_q3_q1: 250
+  - meter_size: DN200
+    accuracy_class: '1'
+    q1: 8
+    q2: 12.8
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 125
+  - meter_size: DN200
+    accuracy_class: '2'
+    q1: 4
+    q2: 6.4
+    q3: 1000
+    q4: 1250
+    ratio_q3_q1: 250
+  - meter_size: DN250
+    accuracy_class: '1'
+    q1: 12.8
+    q2: 20.48
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 125
+  - meter_size: DN250
+    accuracy_class: '2'
+    q1: 6.4
+    q2: 10.24
+    q3: 1600
+    q4: 2000
+    ratio_q3_q1: 250
+  - meter_size: DN300
+    accuracy_class: '1'
+    q1: 20
+    q2: 32
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 125
+  - meter_size: DN300
+    accuracy_class: '2'
+    q1: 10
+    q2: 16
+    q3: 2500
+    q4: 3125
+    ratio_q3_q1: 250
+  - meter_size: DN350
+    accuracy_class: 1 & 2
+    q1: 16
+    q2: 25.6
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 250
+  - meter_size: DN400
+    accuracy_class: 1 & 2
+    q1: 16
+    q2: 25.6
+    q3: 4000
+    q4: 5000
+    ratio_q3_q1: 250
+  - meter_size: DN450
+    accuracy_class: 1 & 2
+    q1: 25.2
+    q2: 40.32
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 250
+  - meter_size: DN500
+    accuracy_class: 1 & 2
+    q1: 25.2
+    q2: 40.32
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 250
+  - meter_size: DN600
+    accuracy_class: '1'
+    q1: 78.75
+    q2: 126
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 80
+  - meter_size: DN600
+    accuracy_class: '2'
+    q1: 39.375
+    q2: 63
+    q3: 6300
+    q4: 7875
+    ratio_q3_q1: 160
+  - meter_size: DN700
+    accuracy_class: '1'
+    q1: 200
+    q2: 320
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 50
+  - meter_size: DN700
+    accuracy_class: '2'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN750
+    accuracy_class: '1'
+    q1: 200
+    q2: 320
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 50
+  - meter_size: DN750
+    accuracy_class: '2'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN800
+    accuracy_class: '1'
+    q1: 200
+    q2: 320
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 50
+  - meter_size: DN800
+    accuracy_class: '2'
+    q1: 100
+    q2: 160
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 100
+  - meter_size: DN900
+    accuracy_class: '2'
+    q1: 158.7
+    q2: 254
+    q3: 10000
+    q4: 12500
+    ratio_q3_q1: 63
+  - meter_size: DN1000
+    accuracy_class: '2'
+    q1: 160
+    q2: 250
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 100
+  - meter_size: DN1050
+    accuracy_class: '2'
+    q1: 160
+    q2: 250
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 100
+  - meter_size: DN1100
+    accuracy_class: '2'
+    q1: 254
+    q2: 406.3
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 63
+  - meter_size: DN1200
+    accuracy_class: '2'
+    q1: 254
+    q2: 406.3
+    q3: 16000
+    q4: 20000
+    ratio_q3_q1: 63
+  description: >-
+    Flow rates Q1, Q2, Q3 and Q4 can be freely chosen as long as: Q3 and ratio Q3/Q1 are selected from
+    paragraph 4.1 of OIML R49-1:2013; Q1 and Q2 are minimum values and Q2/Q1 = 1.6; Q3 and Q4 are maximum
+    values and Q4/Q3 = 1.25; Q3/Q1 is at least 40.
+  footnotes: []
+- name: 'Table 6 - General characteristics of the indicating device: Reduced bore - AC mains powered'
+  columns:
+  - meter_sizes
+  - indicating_range_max
+  - indicating_range_min
+  - verification_scale_interval_max
+  column_units:
+  -
+  - m³
+  - m³
+  - m³
+  rows:
+  - meter_sizes: DN40, DN50, DN65
+    indicating_range_max: 9999999
+    indicating_range_min: 99999
+    verification_scale_interval_max: 0.0001
+  - meter_sizes: DN80
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.0001
+  - meter_sizes: DN100, DN125, DN150, DN200
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN250
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN300, DN350, DN400, DN450, DN500, DN600
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.01
+  description:
+  footnotes: []
+- name: >-
+    Table 7 - General characteristics of the indicating device: Reduced bore - Battery / Renewable energy
+    powered
+  columns:
+  - meter_sizes
+  - indicating_range_max
+  - indicating_range_min
+  - verification_scale_interval_max
+  column_units:
+  -
+  - m³
+  - m³
+  - m³
+  rows:
+  - meter_sizes: DN40, DN50
+    indicating_range_max: 9999999
+    indicating_range_min: 99999
+    verification_scale_interval_max: 0.0001
+  - meter_sizes: DN65
+    indicating_range_max: 9999999
+    indicating_range_min: 99999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN80, DN100, DN125, DN150
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN200
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.01
+  - meter_sizes: DN250, DN300, DN350, DN400, DN450
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.01
+  - meter_sizes: DN500, DN600
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.1
+  description:
+  footnotes: []
+- name: 'Table 8 - General characteristics of the indicating device: Full bore - AC mains powered'
+  columns:
+  - meter_sizes
+  - indicating_range_max
+  - indicating_range_min
+  - verification_scale_interval_max
+  column_units:
+  -
+  - m³
+  - m³
+  - m³
+  rows:
+  - meter_sizes: DN40, DN50
+    indicating_range_max: 9999999
+    indicating_range_min: 99999
+    verification_scale_interval_max: 0.0001
+  - meter_sizes: DN65
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.0001
+  - meter_sizes: DN80, DN100, DN125, DN150
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN200, DN250, DN300
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.01
+  - meter_sizes: DN350, DN400, DN450, DN500, DN600, DN700, DN750, DN800, DN900, DN1000, DN1050, DN1100,
+      DN1200
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.1
+  description:
+  footnotes: []
+- name: >-
+    Table 9 - General characteristics of the indicating device: Full bore - Battery / Renewable energy
+    powered
+  columns:
+  - meter_sizes
+  - indicating_range_max
+  - indicating_range_min
+  - verification_scale_interval_max
+  column_units:
+  -
+  - m³
+  - m³
+  - m³
+  rows:
+  - meter_sizes: DN40, DN50
+    indicating_range_max: 9999999
+    indicating_range_min: 99999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN65, DN80, DN100, DN125
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.001
+  - meter_sizes: DN150
+    indicating_range_max: 9999999
+    indicating_range_min: 999999
+    verification_scale_interval_max: 0.01
+  - meter_sizes: DN200, DN250, DN300, DN350, DN400, DN450, DN500
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.01
+  - meter_sizes: DN600, DN700, DN750, DN800, DN900, DN1000, DN1050, DN1100, DN1200
+    indicating_range_max: 9999999
+    indicating_range_min: 9999999
+    verification_scale_interval_max: 0.1
+  description:
+  footnotes: []

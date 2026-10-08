@@ -1,0 +1,225 @@
+_meta:
+  cert_id: 2982
+  num: R076/2006-DE1-2012.01
+  applicant: Seca GmbH & Co. kg.
+  issuing_year: '2012'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-de1-2012-01.pdf
+certificate:
+  number: R76/2006-DE1-12.01
+  page_total: 2
+  member_state: Germany
+  date_issued: '2012-07-27'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dorothea Knopf
+  person_title: Head of Department
+applicants:
+- name: seca gmbh & co. kg
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+manufacturers:
+- name: seca gmbh & co. kg
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - BCA01A
+  - BCA01B
+  - BCA01C
+  module_designation: Not applicable
+  description: >-
+    Non-automatic electromechanical weighing instrument for persons. The weighing instrument consists
+    of a weighing platform with four strain gauge load cells, an indication for displaying the weighing
+    result and a membrane keyboard to operate the instrument. The weighing ranges with Max, Min, e, d
+    and number of verification scale intervals may be chosen within the limits of No. 3.2 of R 76-1 and
+    of table 1.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    platform_size:
+      value: 700 × 470
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: tare_balancing_range_subtractive
+    unit_symbol:
+    values:
+    - model: BCA01A
+      value: Max2
+    - model: BCA01B
+      value: Max2
+    - model: BCA01C
+      value: Max
+  config_level:
+  - attribute: minimum_capacity
+    axis: weighing_range
+    values:
+    - condition: BCA01A range 1 (Min1)
+      value: 1
+      unit_symbol: kg
+    - condition: BCA01A range 2 (Min2)
+      value: 2
+      unit_symbol: kg
+    - condition: BCA01B range 1 (Min1)
+      value: 1
+      unit_symbol: kg
+    - condition: BCA01B range 2 (Min2)
+      value: 2
+      unit_symbol: kg
+    - condition: BCA01C (single range)
+      value: 2
+      unit_symbol: kg
+  - attribute: maximum_capacity
+    axis: weighing_range
+    values:
+    - condition: BCA01A range 1 (Max1)
+      value: 150
+      unit_symbol: kg
+    - condition: BCA01A range 2 (Max2)
+      value: 300
+      unit_symbol: kg
+    - condition: BCA01B range 1 (Max1)
+      value: 100
+      unit_symbol: kg
+    - condition: BCA01B range 2 (Max2)
+      value: 300
+      unit_symbol: kg
+    - condition: BCA01C (single range)
+      value: 300
+      unit_symbol: kg
+  - attribute: scale_interval_e_d
+    axis: weighing_range
+    values:
+    - condition: BCA01A range 1 (e1=d1)
+      value: 0.05
+      unit_symbol: kg
+    - condition: BCA01A range 2 (e2=d2)
+      value: 0.1
+      unit_symbol: kg
+    - condition: BCA01B range 1 (e1=d1)
+      value: 0.05
+      unit_symbol: kg
+    - condition: BCA01B range 2 (e2=d2)
+      value: 0.1
+      unit_symbol: kg
+    - condition: BCA01C (single range)
+      value: 0.1
+      unit_symbol: kg
+  - attribute: number_of_verification_scale_intervals
+    axis: weighing_range
+    values:
+    - condition: BCA01A range 1 (n1)
+      value: 3000
+      unit_symbol:
+    - condition: BCA01A range 2 (n2)
+      value: 3000
+      unit_symbol:
+    - condition: BCA01B range 1 (n1)
+      value: 2000
+      unit_symbol:
+    - condition: BCA01B range 2 (n2)
+      value: 3000
+      unit_symbol:
+    - condition: BCA01C (single range)
+      value: 3000
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+test_reports:
+- id: 1.12-4053632
+  pages: 8
+  role: type_evaluation_report
+- id: 1.12-4053632/1
+  pages: 50
+  role: test_report
+- id: 1.12-4053632/2
+  pages: 37
+  role: test_report
+model_family:
+  family_name: BCA01
+  models:
+  - model_id: BCA01A
+    label: Multiple range instrument
+    attributes:
+      instrument_kind: multiple_range
+  - model_id: BCA01B
+    label: Multiple range instrument
+    attributes:
+      instrument_kind: multiple_range
+  - model_id: BCA01C
+    label: Single range instrument
+    attributes:
+      instrument_kind: single_range
+matrix_tables:
+- name: Table 1 – Weighing ranges
+  columns:
+  - type
+  - instrument_kind
+  - accuracy_class
+  - min_min1_min2
+  - max_max1_max2
+  - e_d_e1_e2
+  - n_n1_n2
+  - tare_balancing_range_subtractive
+  - temperature_range
+  - platform_size
+  rows:
+  - type: BCA01A
+    instrument_kind: Multiple range instrument
+    accuracy_class: III
+    min_min1_min2: 1 kg | 2 kg
+    max_max1_max2: 150 kg | 300 kg
+    e_d_e1_e2: 0.05 kg | 0.1 kg
+    n_n1_n2: 3000 | 3000
+    tare_balancing_range_subtractive: Max2
+    temperature_range: "+10 °C … +40 °C"
+    platform_size: 700 mm × 470 mm
+  - type: BCA01B
+    instrument_kind: Multiple range instrument
+    accuracy_class: III
+    min_min1_min2: 1 kg | 2 kg
+    max_max1_max2: 100 kg | 300 kg
+    e_d_e1_e2: 0.05 kg | 0.1 kg
+    n_n1_n2: 2000 | 3000
+    tare_balancing_range_subtractive: Max2
+    temperature_range: "+10 °C … +40 °C"
+    platform_size: 700 mm × 470 mm
+  - type: BCA01C
+    instrument_kind: Single range instrument
+    accuracy_class: III
+    min_min1_min2: 2 kg
+    max_max1_max2: 300 kg
+    e_d_e1_e2: 0.1 kg
+    n_n1_n2: '3000'
+    tare_balancing_range_subtractive: Max
+    temperature_range: "+10 °C … +40 °C"
+    platform_size: 700 mm × 470 mm
+  footnotes: []

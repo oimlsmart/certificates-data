@@ -1,0 +1,203 @@
+_meta:
+  cert_id: 2275
+  num: R060/2000-DE1-2009.19
+  applicant: Flintec GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-19.pdf
+certificate:
+  number: R60/2000-DE1-09.19
+  scheme: A
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-07-14'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - SB6
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge bending beam load cell. The load cells of the series SB6 are bending beam load cells
+    made of stainless steel; the strain gauge application is hermetically encapsulated.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+    input_impedance:
+      value: 1106
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=20.4kg
+      value: 20.4
+    - model: Emax=51kg
+      value: 51
+    - model: Emax=102kg
+      value: 102
+    - model: Emax=204kg
+      value: 204
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+    - condition: C3
+      value: 3000
+    - condition: C4
+      value: 4000
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5100
+    - condition: C3
+      value: Emax/10200
+    - condition: C4
+      value: Emax/10200
+  - attribute: optional_minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value:
+    - condition: C3
+      value: Emax/20400
+      footnote_markers:
+      - 1)
+    - condition: C4
+      value: Emax/20400
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C1
+  - C3
+  - C4
+test_reports:
+- id: 1.12-4039210-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039210-2
+  pages: 21
+  role: test_report
+model_family:
+  family_name: SB6
+  models:
+  - model_id: Emax=20.4kg
+    label: SB6, Emax 20.4 kg
+    attributes:
+      accuracy_classes:
+      - C1
+      - C3
+      - C4
+  - model_id: Emax=51kg
+    label: SB6, Emax 51 kg
+    attributes:
+      accuracy_classes:
+      - C1
+      - C3
+      - C4
+  - model_id: Emax=102kg
+    label: SB6, Emax 102 kg
+    attributes:
+      accuracy_classes:
+      - C1
+      - C3
+      - C4
+  - model_id: Emax=204kg
+    label: SB6, Emax 204 kg
+    attributes:
+      accuracy_classes:
+      - C1
+      - C3
+footnotes:
+- marker: 1)
+  text: The optional minimum verification interval is indicated on the name plate
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  - optional_minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  -
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity: 20.4 / 51 / 102 / 204
+    minimum_load_cell_verification_interval_vmin: Emax/5100
+    optional_minimum_load_cell_verification_interval_vmin:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity: 20.4 / 51 / 102 / 204
+    minimum_load_cell_verification_interval_vmin: Emax/10200
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20400
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity: 20.4 / 51 / 102
+    minimum_load_cell_verification_interval_vmin: Emax/10200
+    optional_minimum_load_cell_verification_interval_vmin: Emax/20400
+  description: >-
+    Essential metrological data by accuracy class for the SB6 bending beam load cell series. The maximum
+    capacity 204 kg is not available for class C4.
+  footnotes:
+  - 1) The optional minimum verification interval is indicated on the name plate

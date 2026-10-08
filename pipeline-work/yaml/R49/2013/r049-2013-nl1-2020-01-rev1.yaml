@@ -1,0 +1,955 @@
+_meta:
+  cert_id: 5167
+  num: R49/2013-A-NL1-20.01 Rev. 1
+  applicant: ABB Limited
+  issuing_year: '2020'
+  status: Valid
+  issuer: NL1
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-nl1-2020-01-rev1.pdf
+certificate:
+  number: R49/2013-A-NL1-20.01
+  scheme: A
+  project_number: '2254799'
+  page_total: 6
+  member_state: The Netherlands
+  date_issued: '2020-10-01'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V., OIML Issuing Authority NL1
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: ABB Limited
+  address_lines:
+  - Oldends Lane
+  - GL10 3TA Stonehouse
+  - United Kingdom
+manufacturers:
+- name: ABB Limited
+  address_lines:
+  - Oldends Lane
+  - GL10 3TA Stonehouse
+  - United Kingdom (UK)
+- name: ABB Engineering (Shanghai) Ltd.
+  address_lines:
+  - No. 4528, Kangxin Highway
+  - Pudong New District
+  - Shanghai, 201319
+  - P.R. China
+- name: ABB Inc.
+  address_lines:
+  - 125 E. County Line Road
+  - Warminster, PA 18974
+  - United States of America (USA)
+certified_type:
+  category: Water meter
+  type_designations:
+  - AquaMaster4 FEW4XX.R
+  - FET4*
+  module_designation:
+  description: >-
+    An electromagnetic water meter (reduce bore), sizes DN40 to DN600, powered by AC mains, replaceable
+    battery or renewable energy (DC).
+characteristics:
+  type_level:
+    measuring_principle:
+      value: Electromagnetic
+      unit_symbol:
+    accuracy_class:
+      value: 1 and 2
+      unit_symbol:
+    electromagnetic_environment:
+      value: E1
+      unit_symbol:
+    bore:
+      value: Reduced bore
+      unit_symbol:
+    water_temperature_class:
+      value: T50
+      unit_symbol:
+    water_temperature_range:
+      value:
+        min: 0.1
+        max: 50
+      unit_symbol: "°C"
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+    maximum_admissible_pressure_bar:
+      value: 16
+      unit_symbol: bar
+    orientation:
+      value: All positions (horizontal, vertical, or diagonal)
+      unit_symbol:
+    flow_profile_sensitivity_class:
+      value: U0 and D0 (0 x DN upstream and 0 x DN downstream)
+      unit_symbol:
+    reverse_flow:
+      value: The sensor is intended to measure reverse flow
+      unit_symbol:
+    software_version:
+      value: 03.00.03
+      unit_symbol:
+    software_checksum:
+      value: B26AFE6B
+      unit_symbol:
+    checking_facility:
+      value: Type P (permanent) automatic checking facility
+      unit_symbol:
+    indicating_range_max:
+      value: 9999999
+      unit_symbol: m³
+  model_level:
+  - attribute: permanent_flow_rate_q3
+    unit_symbol: m³/h
+    values:
+    - model: DN40
+      value: 25
+    - model: DN50
+      value: 40
+    - model: DN65
+      value: 63
+    - model: DN80
+      value: 100
+    - model: DN100
+      value: 160
+    - model: DN125
+      value: 160
+    - model: DN150
+      value: 400
+    - model: DN200
+      value: 630
+    - model: DN250
+      value: 1000
+    - model: DN300
+      value: 1600
+    - model: DN350
+      value: 1600
+    - model: DN400
+      value: 2500
+    - model: DN450
+      value: 2500
+    - model: DN500
+      value: 4000
+    - model: DN600
+      value: 6300
+  - attribute: overload_flow_rate_q4
+    unit_symbol: m³/h
+    values:
+    - model: DN40
+      value: 31.25
+    - model: DN50
+      value: 50
+    - model: DN65
+      value: 78.75
+    - model: DN80
+      value: 125
+    - model: DN100
+      value: 200
+    - model: DN125
+      value: 200
+    - model: DN150
+      value: 500
+    - model: DN200
+      value: 787.5
+    - model: DN250
+      value: 1250
+    - model: DN300
+      value: 2000
+    - model: DN350
+      value: 2000
+    - model: DN400
+      value: 3125
+    - model: DN450
+      value: 3125
+    - model: DN500
+      value: 5000
+    - model: DN600
+      value: 7875
+  config_level:
+  - attribute: power_supply_voltage
+    axis: power_supply_option
+    values:
+    - condition: AC mains
+      value:
+        min: 85
+        max: 240
+      unit_symbol: V
+    - condition: DC powered (renewable energy)
+      value:
+        min: 6
+        max: 32
+      unit_symbol: V
+    - condition: replaceable battery
+      value: 3.6
+      unit_symbol: V
+  - attribute: power_supply_frequency
+    axis: power_supply_option
+    values:
+    - condition: AC mains
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+  - attribute: battery_operating_voltage_range
+    axis: power_supply_option
+    values:
+    - condition: replaceable battery
+      value:
+        min: 2.9
+        max: 3.6
+      unit_symbol: V
+  - attribute: pressure_loss_class
+    axis: meter_size
+    values:
+    - condition: DN40 and DN50
+      value: Δp 40
+    - condition: larger than DN50
+      value: Δp 63
+  - attribute: maximum_pressure_loss
+    axis: meter_size
+    values:
+    - condition: DN40 and DN50
+      value: 0.4
+      unit_symbol: bar
+    - condition: larger than DN50
+      value: 0.63
+      unit_symbol: bar
+  - attribute: minimum_flow_rate_q1
+    axis: power_supply_option / meter_size / accuracy_class
+    values:
+    - condition: AC mains, DN40, class 1
+      value: 0.05
+      unit_symbol: m³/h
+    - condition: AC mains, DN40, class 2
+      value: 0.025
+      unit_symbol: m³/h
+    - condition: AC mains, DN50, class 1
+      value: 0.08
+      unit_symbol: m³/h
+    - condition: AC mains, DN50, class 2
+      value: 0.04
+      unit_symbol: m³/h
+    - condition: AC mains, DN65, class 1 & 2
+      value: 0.063
+      unit_symbol: m³/h
+    - condition: AC mains, DN80, class 1 & 2
+      value: 0.1
+      unit_symbol: m³/h
+    - condition: AC mains, DN100, class 1
+      value: 0.32
+      unit_symbol: m³/h
+    - condition: AC mains, DN100, class 2
+      value: 0.16
+      unit_symbol: m³/h
+    - condition: AC mains, DN125, class 1
+      value: 0.32
+      unit_symbol: m³/h
+    - condition: AC mains, DN125, class 2
+      value: 0.16
+      unit_symbol: m³/h
+    - condition: AC mains, DN150, class 1 & 2
+      value: 0.4
+      unit_symbol: m³/h
+    - condition: AC mains, DN200, class 1 & 2
+      value: 0.63
+      unit_symbol: m³/h
+    - condition: AC mains, DN250, class 1
+      value: 2
+      unit_symbol: m³/h
+    - condition: AC mains, DN250, class 2
+      value: 1
+      unit_symbol: m³/h
+    - condition: AC mains, DN300, class 1
+      value: 3.2
+      unit_symbol: m³/h
+    - condition: AC mains, DN300, class 2
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: AC mains, DN350, class 1
+      value: 3.2
+      unit_symbol: m³/h
+    - condition: AC mains, DN350, class 2
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: AC mains, DN400, class 1 & 2
+      value: 5
+      unit_symbol: m³/h
+    - condition: AC mains, DN450, class 1 & 2
+      value: 5
+      unit_symbol: m³/h
+    - condition: AC mains, DN500, class 1
+      value: 8
+      unit_symbol: m³/h
+    - condition: AC mains, DN500, class 2
+      value: 4
+      unit_symbol: m³/h
+    - condition: AC mains, DN600, class 1
+      value: 12.6
+      unit_symbol: m³/h
+    - condition: AC mains, DN600, class 2
+      value: 6.3
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN40, class 1 & 2
+      value: 0.0625
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN50, class 1 & 2
+      value: 0.1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN65, class 1
+      value: 0.39375
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN65, class 2
+      value: 0.1575
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN80, class 1
+      value: 0.625
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN80, class 2
+      value: 0.25
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN100, class 1
+      value: 1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN100, class 2
+      value: 0.4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN125, class 1
+      value: 1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN125, class 2
+      value: 0.4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN150, class 1 & 2
+      value: 1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN200, class 1 & 2
+      value: 1.575
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN250, class 1
+      value: 6.25
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN250, class 2
+      value: 2.5
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN300, class 1
+      value: 10
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN300, class 2
+      value: 4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN350, class 1
+      value: 10
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN350, class 2
+      value: 4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN400, class 1
+      value: 15.625
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN400, class 2
+      value: 12.5
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN450, class 1
+      value: 15.625
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN450, class 2
+      value: 12.5
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN500, class 1
+      value: 100
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN500, class 2
+      value: 40
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN600, class 1
+      value: 157.5
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN600, class 2
+      value: 63
+      unit_symbol: m³/h
+  - attribute: transitional_flow_rate_q2
+    axis: power_supply_option / meter_size / accuracy_class
+    values:
+    - condition: AC mains, DN40, class 1
+      value: 0.08
+      unit_symbol: m³/h
+    - condition: AC mains, DN40, class 2
+      value: 0.04
+      unit_symbol: m³/h
+    - condition: AC mains, DN50, class 1
+      value: 0.128
+      unit_symbol: m³/h
+    - condition: AC mains, DN50, class 2
+      value: 0.064
+      unit_symbol: m³/h
+    - condition: AC mains, DN65, class 1 & 2
+      value: 0.1008
+      unit_symbol: m³/h
+    - condition: AC mains, DN80, class 1 & 2
+      value: 0.16
+      unit_symbol: m³/h
+    - condition: AC mains, DN100, class 1
+      value: 0.512
+      unit_symbol: m³/h
+    - condition: AC mains, DN100, class 2
+      value: 0.256
+      unit_symbol: m³/h
+    - condition: AC mains, DN125, class 1
+      value: 0.512
+      unit_symbol: m³/h
+    - condition: AC mains, DN125, class 2
+      value: 0.256
+      unit_symbol: m³/h
+    - condition: AC mains, DN150, class 1 & 2
+      value: 0.64
+      unit_symbol: m³/h
+    - condition: AC mains, DN200, class 1 & 2
+      value: 1.008
+      unit_symbol: m³/h
+    - condition: AC mains, DN250, class 1
+      value: 3.2
+      unit_symbol: m³/h
+    - condition: AC mains, DN250, class 2
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: AC mains, DN300, class 1
+      value: 5.12
+      unit_symbol: m³/h
+    - condition: AC mains, DN300, class 2
+      value: 2.56
+      unit_symbol: m³/h
+    - condition: AC mains, DN350, class 1
+      value: 5.12
+      unit_symbol: m³/h
+    - condition: AC mains, DN350, class 2
+      value: 2.56
+      unit_symbol: m³/h
+    - condition: AC mains, DN400, class 1 & 2
+      value: 8
+      unit_symbol: m³/h
+    - condition: AC mains, DN450, class 1 & 2
+      value: 8
+      unit_symbol: m³/h
+    - condition: AC mains, DN500, class 1
+      value: 12.8
+      unit_symbol: m³/h
+    - condition: AC mains, DN500, class 2
+      value: 6.4
+      unit_symbol: m³/h
+    - condition: AC mains, DN600, class 1
+      value: 20.16
+      unit_symbol: m³/h
+    - condition: AC mains, DN600, class 2
+      value: 10.08
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN40, class 1 & 2
+      value: 0.1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN50, class 1 & 2
+      value: 0.16
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN65, class 1
+      value: 0.63
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN65, class 2
+      value: 0.252
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN80, class 1
+      value: 1
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN80, class 2
+      value: 0.4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN100, class 1
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN100, class 2
+      value: 0.64
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN125, class 1
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN125, class 2
+      value: 0.64
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN150, class 1 & 2
+      value: 1.6
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN200, class 1 & 2
+      value: 2.52
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN250, class 1
+      value: 10
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN250, class 2
+      value: 4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN300, class 1
+      value: 16
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN300, class 2
+      value: 6.4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN350, class 1
+      value: 16
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN350, class 2
+      value: 6.4
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN400, class 1
+      value: 25
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN400, class 2
+      value: 20
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN450, class 1
+      value: 25
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN450, class 2
+      value: 20
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN500, class 1
+      value: 160
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN500, class 2
+      value: 64
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN600, class 1
+      value: 252
+      unit_symbol: m³/h
+    - condition: Battery/renewable, DN600, class 2
+      value: 100.8
+      unit_symbol: m³/h
+  - attribute: ratio_q3_q1
+    axis: power_supply_option / meter_size / accuracy_class
+    values:
+    - condition: AC mains, DN40, class 1
+      value: 500
+    - condition: AC mains, DN40, class 2
+      value: 1000
+    - condition: AC mains, DN50, class 1
+      value: 500
+    - condition: AC mains, DN50, class 2
+      value: 1000
+    - condition: AC mains, DN65, class 1 & 2
+      value: 1000
+    - condition: AC mains, DN80, class 1 & 2
+      value: 1000
+    - condition: AC mains, DN100, class 1
+      value: 500
+    - condition: AC mains, DN100, class 2
+      value: 1000
+    - condition: AC mains, DN125, class 1
+      value: 500
+    - condition: AC mains, DN125, class 2
+      value: 1000
+    - condition: AC mains, DN150, class 1 & 2
+      value: 1000
+    - condition: AC mains, DN200, class 1 & 2
+      value: 1000
+    - condition: AC mains, DN250, class 1
+      value: 500
+    - condition: AC mains, DN250, class 2
+      value: 1000
+    - condition: AC mains, DN300, class 1
+      value: 500
+    - condition: AC mains, DN300, class 2
+      value: 1000
+    - condition: AC mains, DN350, class 1
+      value: 500
+    - condition: AC mains, DN350, class 2
+      value: 1000
+    - condition: AC mains, DN400, class 1 & 2
+      value: 500
+    - condition: AC mains, DN450, class 1 & 2
+      value: 500
+    - condition: AC mains, DN500, class 1
+      value: 500
+    - condition: AC mains, DN500, class 2
+      value: 1000
+    - condition: AC mains, DN600, class 1
+      value: 500
+    - condition: AC mains, DN600, class 2
+      value: 1000
+    - condition: Battery/renewable, DN40, class 1 & 2
+      value: 400
+    - condition: Battery/renewable, DN50, class 1 & 2
+      value: 400
+    - condition: Battery/renewable, DN65, class 1
+      value: 160
+    - condition: Battery/renewable, DN65, class 2
+      value: 400
+    - condition: Battery/renewable, DN80, class 1
+      value: 160
+    - condition: Battery/renewable, DN80, class 2
+      value: 400
+    - condition: Battery/renewable, DN100, class 1
+      value: 160
+    - condition: Battery/renewable, DN100, class 2
+      value: 400
+    - condition: Battery/renewable, DN125, class 1
+      value: 160
+    - condition: Battery/renewable, DN125, class 2
+      value: 400
+    - condition: Battery/renewable, DN150, class 1 & 2
+      value: 400
+    - condition: Battery/renewable, DN200, class 1 & 2
+      value: 400
+    - condition: Battery/renewable, DN250, class 1
+      value: 160
+    - condition: Battery/renewable, DN250, class 2
+      value: 400
+    - condition: Battery/renewable, DN300, class 1
+      value: 160
+    - condition: Battery/renewable, DN300, class 2
+      value: 400
+    - condition: Battery/renewable, DN350, class 1
+      value: 160
+    - condition: Battery/renewable, DN350, class 2
+      value: 400
+    - condition: Battery/renewable, DN400, class 1
+      value: 160
+    - condition: Battery/renewable, DN400, class 2
+      value: 200
+    - condition: Battery/renewable, DN450, class 1
+      value: 160
+    - condition: Battery/renewable, DN450, class 2
+      value: 200
+    - condition: Battery/renewable, DN500, class 1
+      value: 40
+    - condition: Battery/renewable, DN500, class 2
+      value: 100
+    - condition: Battery/renewable, DN600, class 1
+      value: 40
+    - condition: Battery/renewable, DN600, class 2
+      value: 100
+  - attribute: indicating_range_min
+    axis: power_supply_option / meter_size
+    values:
+    - condition: AC mains, DN40/DN50/DN65
+      value: 99999
+      unit_symbol: m³
+    - condition: AC mains, DN80
+      value: 999999
+      unit_symbol: m³
+    - condition: AC mains, DN100/DN125/DN150/DN200
+      value: 999999
+      unit_symbol: m³
+    - condition: AC mains, DN250
+      value: 9999999
+      unit_symbol: m³
+    - condition: AC mains, DN300/DN350/DN400/DN450/DN500/DN600
+      value: 9999999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN40/DN50
+      value: 99999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN65
+      value: 99999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN80/DN100/DN125/DN150
+      value: 999999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN200
+      value: 999999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN250/DN300/DN350/DN400/DN450
+      value: 9999999
+      unit_symbol: m³
+    - condition: Battery/renewable, DN500/DN600
+      value: 9999999
+      unit_symbol: m³
+  - attribute: verification_scale_interval_max
+    axis: power_supply_option / meter_size
+    values:
+    - condition: AC mains, DN40/DN50/DN65
+      value: 0.0001
+      unit_symbol: m³
+    - condition: AC mains, DN80
+      value: 0.0001
+      unit_symbol: m³
+    - condition: AC mains, DN100/DN125/DN150/DN200
+      value: 0.001
+      unit_symbol: m³
+    - condition: AC mains, DN250
+      value: 0.001
+      unit_symbol: m³
+    - condition: AC mains, DN300/DN350/DN400/DN450/DN500/DN600
+      value: 0.01
+      unit_symbol: m³
+    - condition: Battery/renewable, DN40/DN50
+      value: 0.0001
+      unit_symbol: m³
+    - condition: Battery/renewable, DN65
+      value: 0.001
+      unit_symbol: m³
+    - condition: Battery/renewable, DN80/DN100/DN125/DN150
+      value: 0.001
+      unit_symbol: m³
+    - condition: Battery/renewable, DN200
+      value: 0.01
+      unit_symbol: m³
+    - condition: Battery/renewable, DN250/DN300/DN350/DN400/DN450
+      value: 0.01
+      unit_symbol: m³
+    - condition: Battery/renewable, DN500/DN600
+      value: 0.1
+      unit_symbol: m³
+model_family:
+  family_name: AquaMaster4
+  models:
+  - model_id: DN40
+    label: AquaMaster4 reduce bore DN40
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN50
+    label: AquaMaster4 reduce bore DN50
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN65
+    label: AquaMaster4 reduce bore DN65
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN80
+    label: AquaMaster4 reduce bore DN80
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN100
+    label: AquaMaster4 reduce bore DN100
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN125
+    label: AquaMaster4 reduce bore DN125
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN150
+    label: AquaMaster4 reduce bore DN150
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN200
+    label: AquaMaster4 reduce bore DN200
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN250
+    label: AquaMaster4 reduce bore DN250
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN300
+    label: AquaMaster4 reduce bore DN300
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN350
+    label: AquaMaster4 reduce bore DN350
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN400
+    label: AquaMaster4 reduce bore DN400
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN450
+    label: AquaMaster4 reduce bore DN450
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN500
+    label: AquaMaster4 reduce bore DN500
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+  - model_id: DN600
+    label: AquaMaster4 reduce bore DN600
+    attributes:
+      accuracy_classes:
+      - '1'
+      - '2'
+      power_supply_options:
+      - AC mains
+      - battery/renewable energy
+components:
+- role: flow transmitter
+  type_designations:
+  - FEW4XX.R
+  alternatives:
+  characteristics:
+    environmental_class:
+      value: B (installed in buildings)
+      unit_symbol:
+    temperature_range_ambient:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+- role: flow sensor
+  type_designations:
+  - FET4*
+  alternatives:
+  characteristics:
+    environmental_class:
+      value: O (installed outdoors)
+      unit_symbol:
+    temperature_range_ambient:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+matrix_tables:
+- name: Table 2 - General characteristics of the family of instruments (reduce bore, AC mains powered)
+  columns:
+  - meter_size
+  - accuracy_class
+  - q1_minimum
+  - q2_transitional
+  - q3_permanent
+  - q4_overload
+  - ratio_q3_q1
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  rows:
+  - meter_size: DN40
+    accuracy_class: '1'
+    q1_minimum: 0.05
+    q2_transitional: 0.08
+    q3_permanent: 25
+    q4_overload: 31.25
+    ratio_q3_q1: 500
+  - meter_size: DN40
+    accuracy_class: '2'
+    q1_minimum: 0.025
+    q2_transitional: 0.04
+    q3_permanent: 25
+    q4_overload: 31.25
+    ratio_q3_q1: 1000
+  - meter_size: DN50
+    accuracy_class: '1'
+    q1_minimum: 0.08
+    q2_transitional: 0.128
+    q3_permanent: 40
+    q4_overload: 50
+    ratio_q3_q1: 500
+  - meter_size: DN50
+    accuracy_class: '2'
+    q1_minimum: 0.04
+    q2_transitional: 0.064
+    q3_permanent: 40
+    q4_overload: 50
+    ratio_q3_q1: 1000
+  - meter_size: DN65
+    accuracy_class: 1 & 2
+    q1_minimum: 0.063
+    q2_transitional: 0.1008
+    q3_permanent: 63
+    q4_overload: 78.75
+    ratio_q3_q1: 1000
+  - meter_size: DN80
+    accuracy_class: 1 & 2
+    q1_minimum: 0.1
+    q2_transitional: 0.16
+    q3_permanent: 100
+    q4_overload: 125
+    ratio_q3_q1: 1000
+  - meter_size: DN100
+    accuracy_class: '1'
+    q1_minimum: 0.32
+    q2_transitional: 0.512
+    q3_permanent: 160
+    q4_overload: 200
+    ratio_q3_q1: 500
+  - meter_size: DN100
+    accuracy_class: '2'
+    q1_minimum: 0.16
+    q2_transitional: 0.256
+    q3_permanent: 160
+    q4_overload: 200
+    ratio_q3_q1: 1000
+  - meter_size: DN125
+    accuracy_class: '1'
+    q1_minimum: 0.32
+    q2_transitional: 0.512
+    q3_permanent: 160
+    q4_overload: 200
+    ratio_q3_q1: 500

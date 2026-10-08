@@ -1,0 +1,153 @@
+_meta:
+  cert_id: 5457
+  num: R76/2006-A-DK2-21.08
+  applicant: Shang Hai Digital Balance Electronic Co., LTD
+  issuing_year: '2021'
+  status: Valid
+  issuer: DK2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-dk2-2021-08.pdf
+certificate:
+  number: R76/2006-A-DK2-2021.08
+  scheme: A
+  project_number: 119-32204.90.20
+  page_total: 4
+  member_state: Denmark
+  date_issued: '2021-08-02'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Leif Madsen
+  phone: "+45 43 25 01 77"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Shanghai Digital Balance Electronic Co., Ltd.
+  address_lines:
+  - "#788 Songxiu Road, Qingpu Industrial Park"
+  - Shanghai, 201703
+  - P.R. China
+manufacturers:
+- name: Shanghai Digital Balance Electronic Co., Ltd.
+  address_lines:
+  - "#788 Songxiu Road, Qingpu Industrial Park"
+  - Shanghai, 201703
+  - P.R. China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DSW-100
+  - DSW-100C
+  - DSW-100E
+  module_designation: Non-automatic electronic weighing instrument
+  description: >-
+    The DSW-100C has a 6-digit LCD display with appropriate indicators. The DSW-100E has two of the same
+    display, one in the front and one in the rear. Interfaces: RS232, USB. Devices include initial zero
+    setting device, semi-automatic zero setting device, zero tracking device, zero indicator, net indicator,
+    stable weight indicator, semi-automatic subtractive tare balancing device, unit selection, gravity
+    compensation, and calibration/set-up mode via sealed internal switch. Software version displayed at
+    power up. Sealing by wire and seal covering access to the calibration switch, electronics and load
+    cell connection.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+    minimum_capacity:
+      value: 20 × e
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    maximum_tare_effect:
+      value: "≤ -Max or ≤ -Max1"
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    software_version:
+      value: '3.53'
+  config_level:
+  - attribute: max_verification_scale_intervals
+    axis: interval_configuration
+    values:
+    - condition: Single interval
+      value: 3000
+    - condition: Multi-interval (2 partial intervals)
+      value: 2×3000
+  - attribute: mains_supply_voltage_ac
+    axis: power_supply_option
+    values:
+    - condition: External adapter
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+  - attribute: adapter_output_voltage_dc
+    axis: power_supply_option
+    values:
+    - condition: External adapter
+      value: 9
+      unit_symbol: V
+  - attribute: battery_power_supply
+    axis: power_supply_option
+    values:
+    - condition: Battery powered
+      value: 4 × size D 1.5 V dry batteries
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: 119-32204.10
+  date: '2021-05-17'
+  pages: 69
+  role: type_evaluation_report
+- id: 119-32204.90.20
+  date: '2021-07-19'
+  pages: 18
+  role: evaluation_report
+- id: 119-32204
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2021-08-02'
+  changes: Initial version
+model_family:
+  family_name: DSW-100
+  models:
+  - model_id: DSW-100C
+    label: Single 6-digit LCD display with appropriate indicators
+    attributes:
+      display: 6-digit LCD display with appropriate indicators
+  - model_id: DSW-100E
+    label: Two 6-digit LCD displays, one front and one rear
+    attributes:
+      display: two 6-digit LCD displays, one in the front and one in the rear
+components:
+- role: load_cell
+  type_designations:
+  - DB-1 C3
+  alternatives:
+  manufacturer: Shanghai Digital Balance Electronic Co., Ltd.
+  characteristics:
+    vmin:
+      value: "≤ e"
+    max_to_emax_ratio:
+      value:
+        min: 0.6
+        max: 0.9
+footnotes: []

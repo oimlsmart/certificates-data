@@ -1,0 +1,244 @@
+_meta:
+  cert_id: 2192
+  num: R060/2000-DE1-2009.06
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-06.pdf
+certificate:
+  number: R60/2000-DE1-09.06
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-03-11'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - MP71
+  module_designation: Analog load cell
+  description: >-
+    The load cells (LC) of the series MP71 are single point load cells made of aluminium. The strain gauge
+    application is potted.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 413
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=5kg
+      value: 5
+    - model: Emax=10kg
+      value: 10
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=30kg
+      value: 30
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C3MR
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C4MR
+      value: 4000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5000
+      unit_symbol:
+    - condition: C3
+      value: Emax/10000
+      unit_symbol:
+    - condition: C3MR
+      value: Emax/15000
+      unit_symbol:
+    - condition: C4
+      value: Emax/10000
+      unit_symbol:
+    - condition: C4MR
+      value: Emax/15000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C3
+  - C3MR
+  - C4
+  - C4MR
+test_reports:
+- id: 1.12-4039338-1
+  pages: 27
+  role: test_report
+- id: 1.12-4039338-2
+  pages: 23
+  role: test_report
+- id: 1.12-4039338-3
+  pages: 19
+  role: test_report
+model_family:
+  family_name: MP71
+  models:
+  - model_id: Emax=5kg
+  - model_id: Emax=10kg
+  - model_id: Emax=20kg
+  - model_id: Emax=30kg
+  - model_id: Emax=50kg
+  - model_id: Emax=100kg
+  - model_id: Emax=200kg
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity:
+    - 5
+    - 10
+    - 20
+    - 30
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: Emax/5000
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 5
+    - 10
+    - 20
+    - 30
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+  - accuracy_class: C3MR
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 5
+    - 10
+    - 20
+    - 30
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: Emax/15000
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity:
+    - 5
+    - 10
+    - 20
+    - 30
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: Emax/10000
+  - accuracy_class: C4MR
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity:
+    - 5
+    - 10
+    - 20
+    - 30
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: Emax/15000
+  description: >-
+    Metrological characteristics of the MP71 single point load cells for application in approved weighing
+    instruments.
+  footnotes: []

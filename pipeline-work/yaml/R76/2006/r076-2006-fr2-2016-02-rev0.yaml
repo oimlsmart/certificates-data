@@ -1,0 +1,171 @@
+_meta:
+  cert_id: 3934
+  num: R076/2006-FR2-2016.02 Rev. 0
+  applicant: Precia SA
+  issuing_year: '2016'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2016-02-rev0.pdf
+certificate:
+  number: R76/2006-FR2-16.02
+  project_number: CIM16b-VC45-2013
+  page_total: 2
+  member_state: FRANCE
+  date_issued: '2016-04-15'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Thomas LOMMATZSCH
+  person_title: >-
+    Responsable du Pôle Certification (Measuring Instruments Division Manager), on behalf of the General
+    Director
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - FRANCE
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - FRANCE
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - P1401-A
+  module_designation:
+  description: >-
+    Electronic non-automatic weighing instrument with digital indication and two weighing ranges. It integrates
+    an analogic data processing unit type X1309-TR associated with a compatible PRECIA terminal module
+    (displaying primary indications) covered by an OIML-MAA certificate issued by LNE; example: type X1301,
+    certificate OIML-MAA R76/2006-FR2-15.01.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    number_of_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    maximum_tare_effect:
+      value: T = -Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: weighing_range (identical for standard and transport-tariff configurations)
+    values:
+    - condition: range_1
+      value: 3
+      unit_symbol: kg
+      unit_id: u:kilogram
+      footnote_markers: []
+    - condition: range_2
+      value: 30
+      unit_symbol: kg
+      unit_id: u:kilogram
+      footnote_markers: []
+  - attribute: minimum_capacity
+    axis: application x weighing_range
+    values:
+    - condition: standard | range_1
+      value: 20
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+    - condition: standard | range_2
+      value: 100
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+    - condition: transport_tariff | range_1
+      value: 5
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+    - condition: transport_tariff | range_2
+      value: 25
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+  - attribute: verification_scale_interval
+    axis: weighing_range (identical for standard and transport-tariff configurations)
+    values:
+    - condition: range_1
+      value: 1
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+    - condition: range_2
+      value: 5
+      unit_symbol: g
+      unit_id: u:gram
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+test_reports:
+- id: LNE P152515 - Document DMSI/1
+  pages: 51
+  role: test_report
+  date:
+  description: Performance tests, influence factors tests and span stability tests
+- id: LNE P152515 - Document DE/2
+  pages: 17
+  role: test_report
+  date:
+  description: Disturbances tests
+- id: LNE P152515-PCI/3
+  pages: 14
+  role: evaluation_report
+  date:
+  description: Evaluation report
+revision_history:
+- revision: '0'
+  date: '2016-04-15'
+  changes:
+components:
+- role: Analogic data processing unit
+  type_designations:
+  - X1309-TR
+  alternatives:
+  characteristics:
+    sealing: >-
+      Sealed by self-destructive sticker at the connection to the load cell; software sealing via an event
+      counter (metrological counter) recorded on a self-destructible label stuck on the main terminal
+- role: Terminal module (display of primary indications)
+  type_designations:
+  - X1301
+  alternatives:
+  characteristics:
+    reference_certificate: R76/2006-FR2-15.01
+    note: >-
+      PRECIA terminal module covered by an OIML-MAA certificate issued by LNE; type X1301 given as an
+      example
+footnotes: []

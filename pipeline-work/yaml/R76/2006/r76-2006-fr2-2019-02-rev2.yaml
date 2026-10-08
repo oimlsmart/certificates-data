@@ -1,0 +1,270 @@
+_meta:
+  cert_id: 6131
+  num: R76/2006-A-FR2-19.02 Rev. 2
+  applicant: Precia SA
+  issuing_year: '2024'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-fr2-2019-02-rev2.pdf
+certificate:
+  number: R76/2006-A-FR2-19.02
+  scheme: A
+  project_number: '19.02'
+  page_total: 3
+  member_state: France
+  date_issued: '2024-01-25'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Emeric MOREL
+  person_title: Head of Instrumentation Certification Department
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - France
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 Privas Cedex
+  - France
+certified_type:
+  category: Indicator
+  type_designations:
+  - X112-B
+  module_designation: Separate module
+  description: >-
+    Indicator type X112-B, presented as a separate module intended to be integrated in a non-automatic
+    weighing instrument. Metallic enclosure available as table-top, cabinet back panel or front-of-housing
+    versions. Intended either to be connected to a weighing channel consisting of strain-gauge load cells
+    with analogue output via a 6-wire shielded cable, or to be connected to X1409-C digital sensors via
+    the PSnet interface, managing 5 independent and 4 combined measurement channels.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+    battery_supply_voltage:
+      value: 24 or 19.2
+      unit_symbol: V
+      unit_id:
+    load_cell_excitation_voltage_e_exc:
+      value: 5
+      unit_symbol: V
+      unit_id:
+    minimum_input_voltage_per_scale_interval_delta_u_min:
+      value: 0.5
+      unit_symbol: µV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0.0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+      unit_id:
+    minimum_load_cell_impedance_rl_min:
+      value: 43.75
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance_rl_max:
+      value: 1245
+      unit_symbol: Ω
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    maximum_subtractive_tare_effect_t:
+      value: Max
+      unit_symbol:
+      unit_id:
+    load_cell_connection:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    load_cell_connection_cable_reference:
+      value: PRECIA ref. 4005271 or similar
+      unit_symbol:
+      unit_id:
+    connection_cable_cross_section:
+      value: 0.68
+      unit_symbol: mm²
+      unit_id:
+    legal_software_version_identification:
+      value: first figure '1' for versions i…EDU; first figure '2' in all other cases
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_weighing_ranges
+    axis: weighing configuration
+    values:
+    - condition: multi-range configuration
+      value: 2
+      unit_symbol:
+    - condition: multi-interval configuration
+      value: 3
+      unit_symbol:
+  - attribute: maximum_number_of_verification_scale_intervals_nind
+    axis: instrument configuration and accuracy class
+    values:
+    - condition: class III, single-interval instrument (single-range or multi-range), per weighing range
+      value: 6000
+      unit_symbol:
+    - condition: class IIII, single-interval instrument (single-range or multi-range), per weighing range
+      value: 1000
+      unit_symbol:
+    - condition: class III, multi-interval instrument, per partial weighing range
+      value: 3000
+      unit_symbol:
+  - attribute: number_of_weighing_channels
+    axis: channel type
+    values:
+    - condition: analog load cells
+      value: 1
+      unit_symbol:
+    - condition: digital (X1409-C via PSnet interface)
+      value: 5
+      unit_symbol:
+  - attribute: number_of_combined_measurement_channels
+    axis: channel type
+    values:
+    - condition: digital (X1409-C via PSnet interface)
+      value: 4
+      unit_symbol:
+  - attribute: fraction_of_maximum_permissible_error_p_ind
+    axis: load cell type
+    values:
+    - condition: analog load cells
+      value: 0.4
+      unit_symbol:
+    - condition: digital load cells
+      value: 0
+      unit_symbol:
+  - attribute: maximum_connection_cable_length
+    axis: cable cross-section
+    values:
+    - condition: 0.68 mm² section
+      value: 150
+      unit_symbol: m
+    - condition: 1 mm² section
+      value: 220
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-P155229-PCI/2
+  date:
+  pages: 19
+  role: evaluation_report
+- id: LNE-N121109-DE/2
+  date:
+  pages: 18
+  role: test_report
+- id: LNE-P109775-DMSI/2
+  date:
+  pages: 48
+  role: test_report
+- id: LNE-P154576-DE/1
+  date:
+  pages: 15
+  role: test_report
+- id: LNE-P154576-DE/2
+  date:
+  pages: 11
+  role: test_report
+- id: LNE-P183838-DEC/1
+  date:
+  pages: 12
+  role: test_report
+- id: LNE-P183838-PCITI/1
+  date:
+  pages: 3
+  role: evaluation_report
+- id: LNE-P202253-2
+  date:
+  pages: 8
+  role: evaluation_report
+- id: LNE-P209933-DEC/4
+  date:
+  pages: 19
+  role: test_report
+- id: LNE-P202253-1
+  date:
+  pages: 7
+  role: evaluation_report
+- id: LNE-P230674-1
+  date:
+  pages: 20
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2019-05-06'
+  changes: Initial certificate. This certificate is revision n°3 of OIML-MAA certificate R76/2006-FR2-14.01.
+- revision: '1'
+  date: '2021-09-21'
+  changes: Add X1409-C load cell communication interface.
+- revision: '2'
+  date:
+  changes: Components evolution and adding function of combined measurement channels.
+model_family:
+  family_name: X112-B
+  models:
+  - model_id: i20
+    label: i20
+    attributes:
+      intended_use: general use
+  - model_id: i30
+    label: i30
+    attributes:
+      intended_use: weighing bridges
+  - model_id: i35
+    label: i35
+    attributes:
+      intended_use: weighing bridges
+  - model_id: i40
+    label: i40
+    attributes:
+      intended_use: weighing in a process
+  - model_id: d20
+    label: d20
+    attributes:
+      intended_use: repeater
+components:
+- role: digital load cell (connectable via PSnet interface)
+  type_designations:
+  - X1409-C
+  alternatives:
+  characteristics: {}
+footnotes: []
+matrix_tables: []

@@ -1,0 +1,269 @@
+_meta:
+  cert_id: 2207
+  num: R076/1992-GB1-2007.13 Rev. 2
+  applicant: Digi Europe Ltd
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-gb1-2007-13-rev2.pdf
+certificate:
+  number: R76/1992-GB1-07.13
+  project_number: T1138/0013
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: 23 April 2009
+issuing_authority:
+  name: National Weights and Measures Laboratory (Part of the National Measurement Office)
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+applicants:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DPS-700
+  - CM-700
+  module_designation: Not applicable
+  description: >-
+    Non-automatic weighing instrument formed by connecting the DPS-700 digital indicating device with
+    optional labeller, or its compact version designated the CM-700, to a weighing platform. Class III,
+    mains-powered, self-indicating. Main features: processor and converter unit comprising a Teraoka TPB-2930
+    CPU and a Teraoka TPB-2786 A/D converter; touch screen (colour TFT-LCD module); labeller type Digi
+    DPS 700 thermal printer (optional); metallic supporting frame (DPS-700 only). Devices: initial zero
+    setting; semi-automatic zero setting; zero tracking; semi-automatic subtractive tare weighing; determination
+    of stability of equilibrium; indication of stability of equilibrium; zero indicator; PLUs; preset
+    tare; price calculation.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    load_cell_excitation_voltage:
+      value: 10
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+      footnote_markers: []
+    measuring_range_maximum_voltage:
+      value: 40
+      unit_symbol: mV
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_pind:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_number_of_scale_intervals
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 6000
+      unit_symbol:
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: minimum_load_cell_impedance
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 345
+      unit_symbol: Ω
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: 85
+      unit_symbol: Ω
+      footnote_markers: []
+  - attribute: maximum_load_cell_impedance
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 440
+      unit_symbol: Ω
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: 3300
+      unit_symbol: Ω
+      footnote_markers: []
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 0.67
+      unit_symbol: μV
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: 1
+      unit_symbol: μV
+      footnote_markers: []
+  - attribute: load_cell_connection
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 4-wire shielded
+      unit_symbol:
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: 6-wire shielded
+      unit_symbol:
+      footnote_markers:
+      - "*"
+  - attribute: load_cell_cable_max_length
+    axis: load_cell_connection
+    values:
+    - condition: 4-wire shielded
+      value: 3
+      unit_symbol: m
+      footnote_markers: []
+    - condition: 6-wire shielded
+      value: No maximum
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - III
+test_reports:
+- id: 'NWML TR: 525'
+  pages: 43
+  role: test_report
+- id: NMi 808948
+  pages: 45
+  role: test_report
+- id: F20333
+  pages: 12
+  role: documentation_file
+revision_history:
+- revision: '2'
+  date: 23 April 2009
+  changes: Cancels and replaces Revision 1 of the certificate
+model_family:
+  family_name:
+  models:
+  - model_id: DPS-700
+    label: digital indicating device with optional labeller
+  - model_id: CM-700
+    label: compact version of the DPS-700 indicator
+components:
+- role: indicator
+  type_designations:
+  - DPS-700
+  - CM-700
+  alternatives: OR
+  characteristics:
+    metallic_supporting_frame: DPS-700 only
+- role: cpu
+  type_designations:
+  - Teraoka TPB-2930
+- role: analog_to_digital_converter
+  type_designations:
+  - Teraoka TPB-2786
+- role: display
+  type_designations: []
+  characteristics:
+    type: Touch screen (colour TFT-LCD module)
+- role: labeller
+  type_designations:
+  - Digi DPS 700
+  characteristics:
+    device_type: thermal printer
+    optional: true
+- role: weighing_platform
+  type_designations: []
+- role: load_cell
+  type_designations: []
+  characteristics:
+    requirement: >-
+      Any compatible load cell with an OIML R60 Certificate of Conformity containing the load cell types
+      and the necessary load cell data required for the manufacturer's declaration of compatibility of
+      modules and any particular installation requirements; a load cell marked NH is allowed only if humidity
+      testing to R76 has been conducted on this load cell; compatibility established by the manufacturer
+      by means of the compatibility of modules calculation.
+footnotes:
+- marker: "*"
+  text: with additional EMC protection as described in GB-1283 rev 1
+matrix_tables:
+- name: Technical data by load cell connection
+  columns:
+  - parameter
+  - unit
+  - 4-wire_shielded
+  - 6-wire_shielded
+  rows:
+  - parameter: max_number_of_scale_intervals
+    unit:
+    4-wire_shielded: 6000
+    6-wire_shielded: 3000
+  - parameter: minimum_load_cell_impedance
+    unit: Ω
+    4-wire_shielded: 345
+    6-wire_shielded: 85
+  - parameter: maximum_load_cell_impedance
+    unit: Ω
+    4-wire_shielded: 440
+    6-wire_shielded: 3300
+  - parameter: minimum_input_voltage_per_verification_scale_interval
+    unit: μV
+    4-wire_shielded: 0.67
+    6-wire_shielded: 1
+  - parameter: load_cell_connection
+    unit:
+    4-wire_shielded: 4-wire shielded
+    6-wire_shielded: 6-wire shielded
+  - parameter: load_cell_cable_max_length
+    unit: m
+    4-wire_shielded: 3
+    6-wire_shielded: No maximum
+  description: >-
+    Two-column section of the technical data table; the two value columns correspond to the 4-wire and
+    6-wire load cell connection configurations. Parameters spanning both columns (power supply, load cell
+    excitation voltage, measuring range voltages, fraction of maximum permissible error, operating temperature
+    range) are captured in type_level.
+  footnotes:
+  - "* with additional EMC protection as described in GB-1283 rev 1"

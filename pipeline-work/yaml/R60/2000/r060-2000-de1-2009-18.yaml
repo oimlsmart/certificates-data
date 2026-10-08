@@ -1,0 +1,187 @@
+_meta:
+  cert_id: 2257
+  num: R060/2000-DE1-2009.18
+  applicant: Flintec GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-18.pdf
+certificate:
+  number: R60/2000-DE1-09.18
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-07-01'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - ULB
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge S-Type load cell. The load cells (LC) of the series ULB are S-Type load cells made of
+    stainless steel. The strain gauge application is potted.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=500kg
+      value: 500
+      footnote_markers: []
+    - model: Emax=1000kg
+      value: 1000
+      footnote_markers: []
+    - model: Emax=2000kg
+      value: 2000
+      footnote_markers: []
+    - model: Emax=3000kg
+      value: 3000
+      footnote_markers: []
+    - model: Emax=5000kg
+      value: 5000
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/6000
+      unit_symbol:
+    - condition: C3
+      value: Emax/12000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C3
+test_reports:
+- id: 1.12-4039216-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039216-2
+  pages: 18
+  role: test_report
+model_family:
+  family_name: ULB
+  models:
+  - model_id: Emax=500kg
+    label: ULB, maximum capacity 500 kg
+    attributes:
+      maximum_capacity: 500
+  - model_id: Emax=1000kg
+    label: ULB, maximum capacity 1000 kg
+    attributes:
+      maximum_capacity: 1000
+  - model_id: Emax=2000kg
+    label: ULB, maximum capacity 2000 kg
+    attributes:
+      maximum_capacity: 2000
+  - model_id: Emax=3000kg
+    label: ULB, maximum capacity 3000 kg
+    attributes:
+      maximum_capacity: 3000
+  - model_id: Emax=5000kg
+    label: ULB, maximum capacity 5000 kg
+    attributes:
+      maximum_capacity: 5000
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  -
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity:
+    - 500
+    - 1000
+    - 2000
+    - 3000
+    - 5000
+    minimum_load_cell_verification_interval_vmin: Emax/6000
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 500
+    - 1000
+    - 2000
+    - 3000
+    - 5000
+    minimum_load_cell_verification_interval_vmin: Emax/12000
+  description: >-
+    Essential metrological characteristics of the ULB series S-Type load cells for application in approved
+    weighing instruments, by accuracy class.
+  footnotes: []

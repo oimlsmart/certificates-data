@@ -1,0 +1,318 @@
+_meta:
+  cert_id: 3269
+  num: R051/2006-GB1-2013.01 Rev. 1
+  applicant: Actronic Ltd
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2013-01-rev1.pdf
+certificate:
+  number: R51/2006-GB1-13.01
+  project_number: TS0101/0001
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2013-10-01'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Actronic Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale
+  - Auckland
+  - New Zealand
+manufacturers:
+- name: Actronic Ltd
+  address_lines:
+  - 45 Patiki Road
+  - Avondale
+  - Auckland
+  - New Zealand
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - L-Series 2180
+  - Express
+  - Force
+  - L2150
+  module_designation:
+  description: >-
+    Battery-operated automatic catchweighing instrument (Category Y) comprising an electronic indicator,
+    pressure transducer and sensors mounted on a wheeled loader. The pattern automatically determines
+    the load in the bucket during the lifting process; the hydraulic pressure in the loader's arms is
+    converted by a pressure transducer, the output being used by the indicator to display the corresponding
+    weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 350
+      unit_symbol: e
+      unit_id:
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 1
+        max: 200
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_capacity:
+      value: 10
+      unit_symbol: e
+      unit_id:
+      footnote_markers: []
+    transducer_measuring_range:
+      value:
+        min: 0
+        max: 350
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    transducer_output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -20
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    climatic_environment:
+      value: open, condensing
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment:
+      value: E3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mechanical_environment:
+      value: Vehicle mounted
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 32
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    display_keyboard_location:
+      value: Indicator console in cabin
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    zero_setting_device_type:
+      value: semi-automatic
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    zero_setting_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    zero_setting_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: software_designation
+    unit_symbol:
+    values:
+    - model: L-Series 2180
+      value: '60364'
+      footnote_markers: []
+    - model: Express
+      value: '60395'
+      footnote_markers: []
+    - model: Force
+      value: '60408'
+      footnote_markers: []
+    - model: L2150
+      value: '60439'
+      footnote_markers: []
+  - attribute: software_version
+    unit_symbol:
+    values:
+    - model: L-Series 2180
+      value: 1.xx
+      footnote_markers: []
+    - model: Express
+      value: 2.xx
+      footnote_markers: []
+    - model: Force
+      value: 2.xx
+      footnote_markers: []
+    - model: L2150
+      value: 1.xx or 2.xx
+      footnote_markers: []
+  - attribute: inclinometer
+    unit_symbol:
+    values:
+    - model: L-Series 2180
+      value: Loadrite LR966
+      footnote_markers: []
+    - model: Express
+      value: Loadrite LR966 or Loadrite AAA-20709
+      footnote_markers: []
+    - model: Force
+      value: Loadrite LR966 or Loadrite AAA-20709
+      footnote_markers: []
+    - model: L2150
+      value: Loadrite LR966 or Loadrite AAA-20709
+      footnote_markers: []
+  config_level:
+  - attribute: tilt_threshold
+    axis: inclinometer_model
+    values:
+    - condition: Loadrite LR966 (inhibit weighing for tilt greater than threshold)
+      value: 5
+      unit_symbol: "°"
+      footnote_markers: []
+    - condition: Loadrite AAA-20709 (activate for tilt greater than threshold)
+      value: 6
+      unit_symbol: "°"
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01061
+  date:
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2013-03-19'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2013-10-01'
+  changes: Software version 2.xx added for the L2150.
+model_family:
+  family_name: L-Series
+  models:
+  - model_id: L-Series 2180
+    label: Base pattern
+    attributes:
+      software_designation: '60364'
+      software_version: 1.xx
+  - model_id: Express
+    label: Modified instrument with reduced data handling functionality and reduced keypads
+    attributes:
+      software_designation: '60395'
+      software_version: 2.xx
+  - model_id: Force
+    label: Modified instrument with no data handling functionality and reduced keypads
+    attributes:
+      software_designation: '60408'
+      software_version: 2.xx
+  - model_id: L2150
+    label: Modified indicator console layout with dedicated key for entering target weights
+    attributes:
+      software_designation: '60439'
+      software_version: 1.xx or 2.xx
+components:
+- role: pressure_transducer
+  type_designations:
+  - Loadrite LC965C
+  alternatives:
+  characteristics:
+    quantity: one or two
+    measuring_range:
+      value:
+        min: 0
+        max: 350
+      unit_symbol: bar
+      unit_id:
+    output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+- role: arm_location_sensor
+  type_designations:
+  - Loadrite LM960
+  - Loadrite LR908
+  alternatives: OR
+  characteristics:
+    description: >-
+      Position reference / lift speed / direction sensor; LM960 is an optical arm-location sensor, LR908
+      is a spring-loaded rotary encoder type arm-location sensor
+- role: load_receptor_location_sensor
+  type_designations:
+  - Loadrite AAA-20710
+  alternatives:
+  characteristics:
+    description: Load receptor (bucket) location sensors
+- role: inclinometer
+  type_designations:
+  - Loadrite LR966
+  - Loadrite AAA-20709
+  alternatives: OR
+  characteristics:
+    description: >-
+      Angle sensor set to inhibit weighing above the tilt threshold; AAA-20709 may be used instead of
+      LR966 on the Express, Force and L2150 models
+- role: indicator
+  type_designations:
+  - Loadrite L2180
+  alternatives:
+  characteristics:
+    description: Weighing indicator console, located in cabin
+- role: interface
+  type_designations:
+  - TXDR
+  alternatives:
+  characteristics:
+    connector: Amphenol 7 way
+    purpose: pressure transducers
+- role: interface
+  type_designations:
+  - PRINTER
+  alternatives:
+  characteristics:
+    connector: JST 12 way
+    purpose: printer and data module
+- role: interface
+  type_designations:
+  - PWR/CTRL
+  alternatives:
+  characteristics:
+    connector: JST 15 way
+    purpose: power supply inputs as well as trigger, location sensors and inclinometer
+footnotes: []

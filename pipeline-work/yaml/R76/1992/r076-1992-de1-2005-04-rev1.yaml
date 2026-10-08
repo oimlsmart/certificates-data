@@ -1,0 +1,261 @@
+_meta:
+  cert_id: 1875
+  num: R076/1992-DE1-2005.04 Rev. 1
+  applicant: Seca GmbH & Co. kg.
+  issuing_year: '2007'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2005-04-rev1.pdf
+certificate:
+  number: R76/1992-DE1-05.04
+  scheme: B
+  page_total: 2
+  member_state: Germany
+  date_issued: '2007-06-25'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirktor
+applicants:
+- name: seca gmbh & co. kg
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+manufacturers:
+- name: seca gmbh & co. kg
+  address_lines:
+  - Hammer Steindamm 9-25
+  - 22089 Hamburg
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - M375x1
+  - M376x1
+  - M376x2
+  description: >-
+    Non-automatic electromechanical baby weighing instrument. Types: M375x1 (multi-interval instrument),
+    M376x1 and M376x2 (multiple range instruments). The weighing instrument consists of a weighing platform
+    with four strain gauge planar beam load cells, an indication for displaying the weighing result and
+    membrane switches to operate the instrument. e = d for all weighing ranges.
+characteristics:
+  type_level:
+    platform_size:
+      value: Synclinal 615 mm x 270 mm
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: 10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  model_level:
+  - attribute: accuracy_class
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: IIII
+    - model: M376x1
+      value: III
+    - model: M376x2
+      value: III
+  - attribute: maximum_capacity_range_1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 10
+    - model: M376x1
+      value: 7.5
+    - model: M376x2
+      value: 7.5
+  - attribute: maximum_capacity_range_2
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 15
+    - model: M376x1
+      value: 15
+    - model: M376x2
+      value: 20
+  - attribute: minimum_capacity_range_1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.1
+    - model: M376x1
+      value: 0.1
+    - model: M376x2
+      value: 0.1
+  - attribute: minimum_capacity_range_2
+    unit_symbol: kg
+    values:
+    - model: M376x1
+      value: 0.2
+    - model: M376x2
+      value: 0.2
+  - attribute: verification_scale_interval_e1
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.01
+    - model: M376x1
+      value: 0.005
+    - model: M376x2
+      value: 0.005
+  - attribute: verification_scale_interval_e2
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: 0.02
+    - model: M376x1
+      value: 0.01
+    - model: M376x2
+      value: 0.01
+  - attribute: number_of_verification_scale_intervals_n1
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: 1000
+    - model: M376x1
+      value: 1500
+    - model: M376x2
+      value: 1500
+  - attribute: number_of_verification_scale_intervals_n2
+    unit_symbol:
+    values:
+    - model: M375x1
+      value: 750
+    - model: M376x1
+      value: 1500
+    - model: M376x2
+      value: 2000
+  - attribute: tare_balancing_range_subtractive
+    unit_symbol: kg
+    values:
+    - model: M375x1
+      value: -10
+    - model: M376x1
+      value: -15
+    - model: M376x2
+      value: -20
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: Amendment 1 (1994)
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4018840
+  pages: 8
+  role: type_evaluation_report
+- id: 1.12-4018840/2
+  pages: 15
+  role: test_report
+- id: 1.12-4018840/1
+  pages: 48
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2007-06-25'
+  changes: >-
+    Revision 1 issued because a new variant of type M376x2 with a new weighing range has been added. Conformity
+    is established in Report No. 1.12-4018840, Revision 1 (8 pages) and by tests described in the associated
+    Test Report No. 1.12-4018840/2 (15 pages). The test results of the former Test Report No. 1.12-4018840/1
+    (48 pages) remain valid.
+model_family:
+  family_name:
+  models:
+  - model_id: M375x1
+    label: Multi-interval instrument
+    attributes:
+      accuracy_class: IIII
+  - model_id: M376x1
+    label: Multiple range instrument
+    attributes:
+      accuracy_class: III
+  - model_id: M376x2
+    label: Multiple range instrument
+    attributes:
+      accuracy_class: III
+components:
+- role: weighing_platform
+  characteristics:
+    description: weighing platform with four strain gauge planar beam load cells
+    load_cell_type: strain gauge planar beam
+    load_cell_quantity: 4
+- role: indication
+  characteristics:
+    description: indication for displaying the weighing result
+- role: operator_controls
+  characteristics:
+    description: membrane switches to operate the instrument
+matrix_tables:
+- name: Tabelle 1 — Weighing ranges per type
+  columns:
+  - type
+  - instrument_kind
+  - accuracy_class
+  - max
+  - min
+  - e_d
+  - "n"
+  - tare_balancing_range_subtractive
+  - platform_size
+  - temperature_range
+  column_units:
+  -
+  -
+  -
+  - kg
+  - kg
+  - kg
+  -
+  - kg
+  - mm
+  - "°C"
+  rows:
+  - type: M375x1
+    instrument_kind: Multi-interval instrument
+    accuracy_class: "(IIII)"
+    max: 10 | 15
+    min: '0.1'
+    e_d: 0.01 | 0.02
+    "n": 1000 | 750
+    tare_balancing_range_subtractive: "-10"
+    platform_size: Synclinal 615 mm x 270 mm
+    temperature_range: "+10 °C … +40 °C"
+  - type: M376x1
+    instrument_kind: Multiple range instrument
+    accuracy_class: "(III)"
+    max: 7.5 | 15
+    min: 0.1 | 0.2
+    e_d: 0.005 | 0.01
+    "n": 1500 | 1500
+    tare_balancing_range_subtractive: "-15"
+    platform_size: Synclinal 615 mm x 270 mm
+    temperature_range: "+10 °C … +40 °C"
+  - type: M376x2
+    instrument_kind: Multiple range instrument
+    accuracy_class: "(III)"
+    max: 7.5 | 20
+    min: 0.1 | 0.2
+    e_d: 0.005 | 0.01
+    "n": 1500 | 2000
+    tare_balancing_range_subtractive: "-20"
+    platform_size: Synclinal 615 mm x 270 mm
+    temperature_range: "+10 °C … +40 °C"
+  description: >-
+    The weighing ranges with Max, Min, e, d and number of verification scale intervals may be chosen within
+    the limits of No. 3.2 of R 76-1 and of Tabelle 1. Cell values of Max, Min, e=d and n are given per
+    partial weighing range (range 1 | range 2).
+  footnotes: []

@@ -1,0 +1,444 @@
+_meta:
+  cert_id: 3694
+  num: R106/1997-GB1-2007.01 Rev. 4
+  applicant: Avery Weigh-Tronix
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R106
+  edition_year: 1997
+  extraction_method: glm-extract
+  source_pdf: certificates/R106/1997/r106-1997-gb1-2007-01-rev4.pdf
+certificate:
+  number: R106/1997-GB1-07.01
+  project_number: T1106/0017
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2015-03-24'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+applicants:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+manufacturers:
+- name: Avery Weigh-Tronix
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+certified_type:
+  category: Automatic rail weighbridge
+  type_designations:
+  - Railweight TSR4000
+  module_designation: Not applicable
+  description: >-
+    Automatic rail weighbridge (Railweight TSR4000) for weighing coupled wagons or a total train in motion;
+    bi-directional (train pushed/pulled); up to 16 Weighline transducers (8 pairs). Permitted alternatives:
+    (1) remote operation via a permanently installed standard PC connected by serial link running a Railweight
+    program (Start Weigh, Abort Weigh, End Weigh); (2) maximum capacity of 16,500 kg per wheel (33,000
+    kg per axle) with Weighline transducers of 16,500 kg maximum capacity; (3) alternative Advantech PCI-6873
+    motherboard with Enhance 200W Micro ATX power supply unit; (4) alternative single board computer SBC-5539-VL2
+    (Modular Industrial Systems Inc.) with power supply unit SFX-0525H (Enhance Electronics UK); (5) software
+    identification 'TSR4000 CIMW', approved software version 5.xxx/yy; (6) 'twin track' mode in which
+    the controller dynamically selects a sub-set of active transducers per track (both tracks must have
+    the same metrological characteristics; rating plate marked 'Dual track'); (7) weighing of rail wagons
+    containing liquids; (8) modified pre-amplifier circuit, drawing A3-06-2643 revision 3. Alternatively,
+    any compatible load cell with an OIML R60 Certificate of Conformity may be used subject to a manufacturer's
+    compatibility of modules calculation and use of a standard load transmission device.
+characteristics:
+  type_level:
+    minimum_wagon_weight:
+      value:
+        min: 6000
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_capacity_per_axle:
+      value:
+        min: 3000
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    max_weighline_transducers:
+      value: 16
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_weighline_transducer_pairs:
+      value: 8
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    direction_of_weighing:
+      value: Bi-directional (train pushed/pulled)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    excitation_voltage:
+      value: 17.5
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    min_input_impedance_per_channel:
+      value: 93.75
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    min_input_signal_per_scale_interval:
+      value: 17.5
+      unit_symbol: μV
+      unit_id:
+      footnote_markers: []
+    software_identification:
+      value: TSR4000 CIMW
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    approved_software_version:
+      value: 5.xxx/yy
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: accuracy_class
+    axis: weighing_mode
+    values:
+    - condition: total train weighing
+      value: 0.2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: coupled wagon weighing
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: total train weighing (wagons containing liquids)
+      value: 1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: coupled wagon weighing (wagons containing liquids)
+      value: 1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: maximum_operating_speed
+    axis: cargo_type
+    values:
+    - condition: standard operation
+      value:
+        min:
+        max: 10
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids
+      value: Determined at initial verification
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_operating_speed
+    axis: cargo_type_and_weighing_mode
+    values:
+    - condition: standard operation
+      value:
+        min: 0.1
+        max:
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - total train weighing
+      value:
+        min: 0.1
+        max:
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - coupled wagon weighing
+      value:
+        min: 1
+        max:
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+  - attribute: maximum_wagon_weight
+    axis: cargo_type_and_weighing_mode
+    values:
+    - condition: standard operation
+      value:
+        min:
+        max: 120000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - total train weighing
+      value:
+        min:
+        max: 120000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - coupled wagon weighing
+      value:
+        min:
+        max: 100000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+  - attribute: scale_interval
+    axis: cargo_type
+    values:
+    - condition: standard operation
+      value:
+        min: 20
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids
+      value:
+        min: 100
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+  - attribute: maximum_capacity_per_axle
+    axis: cargo_type
+    values:
+    - condition: standard operation
+      value:
+        min:
+        max: 33000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids
+      value:
+        min:
+        max: 30000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+  - attribute: max_number_and_type_of_wagons_per_train
+    axis: cargo_type_and_weighing_mode
+    values:
+    - condition: standard operation
+      value: Determined at verification
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - total train weighing
+      value: 'Number determined at initial verification; type: 2 and 4-axle'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: wagons containing liquids - coupled wagon weighing
+      value: 'Number determined at initial verification; type: 4-axle'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_voltage
+    axis: configuration
+    values:
+    - condition: standard configuration
+      value:
+        min: 90
+        max: 230
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: 'Alternative 3: with Advantech PCI-6873 motherboard and Enhance 200W Micro ATX power
+        supply unit'
+      value:
+        min: 115
+        max: 230
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_frequency
+    axis: configuration
+    values:
+    - condition: standard configuration
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    - condition: 'Alternative 3: with Advantech PCI-6873 motherboard and Enhance 200W Micro ATX power
+        supply unit'
+      value:
+        min: 47
+        max: 63
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+  - attribute: transducer_maximum_capacity
+    axis: configuration
+    values:
+    - condition: standard configuration
+      value: 15000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: 'Alternative 2: maximum capacity 16,500 kg per wheel (33,000 kg per axle)'
+      value: 16500
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R106
+  edition: 1997
+  accuracy_classes:
+  - 0.5
+  - 0.2
+test_reports:
+- id: P01585
+  pages: 11
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2010-10-28'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2010-04-13'
+  changes: Capacity increased to 16,500 kg per wheel.
+- revision: '2'
+  date: '2011-02-24'
+  changes: Alternative motherboard and power supply unit.
+- revision: '3'
+  date: '2011-07-26'
+  changes: General acceptance of load cells criteria added.
+- revision: '4'
+  date: '2015-03-24'
+  changes: >-
+    Applicant's name changed from Avery Weigh-Tronix Ltd. Test reports list and checklist F20221 replaced
+    by Evaluation report P05185. Alternatives section added (1 to 8).
+components:
+- role: transducer
+  type_designations:
+  - Weighline
+  alternatives:
+  characteristics:
+    maximum_capacity:
+      value: 15000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+- role: load cell (alternative, any compatible)
+  type_designations: []
+  alternatives: OR
+  characteristics:
+    requirement:
+      value: >-
+        OIML R60 Certificate of Conformity; load cell data required for compatibility of modules declaration;
+        NH-marked load cells only if R106 humidity testing has been conducted; standard load transmission
+        device must be used
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: motherboard (Alternative 3)
+  type_designations:
+  - Advantech PCI-6873
+  alternatives: OR
+  characteristics: {}
+- role: power supply unit (Alternative 3)
+  type_designations:
+  - Enhance 200W Micro ATX power supply unit
+  alternatives: OR
+  characteristics: {}
+- role: single board computer (Alternative 4)
+  type_designations:
+  - SBC-5539-VL2
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Modular Industrial Systems Inc.
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: power supply unit (Alternative 4)
+  type_designations:
+  - SFX-0525H
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Enhance Electronics UK
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: pre-amplifier circuit (Alternative 8)
+  type_designations:
+  - A3-06-2643 revision 3
+  alternatives:
+  characteristics: {}
+footnotes: []
+matrix_tables:
+- name: Technical characteristics for weighing rail wagons containing liquids (Alternative 7)
+  columns:
+  - attribute
+  - total_train_weighing
+  - coupled_wagon_weighing
+  column_units:
+  -
+  -
+  -
+  rows:
+  - attribute: accuracy_class
+    total_train_weighing: "≥ 1"
+    coupled_wagon_weighing: "≥ 1"
+  - attribute: maximum_operating_speed
+    total_train_weighing: Determined at initial verification
+    coupled_wagon_weighing: Determined at initial verification
+  - attribute: minimum_operating_speed (km/h)
+    total_train_weighing: 0.1
+    coupled_wagon_weighing: 1
+  - attribute: maximum_wagon_weight (kg)
+    total_train_weighing: 120000
+    coupled_wagon_weighing: 100000
+  - attribute: minimum_wagon_weight (kg)
+    total_train_weighing: 6000
+    coupled_wagon_weighing: 6000
+  - attribute: scale_interval (kg)
+    total_train_weighing: 100
+    coupled_wagon_weighing: 100
+  - attribute: maximum_capacity_per_axle (kg)
+    total_train_weighing: 30000
+    coupled_wagon_weighing: 30000
+  - attribute: minimum_capacity_per_axle (kg)
+    total_train_weighing: 3000
+    coupled_wagon_weighing: 3000
+  - attribute: max_weighline_transducers
+    total_train_weighing: 16 (8 pairs)
+    coupled_wagon_weighing: 16 (8 pairs)
+  - attribute: max_number_and_type_of_wagons_per_train
+    total_train_weighing: 'Number determined at initial verification; type: 2 and 4-axle'
+    coupled_wagon_weighing: 'Number determined at initial verification; type: 4-axle'
+  - attribute: direction_of_weighing
+    total_train_weighing: Bi-directional (train pushed/pulled)
+    coupled_wagon_weighing: Bi-directional (train pushed/pulled)
+  description: Original values are given as minima (≥) or maxima (≤); units are shown in the attribute
+    names.
+  footnotes: []

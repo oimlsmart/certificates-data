@@ -1,0 +1,581 @@
+_meta:
+  cert_id: 5877
+  num: R76/2006-A-NL1-20.69 Rev. 5
+  applicant: Mettler-Toledo (Changzhou) Measurement Technology Ltd
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2020-69-rev5.pdf
+certificate:
+  number: R76/2006-A-NL1-20.69
+  revision: '5'
+  scheme: A
+  project_number: '3595235'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2023-03-30'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: METTLER-TOLEDO Changzhou Measurement Technology Ltd.
+  address_lines:
+  - No.111, West TaiHu Road
+  - Changzhou, Jiangsu, 213125
+  - China
+manufacturers:
+- name: METTLER-TOLEDO Changzhou Measurement Technology Ltd.
+  address_lines:
+  - No.111, West TaiHu Road
+  - Changzhou, Jiangsu, 213125
+  - China
+certified_type:
+  category: Indicator
+  type_designations:
+  - IND360
+  description: >-
+    Indicator / Terminal for connection of digital load cells or weighing modules (CANbus, LiNet or SICSPro
+    interface) and analog load cells (with or without intrinsic safety barrier, ISB)
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    climatic_environment_humidity:
+      value: non-condensing
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    climatic_environment_intended_location:
+      value: Closed
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_note:
+      value: Not suitable for a road vehicle power supply
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_power_supply_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    load_cell_power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    compatible_accuracy_class_oiml_r61:
+      value: Ref(0,2)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: accuracy_class_oiml_r76
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value: "(III) or (IIII)"
+    - condition: LiNet interface
+      value: "(III) or (IIII)"
+    - condition: SICSPro interface
+      value: "(I), (II), (III) or (IIII)"
+  - attribute: accuracy_class_oiml_r51
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value: Y(a) or Y(b); XIII(x) or XIIII
+      footnote_markers:
+      - 2)
+    - condition: LiNet interface
+      value: Y(a) or Y(b); XIII(x) or XIIII
+      footnote_markers:
+      - 2)
+    - condition: SICSPro interface
+      value: Y(I), Y(II), Y(a) or Y(b); XI(x), XII(x), XIII(x) or XIIII
+      footnote_markers:
+      - 2)
+  - attribute: weighing_ranges
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value: Single interval
+    - condition: LiNet interface
+      value: Single interval or Multi-interval
+    - condition: SICSPro interface
+      value: Single interval, Multi-interval or Multiple range
+  - attribute: maximum_number_of_scale_intervals_one_weighing_range
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: LiNet interface
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: SICSPro interface
+      value:
+        min:
+        max: 1000000
+      unit_symbol: divisions
+  - attribute: maximum_number_of_scale_intervals_multi_interval_or_multiple_range
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value:
+    - condition: LiNet interface
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: SICSPro interface
+      value:
+        min:
+        max: 100000
+      unit_symbol: divisions
+  - attribute: maximum_number_of_weighing_ranges
+    axis: digital_load_cell_interface
+    values:
+    - condition: CANbus interface
+      value: 1
+    - condition: LiNet interface
+      value: 3
+    - condition: SICSPro interface
+      value: 3
+  - attribute: accuracy_class_oiml_r76
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: "(III) or (IIII)"
+    - condition: Analog load cells with ISB
+      value: "(III) or (IIII)"
+  - attribute: accuracy_class_oiml_r51
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: Y(a) or Y(b); XIII(x) or XIIII
+      footnote_markers:
+      - 2)
+    - condition: Analog load cells with ISB
+      value: Y(a) or Y(b); XIII(x) or XIIII
+      footnote_markers:
+      - 2)
+  - attribute: weighing_ranges
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: Single interval
+    - condition: Analog load cells with ISB
+      value: Single interval
+  - attribute: maximum_number_of_scale_intervals
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: Analog load cells with ISB
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+  - attribute: minimum_signal_input_voltage
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 0
+      unit_symbol: mV
+    - condition: Analog load cells with ISB
+      value: 0
+      unit_symbol: mV
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 0.3
+      unit_symbol: µV
+    - condition: Analog load cells with ISB
+      value: 0.25
+      unit_symbol: µV
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 5
+      unit_symbol: V
+    - condition: Analog load cells with ISB (1.5 V DC excitation)
+      value: 1.5
+      unit_symbol: V
+    - condition: Analog load cells with ISB (2.3 V DC excitation)
+      value: 2.3
+      unit_symbol: V
+    - condition: Analog load cells with ISB (3.9 V DC excitation)
+      value: 3.9
+      unit_symbol: V
+  - attribute: minimum_load_cell_resistance
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 43
+      unit_symbol: Ω
+    - condition: Analog load cells with ISB (1.5 V DC excitation)
+      value: 43
+      unit_symbol: Ω
+    - condition: Analog load cells with ISB (2.3 V DC excitation)
+      value: 87
+      unit_symbol: Ω
+    - condition: Analog load cells with ISB (3.9 V DC excitation)
+      value: 350
+      unit_symbol: Ω
+  - attribute: maximum_load_cell_resistance
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 1245
+      unit_symbol: Ω
+    - condition: Analog load cells with ISB
+      value: 1245
+      unit_symbol: Ω
+  - attribute: load_cell_interface
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 6-wire with sense technology, may be configured as 4-wire
+    - condition: Analog load cells with ISB
+      value: 6-wire with sense technology, may be configured as 4-wire
+  - attribute: maximum_cable_length_per_cross_wire_section_between_indicator_and_junction_box_or_load_cells
+    axis: load_cell_connection_type
+    values:
+    - condition: Analog load cells
+      value: 1571
+      unit_symbol: m/mm²
+    - condition: Analog load cells with ISB
+      value: 1571
+      unit_symbol: m/mm²
+  - attribute: fraction_of_maximum_permissible_error
+    axis: load_cell_connection_type
+    values:
+    - condition: Digital load cells or weighing modules (any interface)
+      value: 0
+    - condition: Analog load cells
+      value: 0.5
+    - condition: Analog load cells with ISB
+      value: 0.5
+  - attribute: power_supply_voltage
+    axis: power_supply_type
+    values:
+    - condition: AC (Harsh version only)
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    - condition: DC (all versions)
+      value:
+        min: 20
+        max: 28
+      unit_symbol: V
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - I
+  - II
+  - III
+  - IIII
+test_reports:
+- id: NMi-2493052-01
+  date: '2021-03-01'
+  pages: 56
+  role: type_evaluation_report
+- id: NMi-2493052-02
+  date: '2021-03-01'
+  pages: 15
+  role: type_evaluation_report
+- id: NMi-2493052-03
+  date: '2021-03-01'
+  pages: 21
+  role: type_evaluation_report
+- id: NMi-2493052-04
+  date: '2021-03-01'
+  pages: 20
+  role: type_evaluation_report
+- id: NMi-2659880-01
+  date: '2021-10-27'
+  pages: 24
+  role: type_evaluation_report
+- id: NMi-3595235-01
+  date: '2023-03-28'
+  pages: 19
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2020-12-24'
+  changes: Initial issue
+- revision: '1'
+  date: '2021-03-02'
+  changes: Type evaluation reports revised because of editorial changes
+- revision: '2'
+  date: '2021-03-04'
+  changes: Editorial change to correct maximum load cell resistance
+- revision: '3'
+  date: '2021-09-15'
+  changes: Editorial change to include DC power supply voltage for all versions
+- revision: '4'
+  date: '2021-10-29'
+  changes: Adding optional ISB (Intrinsic safety barrier)
+- revision: '5'
+  date: '2023-03-30'
+  changes: >-
+    Adding LiNet interface for TLW version and adding hysteresis compensation function for POWERCELL version.
+    Adding software version for the update of the Alibi memory display on the DIN, Panel and Harsh versions.
+footnotes:
+- marker: 2)
+  text:
+matrix_tables:
+- name: Characteristics with digital load cells or weighing modules, by interface
+  columns:
+  - attribute
+  - canbus_interface
+  - linet_interface
+  - sicspro_interface
+  rows:
+  - attribute: accuracy_class_oiml_r76
+    canbus_interface: "(III) or (IIII)"
+    linet_interface: "(III) or (IIII)"
+    sicspro_interface: "(I), (II), (III) or (IIII)"
+  - attribute: accuracy_class_oiml_r51
+    canbus_interface: Y(a) or Y(b); XIII(x) or XIIII(2)
+    linet_interface: Y(a) or Y(b); XIII(x) or XIIII(2)
+    sicspro_interface: Y(I), Y(II), Y(a) or Y(b); XI(x), XII(x), XIII(x) or XIIII(2)
+  - attribute: accuracy_class_oiml_r61
+    canbus_interface: Ref(0,2)
+    linet_interface: Ref(0,2)
+    sicspro_interface: Ref(0,2)
+  - attribute: weighing_ranges
+    canbus_interface: Single interval
+    linet_interface: Single interval; Multi-interval
+    sicspro_interface: Single interval; Multi-interval; Multiple range
+  - attribute: maximum_number_of_scale_intervals_one_weighing_range
+    canbus_interface: n ≤ 10000 divisions
+    linet_interface: n ≤ 10000 divisions
+    sicspro_interface: n ≤ 1000000 divisions
+  - attribute: maximum_number_of_scale_intervals_multi_interval_or_multiple_range
+    canbus_interface:
+    linet_interface: n ≤ 10000 divisions (per (partial) weighing range)
+    sicspro_interface: n ≤ 100000 divisions (per (partial) weighing range)
+  - attribute: maximum_number_of_weighing_ranges
+    canbus_interface: 1
+    linet_interface: 3
+    sicspro_interface: 3
+  - attribute: load_cell_power_supply
+    canbus_interface: 12 V DC
+    linet_interface: 12 V DC
+    sicspro_interface: 12 V DC
+  - attribute: fraction_of_maximum_permissible_error
+    canbus_interface: 0
+    linet_interface: 0
+    sicspro_interface: 0
+  - attribute: temperature_range
+    canbus_interface: "-10 °C / +40 °C"
+    linet_interface: "-10 °C / +40 °C"
+    sicspro_interface: "-10 °C / +40 °C"
+  - attribute: climatic_environment_humidity
+    canbus_interface: non-condensing
+    linet_interface: non-condensing
+    sicspro_interface: non-condensing
+  - attribute: climatic_environment_intended_location
+    canbus_interface: Closed
+    linet_interface: Closed
+    sicspro_interface: Closed
+  - attribute: electromagnetic_environment_class
+    canbus_interface: E2
+    linet_interface: E2
+    sicspro_interface: E2
+  - attribute: power_supply_voltage
+    canbus_interface: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+    linet_interface: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+    sicspro_interface: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+  description: >-
+    Certificate page 2. '(2)' after class XIIII is a footnote marker in the original document; its definition
+    is not shown in the extracted text.
+  footnotes: []
+- name: >-
+    Characteristics with analog load cells, without ISB and with ISB (intrinsic safety barrier) at three
+    excitation voltages
+  columns:
+  - attribute
+  - analog_load_cells
+  - isb_excitation_1_5_v
+  - isb_excitation_2_3_v
+  - isb_excitation_3_9_v
+  rows:
+  - attribute: accuracy_class_oiml_r76
+    analog_load_cells: "(III) or (IIII)"
+    isb_excitation_1_5_v: "(III) or (IIII)"
+    isb_excitation_2_3_v: "(III) or (IIII)"
+    isb_excitation_3_9_v: "(III) or (IIII)"
+  - attribute: accuracy_class_oiml_r51
+    analog_load_cells: Y(a) or Y(b); XIII(x) or XIIII(2)
+    isb_excitation_1_5_v: Y(a) or Y(b); XIII(x) or XIIII(2)
+    isb_excitation_2_3_v: Y(a) or Y(b); XIII(x) or XIIII(2)
+    isb_excitation_3_9_v: Y(a) or Y(b); XIII(x) or XIIII(2)
+  - attribute: accuracy_class_oiml_r61
+    analog_load_cells: Ref(0,2)
+    isb_excitation_1_5_v: Ref(0,2)
+    isb_excitation_2_3_v: Ref(0,2)
+    isb_excitation_3_9_v: Ref(0,2)
+  - attribute: weighing_ranges
+    analog_load_cells: Single interval
+    isb_excitation_1_5_v: Single interval
+    isb_excitation_2_3_v: Single interval
+    isb_excitation_3_9_v: Single interval
+  - attribute: maximum_number_of_scale_intervals
+    analog_load_cells: n ≤ 10000 divisions
+    isb_excitation_1_5_v: n ≤ 10000 divisions
+    isb_excitation_2_3_v: n ≤ 10000 divisions
+    isb_excitation_3_9_v: n ≤ 10000 divisions
+  - attribute: minimum_signal_input_voltage
+    analog_load_cells: Umin = 0 mV
+    isb_excitation_1_5_v: Umin = 0 mV
+    isb_excitation_2_3_v: Umin = 0 mV
+    isb_excitation_3_9_v: Umin = 0 mV
+  - attribute: minimum_input_voltage_per_verification_scale_interval_uv
+    analog_load_cells: 0.3
+    isb_excitation_1_5_v: 0.25
+    isb_excitation_2_3_v: 0.25
+    isb_excitation_3_9_v: 0.25
+  - attribute: load_cell_excitation_voltage
+    analog_load_cells: 5 V DC
+    isb_excitation_1_5_v: 1.5 V DC
+    isb_excitation_2_3_v: 2.3 V DC
+    isb_excitation_3_9_v: 3.9 V DC
+  - attribute: minimum_load_cell_resistance_ohm
+    analog_load_cells: 43
+    isb_excitation_1_5_v: 43
+    isb_excitation_2_3_v: 87
+    isb_excitation_3_9_v: 350
+  - attribute: maximum_load_cell_resistance_ohm
+    analog_load_cells: 1245
+    isb_excitation_1_5_v: 1245
+    isb_excitation_2_3_v: 1245
+    isb_excitation_3_9_v: 1245
+  - attribute: fraction_of_maximum_permissible_error
+    analog_load_cells: 0.5
+    isb_excitation_1_5_v: 0.5
+    isb_excitation_2_3_v: 0.5
+    isb_excitation_3_9_v: 0.5
+  - attribute: load_cell_interface
+    analog_load_cells: 6-wire with sense technology, may be configured as 4-wire
+    isb_excitation_1_5_v: 6-wire with sense technology, may be configured as 4-wire
+    isb_excitation_2_3_v: 6-wire with sense technology, may be configured as 4-wire
+    isb_excitation_3_9_v: 6-wire with sense technology, may be configured as 4-wire
+  - attribute: maximum_cable_length_per_cross_wire_section
+    analog_load_cells: 1571 m/mm²
+    isb_excitation_1_5_v: 1571 m/mm²
+    isb_excitation_2_3_v: 1571 m/mm²
+    isb_excitation_3_9_v: 1571 m/mm²
+  - attribute: temperature_range
+    analog_load_cells: "-10 °C / +40 °C"
+    isb_excitation_1_5_v: "-10 °C / +40 °C"
+    isb_excitation_2_3_v: "-10 °C / +40 °C"
+    isb_excitation_3_9_v: "-10 °C / +40 °C"
+  - attribute: climatic_environment_humidity
+    analog_load_cells: non-condensing
+    isb_excitation_1_5_v: non-condensing
+    isb_excitation_2_3_v: non-condensing
+    isb_excitation_3_9_v: non-condensing
+  - attribute: climatic_environment_intended_location
+    analog_load_cells: Closed
+    isb_excitation_1_5_v: Closed
+    isb_excitation_2_3_v: Closed
+    isb_excitation_3_9_v: Closed
+  - attribute: electromagnetic_environment_class
+    analog_load_cells: E2
+    isb_excitation_1_5_v: E2
+    isb_excitation_2_3_v: E2
+    isb_excitation_3_9_v: E2
+  - attribute: power_supply_voltage
+    analog_load_cells: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+    isb_excitation_1_5_v: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+    isb_excitation_2_3_v: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+    isb_excitation_3_9_v: >-
+      100 – 240 V AC 50/60 Hz (only for Harsh version); 20 - 28 V DC (for all versions); not suitable
+      for a road vehicle power supply
+  description: >-
+    Certificate page 3. Original decimal commas converted to decimal points (e.g. 0,3 µV → 0.3 µV; 1,5
+    V → 1.5 V). Note from the certificate: in case sense technology is not used the load cells are connected
+    directly without junction box or extension cable. '(2)' is a footnote marker whose definition is not
+    shown in the extracted text.
+  footnotes: []
+- name: Software identification
+  columns:
+  - description
+  - version
+  - remarks
+  rows:
+  - description: Analog mainboard
+    version: 1.xx.yyyy; 2.xx.yyyy
+    remarks: Version 2.xx.yyyy updates the Alibi memory display
+  - description: POWERCELL mainboard
+    version: 1.xx.yyyy; 2.xx.yyyy
+    remarks: >-
+      CANbus interface; Version 2.xx.yyyy adds Hysteresis Compensation function and updates the Alibi
+      memory display
+  - description: Precision mainboard
+    version: 1.xx.yyyy; 2.xx.yyyy
+    remarks: SICSPro interface; Version 2.xx.yyyy updates the Alibi memory display
+  - description: TLW mainboard
+    version: 1.xx.yyyy
+    remarks: LiNet interface
+  description: >-
+    xx is a number between 00 and 99 representing major updates of the legally non relevant part of the
+    software; yyyy is a number between 0000 and 9999 representing minor updates of the legally non relevant
+    part of the software.
+  footnotes: []

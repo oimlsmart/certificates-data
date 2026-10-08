@@ -1,0 +1,188 @@
+_meta:
+  cert_id: 2112
+  num: R060/2000-DE1-2008.13
+  applicant: Precia-Molen
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-13.pdf
+certificate:
+  number: R60/2000-DE1-08.13
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-09-26'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: PRECIA-MOLEN
+  address_lines:
+  - Franse Akker 1
+  - 4824 AL Breda
+  - Netherlands
+manufacturers:
+- name: PRECIA-MOLEN
+  address_lines:
+  - Franse Akker 1
+  - 4824 AL Breda
+  - Netherlands
+certified_type:
+  category: Load cell
+  type_designations:
+  - SCL3
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge compression load cell of the series SCL3 for self-centring pendulum applications, made
+    of stainless steel; the strain gauge application is hermetically sealed.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 2
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value: 1150
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=30t
+      value: 30
+    - model: Emax=40t
+      value: 40
+    - model: Emax=50t
+      value: 50
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+    - condition: C3
+      value: 3000
+    - condition: C3.5
+      value: 3500
+    - condition: C4
+      value: 4000
+    - condition: C3 MI 8
+      value: 3000
+  - attribute: min_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5000
+    - condition: C3
+      value: Emax/13000
+    - condition: C3.5
+      value: Emax/13000
+    - condition: C4
+      value: Emax/13000
+    - condition: C3 MI 8
+      value: Emax/15000
+  - attribute: min_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3 MI 8
+      value: "½Emax/8000"
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C1
+  - C3
+  - C3.5
+  - C4
+  - C3 MI 8
+test_reports:
+- id: PTB-1.12-4037624-1
+  pages: 20
+  role: type_evaluation_report
+model_family:
+  family_name: SCL3
+  models:
+  - model_id: Emax=30t
+  - model_id: Emax=40t
+  - model_id: Emax=50t
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - min_load_cell_verification_interval_vmin
+  - min_dead_load_output_return_dr
+  column_units:
+  -
+  -
+  - mV/V
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: C1
+    max_load_cell_intervals_nlc: 1000
+    rated_output: 2
+    maximum_capacity: 30 / 40 / 50
+    min_load_cell_verification_interval_vmin: Emax/5000
+    min_dead_load_output_return_dr:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity: 30 / 40 / 50
+    min_load_cell_verification_interval_vmin: Emax/13000
+    min_dead_load_output_return_dr:
+  - accuracy_class: C3.5
+    max_load_cell_intervals_nlc: 3500
+    rated_output: 2
+    maximum_capacity: 30 / 40 / 50
+    min_load_cell_verification_interval_vmin: Emax/13000
+    min_dead_load_output_return_dr:
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity: 30 / 40 / 50
+    min_load_cell_verification_interval_vmin: Emax/13000
+    min_dead_load_output_return_dr:
+  - accuracy_class: C3 MI 8
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity: 30 / 40 / 50
+    min_load_cell_verification_interval_vmin: Emax/15000
+    min_dead_load_output_return_dr: "½Emax/8000"
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, by accuracy class.
+    The Emax/13000 cell spans classes C3, C3.5 and C4 (colspan); minimum dead load output return is not
+    applicable ('--') for classes C1, C3, C3.5 and C4.
+  footnotes: []

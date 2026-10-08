@@ -1,0 +1,339 @@
+_meta:
+  cert_id: 4370
+  num: R051/2006-GB1-2013.01 Rev. 4
+  applicant: Trimble Navigation New Zealand Limited
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2013-01-rev4.pdf
+certificate:
+  number: R51/2006-GB1-13.01
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2017-07-26'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Trimble Navigation New Zealand Limited
+  address_lines:
+  - 11 Birmingham Drive
+  - Riccarton
+  - Christchurch 8440
+  - New Zealand
+manufacturers:
+- name: Trimble Navigation New Zealand Limited
+  address_lines:
+  - 11 Birmingham Drive
+  - Riccarton
+  - Christchurch 8440
+  - New Zealand
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - L-Series 2180
+  - Express
+  - Force
+  - L2150
+  description: >-
+    Battery-operated automatic catchweighing instrument (Category Y), designated the L-Series 2180, comprising
+    an electronic indicator, pressure transducer and sensors mounted on a wheeled loader. The pattern
+    automatically determines the load in the bucket during the lifting process: the hydraulic pressure
+    in the loader's arms is converted by a pressure transducer, the output being used by the indicator
+    to display the corresponding weight. Alternatives cover modified software (MMS reporting via data
+    module and wireless communication, not for legal purposes), reduced-functionality models Express and
+    Force, the L2150 with modified indicator console layout and dedicated target weight key, forks instead
+    of a bucket, replacement of the AAA-20710 position sensor by any compatible sensor, and mounting on
+    container reach stackers (weighing inhibited when the telescopic boom is not fully retracted) or container
+    forklifts.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 350
+      unit_symbol: e
+      unit_id:
+    scale_interval:
+      value:
+        min: 1
+        max: 200
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value: 10
+      unit_symbol: e
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -20
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    climatic_environment:
+      value: open, condensing
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E3
+      unit_symbol:
+      unit_id:
+    mechanical_environment:
+      value: vehicle mounted
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 32
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    display_keyboard_location:
+      value: indicator console in cabin
+      unit_symbol:
+      unit_id:
+    semi_automatic_zero_setting_device_max_effect:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    semi_automatic_zero_setting_device_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: software_designation
+    values:
+    - model: L-Series 2180
+      value: '60364'
+    - model: Express
+      value: '60395'
+    - model: Force
+      value: '60408'
+    - model: L2150
+      value: '60439'
+  - attribute: software_version
+    values:
+    - model: L-Series 2180
+      value: 1.xx or 2.xx
+    - model: Express
+      value: 2.xx
+    - model: Force
+      value: 2.xx
+    - model: L2150
+      value: 1.xx or 2.xx
+  config_level:
+  - attribute: load_receptor
+    axis: attachment
+    values:
+    - condition: bucket (standard)
+      value: bucket
+    - condition: 'Alternative 5: forks fitted'
+      value: forks instead of bucket
+  - attribute: weighing_inhibition
+    axis: host_vehicle
+    values:
+    - condition: 'Alternative 7: container reach stacker, telescopic boom not fully retracted'
+      value: weighing inhibited
+    - condition: 'Alternative 8: container forklift'
+      value: instrument may be fitted to a container forklift
+recommendation:
+  id: R51
+  edition: 2016
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01061
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2013-03-19'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2013-10-01'
+  changes: Software version 2.xx added for the L2150.
+- revision: '2'
+  date: '2015-11-05'
+  changes: >-
+    Applicant's name changed from Actronics Ltd to Trimble Loadrite Auckland Ltd; tilt changed from 5°
+    to 6° for LR966 angle sensor; alternatives 4 to 6 added.
+- revision: '3'
+  date: '2016-06-02'
+  changes: Alternatives 7 and 8 added.
+- revision: '4'
+  date: '2017-07-26'
+  changes: Alternative 9 added; corrected number of pages of Evaluation Report P01061 from 17.
+model_family:
+  family_name:
+  models:
+  - model_id: L-Series 2180
+    label: Base pattern
+    attributes:
+      software_designation: '60364'
+      software_version: 1.xx or 2.xx
+      software_version_2xx_note: >-
+        provides facilities to use MMS reporting software using data module and wireless communication,
+        which shall not be used for legal purposes
+      inclinometer: Loadrite LR966
+  - model_id: Express
+    label: Modified instrument with reduced data handling functionality and reduced keypads
+    attributes:
+      software_designation: '60395'
+      software_version: 2.xx
+      inclinometer: Loadrite LR966 or Loadrite AAA-20709
+  - model_id: Force
+    label: Modified instrument with no data handling functionality and reduced keypads
+    attributes:
+      software_designation: '60408'
+      software_version: 2.xx
+      inclinometer: Loadrite LR966 or Loadrite AAA-20709
+  - model_id: L2150
+    label: Modified indicator console layout with dedicated key for entering target weights
+    attributes:
+      software_designation: '60439'
+      software_version: 1.xx or 2.xx
+      inclinometer: Loadrite LR966 or Loadrite AAA-20709
+components:
+- role: pressure_transducer
+  type_designations:
+  - Loadrite LC965C
+  alternatives:
+  characteristics:
+    quantity:
+      value:
+        min: 1
+        max: 2
+      unit_symbol:
+      unit_id:
+    measuring_range:
+      value:
+        min: 0
+        max: 350
+      unit_symbol: bar
+      unit_id:
+    output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+- role: pressure_transducer_alternative
+  type_designations:
+  - Loadrite LC985A
+  - Loadrite LC985B
+  alternatives: OR
+  characteristics:
+    measuring_range:
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+      unit_id:
+    output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+- role: position_reference_lift_speed_direction_sensor
+  type_designations:
+  - Loadrite LM960
+  - Loadrite LR908
+  alternatives: OR
+  characteristics:
+    lm960_sensor_type:
+      value: optical arm-location sensor
+      unit_symbol:
+      unit_id:
+    lr908_sensor_type:
+      value: spring-loaded rotary encoder type arm-location sensor
+      unit_symbol:
+      unit_id:
+- role: load_receptor_bucket_location_sensor
+  type_designations:
+  - Loadrite AAA-20710
+  alternatives:
+  characteristics:
+    permitted_replacements:
+      value: >-
+        any compatible sensor, including Trimble Loadrite AAA-20762 laser position switches and SEN-NJ5-18GM50-E
+        proximity sensors
+      unit_symbol:
+      unit_id:
+- role: inclinometer
+  type_designations:
+  - Loadrite LR966
+  alternatives:
+  characteristics:
+    tilt_inhibit_above:
+      value: 6
+      unit_symbol: "°"
+      unit_id:
+- role: inclinometer_alternative
+  type_designations:
+  - Loadrite AAA-20709
+  alternatives:
+  characteristics:
+    tilt_activate_above:
+      value: 6
+      unit_symbol: "°"
+      unit_id:
+    applicable_models:
+      value: Express, Force, L2150
+      unit_symbol:
+      unit_id:
+- role: indicator
+  type_designations:
+  - Loadrite L2180
+  alternatives:
+  characteristics:
+    description:
+      value: weighing indicator console
+      unit_symbol:
+      unit_id:
+matrix_tables:
+- name: Alternative pressure transducer characteristics
+  columns:
+  - pressure_transducer
+  - transducer_measuring_range
+  - transducer_output_signal
+  column_units:
+  -
+  - bar
+  - mA
+  rows:
+  - pressure_transducer: Loadrite LC985A
+    transducer_measuring_range:
+      min: 0
+      max: 400
+    transducer_output_signal:
+      min: 4
+      max: 20
+  - pressure_transducer: Loadrite LC985B
+    transducer_measuring_range:
+      min: 0
+      max: 400
+    transducer_output_signal:
+      min: 4
+      max: 20
+  description: >-
+    Permitted replacements for the LC965C pressure transducers per Alternative 9; measuring range and
+    output signal are common to both alternative models.
+  footnotes: []

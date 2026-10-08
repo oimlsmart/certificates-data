@@ -1,0 +1,234 @@
+_meta:
+  cert_id: 3545
+  num: R051/2006-GB1-2014.03
+  applicant: RDS Technology Ltd
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2014-03.pdf
+certificate:
+  number: R51/2006-GB1-14.03
+  scheme: A
+  project_number: TS0101/0028
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2014-09-19'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Certification Services
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+applicants:
+- name: RDS Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+manufacturers:
+- name: RDS Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - Loadmaster Alpha 100
+  description: >-
+    Battery-operated automatic catchweighing instrument comprising a weighing module, "Terminator" junction
+    box, head unit control and display module, pressure transducers and sensors mounted on a wheeled loader.
+    The instrument automatically determines the load in the bucket during the lifting process; the hydraulic
+    pressure in the loader's arms is converted by a pressure transducer, the output being used by the
+    indicator to display the corresponding weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 50000
+      unit_symbol: kg
+      unit_id:
+    scale_interval:
+      value:
+        min: 10
+        max:
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value:
+        min: 10
+        max:
+      unit_symbol: e
+      unit_id:
+    maximum_number_of_scale_intervals:
+      value: 250
+      unit_symbol:
+      unit_id:
+    transducer_output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+    minimum_sensitivity:
+      value: 35
+      unit_symbol: μV/div
+      unit_id:
+    temperature_range:
+      value:
+        min: -25
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    electromagnetic_environment:
+      value: E3
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 30
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: RS232, Ethernet, CAN 2
+      unit_symbol:
+      unit_id:
+    semi_automatic_zero_setting:
+      value:
+        min: -2
+        max: 2
+      unit_symbol: "%"
+      unit_id:
+    maximum_number_of_attachments:
+      value: 10
+      unit_symbol:
+      unit_id:
+    maximum_number_of_pressure_sensors:
+      value: 4
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: transducer_measuring_range
+    axis: pressure_transducer_variant
+    values:
+    - condition: 0-250 bar transducer
+      value:
+        min: 0
+        max: 250
+      unit_symbol: bar
+    - condition: 0-400 bar transducer
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+  - attribute: environment_protection
+    axis: climatic_environment
+    values:
+    - condition: Closed, non-condensing
+      value: Head unit, printer
+      unit_symbol:
+    - condition: Open, condensing
+      value: Weighing module, junction box, transducers, sensors
+      unit_symbol:
+  - attribute: permitted_alternative_fitment
+    axis: loader_configuration
+    values:
+    - condition: >-
+        Single acting hydraulic ram (fork lift truck or other single acting loader, no back pressure,
+        second pressure sensor not connected)
+      value: permitted
+      unit_symbol:
+    - condition: Telescopic loader with boom extension sensor
+      value: permitted
+      unit_symbol:
+    - condition: >-
+        Operating with kick out relay automatically stopping the loading arm at the reference point during
+        the lifting cycle
+      value: permitted
+      unit_symbol:
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P01289
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: '14.03'
+  date: '2014-09-19'
+  changes: OIML certificate first issued.
+components:
+- role: weighing_module
+  type_designations:
+  - LX100
+  characteristics:
+    software_version:
+      value: '003'
+      unit_symbol:
+      unit_id:
+- role: junction_box
+  type_designations:
+  - Terminator
+- role: head_unit_control_and_display_module
+  type_designations:
+  - Isocan
+  - IS100
+  characteristics:
+    software_version:
+      value: '005'
+      unit_symbol:
+      unit_id:
+- role: pressure_transducer
+  type_designations:
+  - Danfoss MBS 1250
+  characteristics:
+    output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+- role: boom_inclinometer
+- role: bucket_sensor
+- role: boom_sensor
+  characteristics:
+    applicability:
+      value: Telescopic loaders only
+      unit_symbol:
+      unit_id:
+- role: temperature_sensor
+- role: chassis_inclinometer
+- role: database_software
+  type_designations:
+  - DBIS100
+  characteristics:
+    software_version:
+      value: '003'
+      unit_symbol:
+      unit_id:
+footnotes: []

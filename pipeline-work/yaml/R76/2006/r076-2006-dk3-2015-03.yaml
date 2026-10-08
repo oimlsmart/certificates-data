@@ -1,0 +1,150 @@
+_meta:
+  cert_id: 3728
+  num: R076/2006-DK3-2015.03
+  applicant: CAS Corporation
+  issuing_year: '2015'
+  status: Valid
+  issuer: DK3
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-dk3-2015-03.pdf
+certificate:
+  number: R76/2006-DK3-15.03
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2015-05-26'
+  oiml_issuer_id: DK3
+issuing_authority:
+  name: DELTA
+  address_lines:
+  - Venlighedsvej 4
+  - 2970 Hørsholm
+  - Denmark
+  person_responsible: J. Hovgård Jensen
+  person_title: Certification Officer
+  phone: "+45 7219 4000"
+  email: legal@delta.dk
+  website: www.madebydelta.com
+  oiml_issuer_id: DK3
+applicants:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro, Gwangjeok-myeon,"
+  - Yangju-si, Gyeonggi-do
+  - REPUBLIC OF KOREA
+manufacturers:
+- name: CAS (Zhejiang) Electronics Co., Ltd.
+  address_lines:
+  - 99# Changjiang Road, Jiashan County, Zhejiang Province,
+  - CHINA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - XE
+  - XE600
+  - XE1500
+  - XE6000
+  module_designation:
+  description: Intended to be used for direct sales to the public.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: II
+    weighing_range:
+      value: Single-interval
+    maximum_capacity:
+      value:
+        min: 300
+        max: 6000
+      unit_symbol: g
+      unit_id:
+    minimum_capacity:
+      value: According to OIML R76-1:2006 table 3 and section 3.4.3
+    verification_scale_interval_e:
+      value:
+        min: 0.05
+        max:
+      unit_symbol: g
+      unit_id:
+    display_resolution_d:
+      value: 0.1×e
+    display_resolution_minimum:
+      value:
+        min: 0.005
+        max:
+      unit_symbol: g
+      unit_id:
+    subtractive_tare:
+      value: "≤ -Max"
+    interface:
+      value: Protective, according to paragraph 5.3.6
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC/DC
+    power_supply_adapter:
+      value: external AC/DC adapter
+    temperature_range_indicator:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    software_version:
+      value: '2.00'
+  config_level:
+  - attribute: number_of_intervals_max_over_e
+    axis: model
+    values:
+    - condition: XE1500
+      value: 7500
+      unit_symbol:
+    - condition: all other models
+      value: 6000
+      unit_symbol:
+  - attribute: display_resolution_mode
+    axis: model
+    values:
+    - condition: XE600, XE6000
+      value: auxiliary indicating device
+    - condition: remaining models
+      value: extended resolution
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - II
+test_reports:
+- id: DANAK-1914018
+  date: '2014-04-04'
+  pages: 77
+  role: test_report
+- id: DANAK-1914528
+  date: '2014-09-30'
+  pages: 72
+  role: test_report
+- id: DANAK-1914991
+  date: '2015-02-12'
+  pages: 41
+  role: test_report
+model_family:
+  family_name: XE
+  models:
+  - model_id: XE600
+  - model_id: XE1500
+  - model_id: XE6000

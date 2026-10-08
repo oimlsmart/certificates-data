@@ -1,0 +1,134 @@
+_meta:
+  cert_id: 1599
+  num: R051/1996-DE1-2004.01 Rev. 1
+  applicant: Caljan ApS
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 1996
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/1996/r051-1996-de1-2004-01-rev1.pdf
+certificate:
+  number: R51/1996-DE1-04.01
+  page_total: 2
+  member_state: Germany
+  date_issued: '2006-01-16'
+  oiml_issuer_id: DE1
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+  person_title: Direktor und Professor
+  oiml_issuer_id: DE1
+applicants:
+- name: Caljan ApS
+  address_lines:
+  - Ved Milepaelen 6-8
+  - 8361 Hasselager-Aarhus
+  - Denmark
+manufacturers:
+- name: Caljan ApS
+  address_lines:
+  - Ved Milepaelen 6-8
+  - 8361 Hasselager-Aarhus
+  - Denmark
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - BW B...
+  module_designation: Not applicable
+  description: >-
+    Automatic Catchweighing Instrument, type BW B..., with load receptor with conveyor belt and display
+    unit AT200...
+characteristics:
+  type_level:
+    max_number_of_verification_scale_intervals_n:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 15
+        max: 300
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value: in accordance with OIML R 51-1, No. 2.4
+      unit_symbol:
+      unit_id:
+    tare_balancing_range:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    maximum_belt_speed:
+      value: 2.75
+      unit_symbol: m/s
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: max_number_of_verification_scale_intervals_n
+    axis: belt_speed
+    values:
+    - condition: 2.75 m/s
+      value: 1500
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R51
+  edition: 1996
+  accuracy_classes:
+  - Y(a)
+test_reports:
+- id: 1.12-4022119
+  role: type_evaluation_report
+- id: 1.12-4022119/1
+  role: test_report
+- id: 1.14-02001655
+  role: type_evaluation_report
+revision_history:
+- revision: '1'
+  date: '2006-01-16'
+  changes: Revision issued because the maximum belt speed has been increased (see Test Report 1.12-4022119/1).
+components:
+- role: Load cell
+  type_designations:
+  - ED60-M6U
+  alternatives:
+  characteristics:
+    principle:
+      value: vibrating string
+      unit_symbol:
+      unit_id:
+- role: Load receptor
+  type_designations:
+  - BW B...
+  alternatives:
+  characteristics:
+    construction:
+      value: with conveyor belt, different dimensions possible
+      unit_symbol:
+      unit_id:
+    maximum_length:
+      value: 1500
+      unit_symbol: mm
+      unit_id:
+    maximum_width:
+      value: 1250
+      unit_symbol: mm
+      unit_id:
+- role: Display unit
+  type_designations:
+  - AT200...
+  alternatives:
+  characteristics: {}

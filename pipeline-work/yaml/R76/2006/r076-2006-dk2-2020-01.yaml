@@ -1,0 +1,236 @@
+_meta:
+  cert_id: 5083
+  num: R76/2006-A-DK2-20.01
+  applicant: Tscale Electronics Mfg. (Kunshan) Co., Ltd
+  issuing_year: '2020'
+  status: Valid
+  issuer: DK2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-dk2-2020-01.pdf
+certificate:
+  number: R76/2006-A-DK2-2020.01
+  scheme: A
+  page_total: 4
+  member_state: Denmark
+  date_issued: '2020-02-12'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Leif Madsen
+applicants:
+- name: Tscale Electronics Mfg. (Kunshan) Co., Ltd.
+  address_lines:
+  - No. 99 Jingwei Road
+  - Zhoushi, Kunshan, Jiangsu
+  - China
+manufacturers:
+- name: Tscale Electronics Mfg. (Kunshan) Co. Ltd.
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DL-A
+  - DL-B
+  - DSP
+  - DSW
+  module_designation: Non-automatic electronic weighing instrument
+  description: >-
+    Instruments have software separation. The software version of the application software is shown during
+    start up of the scale; the software version of the legal software is shown by pressing the zero key
+    when the application software version is shown.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    weighing_range_configuration:
+      value: Single interval, multi interval (dual) or multirange (dual)
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 6
+        max: 30
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value: 20 × e
+      unit_symbol:
+      unit_id:
+    maximum_tare_effect:
+      value: "-Max (within display limits)"
+      unit_symbol:
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    operational_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    legal_software_version:
+      value: v1.11
+      unit_symbol:
+      unit_id:
+    application_software_version:
+      value: v1.xx(y)
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: power_supply_voltage
+    unit_symbol: V
+    values:
+    - model: DL-A
+      value: 5
+    - model: DL-B
+      value: 12
+    - model: DSP
+      value: 12
+    - model: DSW
+      value: 12
+  - attribute: power_supply_source
+    unit_symbol:
+    values:
+    - model: DL-A
+      value: USB connector
+    - model: DL-B
+      value: external AC/DC adapter
+    - model: DSP
+      value: external AC/DC adapter
+    - model: DSW
+      value: external AC/DC adapter
+  - attribute: external_adapter_input_voltage
+    unit_symbol: V
+    values:
+    - model: DL-B
+      value:
+        min: 100
+        max: 240
+    - model: DSP
+      value:
+        min: 100
+        max: 240
+    - model: DSW
+      value:
+        min: 100
+        max: 240
+  - attribute: optional_rechargeable_battery_voltage
+    unit_symbol: V
+    values:
+    - model: DL-B
+      value: 6
+    - model: DSP
+      value: 6
+    - model: DSW
+      value: 6
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: weighing_range_configuration
+    values:
+    - condition: single interval
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+    - condition: multi interval (dual)
+      value: 2x3000
+      unit_symbol:
+    - condition: multirange (dual)
+      value: 2x3000
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: 119-31559.10
+  date: '2020-01-13'
+  pages: 94
+  role: type_evaluation_report
+- id: 119-31559.9020
+  date: '2020-01-22'
+  pages: 20
+  role: evaluation_report
+- id: 119-31559
+  role: documentation_file
+revision_history:
+- revision: Initial version
+  date: '2020-02-12'
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: DL-A
+    label: DL-A
+    attributes:
+      power_supply: 5 VDC via USB connector
+  - model_id: DL-B
+    label: DL-B
+    attributes:
+      power_supply: 12 VDC supplied by external 100-240 VAC/DC adapter; optional 6 V rechargeable battery
+  - model_id: DSP
+    label: DSP
+    attributes:
+      power_supply: 12 VDC supplied by external 100-240 VAC/DC adapter; optional 6 V rechargeable battery
+  - model_id: DSW
+    label: DSW
+    attributes:
+      power_supply: 12 VDC supplied by external 100-240 VAC/DC adapter; optional 6 V rechargeable battery
+components:
+- role: initial zero setting device
+  characteristics:
+    maximum_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "% of Max"
+      unit_id:
+- role: semi-automatic zero setting device
+  characteristics:
+    maximum_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "% of Max"
+      unit_id:
+- role: zero tracking device
+  characteristics:
+    maximum_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "% of Max"
+      unit_id:
+- role: semi-automatic subtractive tare balancing device
+- role: gravity compensation device
+- role: indicators
+  characteristics:
+    indicators:
+    - stable equilibrium
+    - zero
+    - net
+    - active range
+- role: interface
+  type_designations:
+  - RS232
+- role: interface (optional)
+  type_designations:
+  - Bluetooth
+- role: Point Of Sale (POS) system connection
+  characteristics:
+    applicable_to: DSP
+    protocols:
+    - DL CON2
+    - CAS protocol

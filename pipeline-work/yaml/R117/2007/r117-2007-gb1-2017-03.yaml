@@ -1,0 +1,233 @@
+_meta:
+  cert_id: 4427
+  num: R117/2007-GB1-2017.03
+  applicant: Metermatic
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-gb1-2017-03.pdf
+certificate:
+  number: R117/2007-GB1-17.03
+  scheme: A
+  project_number: P02138
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-10-13'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Metermatic
+  address_lines:
+  - Angus Crescent
+  - Longmeadow business estate East
+  - Johannesburg
+  - Gauteng
+  - South Africa
+manufacturers:
+- name: Metermatic
+  address_lines:
+  - Angus Crescent
+  - Longmeadow business estate East
+  - Johannesburg
+  - Gauteng
+  - South Africa
+certified_type:
+  category: Calculator and indicator
+  type_designations:
+  - EM6
+  module_designation:
+  description: >-
+    Electronic calculator with indicator for use on road tanker systems or static installations for measurement
+    of liquids other than water. The volume may be temperature compensated. Has built-in preset functionality
+    and is capable of monitoring and pre-setting two flow meters simultaneously. Temperature compensation
+    may be implemented using a temperature sensor installed in the fuel delivery pipe within one metre
+    from the flow meter; any sensor complying with the accuracy and response times specified in OIML R117
+    Edition 2007 (E) may be installed. Programming procedures are described in the EM6 Calibration and
+    Verification Manual. Ancillary devices: zero-setting device (automatic at start of each delivery),
+    printing device (authorised printer per section 4), memory device, price indicating device (optional),
+    conversion device (temperature compensation to reference conditions), pre-setting device (quantity
+    only).
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_class:
+      value: H3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mechanical_environment_class:
+      value: M3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    flow_meter_points:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    relays_per_meter_point:
+      value: 4
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    configurable_inputs_per_meter_point:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    pt100_temperature_interfaces:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    interfaces:
+      value: 1 x RS232; 1 x RS232 or RS485 (selectable); CAN BUS
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_sensor_max_distance_from_flow_meter:
+      value:
+        min:
+        max: 1
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    memory_device_capacity:
+      value: 30000
+      unit_symbol: transactions
+      unit_id:
+      footnote_markers: []
+    software_version_number:
+      value: EM6-SVH01-0101-00-E
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weights_and_measures_checksum:
+      value: 9e93a60
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: power_supply_voltage
+    axis: installation_type
+    values:
+    - condition: fixed installations (AC mains)
+      value: 220
+      unit_symbol: V
+    - condition: road tanker (vehicle battery, DC)
+      value: 24
+      unit_symbol: V
+recommendation:
+  id: R117
+  edition: 2007
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: P02138
+  pages: 66
+  role: evaluation_report
+revision_history:
+- revision: R117/2007-GB1-17.03
+  date: '2017-10-13'
+  changes: Certificate first issued.
+components:
+- role: CPU board
+  type_designations:
+  - EM6-BASE
+  characteristics:
+    manufacturer: Metermatic
+    part_number: PCB-MM162202
+- role: LCD display module
+  type_designations:
+  - LM240160CCW
+  characteristics:
+    manufacturer: Topway
+    part_number: LM240160CCW
+- role: 24V DC power module
+  type_designations:
+  - DPM-100
+  characteristics:
+    manufacturer: Metermatic
+    part_number: PCB-MM162204
+- role: 220V AC power module
+  type_designations:
+  - APM-100
+  characteristics:
+    manufacturer: Metermatic
+    part_number: PCB-MM162201
+- role: Pulser
+  type_designations:
+  - PPT-300-100
+  alternatives: OR
+  characteristics:
+    manufacturer: Metermatic
+    part_number: PPT-300-100
+    note: Or any other compatible pulser
+- role: Relay interface module
+  type_designations:
+  - RLM-100
+  characteristics:
+    manufacturer: Metermatic
+    part_number: RLM-100
+- role: Voltage spike suppressor
+  type_designations:
+  - SNM-100
+  characteristics:
+    manufacturer: Metermatic
+    part_number: PCB-MM162203
+- role: Zero-setting device (ancillary)
+  type_designations: []
+  characteristics:
+    operation: automatic at start of each delivery
+- role: Printing device (ancillary)
+  type_designations: []
+  characteristics:
+    note: see section 4 for authorised printer
+- role: Memory device (ancillary)
+  type_designations: []
+  characteristics:
+    capacity_transactions: 30000
+- role: Price indicating device (ancillary)
+  type_designations: []
+  characteristics:
+    optional: true
+- role: Conversion device (ancillary)
+  type_designations: []
+  characteristics:
+    function: temperature compensation to reference conditions
+- role: Pre-setting device (ancillary)
+  type_designations: []
+  characteristics:
+    function: quantity only
+footnotes:
+- marker: "*"
+  text: Or any other compatible pulser.

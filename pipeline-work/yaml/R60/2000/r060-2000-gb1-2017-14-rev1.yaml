@@ -1,0 +1,227 @@
+_meta:
+  cert_id: 4415
+  num: R060/2000-GB1-2017.14 Rev. 1
+  applicant: Cardinal Scale Manufacturing Co.
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-gb1-2017-14-rev1.pdf
+certificate:
+  number: R60/2000-GB1-17.14
+  revision: '1'
+  page_total: 2
+  member_state: United Kingdom
+  date_issued: '2017-09-06'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: CARDINAL SCALE MANUFACTURING COMPANY
+  address_lines:
+  - 203 East Daugherty Street
+  - Webb City, Missouri
+  - MO 64870
+  - USA
+manufacturers:
+- name: CARDINAL SCALE MANUFACTURING COMPANY
+  address_lines:
+  - 203 East Daugherty Street
+  - Webb City, Missouri
+  - MO 64870
+  - USA
+certified_type:
+  category: Load cell
+  type_designations:
+  - HSB
+  - HAB
+  module_designation:
+  description: >-
+    HSB (stainless steel) and HAB (alloy steel) strain gauge load cells. Load cell types HSB and HAB can
+    have other maximum capacities from 300 kg to 10000 kg, always respecting their metrological and constructive
+    characteristics, according to OIML R60 (2000).
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    additional_marking:
+      value: CH
+      unit_symbol:
+      unit_id:
+    max_load_cell_verification_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_relative:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    rated_output:
+      value: 2.0
+      unit_symbol: mV/V
+      unit_id:
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V DC
+      unit_id:
+    input_impedance_rlc:
+      value: 400 ± 20 or 1150 ± 100
+      unit_symbol: Ω
+      unit_id:
+    temperature_rating:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    safe_overload_relative:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+    cable_specification:
+      value: 4-wire (≤ 0.4 mm² in section) or 6-wire shielded, with the shielding not connected to the
+        load cell
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: maximum_capacity
+    axis: capacity_range
+    values:
+    - condition: capacity 300 to 4000 kg
+      value:
+        min: 300
+        max: 4000
+      unit_symbol: kg
+    - condition: capacity 4000 to 10000 kg
+      value:
+        min: 4000
+        max: 10000
+      unit_symbol: kg
+  - attribute: ratio_y_emax_over_vmin
+    axis: capacity_range
+    values:
+    - condition: capacity 300 to 4000 kg
+      value: 10000
+      unit_symbol:
+    - condition: capacity 4000 to 10000 kg
+      value: 10000 or 20000
+      unit_symbol:
+  - attribute: ratio_z_emax_over_2dr
+    axis: capacity_range
+    values:
+    - condition: capacity 300 to 4000 kg
+      value: 3000
+      unit_symbol:
+    - condition: capacity 4000 to 10000 kg
+      value: 3000 or 6000
+      unit_symbol:
+  - attribute: cable_length
+    axis: capacity_range
+    values:
+    - condition: capacity 300 to 4000 kg
+      value:
+        min:
+        max: 5
+      unit_symbol: m
+    - condition: capacity 4000 to 10000 kg
+      value:
+        min:
+        max: 12
+      unit_symbol: m
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+test_reports:
+- id: '09/34513868'
+  date: '2009-11-05'
+  pages: 29
+  role: test_report
+- id: 12/34536198-L
+  date: '2012-11-16'
+  pages: 29
+  role: test_report
+- id: 16/34551229-L
+  date: '2017-02-03'
+  pages: 30
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2017-07-14'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2017-09-06'
+  changes: HAB load cell type added (alloy steel).
+model_family:
+  family_name:
+  models:
+  - model_id: HSB
+    label: HSB (stainless steel)
+    attributes:
+      constructive_material: stainless steel
+  - model_id: HAB
+    label: HAB (alloy steel)
+    attributes:
+      constructive_material: alloy steel
+matrix_tables:
+- name: Characteristics of the load cell
+  columns:
+  - attribute
+  - designation
+  - capacity_300_to_4000_kg
+  - capacity_4000_to_10000_kg
+  - units
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - attribute: maximum_capacity
+    designation: Emax
+    capacity_300_to_4000_kg: 300 – 4000
+    capacity_4000_to_10000_kg: 4000 – 10000
+    units: kg
+  - attribute: ratio_y_emax_over_vmin
+    designation: Y = Emax/Vmin
+    capacity_300_to_4000_kg: 10000
+    capacity_4000_to_10000_kg: 10000 or 20000
+    units:
+  - attribute: ratio_z_emax_over_2dr
+    designation: Z = Emax/(2*DR)
+    capacity_300_to_4000_kg: 3000
+    capacity_4000_to_10000_kg: 3000 or 6000
+    units:
+  - attribute: input_impedance_rlc
+    designation: R_LC
+    capacity_300_to_4000_kg: 400 ± 20 or 1150 ± 100
+    capacity_4000_to_10000_kg: 400 ± 20 or 1150 ± 100
+    units: Ω
+  - attribute: cable_length
+    designation:
+    capacity_300_to_4000_kg: "≤ 5"
+    capacity_4000_to_10000_kg: "≤ 12"
+    units: m
+  description: >-
+    Values depend on the maximum capacity range. The input impedance row lists two values per capacity
+    range (400 ± 20 Ω and 1150 ± 100 Ω); the certificate does not label the two sub-columns distinguishing
+    them.
+  footnotes: []

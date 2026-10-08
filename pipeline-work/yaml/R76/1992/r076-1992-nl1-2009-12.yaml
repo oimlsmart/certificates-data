@@ -1,0 +1,147 @@
+_meta:
+  cert_id: 2211
+  num: R076/1992-NL1-2009.12
+  applicant: Mettler-Toledo (Changzhou) Measurement Technology Ltd
+  issuing_year: '2009'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2009-12.pdf
+certificate:
+  number: R76/1992-NL1-09.12
+  project_number: '812112'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2009-04-06'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Mettler-Toledo (ChangZhou) Measurement Technolgy Ltd.
+  address_lines:
+  - No.111, West TaiHu Road, Xin Bei Discrict, ChangZhou
+  - 213125, Jiangsu
+  - Peoples Republic of China
+manufacturers:
+- name: Mettler-Toledo (ChangZhou) Measurement Technolgy Ltd.
+  address_lines:
+  - No.111, West TaiHu Road, Xin Bei Discrict, ChangZhou
+  - 213125, Jiangsu
+  - Peoples Republic of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - bTwin
+  - bTwin H2
+  module_designation:
+  description: Non-automatic weighing instrument, types bTwin (AMI & New AMI) and bTwin H2 (New AMI)
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    tare_limit:
+      value: T ≤ -(Max - e)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: AMI Load Cell
+      value:
+        min: 3
+        max: 30
+    - model: New AMI Load Cell
+      value:
+        min: 6
+        max: 30
+  - attribute: verification_scale_interval_e
+    unit_symbol: g
+    values:
+    - model: AMI Load Cell
+      value:
+        min: 1
+        max:
+    - model: New AMI Load Cell
+      value:
+        min: 1
+        max:
+  - attribute: max_number_of_divisions_n
+    unit_symbol: divisions
+    values:
+    - model: AMI Load Cell
+      value:
+        min:
+        max: 3000
+    - model: New AMI Load Cell
+      value:
+        min:
+        max: 6000
+recommendation:
+  id: R76
+  edition: 1992
+  amendment:
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-05.16
+  pages: 55
+  role: test_report
+- id: R76/1992-NL1-06.38
+  pages: 44
+  role: test_report
+- id: R76/1992-NL1-09.12
+  pages: 17
+  role: test_report
+- id: T6761
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: AMI Load Cell
+    label: bTwin (AMI)
+    attributes:
+      load_cell_variant: AMI
+  - model_id: New AMI Load Cell
+    label: bTwin (New AMI) / bTwin H2 (New AMI)
+    attributes:
+      load_cell_variant: New AMI
+matrix_tables:
+- name: Identification of certified type by load cell variant
+  columns:
+  - attribute
+  - AMI Load Cell
+  - New AMI Load Cell
+  rows:
+  - attribute: maximum_capacity
+    AMI Load Cell: 3 kg ≤ Max ≤ 30 kg
+    New AMI Load Cell: 6 kg ≤ Max ≤ 30 kg
+  - attribute: verification_scale_interval_e
+    AMI Load Cell: e ≥ 1 g
+    New AMI Load Cell: e ≥ 1 g
+  - attribute: max_number_of_divisions_n
+    AMI Load Cell: n ≤ 3000 divisions
+    New AMI Load Cell: n ≤ 6000 divisions
+  - attribute: tare_limit
+    AMI Load Cell: T ≤ -(Max - e)
+    New AMI Load Cell: T ≤ -(Max - e)
+  description: Metrological limits for the two load cell variants covered by the certificate
+  footnotes: []

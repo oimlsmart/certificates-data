@@ -1,0 +1,304 @@
+_meta:
+  cert_id: 3827
+  num: R049/2006-DE1-2015.03
+  applicant: Sensus GmbH Ludwigshafen
+  issuing_year: '2015'
+  status: Valid
+  issuer: DE1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-de1-2015-03.pdf
+certificate:
+  number: R49/2006-DE1-15.03
+  page_total: 3
+  member_state: Germany
+  date_issued: '2015-09-09'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. M. Rinker
+  person_title: Member of Certification Body
+applicants:
+- name: Sensus GmbH Ludwigshafen
+  address_lines:
+  - Industriestr. 16
+  - 67063 Ludwigshafen am Rhein
+manufacturers:
+- name: Sensus GmbH Ludwigshafen
+  address_lines:
+  - Industriestr. 16
+  - 67063 Ludwigshafen am Rhein
+certified_type:
+  category: Water meter
+  type_designations:
+  - iPERL
+  description: Electromagnetic flow meter for cold and hot water
+characteristics:
+  type_level:
+    q2_over_q1:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+    q3_over_q1:
+      value: 800
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    water_temperature_range:
+      value:
+        min: 0.1
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    working_pressure_range:
+      value:
+        min: 0.3
+        max: 16
+      unit_symbol: bar
+      unit_id:
+    pressure_loss_class:
+      value: 0.4
+      unit_symbol: bar
+      unit_id:
+    orientation_limitations:
+      value: All orientation
+      unit_symbol:
+      unit_id:
+    environmental_class:
+      value: I
+      unit_symbol:
+      unit_id:
+    mechanical_environmental_class:
+      value: M2
+      unit_symbol:
+      unit_id:
+    climatic_environmental_temperature_range:
+      value:
+        min: -15
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_environmental_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: permanent_flowrate_q3
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 2.5
+    - model: DN20
+      value: 4
+    - model: DN25
+      value: 6.3
+    - model: DN32
+      value: 10
+    - model: DN40
+      value: 16
+  - attribute: minimum_flowrate_q1
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 0.003
+    - model: DN20
+      value: 0.005
+    - model: DN25
+      value: 0.008
+    - model: DN32
+      value: 0.013
+    - model: DN40
+      value: 0.02
+  - attribute: transitional_flowrate_q2
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 0.005
+    - model: DN20
+      value: 0.008
+    - model: DN25
+      value: 0.013
+    - model: DN32
+      value: 0.02
+    - model: DN40
+      value: 0.032
+  - attribute: maximum_flowrate_q4
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 3.125
+    - model: DN20
+      value: 5
+    - model: DN25
+      value: 7.875
+    - model: DN32
+      value: 12.5
+    - model: DN40
+      value: 20
+  - attribute: connection_size
+    unit_symbol:
+    values:
+    - model: DN15
+      value: DN15
+    - model: DN20
+      value: DN20
+    - model: DN25
+      value: DN25
+    - model: DN32
+      value: DN32
+    - model: DN40
+      value: DN40
+  - attribute: threaded_end_connection
+    unit_symbol:
+    values:
+    - model: DN15
+      value: "≥ G¾B"
+    - model: DN20
+      value: "≥ G1B"
+    - model: DN25
+      value: "≥ G1¼B"
+    - model: DN32
+      value: "≥ G1½B"
+    - model: DN40
+      value: "≥ G2B"
+      footnote_markers:
+      - 2)
+  - attribute: meter_length
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value:
+        min: 110
+        max:
+    - model: DN20
+      value:
+        min: 105
+        max:
+    - model: DN25
+      value:
+        min: 198
+        max:
+    - model: DN32
+      value:
+        min: 260
+        max:
+    - model: DN40
+      value:
+        min: 300
+        max:
+  config_level:
+  - attribute: maximum_permissible_error
+    axis: flow_rate_range_and_water_temperature
+    values:
+    - condition: Q2 ≤ Q ≤ Q4, water temperature ≤ 30 °C
+      value: "±2"
+      unit_symbol: "%"
+    - condition: Q2 ≤ Q ≤ Q4, water temperature > 30 °C
+      value: "±3"
+      unit_symbol: "%"
+    - condition: Q1 ≤ Q < Q2
+      value: "±5"
+      unit_symbol: "%"
+recommendation:
+  id: R49
+  edition: 2006
+test_reports:
+- id: PTB-1.5-4076673(1)
+  pages: 53
+  role: test_report
+- id: PTB-1.5-4076673(2)
+  pages: 66
+  role: test_report
+- id: PTB-1.5-4076673(3)
+  pages: 75
+  role: test_report
+model_family:
+  family_name: iPERL
+  models:
+  - model_id: DN15
+    label: iPERL DN15, Q3 = 2.5 m³/h
+  - model_id: DN20
+    label: iPERL DN20, Q3 = 4 m³/h
+  - model_id: DN25
+    label: iPERL DN25, Q3 = 6.3 m³/h
+  - model_id: DN32
+    label: iPERL DN32, Q3 = 10 m³/h
+  - model_id: DN40
+    label: iPERL DN40, Q3 = 16 m³/h
+footnotes:
+- marker: 1)
+  text: >-
+    The meter is also allowed to be manufactured for the flow rates Q3 / Q1 = R = 630, 500, 400, 315,
+    250, 200, 160, 125, 100, 80, 63,5, 50, 40.
+- marker: 2)
+  text: The meter can be performed alternatively with flanges according to DIN EN1092-1 and DIN 2501-1.
+matrix_tables:
+- name: Type details by size
+  columns:
+  - model
+  - permanent_flowrate_q3
+  - minimum_flowrate_q1
+  - transitional_flowrate_q2
+  - maximum_flowrate_q4
+  - connection_size
+  - threaded_end_connection
+  - meter_length
+  column_units:
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  -
+  - mm
+  rows:
+  - model: DN15
+    permanent_flowrate_q3: 2.5
+    minimum_flowrate_q1: 0.003
+    transitional_flowrate_q2: 0.005
+    maximum_flowrate_q4: 3.125
+    connection_size: DN15
+    threaded_end_connection: "≥ G¾B"
+    meter_length: 110
+  - model: DN20
+    permanent_flowrate_q3: 4
+    minimum_flowrate_q1: 0.005
+    transitional_flowrate_q2: 0.008
+    maximum_flowrate_q4: 5
+    connection_size: DN20
+    threaded_end_connection: "≥ G1B"
+    meter_length: 105
+  - model: DN25
+    permanent_flowrate_q3: 6.3
+    minimum_flowrate_q1: 0.008
+    transitional_flowrate_q2: 0.013
+    maximum_flowrate_q4: 7.875
+    connection_size: DN25
+    threaded_end_connection: "≥ G1¼B"
+    meter_length: 198
+  - model: DN32
+    permanent_flowrate_q3: 10
+    minimum_flowrate_q1: 0.013
+    transitional_flowrate_q2: 0.02
+    maximum_flowrate_q4: 12.5
+    connection_size: DN32
+    threaded_end_connection: "≥ G1½B"
+    meter_length: 260
+  - model: DN40
+    permanent_flowrate_q3: 16
+    minimum_flowrate_q1: 0.02
+    transitional_flowrate_q2: 0.032
+    maximum_flowrate_q4: 20
+    connection_size: DN40
+    threaded_end_connection: "≥ G2B"
+    meter_length: 300
+  description: >-
+    Transposed table: original markdown rows are characteristics, columns are the five size variants DN15–DN40.
+    Values ≥ indicate minimum requirement.
+  footnotes:
+  - 2)

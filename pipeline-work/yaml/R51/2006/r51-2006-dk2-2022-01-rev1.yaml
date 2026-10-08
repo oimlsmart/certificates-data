@@ -1,0 +1,340 @@
+_meta:
+  cert_id: 6350
+  num: R51/2006-A-DK2-22.01 Rev. 1
+  applicant: Flintec UK Limited
+  issuing_year: '2024'
+  status: Valid
+  issuer: DK2
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r51-2006-dk2-2022-01-rev1.pdf
+certificate:
+  number: R51/2006-A-DK2-22.01
+  scheme: A
+  project_number: 124-29471.90.60
+  page_total: 6
+  member_state: Denmark
+  date_issued: '2024-10-24'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Per Rafn Crety
+  phone: "+45 43 25 01 77"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Flintec UK Ltd.
+  address_lines:
+  - Caxton House
+  - Caxton Place
+  - Pentwyn
+  - Cardiff CF23 8HG
+  - United Kingdom
+manufacturers:
+- name: Flintec UK Ltd.
+certified_type:
+  category: Weighing transmitter
+  type_designations:
+  - ER500-C
+  module_designation: Weighing transmitter for automatic catchweigher
+  description: >-
+    Digital load-cell amplifier (weighing transmitter) for automatic catchweighers. Software version and
+    TAC number are displayed during start-up. If equipped with a display and buttons, these are for set-up
+    and service purpose only. Access to set-up and calibration requires removal of a calibration jumper;
+    sealing is accomplished with a brittle plastic sticker, and a Traceable Access Counter increments
+    on changes to the calibration or legal part of the set-up.
+characteristics:
+  type_level:
+    weighing_range:
+      value: single-interval, multi-range or multi-interval
+    fractional_factor_pi:
+      value: 0.5
+    minimum_input_voltage_per_vsi:
+      value: 0.4
+      unit_symbol: μV
+    maximum_time_between_automatic_zero_setting:
+      value: 150
+      unit_symbol: minutes
+    excitation_voltage:
+      value: 5
+      unit_symbol: V
+    load_cell_interface:
+      value: 4-wire or 6-wire
+    minimum_input_impedance:
+      value: 43
+      unit_symbol: Ω
+    maximum_input_impedance:
+      value: 1200
+      unit_symbol: Ω
+    power_supply_voltage:
+      value:
+        min: 9
+        max: 32
+      unit_symbol: V
+    power_supply_type:
+      value: DC
+    power_supply_restriction:
+      value: not to be supplied from DC mains
+    operational_temperature:
+      value:
+        min: -15
+        max: 55
+      unit_symbol: "°C"
+    maximum_cable_length_to_junction_box:
+      value: 1533
+      unit_symbol: m/mm²
+    initial_zero_setting_device_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+    initial_zero_setting_device_reference:
+      value: Max
+    semi_automatic_zero_setting_device_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+    semi_automatic_zero_setting_device_reference:
+      value: Max
+    zero_tracking_device_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+    zero_tracking_device_reference:
+      value: Max
+    semi_automatic_subtractive_tare_balancing_device:
+      value: available
+    permitted_units:
+      value: g, kg, t
+    interfaces:
+      value: RS-232, RS-485/RS-422, USB, Ethernet, analogue output
+    logical_inputs:
+      value: 3
+    logical_outputs:
+      value: 3
+    interface_security_requirement:
+      value: not required
+    analogue_output_range:
+      value:
+        min: 0
+        max: 20
+      unit_symbol: mA
+    logical_output_max_current:
+      value:
+        min:
+        max: 0.5
+      unit_symbol: A
+    logical_output_voltage:
+      value: 30
+      unit_symbol: V
+    logical_input_max_current:
+      value:
+        min:
+        max: 2
+      unit_symbol: mA
+    logical_input_voltage:
+      value: 30
+      unit_symbol: V
+    load_cell_signal_range:
+      value:
+        min: -3
+        max: 3
+      unit_symbol: mV/V
+    software_version_format:
+      value: xx.yy.zz
+    main_firmware_versions:
+      value: 01.yy.zz or 02.yy.zz
+    display_firmware_version:
+      value: 02.yy.zz
+    tac_number_format:
+      value: xxxxx
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: accuracy class and range type
+    values:
+    - condition: class Y(a) and XIII, single-interval or multi-range
+      value: 10000
+    - condition: class Y(b) and XIII, single-interval or multi-range
+      value: 1000
+    - condition: class Y(a) and XIII, multi-interval
+      value: 3×10000
+    - condition: class Y(b) and XIII, multi-interval
+      value: 3×1000
+  - attribute: maximum_tare_effect
+    axis: range type
+    values:
+    - condition: single-interval and multi-range
+      value: "-Max"
+    - condition: multi-interval
+      value: "-Max₁"
+  - attribute: extra_warmup_time
+    axis: input voltage per verification scale interval
+    values:
+    - condition: 0.4 μV ≤ e < 0.8 μV
+      value: 18
+      unit_symbol: minutes
+    - condition: 0.8 μV ≤ e
+      value: 3
+      unit_symbol: minutes
+recommendation:
+  id: R51-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(a)
+  - XIII
+  - Y(b)
+  - IIII
+test_reports:
+- id: 121-24186.10-1
+  date: '2021-10-04'
+  pages: 34
+  role: type_evaluation_report
+- id: 124-29471.90.60
+  date: '2024-08-06'
+  pages: 13
+  role: evaluation_report
+- id: 121-24186
+  role: documentation_file
+revision_history:
+- revision: Initial version
+  date: '2022-06-16'
+  changes:
+- revision: '1'
+  date: '2024-10-24'
+  changes: New software version added.
+footnotes: []
+matrix_tables:
+- name: ER500-C top side label — left connector block pin assignment
+  columns:
+  - pin
+  - marking
+  - rating
+  - group
+  rows:
+  - pin: 1
+    marking: Exc +
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 2
+    marking: Sense +
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 3
+    marking: Signal +
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 4
+    marking: Shield
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 5
+    marking: Signal -
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 6
+    marking: Sense -
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 7
+    marking: Exc -
+    rating: "±5kg · ±3mV/V · +5VDC"
+    group: Load Cells
+  - pin: 8
+    marking: 1 (switch symbol)
+    rating: "≤0.5A · +30VDC"
+    group: Logical Output
+  - pin: 9
+    marking: 2 (switch symbol)
+    rating: "≤0.5A · +30VDC"
+    group: Logical Output
+  - pin: 10
+    marking: 3 (switch symbol)
+    rating: "≤0.5A · +30VDC"
+    group: Logical Output
+  - pin: 11
+    marking: ISO GND
+    rating:
+    group: Electrically Isolated
+  - pin: 12
+    marking: 1 (LED symbol)
+    rating: "≤2mA · +30VDC"
+    group: Logical Input
+  - pin: 13
+    marking: 2 (LED symbol)
+    rating: "≤2mA · +30VDC"
+    group: Logical Input
+  - pin: 14
+    marking: 3 (LED symbol)
+    rating: "≤2mA · +30VDC"
+    group: Logical Input
+  - pin: 15
+    marking: Iout
+    rating: 0-20mA, 4 · atOV
+    group: Analogue Output
+  - pin: 16
+    marking: ISO GND
+    rating: 0-20mA, 4 · atOV
+    group: Analogue Output
+  - pin: 17
+    marking: "± Vout"
+    rating: 0-20mA, 4 · atOV
+    group: Analogue Output
+  description: Pin assignment as printed on the top side label of the ER500-C (Figure 3).
+  footnotes: []
+- name: ER500-C top side label — right connector block pin assignment
+  columns:
+  - pin
+  - group
+  - marking
+  rows:
+  - pin: 31
+    group: Ethernet
+    marking: "(network icon)"
+  - pin: 30
+    group: Seal Switch
+    marking:
+  - pin: 29
+    group: USB
+    marking: "(USB icon)"
+  - pin: 28
+    group: RS-232
+    marking: RXD
+  - pin: 27
+    group: RS-232
+    marking: COMMs GND
+  - pin: 26
+    group: RS-232
+    marking: TXD
+  - pin: 25
+    group: RS-422/485
+    marking: RX +
+  - pin: 24
+    group: RS-422/485
+    marking: RX -
+  - pin: 23
+    group: RS-422/485
+    marking: COMMs GND
+  - pin: 22
+    group: RS-422/485
+    marking: TX +
+  - pin: 21
+    group: RS-422/485
+    marking: TX -
+  - pin: 20
+    group: Power Supply
+    marking: VIN GND
+  - pin: 19
+    group: Power Supply
+    marking: VIN
+  - pin: 18
+    group: Power Supply
+    marking: Chassis
+  description: Pin assignment as printed on the top side label of the ER500-C (Figure 3).
+  footnotes: []

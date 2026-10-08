@@ -1,0 +1,243 @@
+_meta:
+  cert_id: 2117
+  num: R060/2000-DE1-2008.05
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-05.pdf
+certificate:
+  number: R60/2000-DE1-08.05
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-08-26'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - HLCA...
+  - HLCB...
+  - HLCF...
+  module_designation:
+  description: >-
+    Strain gauge single point load cell. The load cells (LC) of the series HLCA..., HLCB... and HLCF...
+    are double bending beam load cells made of stainless steel; the strain gauge application is hermetically
+    sealed. The three types of the LC differ in the manner of the force introduction.
+characteristics:
+  type_level:
+    rated_output:
+      value: 1.94
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value:
+        min: 350
+        max: 480
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: Emax=220kg
+      value: 220
+      footnote_markers: []
+    - model: Emax=550kg
+      value: 550
+      footnote_markers: []
+    - model: Emax=1100kg
+      value: 1100
+      footnote_markers: []
+    - model: Emax=1760kg
+      value: 1760
+      footnote_markers: []
+    - model: Emax=4000kg
+      value: 4000
+      footnote_markers: []
+    - model: Emax=6000kg
+      value: 6000
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: range_and_accuracy_class
+    values:
+    - condition: Range 1; class D1
+      value: 0.0285
+      unit_symbol: "%·Emax"
+    - condition: Range 1; class C3
+      value: 0.01
+      unit_symbol: "%·Emax"
+    - condition: Range 1; class C4
+      value: 0.01
+      unit_symbol: "%·Emax"
+    - condition: Range 1; class C6
+      value: 0.01
+      unit_symbol: "%·Emax"
+    - condition: Range 2; class D1
+      value: 0.0285
+      unit_symbol: "%·Emax"
+    - condition: Range 2; class C3
+      value: 0.009
+      unit_symbol: "%·Emax"
+    - condition: Range 2; class C4
+      value: 0.009
+      unit_symbol: "%·Emax"
+    - condition: Range 2; class C6
+      value: 0.009
+      unit_symbol: "%·Emax"
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - D1
+  - C3
+  - C4
+  - C6
+test_reports:
+- id: PTB 1.12-4033807-1
+  date:
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4033807-2
+  date:
+  pages: 18
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=220kg
+    label: Range 1, capacity 220 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=550kg
+    label: Range 2, capacity 550 kg
+    attributes:
+      range: Range 2
+  - model_id: Emax=1100kg
+    label: Range 2, capacity 1100 kg
+    attributes:
+      range: Range 2
+  - model_id: Emax=1760kg
+    label: Range 1, capacity 1760 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=4000kg
+    label: Range 1, capacity 4000 kg
+    attributes:
+      range: Range 1
+  - model_id: Emax=6000kg
+    label: Range 1, capacity 6000 kg
+    attributes:
+      range: Range 1
+footnotes: []
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - attribute
+  - unit
+  - D1
+  - C3
+  - C4
+  - C6
+  rows:
+  - attribute: max_load_cell_intervals_nlc
+    unit:
+    D1: 1000
+    C3: 3000
+    C4: 4000
+    C6: 6000
+  - attribute: rated_output
+    unit: mV/V
+    D1: 1.94
+    C3: 1.94
+    C4: 1.94
+    C6: 1.94
+  - attribute: maximum_capacity_emax_range_1
+    unit: kg
+    D1: 220/1760/4000/6000
+    C3: 220/1760/4000/6000
+    C4: 220/1760/4000/6000
+    C6: 220/1760/4000/6000
+  - attribute: minimum_load_cell_verification_interval_vmin_range_1
+    unit: "%·Emax"
+    D1: 0.0285
+    C3: 0.01
+    C4: 0.01
+    C6: 0.01
+  - attribute: maximum_capacity_emax_range_2
+    unit: kg
+    D1: 550/1100
+    C3: 550/1100
+    C4: 550/1100
+    C6: 550/1100
+  - attribute: minimum_load_cell_verification_interval_vmin_range_2
+    unit: "%·Emax"
+    D1: 0.0285
+    C3: 0.009
+    C4: 0.009
+    C6: 0.009
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed by accuracy
+    class and range.
+  footnotes: []

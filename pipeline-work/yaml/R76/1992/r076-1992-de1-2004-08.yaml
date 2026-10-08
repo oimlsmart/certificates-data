@@ -1,0 +1,129 @@
+_meta:
+  cert_id: 1389
+  num: R076/1992-DE1-2004.08
+  applicant: A.S.T. Angewandte SYSTEM-TECHNIK GmbH
+  issuing_year: '2005'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2004-08.pdf
+certificate:
+  number: R76/1992-DE1-04.08
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2005-01-20'
+  oiml_issuer_id: DE1
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+  person_title: Direktor und Professor
+  oiml_issuer_id: DE1
+applicants:
+- name: A.S.T. Angewandte SYSTEM-TECHNIK GmbH
+  address_lines:
+  - Marschnerstraße 26
+  - 01307 Dresden
+  - Germany
+manufacturers:
+- name: A.S.T. Angewandte SYSTEM-TECHNIK GmbH
+  address_lines:
+  - Marschnerstraße 26
+  - 01307 Dresden
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - F805
+  module_designation: Not applicable
+  description: >-
+    Non-automatic platform-, hopper-, wall-mounted- or overhead track scale, with or without lever system.
+    Non-automatic electromechanical weighing instrument whose design is composed of the weighing indicator
+    with a color-touch screen, a load receptor equipped with different load cells, mechanical constructions,
+    maximum capacities, verification scale intervals, etc., in accuracy classes III and IIII. The weighing
+    ranges with Max, Min, e and number of verification scale intervals may be chosen within the limits
+    of No. 3.2 of R 76-1 and of Table 1.
+characteristics:
+  type_level:
+    maximum_capacity_minimum:
+      value: 2
+      unit_symbol: kg
+    maximum_capacity_maximum:
+      value: 200
+      unit_symbol: t
+    tare_balancing_range:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+    tare_balancing_type:
+      value: subtractive
+    preset_tare_range:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: III
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+    - condition: IIII
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: PTB-1.12-4012507
+  pages: 10
+  role: type_evaluation_report
+- id: PTB-1.12-4012507/1
+  pages: 44
+  role: test_report
+matrix_tables:
+- name: Table 1 — Weighing range limits by accuracy class
+  columns:
+  - accuracy_class
+  - max
+  - number_of_verification_scale_intervals
+  - tare_balancing_range
+  - preset_tare_range
+  - temperature_range
+  rows:
+  - accuracy_class: III
+    max: 2 kg … 200 t
+    number_of_verification_scale_intervals: "≤ 6000"
+    tare_balancing_range: "≤ 100 % of Max (subtractive)"
+    preset_tare_range: "≤ 100 % of Max"
+    temperature_range: "-10 °C / +40 °C"
+  - accuracy_class: IIII
+    max: 2 kg … 200 t
+    number_of_verification_scale_intervals: "≤ 1000"
+    tare_balancing_range: "≤ 100 % of Max (subtractive)"
+    preset_tare_range: "≤ 100 % of Max"
+    temperature_range: "-10 °C / +40 °C"
+  description: >-
+    Weighing ranges with Max, Min, e and number of verification scale intervals may be chosen within the
+    limits of No. 3.2 of R 76-1 and of Table 1. Tare-balancing range, preset tare range and temperature
+    range apply to both accuracy classes.

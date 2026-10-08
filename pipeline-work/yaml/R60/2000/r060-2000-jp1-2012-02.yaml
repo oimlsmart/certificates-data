@@ -1,0 +1,144 @@
+_meta:
+  cert_id: 2789
+  num: R060/2000-JP1-2012.02
+  applicant: A&D Company Ltd.
+  issuing_year: '2012'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2012-02.pdf
+certificate:
+  number: R60/2000-JP1-12.02
+  page_total: 3
+  member_state: Japan
+  date_issued: '2012-03-09'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+manufacturers:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LC1205-T001A
+  - LC1205-T002
+  - LC1205-T005
+  module_designation:
+  description: Tension load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    safe_load_limit_elim:
+      value: 1.5*Emax
+      unit_symbol: kg
+      unit_id:
+    minimum_verification_interval_vmin:
+      value: Emax/10000
+      unit_symbol: kg
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+    ratio_z_emax_over_2dr:
+      value: 4000
+      unit_symbol:
+      unit_id:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V
+      unit_id:
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+    input_impedance_rlc:
+      value: 440
+      unit_symbol: Ω
+      unit_id:
+    cable_length:
+      value: 5
+      unit_symbol: m
+      unit_id:
+    cable_configuration:
+      value: 4-wire
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: LC1205-T001A
+      value: 1000
+      footnote_markers: []
+    - model: LC1205-T002
+      value: 2000
+      footnote_markers: []
+    - model: LC1205-T005
+      value: 5000
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_number_of_load_cell_verification_intervals_nmax
+    axis: usage_option
+    values:
+    - condition: Z = 4000 applies (n_max = 4000 case)
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+    - condition: default
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: 12-05/R60:2000
+  pages: 19
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: LC1205-T001A
+  - model_id: LC1205-T002
+  - model_id: LC1205-T005

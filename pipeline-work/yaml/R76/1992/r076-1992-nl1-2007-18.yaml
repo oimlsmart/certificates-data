@@ -1,0 +1,156 @@
+_meta:
+  cert_id: 1894
+  num: R076/1992-NL1-2007.18
+  applicant: Ohaus Corporation
+  issuing_year: '2007'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2007-18.pdf
+certificate:
+  number: R76/1992-NL1-07.18
+  scheme: A
+  project_number: '700731'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2007-06-05'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Ooosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Ohaus Corporation
+  address_lines:
+  - 19A Chapin Road
+  - Pine Brook
+  - New Jersey 07058
+  - United States of America
+manufacturers:
+- name: Ohaus Corporation
+  address_lines:
+  - 19A Chapin Road
+  - Pine Brook
+  - New Jersey 07058
+  - United States of America
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - Valor 3000 series
+  module_designation: Not applicable
+  description: 'Non-automatic weighing instrument, Type: Valor 3000 series; constraint: T ≤ -Max'
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+  config_level:
+  - attribute: maximum_capacity
+    axis: load_cell_type
+    values:
+    - condition: load cell type 72198183
+      value: 300
+      unit_symbol: g
+    - condition: load cell type 72193366
+      value:
+        min: 3
+        max: 6
+      unit_symbol: kg
+  - attribute: verification_scale_interval
+    axis: load_cell_type
+    values:
+    - condition: load cell type 72198183
+      value:
+        min: 0.2
+        max:
+      unit_symbol: g
+    - condition: load cell type 72193366
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+  - attribute: number_of_verification_scale_intervals
+    axis: load_cell_type
+    values:
+    - condition: load cell type 72198183
+      value:
+        min:
+        max: 1500
+      unit_symbol: divisions
+    - condition: load cell type 72193366
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-07.18A
+  pages: 52
+  role: test_report
+- id: R76/1992-NL1-07.18B
+  pages: 34
+  role: test_report
+- id: T7125
+  role: documentation_file
+components:
+- role: load cell
+  type_designations:
+  - '72198183'
+  alternatives: OR
+  characteristics:
+    type_level:
+      maximum_capacity:
+        value: 300
+        unit_symbol: g
+        unit_id:
+      verification_scale_interval:
+        value:
+          min: 0.2
+          max:
+        unit_symbol: g
+        unit_id:
+      number_of_verification_scale_intervals:
+        value:
+          min:
+          max: 1500
+        unit_symbol: divisions
+        unit_id:
+- role: load cell
+  type_designations:
+  - '72193366'
+  alternatives: OR
+  characteristics:
+    type_level:
+      maximum_capacity:
+        value:
+          min: 3
+          max: 6
+        unit_symbol: kg
+        unit_id:
+      verification_scale_interval:
+        value:
+          min: 1
+          max:
+        unit_symbol: g
+        unit_id:
+      number_of_verification_scale_intervals:
+        value:
+          min:
+          max: 3000
+        unit_symbol: divisions
+        unit_id:

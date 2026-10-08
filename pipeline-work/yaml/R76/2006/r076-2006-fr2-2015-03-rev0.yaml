@@ -1,0 +1,181 @@
+_meta:
+  cert_id: 3763
+  num: R076/2006-FR2-2015.03 Rev. 0
+  applicant: Precia SA
+  issuing_year: '2015'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2015-03-rev0.pdf
+certificate:
+  number: R76/2006-FR2-15.03
+  scheme: B
+  project_number: CVM19C4-05-2019
+  page_total: 3
+  member_state: FRANCE
+  date_issued: '2015-06-02'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Thomas LOMMATZSCH
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - FRANCE 07001 PRIVAS CEDEX
+manufacturers:
+- name: PRECIA
+  address_lines:
+  - BP 106
+  - FRA 07001 PRIVAS CEDEX
+certified_type:
+  category: Indicator
+  type_designations:
+  - X241-TR
+  module_designation: Analog data processing unit
+  description: >-
+    Analogue data processing unit type X241-TR is a separate module intended to be integrated in a non
+    automatic weighing instrument. It is in the form of an electronic card that may be included in a metallic
+    box or in the box of the associated terminal. It is intended to be connected to a weighing channel
+    comprising strain gauge load cells with analogue output. It performs analogue to digital conversion
+    of the signal and has in its memory all setting parameters of the whole instrument as well as the
+    signature of the associated terminal.
+characteristics:
+  type_level:
+    intended_accuracy_class:
+      value: III or IIII
+      unit_symbol:
+      unit_id:
+    maximum_number_of_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    number_of_weighing_channels:
+      value: 1
+      unit_symbol:
+      unit_id:
+    weighing_channel_type:
+      value: analogue
+      unit_symbol:
+      unit_id:
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+    minimum_input_voltage_per_scale_interval_dumin:
+      value: 0.5
+      unit_symbol: µV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0.0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 12
+      unit_symbol: mV
+      unit_id:
+    minimum_load_cell_impedance_rlmin:
+      value: 58
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance_rlmax:
+      value: 1245
+      unit_symbol: Ω
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    fraction_of_maximum_permitted_error_pind:
+      value: 0.4
+      unit_symbol:
+      unit_id:
+    load_cell_connection:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    load_cell_connection_cable_type:
+      value: PRECIA ref. 4005271 or similar
+      unit_symbol:
+      unit_id:
+    load_cell_connection_cable_cross_section:
+      value: 0.68
+      unit_symbol: mm²
+      unit_id:
+  config_level:
+  - attribute: maximum_verification_scale_intervals_nind
+    axis: accuracy_class and configuration
+    values:
+    - condition: class III, per weighing range
+      value: 6000
+      unit_symbol:
+    - condition: class IIII, per weighing range
+      value: 1000
+      unit_symbol:
+    - condition: class III, multi-interval configuration
+      value: 3 * 3000
+      unit_symbol:
+  - attribute: maximum_subtractive_tare_effect
+    axis: version
+    values:
+    - condition: default
+      value: Max
+      unit_symbol:
+    - condition: multi-interval version
+      value: Max1
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: supply_type
+    values:
+    - condition: AC
+      value: 230
+      unit_symbol: V
+    - condition: DC
+      value: 24
+      unit_symbol: V
+  - attribute: load_cell_connection_cable_maximum_length
+    axis: cable_cross_section
+    values:
+    - condition: section 0.68 mm²
+      value: 150
+      unit_symbol: m
+    - condition: section 1 mm²
+      value: 220
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE-P141354-PCI/1
+  pages: 17
+  role: evaluation_report
+- id: LNE H100196-CQPE/1
+  pages: 15
+  role: test_report
+- id: LNE F031424-CMI/1
+  pages: 33
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2015-06-02'

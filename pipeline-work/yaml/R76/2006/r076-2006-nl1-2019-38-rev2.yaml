@@ -1,0 +1,231 @@
+_meta:
+  cert_id: 5614
+  num: R76/2006-A-NL1-19.38 Rev. 2
+  applicant: DIGI SINGAPORE PTE LTD.
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2019-38-rev2.pdf
+certificate:
+  number: R76/2006-A-NL1-19.38
+  scheme: A
+  project_number: '2708587'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2022-03-01'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  person_title: Certification Board
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Digi Singapore Pte Ltd.
+  address_lines:
+  - '4 Leng Kee Road, #05-03/04/05 & 11'
+  - SIS Building
+  - '159088'
+  - Republic of Singapore
+manufacturers:
+- name: Digi Singapore Pte Ltd.
+  address_lines:
+  - '4 Leng Kee Road, #05-03/04/05 & 11'
+  - SIS Building
+  - '159088'
+  - Republic of Singapore
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DPS-5000
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 60
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_ranges:
+      value: Single interval; Multi-interval
+      unit_symbol:
+      unit_id:
+    max_scale_intervals_multi_interval_per_partial_weighing_range:
+      value: 3000
+      unit_symbol: divisions
+      unit_id:
+    max_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 200
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    application:
+      value: >-
+        Intended to be used for direct sales to the public; intended to be used for the making-up of prepackages
+      unit_symbol:
+      unit_id:
+    software_version_number:
+      value: 7.1.1.18 or 7.1.1.8 or 7.1.1.7 or 7.1.1.25
+      unit_symbol:
+      unit_id:
+    software_checksum:
+      value: 4C78A1C8 or EC081708 or CC04245B or F43E2E4E
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: max_number_of_scale_intervals_one_weighing_range
+    axis: load_cell_type
+    values:
+    - condition: K-type
+      value:
+        min:
+        max: 7500
+      unit_symbol: divisions
+    - condition: L6D and C2G1
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+    - condition: C2G1
+      value:
+        min:
+        max: 7500
+      unit_symbol: divisions
+  - attribute: temperature_range
+    axis: load_cell_type
+    values:
+    - condition: K-type
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    - condition: L6D and C2G1
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    - condition: C2G1
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+  - attribute: tare_limit
+    axis: weighing_range_type
+    values:
+    - condition: single_interval
+      value: "-50% of Max"
+      unit_symbol:
+    - condition: multi_interval
+      value: "-(Max1 - e1)"
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-10201010-01
+  date: '2011-04-13'
+  pages: 65
+  role: test_report
+- id: NMi-16200602-01
+  date: '2016-12-19'
+  pages: 33
+  role: test_report
+- id: NMi-2274971-01 revision 1
+  date: '2021-07-23'
+  pages: 53
+  role: test_report
+- id: NMi-2274971-02
+  date: '2019-07-26'
+  pages: 12
+  role: test_report
+- id: NMi-2708587-01
+  date: '2022-03-01'
+  pages: 26
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2019-07-26'
+  changes:
+- revision: '1'
+  date: '2021-07-23'
+  changes: Report NMi-2274971-01 corrected and reissued as NMi-2274971-01 revision 1.
+- revision: '2'
+  date: '2022-03-01'
+  changes: Addition of new L6D type load cell based on NMi-2708587-01 test report.
+components:
+- role: load cell
+  type_designations:
+  - K-type
+  - L6D
+  - C2G1
+  alternatives: OR
+matrix_tables:
+- name: Characteristics by load cell type
+  columns:
+  - load_cell_types
+  - max_scale_intervals_one_weighing_range
+  - temperature_range
+  column_units:
+  -
+  - divisions
+  - "°C"
+  rows:
+  - load_cell_types: K-type
+    max_scale_intervals_one_weighing_range: 7500
+    temperature_range:
+      min: -10
+      max: 40
+  - load_cell_types: L6D and C2G1
+    max_scale_intervals_one_weighing_range: 3000
+    temperature_range:
+      min: -10
+      max: 40
+  - load_cell_types: C2G1
+    max_scale_intervals_one_weighing_range: 7500
+    temperature_range:
+      min: 0
+      max: 40
+  description: >-
+    Columns shared across all load cell types: accuracy class (III); maximum capacity 3 kg to 60 kg; e
+    >= 1 g; weighing ranges single-interval or multi-interval; maximum 3000 divisions per partial weighing
+    range (multi-interval); maximum 2 partial weighing ranges; tare limits; power supply 200-240 V AC
+    50/60 Hz; applications direct sales to the public and making-up of prepackages; software versions
+    7.1.1.18/7.1.1.8/7.1.1.7/7.1.1.25 with checksums 4C78A1C8/EC081708/CC04245B/F43E2E4E.
+  footnotes: []

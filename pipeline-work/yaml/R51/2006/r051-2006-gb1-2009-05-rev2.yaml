@@ -1,0 +1,213 @@
+_meta:
+  cert_id: 3584
+  num: R051/2006-GB1-2009.05 Rev. 2
+  applicant: Prisma Industriale S.R.L.
+  issuing_year: '2012'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2009-05-rev2.pdf
+certificate:
+  number: R51/2006-GB1-09.05
+  scheme: A
+  project_number: T1108/0058
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2012-08-08'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Prisma Industriale S.R.L.
+  address_lines:
+  - Via la Bionda, 17
+  - I-43036 Fidenza (PR)
+  - Italy
+manufacturers:
+- name: Prisma Industriale S.R.L.
+  address_lines:
+  - Via la Bionda, 17
+  - I-43036 Fidenza (PR)
+  - Italy
+certified_type:
+  category: Automatic checkweighing instrument
+  type_designations:
+  - D3
+  - '08D3'
+  - '09D3'
+  - 10D3
+  - '08T3'
+  - '09T3'
+  - 10T3
+  description: >-
+    The pattern is a mains-powered family of automatic checkweighing instruments designated the D3. The
+    weighing device comprises two strain gauge load cells located below the centre of the weigh conveyor.
+    Devices: semi-automatic zero-setting (not accessible to the user, calibration mode only), initial
+    zero-setting, zero-tracking, automatic zero-setting during automatic operation (at least every 5 min),
+    pre-set tare device (subtractive), static calibration not accessible to the user, dynamic calibration
+    (not accessible to the user) or dynamic setting functionality (recorded and available to the user),
+    belt speed setting, internal memory for storage of batch reports, device that acts upon significant
+    faults, screen check at power-up.
+characteristics:
+  type_level:
+    maximum_number_of_scale_intervals:
+      value: 1600
+      unit_symbol:
+      unit_id:
+    maximum_belt_speed:
+      value: 75
+      unit_symbol: m/min
+      unit_id:
+    tare:
+      value: T ≤ -Max
+      unit_symbol:
+      unit_id:
+    working_temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    humidity_environment:
+      value: Non-condensing (closed)
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+    accuracy_class:
+      value: XIII(1)
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: RS 232; USB (only for data collection on memory stick)
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: g
+    values:
+    - model: '08D3'
+      value: 1600
+    - model: '09D3'
+      value: 3200
+    - model: 10D3
+      value: 8000
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: '08D3'
+      value: 100
+    - model: '09D3'
+      value: 200
+    - model: 10D3
+      value: 500
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: '08D3'
+      value: 1
+    - model: '09D3'
+      value: 2
+    - model: 10D3
+      value: 5
+  - attribute: load_cell_emax
+    unit_symbol: kg
+    values:
+    - model: '08D3'
+      value: 5
+    - model: '09D3'
+      value: 10
+    - model: 10D3
+      value: 10
+  config_level: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: P00751
+  date:
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2009-11-17'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2011-02-02'
+  changes: Dynamic setting functionality added to the certificate.
+- revision: '2'
+  date: '2012-08-08'
+  changes: '08T3, 09T3 and 10T3 added to the certificate.'
+model_family:
+  family_name: D3
+  models:
+  - model_id: '08D3'
+    label: '08D3'
+    attributes:
+      display: LCD
+  - model_id: '09D3'
+    label: '09D3'
+    attributes:
+      display: LCD
+  - model_id: 10D3
+    label: 10D3
+    attributes:
+      display: LCD
+  - model_id: '08T3'
+    label: '08T3'
+    attributes:
+      display: touch screen type T3 (LCD replaced)
+      additional_interface: Ethernet
+  - model_id: '09T3'
+    label: '09T3'
+    attributes:
+      display: touch screen type T3 (LCD replaced)
+      additional_interface: Ethernet
+  - model_id: 10T3
+    label: 10T3
+    attributes:
+      display: touch screen type T3 (LCD replaced)
+      additional_interface: Ethernet
+components:
+- role: load_cell
+  type_designations:
+  - Tedea Huntleigh 1042 C3
+  alternatives: OR
+  characteristics:
+    output_type: analog strain gauge (no digital output)
+    tested_emax:
+      value: 5
+      unit_symbol: kg
+      unit_id:
+    substitution_conditions: >-
+      Any compatible load cell(s) may be used provided: a respective OIML R60 Certificate of Conformity
+      exists containing the load cell type and necessary data for the manufacturer's declaration of compatibility
+      of modules; the cell is not a load cell with digital output; characteristics (nlc, Y, Z) are the
+      same or better than the tested load cell (Tedea Huntleigh 1042 C3, capacity 5 kg); design and material
+      are the same; no oil damper is used; a cell marked NH is allowed only if humidity testing to R76
+      has been conducted.
+footnotes: []

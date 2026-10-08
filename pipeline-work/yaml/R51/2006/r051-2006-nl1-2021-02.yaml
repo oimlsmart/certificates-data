@@ -1,0 +1,287 @@
+_meta:
+  cert_id: 5326
+  num: R51/2006-A-NL1-21.02
+  applicant: Anritsu Corporation
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-nl1-2021-02.pdf
+certificate:
+  number: R51/2006-A-NL1-21.02
+  scheme: A
+  project_number: '2587736'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2021-04-01'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V. (OIML Issuing Authority NL1)
+  person_responsible: M. Boudewijns
+  oiml_issuer_id: NL1
+manufacturers:
+- name: Anritsu Corporation
+  address_lines:
+  - 5-1-1 Onna
+  - 243-8555 Atsugi
+  - Kanagawa-Prefecture
+  - Japan
+certified_type:
+  category: Automatic catchweigher
+  type_designations:
+  - SSV-Series Checkweigher
+  - KWS6xxxBxxx
+  description: >-
+    Automatic catchweigher (checkweigher). Accuracy class XII(0,5) or XIII(1); the actual accuracy class
+    is determined at the time of putting into use. The catchweigher is weighing dynamically during automatic
+    operation.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 100
+        max: 3000
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    maximum_belt_speed:
+      value:
+        min: 30
+        max: 120
+      unit_symbol: m/min
+      unit_id:
+      footnote_markers: []
+    dynamic_setting_tolerance:
+      value:
+        min: -20
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dynamic_setting_reference:
+      value: setpoint
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    emc_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    humidity:
+      value: non-condensing
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    location:
+      value: closed location
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    software_version:
+      value: V1.xx.xxxx or V2.xx.xxxx
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    legally_relevant_software:
+      value: Protected Soft
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_capacity
+    axis: accuracy_class
+    values:
+    - condition: XII(0,5)
+      value:
+        min: 3
+        max:
+      unit_symbol: g
+    - condition: XIII(1)
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+  - attribute: verification_scale_interval
+    axis: accuracy_class
+    values:
+    - condition: XII(0,5)
+      value:
+        min: 0.05
+        max:
+      unit_symbol: g
+    - condition: XIII(1)
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+  - attribute: maximum_number_of_weighing_ranges
+    axis: accuracy_class
+    values:
+    - condition: XII(0,5)
+      value: 1
+      unit_symbol:
+    - condition: XIII(1)
+      value: 3
+      unit_symbol:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class_and_interval_structure
+    values:
+    - condition: XII(0,5), single interval
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+    - condition: XIII(1), per partial range
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+  - attribute: maximum_rate_of_operation
+    axis: automatic_zero_setting_per_weighing_cycle
+    values:
+    - condition: without automatic zero-setting per weighing cycle
+      value: 740
+      unit_symbol: packages/min
+      footnote_markers:
+      - 1)
+    - condition: with automatic zero-setting per weighing cycle
+      value: 370
+      unit_symbol: packages/min
+      footnote_markers:
+      - 2)
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XII(0,5)
+  - XIII(1)
+test_reports:
+- id: NMi-12200746-01
+  date: '2013-06-25'
+  pages: 23
+  role: test_report
+- id: NMi-12200746-02
+  date: '2013-06-25'
+  pages: 41
+  role: test_report
+- id: NMi-12200746-03
+  date: '2013-06-25'
+  pages: 19
+  role: test_report
+- id: NMi-12200746-04
+  date: '2013-06-25'
+  pages: 20
+  role: test_report
+- id: NMi-12200746-07
+  date: '2013-06-25'
+  pages: 12
+  role: test_report
+model_family:
+  family_name: SSV-Series Checkweigher
+  models:
+  - model_id: KWS60xx
+    attributes:
+      variant_families:
+      - BFxx
+      - BPxx
+      - BWxx
+      sub_variants:
+      - 1
+      - 2
+      - 3
+  - model_id: KWS61xx
+    attributes:
+      variant_families:
+      - BFxx
+      - BPxx
+      - BWxx
+      sub_variants:
+      - 1
+      - 2
+      - 3
+  - model_id: KWS62xx
+    attributes:
+      variant_families:
+      - BFxx
+      - BPxx
+      - BWxx
+      sub_variants:
+      - 1
+      - 2
+      - 3
+  - model_id: KWS63xx
+    attributes:
+      variant_families:
+      - BFxx
+      - BPxx
+      - BWxx
+      sub_variants:
+      - 1
+      - 2
+      - 3
+  - model_id: KWS64xx
+    attributes:
+      variant_families:
+      - BFxx
+      - BPxx
+      - BWxx
+      sub_variants:
+      - 1
+      - 2
+      - 3
+footnotes:
+- marker: 1)
+  text: without automatic zero-setting per weighing cycle
+- marker: 2)
+  text: with automatic zero-setting per weighing cycle
+matrix_tables:
+- name: Maximum belt speed vs weighing range vs instrument type approval matrix
+  columns:
+  - weighing_range
+  - max_belt_speed
+  column_units:
+  -
+  - m/min
+  rows:
+  - weighing_range: 3 g ≤ m < 5 g (smallest range)
+    max_belt_speed: 30
+  - weighing_range: 30 g ≤ m < 3000 g (largest range)
+    max_belt_speed: 120
+  description: >-
+    Page 3 contains a full approval matrix of maximum belt speed (30–120 m/min) × weighing range (from
+    3 g ≤ m < 5 g up to 30 g ≤ m < 3000 g) × instrument type (KWS60xx through KWS64xx, in BFxx/BPxx/BWxx
+    variants, sub-variants 1/2/3). Approved combinations are marked with a checkmark, non-applicable with
+    a dash. 30 m/min applies only to the smallest weighing range; 120 m/min is approved for the widest
+    set of ranges including the largest. KWS63xx and KWS64xx show no approvals at 30/60 m/min for most
+    ranges. Only the extreme rows could be reconstructed from the available summary.
+  footnotes: []

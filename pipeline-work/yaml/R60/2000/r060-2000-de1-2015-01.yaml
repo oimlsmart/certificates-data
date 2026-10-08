@@ -1,0 +1,174 @@
+_meta:
+  cert_id: 3824
+  num: R060/2000-DE1-2015.01
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2015'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2015-01.pdf
+certificate:
+  number: R60/2000-DE1-15.01
+  scheme: B
+  page_total: 2
+  member_state: Germany
+  date_issued: '2015-11-02'
+  oiml_issuer_id: DE1
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Member of Certification Body
+  oiml_issuer_id: DE1
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - Z6R
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    minimum_load_cell_verification_interval_vmin:
+      value: Emax/11111
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_output_return_dr:
+      value: "½·Emax/3000"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: nominal_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: Emax=50kg
+      value: 50
+      unit_symbol: kg
+      footnote_markers: []
+    - model: Emax=55kg
+      value: 55
+      unit_symbol: kg
+      footnote_markers: []
+    - model: Emax=100kg
+      value: 100
+      unit_symbol: kg
+      footnote_markers: []
+    - model: Emax=110kg
+      value: 110
+      unit_symbol: kg
+      footnote_markers: []
+    - model: Emax=200kg
+      value: 200
+      unit_symbol: kg
+      footnote_markers: []
+    - model: Emax=220kg
+      value: 220
+      unit_symbol: kg
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+      footnote_markers: []
+    - condition: D1
+      value: 1000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: B
+  accuracy_classes:
+  - C3
+  - D1
+test_reports:
+- id: 1.12-4077191-1
+  pages: 22
+  role: test_report
+model_family:
+  family_name: Z6R
+  models:
+  - model_id: Emax=50kg
+  - model_id: Emax=55kg
+  - model_id: Emax=100kg
+  - model_id: Emax=110kg
+  - model_id: Emax=200kg
+  - model_id: Emax=220kg
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - attribute
+  - unit
+  - C3
+  - D1
+  rows:
+  - attribute: max_load_cell_intervals_nlc
+    unit:
+    C3: 3000
+    D1: 1000
+  - attribute: rated_output
+    unit: mV/V
+    C3: 2
+    D1: 2
+  - attribute: nominal_capacity_emax
+    unit: kg
+    C3: 50 / 55 / 100 / 110 / 200 / 220
+    D1: 50 / 55 / 100 / 110 / 200 / 220
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit:
+    C3: Emax/11111
+    D1: Emax/11111
+  - attribute: minimum_dead_load_output_return_dr
+    unit:
+    C3: "½·Emax/3000"
+    D1: "½·Emax/3000"
+  description: >-
+    Essential data for load cell type Z6R. Capacity values are common to both accuracy classes (merged
+    cells in source table); the number of verification intervals differs by accuracy class.
+  footnotes: []

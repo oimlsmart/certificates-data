@@ -1,0 +1,285 @@
+_meta:
+  cert_id: 4202
+  num: R060/2000-NL1-2017.12 Rev. 1
+  applicant: Grupo Epelsa S.L.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2017-12-rev1.pdf
+certificate:
+  number: R60/2000-NL1-17.12
+  scheme: A
+  project_number: '1900624'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2017-04-07'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: GRUPO EPELSA, S.L.
+  address_lines:
+  - C/Punto Net, 3 Parque Tecnológico
+  - TECNOALCALÁ 28805 Alcalá de Henares
+  - Madrid
+  - Spain
+manufacturers:
+- name: GRUPO EPELSA, S.L.
+  address_lines:
+  - C/Punto Net, 3 Parque Tecnológico
+  - TECNOALCALÁ 28805 Alcalá de Henares
+  - Madrid
+  - Spain
+certified_type:
+  category: Load cell
+  type_designations:
+  - SQB
+  module_designation: Analog load cell
+  description: >-
+    A shear beam load cell, with strain gauges. The characteristics for nmax and Y can be reduced separately.
+    Z is proportional or equal to nmax. Each produced load cell is provided with an accompanying document
+    with information about its characteristics.
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value:
+        min: 380
+        max: 420
+      unit_symbol: Ω
+      unit_id:
+    output_impedance:
+      value:
+        min: 349
+        max: 355
+      unit_symbol: Ω
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    humidity_class:
+      value: CH
+      unit_symbol:
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    recommended_excitation_voltage:
+      value:
+        min: 10
+        max: 12
+      unit_symbol: V
+      unit_id:
+    excitation_maximum_voltage:
+      value: 15
+      unit_symbol: V
+      unit_id:
+    excitation_type:
+      value: AC / DC
+      unit_symbol:
+      unit_id:
+    transducer_material:
+      value: Alloy steel
+      unit_symbol:
+      unit_id:
+    atmospheric_protection:
+      value: Hermetically welded
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=150-750kg
+      value:
+        min: 150
+        max: 750
+    - model: Emax=7500-20000kg
+      value:
+        min: 7500
+        max: 20000
+    - model: Emax=500-2500kg
+      value:
+        min: 500
+        max: 2500
+  - attribute: rated_output
+    unit_symbol: mV/V
+    values:
+    - model: Emax=150-750kg
+      value:
+        min: 1.998
+        max: 2.002
+    - model: Emax=7500-20000kg
+      value:
+        min: 2.997
+        max: 3.003
+    - model: Emax=500-2500kg
+      value:
+        min: 2.997
+        max: 3.003
+  - attribute: max_load_cell_intervals_nlc
+    unit_symbol:
+    values:
+    - model: Emax=150-750kg
+      value: 3000
+    - model: Emax=7500-20000kg
+      value: 3000
+    - model: Emax=500-2500kg
+      value: 4000
+  - attribute: ratio_z_emax_over_2dr
+    unit_symbol:
+    values:
+    - model: Emax=150-750kg
+      value: 3000
+    - model: Emax=7500-20000kg
+      value: 3000
+    - model: Emax=500-2500kg
+      value: 4000
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: NMi-11200809-05
+  date: '2012-04-10'
+  pages: 27
+  role: test_report
+- id: NMi-13200048-04
+  date: '2013-06-06'
+  pages: 27
+  role: test_report
+- id: NMi-15200654-02
+  date: '2015-12-11'
+  pages: 51
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2017-03-21'
+  changes:
+- revision: '1'
+  date: '2017-04-07'
+  changes: Additional load cell capacities added based on existing test reports.
+model_family:
+  family_name: SQB
+  models:
+  - model_id: Emax=150-750kg
+  - model_id: Emax=7500-20000kg
+  - model_id: Emax=500-2500kg
+matrix_tables:
+- name: Characteristics of the load cell
+  columns:
+  - attribute
+  - Emax=150-750kg
+  - Emax=7500-20000kg
+  - Emax=500-2500kg
+  rows:
+  - attribute: maximum_capacity
+    Emax=150-750kg: 150-750 kg
+    Emax=7500-20000kg: 7500-20000 kg
+    Emax=500-2500kg: 500-2500 kg
+  - attribute: minimum_dead_load
+    Emax=150-750kg: 0 kg
+    Emax=7500-20000kg: 0 kg
+    Emax=500-2500kg: 0 kg
+  - attribute: accuracy_class
+    Emax=150-750kg: C
+    Emax=7500-20000kg: C
+    Emax=500-2500kg: C
+  - attribute: rated_output
+    Emax=150-750kg: 2.000 ± 0.002 mV/V
+    Emax=7500-20000kg: 3.000 ± 0.003 mV/V
+    Emax=500-2500kg: 3.000 ± 0.003 mV/V
+  - attribute: max_load_cell_intervals_nlc
+    Emax=150-750kg: 3000
+    Emax=7500-20000kg: 3000
+    Emax=500-2500kg: 4000
+  - attribute: ratio_y_emax_over_vmin
+    Emax=150-750kg: 10000
+    Emax=7500-20000kg: 10000
+    Emax=500-2500kg: 10000
+  - attribute: ratio_z_emax_over_2dr
+    Emax=150-750kg: 3000
+    Emax=7500-20000kg: 3000
+    Emax=500-2500kg: 4000
+  - attribute: input_impedance
+    Emax=150-750kg: 400 Ω ± 20 Ω
+    Emax=7500-20000kg: 400 Ω ± 20 Ω
+    Emax=500-2500kg: 400 Ω ± 20 Ω
+  - attribute: temperature_range
+    Emax=150-750kg: "-10 °C / +40 °C"
+    Emax=7500-20000kg: "-10 °C / +40 °C"
+    Emax=500-2500kg: "-10 °C / +40 °C"
+  - attribute: apportionment_factor_plc
+    Emax=150-750kg: 0.7
+    Emax=7500-20000kg: 0.7
+    Emax=500-2500kg: 0.7
+  - attribute: humidity_class
+    Emax=150-750kg: CH
+    Emax=7500-20000kg: CH
+    Emax=500-2500kg: CH
+  - attribute: safe_overload
+    Emax=150-750kg: 150 % of Emax
+    Emax=7500-20000kg: 150 % of Emax
+    Emax=500-2500kg: 150 % of Emax
+  - attribute: output_impedance
+    Emax=150-750kg: 352 Ω ± 3 Ω
+    Emax=7500-20000kg: 352 Ω ± 3 Ω
+    Emax=500-2500kg: 352 Ω ± 3 Ω
+  - attribute: recommended_excitation
+    Emax=150-750kg: 10 - 12 V AC / DC
+    Emax=7500-20000kg: 10 - 12 V AC / DC
+    Emax=500-2500kg: 10 - 12 V AC / DC
+  - attribute: excitation_maximum
+    Emax=150-750kg: 15 V AC / DC
+    Emax=7500-20000kg: 15 V AC / DC
+    Emax=500-2500kg: 15 V AC / DC
+  - attribute: transducer_material
+    Emax=150-750kg: Alloy steel
+    Emax=7500-20000kg: Alloy steel
+    Emax=500-2500kg: Alloy steel
+  - attribute: atmospheric_protection
+    Emax=150-750kg: Hermetically welded
+    Emax=7500-20000kg: Hermetically welded
+    Emax=500-2500kg: Hermetically welded
+  description: >-
+    Three Emax capacity groups (table columns) sharing most characteristics; capacity, rated output, number
+    of load cell intervals and ratio Z vary per group and are captured in characteristics.model_level.
+  footnotes: []

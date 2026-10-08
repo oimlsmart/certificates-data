@@ -1,0 +1,172 @@
+_meta:
+  cert_id: 3316
+  num: R060/2000-GB1-2005.07 Rev. 3
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2013'
+  status: Valid
+  issuer: GB1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-gb1-2005-07-rev3.pdf
+certificate:
+  number: R60/2000-GB1-05.07
+  project_number: TS13/0002
+  page_total: 2
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2013-12-05'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Societa' Cooperativa Bilanciai Srl
+  address_lines:
+  - Via S. Ferrari, 16
+  - 41011 Campogalliano
+  - Campogalliano (Modena)
+  - Italy
+manufacturers:
+- name: Societa' Cooperativa Bilanciai Srl
+  address_lines:
+  - Via S. Ferrari, 16
+  - 41011 Campogalliano
+  - Campogalliano (Modena)
+  - Italy
+certified_type:
+  category: Load cell
+  type_designations:
+  - Eurocell CPR
+  - Eurocell CPR-M
+  module_designation: Analog load cell
+  description: >-
+    Eurocell CPR and CPR-M stainless steel compression strain gauge load cells. Model CPR-M is compatible
+    with the CPR model as detailed in the test report. Class C3M is suitable for multi-interval instruments.
+characteristics:
+  type_level:
+    minimum_dead_load_relative:
+      value: 0.5
+      unit_symbol: "%"
+      unit_id:
+    ratio_y_emax_over_vmin:
+      value: 14000
+      unit_symbol:
+      unit_id:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    maximum_excitation_voltage:
+      value: 18
+      unit_symbol: V
+      unit_id:
+    input_impedance_rlc:
+      value:
+        min: 695
+        max: 705
+      unit_symbol: Ω
+      unit_id:
+    temperature_rating:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    safe_overload_relative:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    cable_length:
+      value: 18
+      unit_symbol: m
+      unit_id:
+    cable_configuration:
+      value: 6 wire + double shield
+      unit_symbol:
+      unit_id:
+    cable_cross_section:
+      value: 0.5
+      unit_symbol: mm²
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    unit_id:
+    values:
+    - model: Emax=20t
+      value: 20
+    - model: Emax=35t
+      value: 35
+    - model: Emax=50t
+      value: 50
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+    - condition: C2
+      value: 2000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C3M
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+  - attribute: ratio_z_emax_over_2dr
+    axis: accuracy_class
+    values:
+    - condition: C3M
+      value: 8000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C2
+  - C3
+  - C3M
+  - C4
+test_reports:
+- id: '971124'
+  pages: 24
+  role: type_evaluation_report
+- id: '971103'
+  pages: 24
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2005-08-26'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2006-02-16'
+  changes: Added 20, 35 t capacity
+- revision: '2'
+  date: '2010-07-27'
+  changes: Applicant and manufacturer address changed. New model name added.
+- revision: '3'
+  date: '2013-12-05'
+  changes: Alternative authorised manufacturer removed. Apportionment fraction added.
+model_family:
+  family_name: Eurocell
+  models:
+  - model_id: Emax=20t
+  - model_id: Emax=35t
+  - model_id: Emax=50t

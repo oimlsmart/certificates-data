@@ -1,0 +1,210 @@
+_meta:
+  cert_id: 1378
+  num: R117/1995-NL1-2005.02
+  applicant: Tokheim Netherlands B.V.
+  issuing_year: '2005'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-nl1-2005-02.pdf
+certificate:
+  number: R117/1995-NL1-05.02
+  project_number: '312051'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2005-03-04'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  phone: "+31 78 6332 332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Tokheim, Retail Petroleum System Unit 6320
+  address_lines:
+  - Industrieweg 5
+  - 5531 AD Bladel
+  - The Netherlands
+manufacturers:
+- name: Tokheim UK Ltd
+  address_lines:
+  - Unit 3 Baker Road
+  - DD5 3RT Dundee
+  - Scotland
+- name: Tokheim Sofitam
+  address_lines:
+  - Route de Soliers
+  - 1450 Grentheville
+  - France
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - QUANTIUM-xxxT
+  module_designation:
+  description: >-
+    Fuel Dispensers for Motor Vehicles, model QUANTIUM-xxxT (with EPZ gas elimination device). Comprises
+    one or more systems in the same housing with one common calculator and indicating device, brand Tokheim,
+    model World Wide Calculator (WWC). Each system consists of a Tokheim EPZ combined pump and gas eliminator
+    device, a Tokheim SM80 volume sensor, a Tokheim MP-T1 pulser and a measuring part for oil (optional).
+    If the dispenser is equipped with a measuring part for oil, the oil injection system is directly driven
+    by the outgoing shaft of the measurement transducer.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication:
+      value: 9999.99
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 9.999
+      unit_symbol: "€/L"
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 9999.99
+      unit_symbol: "€/L"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 80
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: Gasoline
+      value: 40
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_flowrate
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 4
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: Gasoline
+      value: 2
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_measured_quantity
+    axis: liquid
+    values:
+    - condition: Gasoil
+      value: 2
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    - condition: Gasoline
+      value: 2
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+recommendation:
+- id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+- id: R118
+  edition: 1995
+test_reports:
+- id: R117/1995-NL1-05.02
+  pages: 68
+  role: type_evaluation_report
+- id: R117/1995-NL1-04.01
+  role: documentation_file
+- id: CVN-10107397-01
+  pages: 27
+  role: test_report
+- id: CVN-307754
+  pages: 14
+  role: test_report
+- id: R117/1995-NL-01.08
+  role: documentation_file
+components:
+- role: calculator and indicating device
+  type_designations:
+  - World Wide Calculator (WWC)
+  alternatives:
+  characteristics:
+    brand: Tokheim
+- role: combined pump and gas eliminator device
+  type_designations:
+  - EPZ
+  alternatives:
+  characteristics:
+    brand: Tokheim
+- role: volume sensor
+  type_designations:
+  - SM80
+  alternatives:
+  characteristics:
+    brand: Tokheim
+- role: pulser
+  type_designations:
+  - MP-T1
+  alternatives:
+  characteristics:
+    brand: Tokheim
+- role: measuring part for oil
+  type_designations: []
+  alternatives:
+  characteristics:
+    optional: true
+matrix_tables:
+- name: Metrological characteristics by liquid
+  columns:
+  - accuracy_class
+  - max_flowrate
+  - min_flowrate
+  - min_measured_quantity
+  - liquid
+  - max_volume_indication
+  - max_unit_price
+  - max_price_to_pay
+  column_units:
+  -
+  - L/min
+  - L/min
+  - L
+  -
+  - L
+  - "€/L"
+  - "€/L"
+  rows:
+  - accuracy_class: 0.5
+    max_flowrate: 80
+    min_flowrate: 4
+    min_measured_quantity: 2
+    liquid: Gasoil
+    max_volume_indication: 9999.99
+    max_unit_price: 9.999
+    max_price_to_pay: 9999.99
+  - accuracy_class: 0.5
+    max_flowrate: 40
+    min_flowrate: 2
+    min_measured_quantity: 2
+    liquid: Gasoline
+    max_volume_indication: 9999.99
+    max_unit_price: 9.999
+    max_price_to_pay: 9999.99
+  description: >-
+    Characteristics of the fuel dispenser for motor vehicles, model QUANTIUM-xxxT; maximum volume indication,
+    maximum unit price and maximum price to pay apply to both liquids.
+  footnotes: []

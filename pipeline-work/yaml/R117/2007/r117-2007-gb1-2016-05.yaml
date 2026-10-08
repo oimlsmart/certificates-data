@@ -1,0 +1,170 @@
+_meta:
+  cert_id: 4080
+  num: R117/2007-GB1-2016.05
+  applicant: Liquid controls, LLC
+  issuing_year: '2016'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-gb1-2016-05.pdf
+certificate:
+  number: R117/2007-GB1-16.05
+  project_number: P02003
+  page_total: 5
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2016-11-02'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Max Linnemann
+  person_title: Head of Certification Body
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+  oiml_issuer_id: GB1
+applicants:
+- name: Liquid Controls, LLC
+  address_lines:
+  - 105 Albrecht Drive
+  - Lake Bluff, Il 60044
+  - USA
+manufacturers:
+- name: Liquid Controls, LLC
+  address_lines:
+  - 105 Albrecht Drive
+  - Lake Bluff, Il 60044
+  - USA
+certified_type:
+  category: Calculator and indicator
+  type_designations:
+  - Masterload II
+  module_designation: Not applicable
+  description: >-
+    Vehicle-mounted electronic calculating/indicating device (meter register) for interruptible systems
+    for measuring liquids other than water, accuracy class 0.5. Suitable for use with any compatible approved
+    meters. May implement temperature compensation using a PRT probe (model BEMY1115, part number ZEMZ0309-02).
+    The PSU provides a permanent signal to the deadman circuit; if an error occurs the signal is lost
+    and the switch is activated.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: power_supply_voltage
+    axis: PSU model suffix YY
+    values:
+    - condition: 12 Vdc variant
+      value: 12
+      unit_symbol: V
+    - condition: 24 Vdc variant
+      value: 24
+      unit_symbol: V
+recommendation:
+  id: R117
+  edition: 2007
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: P02003/2
+  pages: 18
+  role: evaluation_report
+- id: TP0025
+  role: documentation_file
+- id: TS0904/0002
+  role: documentation_file
+revision_history:
+- revision: '16.05'
+  date: '2016-11-02'
+  changes: Certificate first issued.
+components:
+- role: Electronic Display Unit
+  type_designations:
+  - BEMY106-XX
+  - BEMY106A-XX
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Meggitt
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    model_suffix_xx_dependency:
+      value: Dependant on display configuration
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: PSU (Power Supply Unit)
+  type_designations:
+  - BEMY105-YY
+  - BEMY105A-YY
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Meggitt
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    model_suffix_yy_dependency:
+      value: Dependant on 12 Vdc or 24 Vdc
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Pulse Transmitter
+  type_designations:
+  - BMMZ333ZZ
+  - BMMZ333ZZA
+  alternatives: OR
+  characteristics:
+    manufacturer:
+      value: Eltomatic
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    model_suffix_zz_dependency:
+      value: Dependant on meter type
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Temperature compensation probe (PRT)
+  type_designations:
+  - BEMY1115
+  - ZEMZ0309-02
+  alternatives:
+  characteristics: {}
+footnotes: []
+matrix_tables:
+- name: Software and checksum
+  columns:
+  - software_id
+  - issue
+  - crc32
+  - md5
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - software_id: PO80 for Processor
+    issue: 6.2
+    crc32: 81725CC1
+    md5: 3AEAF930DC54D827314F2753ED8C7E44
+  - software_id: PO81 for PSU
+    issue: 1.7
+    crc32: 9E7E2050
+    md5: DBBCBDE93FCB13D07ABFD36CA442C0CD
+  description: >-
+    Processor and PSU software are stored in the EPROM and displayed under flag 00; they cannot be changed
+    without changing the EPROM. Checksum is verified when the software is written to the EPROM at the
+    factory and can also be verified in a laboratory. Once the housing is sealed, the EPROM cannot be
+    removed.
+  footnotes: []

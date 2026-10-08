@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026100822033933b79850660a4430",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me parse this OIML Certificate of Conformity.\n\nCertificate details:\n- Certificate number: R85/1998-NL1-05.11\n- Project number: 402041\n- Page total: 2\n- Member state: The Netherlands\n- Date issued: 11 October 2005 → 2005-10-11\n- Scheme: The schema says scheme (A|B). This isn't explicitly stated. NMi certificates under OIML-CS... In 2005, the OIML-CS scheme didn't exist yet (it started 2017ish with Basic/A and MAA/B). The certificate number \"R85/1998-NL1-05.11\" - it's an OIML certificate. Hmm, scheme is required (A|B). Since it's not stated, I could omit it. The rules say don't fabricate. I'll omit scheme.\n\nIssuing authority:\n- Name: NMi Certin B.V.\n- Address lines: Hugo de Grootplein 1, 3314 EG Dordrecht, The Netherlands\n- Person responsible: Ing. C. Oosterman\n- Person title: Manager Product Certification\n- Phone: +31 78 6332332\n- Email: certin@nmi.nl\n- Website: www.nmi.nl\n- oiml_issuer_id: not present\n\nApplicants:\n- Bartec GmbH, Schulstrasse 30, D-94239 Gotteszell, Germany\n\nManufacturers:\n- Bartec GmbH, same address\n\nCertified type:\n- Category: \"Automatic level gauge\" — from the category examples: \"Load cell\", \"Indicator\", \"Measuring system\", \"Fuel dispenser\", \"Taximeter\", \"Gas meter\"... Automatic level gauge for measuring the level of liquid in storage tanks. This is under R85 (Automatic level gauges for tanks). Category: \"Automatic level gauge\"\n- type_designations: [\"Volutank\"] (model Volutank)\n- module_designation: null / omit\n- description: \"Automatic level gauge for measuring the level of liquid in storage tanks, model Volutank.\"\n\nModel family: only one model (Volutank), so omit.\n\nCharacteristics: no characteristics in the markdown. Omit or include empty. Rule 8: if not present, omit.\n\nRecommendation:\n- id: R85\n- edition: 1998\n- amendment: null\n- accuracy_classes: [2]\n\nTest reports:\n- R85/1998-NL1-05.11, 42 pages, role: test_report. Date not given. role — \"test_report\" since the cert says \"associated Test Reports\". role: type_evaluation_report? The text: \"tests and examinations provided in the associated Test Reports: R85/1998-NL1-05.11 that includes 42 pages.\" Role: test_report.\n\nRevision history: none.\n\nFootnotes: none.\n\nOutput JSON without omitted fields.",
+      "signature": "a6ff5abf7c4841188a8faf6d"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"certificate\": {\n    \"number\": \"R85/1998-NL1-05.11\",\n    \"project_number\": \"402041\",\n    \"page_total\": 2,\n    \"member_state\": \"The Netherlands\",\n    \"date_issued\": \"2005-10-11\"\n  },\n  \"issuing_authority\": {\n    \"name\": \"NMi Certin B.V.\",\n    \"address_lines\": [\n      \"Hugo de Grootplein 1\",\n      \"3314 EG Dordrecht\",\n      \"The Netherlands\"\n    ],\n    \"person_responsible\": \"Ing. C. Oosterman\",\n    \"person_title\": \"Manager Product Certification\",\n    \"phone\": \"+31 78 6332332\",\n    \"email\": \"certin@nmi.nl\",\n    \"website\": \"www.nmi.nl\"\n  },\n  \"applicants\": [\n    {\n      \"name\": \"Bartec GmbH\",\n      \"address_lines\": [\n        \"Schulstrasse 30\",\n        \"D-94239 Gotteszell\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"manufacturers\": [\n    {\n      \"name\": \"Bartec GmbH\",\n      \"address_lines\": [\n        \"Schulstrasse 30\",\n        \"D-94239 Gotteszell\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"certified_type\": {\n    \"category\": \"Automatic level gauge\",\n    \"type_designations\": [\n      \"Volutank\"\n    ],\n    \"description\": \"Automatic level gauge for measuring the level of liquid in storage tanks, model Volutank.\"\n  },\n  \"recommendation\": {\n    \"id\": \"R85\",\n    \"edition\": 1998,\n    \"accuracy_classes\": [\n      2\n    ]\n  },\n  \"test_reports\": [\n    {\n      \"id\": \"R85/1998-NL1-05.11\",\n      \"pages\": 42,\n      \"role\": \"test_report\"\n    }\n  ]\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 787,
+    "output_tokens": 1056,
+    "cache_read_input_tokens": 2880,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

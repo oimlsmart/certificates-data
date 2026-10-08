@@ -1,0 +1,230 @@
+_meta:
+  cert_id: 1997
+  num: R076/1992-DK1-2001.02 Rev. 2
+  applicant: Cardinal Scale Manufacturing Co.
+  issuing_year: '2008'
+  status: Valid
+  issuer: DK1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-dk1-2001-02-rev2.pdf
+certificate:
+  number: R76/1992-DK1-01.02
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2000-03-14'
+  oiml_issuer_id: DK1
+issuing_authority:
+  name: The Danish Accreditation and Metrology Fund
+  address_lines:
+  - Dyregårdsvej 5B
+  - 2740 Skovlunde
+  - Denmark
+  person_responsible: P. Claudi Johansen
+  phone: "+45 77 33 95 00"
+  email: danak@danak.dk
+  website: www.dansk-metrologi.dk
+  oiml_issuer_id: DK1
+applicants:
+- name: Cardinal Scale Manufacturing Company
+  address_lines:
+  - 203 East Daugherty
+  - P.O. Box 151
+  - Webb City, MO 64870
+  - USA
+manufacturers:
+- name: Cardinal Scale Manufacturing Company
+  address_lines:
+  - 203 East Daugherty
+  - P.O. Box 151
+  - Webb City, MO 64870
+  - USA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - '200'
+  - '205'
+  - '210'
+  - 210-FE
+  - '215'
+  - '220'
+  module_designation: Not applicable
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_delta_u_min:
+      value: 0.7
+      unit_symbol: µV
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_reference:
+      value: per verification scale interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    measuring_range:
+      value:
+        min: 1
+        max: 40
+      unit_symbol: mV
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_u_exc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_connecting_system:
+      value: 6 wire system, screened
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    module_fractional_factor_pi:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    module_fractional_factor_applies_to:
+      value: indicator
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    interface:
+      value: Protective, according to paragraph 5.3.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    connected_load_cells:
+      value: Shall comply with R60
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    indicator_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: weighing_range
+    unit_symbol:
+    values:
+    - model: '200'
+      value: single-interval
+    - model: '205'
+      value: single-interval
+    - model: '210'
+      value: single-interval
+    - model: 210-FE
+      value: single-interval
+    - model: '215'
+      value: single-interval
+    - model: '220'
+      value: multi-interval
+  - attribute: load_cell_impedance
+    unit_symbol: Ω
+    values:
+    - model: '200'
+      value:
+        min: 44
+        max: 1000
+    - model: '205'
+      value:
+        min: 44
+        max: 1000
+    - model: '210'
+      value:
+        min: 44
+        max: 1000
+    - model: 210-FE
+      value:
+        min: 44
+        max: 1000
+    - model: '215'
+      value:
+        min: 44
+        max: 1000
+    - model: '220'
+      value:
+        min: 25
+        max: 1000
+  config_level:
+  - attribute: excitation_voltage
+    axis: power_source
+    values:
+    - condition: model 215 operated on battery
+      value: 8
+      unit_symbol: V
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: class III
+      value:
+        min:
+        max: 10000
+      unit_symbol: e
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: DANAK-195782
+  pages: 10
+  annexes_pages:
+  - 55
+  - 9
+  role: type_evaluation_report
+- id: DANAK-199807
+  pages: 36
+  role: test_report
+- id: DANAK-1910079
+  pages: 22
+  role: test_report
+revision_history:
+- revision: '2'
+  date: '2000-03-14'
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: '200'
+    label:
+    attributes:
+      weighing_range: single-interval
+  - model_id: '205'
+    label:
+    attributes:
+      weighing_range: single-interval
+  - model_id: '210'
+    label:
+    attributes:
+      weighing_range: single-interval
+  - model_id: 210-FE
+    label:
+    attributes:
+      weighing_range: single-interval
+  - model_id: '215'
+    label:
+    attributes:
+      weighing_range: single-interval
+      excitation_voltage_battery_v: 8
+  - model_id: '220'
+    label:
+    attributes:
+      weighing_range: multi-interval
+      load_cell_impedance_min_ohm: 25
+      load_cell_impedance_max_ohm: 1000

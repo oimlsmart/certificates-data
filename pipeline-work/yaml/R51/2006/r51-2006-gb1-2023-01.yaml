@@ -1,0 +1,252 @@
+_meta:
+  cert_id: 5816
+  num: R51/2006-A-GB1-23.01
+  applicant: Topcon Technology Ltd
+  issuing_year: '2023'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r51-2006-gb1-2023-01.pdf
+certificate:
+  number: R51/2006-A-GB1-23.01
+  scheme: A
+  page_total: 5
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2023-01-19'
+issuing_authority:
+  name: Office for Product Safety and Standards
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+applicants:
+- name: Topcon Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Stroud
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+manufacturers:
+- name: Topcon Technology Ltd
+  address_lines:
+  - Cirencester Road
+  - Minchinhampton
+  - Stroud
+  - Gloucestershire
+  - GL6 9BH
+  - United Kingdom
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - Loadmaster Alpha 100
+  - LM-100
+  description: >-
+    Battery-operated automatic catchweighing instrument comprising a weighing module, 'Terminator' junction
+    box, head unit control and display module, pressure transducers and sensors mounted on a wheeled loader.
+    Automatically determines the load in the bucket during the lifting process; the hydraulic pressure
+    in the loader's arms is converted by a pressure transducer, the output being used by the indicator
+    to display the corresponding weight.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 50000
+      unit_symbol: kg
+      unit_id:
+    scale_interval:
+      value:
+        min: 10
+        max:
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value: 10 e
+      unit_symbol:
+      unit_id:
+    max_number_of_scale_intervals:
+      value: 250
+      unit_symbol:
+      unit_id:
+    transducer_output_signal:
+      value:
+        min: 4
+        max: 20
+      unit_symbol: mA
+      unit_id:
+    minimum_sensitivity:
+      value: 35
+      unit_symbol: µV/div
+      unit_id:
+    temperature_range:
+      value:
+        min: -25
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    electromagnetic_environment:
+      value: E3
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 11
+        max: 30
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: RS232, Ethernet, CAN 2
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: Y(b)
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: climatic_protection
+    axis: component
+    values:
+    - condition: Head unit, printer
+      value: Closed, non-condensing
+    - condition: Weighing module, junction box, transducers, sensors
+      value: Open, condensing
+  - attribute: max_number_of_verification_scale_intervals
+    axis: pressure_transducer
+    values:
+    - condition: Danfoss MBS 1250, Topcon MKII 250 bar Compact, Topcon MKIII 250 bar Compact
+      value: 250
+    - condition: Topcon MK4 250 bar Compact
+      value: 200
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(b)
+test_reports:
+- id: P02989-1
+  date: '2023-01-19'
+  pages: 14
+  role: type_evaluation_report
+- id: P02989-1-D
+  date: '2023-01-19'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2023-01-19'
+  changes: OIML Certificate first issued.
+components:
+- role: Pressure transducer
+  type_designations:
+  - Danfoss MBS 1250
+  - Topcon MKII 250 bar Compact
+  - Topcon MKIII 250 bar Compact
+  - Topcon MK4 250 bar Compact
+  alternatives: OR
+  characteristics:
+    measuring_range:
+      value:
+        min: 0
+        max: 250
+      unit_symbol: bar
+    alternative_measuring_range:
+      value:
+        min: 0
+        max: 400
+      unit_symbol: bar
+    mkii_drawing_number:
+      value: S/SR/500-2-110
+    mkiii_drawing_number:
+      value: S/SR/500-2-120
+    mk4_part_numbers:
+      value: Z782-131 or S/SR/500-2-131
+    mk4_drawing_number:
+      value: '14373789.01'
+- role: Boom inclinometer
+  characteristics:
+    can_be_replaced_by:
+      value: Reference and Direction sensor or Gyro sensor
+- role: Bucket sensor
+  characteristics:
+    alternative_drawing_number:
+      value: S/SR/268-8-064
+    can_be_replaced_by:
+      value: Gyro sensor or inclinometer
+- role: Boom sensor
+  characteristics:
+    applicability:
+      value: Telescopic loaders only
+- role: Temperature sensor
+- role: Chassis inclinometer
+- role: Weighing module
+  type_designations:
+  - S/AC/441-1-035
+  - S/AC/441-1-005
+  - S/AC/441-1-015
+  - S/AC/441-1-045
+  - S/AC/452-1-001
+  alternatives: OR
+  characteristics:
+    software_designation:
+      value: LX100
+    circuit_diagram_number:
+      value: P585-211 Issue 05
+- role: Junction box
+  type_designations:
+  - Terminator
+  characteristics:
+    alternative_construction:
+      value: Modified PCB design
+- role: Head unit control and display module
+  type_designations:
+  - Isocan
+  characteristics:
+    software_designation:
+      value: IS100
+matrix_tables:
+- name: Legally relevant software identification (standard)
+  columns:
+  - software_type
+  - designation
+  - version_number
+  rows:
+  - software_type: Weighing module
+    designation: LX100
+    version_number: '003'
+  - software_type: Isocan
+    designation: IS100
+    version_number: '005'
+  - software_type: Database
+    designation: DBIS100
+    version_number: '003'
+  description:
+  footnotes: []
+- name: Legally relevant software identification (alternative, per Alternative 6)
+  columns:
+  - software_type
+  - designation
+  - version_number
+  rows:
+  - software_type: Weighing module
+    designation: LX100
+    version_number: '004'
+  - software_type: Isocan
+    designation: IS100
+    version_number: '006'
+  - software_type: Database
+    designation: DBIS100
+    version_number: '001'
+  description:
+  footnotes: []

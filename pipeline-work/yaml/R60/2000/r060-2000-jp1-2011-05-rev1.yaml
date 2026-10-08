@@ -1,0 +1,282 @@
+_meta:
+  cert_id: 2933
+  num: R060/2000-JP1-2011.05 Rev. 1
+  applicant: A&D Company Ltd.
+  issuing_year: '2012'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2011-05-rev1.pdf
+certificate:
+  number: R60/2000-JP1-11.05
+  page_total: 3
+  member_state: Japan
+  date_issued: '2012-05-21'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+manufacturers:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LCM19K500
+  - LCM19T001
+  - LCM19T1.5
+  - LCM19T002
+  module_designation:
+  description: Beam (shear) load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    safe_load_limit:
+      value: 1.5*Emax
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_verification_interval:
+      value: Emax/10000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance_rlc:
+      value: 380
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    cable_length:
+      value: 3
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    cable_type:
+      value: 4-wire
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: LCM19K500
+      value: 500
+    - model: LCM19T001
+      value: 1000
+    - model: LCM19T1.5
+      value: 1500
+    - model: LCM19T002
+      value: 2000
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: n_max variant
+    values:
+    - condition: n_max=6000
+      value: 6000
+      unit_symbol:
+    - condition: n_max=4000
+      value: 4000
+      unit_symbol:
+    - condition: n_max=3000
+      value: 3000
+      unit_symbol:
+  - attribute: ratio_z_emax_over_2dr
+    axis: n_max
+    values:
+    - condition: n_max=6000
+      value: 6000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: 12-09/R60:2000
+  date:
+  pages: 19
+  role: test_report
+revision_history:
+- revision: '1'
+  date:
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: LCM19K500
+  - model_id: LCM19T001
+  - model_id: LCM19T1.5
+  - model_id: LCM19T002
+footnotes: []
+matrix_tables:
+- name: Characteristics by model
+  columns:
+  - attribute
+  - symbol
+  - unit
+  - LCM19K500
+  - LCM19T001
+  - LCM19T1.5
+  - LCM19T002
+  column_units:
+  rows:
+  - attribute: accuracy_class
+    symbol: Class
+    unit:
+    LCM19K500: C
+    LCM19T001: C
+    LCM19T1.5: C
+    LCM19T002: C
+  - attribute: max_load_cell_intervals_nlc
+    symbol: n_max
+    unit:
+    LCM19K500: 6000/4000/3000
+    LCM19T001: 6000/4000/3000
+    LCM19T1.5: 6000/4000/3000
+    LCM19T002: 6000/4000/3000
+  - attribute: humidity_symbol
+    symbol:
+    unit:
+    LCM19K500: CH
+    LCM19T001: CH
+    LCM19T1.5: CH
+    LCM19T002: CH
+  - attribute: minimum_dead_load
+    symbol: Emin
+    unit: kg
+    LCM19K500: 0
+    LCM19T001: 0
+    LCM19T1.5: 0
+    LCM19T002: 0
+  - attribute: maximum_capacity
+    symbol: Emax
+    unit: kg
+    LCM19K500: 500
+    LCM19T001: 1000
+    LCM19T1.5: 1500
+    LCM19T002: 2000
+  - attribute: safe_load_limit
+    symbol: Elim
+    unit: kg
+    LCM19K500: 1.5*Emax
+    LCM19T001: 1.5*Emax
+    LCM19T1.5: 1.5*Emax
+    LCM19T002: 1.5*Emax
+  - attribute: minimum_verification_interval
+    symbol: vmin
+    unit: kg
+    LCM19K500: Emax/10000
+    LCM19T001: Emax/10000
+    LCM19T1.5: Emax/10000
+    LCM19T002: Emax/10000
+  - attribute: apportionment_factor_plc
+    symbol: p_LC
+    unit:
+    LCM19K500: 0.7
+    LCM19T001: 0.7
+    LCM19T1.5: 0.7
+    LCM19T002: 0.7
+  - attribute: ratio_y_emax_over_vmin
+    symbol: "Y"
+    unit:
+    LCM19K500: 10000
+    LCM19T001: 10000
+    LCM19T1.5: 10000
+    LCM19T002: 10000
+  - attribute: ratio_z_emax_over_2dr
+    symbol: Z
+    unit:
+    LCM19K500: 6000 (in the case of n_max=6000)
+    LCM19T001: 6000 (in the case of n_max=6000)
+    LCM19T1.5: 6000 (in the case of n_max=6000)
+    LCM19T002: 6000 (in the case of n_max=6000)
+  - attribute: rated_output
+    symbol:
+    unit: mV/V
+    LCM19K500: 2
+    LCM19T001: 2
+    LCM19T1.5: 2
+    LCM19T002: 2
+  - attribute: maximum_excitation_voltage
+    symbol:
+    unit: V
+    LCM19K500: 15 (AC/DC)
+    LCM19T001: 15 (AC/DC)
+    LCM19T1.5: 15 (AC/DC)
+    LCM19T002: 15 (AC/DC)
+  - attribute: input_impedance_rlc
+    symbol: R_LC
+    unit: Ω
+    LCM19K500: 380
+    LCM19T001: 380
+    LCM19T1.5: 380
+    LCM19T002: 380
+  - attribute: cable_detail
+    symbol:
+    unit:
+    LCM19K500: 3 m, 4-wire
+    LCM19T001: 3 m, 4-wire
+    LCM19T1.5: 3 m, 4-wire
+    LCM19T002: 3 m, 4-wire
+  description: >-
+    Load cell characteristics table; maximum capacity varies per model, while other characteristics are
+    common (colspan) across the four certified types.
+  footnotes: []

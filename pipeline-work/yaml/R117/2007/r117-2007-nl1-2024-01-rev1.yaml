@@ -1,0 +1,234 @@
+_meta:
+  cert_id: 6823
+  num: R117/2007-A-NL1-24.01 Rev. 1
+  applicant: Gilbarco GmbH & Co. KG
+  issuing_year: '2026'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2024-01-rev1.pdf
+certificate:
+  number: R117/2007-A-NL1-24.01
+  scheme: A
+  project_number: '4025727'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2026-02-27'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Gilbarco GmbH
+  address_lines:
+  - Ferdinand-Henze-Straße 9
+  - D-33154 Salzkotten
+  - Germany
+manufacturers:
+- name: Gilbarco GmbH
+  address_lines:
+  - Ferdinand-Henze-Straße 9
+  - D-33154 Salzkotten
+  - Germany
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - SK700-2
+  - Horizon 2
+  - SK700-2/Frontier
+  - SK700-2/Endura
+  description: >-
+    A fuel dispenser. Each measuring instrument consists at least of one measurement transducer (meter)
+    and one calculating/indicating device (calculator). The same housing of the dispenser can comprise
+    one or more measuring systems; one calculating/indicating device may be a common part of the measuring
+    systems.
+characteristics:
+  type_level:
+    minimum_measured_quantity:
+      value:
+      - 2
+      - 5
+      - 10
+      unit_symbol: L
+      unit_id:
+    minimum_measured_quantity_condition:
+      value: Shall not exceed 5 Litres when the Qmax of the measuring system is less than 60 L/min
+      unit_symbol:
+      unit_id:
+    maximum_pressure:
+      value: 3.5
+      unit_symbol: bar(g)
+      unit_id:
+    environmental_classes:
+      value: M1 / E1
+      unit_symbol:
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -40
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    measured_product:
+      value: Hydrocarbon oils
+      unit_symbol:
+      unit_id:
+    viscosity_range:
+      value:
+        min: 0.4
+        max: 4.5
+      unit_symbol: mPa·s
+      unit_id:
+  config_level:
+  - attribute: flow_rate_range
+    axis: viscosity_range
+    values:
+    - condition: 0.4 - 1.0 mPa·s
+      value:
+        min: 1.6
+        max: 40
+      unit_symbol: L/min
+    - condition: 1.1 - 4.5 mPa·s
+      value:
+        min: 2.0
+        max: 80
+      unit_symbol: L/min
+  - attribute: ambient_temperature_range
+    axis: heater_configuration
+    values:
+    - condition: without heater
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    - condition: with heater in calculator CPU & display housing
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: NMi-3766810-01
+  date: '2024-03-02'
+  pages: 47
+  role: type_evaluation_report
+- id: NMi-4025727-01
+  date: '2026-01-09'
+  pages: 25
+  role: type_evaluation_report
+- id: CVN-10119469
+  date: '2001-03-02'
+  pages: 56
+  role: test_report
+- id: CVN-202211
+  date: '2003-05-16'
+  pages: 49
+  role: test_report
+- id: R117-2007-A-NL1-24-01-1
+  role: documentation_file
+- id: TC7144-3
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2024-03-13'
+  changes: Initial issue
+- revision: '1'
+  date: '2026-02-27'
+  changes: >-
+    Addition of report NMi-4025727-01 with additional EMC testing. Reference to the OIML certificate R117-2007-A-NL1-26.03
+    of the calculator.
+model_family:
+  family_name: SK700-2
+  models:
+  - model_id: SK700-2
+  - model_id: Horizon 2
+  - model_id: SK700-2/Frontier
+  - model_id: SK700-2/Endura
+components:
+- role: measurement transducer (meter)
+  type_designations:
+  - C+
+  characteristics:
+    producer:
+      value: Gilbarco GmbH
+      unit_symbol:
+      unit_id:
+    documentation_folder:
+      value: TC7144-3
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    flow_rate_range:
+    - condition: viscosity range 0.4 - 1.0 mPa·s
+      value:
+        min: 1.6
+        max: 40
+      unit_symbol: L/min
+      unit_id:
+    - condition: viscosity range 1.1 - 4.5 mPa·s
+      value:
+        min: 2.0
+        max: 80
+      unit_symbol: L/min
+      unit_id:
+    mmq:
+      value: 2
+      unit_symbol: L
+      unit_id:
+    maximum_pressure:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -40
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    viscosity_range:
+      value:
+        min: 0.4
+        max: 4.5
+      unit_symbol: mPa·s
+      unit_id:
+    impulse_encoder_or_pulser:
+      value: SIP-II and SIP-III Pulser
+      unit_symbol:
+      unit_id:
+- role: calculating/indicating device (calculator)
+  type_designations:
+  - Sandpiper-Apollo
+  - Apollo 2022
+  characteristics:
+    producer:
+      value: Gilbarco GmbH
+      unit_symbol:
+      unit_id:
+    oiml_certificate_reference:
+      value: R117-2007-A-NL1-26.03
+      unit_symbol:
+      unit_id:

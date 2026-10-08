@@ -1,0 +1,194 @@
+_meta:
+  cert_id: 5050
+  num: R76/2006-A-NL1-20.11
+  applicant: Fairbanks Scales Inc.
+  issuing_year: '2020'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2020-11.pdf
+certificate:
+  number: R76/2006-A-NL1-20.11
+  scheme: A
+  project_number: '2209610'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2020-03-12'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Fairbanks Scales Inc.
+  address_lines:
+  - 2176 Portland Street, Suite 1
+  - St. Johnsbury, VT 05819
+  - United States of America
+manufacturers:
+- name: Fairbanks Scales Inc.
+  address_lines:
+  - 2176 Portland Street, Suite 1
+  - St. Johnsbury, VT 05819
+  - United States of America
+certified_type:
+  category: Indicator
+  type_designations:
+  - FB6015
+  module_designation:
+  description: An Indicator for weighing instruments
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III or IIII
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weighing_range:
+      value: single interval, multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 1
+      unit_symbol: µV
+      unit_id:
+      footnote_markers: []
+    minimum_load_cell_resistance:
+      value: 44
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    maximum_load_cell_resistance:
+      value: 3300
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_connection:
+      value: 4-wire
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_cable_length_indicator_to_junction_box_or_load_cells:
+      value: load cells are connected directly to the SSC without junction box
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 115
+        max: 230
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    software_version:
+      value: '1.06'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_number_of_scale_intervals
+    axis: A/D channel configuration in SSC
+    values:
+    - condition: single A/D channel in SSC
+      value:
+        min:
+        max: 5000
+      unit_symbol: divisions
+      unit_id:
+      footnote_markers: []
+    - condition: dual A/D channel in SSC
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+      unit_id:
+      footnote_markers: []
+  - attribute: tare
+    axis: weighing range type
+    values:
+    - condition: instruments with one weighing range
+      value: T ≤ -Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: multi-interval instruments
+      value: T ≤ -Max1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-2209610-01
+  date: '2020-03-11'
+  pages: 19
+  role: type_evaluation_report
+- id: NMi-2209610-02
+  date: '2020-03-11'
+  pages: 39
+  role: type_evaluation_report
+components:
+- role: terminal
+  type_designations:
+  - FB6015
+- role: analog data processing device
+  type_designations:
+  - ACC-2000-1A
+  alternatives:
+  characteristics:
+    device_name: smart sectional controller SSC
+- role: power supply
+  type_designations:
+  - ACC-2001-1A
+  alternatives:
+  characteristics:
+    device_name: pit power supply PPS

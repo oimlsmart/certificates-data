@@ -1,0 +1,241 @@
+_meta:
+  cert_id: 1973
+  num: R051/2006-DE1-2007.06
+  applicant: Mettler-Toledo Garvens GmbH
+  issuing_year: '2007'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-de1-2007-06.pdf
+certificate:
+  number: R51/2006-DE1-07.06
+  project_number: 1.12-4032861
+  page_total: 3
+  member_state: Germany
+  date_issued: '2007-12-14'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+manufacturers:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - ABC
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped with electrodynamic force compensation load cell (EFC-LC), performed as
+    single or multi interval instrument.
+characteristics:
+  type_level:
+    design:
+      value: single- or multi-interval instrument
+    lever_work:
+      value: none
+    verification_scale_interval:
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+      footnote_markers:
+      - 1)
+    ratio_of_verification_scale_intervals:
+      value: e_(i+1)/e_i < 3
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    maximum_load:
+      value:
+        min:
+        max: 600
+      unit_symbol: kg
+      footnote_markers:
+      - 1)
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    maximum_belt_speed:
+      value:
+        min:
+        max: 3
+      unit_symbol: m/s
+  config_level:
+  - attribute: number_of_intervals
+    axis: weighing_mode
+    values:
+    - condition: static
+      value:
+        min:
+        max: 4
+      unit_symbol:
+    - condition: dynamic
+      value:
+        min:
+        max: 2
+      unit_symbol:
+  - attribute: number_of_verification_scale_intervals
+    axis: weighing_mode
+    values:
+    - condition: static
+      value: 40000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+      - 2)
+    - condition: dynamic
+      value: 15000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+      - 2)
+  - attribute: minimum_load
+    axis: weighing_mode
+    values:
+    - condition: static
+      value: 20 e1
+      unit_symbol:
+      footnote_markers:
+      - 1)
+      - 3)
+    - condition: dynamic
+      value: 5
+      unit_symbol: g
+      footnote_markers:
+      - 1)
+      - 4)
+recommendation:
+  id: R51-1
+  edition: 2006
+  accuracy_classes:
+  - XIII(1)
+  - XIII(x ≥ 2)
+  - Y(a)
+  - Y(b)
+test_reports:
+- id: 1.12-4032861
+  pages: 23
+  role: type_evaluation_report
+- id: 1.12-4032861/1
+  pages: 41
+  role: test_report
+- id: 1.12-4032861/2
+  pages: 45
+  role: test_report
+- id: 1.12-4032861/3
+  pages: 40
+  role: test_report
+- id: 1.12-4032861/4
+  pages: 49
+  role: test_report
+- id: 1.12-4032861/5
+  pages: 70
+  role: test_report
+- id: 1.12-4032861/6
+  pages: 13
+  role: test_report
+- id: 1.12-4032861/7
+  pages: 13
+  role: test_report
+components:
+- role: load_cell
+  type_designations:
+  - EFC-LC
+  characteristics:
+    principle:
+      value: electrodynamic force compensation
+footnotes:
+- marker: 1)
+  text: The metrological characteristics depend on the EFC-LC; cf. Report No 1.12-4032861.
+- marker: 2)
+  text: >-
+    For weighing instruments of the category XIII(x ≥ 2) and Y(b) the number of verification scale intervals
+    is limited to n_i ≤ 1000.
+- marker: 3)
+  text: >-
+    The minimum capacity in case of static weighing for category Y depends on the specification according
+    to R51-1/2006 No 2.2.2. In that case it may be applied to corresponding category X in the same way
+    in order to achieve smaller minimum capacities.
+- marker: 4)
+  text: >-
+    For weighing instruments of the category X the minimum loads depend on the used digital LC, and for
+    weighing instruments of the category Y additionally on the specification under 1). In case of category
+    Y the greater value has to be taken. Greater minimum loads may also result from the metrological test
+    of the legal metrological control.
+matrix_tables:
+- name: 'Tab. 1: Technical data of weighing instruments of the type series ABC'
+  columns:
+  - weighing_mode
+  - accuracy_class
+  - number_of_intervals
+  - verification_scale_interval
+  - ratio_of_verification_scale_intervals
+  - number_of_verification_scale_intervals
+  - maximum_load
+  - minimum_load
+  - temperature_range
+  - maximum_belt_speed
+  rows:
+  - weighing_mode: Static weighing
+    accuracy_class: XIII(1); XIII(x ≥ 2)
+    number_of_intervals: "≤ 4"
+    verification_scale_interval: e1 ≥ 0.1 g
+    ratio_of_verification_scale_intervals: e_(i+1)/e_i < 3
+    number_of_verification_scale_intervals: "≤ 4 × 10000"
+    maximum_load: "≤ 600 kg"
+    minimum_load: "≥ 20 e1"
+    temperature_range: 0 °C / +40 °C
+    maximum_belt_speed: "≤ 3 m/s"
+  - weighing_mode: Static weighing
+    accuracy_class: Y(a); Y(b)
+    number_of_intervals: "≤ 4"
+    verification_scale_interval: e1 ≥ 0.1 g
+    ratio_of_verification_scale_intervals: e_(i+1)/e_i < 3
+    number_of_verification_scale_intervals: "≤ 4 × 10000"
+    maximum_load: "≤ 600 kg"
+    minimum_load: "≥ 20 e1"
+    temperature_range: 0 °C / +40 °C
+    maximum_belt_speed: "≤ 3 m/s"
+  - weighing_mode: Dynamic weighing
+    accuracy_class: XIII(1); XIII(x ≥ 2)
+    number_of_intervals: "≤ 2"
+    verification_scale_interval: e1 ≥ 0.1 g
+    ratio_of_verification_scale_intervals: e_(i+1)/e_i < 3
+    number_of_verification_scale_intervals: "≤ 2 × 7500"
+    maximum_load: "≤ 600 kg"
+    minimum_load: "≥ 5 g"
+    temperature_range: 0 °C / +40 °C
+    maximum_belt_speed: "≤ 3 m/s"
+  - weighing_mode: Dynamic weighing
+    accuracy_class: Y(a); Y(b)
+    number_of_intervals: "≤ 2"
+    verification_scale_interval: e1 ≥ 0.1 g
+    ratio_of_verification_scale_intervals: e_(i+1)/e_i < 3
+    number_of_verification_scale_intervals: "≤ 2 × 7500"
+    maximum_load: "≤ 600 kg"
+    minimum_load: "≥ 5 g"
+    temperature_range: 0 °C / +40 °C
+    maximum_belt_speed: "≤ 3 m/s"
+  description: >-
+    Design: single- or multi-interval instrument; lever work: none. Values apply per weighing mode and
+    accuracy class group.
+  footnotes:
+  - 1)
+  - 2)
+  - 3)
+  - 4)

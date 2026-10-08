@@ -1,0 +1,290 @@
+_meta:
+  cert_id: 2482
+  num: R060/2000-JP1-2010.17
+  applicant: A&D Company Ltd.
+  issuing_year: '2010'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2010-17.pdf
+certificate:
+  number: R60/2000-JP1-10.17
+  page_total: 3
+  member_state: Japan
+  date_issued: '2010-08-31'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563
+  - Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro
+  - Toshima-ku, Tokyo 170-0013
+  - Japan
+manufacturers:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14, Higashi-Ikebukuro
+  - Toshima-ku, Tokyo 170-0013
+  - Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - LCCD11T010-KC
+  - LCCD11T020-KC
+  - LCCD11T030-KC
+  module_designation:
+  description: Load cells, fraction Pi = 0.8, temperature range -10 °C / 40 °C, humidity symbol CH.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+    ratio_y_emax_over_vmin:
+      value: 10000
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    excitation_voltage:
+      value:
+        min: 6
+        max: 12
+      unit_symbol: V DC
+      unit_id:
+    cable_length:
+      value: 12
+      unit_symbol: m
+      unit_id:
+    cable_details:
+      value: >-
+        4 conductor shielded; Red: Excitation +; White: Excitation -; Green: Data +; Blue: Data -; Yellow:
+        Shield
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: LCCD11T010-KC
+      value: 10
+    - model: LCCD11T020-KC
+      value: 20
+    - model: LCCD11T030-KC
+      value: 30
+  - attribute: safe_load_limit
+    unit_symbol: t
+    values:
+    - model: LCCD11T010-KC
+      value: 15
+    - model: LCCD11T020-KC
+      value: 30
+    - model: LCCD11T030-KC
+      value: 45
+  - attribute: minimum_verification_interval
+    unit_symbol: kg
+    values:
+    - model: LCCD11T010-KC
+      value: 1
+    - model: LCCD11T020-KC
+      value: 2
+    - model: LCCD11T030-KC
+      value: 3
+  - attribute: max_load_cell_intervals_nmax
+    unit_symbol:
+    values:
+    - model: LCCD11T010-KC
+      value: 6000
+    - model: LCCD11T020-KC
+      value: 5000
+    - model: LCCD11T030-KC
+      value: 4000
+  config_level:
+  - attribute: ratio_z_emax_over_2dr
+    axis: max_load_cell_intervals_nmax
+    values:
+    - condition: nmax=6000
+      value: 6000
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: 10-20/R60:2000
+  pages: 33
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: LCCD11T010-KC
+    label: 10 t
+    attributes:
+      maximum_capacity:
+        value: 10
+        unit_symbol: t
+        unit_id:
+      safe_load_limit:
+        value: 15
+        unit_symbol: t
+        unit_id:
+      minimum_verification_interval:
+        value: 1
+        unit_symbol: kg
+        unit_id:
+      max_load_cell_intervals_nmax:
+        value: 6000
+        unit_symbol:
+        unit_id:
+  - model_id: LCCD11T020-KC
+    label: 20 t
+    attributes:
+      maximum_capacity:
+        value: 20
+        unit_symbol: t
+        unit_id:
+      safe_load_limit:
+        value: 30
+        unit_symbol: t
+        unit_id:
+      minimum_verification_interval:
+        value: 2
+        unit_symbol: kg
+        unit_id:
+      max_load_cell_intervals_nmax:
+        value: 5000
+        unit_symbol:
+        unit_id:
+  - model_id: LCCD11T030-KC
+    label: 30 t
+    attributes:
+      maximum_capacity:
+        value: 30
+        unit_symbol: t
+        unit_id:
+      safe_load_limit:
+        value: 45
+        unit_symbol: t
+        unit_id:
+      minimum_verification_interval:
+        value: 3
+        unit_symbol: kg
+        unit_id:
+      max_load_cell_intervals_nmax:
+        value: 4000
+        unit_symbol:
+        unit_id:
+footnotes: []
+matrix_tables:
+- name: Characteristics by model
+  columns:
+  - model_designation
+  - accuracy_class
+  - max_load_cell_intervals_nmax
+  - humidity_symbol
+  - minimum_dead_load
+  - maximum_capacity
+  - safe_load_limit
+  - minimum_verification_interval
+  - apportionment_factor_plc
+  - ratio_y
+  - ratio_z
+  - excitation_voltage
+  - cable_length
+  - cable_details
+  column_units:
+  -
+  -
+  -
+  -
+  - kg
+  - t
+  - t
+  - kg
+  -
+  -
+  -
+  - V DC
+  - m
+  -
+  rows:
+  - model_designation: LCCD11T010-KC
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 6000
+    humidity_symbol: CH
+    minimum_dead_load: 0
+    maximum_capacity: 10
+    safe_load_limit: 15
+    minimum_verification_interval: 1
+    apportionment_factor_plc: 0.8
+    ratio_y: 10000
+    ratio_z: 6000
+    excitation_voltage: 6-12
+    cable_length: 12
+    cable_details: >-
+      4 conductor shielded; Red: Excitation +; White: Excitation -; Green: Data +; Blue: Data -; Yellow:
+      Shield
+  - model_designation: LCCD11T020-KC
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 5000
+    humidity_symbol: CH
+    minimum_dead_load: 0
+    maximum_capacity: 20
+    safe_load_limit: 30
+    minimum_verification_interval: 2
+    apportionment_factor_plc: 0.8
+    ratio_y: 10000
+    ratio_z: 6000
+    excitation_voltage: 6-12
+    cable_length: 12
+    cable_details: >-
+      4 conductor shielded; Red: Excitation +; White: Excitation -; Green: Data +; Blue: Data -; Yellow:
+      Shield
+  - model_designation: LCCD11T030-KC
+    accuracy_class: C
+    max_load_cell_intervals_nmax: 4000
+    humidity_symbol: CH
+    minimum_dead_load: 0
+    maximum_capacity: 30
+    safe_load_limit: 45
+    minimum_verification_interval: 3
+    apportionment_factor_plc: 0.8
+    ratio_y: 10000
+    ratio_z: 6000
+    excitation_voltage: 6-12
+    cable_length: 12
+    cable_details: >-
+      4 conductor shielded; Red: Excitation +; White: Excitation -; Green: Data +; Blue: Data -; Yellow:
+      Shield
+  description: >-
+    Ratio Z = Emax/(2*DR) = 6000 applies in the case of nmax = 6000. The three stacked values in the nmax
+    cell are assigned to the three model designations in order.
+  footnotes: []

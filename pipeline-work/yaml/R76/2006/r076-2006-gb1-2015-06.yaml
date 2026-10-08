@@ -1,0 +1,199 @@
+_meta:
+  cert_id: 3794
+  num: R076/2006-GB1-2015.06
+  applicant: Ian Fellows Ltd
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2015-06.pdf
+certificate:
+  number: R76/2006-GB1-15.06
+  project_number: TS1201/0126
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2015-07-22'
+issuing_authority:
+  name: National Measurement and Regulation Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Certification Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/nmro
+applicants:
+- name: Ian Fellows Ltd
+  address_lines:
+  - 3D/E Centurion Way
+  - Crusader Park
+  - Warminster
+  - Wiltshire
+  - BA12 8BT
+  - United Kingdom
+manufacturers:
+- name: Ian Fellows Ltd
+  address_lines:
+  - 3D/E Centurion Way
+  - Crusader Park
+  - Warminster
+  - Wiltshire
+  - BA12 8BT
+  - United Kingdom
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - Checkmaster
+  module_designation: Not applicable
+  description: >-
+    Single-interval, Class III or IIII, non-automatic weighing instrument formed by the Checkmaster digital
+    indicating device connected to a weighing platform. Not intended to be used for direct sales to the
+    public. Stainless steel enclosure; LCD display; operator keypad with numerical, navigation and function
+    keys; lightbar.
+characteristics:
+  type_level:
+    scale_interval_type:
+      value: single
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+    maximum_tare_preset_tare:
+      value: "-Max"
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.5
+      unit_symbol: µV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 20
+      unit_symbol: mV
+      unit_id:
+    fraction_of_maximum_permissible_error:
+      value: 0.5
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    initial_zero_setting:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+    semi_automatic_zero_setting:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    zero_tracking:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    automatic_zero_setting:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    extended_indication:
+      value: e/10
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: Class III
+      value: 10000
+    - condition: Class IIII
+      value: 1000
+  - attribute: load_cell_cable_maximum_length
+    axis: wiring_configuration (indicator to load cell junction box)
+    values:
+    - condition: 6-wire configuration
+      value: 30
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P01540
+  pages: 14
+  role: evaluation_report
+revision_history:
+- revision: '15.06'
+  date: '2015-07-22'
+  changes: Certificate first issued.
+components:
+- role: indicating device
+  type_designations:
+  - Checkmaster
+  characteristics:
+    enclosure: Stainless steel
+    display: LCD
+    interfaces:
+    - Load cell
+    - RS232 x2
+    - PIO x9
+    - Wi-Fi
+    software_identification: MC8_xxx
+    software_description: >-
+      Held in firmware on the circuit board; non-editable TAN (traceable access number) counter increments
+      when legally relevant parameters are changed; software version number and TAN counter displayed
+      at power-up.
+    sealing: >-
+      Enclosure sealed using wire and seal or tamper-evident label with securing mark (manufacturer's/representative's
+      mark or official verification officer's mark); TAN counter value written on tamper-evident label
+      on or near the rating plate.
+- role: weighing platform
+  type_designations: []
+- role: load cell
+  type_designations:
+  alternatives: OR
+  characteristics:
+    requirement: >-
+      Any compatible load cell(s) may be used provided: a respective OIML R60 Certificate of Conformity
+      exists; the certificate contains the load cell types and data required for the manufacturer's declaration
+      of compatibility of modules and installation requirements; load cells marked NH allowed only if
+      R76 humidity testing has been conducted; compatibility established via compatibility of modules
+      calculation at verification; standard transmission type.

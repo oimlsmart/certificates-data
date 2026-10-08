@@ -1,0 +1,243 @@
+_meta:
+  cert_id: 1725
+  num: R117/1995-NL1-2006.01
+  applicant: Petrotec - Assistencia Tecnica ao Ramo Petrolifero, S.A.
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-nl1-2006-01.pdf
+certificate:
+  number: R117/1995-NL1-06.01
+  project_number: '603716'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2006-05-28'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Petrotec – Assistência Técnica ao Ramo Petrolifero, S.A.
+  address_lines:
+  - Parque Industrial de S. João De Ponte – Pav. C2
+  - 4800-493 Guimarães
+  - Portugal
+manufacturers:
+- name: Petrotec – Assistência Técnica ao Ramo Petrolifero, S.A.
+  address_lines:
+  - Parque Industrial de S. João De Ponte – Pav. C2
+  - 4800-493 Guimarães
+  - Portugal
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - EURO 1000 VI R
+  module_designation: Not applicable
+  description: >-
+    Fuel dispenser for motor vehicles consisting of one Gas Elimination Device (Petrotec type RTF), one
+    Measurement Transducer (Petrotec or Stork, type PTF) and one Electronic Calculator/Indicating device
+    (Petrotec type CEM 01 or CEM 03). Optional change-up of the flowrate up to 80 L/min (high speed) or
+    130 L/min (ultra high speed) by pushing a button; combinations of the listed flowrates are possible.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    minimum_flowrate:
+      value: 2.5
+      unit_symbol: L/min
+      unit_id:
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: L
+      unit_id:
+    maximum_volume_indication:
+      value: 9999.99
+      unit_symbol: L
+      unit_id:
+    maximum_unit_price:
+      value: 99.999
+      unit_symbol: "€/L"
+      unit_id:
+    maximum_price_to_pay:
+      value: 9999.99
+      unit_symbol: "€"
+      unit_id:
+  config_level:
+  - attribute: maximum_flowrate
+    axis: flowrate_configuration
+    unit_symbol: L/min
+    values:
+    - condition: Low speed (40 L/min)
+      value: 40
+      unit_symbol: L/min
+    - condition: Low speed (45 L/min)
+      value: 45
+      unit_symbol: L/min
+    - condition: High speed
+      value: 80
+      unit_symbol: L/min
+    - condition: Ultra high speed
+      value: 130
+      unit_symbol: L/min
+  - attribute: liquid
+    axis: flowrate_configuration
+    unit_symbol:
+    values:
+    - condition: Low speed (40 L/min)
+      value: Light refined oil products and gasoil
+      unit_symbol:
+      footnote_markers:
+      - "*"
+    - condition: Low speed (45 L/min)
+      value: Light refined oil products and gasoil
+      unit_symbol:
+      footnote_markers:
+      - "*"
+    - condition: High speed
+      value: Only gasoil
+      unit_symbol:
+      footnote_markers:
+      - "*"
+    - condition: Ultra high speed
+      value: Only gasoil
+      unit_symbol:
+      footnote_markers:
+      - "*"
+  - attribute: flowrate_change_up
+    axis: flowrate_configuration
+    unit_symbol:
+    values:
+    - condition: High speed
+      value: Optional, by pushing a button
+      unit_symbol:
+    - condition: Ultra high speed
+      value: Optional, by pushing a button
+      unit_symbol:
+recommendation:
+  id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: PF/8463
+  role: test_report
+- id: PF/4794
+  role: test_report
+- id: PF/6188
+  role: test_report
+- id: PF/9190
+  role: test_report
+- id: T2913
+  role: documentation_file
+- id: R117/1995-NL1-06.01
+  role: documentation_file
+components:
+- role: Gas Elimination Device
+  type_designations:
+  - RTF
+  alternatives:
+  characteristics:
+    manufacturer: Petrotec
+    test_report: PF/8463
+- role: Measurement Transducer
+  type_designations:
+  - PTF
+  alternatives:
+  characteristics:
+    manufacturers:
+    - Petrotec
+    - Stork
+    test_report: PF/4794
+- role: Electronic Calculator/Indicating device
+  type_designations:
+  - CEM 01
+  - CEM 03
+  alternatives: OR
+  characteristics:
+    manufacturer: Petrotec
+    test_reports:
+      CEM 01: PF/6188
+      CEM 03: PF/9190
+footnotes:
+- marker: "*"
+  text: 'Liquid: Light refined oil products and gasoil'
+- marker: "*"
+  text: 'Liquid: Only gasoil'
+matrix_tables:
+- name: Characteristics per flowrate configuration
+  columns:
+  - configuration
+  - maximum_flowrate
+  - minimum_flowrate
+  - accuracy_class
+  - minimum_measured_quantity
+  - liquid
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  column_units:
+  -
+  - L/min
+  - L/min
+  -
+  - L
+  -
+  - L
+  - "€/L"
+  - "€"
+  rows:
+  - configuration: Low speed (40 L/min)
+    maximum_flowrate: 40
+    minimum_flowrate: 2.5
+    accuracy_class: 0.5
+    minimum_measured_quantity: 2
+    liquid: Light refined oil products and gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 99.999
+    maximum_price_to_pay: 9999.99
+  - configuration: Low speed (45 L/min)
+    maximum_flowrate: 45
+    minimum_flowrate: 2.5
+    accuracy_class: 0.5
+    minimum_measured_quantity: 2
+    liquid: Light refined oil products and gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 99.999
+    maximum_price_to_pay: 9999.99
+  - configuration: High speed
+    maximum_flowrate: 80
+    minimum_flowrate: 2.5
+    accuracy_class: 0.5
+    minimum_measured_quantity: 2
+    liquid: Only gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 99.999
+    maximum_price_to_pay: 9999.99
+  - configuration: Ultra high speed
+    maximum_flowrate: 130
+    minimum_flowrate: 2.5
+    accuracy_class: 0.5
+    minimum_measured_quantity: 2
+    liquid: Only gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 99.999
+    maximum_price_to_pay: 9999.99
+  description: >-
+    Three alternative configurations of model EURO 1000 VI R: low speed (Qmax 40 or 45 L/min), high speed
+    (Qmax 80 L/min) and ultra high speed (Qmax 130 L/min), or combinations of these flowrates. High speed
+    and ultra high speed are reached via an optional flowrate change-up by pushing a button.
+  footnotes:
+  - "* Liquid: Light refined oil products and gasoil"
+  - "* Liquid: Only gasoil"

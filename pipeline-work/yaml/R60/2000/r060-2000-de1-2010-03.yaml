@@ -1,0 +1,196 @@
+_meta:
+  cert_id: 2444
+  num: R060/2000-DE1-2010.03
+  applicant: Flintec GmbH
+  issuing_year: '2010'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2010-03.pdf
+certificate:
+  number: R60/2000-DE1-10.03
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2010-05-06'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Oberregierungsrat
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - PCB
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge single point load cell. The Single-Point load cells of the series PCB are bending beam
+    load cells with lateral parallel guiding and centred bending eye made of stainless steel. Further
+    essential characteristics are given in the data sheet.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+    input_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=50t
+      value: 50
+    - model: Emax=100t
+      value: 100
+    - model: Emax=250t
+      value: 250
+    - model: Emax=500t
+      value: 500
+    - model: Emax=1000t
+      value: 1000
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+    - condition: C3 MI 6
+      value: 3000
+    - condition: C5
+      value: 5000
+    - condition: C5 MI 7.5
+      value: 5000
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: "½·Emax/3000"
+    - condition: C3 MI 6
+      value: "½·Emax/6000"
+    - condition: C5
+      value: "½·Emax/5000"
+    - condition: C5 MI 7.5
+      value: "½·Emax/7500"
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: certificate_variant
+    values:
+    - condition: variant_1
+      value: Emax/12500
+      footnote_markers:
+      - 1)
+    - condition: variant_2
+      value: Emax/20000
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C3 MI 6
+  - C5
+  - C5 MI 7.5
+test_reports:
+- id: 1.12-4039180-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039180-2
+  pages: 22
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: Emax=50t
+  - model_id: Emax=100t
+  - model_id: Emax=250t
+  - model_id: Emax=500t
+  - model_id: Emax=1000t
+footnotes:
+- marker: 1)
+  text: Y is indicated on the name plate
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - attribute
+  - unit
+  - c3
+  - c3_mi_6
+  - c5
+  - c5_mi_7_5
+  rows:
+  - attribute: maximum_number_of_load_cell_intervals_nlc
+    unit:
+    c3: 3000
+    c3_mi_6: 3000
+    c5: 5000
+    c5_mi_7_5: 5000
+  - attribute: rated_output
+    unit: mV/V
+    c3: 2
+    c3_mi_6: 2
+    c5: 2
+    c5_mi_7_5: 2
+  - attribute: maximum_capacity_emax
+    unit: t
+    c3: 50 / 100 / 250 / 500 / 1000
+    c3_mi_6: 50 / 100 / 250 / 500 / 1000
+    c5: 50 / 100 / 250 / 500 / 1000
+    c5_mi_7_5: 50 / 100 / 250 / 500 / 1000
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit:
+    c3: Emax/12500
+    c3_mi_6: Emax/12500
+    c5: Emax/12500
+    c5_mi_7_5: Emax/12500
+    footnote_markers:
+    - 1)
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit:
+    c3: Emax/20000
+    c3_mi_6: Emax/20000
+    c5: Emax/20000
+    c5_mi_7_5: Emax/20000
+    footnote_markers:
+    - 1)
+  - attribute: minimum_dead_load_output_return_dr
+    unit:
+    c3: "½·Emax/3000"
+    c3_mi_6: "½·Emax/6000"
+    c5: "½·Emax/5000"
+    c5_mi_7_5: "½·Emax/7500"
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed per accuracy
+    class. Both Vmin rows appear in the source table with identical label spanning all accuracy classes;
+    Y is indicated on the name plate.
+  footnotes:
+  - 1) Y is indicated on the name plate

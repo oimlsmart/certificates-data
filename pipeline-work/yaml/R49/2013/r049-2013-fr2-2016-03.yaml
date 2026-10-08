@@ -1,0 +1,242 @@
+_meta:
+  cert_id: 4011
+  num: R049/2013-FR2-2016.03
+  applicant: ITRON France
+  issuing_year: '2016'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-fr2-2016-03.pdf
+certificate:
+  number: R49/2013-FR2-16.03
+  project_number: LNE-25433
+  page_total: 1
+  member_state: FRANCE
+  date_issued: '2016-07-12'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Measuring Instruments Division Manager
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71031 MACON
+  - FRANCE
+manufacturers:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71031 MACON
+  - FRANCE
+certified_type:
+  category: Water meter
+  type_designations:
+  - X 61
+  module_designation:
+  description: Water meter ITRON type X 61. Communication devices are not covered by this certificate.
+characteristics:
+  type_level:
+    indicating_device:
+      value: Glass-metal
+      unit_symbol:
+    version:
+      value: Linear
+      unit_symbol:
+    q2_over_q1:
+      value: 1.6
+      unit_symbol:
+    position:
+      value: All position
+      unit_symbol:
+    length:
+      value:
+        min: 110
+        max: 190
+      unit_symbol: mm
+    connections:
+      value: >-
+        Threads: 3/4" gas for all lengths DN15; 7/8" inlet, 3/4" outlet gas for length 115 mm DN15; 1"
+        gas for all lengths DN20 except L = 154 mm: 1.28" gas
+      unit_symbol:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+    indicating_range:
+      value: >-
+        99999999.9 or 9999999.9 or 9999999.99 or 999999.99 or 999999.999 or 99999.999 or 99999.9999 or
+        9999.9999
+      unit_symbol: m³
+    reverse_flow_measurement:
+      value: 'no'
+      unit_symbol:
+      footnote_markers:
+      - "**"
+    power_supply:
+      value: Battery
+      unit_symbol:
+    dc_supply_limit:
+      value: 3;4
+      unit_symbol: V
+    battery_lifetime:
+      value: 15
+      unit_symbol: years
+    temperature_class:
+      value: T70
+      unit_symbol:
+    environmental_class:
+      value: O
+      unit_symbol:
+    electromagnetic_influence_class:
+      value: E2
+      unit_symbol:
+    flow_profile_sensitivity_class:
+      value: U0D0
+      unit_symbol:
+  model_level:
+  - attribute: nominal_diameter
+    unit_symbol:
+    values:
+    - model: DN15
+      value: DN15
+    - model: DN15/20
+      value: DN15/20
+    - model: DN20
+      value: DN20
+  - attribute: permanent_flowrate
+    unit_symbol: m³/h
+    values:
+    - model: DN15
+      value: 1.6
+    - model: DN15/20
+      value: 2.5
+    - model: DN20
+      value: 4
+  - attribute: q3_over_q1
+    unit_symbol:
+    footnote_markers:
+    - "*"
+    values:
+    - model: DN15
+      value: 250
+    - model: DN15/20
+      value: 400
+    - model: DN20
+      value: 630
+  - attribute: pressure_loss_at_q3
+    unit_symbol: bar
+    values:
+    - model: DN15
+      value: 0.4
+    - model: DN15/20
+      value: 0.25
+    - model: DN20
+      value: 0.63
+  - attribute: verification_scale_interval
+    unit_symbol: cm³
+    values:
+    - model: DN15
+      value: 10
+    - model: DN15/20
+      value: 10
+    - model: DN20
+      value: 20
+  config_level:
+  - attribute: metrological_firmware_version
+    axis: communication_interface
+    values:
+    - condition: X61 RF version
+      value: '06'
+      unit_symbol:
+    - condition: X61 Mbus version
+      value: '02'
+      unit_symbol:
+  - attribute: metrological_firmware_checksum
+    axis: communication_interface
+    values:
+    - condition: X61 RF version
+      value: 7E00
+      unit_symbol:
+    - condition: X61 Mbus version
+      value: D097
+      unit_symbol:
+recommendation:
+  id: R49
+  edition: 2013
+  accuracy_classes:
+  - 2
+test_reports:
+- id: P137339
+  pages: 39
+  role: type_evaluation_report
+model_family:
+  family_name: X 61
+  models:
+  - model_id: DN15
+  - model_id: DN15/20
+  - model_id: DN20
+footnotes:
+- marker: "*"
+  text: Lower values are allowed. However those values shall not be lower than 40.
+- marker: "**"
+  text: >-
+    This meter is not designed to measure reverse flow but it is capable of withstanding an accidental
+    reverse flow without any deterioration or change in metrological properties for forward flow.
+matrix_tables:
+- name: Metrological characteristics by nominal diameter
+  columns:
+  - nominal_diameter
+  - permanent_flowrate
+  - q3_over_q1
+  - q2_over_q1
+  - position
+  - pressure_loss_at_q3
+  - verification_scale_interval
+  column_units:
+  -
+  - m³/h
+  -
+  -
+  -
+  - bar
+  - cm³
+  rows:
+  - nominal_diameter: DN15
+    permanent_flowrate: 1.6
+    q3_over_q1: 250
+    q2_over_q1: 1.6
+    position: All position
+    pressure_loss_at_q3: 0.4
+    verification_scale_interval: 10
+  - nominal_diameter: DN15/20
+    permanent_flowrate: 2.5
+    q3_over_q1: 400
+    q2_over_q1: 1.6
+    position: All position
+    pressure_loss_at_q3: 0.25
+    verification_scale_interval: 10
+  - nominal_diameter: DN20
+    permanent_flowrate: 4
+    q3_over_q1: 630
+    q2_over_q1: 1.6
+    position: All position
+    pressure_loss_at_q3: 0.63
+    verification_scale_interval: 20
+  description: >-
+    Characteristics common to all variants: indicating device Glass-metal, version Linear, position All
+    position, length 110-190 mm, accuracy class 2, maximum admissible pressure 16 bar, temperature class
+    T70, environmental class O, electromagnetic influence class E2, flow profile sensitivity class U0D0.
+  footnotes:
+  - "*"

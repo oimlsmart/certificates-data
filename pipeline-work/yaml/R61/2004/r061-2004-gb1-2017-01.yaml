@@ -1,0 +1,250 @@
+_meta:
+  cert_id: 4164
+  num: R061/2004-GB1-2017.01
+  applicant: CAS Corporation
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R61
+  edition_year: 2004
+  extraction_method: glm-extract
+  source_pdf: certificates/R61/2004/r061-2004-gb1-2017-01.pdf
+certificate:
+  number: R61/2004-GB1-17.01
+  project_number: P02047
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-03-02'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+manufacturers:
+- name: CAS Corporation
+  address_lines:
+  - "#262, Geurugogae-ro"
+  - Gwangjeok-myeon
+  - Yangju-si
+  - Gyeonggi-do
+  - Republic of Korea
+certified_type:
+  category: Automatic gravimetric filling instrument
+  type_designations:
+  - CI-600 Series
+  - CI-601A
+  - CI-605A
+  - CI-607A
+  description: >-
+    This pattern of an automatic gravimetric filling instrument for dispensing predetermined loads of
+    powdered, granular or liquid materials consists of a feeding device, a weighing unit, and a CI-600
+    Series weighing controller.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    maximum_number_of_scale_intervals:
+      value: 10000
+      unit_symbol:
+      unit_id:
+    minimum_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    reference_accuracy_class:
+      value: 0.2
+      unit_symbol:
+      unit_id:
+    maximum_tare_value:
+      value: Max
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 43
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.5
+      unit_symbol: µV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 16
+      unit_symbol: mV
+      unit_id:
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    climatic_environment:
+      value: Closed, non-condensing
+      unit_symbol:
+      unit_id:
+    em_classification:
+      value: E2
+      unit_symbol:
+      unit_id:
+    serial_interfaces:
+      value: RS232/485
+      unit_symbol:
+      unit_id:
+    software_identification_number:
+      value: V1.xx
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: relay_interface_inputs
+    unit_symbol:
+    values:
+    - model: CI-605A
+      value: 4
+    - model: CI-607A
+      value: 6
+  - attribute: relay_interface_outputs
+    unit_symbol:
+    values:
+    - model: CI-605A
+      value: 6
+    - model: CI-607A
+      value: 8
+  - attribute: analogue_output_available
+    unit_symbol:
+    values:
+    - model: CI-601A
+      value: true
+    - model: CI-605A
+      value: true
+    - model: CI-607A
+      value: true
+  config_level:
+  - attribute: maximum_preset_tare_value
+    axis: number_of_scale_intervals
+    values:
+    - condition: single-interval
+      value: Max
+    - condition: dual-interval
+      value: Max1
+  - attribute: load_cell_cable_maximum_length
+    axis: load_cell_cable_configuration
+    values:
+    - condition: 6-wire configuration
+      value: 183
+      unit_symbol: m/mm²
+recommendation:
+  id: R61
+  edition: 2004
+  accuracy_classes:
+  - '0.2'
+test_reports:
+- id: P02047
+  date:
+  pages: 16
+  role: evaluation_report
+revision_history:
+- revision: '17.01'
+  date: '2017-03-02'
+  changes: Certificate first issued. No revisions have been issued.
+model_family:
+  family_name: CI-600 Series
+  models:
+  - model_id: CI-601A
+    label: CI-601A
+    attributes:
+      analogue_output: true
+  - model_id: CI-605A
+    label: CI-605A
+    attributes:
+      relay_inputs: 4
+      relay_outputs: 6
+      analogue_output: true
+  - model_id: CI-607A
+    label: CI-607A
+    attributes:
+      relay_inputs: 6
+      relay_outputs: 8
+      analogue_output: true
+components:
+- role: weighing_controller
+  type_designations:
+  - CI-600 Series
+  characteristics:
+    software_identification_number:
+      value: V1.xx
+      unit_symbol:
+      unit_id:
+- role: weighing_unit
+  type_designations: []
+  characteristics: {}
+- role: feeding_device
+  type_designations:
+  - Gravity feeder
+  - Gravity feeder with agitator
+  - Single screw feeder
+  - Double screw feeder
+  - Belt feeder
+  - Vibratory feeder
+  alternatives: OR
+  characteristics: {}
+- role: load_cell
+  type_designations: []
+  alternatives: OR
+  characteristics:
+    approval_requirement:
+      value: OIML R60 Certificate of Conformity required
+      unit_symbol:
+      unit_id:
+    transmission_type:
+      value: standard
+      unit_symbol:
+      unit_id:
+    compatibility:
+      value: manufacturer's compatibility of modules calculation at time of verification
+      unit_symbol:
+      unit_id:

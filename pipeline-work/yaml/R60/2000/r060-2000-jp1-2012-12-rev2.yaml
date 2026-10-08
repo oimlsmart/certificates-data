@@ -1,0 +1,355 @@
+_meta:
+  cert_id: 3040
+  num: R060/2000-JP1-2012.12 Rev. 2
+  applicant: Kubota Corporation
+  issuing_year: '2012'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2012-12-rev2.pdf
+certificate:
+  number: R60/2000-JP1-10.12
+  scheme: A
+  page_total: 3
+  member_state: Japan
+  date_issued: '2012-10-17'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563
+  - Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+  oiml_issuer_id:
+applicants:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi, Naniwa-ku, Osaka, 556-8601
+  - Japan
+manufacturers:
+- name: KUBOTA Corporation
+  address_lines:
+  - 1-2-47, Shikitsu-higashi, Naniwa-ku, Osaka, 556-8601
+  - Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - CC1-H-10T
+  - CC1-H-20T
+  - CC1-H-25T
+  - CC1-H-30T
+  - CC1-H-40T
+  - CC1-H-50T
+  - CC1-H-10T-IS
+  - CC1-H-20T-IS
+  - CC1-H-25T-IS
+  - CC1-H-30T-IS
+  - CC1-H-40T-IS
+  - CC1-H-50T-IS
+  - CC2-10T
+  - CC2-20T
+  - CC2-25T
+  module_designation:
+  description: >-
+    Beam (shear) load cell, humidity symbol CH, temperature range -10 °C / +40 °C, apportionment fraction
+    Pi = 0.8
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_symbol:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.8
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_load_limit_elim:
+      value: 1.5*Emax
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    excitation_voltage:
+      value:
+        min: 6
+        max: 8
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    cable_length_maximum:
+      value: 20
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: t
+    values:
+    - model: CC1-H-10T
+      value: 10
+      footnote_markers: []
+    - model: CC1-H-20T
+      value: 20
+      footnote_markers: []
+    - model: CC1-H-25T
+      value: 25
+      footnote_markers: []
+    - model: CC1-H-30T
+      value: 30
+      footnote_markers: []
+    - model: CC1-H-40T
+      value: 40
+      footnote_markers: []
+    - model: CC1-H-50T
+      value: 50
+      footnote_markers: []
+    - model: CC1-H-10T-IS
+      value: 10
+      footnote_markers: []
+    - model: CC1-H-20T-IS
+      value: 20
+      footnote_markers: []
+    - model: CC1-H-25T-IS
+      value: 25
+      footnote_markers: []
+    - model: CC1-H-30T-IS
+      value: 30
+      footnote_markers: []
+    - model: CC1-H-40T-IS
+      value: 40
+      footnote_markers: []
+    - model: CC1-H-50T-IS
+      value: 50
+      footnote_markers: []
+    - model: CC2-10T
+      value: 10
+      footnote_markers: []
+    - model: CC2-20T
+      value: 20
+      footnote_markers: []
+    - model: CC2-25T
+      value: 25
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_verification_interval_vmin
+    axis: load cell series / nmax class
+    values:
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 6000
+      value: 1000*Emax/15000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 5000
+      value: 1000*Emax/12500
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 4000
+      value: 1000*Emax/10000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 3000
+      value: 1000*Emax/8000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: CC2-xxT, nmax = 4000
+      value: 1000*Emax/10000
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: CC2-xxT, nmax = 3000
+      value: 1000*Emax/8000
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    axis: load cell series / nmax class
+    values:
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 6000
+      value: 15000
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 5000
+      value: 12500
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 4000
+      value: 10000
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 3000
+      value: 8000
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC2-xxT, nmax = 4000
+      value: 10000
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC2-xxT, nmax = 3000
+      value: 8000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: ratio_z_emax_over_2dr
+    axis: load cell series / nmax class
+    values:
+    - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 6000
+      value: 6000
+      unit_symbol:
+      footnote_markers: []
+    - condition: CC2-xxT, nmax = 4000
+      value: 4000
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: 12-13/R60:2000
+  date:
+  pages: 19
+  role: test_report
+revision_history:
+- revision: '2'
+  date: '2012-10-17'
+  changes:
+model_family:
+  family_name:
+  models:
+  - model_id: CC1-H-10T
+    label: CC1-H-xxT with Emax = 10 t
+  - model_id: CC1-H-20T
+    label: CC1-H-xxT with Emax = 20 t
+  - model_id: CC1-H-25T
+    label: CC1-H-xxT with Emax = 25 t
+  - model_id: CC1-H-30T
+    label: CC1-H-xxT with Emax = 30 t
+  - model_id: CC1-H-40T
+    label: CC1-H-xxT with Emax = 40 t
+  - model_id: CC1-H-50T
+    label: CC1-H-xxT with Emax = 50 t
+  - model_id: CC1-H-10T-IS
+    label: CC1-H-xxT-IS with Emax = 10 t
+  - model_id: CC1-H-20T-IS
+    label: CC1-H-xxT-IS with Emax = 20 t
+  - model_id: CC1-H-25T-IS
+    label: CC1-H-xxT-IS with Emax = 25 t
+  - model_id: CC1-H-30T-IS
+    label: CC1-H-xxT-IS with Emax = 30 t
+  - model_id: CC1-H-40T-IS
+    label: CC1-H-xxT-IS with Emax = 40 t
+  - model_id: CC1-H-50T-IS
+    label: CC1-H-xxT-IS with Emax = 50 t
+  - model_id: CC2-10T
+    label: CC2-xxT with Emax = 10 t
+  - model_id: CC2-20T
+    label: CC2-xxT with Emax = 20 t
+  - model_id: CC2-25T
+    label: CC2-xxT with Emax = 25 t
+footnotes: []
+matrix_tables:
+- name: Characteristics
+  columns:
+  - characteristic
+  - symbol
+  - unit
+  - cc1_h_xxt_and_cc1_h_xxt_is
+  - cc2_xxt
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - characteristic: Accuracy class
+    symbol: Class
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: C
+    cc2_xxt: C
+  - characteristic: Maximum number of load cell verification intervals
+    symbol: nmax
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: 6000 / 5000 / 4000 / 3000
+    cc2_xxt: 4000 / 3000
+  - characteristic: Humidity symbol
+    symbol:
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: CH
+    cc2_xxt: CH
+  - characteristic: Minimum dead load
+    symbol: Emin
+    unit: kg
+    cc1_h_xxt_and_cc1_h_xxt_is: 0
+    cc2_xxt: 0
+  - characteristic: Maximum capacity
+    symbol: Emax
+    unit: t
+    cc1_h_xxt_and_cc1_h_xxt_is: 10 / 20 / 25 / 30 / 40 / 50
+    cc2_xxt: 10 / 20 / 25
+  - characteristic: Safe load limit
+    symbol: Elim
+    unit: t
+    cc1_h_xxt_and_cc1_h_xxt_is: 1.5*Emax
+    cc2_xxt: 1.5*Emax
+  - characteristic: Minimum verification interval
+    symbol: vmin
+    unit: kg
+    cc1_h_xxt_and_cc1_h_xxt_is: 1000*Emax/15000 or 1000*Emax/12500 or 1000*Emax/10000 or 1000*Emax/8000
+    cc2_xxt: 1000*Emax/10000 or 1000*Emax/8000
+  - characteristic: Apportionment factor
+    symbol: pLC
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: 0.8
+    cc2_xxt: 0.8
+  - characteristic: Ratio of minimum LC verification interval Y = Emax / vmin
+    symbol: "Y"
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: 15000 / 12500 / 10000 / 8000
+    cc2_xxt: 10000 / 8000
+  - characteristic: Ratio of minimum dead load output return Z = Emax / (2*DR)
+    symbol: Z
+    unit:
+    cc1_h_xxt_and_cc1_h_xxt_is: 6000 in the case of nmax = 6000
+    cc2_xxt: 4000 in the case of nmax = 4000
+  - characteristic: Excitation voltage
+    symbol:
+    unit: V DC
+    cc1_h_xxt_and_cc1_h_xxt_is: 6 ~ 8
+    cc2_xxt: 6 ~ 8
+  - characteristic: Cable length (maximum)
+    symbol:
+    unit: m
+    cc1_h_xxt_and_cc1_h_xxt_is: 20
+    cc2_xxt: 20
+  description: >-
+    Characteristics table grouped by model designation family. CC1-H-xxT and CC1-H-xxT-IS columns are
+    identical (xx equals Emax in tonnes); CC2-xxT is listed separately (xx equals Emax in tonnes).
+  footnotes: []

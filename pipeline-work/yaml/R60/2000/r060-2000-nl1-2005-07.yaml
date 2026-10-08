@@ -1,0 +1,140 @@
+_meta:
+  cert_id: 1429
+  num: R060/2000-NL1-2005.07
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2005'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2005-07.pdf
+certificate:
+  number: R60/2000-NL1-05.07
+  scheme: A
+  project_number: '505230'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2005-06-13'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - D-64293 Darmstadt
+  - Germany
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - D-64293 Darmstadt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - PW16/..
+  module_designation:
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min: 75
+        max: 660
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_platform_size:
+      value: 600 x 600
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_verification_intervals_nmax
+    axis: accuracy_class
+    values:
+    - condition: D
+      value: 1000
+    - condition: C
+      value: 1000
+    - condition: C
+      value: 1500
+    - condition: C
+      value: 2000
+    - condition: C
+      value: 2500
+    - condition: C
+      value: 3000
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: D
+      value: 2500
+    - condition: C
+      value: 15000
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+  - D
+test_reports:
+- id: R60/1991-NL-99.13A
+  pages: 38
+  role: test_report
+- id: R60/1991-NL-99.13B
+  pages: 36
+  role: test_report
+- id: TC5572
+  role: documentation_file
+matrix_tables:
+- name: Characteristics by accuracy class
+  columns:
+  - accuracy_class
+  - max_load_cell_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  rows:
+  - accuracy_class: D
+    max_load_cell_verification_intervals_nmax: 1000
+    ratio_y_emax_over_vmin: 2500
+  - accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 1000
+    ratio_y_emax_over_vmin: 15000
+  - accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 1500
+    ratio_y_emax_over_vmin: 15000
+  - accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 2000
+    ratio_y_emax_over_vmin: 15000
+  - accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 2500
+    ratio_y_emax_over_vmin: 15000
+  - accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 3000
+    ratio_y_emax_over_vmin: 15000
+  description: >-
+    Accuracy class D covers nmax=1000 with Y=2500; class C covers nmax of 1000, 1500, 2000, 2500 and 3000
+    with Y=15000. Maximum capacity (Emax) range 75 kg to 660 kg applies to all variants.
+  footnotes: []

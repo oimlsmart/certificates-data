@@ -1,0 +1,215 @@
+_meta:
+  cert_id: 4483
+  num: R051/2006-NL1-2017.05
+  applicant: Teraoka Seiko Co. Ltd.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-nl1-2017-05.pdf
+certificate:
+  number: R51/2006-NL1-17.05
+  scheme: A
+  project_number: '16200470'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2017-11-28'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Teraoka Seiko Co., Ltd.
+  address_lines:
+  - 5-13-12, Kugahara, Ohta-ku
+  - 146-8580 Tokyo
+  - Japan
+manufacturers:
+- name: Teraoka Seiko Co., Ltd.
+  address_lines:
+  - 5-13-12, Kugahara, Ohta-ku
+  - 146-8580 Tokyo
+  - Japan
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - AW-5600
+  - AW-5600CPR
+  description: Automatic catchweighing instrument destined to be used as weigh labeller or weigh-price
+    labeller.
+characteristics:
+  type_level:
+    destined_to_be_used_as:
+      value: Weigh labeller or weigh-price labeler
+      unit_symbol:
+      unit_id:
+    accuracy_class:
+      value: Y(a)
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 6
+        max: 15
+      unit_symbol: kg
+      unit_id:
+    minimum_capacity:
+      value:
+        min: 20
+        max:
+      unit_symbol: e
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_range_types:
+      value: single interval or multi-interval
+      unit_symbol:
+      unit_id:
+    maximum_number_of_scale_intervals_single_interval:
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      unit_id:
+    maximum_number_of_scale_intervals_multi_interval:
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      unit_id:
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    maximum_rate_of_operation:
+      value: 36
+      unit_symbol: packages/minute
+      unit_id:
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    humidity:
+      value: non-condensing
+      unit_symbol:
+      unit_id:
+    intended_location:
+      value: closed
+      unit_symbol:
+      unit_id:
+    console_software_version:
+      value: 1.xx or 2.xx or 3.xx (xx = 00 ... 99)
+      unit_symbol:
+      unit_id:
+    ad_board_software_version:
+      value: 3.xx (for TPB-3356 A/D-board, xx = 22 ... 99) or 1.xx (for TPB-3772 A/D-board, xx = 00 ...
+        99)
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: tare_limit
+    axis: weighing_range_type
+    values:
+    - condition: single interval
+      value:
+        min:
+        max: -50
+      unit_symbol: "%"
+    - condition: multi-interval
+      value: "-Max1"
+      unit_symbol:
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - Y(a)
+test_reports:
+- id: R51/2006-NL1-08.01
+  date: '2008-11-21'
+  pages: 18
+  role: type_evaluation_report
+- id: NMi-12200108-01
+  date: '2014-06-25'
+  pages: 49
+  role: test_report
+- id: NMi-12200108-08
+  revision: '1'
+  date: '2014-08-08'
+  pages: 17
+  role: test_report
+- id: NMi-12200108-09
+  date: '2014-08-08'
+  pages: 12
+  role: test_report
+- id: R76/1992-NL1-10.10
+  revision: '1'
+  date: '2015-01-09'
+  pages: 34
+  role: test_report
+- id: R76/1992-NL1-10.11
+  revision: '1'
+  date: '2015-01-09'
+  pages: 26
+  role: test_report
+- id: NMi-16200470-03
+  date: '2017-03-22'
+  pages: 27
+  role: test_report
+- id: NMi-16200470-04
+  date: '2017-03-22'
+  pages: 47
+  role: test_report
+- id: NMi-16200470-05
+  date: '2017-03-22'
+  pages: 12
+  role: test_report
+- id: NMi-16200470-06
+  date: '2017-03-22'
+  pages: 17
+  role: test_report
+- id: NMi-16200470-09
+  date: '2017-11-20'
+  pages: 11
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: AW-5600
+    label: AW-5600
+    attributes: {}
+  - model_id: AW-5600CPR
+    label: AW-5600CPR
+    attributes: {}
+components:
+- role: A/D board
+  type_designations:
+  - TPB-3356
+  - TPB-3772
+  alternatives: OR
+  characteristics:
+    TPB-3356:
+      software_version: 3.xx (xx = 22 ... 99)
+    TPB-3772:
+      software_version: 1.xx (xx = 00 ... 99)

@@ -1,0 +1,202 @@
+_meta:
+  cert_id: 5139
+  num: R76/2006-A-NL1-20.44
+  applicant: Shanghai Teraoka Electronic Co. Ltd.
+  issuing_year: '2020'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2020-44.pdf
+certificate:
+  number: R76/2006-A-NL1-20.44
+  scheme: A
+  project_number: '2488135'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2020-08-03'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronics Co., Ltd.
+  address_lines:
+  - No.6058 of Nan Ting Road
+  - Ting Ling Town, Jin Shan District
+  - Shanghai 201505
+  - China
+manufacturers:
+- name: Shanghai Teraoka Electronics Co., Ltd.
+  address_lines:
+  - No.6058 of Nan Ting Road
+  - Ting Ling Town, Jin Shan District
+  - Shanghai 201505
+  - China
+certified_type:
+  category: Weighing module
+  type_designations:
+  - AD2000
+  - RM-5800LL B
+  - RM-5800NLL
+  module_designation: Weighing module
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 37.5
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_ranges:
+      value: Single interval; Multi-interval
+      unit_symbol:
+      unit_id:
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+    fraction_of_maximum_permisible_error:
+      value: 1
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    software_version:
+      value: 1.x.x (x = 0…9)
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing_module_configuration
+    values:
+    - condition: configuration 1, single interval
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+    - condition: configuration 1, multi-interval (per partial weighing range)
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+    - condition: configuration 2, single interval
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+    - condition: configuration 2, multi-interval (per partial weighing range)
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: weighing_module_configuration
+    values:
+    - condition: configuration 1, type AD2000 (via RS232)
+      value: 12
+      unit_symbol: V
+    - condition: configuration 1, other types (AC mains)
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    - condition: configuration 2, type AD2000 (via USB)
+      value: 5
+      unit_symbol: V
+  - attribute: power_supply_type
+    axis: weighing_module_configuration
+    values:
+    - condition: configuration 1, type AD2000 (via RS232)
+      value: DC
+    - condition: configuration 1, other types (AC mains)
+      value: AC
+    - condition: configuration 2, type AD2000 (via USB)
+      value: DC
+  - attribute: power_supply_frequency
+    axis: weighing_module_configuration
+    values:
+    - condition: configuration 1, other types (AC mains)
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+  - attribute: tare_limit
+    axis: weighing_range_mode
+    values:
+    - condition: instruments with one weighing range
+      value: T ≤ -50% of Max
+    - condition: multi-interval instruments
+      value: T ≤ -Max_i
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-14200679-01
+  date: '2015-02-15'
+  pages: 43
+  role: test_report
+- id: NMi-14200679-02
+  date: '2015-02-15'
+  pages: 28
+  role: test_report
+- id: NMi-15200365-01
+  date: '2015-06-12'
+  pages: 15
+  role: test_report
+- id: NMi-2353595-01
+  date: '2019-05-08'
+  pages: 13
+  role: test_report
+- id: NMi-2391421-01
+  date: '2019-09-04'
+  pages: 14
+  role: test_report
+- id: NMi-2433988-01
+  date: '2020-03-10'
+  pages: 42
+  role: test_report
+- id: NMi-2441754-01
+  date: '2020-03-10'
+  pages: 26
+  role: test_report
+- id: NMi-2488135-01
+  date: '2020-08-03'
+  pages: 16
+  role: test_report
+- id: NMi-2488135-02
+  date: '2020-08-03'
+  pages: 16
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: AD2000
+  - model_id: RM-5800LL B
+  - model_id: RM-5800NLL

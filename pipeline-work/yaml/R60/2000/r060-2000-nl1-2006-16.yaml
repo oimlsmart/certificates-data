@@ -1,0 +1,175 @@
+_meta:
+  cert_id: 1751
+  num: R060/2000-NL1-2006.16
+  applicant: Soehnle-Waagen GmbH + Co.
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2006-16.pdf
+certificate:
+  number: R60/2000-NL1-06.16
+  project_number: '601703'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-08-31'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - P.O. Box 394
+  - 3300 AJ Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Soehnle Professional GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Soehnle Strasse 2
+  - D-71540 Murrhardt
+  - Germany
+manufacturers:
+- name: Soehnle Professional GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Soehnle Strasse 2
+  - D-71540 Murrhardt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - SPS14
+  description: >-
+    A shear beam load cell; Fraction Pi = 0.7; Temperature range -10 °C / +40 °C; for specifications see
+    page 2
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: SPS14 Emax=300-500kg
+      value:
+        min: 300
+        max: 500
+    - model: SPS14 Emax=500-2000kg
+      value:
+        min: 500
+        max: 2000
+    - model: SPS14 Emax=2000-10000kg
+      value:
+        min: 2000
+        max: 10000
+  - attribute: max_load_cell_verification_intervals_nmax
+    unit_symbol:
+    values:
+    - model: SPS14 Emax=300-500kg
+      value: 4000
+    - model: SPS14 Emax=500-2000kg
+      value: 6000
+    - model: SPS14 Emax=2000-10000kg
+      value: 4000
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: SPS14 Emax=300-500kg
+      value: 12000
+    - model: SPS14 Emax=500-2000kg
+      value: 15000
+    - model: SPS14 Emax=2000-10000kg
+      value: 10000
+  - attribute: ratio_z_emax_over_2dr
+    unit_symbol:
+    values:
+    - model: SPS14 Emax=300-500kg
+      value: 4000
+    - model: SPS14 Emax=500-2000kg
+      value: 8000
+    - model: SPS14 Emax=2000-10000kg
+      value: 4000
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-04.04
+  pages: 40
+  role: type_evaluation_report
+- id: R60/2000-NL1-05.10
+  pages: 37
+  role: type_evaluation_report
+- id: R60/2000-NL1-06.05
+  pages: 37
+  role: type_evaluation_report
+- id: R60/2000-NL1-06.13
+  pages: 37
+  role: type_evaluation_report
+- id: TC6991
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: SPS14 Emax=300-500kg
+  - model_id: SPS14 Emax=500-2000kg
+  - model_id: SPS14 Emax=2000-10000kg
+matrix_tables:
+- name: Load cell specifications
+  columns:
+  - maximum_capacity
+  - accuracy_class
+  - max_load_cell_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  - ratio_z_emax_over_2dr
+  column_units:
+  - kg
+  -
+  -
+  -
+  -
+  rows:
+  - maximum_capacity:
+      min: 300
+      max: 500
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 12000
+    ratio_z_emax_over_2dr: 4000
+  - maximum_capacity:
+      min: 500
+      max: 2000
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 6000
+    ratio_y_emax_over_vmin: 15000
+    ratio_z_emax_over_2dr: 8000
+  - maximum_capacity:
+      min: 2000
+      max: 10000
+    accuracy_class: C
+    max_load_cell_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000
+  description: Specifications grouped by maximum capacity (Emax) ranges, all for accuracy class C.
+  footnotes: []

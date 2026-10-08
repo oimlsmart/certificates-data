@@ -1,0 +1,274 @@
+_meta:
+  cert_id: 2165
+  num: R049/2006-FR2-2009.06
+  applicant: Actaris
+  issuing_year: '2009'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-fr2-2009-06.pdf
+certificate:
+  number: 2006-FR2-09.06
+  page_total: 1
+  member_state: France
+  date_issued: '2009-02-06'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Jean-Luc LAURENT
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: ACTARIS
+  address_lines:
+  - 11, boulevard Pasteur
+  - FRA - 67500 - HAGUENAU
+manufacturers:
+- name: ACTARIS
+  address_lines:
+  - 11, boulevard Pasteur
+  - FRA - 67500 - HAGUENAU
+certified_type:
+  category: Water meter
+  type_designations:
+  - TU1M
+  module_designation: Not applicable
+  description: Single jet water meter ACTARIS type TU1M intended for the measurement of clean water.
+characteristics:
+  type_level:
+    version:
+      value: linear
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    q2_over_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_class:
+      value: T30/T50
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    environmental_class:
+      value: B
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    orientation:
+      value: horizontal
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    length:
+      value: 260
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    indicating_device_range:
+      value: 99999
+      unit_symbol: m³
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value: 0.05
+      unit_symbol: dm³
+      unit_id:
+      footnote_markers: []
+    reverse_flow_measurement:
+      value: 'no'
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "*"
+  model_level:
+  - attribute: nominal_diameter
+    unit_symbol: mm
+    values:
+    - model: DN25
+      value: 25
+    - model: DN32
+      value: 32
+  - attribute: permanent_flowrate_q3
+    unit_symbol: m³/h
+    values:
+    - model: DN25
+      value: 6.3
+    - model: DN32
+      value: 10
+  - attribute: overload_flowrate_q4
+    unit_symbol: m³/h
+    values:
+    - model: DN25
+      value: 7.875
+    - model: DN32
+      value: 12.5
+  - attribute: connections
+    unit_symbol:
+    values:
+    - model: DN25
+      value: Threads DN 25
+    - model: DN32
+      value: Threads DN 32
+  - attribute: cyclical_volume
+    unit_symbol: dm³
+    values:
+    - model: DN25
+      value: 0.0839
+    - model: DN32
+      value: 0.12
+  config_level:
+  - attribute: q3_over_q1_ratio
+    axis: selected flow ratio (per nominal diameter)
+    values:
+    - condition: DN25
+      value: 100
+      unit_symbol:
+    - condition: DN25
+      value: 125
+      unit_symbol:
+    - condition: DN25
+      value: 160
+      unit_symbol:
+    - condition: DN25
+      value: 200
+      unit_symbol:
+    - condition: DN32
+      value: 100
+      unit_symbol:
+    - condition: DN32
+      value: 125
+      unit_symbol:
+    - condition: DN32
+      value: 160
+      unit_symbol:
+    - condition: DN32
+      value: 200
+      unit_symbol:
+recommendation:
+  id: R49
+  edition: 2006
+  accuracy_classes:
+  - '2'
+test_reports:
+- id: RE.TU1M25-32.AA
+  pages: 80
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2009-02-06'
+  changes:
+model_family:
+  family_name: TU1M
+  models:
+  - model_id: DN25
+  - model_id: DN32
+components:
+- role: indicating device
+  type_designations:
+  - TVM
+  - TSN
+  alternatives: OR
+  characteristics:
+    TVM: glass and metal
+    TSN: plastic material
+footnotes:
+- marker: "*"
+  text: >-
+    The water meter is not designed to measure reverse flow but can withstand an accidental reverse flow
+    without any deterioration or change in metrological properties.
+matrix_tables:
+- name: Metrology characteristics
+  columns:
+  - nominal_diameter
+  - permanent_flowrate_q3
+  - overload_flowrate_q4
+  - q3_over_q1_ratio
+  - q2_over_q1_ratio
+  - accuracy_class
+  - temperature_class
+  - environmental_class
+  - maximum_admissible_pressure
+  - connections
+  - length
+  - cyclical_volume
+  - indicating_device_range
+  - verification_scale_interval
+  - reverse_flow_measurement
+  column_units:
+  -
+  - m³/h
+  - m³/h
+  -
+  -
+  -
+  -
+  -
+  - bar
+  -
+  - mm
+  - dm³
+  - m³
+  - dm³
+  -
+  rows:
+  - nominal_diameter: 25
+    permanent_flowrate_q3: 6.3
+    overload_flowrate_q4: 7.875
+    q3_over_q1_ratio:
+    - 100
+    - 125
+    - 160
+    - 200
+    q2_over_q1_ratio: 1.6
+    accuracy_class: 2
+    temperature_class: T30/T50
+    environmental_class: B
+    maximum_admissible_pressure: 16
+    connections: Threads DN 25
+    length: 260
+    cyclical_volume: 0.0839
+    indicating_device_range: 99999
+    verification_scale_interval: 0.05
+    reverse_flow_measurement: 'no'
+  - nominal_diameter: 32
+    permanent_flowrate_q3: 10
+    overload_flowrate_q4: 12.5
+    q3_over_q1_ratio:
+    - 100
+    - 125
+    - 160
+    - 200
+    q2_over_q1_ratio: 1.6
+    accuracy_class: 2
+    temperature_class: T30/T50
+    environmental_class: B
+    maximum_admissible_pressure: 16
+    connections: Threads DN 32
+    length: 260
+    cyclical_volume: 0.12
+    indicating_device_range: 99999
+    verification_scale_interval: 0.05
+    reverse_flow_measurement: 'no'
+  description: >-
+    Annex characteristics table: indicating device is glass and metal (TVM) or plastic material (TSN);
+    version linear; one column set per nominal diameter.
+  footnotes:
+  - "*"

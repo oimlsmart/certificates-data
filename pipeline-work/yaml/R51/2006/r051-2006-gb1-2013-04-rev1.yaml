@@ -1,0 +1,268 @@
+_meta:
+  cert_id: 3647
+  num: R051/2006-GB1-2013.04 Rev. 1
+  applicant: Digi Europe Ltd
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2013-04-rev1.pdf
+certificate:
+  number: R51/2006-GB1-13.04
+  scheme: A
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2015-02-16'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+manufacturers:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+certified_type:
+  category: Automatic catchweigher
+  type_designations:
+  - LI-700-D
+  - CWL-700-D
+  - LIW-700-D
+  description: >-
+    Automatic catchweigher designated the LI-700-D, operating as an automatic weight or weight/price labeller
+    (Category Y) and as an automatic checkweigher (Category X); designated CWL-700-D when configured to
+    operate only as an automatic checkweigher (Category X). Comprises a self-indicating and price-computing
+    weighing machine with associated thermal label printer and mechanical handling facilities; packs are
+    weighed dynamically at a constant rate of operation. Weighing system is a scale conveyor mounted on
+    a load cell. Pricing, pack and labelling information is stored in PLUs. Devices: initial and semi-automatic
+    zero-setting (max 4% of Max), automatic zero-setting after time interval (max 15 min), zero-tracking
+    device, preset tare device, semi-automatic subtractive tare device, zero indication, price computation,
+    PLUs, Ethernet and USB interfaces. Access to metrological settings secured by a switch on the A/D
+    board enclosed in a metal case with tamper-evident seal; static calibration password protected with
+    audit count number.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 10000
+      unit_symbol: g
+      unit_id:
+    scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    maximum_number_of_scale_intervals:
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+      unit_id:
+    maximum_subtractive_tare:
+      value:
+        min:
+        max: -50
+      unit_symbol: "%"
+      unit_id:
+    max_operating_rate:
+      value:
+        min:
+        max: 65
+      unit_symbol: packs/min
+      unit_id:
+      footnote_markers:
+      - "*"
+    max_conveyor_speed:
+      value:
+        min:
+        max: 40
+      unit_symbol: m/min
+      unit_id:
+    climatic_environment_temperature:
+      value:
+        min: 0
+        max: 30
+      unit_symbol: "°C"
+      unit_id:
+    climatic_environment:
+      value: Non-condensing (closed)
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E1, E2
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC, single phase
+      unit_symbol:
+      unit_id:
+    label_applicator_pneumatic_pressure:
+      value:
+        min: 4
+        max: 6
+      unit_symbol: bar
+      unit_id:
+    initial_zero_setting_device_range_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    semi_automatic_zero_setting_device_range_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    automatic_zero_setting_time_interval:
+      value:
+        min:
+        max: 15
+      unit_symbol: min
+      unit_id:
+    accuracy_classes:
+      value: Y(a), XIII(1)
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: Ethernet, USB
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: 2.xx.xx.xxxx
+      unit_symbol:
+      unit_id:
+    legal_metrology_dll:
+      value: HI700.dll
+      unit_symbol:
+      unit_id:
+    world_view_dlls:
+      value: HeaderDisplay.dll v1.0.0.10; HI710.dll v1.0.0.79
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: minimum_capacity
+    axis: accuracy_class
+    values:
+    - condition: Class Y (Max ≤ 6 kg)
+      value: 50 g or 20 e (whichever is higher)
+      unit_symbol:
+    - condition: Class X (Max ≤ 6 kg)
+      value:
+        min: 50
+        max:
+      unit_symbol: g
+  - attribute: load_cell_type
+    axis: maximum_capacity
+    values:
+    - condition: Max ≤ 6 kg
+      value: HBM PW15
+      unit_symbol:
+    - condition: Max ≥ 6 kg
+      value: HBM PW30
+      unit_symbol:
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - Y(a)
+  - XIII(1)
+test_reports:
+- id: P01220
+  revision: '1'
+  pages: 23
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2013-11-21'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2015-02-16'
+  changes: World View software added.
+model_family:
+  family_name:
+  models:
+  - model_id: LI-700-D
+    label: >-
+      Automatic catchweigher operating as automatic weight or weight/price labeller (Category Y) and as
+      automatic checkweigher (Category X)
+    attributes:
+      category: Y(a) and XIII(1)
+  - model_id: CWL-700-D
+    label: Configured to operate only as an automatic checkweigher (Category X)
+    attributes:
+      category: XIII(1)
+  - model_id: LIW-700-D
+    label: W denotes an increased conveyor width
+    attributes: {}
+components:
+- role: load cell
+  type_designations:
+  - HBM PW15
+  - HBM PW30
+  alternatives: OR
+- role: combined PC and LCD display
+  type_designations:
+  - Aplex Technology AHM-6127A
+  alternatives:
+- role: A/D conversion PCB
+  type_designations:
+  - Teraoka/Digi Europe DSP A/D conversion PCB
+  alternatives:
+- role: power supply unit
+  type_designations:
+  - CIT-400W-Micro-ATX-Silent-PSU
+  alternatives:
+- role: thermal label printer (labeller)
+  type_designations:
+  - DEL labeller (various types)
+  alternatives:
+  characteristics:
+    labellers_per_instrument:
+      value:
+        min: 1
+        max: 2
+      unit_symbol:
+      unit_id:
+    configuration:
+      value: one may be configured as a bottom labeller
+      unit_symbol:
+      unit_id:
+footnotes: []
+matrix_tables: []

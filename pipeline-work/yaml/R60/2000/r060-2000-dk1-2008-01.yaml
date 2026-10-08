@@ -1,0 +1,177 @@
+_meta:
+  cert_id: 2113
+  num: R060/2000-DK1-2008.01
+  applicant: ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi
+  issuing_year: '2008'
+  status: Valid
+  issuer: DK1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-dk1-2008-01.pdf
+certificate:
+  number: R60/2000-DK1-08.01
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2000-05-07'
+issuing_authority:
+  name: The Danish Accreditation and Metrology Fund
+  address_lines:
+  - Dyregårdsvej 5B
+  - 2740 Skovlunde
+  - Denmark
+  person_responsible: P. Claudi Johansen
+  person_title: CIML member
+  phone: "+45 77 33 95 00"
+  email: danak@danak.dk
+  website: www.dansk-metrologi.dk
+applicants:
+- name: ESIT Elektronik Ltd.
+  address_lines:
+  - Nişantepe Mahallesi Alemdar
+  - Ümraniye - Istanbul
+  - Turkey
+manufacturers:
+- name: ESIT Elektronik Ltd.
+certified_type:
+  category: Load cell
+  type_designations:
+  - SSP
+  module_designation:
+  description: Single point, strain gauge load cell
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage:
+      value:
+        min: 5
+        max: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_output_return_dr:
+      value: 0.00429
+      unit_symbol: "%Emax"
+      unit_id:
+      footnote_markers: []
+    relative_dr_z:
+      value: 11655
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_relative:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_limit:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_rating:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    input_resistance:
+      value: 380/350
+      unit_symbol: Ohm
+      unit_id:
+      footnote_markers: []
+    humidity_condition:
+      value: CH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=40kg
+      value: 40
+    - model: Emax=80kg
+      value: 80
+    - model: Emax=100kg
+      value: 100
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    unit_symbol:
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: minimum_verification_interval_vmin
+    axis: accuracy_class
+    unit_symbol: "%Emax"
+    values:
+    - condition: C3
+      value: 0.00723
+      unit_symbol: "%Emax"
+    - condition: C4
+      value: 0.00833
+      unit_symbol: "%Emax"
+    - condition: C6
+      value: 0.01
+      unit_symbol: "%Emax"
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    unit_symbol:
+    values:
+    - condition: C3
+      value: 13831
+      unit_symbol:
+    - condition: C4
+      value: 12000
+      unit_symbol:
+    - condition: C6
+      value: 10000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+  - C4
+  - C6
+test_reports:
+- id: DANAK-1910279
+  pages: 35
+  role: test_report
+model_family:
+  family_name: SSP
+  models:
+  - model_id: Emax=20kg
+  - model_id: Emax=40kg
+  - model_id: Emax=80kg
+  - model_id: Emax=100kg

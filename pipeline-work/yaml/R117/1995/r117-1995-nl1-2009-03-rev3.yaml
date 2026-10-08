@@ -1,0 +1,224 @@
+_meta:
+  cert_id: 3294
+  num: R117/1995-NL1-2009.03 Rev. 3
+  applicant: Tokheim Group S.A.S.
+  issuing_year: '2013'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-nl1-2009-03-rev3.pdf
+certificate:
+  number: R117/1995-NL1-09.03
+  scheme: A
+  project_number: '12200808'
+  page_total: 1
+  member_state: Netherlands
+  date_issued: '2013-11-20'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Tokheim Group S.A.S
+  address_lines:
+  - Paris Nord 2
+  - 5, Rue des Chardonnerets
+  - BP 67040 Tremblay en France
+  - 95971 Roissy Ch de Gaulle Cedex
+  - France
+manufacturers:
+- name: Tokheim Group S.A.S
+  address_lines:
+  - Paris Nord 2
+  - 5, Rue des Chardonnerets
+  - BP 67040 Tremblay en France
+  - 95971 Roissy Ch de Gaulle Cedex
+  - France
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Quantium XXXX
+  module_designation:
+  description: >-
+    A Fuel Dispenser for Motor Vehicles. Comprising one or more measuring systems in the same housing;
+    each measuring system consists of one Tokheim 'TQP-RS' (EPZ) combined pump and gas elimination device,
+    one Tokheim 'TQM' measurement transducer and one Tokheim 'TMC' or 'TQC-China' calculating/indicating
+    device. When more than one measuring system in one housing, the 'TMC' or 'TQC-China' calculating/indicating
+    device may be a common part of the measuring systems. For multi-product dispensers it is only possible
+    to deliver one product at the same time on one side of the dispenser. Conformity attested with OIML
+    R117 Edition 1995 (accuracy class 0.5) and OIML R118 Edition 1995.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    liquid:
+      value: gasoline/gasoil
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication:
+      value: 9999.99
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 9.999
+      unit_symbol: EURO/L
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 9999.99
+      unit_symbol: EURO/L
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_flow_rate
+    unit_symbol: L/min
+    values:
+    - model: Qmax=80 L/min
+      value: 80
+      footnote_markers: []
+    - model: Qmax=45 L/min
+      value: 45
+      footnote_markers: []
+  - attribute: minimum_flow_rate
+    unit_symbol: L/min
+    values:
+    - model: Qmax=80 L/min
+      value: 2.0
+      footnote_markers: []
+    - model: Qmax=45 L/min
+      value: 4.5
+      footnote_markers: []
+  - attribute: minimum_measured_quantity
+    unit_symbol: L
+    values:
+    - model: Qmax=80 L/min
+      value: 2
+      footnote_markers: []
+    - model: Qmax=45 L/min
+      value: 5
+      footnote_markers: []
+  config_level:
+  - attribute: gas_separator_and_transducer_configuration
+    axis: maximum_flow_rate
+    values:
+    - condition: Qmax=80 L/min
+      value: >-
+        two gas separators and two measurement transducers connected in parallel, delivery via one hose
+        with nozzle
+      unit_symbol:
+    - condition: Qmax=45 L/min
+      value: one gas elimination device and one measurement transducer
+      unit_symbol:
+recommendation:
+  id: R117
+  edition: 1995
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: CPC-702138
+  role: evaluation_report
+- id: CPC-702138-1
+  role: evaluation_report
+- id: CPC-505007
+  role: evaluation_report
+- id: NMi-12200478
+  role: evaluation_report
+revision_history:
+- revision: '3'
+  date: '2013-11-20'
+  changes: >-
+    This revision replaces the earlier version of the OIML Certificate of Conformity; issued due to editorial
+    changes.
+model_family:
+  family_name: Quantium XXXX
+  models:
+  - model_id: Qmax=80 L/min
+    label: Quantium XXXX with Qmax 80 L/min
+    attributes:
+      maximum_flow_rate: 80
+  - model_id: Qmax=45 L/min
+    label: Quantium XXXX with Qmax 45 L/min
+    attributes:
+      maximum_flow_rate: 45
+components:
+- role: combined pump and gas elimination device
+  type_designations:
+  - EPZ
+  - TQP-RS
+  alternatives: OR
+  characteristics:
+    variants:
+    - TQP-RS (EPZ with a high cover)
+    - TQP-RS (EPZ with a lower top cover)
+- role: measurement transducer
+  type_designations:
+  - TQM
+  alternatives:
+  characteristics: {}
+- role: calculating/indicating device
+  type_designations:
+  - TMC
+  - TQC-China
+  alternatives: OR
+  characteristics: {}
+footnotes: []
+matrix_tables:
+- name: Characteristics of fuel dispensers for Motor Vehicles, model 'Quantium XXXX'
+  columns:
+  - maximum_flow_rate
+  - minimum_flow_rate
+  - accuracy_class
+  - minimum_measured_quantity
+  - liquid
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  column_units:
+  - L/min
+  - L/min
+  -
+  - L
+  -
+  - L
+  - EURO/L
+  - EURO/L
+  rows:
+  - maximum_flow_rate: 80
+    minimum_flow_rate: 2.0
+    accuracy_class: 0.5
+    minimum_measured_quantity: 2
+    liquid: gasoline/gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 9.999
+    maximum_price_to_pay: 9999.99
+  - maximum_flow_rate: 45
+    minimum_flow_rate: 4.5
+    accuracy_class: 0.5
+    minimum_measured_quantity: 5
+    liquid: gasoline/gasoil
+    maximum_volume_indication: 9999.99
+    maximum_unit_price: 9.999
+    maximum_price_to_pay: 9999.99
+  description: >-
+    Two flow-rate variants of the Quantium XXXX dispenser, each with one 'EPZ' or 'TQP-RS' gas elimination
+    device, one 'TQM' measurement transducer and one 'TMC' or 'TQC-China' calculating/indicating device.
+    A Qmax of 80 L/min is reached by connecting two gas separators and two measurement transducers in
+    parallel with delivery via one hose with nozzle.
+  footnotes: []

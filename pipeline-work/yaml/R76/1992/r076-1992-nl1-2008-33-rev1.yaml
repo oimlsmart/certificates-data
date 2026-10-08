@@ -1,0 +1,233 @@
+_meta:
+  cert_id: 2269
+  num: R076/1992-NL1-2008.33 Rev. 1
+  applicant: Shanghai Teraoka Electronic Co., Ltd.
+  issuing_year: '2009'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2008-33-rev1.pdf
+certificate:
+  number: R76/1992-NL1-08.33
+  scheme: A
+  project_number: '9200106'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2009-07-17'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan District, Shanghai 201505
+  - Peoples Republic of China
+manufacturers:
+- name: Shanghai Teraoka Electronic Co., Ltd.
+  address_lines:
+  - Tinglin Industry Developmental Zone
+  - Jin Shan District, Shanghai 201505
+  - Peoples Republic of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DS-560
+  - DS-561
+  module_designation:
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    max_number_of_divisions_per_partial_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    max_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: limit_t
+    axis: scale_configuration
+    values:
+    - condition: single-interval scale
+      value: "≤ -½Max"
+      unit_symbol:
+    - condition: multi-interval scale
+      value: "≤ -Max₁"
+      unit_symbol:
+  - attribute: maximum_capacity
+    axis: load_cell_type
+    values:
+    - condition: JW(G)
+      value:
+        min: 6
+        max: 30
+      unit_symbol: kg
+    - condition: P
+      value:
+        min: 3
+        max: 600
+      unit_symbol: kg
+  - attribute: verification_scale_interval_e
+    axis: load_cell_type
+    values:
+    - condition: JW(G)
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: P
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+recommendation:
+  id: R76
+  edition: 1992
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-08.33a
+  pages: 43
+  role: test_report
+- id: R76/1992-NL1-08.33b
+  pages: 54
+  role: test_report
+- id: R76/1992-NL1-08.33c
+  pages: 43
+  role: test_report
+- id: R76/1992-NL1-08.33d
+  pages: 13
+  role: test_report
+- id: T7462
+  role: documentation_file
+revision_history:
+- revision: '1'
+  date: '2009-07-17'
+model_family:
+  family_name:
+  models:
+  - model_id: DS-560
+  - model_id: DS-561
+components:
+- role: Load cell
+  type_designations:
+  - JW(G)
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value:
+        min: 6
+        max: 30
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval_e:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    max_number_of_divisions_per_partial_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    max_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+- role: Load cell
+  type_designations:
+  - P
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 600
+      unit_symbol: kg
+      unit_id:
+    verification_scale_interval_e:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    max_number_of_divisions_per_partial_weighing_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+    max_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+matrix_tables:
+- name: Instrument characteristics per load cell type
+  columns:
+  - load_cell_type
+  - maximum_capacity
+  - verification_scale_interval_e
+  - max_number_of_divisions_per_partial_weighing_range
+  - max_partial_weighing_ranges
+  column_units:
+  -
+  - kg
+  - g
+  -
+  -
+  rows:
+  - load_cell_type: JW(G)
+    maximum_capacity:
+      min: 6
+      max: 30
+    verification_scale_interval_e:
+      min: 1
+      max:
+    max_number_of_divisions_per_partial_weighing_range:
+      min:
+      max: 3000
+    max_partial_weighing_ranges: 2
+  - load_cell_type: P
+    maximum_capacity:
+      min: 3
+      max: 600
+    verification_scale_interval_e:
+      min: 1
+      max:
+    max_number_of_divisions_per_partial_weighing_range:
+      min:
+      max: 3000
+    max_partial_weighing_ranges: 2
+  description: >-
+    The certified types DS-560 and DS-561 may be equipped with load cell type JW(G) or load cell type
+    P. Divisions and partial weighing range limits apply per partial weighing range.
+  footnotes: []

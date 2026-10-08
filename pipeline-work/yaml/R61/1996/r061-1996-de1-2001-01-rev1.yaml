@@ -1,0 +1,217 @@
+_meta:
+  cert_id: 2905
+  num: R061/1996-DE1-2001.01 Rev. 1
+  applicant: FLSmidth Ventomatic SpA
+  issuing_year: '2012'
+  status: Valid
+  issuer: DE1
+  recommendation: R61
+  edition_year: 1996
+  extraction_method: glm-extract
+  source_pdf: certificates/R61/1996/r061-1996-de1-2001-01-rev1.pdf
+certificate:
+  number: R61/1996-DE-01.01
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2012-03-26'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Dirk Ratschko
+  person_title: Head of Department
+applicants:
+- name: FLSmidth Ventomatic S.p.A.
+  address_lines:
+  - Via G. Marconi 20
+  - 24030 Valbrembo (Bergamo)
+  - Italy
+manufacturers:
+- name: FLSmidth Ventomatic S.p.A.
+  address_lines:
+  - Via G. Marconi 20
+  - 24030 Valbrembo (Bergamo)
+  - Italy
+certified_type:
+  category: Automatic gravimetric filling instrument
+  type_designations:
+  - EWU-010
+  module_designation: Not applicable
+  description: >-
+    Automatic gravimetric filling instrument, accuracy class Ref (0.2); the actual class shall be determined
+    at initial verification. The pattern designation EWU-010 may be supplemented by characters identifying
+    the optional equipment.
+characteristics:
+  type_level:
+    scale_interval_d_and_e:
+      value: in accordance with the load cell(s) and the indicator's minimum input voltage
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value: depending on the data of the incorporated load cell(s)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_fill:
+      value: values according to Table 1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    tare_balancing_range:
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+      reference: Max
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_fill_for_d_ge_500
+    axis: accuracy_class
+    values:
+    - condition: X(0.2)
+      value: 500 d
+    - condition: X(0.5)
+      value: 200 d
+    - condition: X(1)
+      value: 100 d
+    - condition: X(2)
+      value: 50 d
+recommendation:
+  id: R61
+  edition: 1996
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - Ref (0.2)
+test_reports:
+- id: 1.14-00053382
+  pages: 65
+  role: type_evaluation_report
+revision_history:
+- revision: '1'
+  date: '2012-03-26'
+  changes: >-
+    Issued because the legal name of the owner changed from Ventomatic S.p.A. to FLSmidth Ventomatic S.p.A.
+    The test results of the former Test Report No. 1.14 - 00053382 (65 pages) remain valid.
+components:
+- role: Load cell(s)
+  alternatives:
+  characteristics:
+    load_cell_class_r60:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_pi:
+      value:
+        min:
+        max: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    min_load_cell_intervals_nlc:
+      value:
+        min: 2000
+        max:
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+      applies_to: instruments class X(0.2) and Max > 10 kg
+    load_cell_impedance:
+      value:
+        min: 117
+        max:
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+- role: Load receptor
+  alternatives:
+  characteristics:
+    construction:
+      value: >-
+        various types with hopper or bridge for containers, with lever system or load transmission immediately
+        from the load receptor into the load cells
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: Indicator
+  alternatives:
+  characteristics:
+    load_cell_supply_voltage:
+      value: 8
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    min_input_voltage_per_interval:
+      value:
+        min: 1.6
+        max:
+      unit_symbol: µV/d
+      unit_id:
+      footnote_markers: []
+      alternative: "≥ 1.6 µV/e if used for integral verification method"
+    max_number_of_intervals_n:
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+matrix_tables:
+- name: 'Table 1: Minimum permissible value of Minfill related to the scale interval (d) of the instrument'
+  columns:
+  - scale_interval_d
+  - minfill_class_x0_2
+  - minfill_class_x0_5
+  - minfill_class_x1
+  - minfill_class_x2
+  column_units:
+  - g
+  - g
+  - g
+  - g
+  - g
+  rows:
+  - scale_interval_d: 10
+    minfill_class_x0_2: 6660
+    minfill_class_x0_5: 2660
+    minfill_class_x1: 1330
+    minfill_class_x2: 660
+  - scale_interval_d: 20
+    minfill_class_x0_2: 6660
+    minfill_class_x0_5: 2660
+    minfill_class_x1: 1340
+    minfill_class_x2: 660
+  - scale_interval_d: 50
+    minfill_class_x0_2: 25000
+    minfill_class_x0_5: 6650
+    minfill_class_x1: 3350
+    minfill_class_x2: 1650
+  - scale_interval_d: 100
+    minfill_class_x0_2: 50000
+    minfill_class_x0_5: 20000
+    minfill_class_x1: 6700
+    minfill_class_x2: 3300
+  - scale_interval_d: 200
+    minfill_class_x0_2: 100000
+    minfill_class_x0_5: 40000
+    minfill_class_x1: 20000
+    minfill_class_x2: 6600
+  - scale_interval_d: "≥500"
+    minfill_class_x0_2: 500 d
+    minfill_class_x0_5: 200 d
+    minfill_class_x1: 100 d
+    minfill_class_x2: 50 d
+  description: The gramme-values are rounded to the d-values which can be indicated.
+  footnotes: []

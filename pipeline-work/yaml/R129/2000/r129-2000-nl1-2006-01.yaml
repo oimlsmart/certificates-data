@@ -1,0 +1,175 @@
+_meta:
+  cert_id: 1685
+  num: R129/2000-NL1-2006.01
+  applicant: SICK AG.
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R129
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R129/2000/r129-2000-nl1-2006-01.pdf
+certificate:
+  number: R129/2000-NL1-06.01
+  project_number: '601851'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-04-12'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: SICK AG.
+  address_lines:
+  - Nimburger Strasse 11
+  - D-79276 Reute
+  - Germany
+manufacturers:
+- name: SICK AG.
+  address_lines:
+  - Nimburger Strasse 11
+  - D-79276 Reute
+  - Germany
+certified_type:
+  category: Multi-dimensional measuring instrument
+  type_designations:
+  - VMS 510
+  description: >-
+    Multi-dimensional measuring instrument for measuring cubic and rectangular, non-irregular shaped,
+    non reflective and opaque boxes.
+characteristics:
+  type_level:
+    maximum_length:
+      value: 2000
+      unit_symbol: mm
+    maximum_width:
+      value: 1000
+      unit_symbol: mm
+    maximum_height:
+      value: 1000
+      unit_symbol: mm
+    maximum_objects_processed:
+      value: 960
+      unit_symbol: 1/min
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+  config_level:
+  - attribute: minimum_length
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 50
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 100
+      unit_symbol: mm
+  - attribute: minimum_width
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 50
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 100
+      unit_symbol: mm
+  - attribute: minimum_height
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 50
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 50
+      unit_symbol: mm
+  - attribute: division_d_length
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 5
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 10
+      unit_symbol: mm
+  - attribute: division_d_width
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 5
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 10
+      unit_symbol: mm
+  - attribute: division_d_height
+    axis: maximum conveyor belt speed (Vmax)
+    values:
+    - condition: Vmax ≤ 1.2 m/s
+      value: 5
+      unit_symbol: mm
+    - condition: Vmax ≤ 2 m/s
+      value: 5
+      unit_symbol: mm
+recommendation:
+  id: R129
+  edition: 2000
+test_reports:
+- id: R129/2000-NL1-06.01A
+  pages: 64
+  role: test_report
+- id: R129/2000-NL1-06.01B
+  pages: 64
+  role: test_report
+matrix_tables:
+- name: Dimensional limits by maximum conveyor belt speed
+  columns:
+  - speed_condition
+  - parameter
+  - length_L
+  - width_W
+  - height_H
+  column_units:
+  -
+  -
+  - mm
+  - mm
+  - mm
+  rows:
+  - speed_condition:
+    parameter: max
+    length_L: 2000
+    width_W: 1000
+    height_H: 1000
+  - speed_condition: Vmax ≤ 1.2 m/s
+    parameter: min
+    length_L: 50
+    width_W: 50
+    height_H: 50
+  - speed_condition: Vmax ≤ 1.2 m/s
+    parameter: d
+    length_L: 5
+    width_W: 5
+    height_H: 5
+  - speed_condition: Vmax ≤ 2 m/s
+    parameter: min
+    length_L: 100
+    width_W: 100
+    height_H: 50
+  - speed_condition: Vmax ≤ 2 m/s
+    parameter: d
+    length_L: 10
+    width_W: 10
+    height_H: 5
+  description: >-
+    Measuring limits for length (L), width (W) and height (H). The Max row applies to the certified type
+    overall; Min and d depend on the maximum conveyor belt speed Vmax.
+  footnotes: []

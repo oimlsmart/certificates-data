@@ -1,0 +1,370 @@
+_meta:
+  cert_id: 4528
+  num: R051/2006-GB1-2019.03 Rev. 5
+  applicant: Marel Ltd
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2019-03-rev5.pdf
+certificate:
+  number: R51/2006-GB1-09.03
+  page_total: 5
+  member_state: United Kingdom
+  date_issued: '2017-12-22'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Marel Limited
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+manufacturers:
+- name: Marel Limited
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+- name: AEW Delford Systems
+  address_lines:
+  - Wyncolls Road
+  - Severalls Industrial Park
+  - Colchester
+  - CO4 9HW
+  - United Kingdom
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - 9000 Series
+  - 9500W Series
+  - 9000+
+  - 9500+
+  module_designation: Not applicable
+  description: >-
+    Automatic catchweigher, designated the 9000 Series, operating as an automatic weight or weight/price
+    labeller (Category Y); may also operate as an automatic checkweigher (Category X). Per Alternative
+    5, an instrument with M6215 interface in place of the PM860 is designated the 9500W Series; per Alternative
+    9, modified instruments designated 9000+ and 9500+ run Windows 7 with legally relevant software version
+    1.2.
+characteristics:
+  type_level:
+    minimum_capacity:
+      value: 20
+      unit_symbol: e
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: 0
+        max: 35
+      unit_symbol: "°C"
+      unit_id:
+    climatic_environment:
+      value: non-condensing (closed)
+      unit_symbol:
+      unit_id:
+    em_environments:
+      value: E1 and E2
+      unit_symbol:
+      unit_id:
+    load_cell_excitation_voltage:
+      value: 14
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    display_keyboard_location:
+      value: Control and display unit
+      unit_symbol:
+      unit_id:
+    available_interfaces:
+      value: RS232/RS485/RS422, Ethernet, Digital I/O
+      unit_symbol:
+      unit_id:
+    minimum_voltage_input_per_scale_interval:
+      value: 1.87
+      unit_symbol: μV/e
+      unit_id:
+    legally_relevant_software_version:
+      value: 1.1
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: legally_relevant_software_version
+    unit_symbol:
+    values:
+    - model: 9000 Series
+      value: 1.1
+    - model: 9500W Series
+      value: 1.1
+    - model: 9000+
+      value: 1.2
+    - model: 9500+
+      value: 1.2
+  - attribute: operating_system
+    unit_symbol:
+    values:
+    - model: 9000+
+      value: Windows 7
+    - model: 9500+
+      value: Windows 7
+  config_level:
+  - attribute: tare
+    axis: interval_mode
+    values:
+    - condition: single interval
+      value: -450
+      unit_symbol: e
+    - condition: multi interval
+      value: -450
+      unit_symbol: e1
+  - attribute: maximum_operating_speed
+    axis: interval_mode_and_weighing_range
+    values:
+    - condition: single interval, 0-1500e
+      value: 0.8
+      unit_symbol: m/s
+    - condition: single interval, 1501e-Max
+      value: 0.6
+      unit_symbol: m/s
+    - condition: multi interval, 0-1500e2
+      value: 0.8
+      unit_symbol: m/s
+    - condition: multi interval, 1501e2-Max
+      value: 0.6
+      unit_symbol: m/s
+    - condition: single interval, 100e-1000e (Alternative 7)
+      value: 1.0
+      unit_symbol: m/s
+    - condition: multi interval, 100e2-1000e2 (Alternative 7)
+      value: 1.0
+      unit_symbol: m/s
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  accuracy_classes:
+  - XIII(1)
+  - Y(a)
+test_reports:
+- id: P01129
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2009-05-01'
+  changes: OIML certificate first issued.
+- revision: '1'
+  date: '2011-02-22'
+  changes: Applicant's name changed from AEW Delford Systems to Marel Limited. Construction section added.
+- revision: '2'
+  date: '2013-10-07'
+  changes: Minimum voltage input per scale interval added. Software and alternatives sections added.
+- revision: '3'
+  date: '2015-10-15'
+  changes: Alternative 6 added.
+- revision: '4'
+  date: '2016-02-11'
+  changes: Alternative 7 added.
+- revision: '5'
+  date: '2017-12-22'
+  changes: Alternatives 8 and 9 added.
+model_family:
+  family_name:
+  models:
+  - model_id: 9000 Series
+    label: 'Base pattern: checkweigher / weight or weight-price labeller'
+  - model_id: 9500W Series
+    label: Modified construction with M6215 interface replacing PM860 (Alternative 5)
+  - model_id: 9000+
+    label: Windows 7 operating system, legally relevant software version 1.2 (Alternative 9)
+  - model_id: 9500+
+    label: Windows 7 operating system, legally relevant software version 1.2 (Alternative 9)
+components:
+- role: load_cell
+  type_designations:
+  - Tedea Huntleigh 1040 C3
+  - Tedea Huntleigh 1260 C3
+  alternatives: OR
+  characteristics:
+    alternative_load_cell_permitted:
+      value: true
+      unit_symbol:
+      unit_id:
+    oiml_r60_certificate_required:
+      value: true
+      unit_symbol:
+      unit_id:
+    digital_output_permitted:
+      value: false
+      unit_symbol:
+      unit_id:
+    oil_damper_permitted:
+      value: false
+      unit_symbol:
+      unit_id:
+    reference_dynamically_tested_load_cell:
+      value: Tedea 1040 C3, capacity 15 kg
+      unit_symbol:
+      unit_id:
+    nh_marked_load_cell_condition:
+      value: allowed only if humidity testing to R76 has been conducted on this load cell
+      unit_symbol:
+      unit_id:
+    nlc_y_z_requirement:
+      value: same or better than the dynamically tested load cell
+      unit_symbol:
+      unit_id:
+- role: control_and_display_unit
+  type_designations: []
+  alternatives: OR
+  characteristics:
+    display:
+      value: 15" TFT LCD touch-screen
+      unit_symbol:
+      unit_id:
+    mounting:
+      value: pole-mounted, or remote pod connected to the electrical cabinet by conduit
+      unit_symbol:
+      unit_id:
+- role: interface
+  type_designations:
+  - PM860
+  - M6215
+  - M6415
+  alternatives: OR
+  characteristics: {}
+- role: processor_board
+  type_designations:
+  - PM860 Power PC Module
+  - M10K
+  alternatives: OR
+  characteristics: {}
+- role: modified_board
+  type_designations:
+  - Elvis Lite
+  alternatives:
+  characteristics: {}
+footnotes: []
+matrix_tables:
+- name: Load cell configurations — Entry / Mid-range
+  columns:
+  - maximum_capacity
+  - verification_scale_interval
+  - load_cell_type
+  - emax
+  column_units:
+  - g
+  - g
+  -
+  - kg
+  rows:
+  - maximum_capacity: 1500/3000
+    verification_scale_interval: 1/2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  - maximum_capacity: 1500/4600
+    verification_scale_interval: 1/2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  - maximum_capacity: 3000
+    verification_scale_interval: 2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  - maximum_capacity: 4600
+    verification_scale_interval: 2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  - maximum_capacity: 5500
+    verification_scale_interval: 2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  description: >-
+    Slash-separated values denote paired capacities/verification scale intervals of the same weighing
+    range configuration (e.g. 1500/3000 g with 1/2 g).
+  footnotes: []
+- name: Load cell configurations — Top range
+  columns:
+  - maximum_capacity
+  - verification_scale_interval
+  - load_cell_type
+  - emax
+  column_units:
+  - g
+  - g
+  -
+  - kg
+  rows:
+  - maximum_capacity: 1500
+    verification_scale_interval: 1
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  - maximum_capacity: 1500
+    verification_scale_interval: 2
+    load_cell_type: Tedea Huntleigh 1040 C3
+    emax: 10 or 15
+  description:
+  footnotes: []
+- name: Load cell configurations — Heavy range
+  columns:
+  - maximum_capacity
+  - verification_scale_interval
+  - load_cell_type
+  - emax
+  column_units:
+  - kg
+  - g
+  -
+  - kg
+  rows:
+  - maximum_capacity: 10/20
+    verification_scale_interval: 5/10
+    load_cell_type: Tedea Huntleigh 1260 C3
+    emax: 50 or 75
+  - maximum_capacity: 5/10/40
+    verification_scale_interval: 5/10/20
+    load_cell_type: Tedea Huntleigh 1260 C3
+    emax: 50 or 75
+  - maximum_capacity: 10/40
+    verification_scale_interval: 10/20
+    load_cell_type: Tedea Huntleigh 1260 C3
+    emax: 50 or 75
+  - maximum_capacity: 27.5
+    verification_scale_interval: 10
+    load_cell_type: Tedea Huntleigh 1260 C3
+    emax: 50 or 75
+  - maximum_capacity: 40
+    verification_scale_interval: 20
+    load_cell_type: Tedea Huntleigh 1260 C3
+    emax: 50 or 75
+  description: >-
+    Slash-separated values denote paired capacities/verification scale intervals of the same weighing
+    range configuration (e.g. 10/20 kg with 5/10 g).
+  footnotes: []

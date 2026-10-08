@@ -1,0 +1,312 @@
+_meta:
+  cert_id: 2472
+  num: R049/2006-GB1-2010.04
+  applicant: Elster Metering Limited
+  issuing_year: '2010'
+  status: Valid
+  issuer: GB1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-gb1-2010-04.pdf
+certificate:
+  number: R49/2006-GB1-10.04
+  scheme: A
+  project_number: TS02/0003
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2010-07-27'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Weights and Measures Laboratory
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  oiml_issuer_id: GB1
+applicants:
+- name: Elster Metering Limited
+  address_lines:
+  - Pondwicks Road
+  - Luton
+  - Bedfordshire, LU1 3LJ
+  - United Kingdom
+manufacturers:
+- name: Elster Metering Limited
+  address_lines:
+  - Pondwicks Road
+  - Luton
+  - Bedfordshire, LU1 3LJ
+  - United Kingdom
+certified_type:
+  category: Water meter
+  type_designations:
+  - V100
+  - V200
+  module_designation: Not applicable
+  description: >-
+    Family of cold-water meters utilising a common, volumetric measuring element, with a nominal capacity
+    of 5.5 revs/litre and having a rated permanent flowrate Q3 of 10 m³/h. Further characteristics see
+    page 2.
+characteristics:
+  type_level:
+    measuring_principle:
+      value: Semi-positive displacement meter
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    measuring_element_nominal_capacity:
+      value: 5.5
+      unit_symbol: revs/litre
+      unit_id:
+      footnote_markers: []
+    permanent_flowrate_q3:
+      value: 10
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    overload_flowrate_q4:
+      value: 12.5
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    q2_over_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    environmental_class:
+      value: T30 (MAT)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment:
+      value: N/A
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_temperature:
+      value: 30
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure_bar:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    orientation_requirements:
+      value: None
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    connection_type:
+      value: flange, screw thread, concentric manifold
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_inlet_pipe:
+      value: not specified
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_outlet_pipe:
+      value: not specified
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    flow_conditioner:
+      value: Not required - this type of meter is not susceptible to flow disturbances
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mounting_orientation:
+      value: Can be installed in any position
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_flowrate_q1
+    axis: q3_over_q1_ratio
+    values:
+    - condition: R=250
+      value: 0.04
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=200
+      value: 0.05
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=160
+      value: 0.0625
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=100
+      value: 0.1
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=80
+      value: 0.125
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+  - attribute: transitional_flowrate_q2
+    axis: q3_over_q1_ratio
+    values:
+    - condition: R=250
+      value: 0.064
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=200
+      value: 0.08
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=160
+      value: 0.1
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=100
+      value: 0.16
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    - condition: R=80
+      value: 0.2
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R49
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - 2
+test_reports:
+- id: M064405-R49s
+  pages: 64
+  role: test_report
+- id: P00461
+  role: type_evaluation_report
+model_family:
+  family_name:
+  models:
+  - model_id: V100
+  - model_id: V200
+components:
+- role: optional register sensor
+  type_designations:
+  - Inductive pointer and sensor unit
+  alternatives:
+  characteristics:
+    optional: true
+    applicable_models:
+    - V200
+    description: >-
+      The meter register is equipped with a metallic pointer on the first element of the verification
+      scale. Two bosses and two holes on the shroud enable the option of an inductive sensor to be fitted
+      to the meter shroud.
+- role: optional register sensor
+  type_designations:
+  - Reed switch sensor
+  alternatives:
+  characteristics:
+    optional: true
+    applicable_models:
+    - V200
+    - V100
+    description: >-
+      The meter register is equipped with a magnetic pointer on the first element of the verification
+      scale. The reed switch sensor is fitted to the meter shroud.
+    description_v100: >-
+      The meter register is equipped with a magnet on the first element of the verification scale. The
+      reed switch sensor is fitted in a pocket within the meter housing, in close proximity to the magnet.
+matrix_tables:
+- name: Available Q3/Q1 (R) metrological designations by model
+  columns:
+  - model_name
+  - r_250
+  - r_200
+  - r_160
+  - r_100
+  - r_80
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - model_name: V100, V200
+    r_250: true
+    r_200: true
+    r_160: true
+    r_100: true
+    r_80: true
+  description: >-
+    Both models V100 and V200 are available with all listed Q3/Q1 (R) designations (✓ in original table).
+  footnotes: []
+- name: Related flowrates according to each Q3/Q1 designation
+  columns:
+  - q3_over_q1_ratio
+  - q2_over_q1
+  - q1_minimum_flowrate
+  - q2_transitional_flowrate
+  - q3_permanent_flowrate
+  - q4_overload_flowrate
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - q3_over_q1_ratio: 250
+    q2_over_q1: 1.6
+    q1_minimum_flowrate: 0.04
+    q2_transitional_flowrate: 0.064
+    q3_permanent_flowrate: 10
+    q4_overload_flowrate: 12.5
+  - q3_over_q1_ratio: 200
+    q2_over_q1: 1.6
+    q1_minimum_flowrate: 0.05
+    q2_transitional_flowrate: 0.08
+    q3_permanent_flowrate: 10
+    q4_overload_flowrate: 12.5
+  - q3_over_q1_ratio: 160
+    q2_over_q1: 1.6
+    q1_minimum_flowrate: 0.0625
+    q2_transitional_flowrate: 0.1
+    q3_permanent_flowrate: 10
+    q4_overload_flowrate: 12.5
+  - q3_over_q1_ratio: 100
+    q2_over_q1: 1.6
+    q1_minimum_flowrate: 0.1
+    q2_transitional_flowrate: 0.16
+    q3_permanent_flowrate: 10
+    q4_overload_flowrate: 12.5
+  - q3_over_q1_ratio: 80
+    q2_over_q1: 1.6
+    q1_minimum_flowrate: 0.125
+    q2_transitional_flowrate: 0.2
+    q3_permanent_flowrate: 10
+    q4_overload_flowrate: 12.5
+  description: Related flowrates according to each Q3/Q1 designation; Q3 = 10 m³/h for all designations.
+  footnotes: []

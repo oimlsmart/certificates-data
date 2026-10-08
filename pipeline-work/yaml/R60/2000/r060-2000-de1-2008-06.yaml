@@ -1,0 +1,286 @@
+_meta:
+  cert_id: 2092
+  num: R060/2000-DE1-2008.06
+  applicant: Flintec GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-06.pdf
+certificate:
+  number: R60/2000-DE1-08.06
+  scheme: A
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-08-28'
+  oiml_issuer_id: DE1
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+  oiml_issuer_id: DE1
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - PC1
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge single point load cell. The load cells (LC) of the series PC1 are double bending beam
+    load cells made of stainless steel. The strain gauge application on top and below is potted.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    minimum_load_cell_verification_interval_vmin:
+      value: Emax/10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    optional_minimum_load_cell_verification_interval_vmin:
+      value: Emax/15000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 390
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: Emax=6kg
+      value: 6
+    - model: Emax=7.5kg
+      value: 7.5
+    - model: Emax=10kg
+      value: 10
+    - model: Emax=15kg
+      value: 15
+    - model: Emax=30kg
+      value: 30
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=75kg
+      value: 75
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+    - condition: C4
+      value: 4000
+    - condition: C5
+      value: 5000
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: "½Emax/3000"
+    - condition: C3MI6
+      value: "½Emax/6000"
+    - condition: C4
+      value: "½Emax/4000"
+    - condition: C5
+      value: "½Emax/5000"
+  - attribute: maximum_platform_dimensions
+    axis: capacity_range
+    values:
+    - condition: Emax 6 kg - 15 kg
+      value: 350 x 350
+      unit_symbol: mm
+    - condition: Emax 30 kg - 75 kg
+      value: 450 x 450
+      unit_symbol: mm
+    - condition: Emax 100 kg - 200 kg
+      value: 600 x 600
+      unit_symbol: mm
+recommendation:
+  id: R60
+  edition: 2000
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C3MI6
+  - C4
+  - C5
+test_reports:
+- id: PTB 1.12-4032382-1
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4032382-2
+  pages: 19
+  role: test_report
+model_family:
+  family_name: PC1
+  models:
+  - model_id: Emax=6kg
+    label: PC1, Emax 6 kg
+    attributes:
+      maximum_capacity:
+        value: 6
+        unit_symbol: kg
+  - model_id: Emax=7.5kg
+    label: PC1, Emax 7.5 kg
+    attributes:
+      maximum_capacity:
+        value: 7.5
+        unit_symbol: kg
+  - model_id: Emax=10kg
+    label: PC1, Emax 10 kg
+    attributes:
+      maximum_capacity:
+        value: 10
+        unit_symbol: kg
+  - model_id: Emax=15kg
+    label: PC1, Emax 15 kg
+    attributes:
+      maximum_capacity:
+        value: 15
+        unit_symbol: kg
+  - model_id: Emax=30kg
+    label: PC1, Emax 30 kg
+    attributes:
+      maximum_capacity:
+        value: 30
+        unit_symbol: kg
+  - model_id: Emax=50kg
+    label: PC1, Emax 50 kg
+    attributes:
+      maximum_capacity:
+        value: 50
+        unit_symbol: kg
+  - model_id: Emax=75kg
+    label: PC1, Emax 75 kg
+    attributes:
+      maximum_capacity:
+        value: 75
+        unit_symbol: kg
+  - model_id: Emax=100kg
+    label: PC1, Emax 100 kg
+    attributes:
+      maximum_capacity:
+        value: 100
+        unit_symbol: kg
+  - model_id: Emax=200kg
+    label: PC1, Emax 200 kg
+    attributes:
+      maximum_capacity:
+        value: 200
+        unit_symbol: kg
+footnotes:
+- marker: 1)
+  text: The optional minimum verification interval is indicated on the name plate
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - characteristic
+  - unit
+  - C3
+  - C3MI6
+  - C4
+  - C5
+  rows:
+  - characteristic: max_load_cell_intervals_nlc
+    unit:
+    C3: 3000
+    C3MI6:
+    C4: 4000
+    C5: 5000
+  - characteristic: rated_output
+    unit: mV/V
+    C3: 2
+    C3MI6: 2
+    C4: 2
+    C5: 2
+  - characteristic: maximum_capacity_emax
+    unit: kg
+    C3: 6 / 7.5 / 10 / 15 / 30 / 50 / 75 / 100 / 200
+    C3MI6: 6 / 7.5 / 10 / 15 / 30 / 50 / 75 / 100 / 200
+    C4: 6 / 7.5 / 10 / 15 / 30 / 50 / 75 / 100 / 200
+    C5: 6 / 7.5 / 10 / 15 / 30 / 50 / 75 / 100 / 200
+  - characteristic: minimum_load_cell_verification_interval_vmin
+    unit:
+    C3: Emax/10000
+    C3MI6: Emax/10000
+    C4: Emax/10000
+    C5: Emax/10000
+  - characteristic: optional_minimum_load_cell_verification_interval_vmin
+    unit:
+    C3: Emax/15000
+    C3MI6: Emax/15000
+    C4: Emax/15000
+    C5: Emax/15000
+    footnotes:
+    - 1)
+  - characteristic: minimum_dead_load_output_return_dr
+    unit:
+    C3: "½Emax/3000"
+    C3MI6: "½Emax/6000"
+    C4: "½Emax/4000"
+    C5: "½Emax/5000"
+  - characteristic: maximum_platform_dimensions
+    unit: mm
+    C3: 350 x 350 (for Emax 6 kg - 15 kg)
+    C3MI6: 350 x 350 (for Emax 6 kg - 15 kg)
+    C4: 450 x 450 (for Emax 30 kg - 75 kg)
+    C5: 600 x 600 (for Emax 100 kg - 200 kg)
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed per accuracy
+    class (C3, C3MI6, C4, C5); the C3MI6 nLC cell is blank in the source table.
+  footnotes:
+  - 1) The optional minimum verification interval is indicated on the name plate

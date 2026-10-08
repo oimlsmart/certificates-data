@@ -1,0 +1,198 @@
+_meta:
+  cert_id: 2498
+  num: R076/1992-NL1-2010.29
+  applicant: Ishida Co., Ltd.
+  issuing_year: '2010'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2010-29.pdf
+certificate:
+  number: R76/1992-NL1-10.29
+  project_number: '10200468'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2010-07-20'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Ishida Co. Ltd.
+  address_lines:
+  - 44 Sanno-cho, Shogoin, Sakyo-ku, Kyoto-city, 606-8392, Japan
+manufacturers:
+- name: Ishida Co. Ltd.
+  address_lines:
+  - 44 Sanno-cho, Shogoin, Sakyo-ku, Kyoto-city, 606-8392, Japan
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - IZ-7000
+  module_designation:
+  description:
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: 0
+        max: 35
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: S...
+      value:
+        min: 1.2
+        max: 120
+      footnote_markers: []
+    - model: IW...
+      value:
+        min: 3
+        max: 150
+      footnote_markers: []
+    - model: M...
+      value:
+        min: 60
+        max: 300
+      footnote_markers: []
+  - attribute: minimum_verification_scale_interval_e
+    unit_symbol: g
+    values:
+    - model: S...
+      value: 0.2
+      footnote_markers: []
+    - model: IW...
+      value: 1
+      footnote_markers: []
+    - model: M...
+      value: 20
+      footnote_markers: []
+  - attribute: max_number_of_scale_intervals_n
+    unit_symbol: divisions
+    values:
+    - model: S...
+      value: 6000
+      footnote_markers: []
+    - model: IW...
+      value: 3000
+      footnote_markers: []
+    - model: M...
+      value: 3000
+      footnote_markers: []
+  - attribute: max_number_of_scale_intervals_scope
+    unit_symbol:
+    values:
+    - model: IW...
+      value: per partial weighing range
+      footnote_markers: []
+  - attribute: max_partial_weighing_ranges
+    unit_symbol:
+    values:
+    - model: IW...
+      value: 2
+      footnote_markers: []
+  config_level:
+  - attribute: tare_limit
+    axis: instrument_configuration
+    values:
+    - condition: single-interval instrument
+      value: "-(Max - e)"
+      unit_symbol:
+      footnote_markers: []
+    - condition: multi-interval instrument
+      value: "-(Max₁ - e₁)"
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 1992
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-10.29a
+  pages: 33
+  role: test_report
+- id: R76/1992-NL1-10.29b
+  pages: 33
+  role: test_report
+- id: R76/1992-NL1-10.29c
+  pages: 33
+  role: test_report
+- id: R76/1992-NL1-10.29d
+  pages: 33
+  role: test_report
+- id: R76/1992-NL1-10.29e
+  pages: 33
+  role: test_report
+- id: R76/1992-NL1-10.29f
+  pages: 54
+  role: test_report
+- id: R76/1992-NL1-10.30
+  pages: 53
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: S...
+    label: Weighing unit type S...
+  - model_id: IW...
+    label: Weighing unit type IW...
+  - model_id: M...
+    label: Weighing unit type M...
+footnotes: []
+matrix_tables:
+- name: Characteristics by weighing unit type
+  columns:
+  - weighing_unit_type
+  - maximum_capacity
+  - minimum_verification_scale_interval_e
+  - max_number_of_scale_intervals_n
+  - max_partial_weighing_ranges
+  column_units:
+  -
+  - kg
+  - g
+  - divisions
+  -
+  rows:
+  - weighing_unit_type: S...
+    maximum_capacity:
+      min: 1.2
+      max: 120
+    minimum_verification_scale_interval_e: 0.2
+    max_number_of_scale_intervals_n: 6000
+    max_partial_weighing_ranges:
+  - weighing_unit_type: IW...
+    maximum_capacity:
+      min: 3
+      max: 150
+    minimum_verification_scale_interval_e: 1
+    max_number_of_scale_intervals_n: 3000
+    max_partial_weighing_ranges: 2
+  - weighing_unit_type: M...
+    maximum_capacity:
+      min: 60
+      max: 300
+    minimum_verification_scale_interval_e: 20
+    max_number_of_scale_intervals_n: 3000
+    max_partial_weighing_ranges:
+  description: >-
+    For weighing unit type IW..., n ≤ 3000 divisions applies per partial weighing range, with a maximum
+    of 2 partial weighing ranges.
+  footnotes: []

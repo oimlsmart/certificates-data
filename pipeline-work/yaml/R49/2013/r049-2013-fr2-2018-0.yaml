@@ -1,0 +1,263 @@
+_meta:
+  cert_id: 4792
+  num: R49/2013-B-FR2-18.0
+  applicant: ITRON France
+  issuing_year: '2018'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r049-2013-fr2-2018-0.pdf
+certificate:
+  number: R49/2013-B-FR2-18.00
+  scheme: B
+  member_state: FRANCE
+  date_issued: '2018-12-20'
+  page_total: 1
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Head of the Instrumentation and IT Certification
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+applicants:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71031 MACON Cedex
+  - FRANCE
+manufacturers:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71000 MACON
+  - FRANCE
+certified_type:
+  category: Water meter
+  type_designations:
+  - P1HR
+  module_designation:
+  description: Water meter ITRON type P1HR for cold potable water (compteur d'eau ITRON type P1HR)
+characteristics:
+  type_level:
+    nominal_diameter_dn:
+      value: DN 15 / DN 20
+      unit_symbol: mm
+    version:
+      value: Linear / Manifold
+    length:
+      value:
+        min: 105
+        max: 190
+      unit_symbol: mm
+    body:
+      value: Metallic or composite
+    connections:
+      value: Threads - G¾" - G1" / Coax 1" ½"
+    cover:
+      value: Standard / Repairable
+    indicating_device:
+      value: Plastic (TSN, CC4 or WTR) / Glass & metal (TVM)
+    cyclical_volume:
+      value: 33.33
+      unit_symbol: cm³
+    q2_q1_ratio:
+      value: 1.6
+    position:
+      value: All positions
+    accuracy_class:
+      value: 2
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+    flow_profile_sensitivity_class:
+      value: U0D0
+    climatic_environment:
+      value:
+        min: -10
+        max: 70
+      unit_symbol: "°C"
+    environmental_class:
+      value: B/O
+    electromagnetic_influence_class:
+      value: N/A
+    reverse_flow_measurement:
+      value: 'No'
+      footnote_markers:
+      - "**"
+  model_level:
+  - attribute: q3_permanent_flowrate
+    unit_symbol: m³/h
+    values:
+    - model: P1HR-Q3=1.0
+      value: 1.0
+    - model: P1HR-Q3=1.6
+      value: 1.6
+    - model: P1HR-Q3=2.5
+      value: 2.5
+  - attribute: q4_overload_flowrate
+    unit_symbol: m³/h
+    values:
+    - model: P1HR-Q3=1.0
+      value: 1.25
+    - model: P1HR-Q3=1.6
+      value: 2.0
+    - model: P1HR-Q3=2.5
+      value: 3.125
+  - attribute: q3_q1_ratio_tsn_tvm
+    unit_symbol:
+    footnote_markers:
+    - "*"
+    values:
+    - model: P1HR-Q3=1.0
+      value: 315
+    - model: P1HR-Q3=1.6
+      value: 500
+    - model: P1HR-Q3=2.5
+      value: 800
+  - attribute: q3_q1_ratio_cc4
+    unit_symbol:
+    footnote_markers:
+    - "*"
+    values:
+    - model: P1HR-Q3=1.0
+      value: 125
+    - model: P1HR-Q3=1.6
+      value: 200
+    - model: P1HR-Q3=2.5
+      value: 315
+  - attribute: q3_q1_ratio_wtr
+    unit_symbol:
+    footnote_markers:
+    - "*"
+    values:
+    - model: P1HR-Q3=1.0
+      value: 63
+    - model: P1HR-Q3=1.6
+      value: 100
+    - model: P1HR-Q3=2.5
+      value: 160
+  - attribute: pressure_loss_class
+    unit_symbol:
+    values:
+    - model: P1HR-Q3=1.0
+      value: Δp10
+    - model: P1HR-Q3=1.6
+      value: Δp25
+    - model: P1HR-Q3=2.5
+      value: Δp63
+  config_level:
+  - attribute: indicating_range
+    axis: register / indicating device
+    values:
+    - condition: "(5+3) digits / CC4"
+      value: 99999
+      unit_symbol: m³
+    - condition: WTR / TVM (4+4)
+      value: 9999
+      unit_symbol: m³
+  - attribute: verification_scale_interval
+    axis: register / indicating device
+    values:
+    - condition: TSN / TVM 5+3
+      value: 0.02
+      unit_symbol: dm³
+    - condition: CC4
+      value: 0.05
+      unit_symbol: dm³
+    - condition: WTR
+      value: 0.1
+      unit_symbol: dm³
+    - condition: TVM 4+4
+      value: 0.002
+      unit_symbol: dm³
+  - attribute: water_temperature_class
+    axis: indicating device
+    values:
+    - condition: TSN / TVM
+      value: T50
+    - condition: CC4 / WTR
+      value: T30
+recommendation:
+  id: R49
+  edition: 2013
+  scheme: B
+  accuracy_classes:
+  - 2
+revision_history: []
+model_family:
+  family_name: P1HR
+  models:
+  - model_id: P1HR-Q3=1.0
+    label: Q3 = 1.0 m³/h
+    attributes:
+      q3: 1.0
+      q4: 1.25
+  - model_id: P1HR-Q3=1.6
+    label: Q3 = 1.6 m³/h
+    attributes:
+      q3: 1.6
+      q4: 2.0
+  - model_id: P1HR-Q3=2.5
+    label: Q3 = 2.5 m³/h
+    attributes:
+      q3: 2.5
+      q4: 3.125
+footnotes:
+- marker: "*"
+  text: >-
+    For a given nominal flowrate (Q3) values of Q3/Q1 lower than those listed in the table above are permitted.
+    However, values of this ratio cannot be below 40.
+- marker: "**"
+  text: >-
+    The water meter is not designed to measure reverse flow but can withstand a reverse flow without any
+    deterioration or change in metrological properties.
+matrix_tables:
+- name: Metrological characteristics by flow rate variant
+  columns:
+  - flow_rate_variant
+  - q3
+  - q4
+  - q3_q1_tsn_tvm
+  - q3_q1_cc4
+  - q3_q1_wtr
+  - pressure_loss_class
+  column_units:
+  -
+  - m³/h
+  - m³/h
+  -
+  -
+  -
+  -
+  rows:
+  - flow_rate_variant: 1
+    q3: 1.0
+    q4: 1.25
+    q3_q1_tsn_tvm: 315
+    q3_q1_cc4: 125
+    q3_q1_wtr: 63
+    pressure_loss_class: Δp10
+  - flow_rate_variant: 2
+    q3: 1.6
+    q4: 2.0
+    q3_q1_tsn_tvm: 500
+    q3_q1_cc4: 200
+    q3_q1_wtr: 100
+    pressure_loss_class: Δp25
+  - flow_rate_variant: 3
+    q3: 2.5
+    q4: 3.125
+    q3_q1_tsn_tvm: 800
+    q3_q1_cc4: 315
+    q3_q1_wtr: 160
+    pressure_loss_class: Δp63
+  description: 'Q3/Q1 values marked with * : lower ratios are permitted for a given Q3 but cannot be below
+    40.'
+  footnotes:
+  - "*"

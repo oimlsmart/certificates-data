@@ -1,0 +1,256 @@
+_meta:
+  cert_id: 4350
+  num: R060/2000-DK3-2016.01
+  applicant: ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi
+  issuing_year: '2016'
+  status: Valid
+  issuer: DK3
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-dk3-2016-01.pdf
+certificate:
+  number: R60/2000-DK3-16.01
+  scheme: A
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2016-10-05'
+  oiml_issuer_id: DK3
+issuing_authority:
+  name: DELTA
+  address_lines:
+  - Venlighedsvej 4
+  - 2970 Hørsholm
+  - Denmark
+  person_responsible: J. Hovgaard Jensen
+  person_title: Certification Officer
+  phone: "+45 7219 4000"
+  email: legal@delta.dk
+  website: www.madebydelta.com
+  oiml_issuer_id: DK3
+applicants:
+- name: Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi
+  address_lines:
+  - Nişantepe Mah. Gelinçiçeği Sok. No.36,
+  - Çekmeköy,
+  - 34794 İstanbul
+  - TURKEY
+manufacturers:
+- name: Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi
+  address_lines:
+  - Nişantepe Mah. Gelinçiçeği Sok. No.36,
+  - Çekmeköy,
+  - 34794 İstanbul
+  - TURKEY
+certified_type:
+  category: Load cell
+  type_designations:
+  - CD
+  module_designation:
+  description: Compression, strain gauge load cell
+characteristics:
+  type_level:
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+    rated_output_sensitivity:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    excitation_voltage:
+      value:
+        min: 5
+        max: 15
+      unit_symbol: V
+      unit_id:
+    excitation_voltage_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+    minimum_dead_load_relative_emin_over_emax:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_limit_lim:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+    temperature_rating_tmin_tmax:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    input_resistance:
+      value: 380
+      unit_symbol: Ω
+      unit_id:
+    input_resistance_tolerance:
+      value: 20
+      unit_symbol: Ω
+      unit_id:
+    output_resistance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+    output_resistance_tolerance:
+      value: 3
+      unit_symbol: Ω
+      unit_id:
+    humidity_condition:
+      value: CH
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=25t
+      value: 25
+    - model: Emax=30t
+      value: 30
+    - model: Emax=40t
+      value: 40
+    - model: Emax=60t
+      value: 60
+    - model: Emax=100t
+      value: 100
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+    - condition: C4
+      value: 4000
+  - attribute: minimum_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 0.0166
+      unit_symbol: "%Emax"
+    - condition: C4
+      value: 0.0156
+      unit_symbol: "%Emax"
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 6000
+    - condition: C4
+      value: 6410
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 0.0033
+      unit_symbol: "%Emax"
+    - condition: C4
+      value: 0.0018
+      unit_symbol: "%Emax"
+  - attribute: relative_dr_z
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 15000
+    - condition: C4
+      value: 27778
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C4
+test_reports:
+- id: DANAK-1916863
+  date: '2016-09-12'
+  pages: 35
+  role: type_evaluation_report
+model_family:
+  family_name: CD
+  models:
+  - model_id: Emax=25t
+  - model_id: Emax=30t
+  - model_id: Emax=40t
+  - model_id: Emax=60t
+  - model_id: Emax=100t
+matrix_tables:
+- name: Characteristics by accuracy class
+  columns:
+  - attribute
+  - symbol
+  - C3
+  - C4
+  rows:
+  - attribute: type_designation
+    symbol:
+    C3: CD
+    C4: CD
+  - attribute: max_load_cell_intervals
+    symbol: nLC
+    C3: 3000
+    C4: 4000
+  - attribute: maximum_capacity
+    symbol: Emax
+    C3: 25t, 30t, 40t, 60t, 100t
+    C4: 25t, 30t, 40t, 60t, 100t
+  - attribute: apportionment_factor
+    symbol: pLC
+    C3: 0.7
+    C4: 0.7
+  - attribute: minimum_verification_interval
+    symbol: vmin
+    C3: 0.0166 %Emax
+    C4: 0.0156 %Emax
+  - attribute: ratio_of_min_lc_verification_interval
+    symbol: "Y"
+    C3: 6000
+    C4: 6410
+  - attribute: minimum_dead_load_output_return
+    symbol: DR
+    C3: 0.0033 %Emax
+    C4: 0.0018 %Emax
+  - attribute: relative_dr
+    symbol: Z
+    C3: 15000
+    C4: 27778
+  - attribute: rated_output_sensitivity
+    symbol: C
+    C3: 2 mV/V
+    C4: 2 mV/V
+  - attribute: excitation_voltage
+    symbol: Uexc
+    C3: 5-15 Vac/dc
+    C4: 5-15 Vac/dc
+  - attribute: minimum_dead_load_relative
+    symbol: Emin/Emax
+    C3: 0 %
+    C4: 0 %
+  - attribute: safe_overload_limit
+    symbol: Lim
+    C3: 150 %Emax
+    C4: 150 %Emax
+  - attribute: temperature_rating
+    symbol: Tmin/Tmax
+    C3: "-10 °C / +40 °C"
+    C4: "-10 °C / +40 °C"
+  - attribute: input_resistance
+    symbol:
+    C3: 380 ± 20 Ω
+    C4: 380 ± 20 Ω
+  - attribute: output_resistance
+    symbol:
+    C3: 350 ± 3 Ω
+    C4: 350 ± 3 Ω
+  - attribute: humidity_condition
+    symbol:
+    C3: CH (No marking)
+    C4: CH (No marking)
+  description: >-
+    Metrological and technical characteristics of load cell type CD; Emax column lists five capacity variants,
+    other rows split by accuracy class C3/C4 where values differ.
+  footnotes: []

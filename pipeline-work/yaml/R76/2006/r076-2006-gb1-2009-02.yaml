@@ -1,0 +1,153 @@
+_meta:
+  cert_id: 2306
+  num: R076/2006-GB1-2009.02
+  applicant: Digi Europe Ltd
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2009-02.pdf
+certificate:
+  number: R76/2006-GB1-09.02
+  project_number: T1127/0035
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2009-10-19'
+issuing_authority:
+  name: National Weights and Measures Laboratory (Part of the National Measurement Office)
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+applicants:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+certified_type:
+  category: Indicator
+  type_designations:
+  - WPI-700
+  - WPI-701
+  - WPI-702
+  description: >-
+    Weighing indicator designated WPI-700, designed to be used as part of a Class III or IIII non-automatic
+    weighing instrument designated WPI-701 (single scale) or WPI-702 (dual scale). Operates as single
+    or dual interval, is self-indicating and mains-powered, and may include a labeller. Processor and
+    converter unit comprising a Teraoka TPB-2930 CPU and a Teraoka TPB-03324 6-wire A/D converter; touch
+    screen (colour TFT-LCD module); waterproof metallic enclosure. Devices: initial zero setting, semi-automatic
+    zero setting, zero tracking, semi-automatic subtractive tare weighing, determination of stability
+    of equilibrium, indication of stability of equilibrium, zero indicator, PLUs, preset tare, price calculation,
+    dual scale operation (WPI-702). Interfaces: load cell 6-wire connection, Ethernet, USB.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 230
+      unit_symbol: V
+    power_supply_type:
+      value: AC
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    dual_interval_range:
+      value: Max1 ≤ 50% Max2
+    maximum_tare:
+      value: -50
+      unit_symbol: "%"
+    maximum_preset_tare:
+      value: "-Max1"
+    load_cell_excitation_voltage:
+      value: 10
+      unit_symbol: V
+    minimum_load_cell_impedance:
+      value: 87
+      unit_symbol: Ω
+    maximum_load_cell_impedance:
+      value: 440
+      unit_symbol: Ω
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.67
+      unit_symbol: μV
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+    measuring_range_maximum_voltage:
+      value: 40
+      unit_symbol: mV
+    p_ind:
+      value: 0.5
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 30
+      unit_symbol: "°C"
+    load_cell_cable_length_per_cross_section:
+      value: 750
+      unit_symbol: m/mm²
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing_range_configuration
+    values:
+    - condition: single interval
+      value: 6000
+    - condition: multi-interval, maximum of two weighing ranges (per partial weighing range)
+      value: 3000
+  - attribute: scale_operation
+    axis: instrument_designation
+    values:
+    - condition: WPI-701
+      value: single scale
+    - condition: WPI-702
+      value: dual scale
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: TR 560
+  pages: 36
+  role: test_report
+- id: P00216
+  pages: 14
+  role: type_evaluation_report
+revision_history:
+- revision: '09.02'
+  date: '2009-10-19'
+  changes: Certificate first issued.
+model_family:
+  family_name: WPI-700
+  models:
+  - model_id: WPI-701
+    label: Single scale instrument incorporating the WPI-700 indicator
+    attributes:
+      scale_operation: single scale
+  - model_id: WPI-702
+    label: Dual scale instrument incorporating the WPI-700 indicator
+    attributes:
+      scale_operation: dual scale
+components:
+- role: processor (CPU)
+  type_designations:
+  - Teraoka TPB-2930
+- role: analogue-to-digital converter
+  type_designations:
+  - Teraoka TPB-03324
+  characteristics:
+    connection_type:
+      value: 6-wire

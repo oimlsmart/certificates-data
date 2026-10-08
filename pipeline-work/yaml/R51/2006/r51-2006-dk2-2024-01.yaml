@@ -1,0 +1,342 @@
+_meta:
+  cert_id: 6116
+  num: R51/2006-A-DK2-24.01
+  applicant: Marel Ltd
+  issuing_year: '2024'
+  status: Valid
+  issuer: DK2
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r51-2006-dk2-2024-01.pdf
+certificate:
+  number: R51/2006-A-DK2-2024.01
+  scheme: A
+  project_number: 123-30116.90.10
+  page_total: 10
+  member_state: Denmark
+  date_issued: '2024-01-15'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Per Rafn Crety
+  phone: "+45 43 25 01 77"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Marel Limited.
+  address_lines:
+  - Several Industrial Park
+  - Colchester, CO4 9HW
+  - United Kingdom
+manufacturers:
+- name: Marel Limited.
+  address_lines:
+  - Several Industrial Park
+  - Colchester, CO4 9HW
+  - United Kingdom
+certified_type:
+  category: Automatic catch weighing instrument
+  type_designations:
+  - MCheck2
+  module_designation: Automatic check weighing / catch weighing instrument
+  description: >-
+    The automatic catch weighing instrument is an automatic weight labeller (category Y) designated MCheck2
+    and is intended for dynamically weighing. The instrument may also operate as an automatic checkweigher
+    (Category X). It consists of a touch-screen application controller, Marel M3210 or Marel M3310, together
+    with the digital weighing module MWS2 and a load receptor. The load receptor may have transport conveyors
+    before or after, a thermal label printer for printing labels with weighing information and other data
+    and/or a variety of packing sorting mechanisms e.g. pusher arms, air blast rejectors.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: XIII(1), Y(a)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weighing_mode:
+      value: Dynamic
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weighing_range_type:
+      value: Single-interval or multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min:
+        max: 6
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    number_of_verification_scale_intervals:
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_capacity:
+      value: 40
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 0
+        max: 35
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_time_between_automatic_zero_settings:
+      value: 15
+      unit_symbol: min
+      unit_id:
+      footnote_markers: []
+    electromagnetic_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity:
+      value: Non-condensing
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_excitation_voltage:
+      value: 14
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    legally_relevant_software_version:
+      value: 1.1.0
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    automatic_zero_setting_device_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    initial_zero_setting_device_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    zero_tracking_device_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    interfaces:
+      value: Ethernet, RS232, CAN bus, 2-wire for reject option
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: belt_speed
+    values:
+    - condition: speed 800 mm/s
+      value: 6
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: speed 1000 mm/s
+      value: 3
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: speed 1330 mm/s
+      value: 1
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: weighing_speed
+    axis: weighing_range
+    values:
+    - condition: 40 g to 250 g
+      value:
+        min: 0.3
+        max: 1.33
+      unit_symbol: m/s
+      footnote_markers: []
+    - condition: 250 g to 1000 g
+      value:
+        min: 0.3
+        max: 1.2
+      unit_symbol: m/s
+      footnote_markers: []
+    - condition: 1000 g to 3000 g
+      value:
+        min: 0.3
+        max: 1.0
+      unit_symbol: m/s
+      footnote_markers: []
+    - condition: 3000 g to 6000 g
+      value:
+        min: 0.3
+        max: 0.8
+      unit_symbol: m/s
+      footnote_markers: []
+  - attribute: verification_scale_interval
+    axis: maximum_capacity
+    values:
+    - condition: Max ≤ 1 kg
+      value:
+        min: 0.5
+        max:
+      unit_symbol: g
+      footnote_markers: []
+    - condition: Max > 1 kg
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      footnote_markers: []
+  - attribute: maximum_preset_tare
+    axis: weighing_range
+    values:
+    - condition: single-interval, of Gross Max
+      value:
+        min:
+        max: 23
+      unit_symbol: "%"
+      footnote_markers: []
+    - condition: multi-interval, of Gross and PT ≤ Max1
+      value:
+        min:
+        max: 23
+      unit_symbol: "%"
+      footnote_markers: []
+recommendation:
+  id: R51
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - XIII(1)
+  - Y(a)
+test_reports:
+- id: TR653
+  date: '2014-06-25'
+  pages: 45
+  role: type_evaluation_report
+- id: TR656
+  date: '2014-09-10'
+  pages: 12
+  role: type_evaluation_report
+- id: 123-30116.10
+  date: '2023-12-12'
+  pages: 24
+  role: type_evaluation_report
+- id: PO01261
+  date: '2014-04-24'
+  pages: 12
+  role: type_evaluation_report
+- id: PO01353
+  date: '2014-05-09'
+  pages: 12
+  role: type_evaluation_report
+- id: 123-30116.90.10
+  date: '2024-01-03'
+  pages: 18
+  role: type_evaluation_report
+- id: 118-33891.90.20
+  date:
+  pages:
+  role: documentation_file
+revision_history:
+- revision: Initial version
+  date: '2024-01-15'
+  changes:
+components:
+- role: touch-screen application controller
+  type_designations:
+  - Marel M3210
+  - Marel M3310
+  alternatives: OR
+  characteristics: {}
+- role: digital weighing module
+  type_designations:
+  - MWS2
+  alternatives:
+  characteristics: {}
+- role: load cell
+  type_designations:
+  - Flintec PC1 C3
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    allowed_alternative:
+      value: >-
+        any analogue load cell with an OIML R60:2000 or R60:2017 Certificate of Conformity, compatibility
+        per OIML R76:2006 Annex F
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+- role: load receptor
+  type_designations: []
+  alternatives:
+  characteristics:
+    optional_peripherals:
+      value: >-
+        transport conveyors before or after, thermal label printer, packing sorting mechanisms (e.g. pusher
+        arms, air blast rejectors)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+matrix_tables:
+- name: Speed and weight limits
+  columns:
+  - speed
+  - maximum_weight
+  column_units:
+  - mm/s
+  - kg
+  rows:
+  - speed: 800
+    maximum_weight: 6
+  - speed: 1000
+    maximum_weight: 3
+  - speed: 1330
+    maximum_weight: 1
+  description: Maximum capacity permitted at a given belt speed (Figure 3, Speed and Weight Limits screen).
+  footnotes: []

@@ -1,0 +1,241 @@
+_meta:
+  cert_id: 4585
+  num: R76/2006-A-NL1-18.07
+  applicant: Shanghai Teraoka Electronic Co. Ltd.
+  issuing_year: '2018'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2018-07.pdf
+certificate:
+  number: R76/2006-A-NL1-18.07
+  scheme: A
+  project_number: '1902029'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2018-02-06'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronic Co.,Ltd.
+  address_lines:
+  - Tinglin Industry Development Zone
+  - 201505 Shanghai
+  - P.R. China
+manufacturers:
+- name: Shanghai Teraoka Electronic Co.,Ltd.
+  address_lines:
+  - Tinglin Industry Development Zone
+  - 201505 Shanghai
+  - P.R. China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - RM-5801..
+  - RM-5900..
+  module_designation: Not applicable
+  description:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: Single interval or Multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_scale_intervals_single_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_scale_intervals_multi_interval_per_partial_range:
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC mains or DC battery
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    application:
+      value: Intended to be used for direct sales to the public
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: tare
+    axis: weighing_range_type
+    values:
+    - condition: single interval
+      value:
+        min:
+        max: -50
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    - condition: multi-interval
+      value: "-Max1"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_voltage
+    axis: power_supply_type
+    values:
+    - condition: AC mains
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: DC battery
+      value: 14.8
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_frequency
+    axis: power_supply_type
+    values:
+    - condition: AC mains
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/2006-NL1-10.06
+  date: '2010-03-22'
+  pages: 59
+  role: type_evaluation_report
+- id: NMi-13200468-01
+  date: '2013-10-21'
+  pages: 21
+  role: test_report
+- id: NMi-14200357-01
+  date: '2014-10-10'
+  pages: 37
+  role: test_report
+- id: NMi-15200041-01
+  date: '2015-04-14'
+  pages: 39
+  role: test_report
+- id: NMi-16200275-01
+  date: '2016-08-15'
+  pages: 14
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: RM-5801..
+    label:
+    attributes: {}
+  - model_id: RM-5900..
+    label:
+    attributes: {}
+matrix_tables:
+- name: Software identification
+  columns:
+  - software
+  - platform
+  - filename
+  - version
+  - checksum
+  - remarks
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - software: Scale software
+    platform:
+    filename: libwm.jar
+    version: 1.1.0.release_build:511 (Maxlabel software)
+    checksum: '00077148 or 14015C4F'
+    remarks:
+  - software: POS software
+    platform: Windows
+    filename: libscale.dll
+    version: 1 or 2
+    checksum: '00459169 or 41047A60'
+    remarks: One checksum is calculated over two files
+  - software: POS software
+    platform: Windows
+    filename: libprice.dll
+    version: 1 or 2
+    checksum: '00459169 or 41047A60'
+    remarks: One checksum is calculated over two files
+  - software: POS software
+    platform: Linux
+    filename: libscale.so
+    version: 1 or 2
+    checksum: '00747997 or 169330BA'
+    remarks: One checksum is calculated over two files
+  - software: POS software
+    platform: Linux
+    filename: libprice.so
+    version: 1 or 2
+    checksum: '00747997 or 169330BA'
+    remarks: One checksum is calculated over two files
+  description: >-
+    Approved software versions and checksums for scale software and POS software (Windows and Linux variants).
+  footnotes: []

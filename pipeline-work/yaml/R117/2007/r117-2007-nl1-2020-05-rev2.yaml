@@ -1,0 +1,644 @@
+_meta:
+  cert_id: 5527
+  num: R117/2007-A-NL1-20.05 Rev. 2
+  applicant: Sensia
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2020-05-rev2.pdf
+certificate:
+  number: R117/2007-A-NL1-20.05
+  scheme: A
+  project_number: '2393688'
+  page_total: 5
+  member_state: The Netherlands
+  date_issued: '2021-10-04'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V. (OIML Issuing Authority NL1)
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Sensia
+  address_lines:
+  - 1000 McClaren Woods Drive
+  - Coraopolis PA15108
+  - United States of America
+certified_type:
+  category: Measurement transducer
+  type_designations:
+  - LEFM 2xxCi [RN][LT][-R]
+  - LEFM / SVM 289Ci [RN][LT][-R]
+  - LEFM 240Ci [RN][LT][-R]
+  - LEFM 244Ci [RN][LT][-R]
+  - LEFM 280Ci [RN][LT][-R]
+  - LEFM 288Ci [RN][LT][-R]
+  module_designation:
+  description: >-
+    Measurement transducer (ultrasonic sensor and associated electronics), brand Caldon. Consists of G3
+    electronics in combination with either full bore or reduced bore spool piece design. The full-bore
+    design is a cylindrical spool piece with 4 or 8 distinct chord locations for custody transfer metering;
+    the reduced bore spool piece consists of a nozzle-shaped convergent section, a cylindrical throat
+    piece with 4 or 8 distinct chord locations and a divergent section. RTD input (Pt-100) is used for
+    correction of the thermal expansion of the meter body, calculation of the liquid density (this density
+    shall not be used for calculating the delivered mass from the measured volume) and calculation of
+    the viscosity of the liquid; the 244Ci and 244CiRN meters can have two Pt-100 elements, one for each
+    4-path meter. Variants: [RN] = reducing nozzle variant; [LT] = low temperature variant; [-R] = remote
+    mounted electronics variant. Construction recorded in documentation folder no. TC7381-7.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    measurement_sensor_design:
+      value: Full bore sensor and Reduced bore sensor
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transducer_frequency:
+      value: 0.5, 1 or 1.6
+      unit_symbol: MHz
+      unit_id:
+      footnote_markers: []
+    environmental_classes:
+      value: M2 / E2 / H3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_pressure:
+      value: 200
+      unit_symbol: bar(a)
+      unit_id:
+      footnote_markers: []
+    maximum_turndown_ratio:
+      value: '50:1'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_reynolds_number_full_bore:
+      value: 4000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_reynolds_number_reduced_bore:
+      value:
+        min: 0
+        max:
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 70
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    ambient_humidity:
+      value: condensing humidity
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    viscosity_range:
+      value:
+        min: 0.1
+        max: 3000
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+    intended_measurement_media:
+      value: liquid petroleum and related products, liquid food and chemical products in liquid state
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 18
+        max: 30
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_nominal:
+      value: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    approved_electronics:
+      value: G3 electronics
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rtd_input:
+      value: Pt-100
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: product_temperature_range
+    axis: version (electronics mounting / temperature variant)
+    values:
+    - condition: Ci and CiRN versions
+      value:
+        min: -40
+        max: 70
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    - condition: Ci-R and CiRN-R versions
+      value:
+        min: -50
+        max: 110
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    - condition: Ci LT-R and CiRN LT-R versions
+      value:
+        min: -200
+        max: 110
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  - attribute: upstream_straight_pipe_length
+    axis: meter family
+    values:
+    - condition: LEFM 24xCi
+      value:
+        min: 10
+        max:
+      unit_symbol: D
+      unit_id:
+      footnote_markers: []
+    - condition: LEFM / SVM 28xCi
+      value:
+        min: 5
+        max:
+      unit_symbol: D
+      unit_id:
+      footnote_markers: []
+  - attribute: flow_conditioner
+    axis: meter family
+    values:
+    - condition: LEFM 24xCi
+      value: recommended
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: LEFM / SVM 28xCi
+      value: not needed
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: downstream_straight_pipe_length
+    axis: all models
+    values:
+    - condition: all models
+      value:
+        min: 3
+        max:
+      unit_symbol: D
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R117-1
+  edition: 2007
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+test_reports:
+- id: CVN-201301-1
+  date: '2002-11-11'
+  pages: 63
+  role: test_report
+- id: CVN-213238
+  date: '2003-07-10'
+  pages: 75
+  role: test_report
+- id: CVN-209924
+  date: '2003-07-11'
+  pages: 30
+  role: test_report
+- id: CPC-501402-2
+  date: '2005-04-14'
+  pages: 39
+  role: test_report
+- id: CPC-501402-3
+  date: '2005-04-14'
+  pages: 48
+  role: test_report
+- id: CPC-507607-3
+  date: '2006-03-14'
+  pages: 57
+  role: test_report
+- id: CPC-609715-02
+  date: '2007-05-04'
+  pages: 66
+  role: test_report
+- id: CPC-708740-1
+  date: '2008-07-08'
+  pages: 33
+  role: test_report
+- id: CPC-807133-1
+  date: '2008-11-10'
+  pages: 65
+  role: test_report
+- id: CPC-9200203-00
+  date: '2009-06-24'
+  pages: 3
+  role: test_report
+- id: CPC-9200620-1
+  date: '2009-12-03'
+  pages: 9
+  role: test_report
+- id: CPC-10200358-1
+  date: '2010-08-05'
+  pages: 12
+  role: test_report
+- id: CPC-10200358-2
+  date: '2010-10-14'
+  pages: 9
+  role: test_report
+- id: NMi-11200549-1
+  date: '2011-07-15'
+  pages: 8
+  role: test_report
+- id: NMi-142000132-02
+  date: '2015-10-01'
+  pages: 31
+  role: test_report
+- id: NMi-2477337-01
+  date: '2020-05-12'
+  pages: 18
+  role: type_evaluation_report
+- id: NMi-2393688-01
+  date: '2021-10-01'
+  pages: 52
+  role: type_evaluation_report
+- id: TC7381-7
+  date:
+  pages:
+  role: documentation_file
+revision_history:
+- revision: Initial
+  date: '2020-05-12'
+  changes:
+- revision: '1'
+  date: '2020-07-22'
+  changes: >-
+    Added missing reference of type evaluation report NMi-2477337-01 to the certificate. Type evaluation
+    report NMi-2477337-01 was issued to give a complete overview of all the test results and examinations
+    done which are used for conformity of this OIML certificate.
+- revision: '2'
+  date: '2021-10-04'
+  changes: Addition of the LEFM / SVM 289Ci meter with 8 paths for verification purposes (SVM capability).
+model_family:
+  family_name:
+  models:
+  - model_id: LEFM 240Ci
+    label: LEFM 240Ci [RN][LT][-R]
+    attributes:
+      paths: 4
+      description: Four-path ultrasonic meter
+  - model_id: LEFM 244Ci
+    label: LEFM 244Ci [RN][LT][-R]
+    attributes:
+      paths: 8
+      description: Eight-path ultrasonic meter, consists of 2 LEFM 240Ci [RN][LT][-R] mounted in one spool
+        piece
+  - model_id: LEFM 280Ci
+    label: LEFM 280Ci [RN][LT][-R]
+    attributes:
+      paths: 8
+      description: Eight-path ultrasonic meter
+  - model_id: LEFM 288Ci
+    label: LEFM 288Ci [RN][LT][-R]
+    attributes:
+      description: Dual eight-path ultrasonic meter (two meters in one body)
+  - model_id: LEFM / SVM 289Ci
+    label: LEFM / SVM 289Ci [RN][LT][-R]
+    attributes:
+      paths: 8
+      verification_paths: 8
+      description: >-
+        Ultrasonic meter with eight primary paths and an additional eight (secondary) paths used for verification
+        purposes (SVM capability); an MXR daughter board is stacked on top of the MXR board in the G3
+        electronics
+components:
+- role: electronics
+  type_designations:
+  - G3 electronics
+  alternatives:
+  characteristics:
+    note: >-
+      For the LEFM / SVM 289Ci variant an MXR daughter board is stacked on top of the MXR board in the
+      G3 electronics.
+- role: spool piece (meter body)
+  type_designations:
+  - Full bore spool piece
+  - Reduced bore spool piece
+  alternatives: OR
+  characteristics:
+    chord_locations: 4 or 8 distinct chord locations for custody transfer metering
+footnotes:
+- marker: '1'
+  text: >-
+    xx = 40: 4-path meter; xx = 44: dual 4-path meter; xx = 80: 8-path meter; xx = 88: dual 8-path meter;
+    xx = 89: 8-path meter with 8 additional verification paths. [RN] = reducing nozzle variant; [LT] =
+    low temperature variant; [-R] = remote mounted electronics variant.
+matrix_tables:
+- name: Table 2 - Flow characteristics for all meter types with Full Bore design
+  columns:
+  - nominal_size_inches
+  - dn_size
+  - bore_diameter
+  - minimum_measured_quantity
+  - qmin
+  - qmax
+  - vmin
+  - vmax
+  column_units:
+  -
+  -
+  - mm
+  - m³
+  - m³/h
+  - m³/h
+  - m/s
+  - m/s
+  rows:
+  - nominal_size_inches: 4
+    dn_size: 100
+    bore_diameter:
+      min: 80
+      max: 111
+    minimum_measured_quantity: 0.2
+    qmin: 5.2
+    qmax: 650
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 6
+    dn_size: 150
+    bore_diameter:
+      min: 124
+      max: 163
+    minimum_measured_quantity: 0.5
+    qmin: 34
+    qmax: 1638
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 8
+    dn_size: 200
+    bore_diameter:
+      min: 173
+      max: 214
+    minimum_measured_quantity: 1
+    qmin: 123
+    qmax: 2195
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 10
+    dn_size: 250
+    bore_diameter:
+      min: 215
+      max: 267
+    minimum_measured_quantity: 1
+    qmin: 145
+    qmax: 3751
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 12
+    dn_size: 300
+    bore_diameter:
+      min: 257
+      max: 316
+    minimum_measured_quantity: 2
+    qmin: 175
+    qmax: 3819
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 14
+    dn_size: 350
+    bore_diameter:
+      min: 284
+      max: 348
+    minimum_measured_quantity: 2
+    qmin: 70
+    qmax: 4656
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 16
+    dn_size: 400
+    bore_diameter:
+      min: 325
+      max: 399
+    minimum_measured_quantity: 5
+    qmin: 93
+    qmax: 4874
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 20
+    dn_size: 500
+    bore_diameter:
+      min: 407
+      max: 499
+    minimum_measured_quantity: 5
+    qmin: 148
+    qmax: 7766
+    vmin: 0.2
+    vmax: 16.6
+  - nominal_size_inches: 24
+    dn_size: 600
+    bore_diameter:
+      min: 490
+      max: 599
+    minimum_measured_quantity: 10
+    qmin: 406
+    qmax: 11328
+    vmin: 0.2
+    vmax: 16.6
+  description:
+  footnotes: []
+- name: Table 3 - Flow characteristics for all meter types with Reduced Bore design
+  columns:
+  - nominal_pipe_size_inches
+  - nominal_throat_size_inches
+  - dn_size
+  - throat_diameter
+  - mmq
+  - qmin
+  - qmax
+  - throat_vmin
+  - throat_vmax
+  column_units:
+  -
+  -
+  -
+  - mm
+  - m³
+  - m³/h
+  - m³/h
+  - m/s
+  - m/s
+  rows:
+  - nominal_pipe_size_inches: 6
+    nominal_throat_size_inches: 4
+    dn_size: 150
+    throat_diameter:
+      min: 74
+      max: 131
+    mmq: 0.5
+    qmin: 5.2
+    qmax: 812
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 8
+    nominal_throat_size_inches: 5
+    dn_size: 200
+    throat_diameter:
+      min: 103
+      max: 172
+    mmq: 1
+    qmin: 9
+    qmax: 1444
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 10
+    nominal_throat_size_inches: 6
+    dn_size: 250
+    throat_diameter:
+      min: 129
+      max: 214
+    mmq: 1
+    qmin: 34
+    qmax: 1683
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 12
+    nominal_throat_size_inches: 8
+    dn_size: 300
+    throat_diameter:
+      min: 154
+      max: 253
+    mmq: 2
+    qmin: 123
+    qmax: 2195
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 14
+    nominal_throat_size_inches: 9
+    dn_size: 350
+    throat_diameter:
+      min: 170
+      max: 279
+    mmq: 2
+    qmin: 111
+    qmax: 2988
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 16
+    nominal_throat_size_inches: 10
+    dn_size: 400
+    throat_diameter:
+      min: 195
+      max: 320
+    mmq: 5
+    qmin: 145
+    qmax: 3751
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 20
+    nominal_throat_size_inches: 13
+    dn_size: 500
+    throat_diameter:
+      min: 244
+      max: 400
+    mmq: 5
+    qmin: 65
+    qmax: 5861
+    throat_vmin: 0.2
+    throat_vmax: 21
+  - nominal_pipe_size_inches: 24
+    nominal_throat_size_inches: 15
+    dn_size: 600
+    throat_diameter:
+      min: 294
+      max: 480
+    mmq: 10
+    qmin: 93
+    qmax: 8440
+    throat_vmin: 0.2
+    throat_vmax: 21
+  description: Table continues on page 5 of the certificate; both parts are merged here.
+  footnotes: []
+- name: Table 4 - Software versions, corresponding software revisions and checksums for G3 electronics
+  columns:
+  - software_version
+  - software_revision
+  - checksum
+  column_units:
+  -
+  -
+  -
+  rows:
+  - software_version: SW000070
+    software_revision: 01.01.01
+    checksum: BD1B34A9
+  - software_version: SW000070
+    software_revision: 01.02.01
+    checksum: E2E72794
+  - software_version: SW000070
+    software_revision: 01.02.02
+    checksum: 022E0647
+  - software_version: SW000082
+    software_revision: 01.01.03
+    checksum: 48CDDFA8
+  - software_version: SW000082
+    software_revision: 01.01.04
+    checksum: 106F0E18
+  - software_version: SW000082
+    software_revision: 01.01.05
+    checksum: C92E28DF
+  - software_version: SW000082
+    software_revision: 01.01.06
+    checksum: 881927E2
+  - software_version: SW000082
+    software_revision: 01.01.07
+    checksum: 2CF3D2F1
+  - software_version: SW000082
+    software_revision: 01.01.08
+    checksum: 669F8ED9
+  - software_version: SW000082
+    software_revision: 01.01.10
+    checksum: AB14ADF4
+  - software_version: SW000082
+    software_revision: 01.01.011
+    checksum: 21AB2489
+  - software_version: SW000082
+    software_revision: 01.01.012
+    checksum: 674D72F2
+  - software_version: SW000128-SVM
+    software_revision: 01.01.01
+    checksum: EC02626B
+  description: >-
+    Software versions SW000070 and SW000082 can be used for both 4-path and 8-path meter electronics.
+    Software version SW000128-SVM can only be used for meters with SVM capabilities. The software version
+    is viewable on the display (immediately after power on). Essential parameters are unable to be altered
+    if switch 4 of dipswitch SW1 on the CTC board is in the closed position.
+  footnotes: []

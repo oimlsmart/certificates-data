@@ -1,0 +1,397 @@
+_meta:
+  cert_id: 6106
+  num: R76/2006-A-NL1-20.44 Rev. 2
+  applicant: Shanghai Teraoka Electronic Co. Ltd.
+  issuing_year: '2023'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2020-44-rev2.pdf
+certificate:
+  number: R76/2006-A-NL1-20.44
+  scheme: A
+  project_number: '3507033'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2023-12-21'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  person_title:
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Shanghai Teraoka Electronics Co., Ltd.
+  address_lines:
+  - No.6058 of Nan Ting Road
+  - Ting Ling Town, Jin Shan District
+  - Shanghai 201505
+  - China
+manufacturers:
+- name: Shanghai Teraoka Electronics Co., Ltd.
+  address_lines:
+  - No.6058 of Nan Ting Road
+  - Ting Ling Town, Jin Shan District
+  - Shanghai 201505
+  - China
+certified_type:
+  category: Weighing module
+  type_designations:
+  - AD2000
+  - RM-5800LL B
+  - RM-5800NLL
+  module_designation: Weighing module
+  description:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      footnote_markers: []
+    fraction_of_maximum_permitted_error:
+      value: 1
+      unit_symbol:
+      footnote_markers: []
+    tare:
+      value: T <= -50% for instruments with one weighing range; T <= -Max1 for multi-interval instruments
+      unit_symbol:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers: []
+    software_identification:
+      value: Version number 1.x.x (x = 0-9)
+      unit_symbol:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+    - condition: L6D
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+    - condition: P, PS, K
+      value:
+        min: 3
+        max: 37.5
+      unit_symbol: kg
+    - condition: only P and PS
+      value:
+        min: 3
+        max: 37.5
+      unit_symbol: kg
+  - attribute: verification_scale_interval
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: L6D
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: P, PS, K
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    - condition: only P and PS
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+  - attribute: weighing_ranges
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value: Single interval; Multi-interval
+      unit_symbol:
+    - condition: L6D
+      value: Single interval; Multi-interval
+      unit_symbol:
+    - condition: P, PS, K
+      value: Single interval; Multi-interval
+      unit_symbol:
+    - condition: only P and PS
+      value: Single interval
+      unit_symbol:
+  - attribute: maximum_number_of_scale_intervals_one_weighing_range
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value: 6000
+      unit_symbol:
+      constraint: with STB-2255 or STB-2236 A/D board
+    - condition: L6D
+      value: 6000
+      unit_symbol:
+      constraint: with STB-2236 A/D board
+    - condition: P, PS, K
+      value: 6000
+      unit_symbol:
+      constraint: with STB-2236, STB-2255 or STB-2255-xx A/D board
+    - condition: only P and PS
+      value: 7500
+      unit_symbol:
+      constraint: with STB-2255 or STB-2255-xx A/D board
+  - attribute: maximum_number_of_scale_intervals_multi_interval
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value: 3000
+      unit_symbol:
+      constraint: per partial weighing range
+    - condition: L6D
+      value: 3000
+      unit_symbol:
+      constraint: per partial weighing range
+    - condition: P, PS, K
+      value: 3000
+      unit_symbol:
+      constraint: per partial weighing range
+  - attribute: maximum_number_of_partial_weighing_ranges
+    axis: load_cell_used
+    values:
+    - condition: L6C
+      value: 2
+      unit_symbol:
+    - condition: L6D
+      value: 2
+      unit_symbol:
+    - condition: P, PS, K
+      value: 2
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: load_cell_used and instrument type
+    values:
+    - condition: L6C / L6D / P, PS, K — type AD2000 via RS232
+      value: 12
+      unit_symbol: V
+      constraint: DC
+    - condition: L6C / L6D / P, PS, K — type AD2000 via USB
+      value: 5
+      unit_symbol: V
+      constraint: DC
+    - condition: L6C / L6D / P, PS, K — other types (RM-5800LL B, RM-5800NLL)
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      constraint: AC
+    - condition: only P and PS — type AD2000 via USB
+      value: 5
+      unit_symbol: V
+      constraint: DC
+  - attribute: power_supply_frequency
+    axis: load_cell_used and instrument type
+    values:
+    - condition: L6C / L6D / P, PS, K — other types (RM-5800LL B, RM-5800NLL)
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+  - attribute: power_supply_type
+    axis: instrument type
+    values:
+    - condition: AD2000
+      value: DC
+      unit_symbol:
+    - condition: RM-5800LL B / RM-5800NLL
+      value: AC
+      unit_symbol:
+recommendation:
+  id: R76-1
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-14200679-01
+  date: '2015-02-15'
+  pages: 43
+  role: type_evaluation_report
+- id: NMi-14200679-02
+  date: '2015-02-15'
+  pages: 28
+  role: type_evaluation_report
+- id: NMi-15200365-01
+  date: '2015-06-12'
+  pages: 15
+  role: type_evaluation_report
+- id: NMi-2353595-01
+  date: '2019-05-08'
+  pages: 13
+  role: type_evaluation_report
+- id: NMi-2391421-01
+  date: '2019-09-04'
+  pages: 14
+  role: type_evaluation_report
+- id: NMi-2433988-01
+  date: '2020-03-10'
+  pages: 42
+  role: type_evaluation_report
+- id: NMi-2441754-01
+  date: '2020-03-10'
+  pages: 26
+  role: type_evaluation_report
+- id: NMi-2488135-01
+  date: '2020-08-03'
+  pages: 16
+  role: type_evaluation_report
+- id: NMi-2488135-02
+  date: '2020-08-03'
+  pages: 16
+  role: type_evaluation_report
+- id: NMi-2633662-01
+  date: '2022-02-09'
+  pages: 45
+  role: type_evaluation_report
+- id: NMi-3507033-01
+  date: '2023-12-21'
+  pages: 17
+  role: type_evaluation_report
+- id: NMi-3507033-02
+  date: '2023-12-21'
+  pages: 26
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2020-08-03'
+  changes: Initial issue.
+- revision: '1'
+  date: '2022-02-15'
+  changes: Added new mainboard, power supply and L6D load cell.
+- revision: '2'
+  date: '2023-12-21'
+  changes: Added L6C load cell.
+model_family:
+  family_name:
+  models:
+  - model_id: AD2000
+  - model_id: RM-5800LL B
+  - model_id: RM-5800NLL
+components:
+- role: A/D board
+  type_designations:
+  - STB-2236
+  - STB-2255
+  - STB-2255-xx
+  alternatives: OR
+  characteristics:
+    applicability: >-
+      L6C: STB-2255 or STB-2236; L6D: STB-2236; P, PS, K: STB-2236, STB-2255 or STB-2255-xx; only P and
+      PS: STB-2255 or STB-2255-xx
+footnotes: []
+matrix_tables:
+- name: Characteristics of the non-automatic weighing instrument (weighing module) by load cell used
+  columns:
+  - characteristic
+  - load_cell_L6C
+  - load_cell_L6D
+  - load_cell_P_PS_K
+  - load_cell_only_P_PS
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - characteristic: configuration
+    load_cell_L6C: Weighing module
+    load_cell_L6D: Weighing module
+    load_cell_P_PS_K: Weighing module
+    load_cell_only_P_PS: Weighing module
+  - characteristic: accuracy_class
+    load_cell_L6C: III
+    load_cell_L6D: III
+    load_cell_P_PS_K: III
+    load_cell_only_P_PS: III
+  - characteristic: maximum_capacity
+    load_cell_L6C: 3 kg <= Max <= 30 kg
+    load_cell_L6D: 3 kg <= Max <= 30 kg
+    load_cell_P_PS_K: 3 kg <= Max <= 37.5 kg
+    load_cell_only_P_PS: 3 kg <= Max <= 37.5 kg
+  - characteristic: verification_scale_interval
+    load_cell_L6C: e >= 1 g
+    load_cell_L6D: e >= 1 g
+    load_cell_P_PS_K: e >= 1 g
+    load_cell_only_P_PS: e >= 5 g
+  - characteristic: weighing_ranges
+    load_cell_L6C: Single interval; Multi-interval
+    load_cell_L6D: Single interval; Multi-interval
+    load_cell_P_PS_K: Single interval; Multi-interval
+    load_cell_only_P_PS: Single interval
+  - characteristic: maximum_number_of_scale_intervals_one_weighing_range
+    load_cell_L6C: n <= 6000 (with STB-2255 or STB-2236 A/D board)
+    load_cell_L6D: n <= 6000 (with STB-2236 A/D board)
+    load_cell_P_PS_K: n <= 6000 (with STB-2236, STB-2255 or STB-2255-xx A/D board)
+    load_cell_only_P_PS: n <= 7500 (with STB-2255 or STB-2255-xx A/D board)
+  - characteristic: maximum_number_of_scale_intervals_multi_interval
+    load_cell_L6C: n <= 3000 (per partial weighing range)
+    load_cell_L6D: n <= 3000 (per partial weighing range)
+    load_cell_P_PS_K: n <= 3000 (per partial weighing range)
+    load_cell_only_P_PS:
+  - characteristic: maximum_number_of_partial_weighing_ranges
+    load_cell_L6C: 2
+    load_cell_L6D: 2
+    load_cell_P_PS_K: 2
+    load_cell_only_P_PS:
+  - characteristic: fraction_of_maximum_permitted_error
+    load_cell_L6C: 1
+    load_cell_L6D: 1
+    load_cell_P_PS_K: 1
+    load_cell_only_P_PS: 1
+  - characteristic: tare
+    load_cell_L6C: T <= -50% for instruments with one weighing range; T <= -Max1 for multi-interval instruments
+    load_cell_L6D: T <= -50% for instruments with one weighing range; T <= -Max1 for multi-interval instruments
+    load_cell_P_PS_K: T <= -50% for instruments with one weighing range; T <= -Max1 for multi-interval
+      instruments
+    load_cell_only_P_PS: T <= -50% for instruments with one weighing range; T <= -Max1 for multi-interval
+      instruments
+  - characteristic: temperature_range
+    load_cell_L6C: "-10 °C / +40 °C"
+    load_cell_L6D: "-10 °C / +40 °C"
+    load_cell_P_PS_K: "-10 °C / +40 °C"
+    load_cell_only_P_PS: "-10 °C / +40 °C"
+  - characteristic: power_supply_voltage
+    load_cell_L6C: 'For type AD2000: 12 V DC via RS232 or 5 V DC via USB; for other types: 100-240 V AC
+      50/60 Hz'
+    load_cell_L6D: 'For type AD2000: 12 V DC via RS232 or 5 V DC via USB; for other types: 100-240 V AC
+      50/60 Hz'
+    load_cell_P_PS_K: 'For type AD2000: 12 V DC via RS232 or 5 V DC via USB; for other types: 100-240
+      V AC 50/60 Hz'
+    load_cell_only_P_PS: 'For type AD2000: 5 V DC via USB'
+  - characteristic: software_identification
+    load_cell_L6C: Version number 1.x.x (x = 0-9)
+    load_cell_L6D: Version number 1.x.x (x = 0-9)
+    load_cell_P_PS_K: Version number 1.x.x (x = 0-9)
+    load_cell_only_P_PS: Version number 1.x.x (x = 0-9)
+  description: >-
+    Characteristics of the certified weighing module types AD2000, RM-5800LL B and RM-5800NLL, varying
+    by load cell used (L6C, L6D, P, PS, K).
+  footnotes: []

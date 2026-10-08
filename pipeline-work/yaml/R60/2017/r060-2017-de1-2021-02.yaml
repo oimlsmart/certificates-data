@@ -1,0 +1,346 @@
+_meta:
+  cert_id: 5438
+  num: R60/2017-A-DE1-21.02
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2021'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2017
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2017/r060-2017-de1-2021-02.pdf
+certificate:
+  number: R60/2017-A-DE1-2021.02
+  scheme: A
+  page_total: 3
+  member_state: Germany
+  date_issued: '2021-06-28'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt, Conformity Assessment Body
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  - Germany
+  person_responsible: Dr. Harry Stolz
+applicants:
+- name: Hottinger Brüel & Kjaer GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Brüel & Kjaer GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - C16A
+  module_designation: Analog load cell
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=7.5t
+      value: 7.5
+      footnote_markers: []
+    - model: Emax=15t
+      value: 15
+      footnote_markers: []
+    - model: Emax=20t
+      value: 20
+      footnote_markers: []
+    - model: Emax=30t
+      value: 30
+      footnote_markers: []
+    - model: Emax=40t
+      value: 40
+      footnote_markers: []
+    - model: Emax=60t
+      value: 60
+      footnote_markers: []
+    - model: Emax=100t
+      value: 100
+      footnote_markers: []
+    - model: Emax=200t
+      value: 200
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+    - condition: C3
+      value: 3000
+    - condition: C4
+      value: 4000
+    - condition: C5
+      value: 5000
+  - attribute: applicable_maximum_capacity
+    axis: accuracy_class
+    unit_symbol: t
+    values:
+    - condition: D1
+      value:
+        min: 7.5
+        max: 200
+    - condition: C3
+      value:
+        min: 7.5
+        max: 200
+    - condition: C4
+      value:
+        min: 7.5
+        max: 200
+    - condition: C5
+      value:
+        min: 7.5
+        max: 200
+  - attribute: min_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: D1, all Emax
+      value: Emax/5000
+      footnote_markers:
+      - 1)
+    - condition: C3, Emax 7.5 t to 40 t
+      value: Emax/10000
+      footnote_markers:
+      - 1)
+    - condition: C3, Emax 60 t
+      value: Emax/12000
+      footnote_markers:
+      - 1)
+    - condition: C3, Emax 100 t and 200 t
+      value: Emax/5988
+      footnote_markers:
+      - 1)
+    - condition: C4, Emax 7.5 t to 40 t
+      value: Emax/10000
+      footnote_markers:
+      - 1)
+    - condition: C4, Emax 60 t
+      value: Emax/12000
+      footnote_markers:
+      - 1)
+    - condition: C4, Emax 100 t and 200 t
+      value: Emax/5988
+      footnote_markers:
+      - 1)
+    - condition: C5, Emax 7.5 t to 40 t
+      value: Emax/10000
+      footnote_markers:
+      - 1)
+    - condition: C5, Emax 60 t
+      value: Emax/12000
+      footnote_markers:
+      - 1)
+    - condition: C5, Emax 100 t and 200 t
+      value: Emax/5988
+      footnote_markers:
+      - 1)
+  - attribute: optional_min_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C3, all Emax
+      value: Emax/20000
+      footnote_markers:
+      - 1)
+    - condition: C4, all Emax
+      value: Emax/20000
+      footnote_markers:
+      - 1)
+    - condition: C5, all Emax
+      value: Emax/20000
+      footnote_markers:
+      - 1)
+    - condition: D1
+      value: not applicable
+recommendation:
+  id: R60
+  edition: 2017
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C4
+  - C5
+  - D1
+test_reports:
+- id: 1.12-4098502
+  date: '2021-06-28'
+  pages: 9
+  role: type_evaluation_report
+- id: ZDS-R60/2017-A-DE1-2021.02
+  date: '2021-06-28'
+  pages: 2
+  role: documentation_file
+revision_history:
+- revision: "---"
+  date: '2021-06-28'
+  changes: First issuance
+model_family:
+  family_name: C16A
+  models:
+  - model_id: Emax=7.5t
+    label: C16A... load cell, Emax 7.5 t
+  - model_id: Emax=15t
+    label: C16A... load cell, Emax 15 t
+  - model_id: Emax=20t
+    label: C16A... load cell, Emax 20 t
+  - model_id: Emax=30t
+    label: C16A... load cell, Emax 30 t
+  - model_id: Emax=40t
+    label: C16A... load cell, Emax 40 t
+  - model_id: Emax=60t
+    label: C16A... load cell, Emax 60 t
+  - model_id: Emax=100t
+    label: C16A... load cell, Emax 100 t
+  - model_id: Emax=200t
+    label: C16A... load cell, Emax 200 t
+footnotes:
+- marker: 1)
+  text: vmin is indicated on the name plate
+matrix_tables:
+- name: 'Table 1: Essential data - accuracy classes D1 and C3'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity_emax
+  - min_load_cell_verification_interval_vmin
+  - optional_min_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+    maximum_capacity_emax:
+    - 7.5
+    - 15
+    - 20
+    - 30
+    - 40
+    - 60
+    - 100
+    - 200
+    min_load_cell_verification_interval_vmin: Emax/5000
+    optional_min_load_cell_verification_interval_vmin:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax:
+    - 7.5
+    - 15
+    - 20
+    - 30
+    - 40
+    min_load_cell_verification_interval_vmin: Emax/10000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax:
+    - 60
+    min_load_cell_verification_interval_vmin: Emax/12000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    maximum_capacity_emax:
+    - 100
+    - 200
+    min_load_cell_verification_interval_vmin: Emax/5988
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  description: >-
+    vmin = Emax/Y. Footnote marker 1) in the unit column applies to the vmin rows (vmin is indicated on
+    the name plate). '-' for optional vmin under class D1 means not applicable.
+  footnotes:
+  - 1) vmin is indicated on the name plate
+- name: 'Table 2: Essential data - accuracy classes C4 and C5'
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - maximum_capacity_emax
+  - min_load_cell_verification_interval_vmin
+  - optional_min_load_cell_verification_interval_vmin
+  column_units:
+  -
+  -
+  - t
+  -
+  -
+  rows:
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    maximum_capacity_emax:
+    - 7.5
+    - 15
+    - 20
+    - 30
+    - 40
+    min_load_cell_verification_interval_vmin: Emax/10000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    maximum_capacity_emax:
+    - 60
+    min_load_cell_verification_interval_vmin: Emax/12000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    maximum_capacity_emax:
+    - 100
+    - 200
+    min_load_cell_verification_interval_vmin: Emax/5988
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C5
+    max_load_cell_intervals_nlc: 5000
+    maximum_capacity_emax:
+    - 7.5
+    - 15
+    - 20
+    - 30
+    - 40
+    min_load_cell_verification_interval_vmin: Emax/10000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C5
+    max_load_cell_intervals_nlc: 5000
+    maximum_capacity_emax:
+    - 60
+    min_load_cell_verification_interval_vmin: Emax/12000
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  - accuracy_class: C5
+    max_load_cell_intervals_nlc: 5000
+    maximum_capacity_emax:
+    - 100
+    - 200
+    min_load_cell_verification_interval_vmin: Emax/5988
+    optional_min_load_cell_verification_interval_vmin: Emax/20000
+  description: >-
+    vmin = Emax/Y. Footnote marker 1) in the unit column applies to the vmin rows (vmin is indicated on
+    the name plate).
+  footnotes:
+  - 1) vmin is indicated on the name plate

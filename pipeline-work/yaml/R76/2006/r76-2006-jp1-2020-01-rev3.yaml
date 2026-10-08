@@ -1,0 +1,278 @@
+_meta:
+  cert_id: 6512
+  num: R76/2006-A-JP1-20.01 Rev. 3
+  applicant: Yamato Scale Co., Ltd.
+  issuing_year: '2025'
+  status: Valid
+  issuer: JP1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-jp1-2020-01-rev3.pdf
+certificate:
+  number: R76/2006-A-JP1-20.01
+  scheme: A
+  page_total: 3
+  member_state: Japan
+  date_issued: '2025-02-18'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3, 1-1-1 Umezono Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: ISHIMURA Kazuhiko
+  person_title: President of AIST
+applicants:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5-22 Saenba-cho, Akashi, 673-8688, Japan
+manufacturers:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5-22 Saenba-cho, Akashi, 673-8688, Japan
+- name: Shanghai Yamato Scale Co., Ltd.
+  address_lines:
+  - 368, Qingda Road, Heqing Industrial Field, Pudong, Shanghai, 201201, China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - UDS-series
+  - UDS-300
+  - UDS-300D
+  - UDS-600-WP
+  - UDS-700-WP
+  - TCW-WP Ⅱ
+  module_designation: Non-automatic weighing instruments
+  description: >-
+    The UDS-series is a class III, self-indicating, non-automatic weighing instrument. The instruments
+    are not designed for direct sales to the public. The legally relevant software is designated version
+    V 1.xx, with x reflecting non-legally relevant changes.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    initial_zero_setting_device:
+      value: "≤ 20% of Max"
+    semi_automatic_zero_setting_device:
+      value: "≤ 4% of Max"
+    zero_tracking_device:
+      value: "≤ 4% of Max"
+    semi_automatic_subtractive_tare_device:
+      value: T = -Max
+    zero_indicator:
+      value: present
+    indication_of_stable_equilibrium_device:
+      value: present
+    interfaces:
+      value: Serial data interface RS232C; ZBee; Bluetooth
+    legally_relevant_software_version:
+      value: V 1.xx
+    sealing:
+      value: Lead and wire type seal through securing screws
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Max=3kg
+      value: 3
+    - model: Max=1.5/3kg
+      value: 1.5/3
+    - model: Max=6kg
+      value: 6
+    - model: Max=3/6kg
+      value: 3/6
+    - model: Max=15kg
+      value: 15
+    - model: Max=7.5/15kg
+      value: 7.5/15
+    - model: Max=30kg
+      value: 30
+  - attribute: verification_scale_interval
+    unit_symbol: g
+    values:
+    - model: Max=3kg
+      value: 1
+    - model: Max=1.5/3kg
+      value: 1/2
+    - model: Max=6kg
+      value: 2
+    - model: Max=3/6kg
+      value: 2/5
+    - model: Max=15kg
+      value: 5
+    - model: Max=7.5/15kg
+      value: 5/10
+    - model: Max=30kg
+      value: 10
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=3kg
+      value: 20
+    - model: Max=1.5/3kg
+      value: 20
+    - model: Max=6kg
+      value: 40
+    - model: Max=3/6kg
+      value: 40
+    - model: Max=15kg
+      value: 100
+    - model: Max=7.5/15kg
+      value: 100
+    - model: Max=30kg
+      value: 200
+  config_level:
+  - attribute: temperature_range
+    axis: interval_configuration
+    values:
+    - condition: Single interval
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    - condition: Multi-interval
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: 2024-002
+  date: '2025-02-17'
+  pages: 5
+  role: type_evaluation_report
+- id: 2024-002-D
+  date: '2025-02-17'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2020-05-08'
+  changes: OIML Certificate first issued
+- revision: '1'
+  date: '2021-03-31'
+  changes: Correction Software version
+- revision: '2'
+  date: '2024-02-16'
+  changes: Added model TCW-WP Ⅱ
+- revision: '3'
+  date: '2025-02-18'
+  changes: Add Shanghai Yamato Scale Co., Ltd. as a manufacturer
+model_family:
+  family_name: UDS-series
+  models:
+  - model_id: Max=3kg
+  - model_id: Max=1.5/3kg
+  - model_id: Max=6kg
+  - model_id: Max=3/6kg
+  - model_id: Max=15kg
+  - model_id: Max=7.5/15kg
+  - model_id: Max=30kg
+matrix_tables:
+- name: Technical data — UDS-300, UDS-300D
+  columns:
+  - type
+  - class
+  - max
+  - e
+  - min
+  column_units:
+  -
+  -
+  - kg
+  - g
+  - g
+  rows:
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 3
+    e: 1
+    min: 20
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 1.5/3
+    e: 1/2
+    min: 20
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 6
+    e: 2
+    min: 40
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 3/6
+    e: 2/5
+    min: 40
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 15
+    e: 5
+    min: 100
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 7.5/15
+    e: 5/10
+    min: 100
+  - type: UDS-300, UDS-300D
+    class: III
+    max: 30
+    e: 10
+    min: 200
+  description: >-
+    Each Max column of the source table is a capacity/interval variant; dual values (e.g. 1.5/3 kg) denote
+    multi-interval instruments. Min values span pairs of adjacent columns as in the source. Temperature
+    range for all variants: single interval 0 to +40 °C, multi-interval -10 to +40 °C.
+  footnotes: []
+- name: Technical data — UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+  columns:
+  - type
+  - class
+  - max
+  - e
+  - min
+  column_units:
+  -
+  -
+  - kg
+  - g
+  - g
+  rows:
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 3
+    e: 1
+    min: 20
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 1.5/3
+    e: 1/2
+    min: 20
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 6
+    e: 2
+    min: 40
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 3/6
+    e: 2/5
+    min: 40
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 15
+    e: 5
+    min: 100
+  - type: UDS-600-WP, UDS-700-WP, TCW-WP Ⅱ
+    class: III
+    max: 7.5/15
+    e: 5/10
+    min: 100
+  description: >-
+    Same capacity/interval variants as the first six columns of the UDS-300/UDS-300D table. Temperature
+    range for all variants: single interval 0 to +40 °C, multi-interval -10 to +40 °C.
+  footnotes: []

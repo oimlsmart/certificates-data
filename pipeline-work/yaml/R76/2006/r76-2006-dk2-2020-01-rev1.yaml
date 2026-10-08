@@ -1,0 +1,189 @@
+_meta:
+  cert_id: 6789
+  num: R76/2006-A-DK2-20.01 Rev. 1
+  applicant: Tscale Electronics Mfg. (Kunshan) Co., Ltd.
+  issuing_year: '2026'
+  status: Valid
+  issuer: DK2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-dk2-2020-01-rev1.pdf
+certificate:
+  number: R76/2006-A-DK2-20.01 Rev. 1
+  scheme: A
+  project_number: 125-34474
+  page_total: 4
+  member_state: Denmark
+  date_issued: '2026-01-27'
+issuing_authority:
+  name: FORCE Certification A/S
+  address_lines:
+  - Park Allé 345
+  - 2605 Brøndby
+  - Denmark
+  person_responsible: Per Rafn Créty
+  phone: "+45 43250177"
+  email: info@forcecertification.com
+  website: www.forcecertification.com
+applicants:
+- name: Tscale Electronics Mfg. (Kunshan) Co., Ltd.
+  address_lines:
+  - No. 99 Jingwei Road
+  - Zhoushi, Kunshan, Jiangsu
+  - China
+manufacturers:
+- name: Tscale Electronics Mfg. (Kunshan) Co. Ltd.
+  address_lines:
+  - No. 99 Jingwei Road
+  - Zhoushi, Kunshan, Jiangsu
+  - China
+certified_type:
+  category: Non-automatic electronic weighing instrument
+  type_designations:
+  - DL…
+  - DSP…
+  - DSW…
+  module_designation: Non-automatic electronic weighing instrument
+  description: >-
+    DL, DSP and DSW are models within the DL series. The DL, DSP and DSW models use the same mainboard,
+    and the scale body is identical across all three models; DSP and DSW are optional versions based on
+    the DL model. DSW is equipped with a pole rear display with one weight window. DSP is equipped with
+    a pole rear display with three windows showing unit price, total price and weight. The DSP… scale
+    may be connected to a POS system using the DL… CON2 protocol.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    weighing_range:
+      value: Single interval, multi-interval (dual) or multi-range (dual)
+    max_number_of_verification_scale_intervals:
+      value: "≤ 3000 or 2×3000"
+    maximum_capacity:
+      value:
+        min: 6
+        max: 30
+      unit_symbol: kg
+    minimum_capacity:
+      value: 20
+      unit_symbol: e
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+    maximum_tare_effect:
+      value: "-Max"
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    external_dc_power_supply_voltage:
+      value: 12
+      unit_symbol: V
+    power_supply_type:
+      value: External AC/DC adapter; optional 6 V battery or 5 VDC from USB connector depending on model
+    operational_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    peripheral_interface:
+      value: RS232, USB, Bluetooth (optional)
+    approved_legal_software_versions:
+      value: v1.11 or v1.14
+    approved_application_software_version:
+      value: v1.xx(y)
+    software_separation:
+      value: provided
+  model_level:
+  - attribute: pole_rear_display_windows
+    values:
+    - model: DSP
+      value: 3
+    - model: DSW
+      value: 1
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: 119-31559.10
+  date: '2020-01-13'
+  pages: 94
+  role: evaluation_report
+- id: 125-32000.10
+  date: '2025-11-14'
+  pages: 24
+  role: evaluation_report
+- id: 119-31559.90.20
+  date: '2020-01-22'
+  pages: 20
+  role: type_evaluation_report
+- id: 125-34474.20
+  date: '2026-01-27'
+  pages: 22
+  role: type_evaluation_report
+- id: 119-31559
+  role: documentation_file
+- id: 125-32000
+  role: documentation_file
+revision_history:
+- revision: Initial version
+  date: '2020-02-12'
+  changes:
+- revision: '1'
+  date: '2026-01-27'
+  changes: Indication revised, Unit device added, Change in model designations
+model_family:
+  family_name: DL series
+  models:
+  - model_id: DL
+    label: Base model of the DL series
+  - model_id: DSP
+    label: Version with pole rear display with three windows
+    attributes:
+      pole_rear_display_windows: 3
+      displayed_values: unit price, total price, weight
+  - model_id: DSW
+    label: Version with pole rear display with one weight window
+    attributes:
+      pole_rear_display_windows: 1
+      displayed_values: weight
+components:
+- role: initial zero setting device
+  characteristics:
+    setting_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      note: of Max
+- role: semi-automatic zero setting device
+  characteristics:
+    setting_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      note: of Max
+- role: zero tracking device
+  characteristics:
+    setting_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      note: of Max
+- role: semi-automatic subtractive tare balancing device
+- role: gravity compensation device
+- role: unit device
+- role: stable equilibrium, zero, net and active range indicators

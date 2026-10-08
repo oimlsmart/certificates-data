@@ -1,0 +1,212 @@
+_meta:
+  cert_id: 3250
+  num: R117/1995-JP1-2013.01
+  applicant: Tominaga Mfg. Co.
+  issuing_year: '2013'
+  status: Valid
+  issuer: JP1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-jp1-2013-01.pdf
+certificate:
+  number: R117/1995-JP1-13.01
+  page_total: 3
+  member_state: Japan
+  date_issued: '2013-09-02'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Ryoji Chubachi
+  person_title: President of AIST
+applicants:
+- name: TOMINAGA MFG. CO.
+  address_lines:
+  - 88 Nishinokyo-Minamiryomachi, Nakagyo-ku
+  - JP-604-8493 Kyoto
+  - Japan
+manufacturers:
+- name: TOMINAGA MFG. CO.
+  address_lines:
+  - 88 Nishinokyo-Minamiryomachi, Nakagyo-ku
+  - JP-604-8493 Kyoto
+  - Japan
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - HA
+  - HI
+  description: Fuel dispenser for motor vehicles, HA / HI series
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication:
+      value: 6
+      unit_symbol: digits
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 5
+      unit_symbol: digits
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 6
+      unit_symbol: digits
+      unit_id:
+      footnote_markers: []
+    liquids:
+      value: Gasoline, Diesel, Kerosene
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: flowrate_range
+    values:
+    - condition: Low flowrate
+      value: 30
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: High flowrate
+      value: 70
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_flowrate
+    axis: flowrate_range
+    values:
+    - condition: Low flowrate
+      value: 3
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: High flowrate
+      value: 3
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+recommendation:
+- id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+- id: R118
+  edition: 1995
+test_reports:
+- id: R117/1995-JP1-2013-02
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: HA
+  - model_id: HI
+components:
+- role: Meter
+  type_designations:
+  - FM1
+  alternatives:
+  characteristics:
+    manufacturer: TOMINAGA MFG CO.
+- role: Gas elimination device (integral with pump)
+  type_designations:
+  - PA6
+  alternatives:
+  characteristics:
+    manufacturer: TOMINAGA MFG. CO.
+- role: Measuring transducer
+  type_designations:
+  - ZE-1945
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Calculator
+  type_designations:
+  - PB-0451
+  - PB-0452
+  alternatives: OR
+  characteristics:
+    manufacturer: TOMINAGA MFG. CO.
+- role: Hose
+  type_designations:
+  - 3N5/8
+  - 3N3/4
+  alternatives: OR
+  characteristics:
+    manufacturer: TOGAWA RUBEER CO., LTD.
+- role: Nozzle
+  type_designations:
+  - TNAS-520C
+  - TNAS-520R
+  - TNASD-520C
+  - TNASD-520R
+  - TNAS-525C
+  - TNAS-525R
+  - TNASD-525C
+  - TNASD-525R
+  - TNASW-525C
+  - TNASW-525R
+  - 10-3/4
+  - 10-1
+  alternatives: OR
+  characteristics:
+    manufacturer: TOMINAGA MFG. CO.
+- role: Break valve
+  type_designations:
+  - Double Poppet Valve:2
+  alternatives:
+  characteristics:
+    manufacturer: TOMINAGA MFG. CO.
+matrix_tables:
+- name: Characteristics of fuel dispenser HA / HI series by flowrate range
+  columns:
+  - flowrate_range
+  - accuracy_class
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - maximum_volume_indication_digits
+  - maximum_unit_price_digits
+  - maximum_price_to_pay_digits
+  column_units:
+  -
+  -
+  - L/min
+  - L/min
+  - L
+  - digits
+  - digits
+  - digits
+  rows:
+  - flowrate_range: Low flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 30
+    minimum_flowrate: 3
+    minimum_measured_quantity: 2
+    maximum_volume_indication_digits: 6
+    maximum_unit_price_digits: 5
+    maximum_price_to_pay_digits: 6
+  - flowrate_range: High flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 70
+    minimum_flowrate: 3
+    minimum_measured_quantity: 2
+    maximum_volume_indication_digits: 6
+    maximum_unit_price_digits: 5
+    maximum_price_to_pay_digits: 6
+  description: Accuracy class 0.5 fuel dispenser in low-flowrate and high-flowrate configurations.
+  footnotes: []

@@ -1,0 +1,176 @@
+_meta:
+  cert_id: 1778
+  num: R076/1992-NL1-2006.38
+  applicant: Mettler-Toledo (Changzhou) Precision Instruments Ltd.
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-nl1-2006-38.pdf
+certificate:
+  number: R76/1992-NL1-06.38
+  scheme: B
+  project_number: '608443'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-11-02'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Mettler-Toledo (ChangZhou) Scale & System Ltd.
+  address_lines:
+  - 111 Changxi Road, Changzhou
+  - 213001 Jiangsu
+  - P.R. of China
+manufacturers:
+- name: Mettler-Toledo (ChangZhou) Scale & System Ltd.
+  address_lines:
+  - 111 Changxi Road, Changzhou
+  - 213001 Jiangsu
+  - P.R. of China
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - bTwin
+  module_designation:
+  description: >-
+    Non-automatic weighing instrument type bTwin, available in two variants based on the load cell used
+    (AMI Load Cell or New AMI Load Cell). Temperature range -10 °C / +40 °C.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    tare_limit:
+      value: T ≤ -(Max - e)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: AMI Load Cell
+      value:
+        min: 3
+        max: 30
+      footnote_markers: []
+    - model: New AMI Load Cell
+      value:
+        min: 12
+        max: 30
+      footnote_markers: []
+  - attribute: verification_scale_interval_e
+    unit_symbol: g
+    values:
+    - model: AMI Load Cell
+      value:
+        min: 1
+        max:
+      footnote_markers: []
+    - model: New AMI Load Cell
+      value:
+        min: 2
+        max:
+      footnote_markers: []
+  - attribute: max_number_of_divisions_n
+    unit_symbol: divisions
+    values:
+    - model: AMI Load Cell
+      value:
+        min:
+        max: 3000
+      footnote_markers: []
+    - model: New AMI Load Cell
+      value:
+        min:
+        max: 6000
+      footnote_markers: []
+  config_level: []
+recommendation:
+  id: R76
+  edition: 1992
+  amendment:
+  scheme: B
+  accuracy_classes:
+  - III
+test_reports:
+- id: R76/1992-NL1-05.16
+  date:
+  pages: 55
+  role: test_report
+- id: R76/1992-NL1-06.38
+  date:
+  pages: 44
+  role: test_report
+- id: T6761
+  date:
+  pages:
+  role: documentation_file
+model_family:
+  family_name:
+  models:
+  - model_id: AMI Load Cell
+    label: bTwin variant with AMI Load Cell
+    attributes:
+      maximum_capacity:
+        value:
+          min: 3
+          max: 30
+        unit_symbol: kg
+        unit_id:
+      verification_scale_interval_e:
+        value:
+          min: 1
+          max:
+        unit_symbol: g
+        unit_id:
+      max_number_of_divisions_n:
+        value:
+          min:
+          max: 3000
+        unit_symbol: divisions
+        unit_id:
+  - model_id: New AMI Load Cell
+    label: bTwin variant with New AMI Load Cell
+    attributes:
+      maximum_capacity:
+        value:
+          min: 12
+          max: 30
+        unit_symbol: kg
+        unit_id:
+      verification_scale_interval_e:
+        value:
+          min: 2
+          max:
+        unit_symbol: g
+        unit_id:
+      max_number_of_divisions_n:
+        value:
+          min:
+          max: 6000
+        unit_symbol: divisions
+        unit_id:
+components:
+- role: load cell
+  type_designations:
+  - AMI Load Cell
+  - New AMI Load Cell
+  alternatives: OR
+  characteristics: {}

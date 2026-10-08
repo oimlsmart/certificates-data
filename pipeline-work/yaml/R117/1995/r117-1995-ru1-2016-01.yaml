@@ -1,0 +1,271 @@
+_meta:
+  cert_id: 3995
+  num: R117/1995-RU1-2016.01
+  applicant: Midco Ltd.
+  issuing_year: '2016'
+  status: Valid
+  issuer: RU1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-ru1-2016-01.pdf
+certificate:
+  number: R 117/1995-RU1-16.01
+  page_total: 3
+  member_state: Russian Federation
+  date_issued: '2016-06-09'
+issuing_authority:
+  name: VNIIMS
+  address_lines:
+  - 46, Ozernaya str, Moscow, 119361
+  - the Russian Federation
+  person_responsible: Dr. S.S. Golubev
+  person_title: CIML member
+applicants:
+- name: MIDCO LIMITED
+  address_lines:
+  - Metro Estate, Vidyanagari Marg, Kalina
+  - Mumbai 400 098, India
+manufacturers:
+- name: MIDCO LIMITED
+  address_lines:
+  - Metro Estate, Vidyanagari Marg, Kalina
+  - Mumbai 400 098, India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Sure-Fill
+  - AccueFill
+  description: >-
+    MIDCO Fuel Dispensing Units, Sure-Fill/AccueFill Series, Suction type and Remote type. Comprising
+    one or more systems in every enclosure; each subsystem consists of: A. Hydraulics - a MIDCO flow meter
+    (one each for the 50 and 80 flow rate, two for the 140 flow rate) with integrated and combined optical/magnetic
+    pulsar (openable and non-openable with open-close detection), a MIDCO oil metering pump, a MIDCO combined
+    pump and gas eliminator (other than in pressurized system), break valve, hose, nozzle and flow indicator.
+    B. Electronics - a MIDCO calculator (Electronic Register Assembly, ERA) and a MIDCO electronic customer
+    interface (payment card reader, printer, keypad, combined or separate display, electronic or electro-mechanical
+    totalizer, density and oil % readout, push buttons, RFID, speaker, payment terminal, automation, remote
+    automation enable/disable through OTP, touch screen, preset/non-preset, IFSF provision, advertisement
+    or remote display interfacing provision, provision of temperature/pressure probes, delivery speed,
+    OTP for pulsar validation and process of electronic calibration); these interfaces may be present
+    or absent based on customer requirement.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    liquids:
+      value: >-
+        Gasoline, Diesel, Kerosene, Gasoline mixed with max 25% Ethanol, 25% MTBE & 25% Methanol, Gasoline
+        + Oil mix (Fixed/Variable) up to 5%, Biodiesel up to 100%, E-85
+      unit_symbol:
+      unit_id:
+    maximum_volume_display:
+      value: 999999.99 or 99999.999 (programmable)
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    maximum_unit_price_display:
+      value: 9999.99 (programmable)
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    maximum_density_display:
+      value: 99999.9 (programmable; optional feature)
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    maximum_price_to_pay_display:
+      value: 99999999 (programmable/floating)
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+  model_level:
+  - attribute: maximum_flow_rate_qmax
+    unit_symbol: l/min
+    values:
+    - model: Qmax=50l/min
+      value: 50
+    - model: Qmax=80l/min
+      value: 80
+    - model: Qmax=140l/min
+      value: 140
+  - attribute: minimum_flow_rate_qmin
+    unit_symbol: l/min
+    values:
+    - model: Qmax=50l/min
+      value: 2
+    - model: Qmax=80l/min
+      value: 2
+    - model: Qmax=140l/min
+      value:
+        min: 5
+        max:
+  - attribute: minimum_measured_quantity_mmq
+    unit_symbol: l
+    values:
+    - model: Qmax=50l/min
+      value: 1 or 2 or 5
+    - model: Qmax=80l/min
+      value: 1 or 2 or 5
+    - model: Qmax=140l/min
+      value: 2 or 5 or 10
+  - attribute: number_of_flow_meters
+    unit_symbol:
+    values:
+    - model: Qmax=50l/min
+      value: 1
+    - model: Qmax=80l/min
+      value: 1
+    - model: Qmax=140l/min
+      value: 2
+recommendation:
+  id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+revision_history:
+- revision: '1'
+  date: '2016-06-09'
+  changes: This revision replaces the preceding one
+model_family:
+  family_name: Sure-Fill/AccueFill Series
+  models:
+  - model_id: Qmax=50l/min
+  - model_id: Qmax=80l/min
+  - model_id: Qmax=140l/min
+components:
+- role: flow meter
+  type_designations:
+  - MIDCO flow meter
+  characteristics:
+    quantity:
+      value: one for the 50 l/min and 80 l/min flow rates, two for the 140 l/min flow rate
+      unit_symbol:
+      unit_id:
+    pulsar:
+      value: >-
+        integrated and combined optical/magnetic pulsar, openable and non-openable, with open-close detection
+      unit_symbol:
+      unit_id:
+- role: oil metering pump
+  type_designations:
+  - MIDCO oil metering pump
+- role: combined pump and gas eliminator
+  type_designations:
+  - MIDCO combined pump and gas eliminator
+  characteristics:
+    application:
+      value: other than in pressurized system
+      unit_symbol:
+      unit_id:
+- role: accessories
+  type_designations:
+  - break valve
+  - hose
+  - nozzle
+  - flow indicator
+- role: calculator
+  type_designations:
+  - MIDCO Electronic Register Assembly (ERA)
+- role: electronic customer interface
+  type_designations:
+  - MIDCO electronic customer interface
+  alternatives: OR
+  characteristics:
+    optional_interfaces:
+      value: >-
+        Payment Card Reader, Printer, Keypad, Combined or separate display, Electronic or Electro-Mechanical
+        Totalizer, Density and Oil % readout, Push Buttons, RFID (Radio-frequency identification), Speaker,
+        Payment Terminal, Automation, Remote Automation (Enable/Disable through OTP, optional), Touch
+        Screen, Preset/Non-preset, IFSF (International Forecourt Standards Forum) provision, Advertisement
+        or remote display interfacing provision, provision of temperature/pressure probes, Delivery speed,
+        OTP (One Time Password) for pulsar validation and process of electronic calibration; may be present
+        or absent based on customer requirement
+      unit_symbol:
+      unit_id:
+footnotes:
+- marker: "#"
+  text: >-
+    The number of display digits, display size, number of displays & decimal points in the displays can
+    be changed based on customer requirement.
+matrix_tables:
+- name: Metrological characteristics by maximum flow rate
+  columns:
+  - accuracy_class
+  - maximum_flow_rate_qmax
+  - minimum_flow_rate_qmin
+  - minimum_measured_quantity_mmq
+  - temperature_range
+  - maximum_volume_display
+  - maximum_unit_price_display
+  - maximum_density_display
+  - maximum_price_to_pay_display
+  - liquids
+  column_units:
+  -
+  - l/min
+  - l/min
+  - l
+  - "°C"
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - accuracy_class: 0.5
+    maximum_flow_rate_qmax: 50
+    minimum_flow_rate_qmin: 2
+    minimum_measured_quantity_mmq: 1 or 2 or 5
+    temperature_range: "-25 to +55"
+    maximum_volume_display: 999999.99 or 99999.999 (programmable)
+    maximum_unit_price_display: 9999.99 (programmable)
+    maximum_density_display: 99999.9 (programmable)
+    maximum_price_to_pay_display: 99999999 (programmable/floating)
+    liquids: >-
+      Gasoline, Diesel, Kerosene, Gasoline mixed with max 25% Ethanol, 25% MTBE & 25% Methanol, Gasoline
+      + Oil mix (Fixed/Variable) up to 5%, Biodiesel up to 100%, E-85
+  - accuracy_class: 0.5
+    maximum_flow_rate_qmax: 80
+    minimum_flow_rate_qmin: 2
+    minimum_measured_quantity_mmq: 1 or 2 or 5
+    temperature_range: "-25 to +55"
+    maximum_volume_display: 999999.99 or 99999.999 (programmable)
+    maximum_unit_price_display: 9999.99 (programmable)
+    maximum_density_display: 99999.9 (programmable)
+    maximum_price_to_pay_display: 99999999 (programmable/floating)
+    liquids: >-
+      Gasoline, Diesel, Kerosene, Gasoline mixed with max 25% Ethanol, 25% MTBE & 25% Methanol, Gasoline
+      + Oil mix (Fixed/Variable) up to 5%, Biodiesel up to 100%, E-85
+  - accuracy_class: 0.5
+    maximum_flow_rate_qmax: 140
+    minimum_flow_rate_qmin: ">5"
+    minimum_measured_quantity_mmq: 2 or 5 or 10
+    temperature_range: "-25 to +55"
+    maximum_volume_display: 999999.99 or 99999.999 (programmable)
+    maximum_unit_price_display: 9999.99 (programmable)
+    maximum_density_display: 99999.9 (programmable)
+    maximum_price_to_pay_display: 99999999 (programmable/floating)
+    liquids: >-
+      Gasoline, Diesel, Kerosene, Gasoline mixed with max 25% Ethanol, 25% MTBE & 25% Methanol, Gasoline
+      + Oil mix (Fixed/Variable) up to 5%, Biodiesel up to 100%, E-85
+  description: >-
+    Characteristics of the MIDCO Sure-Fill/AccueFill fuel dispensing units (accuracy class 0.5) for the
+    three maximum flow rate variants (50, 80, 140 l/min). Temperature range and liquids apply to all variants;
+    the density readout is an optional feature.
+  footnotes:
+  - >-
+    The number of display digits, display size, number of displays & decimal points in the displays can
+    be changed based on customer requirement.

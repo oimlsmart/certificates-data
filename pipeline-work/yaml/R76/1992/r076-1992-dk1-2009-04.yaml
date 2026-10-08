@@ -1,0 +1,204 @@
+_meta:
+  cert_id: 2279
+  num: R076/1992-DK1-2009.04
+  applicant: Flintec GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DK1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-dk1-2009-04.pdf
+certificate:
+  number: R76/1992-DK1-09.04
+  scheme: A
+  page_total: 2
+  member_state: Denmark
+  date_issued: '2009-08-18'
+  oiml_issuer_id: DK1
+issuing_authority:
+  name: The Danish Accreditation and Metrology Fund
+  address_lines:
+  - Dyregårdsvej 5B
+  - 2740 Skovlunde
+  - Denmark
+  person_responsible: P. Claudi Johansen
+  person_title: The CIML member
+  phone: "+45 77 33 95 00"
+  email: danak@danak.dk
+  website: www.dansk-metrologi.dk
+  oiml_issuer_id: DK1
+applicants:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+manufacturers:
+- name: Flintec GmbH
+  address_lines:
+  - Bemannsbruch 9
+  - 74909 Meckesheim
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - FT-11
+  - FT-11D
+  - FT-12
+  - FT-13
+  - FT-16
+  - FT-16D
+  module_designation:
+  description: >-
+    Weighing indicators for non-automatic weighing instruments; all models with name suffix "D" have an
+    interface for digital load cells.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    weighing_range:
+      value: single-interval or multi-range
+    measuring_range:
+      value:
+        min: 0
+        max: 20
+      unit_symbol: mV
+    excitation_voltage:
+      value: 5
+      unit_symbol: V
+    excitation_voltage_type:
+      value: DC
+    load_cell_impedance:
+      value:
+        min: 58
+        max: 1200
+      unit_symbol: Ω
+    load_cell_connecting_system:
+      value: 6 wire system, screened
+    apportionment_factor_pi:
+      value: 0.5
+    interface:
+      value: Protective, according to paragraph 5.3.6
+    connected_load_cells:
+      value: Shall comply with R60
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+  model_level: []
+  config_level:
+  - attribute: minimum_input_voltage
+    axis: instrument version
+    values:
+    - condition: version 01.xx
+      value: 0.5
+      unit_symbol: µV/VSI
+    - condition: version 02.xx
+      value: 0.4
+      unit_symbol: µV/VSI
+  - attribute: max_number_of_intervals
+    axis: certified variant (unnamed columns in characteristics table)
+    values:
+    - condition: column 1
+      value: "≤ 10,000 or ≤ 2 × 6000"
+      unit_symbol:
+    - condition: column 2
+      value: "≤ 1000 or ≤ 2 × 1000"
+      unit_symbol:
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: DANAK-199784
+  date: '2005-11-24'
+  pages: 86
+  role: test_report
+- id: DANAK-199835
+  date: '2007-01-04'
+  pages: 77
+  role: test_report
+revision_history: []
+model_family:
+  family_name:
+  models:
+  - model_id: FT-11
+    attributes: {}
+  - model_id: FT-11D
+    attributes:
+      interface_for_digital_load_cells: true
+  - model_id: FT-12
+    attributes: {}
+  - model_id: FT-13
+    attributes: {}
+  - model_id: FT-16
+    attributes: {}
+  - model_id: FT-16D
+    attributes:
+      interface_for_digital_load_cells: true
+footnotes: []
+matrix_tables:
+- name: Characteristics
+  columns:
+  - attribute
+  - symbol
+  - column_1
+  - column_2
+  rows:
+  - attribute: accuracy_class
+    symbol:
+    column_1: III
+    column_2: III
+  - attribute: weighing_range
+    symbol:
+    column_1: Single-interval or multi-range
+    column_2: Single-interval or multi-range
+  - attribute: number_of_intervals
+    symbol: Max/e
+    column_1: "≤ 10,000 or ≤ 2 × 6000"
+    column_2: "≤ 1000 or ≤ 2 × 1000"
+  - attribute: minimum_input_voltage
+    symbol: ΔUmin
+    column_1: 0.5 µV per VSI (version 01.xx) / 0.4 µV per VSI (version 02.xx)
+    column_2: 0.5 µV per VSI (version 01.xx) / 0.4 µV per VSI (version 02.xx)
+  - attribute: measuring_range
+    symbol: Min. / Max.
+    column_1: 0 mV / 20 mV
+    column_2: 0 mV / 20 mV
+  - attribute: excitation_voltage
+    symbol: Uexc
+    column_1: 5 VDC
+    column_2: 5 VDC
+  - attribute: load_cell_impedance
+    symbol: Min. / Max.
+    column_1: 58 Ω / 1,200 Ω
+    column_2: 58 Ω / 1,200 Ω
+  - attribute: load_cell_connecting_system
+    symbol:
+    column_1: 6 wire system, screened
+    column_2: 6 wire system, screened
+  - attribute: module_fractional_factor
+    symbol: pi
+    column_1: 0.5 for the indicator
+    column_2: 0.5 for the indicator
+  - attribute: interface
+    symbol:
+    column_1: Protective, according to paragraph 5.3.6
+    column_2: Protective, according to paragraph 5.3.6
+  - attribute: connected_load_cells
+    symbol:
+    column_1: Shall comply with R60
+    column_2: Shall comply with R60
+  - attribute: temperature_range_for_the_indicator
+    symbol:
+    column_1: "-10 °C / +40 °C"
+    column_2: "-10 °C / +40 °C"
+  description: >-
+    Characteristics table from page 2. The last two columns are two unnamed certified variants; rows shown
+    identically in both columns were spanned (colspan) in the original table.
+  footnotes: []

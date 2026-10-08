@@ -1,0 +1,313 @@
+_meta:
+  cert_id: 2754
+  num: R051/2006-GB1-2008.01 Rev. 5
+  applicant: Loma Systems Group and ITW Group
+  issuing_year: '2012'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2008-01-rev5.pdf
+certificate:
+  number: R51/2006-GB1-08.01
+  scheme: A
+  project_number: T1108/0054
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2012-03-06'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Loma Systems Group and ITW Group
+  address_lines:
+  - Southwood
+  - Farnborough
+  - Hampshire
+  - GU14 0NY
+  - United Kingdom
+manufacturers:
+- name: Loma Systems Group and ITW Group
+  address_lines:
+  - Southwood
+  - Farnborough
+  - Hampshire
+  - GU14 0NY
+  - United Kingdom
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - CW³
+  description: >-
+    The pattern is a mains-powered automatic checkweighing instrument designated the CW³. The load transport
+    system may consist of conveyor belts driven by rollers or by sets of chains (designated as 'Drag Link').
+    The PC console provides the 5.5 VDC excitation voltage for the load cell. Devices: automatic zero
+    setting device active during automatic operation (active if the time between two packs is more than
+    500 ms); pre-set tare device (subtractive); static calibration not accessible to the user; dynamic
+    calibration accessible to the user; belt speed setting accessible to the user; internal memory for
+    storage of batch reports; device to determine the stability of equilibrium, active during dynamic
+    operation; device that acts upon significant faults; screen check at power-up. Interfaces: RS 232,
+    USB, Ethernet; the instrument may be connected to either the Loma OPC or LomaEnet systems for the
+    collection of batch reports.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: XIII
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    maximum_number_of_scale_intervals:
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+    excitation_voltage:
+      value: 5.5
+      unit_symbol: V
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+    power_supply_type:
+      value: AC
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    climatic_environment:
+      value: Non-condensing (closed)
+    electromagnetic_environments:
+      value: E1 and E2
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Ultra Light weight Range
+      value: 0.4
+    - model: Lightweight
+      value: 1.5
+    - model: Mid-Range
+      value: 6
+    - model: Heavy Range
+      value: 12
+    - model: Super Heavy Range
+      value: 10/20/50
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: Ultra Light weight Range
+      value: 15
+    - model: Lightweight
+      value: 50
+    - model: Mid-Range
+      value: 50
+    - model: Heavy Range
+      value: 500
+    - model: Super Heavy Range
+      value: 3000
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: Ultra Light weight Range
+      value: 0.5
+    - model: Lightweight
+      value:
+        min: 1
+        max:
+    - model: Mid-Range
+      value:
+        min: 1
+        max:
+    - model: Heavy Range
+      value: 2
+    - model: Super Heavy Range
+      value: 5/10/20
+  - attribute: load_cell_emax
+    unit_symbol: kg
+    values:
+    - model: Ultra Light weight Range
+      value: 5
+    - model: Lightweight
+      value: 10
+    - model: Mid-Range
+      value: 20
+    - model: Heavy Range
+      value: 30
+    - model: Super Heavy Range
+      value: 100
+  - attribute: load_cell_model
+    unit_symbol:
+    values:
+    - model: Ultra Light weight Range
+      value: Vishay Type 240 C3
+    - model: Lightweight
+      value: Vishay Tedea Huntleigh 240 C3
+    - model: Mid-Range
+      value: Vishay Tedea Huntleigh 240 C3
+    - model: Heavy Range
+      value: Tedea Huntleigh 240 C3
+    - model: Super Heavy Range
+      value: Tedea Huntleigh 1265 C3
+  - attribute: operating_speed
+    unit_symbol: m/min
+    values:
+    - model: Ultra Light weight Range
+      value: 60
+    - model: Super Heavy Range
+      value: 50
+    - model: Heavy Range
+      value: As per Mid-Range variant
+  - attribute: tare
+    unit_symbol:
+    values:
+    - model: Lightweight
+      value: T ≤ -10% Max / 300 g
+    - model: Mid-Range
+      value: T ≤ -10% Max / 300 g
+    - model: Heavy Range
+      value: T ≤ -1.2 kg
+    - model: Super Heavy Range
+      value: T ≤ -5 kg
+    - model: Ultra Light weight Range
+      value: No tare allowed for Gross ≤ 50 g; T ≤ 10% Net for Net > 50 g
+  config_level:
+  - attribute: maximum_belt_speed
+    axis: variant × load range
+    values:
+    - condition: Lightweight variant, load 50-200 g
+      value: 80
+      unit_symbol: m/min
+    - condition: Mid-Range variant, load 50-200 g
+      value: 50
+      unit_symbol: m/min
+    - condition: Lightweight variant, load 201-1500 g
+      value: 100
+      unit_symbol: m/min
+    - condition: Mid-Range variant, load 201-1500 g
+      value: 100
+      unit_symbol: m/min
+    - condition: Mid-Range variant, load 1501-2000 g
+      value: 100
+      unit_symbol: m/min
+    - condition: Mid-Range variant, load 2001-6000 g
+      value: 70
+      unit_symbol: m/min
+recommendation:
+  id: R51
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - XIII
+test_reports:
+- id: P00781
+  pages: 12
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2008-07-04'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2008-09-16'
+  changes: 6000 division variant added to the certificate. Maximum belt speed table added.
+- revision: '2'
+  date: '2008-12-11'
+  changes: Transport system designated 'Drag Link' added.
+- revision: '3'
+  date: '2010-10-07'
+  changes: Heavy Range and Super Heavy Range variants added.
+- revision: '4'
+  date: '2011-12-22'
+  changes: Ultra Light weight Range variant added.
+- revision: '5'
+  date: '2012-03-06'
+  changes: Excitation voltage corrected to 5.5 VDC. Certificate history added.
+model_family:
+  family_name: CW³
+  models:
+  - model_id: Ultra Light weight Range
+    label: Ultra Light weight Range variant
+    attributes:
+      maximum_capacity: 400 g
+      minimum_capacity: 15 g
+      scale_interval: 0.5 g
+      load_cell: Vishay Type 240 C3 (Emax 5 kg)
+      operating_speed: 60 m/min
+  - model_id: Lightweight
+    label: Lightweight variant
+    attributes:
+      maximum_capacity: 1500 g
+      load_cell: Vishay Tedea Huntleigh 240 C3 (Emax 10 kg)
+  - model_id: Mid-Range
+    label: Mid-Range variant
+    attributes:
+      maximum_capacity: 6000 g
+      load_cell: Vishay Tedea Huntleigh 240 C3 (Emax 20 kg)
+  - model_id: Heavy Range
+    label: Heavy Range variant
+    attributes:
+      maximum_capacity: 12 kg
+      minimum_capacity: 500 g
+      scale_interval: 2 g
+      load_cell: Tedea Huntleigh 240 C3 (Emax 30 kg)
+  - model_id: Super Heavy Range
+    label: Super Heavy Range variant (multi-interval)
+    attributes:
+      maximum_capacity: 10/20/50 kg
+      minimum_capacity: 3 kg
+      scale_interval: 5/10/20 g
+      load_cell: Tedea Huntleigh 1265 C3 (Emax 100 kg)
+      operating_speed: 50 m/min
+components:
+- role: load cell
+  type_designations:
+  - Vishay Tedea Huntleigh 240 C3
+  - Tedea Huntleigh 1265 C3
+  - Vishay Type 240 C3
+  alternatives: OR
+  characteristics:
+    excitation_voltage:
+      value: 5.5
+      unit_symbol: V
+    excitation_source:
+      value: PC console
+matrix_tables:
+- name: Maximum belt speed
+  columns:
+  - load
+  - lightweight_variant
+  - mid_range_variant
+  column_units:
+  -
+  - m/min
+  - m/min
+  rows:
+  - load: 50 g to 200 g
+    lightweight_variant: 80
+    mid_range_variant: 50
+  - load: 201 g to 1500 g
+    lightweight_variant: 100
+    mid_range_variant: 100
+  - load: 1501 g to 2000 g
+    lightweight_variant:
+    mid_range_variant: 100
+  - load: 2001 g to 6000 g
+    lightweight_variant:
+    mid_range_variant: 70
+  description: >-
+    Maximum belt speed as a function of load for the Lightweight and Mid-Range variants; '-' indicates
+    not applicable.
+  footnotes: []

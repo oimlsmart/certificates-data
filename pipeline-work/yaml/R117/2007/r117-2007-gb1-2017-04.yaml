@@ -1,0 +1,260 @@
+_meta:
+  cert_id: 4515
+  num: R117/2007-GB1-2017.04
+  applicant: Gilbarco Veeder Root
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-gb1-2017-04.pdf
+certificate:
+  number: R117/2007-GB1-17.04
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2017-12-08'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Gilbarco Veeder-Root
+  address_lines:
+  - Crompton Close
+  - Basildon
+  - Essex
+  - United Kingdom
+manufacturers:
+- name: Gilbarco Veeder-Root India Pvt. Ltd.
+  address_lines:
+  - PDP, Coimbatore Campus
+  - Coimbatore Ind. Estate
+  - Coimbatore
+  - 641 021, Tamil Nadu
+  - India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Sprint
+  module_designation: Not applicable
+  description: >-
+    Liquids other than water dispenser (fuel dispenser), pattern Sprint. Each hydraulic circuit consists
+    of one or two meters (types V, V+, C or C+), a GPU90 pump and gas separator (except for use in pressurized
+    (STP) systems), and one or two delivery hose circuits. Two hydraulic circuits must be combined for
+    dispensing at the highest flowrate (130 l/min). Up to four hydraulic circuits are housed in a single
+    enclosure with one common calculator (Tulip, Sandpiper-2 or Sandpiper-Apollo); alternatively there
+    may be two calculators each controlling one or two hydraulic circuits in a single enclosure (4 active
+    hose model). Optional features and functions: communications (remote automation); electronics for
+    payment at the dispenser, printer; optical or magnetic pulsers; encrypted communication (128 bit minimum,
+    TEA/AES) between the CPU and the pulsers, displays and keypad; vapour recovery systems; temperature
+    compensation (with Sandpiper-2 or Sandpiper-Apollo); delivery speed selection by pushbutton or nozzle
+    selection; electronic and/or electromechanical totalizers; speakers, preset, keypad and pushbutton
+    options; slave displays and/or master-satellite operation; additional displays with alternative number
+    of display digits and display size (minimum 6 digits money and volume, 4 digits unit price, minimum
+    height 25 mm), discrete displays for money, volume and unit price or combined into a single display;
+    multimedia display; NC3 Payment Terminal (alternative name M7); GSM modem for electronic receipts
+    (non metrological).
+characteristics:
+  type_level:
+    maximum_volume_indication:
+      value: 9999999
+      unit_symbol: l
+    maximum_unit_price:
+      value: 999999
+      unit_symbol:
+    maximum_price_to_pay:
+      value: 9999999
+      unit_symbol:
+    mechanical_environment_class:
+      value: M2
+      unit_symbol:
+    electromagnetic_environment_class:
+      value: E1
+      unit_symbol:
+  model_level:
+  - attribute: maximum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: MaxFlow=40l/min
+      value: 40
+    - model: MaxFlow=80l/min
+      value: 80
+    - model: MaxFlow=130l/min
+      value: 130
+  - attribute: minimum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: MaxFlow=40l/min
+      value: 1.6
+    - model: MaxFlow=80l/min
+      value: 1.6
+    - model: MaxFlow=130l/min
+      value: 3.2
+  - attribute: minimum_measured_quantity
+    unit_symbol: l
+    values:
+    - model: MaxFlow=40l/min
+      value: 1, 2 or 5
+      footnote_markers:
+      - "*"
+    - model: MaxFlow=80l/min
+      value: 2, 5 or 10
+    - model: MaxFlow=130l/min
+      value: 2, 5 or 10
+  - attribute: liquids
+    unit_symbol:
+    values:
+    - model: MaxFlow=40l/min
+      value: >-
+        Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+        (up to 100%)
+    - model: MaxFlow=80l/min
+      value: >-
+        Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+        (up to 100%)
+    - model: MaxFlow=130l/min
+      value: Diesel, Biodiesel (up to 100%)
+recommendation:
+  id: R117-1
+  edition: 2007
+  amendment:
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: P01979
+  pages: 115
+  role: evaluation_report
+revision_history:
+- revision: '17.04'
+  date: '2017-12-08'
+  changes: Certificate first issued.
+model_family:
+  family_name: Sprint
+  models:
+  - model_id: MaxFlow=40l/min
+    label: 40 l/min maximum flowrate configuration
+    attributes: {}
+  - model_id: MaxFlow=80l/min
+    label: 80 l/min maximum flowrate configuration
+    attributes: {}
+  - model_id: MaxFlow=130l/min
+    label: 130 l/min maximum flowrate configuration
+    attributes: {}
+components:
+- role: meter
+  type_designations:
+  - V
+  - V+
+  - C
+  - C+
+  alternatives: OR
+  characteristics:
+    quantity_per_hydraulic_circuit:
+      value:
+        min: 1
+        max: 2
+      unit_symbol:
+- role: pump and gas separator
+  type_designations:
+  - GPU90
+  alternatives:
+  characteristics:
+    usage_restriction: not for use in pressurized (STP) systems
+- role: delivery hose circuit
+  type_designations: []
+  alternatives:
+  characteristics:
+    quantity_per_hydraulic_circuit:
+      value:
+        min: 1
+        max: 2
+      unit_symbol:
+- role: calculator
+  type_designations:
+  - Tulip
+  - Sandpiper-2
+  - Sandpiper-Apollo
+  alternatives: OR
+  characteristics: {}
+- role: payment terminal (optional)
+  type_designations:
+  - NC3
+  alternatives:
+  characteristics:
+    alternative_name: M7
+footnotes:
+- marker: "*"
+  text: Minimum measured quantity of 1 litre with C+ meter only.
+matrix_tables:
+- name: Technical data
+  columns:
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  - meter
+  - liquids
+  column_units:
+  - l/min
+  - l/min
+  - l
+  - l
+  -
+  -
+  -
+  -
+  rows:
+  - maximum_flowrate: 40
+    minimum_flowrate: 1.6
+    minimum_measured_quantity:
+    - 1
+    - 2
+    - 5
+    maximum_volume_indication: 9999999
+    maximum_unit_price: 999999
+    maximum_price_to_pay: 9999999
+    meter: V, V+, C or C+
+    liquids: >-
+      Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+      (up to 100%)
+    footnote_markers:
+    - "*"
+  - maximum_flowrate: 80
+    minimum_flowrate: 1.6
+    minimum_measured_quantity:
+    - 2
+    - 5
+    - 10
+    maximum_volume_indication: 9999999
+    maximum_unit_price: 999999
+    maximum_price_to_pay: 9999999
+    meter: V, V+, C or C+
+    liquids: >-
+      Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+      (up to 100%)
+  - maximum_flowrate: 130
+    minimum_flowrate: 3.2
+    minimum_measured_quantity:
+    - 2
+    - 5
+    - 10
+    maximum_volume_indication: 9999999
+    maximum_unit_price: 999999
+    maximum_price_to_pay: 9999999
+    meter: V, V+, C or C+
+    liquids: Diesel, Biodiesel (up to 100%)
+  description: >-
+    Money, volume and price indications use a floating decimal point. The 1 litre minimum measured quantity
+    of the 40 l/min configuration applies with the C+ meter only.
+  footnotes:
+  - "* Minimum measured quantity of 1 litre with C+ meter only."

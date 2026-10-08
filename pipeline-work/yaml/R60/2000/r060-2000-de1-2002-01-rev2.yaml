@@ -1,0 +1,260 @@
+_meta:
+  cert_id: 3544
+  num: R060/2000-DE1-2002.01 Rev. 2
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2014'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2002-01-rev2.pdf
+certificate:
+  number: R60/2000-DE1-02.01
+  scheme: A
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2014-10-13'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Head of Working Group
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - C16
+  module_designation: Analog load cell
+  description: >-
+    Strain-gauge compression load cell for self centering pendulum application. Load cells of the type
+    C16 are compression load cells for self centering pendulum applications. Using the fitting elements
+    of the manufacturer, the load cell is fixed against rotation. The one column load cell body and the
+    housing are made of stainless steel. The strain-gauge application is hermetically sealed. The option
+    MR is indicated on the nameplate.
+characteristics:
+  type_level:
+    maximum_capacity_range:
+      value:
+        min: 6
+        max: 100
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    minimum_dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_load_limit:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_resistance:
+      value: 700
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=6t
+      value: 6
+      footnote_markers: []
+    - model: Emax=7.5t
+      value: 7.5
+      footnote_markers: []
+    - model: Emax=12t
+      value: 12
+      footnote_markers: []
+    - model: Emax=15t
+      value: 15
+      footnote_markers: []
+    - model: Emax=20t
+      value: 20
+      footnote_markers: []
+    - model: Emax=30t
+      value: 30
+      footnote_markers: []
+    - model: Emax=40t
+      value: 40
+      footnote_markers: []
+    - model: Emax=60t
+      value: 60
+      footnote_markers: []
+    - model: Emax=100t
+      value: 100
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: D1
+      value: 1000
+      unit_symbol:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C5
+      value: 5000
+      unit_symbol:
+  - attribute: ratio_y_emax_over_vmin
+    axis: accuracy_class_and_capacity
+    values:
+    - condition: class D1, all capacities
+      value: 5000
+      unit_symbol:
+    - condition: classes C3 to C5, capacities 6 t / 7.5 t / 12 t / 15 t / 20 t / 30 t / 40 t
+      value: 10000
+      unit_symbol:
+    - condition: classes C3 to C5, capacity 60 t
+      value: 12000
+      unit_symbol:
+    - condition: classes C3 to C5, capacity 100 t
+      value: 6000
+      unit_symbol:
+  - attribute: ratio_ymr_emax_over_vminmr
+    axis: accuracy_class
+    values:
+    - condition: classes C3 to C5, all capacities (option MR)
+      value: 20000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+test_reports:
+- id: 1.12-4062384/1
+  pages: 11
+  role: type_evaluation_report
+- id: 1.12-4062384/2
+  pages: 18
+  role: type_evaluation_report
+- id: 1.14-01073217
+  pages: 5
+  role: test_report
+revision_history:
+- revision: '2'
+  date: '2014-10-13'
+  changes: With the 2nd revision the additional load of 6 t and 7.5 t were added.
+model_family:
+  family_name: C16
+  models:
+  - model_id: Emax=6t
+  - model_id: Emax=7.5t
+  - model_id: Emax=12t
+  - model_id: Emax=15t
+  - model_id: Emax=20t
+  - model_id: Emax=30t
+  - model_id: Emax=40t
+  - model_id: Emax=60t
+  - model_id: Emax=100t
+matrix_tables:
+- name: Table 1 - Max. number of load cell intervals by accuracy class
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  rows:
+  - accuracy_class: D1
+    max_load_cell_intervals_nlc: 1000
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+  - accuracy_class: C5
+    max_load_cell_intervals_nlc: 5000
+  description: >-
+    Part of Table 1 (metrological characteristics for application in approved weighing instruments). Maximum
+    capacities applying to all classes: 6 / 7.5 / 12 / 15 / 20 / 30 / 40 / 60 / 100 t.
+  footnotes: []
+- name: >-
+    Table 1 - Minimum load cell verification interval parameters Y and YMR by accuracy class and capacity
+  columns:
+  - accuracy_class
+  - capacity_group
+  - ratio_y_emax_over_vmin
+  - ratio_ymr_emax_over_vminmr
+  rows:
+  - accuracy_class: D1
+    capacity_group: all capacities
+    ratio_y_emax_over_vmin: 5000
+    ratio_ymr_emax_over_vminmr:
+  - accuracy_class: C3
+    capacity_group: 6 t / 7.5 t / 12 t / 15 t / 20 t / 30 t / 40 t
+    ratio_y_emax_over_vmin: 10000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C4
+    capacity_group: 6 t / 7.5 t / 12 t / 15 t / 20 t / 30 t / 40 t
+    ratio_y_emax_over_vmin: 10000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C5
+    capacity_group: 6 t / 7.5 t / 12 t / 15 t / 20 t / 30 t / 40 t
+    ratio_y_emax_over_vmin: 10000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C3
+    capacity_group: 60 t
+    ratio_y_emax_over_vmin: 12000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C4
+    capacity_group: 60 t
+    ratio_y_emax_over_vmin: 12000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C5
+    capacity_group: 60 t
+    ratio_y_emax_over_vmin: 12000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C3
+    capacity_group: 100 t
+    ratio_y_emax_over_vmin: 6000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C4
+    capacity_group: 100 t
+    ratio_y_emax_over_vmin: 6000
+    ratio_ymr_emax_over_vminmr: 20000
+  - accuracy_class: C5
+    capacity_group: 100 t
+    ratio_y_emax_over_vmin: 6000
+    ratio_ymr_emax_over_vminmr: 20000
+  description: >-
+    Y = Emax/vmin; option MR (vmin MR): YMR = Emax/vmin MR. For class D1 the Y value applies at all capacities
+    and the MR option is not applicable ('-' in original table). For classes C3 to C5 the Y value depends
+    on capacity; YMR = 20000 applies to all capacities.
+  footnotes: []

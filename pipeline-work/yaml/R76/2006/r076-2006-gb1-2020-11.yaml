@@ -1,0 +1,234 @@
+_meta:
+  cert_id: 5178
+  num: R76/2006-A-GB1-20.11
+  applicant: NCR Corporation
+  issuing_year: '2020'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2020-11.pdf
+certificate:
+  number: R76/2006-A-GB1-20.11
+  scheme: A
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2020-10-09'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/office-for-product-safety-and-standards
+  oiml_issuer_id: GB1
+applicants:
+- name: NCR Corporation
+  address_lines:
+  - 864 Spring ST NW
+  - Atlanta, GA 30308
+  - USA
+manufacturers:
+- name: NCR Corporation
+  address_lines:
+  - 864 Spring ST NW
+  - Atlanta, GA 30308
+  - USA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - MP70X1
+  - MP70X2
+  module_designation:
+  description: >-
+    NCR Corporation MP70X1 & MP70X2 scanner scales: a family of self-indicating, weight only, single or
+    dual-interval, non-automatic weighing instruments, suitable for direct sales to the public. Designed
+    for flush-mounting in a checkout surface with frame extensions, steel framework supporting one load
+    cell, barcode scanner and electronics, stainless steel load receptor, single or dual pole-mounted
+    display, optional Produce Flip-Up Bar Platter and optional Customer Side Scanner (CSS). Designed for
+    permanent installation, no level indicator required.
+characteristics:
+  type_level:
+    supply_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    external_power_supply_input_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    external_power_supply_input_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    external_power_supply_input_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    initial_zero_setting_range_of_max:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+    semi_automatic_zero_setting_range_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    zero_tracking_range_of_max:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    interfaces:
+      value: RS232, IBM 485, USB
+      unit_symbol:
+      unit_id:
+    peripheral_devices:
+      value: EPOS, ECR, EFT/ECU
+      unit_symbol:
+      unit_id:
+    firmware_identification:
+      value: 1.04F
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: MP70X1
+      value: 100
+    - model: MP70X2
+      value: 40
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: MP70X1
+      value: 15
+    - model: MP70X2
+      value:
+        min: 6
+        max: 15
+  - attribute: verification_scale_interval
+    unit_symbol: g
+    values:
+    - model: MP70X1
+      value: 5
+    - model: MP70X2
+      value:
+        min: 2
+        max: 5
+  config_level:
+  - attribute: platform_length
+    axis: model_size
+    values:
+    - condition: Medium
+      value: 398
+      unit_symbol: mm
+    - condition: Long
+      value: 506
+      unit_symbol: mm
+  - attribute: platform_width
+    axis: model_size
+    values:
+    - condition: Medium
+      value: 292
+      unit_symbol: mm
+    - condition: Long
+      value: 292
+      unit_symbol: mm
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: P02848
+  date: '2020-10-08'
+  pages: 16
+  role: type_evaluation_report
+- id: P02848-D
+  date: '2020-10-08'
+  pages:
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2020-10-09'
+  changes: Certificate first issued.
+model_family:
+  family_name:
+  models:
+  - model_id: MP70X1
+    label: single-interval scanner scale
+    attributes: {}
+  - model_id: MP70X2
+    label: dual-interval scanner scale
+    attributes: {}
+components:
+- role: load_cell
+  type_designations:
+  - 20-MP7-M30-01
+  - 20-MP7-M30-02
+  - 20-MP7-M30-03
+  - 20-MP7-M30-04
+  alternatives: OR
+  characteristics:
+    description: Digital load cell contained in the scale module together with mounting bracket and U-bar
+    manufacturer: Flintec
+- role: pole-mounted display
+  type_designations:
+  - MX-201
+  - MX-202
+  alternatives: OR
+  characteristics:
+    configuration: MX-201 single pole-mounted display, MX-202 dual pole-mounted display
+matrix_tables:
+- name: Metrological data by model
+  columns:
+  - model
+  - min
+  - max
+  - e
+  column_units:
+  -
+  - g
+  - kg
+  - g
+  rows:
+  - model: MP70X1
+    min: 100
+    max: 15
+    e: 5
+  - model: MP70X2
+    min: 40
+    max: 6/15
+    e: 2/5
+  description: >-
+    Min, Max and verification scale interval e per model. MP70X2 is dual-interval: Max 6 kg with e = 2
+    g and Max 15 kg with e = 5 g.
+  footnotes: []

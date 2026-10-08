@@ -1,0 +1,216 @@
+_meta:
+  cert_id: 4298
+  num: R076/2006-NL1-2017.30
+  applicant: Grupo Epelsa S.L.
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2017-30.pdf
+certificate:
+  number: R76/2006-NL1-17.30
+  scheme: A
+  project_number: '1901012'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2017-05-15'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: GRUPO EPELSA, S.L.
+  address_lines:
+  - c/. Punto Net, 3
+  - Polígono Tecnológico TECNOALCALÁ
+  - E-28805 Alcalá de Henares, Madrid
+  - Spain
+manufacturers:
+- name: GRUPO EPELSA, S.L.
+  address_lines:
+  - c/. Punto Net, 3
+  - Polígono Tecnológico TECNOALCALÁ
+  - E-28805 Alcalá de Henares, Madrid
+  - Spain
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - PCSK
+  module_designation: Not applicable
+  description:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    maximum_number_of_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: single interval, multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 220
+        max: 230
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    application:
+      value: >-
+        intended to be used for direct sales to the public; intended to be used for the making-up of prepackages
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing_range_structure
+    unit_symbol: divisions
+    values:
+    - condition: single interval instruments
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      footnote_markers: []
+    - condition: multi-interval instruments (per partial weighing range)
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      footnote_markers: []
+  - attribute: tare_limit
+    axis: weighing_range_structure
+    unit_symbol:
+    values:
+    - condition: instruments with one weighing range
+      value: T <= -2/3 Max
+      unit_symbol:
+      footnote_markers: []
+    - condition: multi-interval instruments
+      value: T <= -Max_i
+      unit_symbol:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-13200647-01
+  date: '2015-02-11'
+  pages: 61
+  role: type_evaluation_report
+- id: NMi-13200647-02
+  date: '2015-02-11'
+  pages: 14
+  role: type_evaluation_report
+- id: NMi-14200734-01
+  date: '2015-07-07'
+  pages: 13
+  role: type_evaluation_report
+- id: NMi-14200734-02
+  date: '2015-07-07'
+  pages: 13
+  role: type_evaluation_report
+- id: NMi-15200576-01
+  date: '2015-10-27'
+  pages: 13
+  role: type_evaluation_report
+matrix_tables:
+- name: Software identification
+  columns:
+  - pos_software_package
+  - os
+  - legally_relevant_file
+  - version
+  - md5_hash
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - pos_software_package: ScalePos
+    os: Windows
+    legally_relevant_file: Epelsa.dll
+    version: 1.0.2.3
+    md5_hash: E3E57643A0178BE8C21F9CFF53BFB80D
+  - pos_software_package: OpenScale
+    os: Windows
+    legally_relevant_file: DLLBPTC.dll
+    version: 1.0.0.2
+    md5_hash: 5CD1E726C4A66E268525B6718A0ECC66
+  - pos_software_package: TouchScale
+    os: Windows
+    legally_relevant_file: Libwgt.dll
+    version: '1'
+    md5_hash: 9669792b564f793471c962c02bd8d912
+  - pos_software_package: TouchScale
+    os: Linux
+    legally_relevant_file: Libwgt.so
+    version: '1'
+    md5_hash: dcf11d09b220209e7f92ef48494d6dc2
+  - pos_software_package: EBP
+    os: Windows
+    legally_relevant_file: DLLEBP.DLL
+    version: 1.0.0
+    md5_hash: D649387A90CDE835E3660F9C320D618F
+  description: >-
+    Legally relevant software of the non-automatic weighing instrument, identified per POS software package,
+    operating system, legally relevant file, version and MD5 hash.
+  footnotes: []

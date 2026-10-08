@@ -1,0 +1,215 @@
+_meta:
+  cert_id: 3636
+  num: R076/1992-GB1-2007.07 Rev. 3
+  applicant: ArjoHuntleigh AB
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-gb1-2007-07-rev3.pdf
+certificate:
+  number: R76/1992-GB1-07.07
+  revision: '3'
+  project_number: T1128/0173
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2015-02-12'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+applicants:
+- name: ArjoHuntleigh AB
+  address_lines:
+  - Hans Michelsensgatan 10
+  - 211 20 Malmö
+  - Sweden
+manufacturers:
+- name: ArjoHuntleigh AB
+  address_lines:
+  - Hans Michelsensgatan 10
+  - 211 20 Malmö
+  - Sweden
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - Enterprise 9000
+  - Enterprise 9100
+  - 9000X
+  - Citadel
+  description: >-
+    Huntleigh Healthcare Enterprise 9000, Enterprise 9100, 9000X and Citadel hospital beds incorporating
+    a Class III, mains operated, self-indicating Non-Automatic Weighing Instrument. Main features: hospital
+    bed with contour control and weighing functions; four load cells; safety sides incorporating attendant
+    controls including weighing control buttons; identical weight displays and associated control buttons
+    on both sides of the bed. Devices: semi-automatic zero setting device; verification scale interval
+    0.5 kg, but with extended indicating device temporarily giving interval of 0.1 kg; BED EXIT alarm
+    function if weight decreases to 50% or less; AUTO-COMP function allowing the weight to be held steady
+    while equipment is added.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    battery_backup:
+      value: optional
+      unit_symbol:
+      unit_id:
+    number_of_load_cells:
+      value: 4
+      unit_symbol:
+      unit_id:
+    verification_scale_interval:
+      value: 0.5
+      unit_symbol: kg
+      unit_id:
+    extended_indicating_scale_interval:
+      value: 0.1
+      unit_symbol: kg
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 250
+    - model: Enterprise 9100
+      value: 250
+    - model: 9000X
+      value: 250
+    - model: Citadel
+      value: 270
+  - attribute: minimum_capacity
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 10
+    - model: Enterprise 9100
+      value: 10
+    - model: 9000X
+      value: 10
+    - model: Citadel
+      value: 10
+  - attribute: scale_interval
+    unit_symbol: kg
+    values:
+    - model: Enterprise 9000
+      value: 0.5
+    - model: Enterprise 9100
+      value: 0.5
+    - model: 9000X
+      value: 0.5
+    - model: Citadel
+      value: 0.5
+  - attribute: number_of_divisions
+    unit_symbol:
+    values:
+    - model: Enterprise 9000
+      value: 500
+    - model: Enterprise 9100
+      value: 500
+    - model: 9000X
+      value: 500
+    - model: Citadel
+      value: 540
+  config_level: []
+recommendation:
+  id: R76
+  edition: 1992
+  amendment:
+  accuracy_classes:
+  - III
+test_reports:
+- id: '01012'
+  pages: 43
+  role: test_report
+- id: '1073'
+  pages: 32
+  role: test_report
+- id: '1313'
+  pages: 9
+  role: test_report
+- id: P00089
+  pages: 4
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2014-01-15'
+  changes: Certificate R76/2006-GB1-14.02 first issued.
+- revision: '1'
+  date: '2008-10-29'
+  changes: Zemic load cells model H8C (500 kg) added.
+- revision: '2'
+  date: '2014-02-04'
+  changes: Model 9000X included on front page together with a new company address.
+- revision: '3'
+  date: '2015-02-12'
+  changes: Model Citadel added to certificate.
+model_family:
+  family_name:
+  models:
+  - model_id: Enterprise 9000
+    label: ArjoHuntleigh Healthcare Enterprise 9000
+  - model_id: Enterprise 9100
+    label: ArjoHuntleigh Healthcare Enterprise 9100
+  - model_id: 9000X
+    label: ArjoHuntleigh Healthcare Enterprise 9000X
+  - model_id: Citadel
+    label: ArjoHuntleigh Healthcare Citadel
+components:
+- role: indicator
+  type_designations:
+  - CDI-1600
+- role: load_cell
+  type_designations:
+  - Vishay Tedea Huntleigh 3410
+  - Zemic H8C
+  alternatives: OR
+  characteristics:
+    number_of_load_cells:
+      value: 4
+      unit_symbol:
+      unit_id:
+    capacity:
+    - model: Vishay Tedea Huntleigh 3410
+      value: 1000
+      unit_symbol: lb
+    - model: Zemic H8C
+      value: 500
+      unit_symbol: kg
+- role: weighing_module
+  type_designations:
+  - QLCI
+  characteristics:
+    description: >-
+      Quadrature load cell interface, four channel weighing module capable of sampling, digitizing and
+      processing up to 4 load cells individually.
+    legally_relevant_software_name: '0077730'
+    legally_relevant_software_version: '1.81'
+- role: control_unit_software
+  type_designations:
+  - '070152'
+  characteristics:
+    legally_relevant: false
+    application_version: X.XX (currently 1.00)
+    description: >-
+      Controls all functions of the electronic control system for the 9000 and Citadel ranges incorporating
+      single button push controls and nurse call.

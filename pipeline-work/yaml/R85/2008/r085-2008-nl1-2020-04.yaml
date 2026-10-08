@@ -1,0 +1,476 @@
+_meta:
+  cert_id: 5303
+  num: R85/2008-A-NL1-20.04
+  applicant: Enraf B.V.
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R85
+  edition_year: 2008
+  extraction_method: glm-extract
+  source_pdf: certificates/R85/2008/r085-2008-nl1-2020-04.pdf
+certificate:
+  number: R85/2008-A-NL1-20.04
+  scheme: A
+  project_number: '2446676'
+  page_total: 5
+  member_state: The Netherlands
+  date_issued: '2021-02-15'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M. Boudewijns
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+manufacturers:
+- name: Enraf B.V.
+  address_lines:
+  - Delftechpark 39
+  - 2628 XJ Delft
+  - The Netherlands
+certified_type:
+  category: Automatic level gauge
+  type_designations:
+  - SmartRadar FlexLine XP
+  - SmartRadar FlexLine HP
+  description: >-
+    Automatic level gauge (ALG), type SmartRadar FlexLine XP and SmartRadar FlexLine HP, with the antennas
+    F06, F08, W06, H04, S06, S08, S10 and S12, with indicating device SmartView and/or indicating device
+    HART SmartView, with field interface 880 CIU-Prime and/or 880 CIU-Plus and/or CIU 880, with remote
+    calculating and indicating system EntisPro, with indicating and memory device ENTIS.
+characteristics:
+  type_level:
+    ambient_temperature_range:
+      value:
+        min: -25
+        max: 70
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    ambient_humidity:
+      value: condensing humidity
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac:
+      value:
+        min: 65
+        max: 264
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac_tolerance:
+      value:
+        min: -15
+        max: 10
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_dc:
+      value:
+        min: 24
+        max: 65
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: measuring_range
+    axis: antenna application (stilling well vs free space)
+    values:
+    - condition: Stilling well
+      value: 20
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+    - condition: Free space
+      value: 35
+      unit_symbol: m
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R85
+  edition: 2008
+  scheme: A
+test_reports:
+- id: R85/1998-NL1-07.02
+  pages: 100
+  role: type_evaluation_report
+- id: CPC/9200376
+  pages: 20
+  role: test_report
+- id: NMi-10200994
+  pages: 15
+  role: test_report
+- id: NMi-12200691
+  pages: 13
+  role: test_report
+- id: NMi-13200623
+  pages: 14
+  role: test_report
+- id: NMi-14200253-1
+  pages: 21
+  role: test_report
+- id: NMi-16200400-01
+  pages: 21
+  role: test_report
+- id: NMi-16200400-02
+  pages: 21
+  role: test_report
+- id: R85-2008-NL1-12.04
+  date: '2012-12-10'
+  pages: 49
+  role: type_evaluation_report
+- id: NMi-13200623
+  date: '2013-10-15'
+  pages: 14
+  role: test_report
+- id: NMi-1900750-02
+  date: '2017-03-24'
+  pages: 26
+  role: test_report
+- id: T7316-1
+  role: documentation_file
+model_family:
+  family_name: SmartRadar FlexLine
+  models:
+  - model_id: SmartRadar FlexLine XP
+  - model_id: SmartRadar FlexLine HP
+components:
+- role: antenna
+  type_designations:
+  - F06
+  - F08
+  - W06
+  - H04
+  - S06
+  - S08
+  - S10
+  - S12
+  alternatives: OR
+- role: indicating device
+  type_designations:
+  - SmartView
+  - HART SmartView
+  alternatives: OR
+- role: field interface
+  type_designations:
+  - 880 CIU-Prime
+  - 880 CIU-Plus
+  - CIU 880
+  alternatives: OR
+- role: remote calculating and indicating system
+  type_designations:
+  - EntisPro
+- role: indicating and memory device
+  type_designations:
+  - ENTIS
+matrix_tables:
+- name: General characteristics of the family of instruments (Table 2)
+  columns:
+  - application
+  - measuring_range
+  column_units:
+  -
+  - m
+  rows:
+  - application: Stilling well
+    measuring_range: 20
+  - application: Free space
+    measuring_range: 35
+  description: >-
+    Minimum and maximum values for liquid pressure, liquid temperature and liquid properties, and for
+    vapour pressure, vapour temperature and vapour properties: the manufacturer shall specify these values
+    for each application.
+- name: Antennas (Table 3)
+  columns:
+  - type
+  - application
+  - documentation
+  rows:
+  - type: F06
+    application: free space
+    documentation: 7314/7-01
+  - type: F08
+    application: free space
+    documentation: 7314/5-24
+  - type: W06
+    application: free space
+    documentation: 7314/5-25
+  - type: S06
+    application: on a stilling well with an inner diameter of 6"
+    documentation: 7314/5-26
+  - type: S08
+    application: on a stilling well with an inner diameter of 8"
+    documentation: 7314/5-26
+  - type: S10
+    application: on a stilling well with an inner diameter of 10"
+    documentation: 7314/5-26
+  - type: S12
+    application: on a stilling well with an inner diameter of 12"
+    documentation: 7314/5-26
+  - type: H04
+    application: on a stilling well with an inner diameter of 4"
+    documentation: 7314/5-27
+- name: Software identification (Table 4)
+  columns:
+  - part
+  - type
+  - version
+  - checksum
+  - checksum_hex
+  rows:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: A10xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: DSP A10 xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: A11xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: DSP A11 xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: A12xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: DSP A12 xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: A1300
+    checksum: '38676'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: DSP A1300
+    checksum: '38676'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: A1301
+    checksum: '11461'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2A
+    type: TII-XR (also indicated as CAN Xband board) with ART2A
+    version: DSP A1301
+    checksum: '11461'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: A10xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: DSP A10 xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: A11xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: DSP A11 xxx
+    checksum: '0'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: A1204
+    checksum: '64095'
+    checksum_hex: '0xFA5F'
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: DSP A12 xxx
+    checksum: '64095'
+    checksum_hex: '0xFA5F'
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: A1300
+    checksum: '38676'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: DSP A1300
+    checksum: '38676'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: A1301
+    checksum: '11461'
+    checksum_hex:
+  - part: sensor processor in combination with sensor ART2B
+    type: TII-XR (also indicated as CAN Xband board) with ART2B
+    version: DSP A1301
+    checksum: '11461'
+    checksum_hex:
+  - part: display communication board
+    type: HMI-TSI / FII-SMV
+    version: A10xxx (up to A1006)
+    checksum: '0'
+    checksum_hex:
+  - part: display communication board
+    type: HMI-TSI / FII-SMV
+    version: A1006
+    checksum: '03170'
+    checksum_hex: '0x0C62'
+  - part: display communication board
+    type: HMI-TSI / FII-SMV
+    version: A1007
+    checksum: '22441'
+    checksum_hex:
+  - part: display communication board
+    type: FCI-HRT
+    version: A1006T
+    checksum: '38785'
+    checksum_hex: '0x9781'
+  - part: display communication board
+    type: FCI-HRT
+    version: A1007
+    checksum: '12537'
+    checksum_hex:
+  - part: display communication board
+    type: FCI-HRT
+    version: A1008
+    checksum: '54556'
+    checksum_hex:
+  - part: display communication board
+    type: FCI-HRT
+    version: A1009
+    checksum: '26293'
+    checksum_hex:
+  - part: display communication board
+    type: FCI-HRT
+    version: A1010
+    checksum: '49336'
+    checksum_hex:
+  - part: display communication board
+    type: FCI-HRT
+    version: A1011
+    checksum: '31984'
+    checksum_hex:
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A10xxx (up to A1007)
+    checksum: '0'
+    checksum_hex:
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A1007
+    checksum: '37556'
+    checksum_hex: '0x92B4'
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A2000
+    checksum: '3260'
+    checksum_hex:
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A2001
+    checksum: '0243'
+    checksum_hex:
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A2003
+    checksum: '50556'
+    checksum_hex:
+  - part: communication board
+    type: CAN-BPM/HCI-BPM
+    version: A2004
+    checksum: '57365'
+    checksum_hex:
+  - part: communication board
+    type: CAN-TRL2/HCI-TRL2
+    version: A1001
+    checksum: '12361030'
+    checksum_hex: '0x00BC9D46'
+  - part: communication board
+    type: CAN-TRL2/HCI-TRL2
+    version: A1012
+    checksum: '3112553898'
+    checksum_hex: '0xB985CDAA'
+  - part: communication board
+    type: CAN-TRL2/HCI-TRL2
+    version: A2000
+    checksum: '34966'
+    checksum_hex:
+  - part: communication board
+    type: CAN-TRL2/HCI-TRL2
+    version: A2001
+    checksum: '33304'
+    checksum_hex:
+  - part: interface board
+    type: CAN-RS/HCI-GPU
+    version: A10xxx
+    checksum: '0'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A10xxx
+    checksum: '0'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A3013
+    checksum: '22685'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A3017
+    checksum: '16395'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A3018
+    checksum: '11607'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A3020
+    checksum: '37576'
+    checksum_hex:
+  - part: 1 WL main board
+    type: CAN-HCI-1WL
+    version: A3021
+    checksum: '9433'
+    checksum_hex:

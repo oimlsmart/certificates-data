@@ -1,0 +1,246 @@
+_meta:
+  cert_id: 2116
+  num: R060/2000-DE1-2008.04
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-04.pdf
+certificate:
+  number: R60/2000-DE1-08.04
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-05-15'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - Z6F..
+  module_designation:
+  description: >-
+    Strain gauge double bending beam load cell of the Z6F... series. Made of stainless steel; the strain
+    gauge application is hermetically sealed by means of a welded-on metal bellow.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+    dead_load:
+      value: 0
+      unit_symbol: "%·Emax"
+      unit_id:
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+    input_impedance:
+      value:
+        min: 350
+        max: 480
+      unit_symbol: Ω
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+    - model: Emax=500kg
+      value: 500
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+    - condition: C4
+      value: 4000
+    - condition: C6
+      value: 6000
+    - condition: C3MI7.5
+      value: 3000
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    unit_symbol: "%·Emax"
+    values:
+    - condition: C3
+      value: 0.009
+      unit_symbol: "%·Emax"
+    - condition: C4
+      value: 0.0066
+      unit_symbol: "%·Emax"
+    - condition: C6
+      value: 0.0066
+      unit_symbol: "%·Emax"
+    - condition: C3MI7.5
+      value: 0.009
+      unit_symbol: "%·Emax"
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class
+    values:
+    - condition: C3MI7.5
+      value: "½·Emax/7500"
+      unit_symbol:
+  - attribute: maximum_capacity_range
+    axis: accuracy_class
+    unit_symbol: kg
+    values:
+    - condition: C3
+      value:
+        min: 50
+        max: 500
+      unit_symbol: kg
+    - condition: C4
+      value:
+        min: 50
+        max: 500
+      unit_symbol: kg
+    - condition: C6
+      value:
+        min: 50
+        max: 200
+      unit_symbol: kg
+    - condition: C3MI7.5
+      value:
+        min: 50
+        max: 200
+      unit_symbol: kg
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C3
+  - C4
+  - C6
+  - C3MI7.5
+test_reports:
+- id: PTB 1.12-4033817-1
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4033817-2
+  pages: 22
+  role: test_report
+- id: PTB 1.12-4033817-3
+  pages: 19
+  role: test_report
+model_family:
+  family_name: Z6F
+  models:
+  - model_id: Emax=50kg
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=100kg
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=200kg
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C6
+      - C3MI7.5
+  - model_id: Emax=500kg
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+matrix_tables:
+- name: Essential data
+  columns:
+  - accuracy_class
+  - max_load_cell_intervals_nlc
+  - rated_output
+  - maximum_capacity
+  - minimum_load_cell_verification_interval_vmin
+  - minimum_dead_load_output_return_dr
+  column_units:
+  -
+  -
+  - mV/V
+  - kg
+  - "%·Emax"
+  -
+  rows:
+  - accuracy_class: C3
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    - 500
+    minimum_load_cell_verification_interval_vmin: 0.009
+    minimum_dead_load_output_return_dr:
+  - accuracy_class: C4
+    max_load_cell_intervals_nlc: 4000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    - 500
+    minimum_load_cell_verification_interval_vmin: 0.0066
+    minimum_dead_load_output_return_dr:
+  - accuracy_class: C6
+    max_load_cell_intervals_nlc: 6000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: 0.0066
+    minimum_dead_load_output_return_dr:
+  - accuracy_class: C3MI7.5
+    max_load_cell_intervals_nlc: 3000
+    rated_output: 2
+    maximum_capacity:
+    - 50
+    - 100
+    - 200
+    minimum_load_cell_verification_interval_vmin: 0.009
+    minimum_dead_load_output_return_dr: "½·Emax/7500"
+  description: >-
+    Metrological characteristics for application in approved weighing instruments, listed per accuracy
+    class. Entries marked '--' in the original table indicate that no minimum dead load output return
+    DR is specified for those classes.
+  footnotes: []

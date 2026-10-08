@@ -1,0 +1,231 @@
+_meta:
+  cert_id: 2359
+  num: R076/2006-CH1-2009.01
+  applicant: Mettler-Toledo AG
+  issuing_year: '2009'
+  status: Valid
+  issuer: CH1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-ch1-2009-01.pdf
+certificate:
+  number: R76_2006-CH1-09.01
+  scheme: A
+  page_total: 2
+  member_state: Switzerland
+  date_issued: '2009-10-07'
+  oiml_issuer_id: CH1
+issuing_authority:
+  name: Federal Office of Metrology METAS (Certification Body METAS-Cert)
+  address_lines:
+  - Lindenweg 50
+  - CH-3003 Bern-Wabern
+  person_responsible: Jürg Ramseyer
+  person_title: Head of METAS-Cert
+  phone: "+41 31 32 33 111"
+  website: www.metas.ch
+  oiml_issuer_id: CH1
+applicants:
+- name: METTLER-TOLEDO AG, LabTec
+  address_lines:
+  - Im Langacher
+  - 8606 Greifensee
+  - Switzerland
+manufacturers:
+- name: METTLER-TOLEDO AG, LabTec
+  address_lines:
+  - Im Langacher
+  - 8606 Greifensee
+  - Switzerland
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - NewClassic MF
+characteristics:
+  type_level:
+    tare_balancing_range:
+      value:
+        min: 0
+        max: 100
+      unit_symbol: "%"
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: accuracy_class / housing
+    values:
+    - condition: class I
+      value:
+        min:
+        max: 10200
+      unit_symbol: g
+    - condition: class II, small housing
+      value:
+        min: 120
+        max: 10200
+      unit_symbol: g
+    - condition: class II, large housing
+      value:
+        min: 10200
+        max: 64200
+      unit_symbol: g
+  - attribute: verification_scale_interval_e
+    axis: accuracy_class / housing
+    values:
+    - condition: class I
+      value:
+        min: 1
+        max:
+      unit_symbol: mg
+    - condition: class II, small housing
+      value:
+        min: 10
+        max:
+      unit_symbol: mg
+    - condition: class II, large housing
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+  - attribute: actual_scale_interval_d
+    axis: accuracy_class / housing
+    values:
+    - condition: class I
+      value:
+        min: 0.1
+        max:
+      unit_symbol: mg
+    - condition: class II, small housing
+      value:
+        min: 1
+        max:
+      unit_symbol: mg
+    - condition: class II, large housing
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+  - attribute: max_number_of_verification_scale_intervals_n
+    axis: accuracy_class / housing
+    values:
+    - condition: class I
+      value:
+        min:
+        max: 420000
+      unit_symbol:
+    - condition: class II, small housing
+      value:
+        min:
+        max: 82000
+      unit_symbol:
+    - condition: class II, large housing
+      value:
+        min:
+        max: 64200
+      unit_symbol:
+  - attribute: temperature_range
+    axis: accuracy_class / housing
+    values:
+    - condition: class I
+      value:
+        min: 10
+        max: 30
+      unit_symbol: "°C"
+    - condition: class II, small housing
+      value:
+        min: 10
+        max: 30
+      unit_symbol: "°C"
+    - condition: class II, large housing
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - I
+  - II
+test_reports:
+- id: 511-00144
+  pages: 28
+  role: test_report
+- id: 511-00152
+  pages: 32
+  role: test_report
+- id: 511-00306
+  pages: 32
+  role: test_report
+- id: 511-00308
+  pages: 18
+  role: test_report
+- id: 511-00339
+  pages: 18
+  role: test_report
+- id: 511-00342
+  pages: 28
+  role: test_report
+- id: 511-00345
+  pages: 28
+  role: test_report
+- id: 511-00346
+  pages: 22
+  role: test_report
+- id: 511-00348
+  pages: 22
+  role: test_report
+- id: 511-00351
+  pages: 17
+  role: test_report
+- id: 511-00354
+  pages: 28
+  role: test_report
+- id: 511-00357
+  pages: 14
+  role: test_report
+- id: 511-00361
+  pages: 28
+  role: test_report
+- id: 511-00364
+  pages: 28
+  role: test_report
+- id: 511-00441
+  pages: 19
+  role: test_report
+matrix_tables:
+- name: Metrological characteristics
+  columns:
+  - parameter
+  - class_I
+  - class_II_small_housing
+  - class_II_large_housing
+  rows:
+  - parameter: max_capacity
+    class_I: "≤ 10200 g"
+    class_II_small_housing: 120 g to 10200 g
+    class_II_large_housing: 10200 g to 64200 g
+  - parameter: verification_scale_interval_e
+    class_I: "≥ 1 mg"
+    class_II_small_housing: "≥ 10 mg"
+    class_II_large_housing: "≥ 1 g"
+  - parameter: actual_scale_interval_d
+    class_I: "≥ 0.1 mg"
+    class_II_small_housing: "≥ 1 mg"
+    class_II_large_housing: "≥ 0.1 g"
+  - parameter: max_number_of_verification_scale_intervals_n
+    class_I: "≤ 420000"
+    class_II_small_housing: "≤ 82000"
+    class_II_large_housing: "≤ 64200"
+  - parameter: tare_balancing_range
+    class_I: until 100 % of Max
+    class_II_small_housing: until 100 % of Max
+    class_II_large_housing: until 100 % of Max
+  - parameter: temperature_range
+    class_I: 10 °C / 30 °C
+    class_II_small_housing: 10 °C / 30 °C
+    class_II_large_housing: 5 °C / 40 °C
+  description: >-
+    Metrological characteristics of the NewClassic MF non-automatic weighing instrument by accuracy class
+    (I and II) and housing size.

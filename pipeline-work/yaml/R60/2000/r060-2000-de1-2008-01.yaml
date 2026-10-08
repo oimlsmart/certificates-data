@@ -1,0 +1,239 @@
+_meta:
+  cert_id: 2115
+  num: R060/2000-DE1-2008.01
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2008'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-01.pdf
+certificate:
+  number: R60/2000-DE1-08.01
+  page_total: 2
+  member_state: Germany
+  date_issued: '2008-03-12'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - 64293 Darmstadt
+certified_type:
+  category: Load cell
+  type_designations:
+  - PW4...
+  module_designation: Analog load cell
+  description: >-
+    Strain gauge single point load cells of the series PW4... They are made of aluminium, the strain gauge
+    application is covered with silicone elastomer.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C3
+      unit_symbol:
+      unit_id:
+    max_load_cell_intervals_nlc:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    max_platform_dimensions:
+      value: 200 x 200
+      unit_symbol: mm
+      unit_id:
+      footnote_markers:
+      - 2)
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+    dead_load_reference:
+      value: Emax
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+    safe_overload_reference:
+      value: Emax
+    input_impedance:
+      value: 380
+      unit_symbol: Ω
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=0.3kg
+      value: 0.3
+    - model: Emax=0.5kg
+      value: 0.5
+    - model: Emax=2kg
+      value: 2
+    - model: Emax=3kg
+      value: 3
+  - attribute: rated_output
+    unit_symbol: mV/V
+    values:
+    - model: Emax=0.3kg
+      value: 1
+    - model: Emax=0.5kg
+      value: 1
+    - model: Emax=2kg
+      value: 2
+    - model: Emax=3kg
+      value: 2
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: kg
+    values:
+    - model: Emax=0.3kg
+      value: Emax/6000
+      footnote_markers:
+      - 1)
+    - model: Emax=0.5kg
+      value: Emax/5000
+      footnote_markers:
+      - 1)
+    - model: Emax=2kg
+      value: Emax/10000
+      footnote_markers:
+      - 1)
+    - model: Emax=3kg
+      value: Emax/6000
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C3
+test_reports:
+- id: PTB 1.12-4028642-2-0,3kg
+  pages: 22
+  role: test_report
+- id: PTB 1.12-402842-2kg
+  pages: 22
+  role: test_report
+model_family:
+  family_name: PW4...
+  models:
+  - model_id: Emax=0.3kg
+    label: PW4... 0.3 kg
+    attributes:
+      rated_output:
+        value: 1
+        unit_symbol: mV/V
+        unit_id:
+      minimum_load_cell_verification_interval_vmin:
+        value: Emax/6000
+        unit_symbol: kg
+        unit_id:
+        footnote_markers:
+        - 1)
+  - model_id: Emax=0.5kg
+    label: PW4... 0.5 kg
+    attributes:
+      rated_output:
+        value: 1
+        unit_symbol: mV/V
+        unit_id:
+      minimum_load_cell_verification_interval_vmin:
+        value: Emax/5000
+        unit_symbol: kg
+        unit_id:
+        footnote_markers:
+        - 1)
+  - model_id: Emax=2kg
+    label: PW4... 2 kg
+    attributes:
+      rated_output:
+        value: 2
+        unit_symbol: mV/V
+        unit_id:
+      minimum_load_cell_verification_interval_vmin:
+        value: Emax/10000
+        unit_symbol: kg
+        unit_id:
+        footnote_markers:
+        - 1)
+  - model_id: Emax=3kg
+    label: PW4... 3 kg
+    attributes:
+      rated_output:
+        value: 2
+        unit_symbol: mV/V
+        unit_id:
+      minimum_load_cell_verification_interval_vmin:
+        value: Emax/6000
+        unit_symbol: kg
+        unit_id:
+        footnote_markers:
+        - 1)
+footnotes:
+- marker: 1)
+  text: Y respectively vmin is indicated on the name plate
+- marker: 2)
+  text: Independent of the accuracy class
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - characteristic
+  - unit
+  - Emax=0.3kg
+  - Emax=0.5kg
+  - Emax=2kg
+  - Emax=3kg
+  rows:
+  - characteristic: accuracy_class
+    unit:
+    Emax=0.3kg: C3
+    Emax=0.5kg: C3
+    Emax=2kg: C3
+    Emax=3kg: C3
+  - characteristic: max_load_cell_intervals_nlc
+    unit:
+    Emax=0.3kg: 3000
+    Emax=0.5kg: 3000
+    Emax=2kg: 3000
+    Emax=3kg: 3000
+  - characteristic: rated_output
+    unit: mV/V
+    Emax=0.3kg: 1
+    Emax=0.5kg: 1
+    Emax=2kg: 2
+    Emax=3kg: 2
+  - characteristic: maximum_capacity
+    unit: kg
+    Emax=0.3kg: 0.3
+    Emax=0.5kg: 0.5
+    Emax=2kg: 2
+    Emax=3kg: 3
+  - characteristic: minimum_load_cell_verification_interval_vmin
+    unit: kg
+    Emax=0.3kg: Emax/6000
+    Emax=0.5kg: Emax/5000
+    Emax=2kg: Emax/10000
+    Emax=3kg: Emax/6000
+  - characteristic: max_platform_dimensions
+    unit: mm
+    Emax=0.3kg: 200 x 200
+    Emax=0.5kg: 200 x 200
+    Emax=2kg: 200 x 200
+    Emax=3kg: 200 x 200
+  description: >-
+    Metrological characteristics of the PW4... load cell series for application in approved weighing instruments.
+    The vmin row is marked with footnote 1); the platform dimensions row is marked with footnote 2).
+  footnotes:
+  - 1)
+  - 2)

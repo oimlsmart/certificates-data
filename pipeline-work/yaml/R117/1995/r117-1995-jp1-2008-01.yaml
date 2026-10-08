@@ -1,0 +1,197 @@
+_meta:
+  cert_id: 2030
+  num: R117/1995-JP1-2008.01
+  applicant: Tatsuno Corporation
+  issuing_year: '2008'
+  status: Valid
+  issuer: JP1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-jp1-2008-01.pdf
+certificate:
+  number: R117/1995-JP1-08.01
+  page_total: 3
+  member_state: Japan
+  date_issued: '2008-05-07'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: Dr. Hiroyuki Yoshikawa
+  person_title: President of AIST
+applicants:
+- name: TATSUNO CORPORATION
+  address_lines:
+  - 2-12-13, Shibaura Minato-ku, TOKYO, 108-8520, Japan
+manufacturers:
+- name: TATSUNO CORPORATION Yokohama plant
+  address_lines:
+  - 200, Ilijima-cho, Sakae-ku, Yokohama 244-8501, Japan
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - SNS/Space-fill system series
+  module_designation:
+  description: >-
+    Fuel dispenser for motor vehicles, SNS/Space-fill system series. Further characteristics see page
+    2 to 3.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_flowrate:
+      value: 3
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 5
+      unit_symbol: L
+      unit_id:
+      footnote_markers: []
+    maximum_volume_indication_digits:
+      value: 6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_digits:
+      value: 5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay_digits:
+      value: 6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    liquids:
+      value: Petrol, Diesel
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: flowrate_configuration
+    values:
+    - condition: Low flowrate
+      value: 35
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+    - condition: High flowrate
+      value: 60
+      unit_symbol: L/min
+      unit_id:
+      footnote_markers: []
+recommendation:
+- id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+- id: R118
+  edition: 1995
+test_reports:
+- id: R117/1995-JP1-2008-01
+  date:
+  pages:
+  role: test_report
+components:
+- role: Meter
+  type_designations:
+  - FM-1007
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Gas elimination device
+  type_designations:
+  - FP-1001
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+    mounting: integral with pump
+- role: Measuring transducer
+  type_designations:
+  - EK-1025
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Calculator
+  type_designations:
+  - EC-1198
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Hose
+  type_designations:
+  - ZH-1122
+  - ZH-1123
+  - ZH-1141
+  - ZH-1143
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Hose
+  type_designations:
+  - 2BRADE BC SOFTWALL 3/4
+  alternatives:
+  characteristics:
+    manufacturer: Goodyear
+- role: Nozzle
+  type_designations:
+  - FN-1021
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+- role: Break valve
+  type_designations:
+  - FJ-1029
+  alternatives:
+  characteristics:
+    manufacturer: TATSUNO CORPORATION
+matrix_tables:
+- name: Metering characteristics by flowrate configuration
+  columns:
+  - configuration
+  - accuracy_class
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - maximum_volume_indication_digits
+  - maximum_unit_price_digits
+  - maximum_price_to_pay_digits
+  column_units:
+  -
+  -
+  - L/min
+  - L/min
+  - L
+  -
+  -
+  -
+  rows:
+  - configuration: Low flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 35
+    minimum_flowrate: 3
+    minimum_measured_quantity: 5
+    maximum_volume_indication_digits: 6
+    maximum_unit_price_digits: 5
+    maximum_price_to_pay_digits: 6
+  - configuration: High flowrate
+    accuracy_class: 0.5
+    maximum_flowrate: 60
+    minimum_flowrate: 3
+    minimum_measured_quantity: 5
+    maximum_volume_indication_digits: 6
+    maximum_unit_price_digits: 5
+    maximum_price_to_pay_digits: 6
+  description: >-
+    Metering characteristics of the fuel dispenser for the low flowrate and high flowrate configurations.
+  footnotes: []

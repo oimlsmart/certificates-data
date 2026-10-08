@@ -1,0 +1,214 @@
+_meta:
+  cert_id: 2307
+  num: R117/1995-RU1-2004.01 Rev. 2
+  applicant: Larsen & Toubro Ltd (L&T)
+  issuing_year: '2009'
+  status: Valid
+  issuer: RU1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-ru1-2004-01-rev2.pdf
+certificate:
+  number: R 117/1995-RU1-04.01
+  page_total: 2
+  member_state: Russian Federation
+  date_issued: '2009-10-15'
+  oiml_issuer_id: RU1
+issuing_authority:
+  name: VNIIMS
+  address_lines:
+  - 46, Ozernaya str, G-361
+  - Moscow, 119361, the Russian Federation
+  person_responsible: Dr. S.A. Kononogov
+  person_title: Director
+  oiml_issuer_id: RU1
+applicants:
+- name: Larsen & Toubro (L&T) Petrol Dispensing Pumps & Systems
+  address_lines:
+  - Gate No.1, "C" Building, 1st Floor
+  - Powai works, Mumbai 400072
+  - India
+manufacturers:
+- name: Larsen & Toubro (L&T) Petrol Dispensing Pumps & Systems
+  address_lines:
+  - Gate No.1, "C" Building, 1st Floor
+  - Powai works, Mumbai 400072
+  - India
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Sprint Series
+  - Z-Line Series
+  - PaceMaker-IV Series
+  module_designation:
+  description: >-
+    L&T Fuel Dispensing Pump comprising one or more systems in every enclosure. Each subsystem consists
+    of: (1) L&T Flow Meter Type A or Type B (mechanical/electronic calibration), with gears or without
+    gears; oil meter in mix pumps; (2) L&T Pump and Gas Eliminator Type A or Type CPU (vane/gear), other
+    than in pressurized systems. The enclosure also includes: (3) L&T Calculator - Electronic Register
+    Assembly (ERA); (4) L&T Measuring Transducer (Pulsar Assembly), integrated or separate; (5) Electronics
+    Customer Interface (card reader, printer, keypad, electronic/electro-mechanical totaliser, push buttons,
+    RFID, speaker, payment terminal, remote automation, touch screen, preset), which may be present or
+    absent based on requirement. Conformity established with OIML R 117 (1995) for accuracy class 0.5
+    and OIML R 118 (1995).
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_flowrate:
+      value: 4
+      unit_symbol: l/min
+      unit_id:
+      footnote_markers: []
+    minimum_measured_quantity:
+      value: 1
+      unit_symbol: l
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_display_digits:
+      value: 999999
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    unit_price_decimal_display:
+      value: floating decimal
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "*"
+    maximum_price_to_pay_display_digits:
+      value: 9999999
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "#"
+    price_to_pay_decimal_display:
+      value: floating decimal
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "*"
+    liquids:
+      value: >-
+        Petrol, Diesel, Kerosene; fuel mixed with maximum 20 % Ethanol / 20 % MTBE / 20 % Methanol; Petrol
+        + Oil mix (fixed/variable) up to 9 %; Bio Diesel up to 100 %
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_ethanol_content:
+      value: 20
+      unit_symbol: "%vol"
+      unit_id:
+      footnote_markers: []
+    maximum_mtbe_content:
+      value: 20
+      unit_symbol: "%vol"
+      unit_id:
+      footnote_markers: []
+    maximum_methanol_content:
+      value: 20
+      unit_symbol: "%vol"
+      unit_id:
+      footnote_markers: []
+    maximum_petrol_oil_mix_content:
+      value: 9
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    maximum_biodiesel_content:
+      value: 100
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_flowrate
+    axis: flowrate option
+    values:
+    - condition: flowrate option 1
+      value: 50
+      unit_symbol: l/min
+      footnote_markers: []
+    - condition: flowrate option 2
+      value: 80
+      unit_symbol: l/min
+      footnote_markers: []
+recommendation:
+  id: R117
+  edition: 1995
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: 401-09.04
+  pages: 64
+  role: test_report
+revision_history:
+- revision: '2'
+  date: '2009-10-15'
+  changes: This revision replaces the preceding one
+model_family:
+  family_name: L&T Fuel Dispensing Pump
+  models:
+  - model_id: Sprint Series
+  - model_id: Z-Line Series
+  - model_id: PaceMaker-IV Series
+components:
+- role: flow meter
+  type_designations:
+  - Type A
+  - Type B
+  alternatives: OR
+  characteristics:
+    calibration: mechanical or electronic
+    gearing: with gears or without gears
+    note: oil meter fitted in mix pumps
+- role: pump and gas eliminator
+  type_designations:
+  - Type A
+  - Type CPU
+  alternatives: OR
+  characteristics:
+    mechanism: vane or gear
+    application_restriction: other than in pressurized systems
+- role: calculator
+  type_designations:
+  - Electronic Register Assembly (ERA)
+- role: measuring transducer
+  type_designations:
+  - Pulsar Assembly
+  characteristics:
+    installation: integrated or separate
+- role: electronics customer interface
+  type_designations:
+  - Card Reader
+  - Printer
+  - Keypad
+  - Electronic/Electro-Mechanical Totaliser
+  - Push Buttons
+  - RFID
+  - Speaker
+  - Payment Terminal
+  - Remote Automation
+  - Touch Screen
+  - Preset
+  alternatives: OR
+  characteristics:
+    presence: optional; may be present or absent based on requirement
+footnotes:
+- marker: "*"
+  text: Activation Optional
+- marker: "#"
+  text: >-
+    The number of display digits, display size and number of displays can be changed based on customer
+    requirement.

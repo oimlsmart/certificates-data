@@ -1,0 +1,221 @@
+_meta:
+  cert_id: 3234
+  num: R076/2006-DE1-2013.05
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2013'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-de1-2013-05.pdf
+certificate:
+  number: R76/2006-DE1-13.05
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2013-08-12'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Oliver Mack
+  person_title: Head of Laboratory
+applicants:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+manufacturers:
+- name: Bizerba GmbH & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Str. 65
+  - 72336 Balingen
+  - Germany
+certified_type:
+  category: Non automatic electromechanical weighing instrument
+  type_designations:
+  - eS...
+  module_designation:
+  description: >-
+    Non automatic electromechanical weighing instrument, type eS... Technical data differ depending on
+    whether analog or digital load cells are used.
+characteristics:
+  type_level:
+    tare_balancing_range_reference:
+      value: Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_capacity_min
+    axis: load_cell_type
+    values:
+    - condition: analog load cells
+      value: 1
+      unit_symbol: kg
+      footnote_markers: []
+    - condition: digital load cells
+      value: 1
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: maximum_capacity_max
+    axis: load_cell_type
+    values:
+    - condition: analog load cells
+      value: 120
+      unit_symbol: t
+      footnote_markers: []
+    - condition: digital load cells
+      value: 6000
+      unit_symbol: kg
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals_single_multiple_range
+    axis: load_cell_type / accuracy_class
+    values:
+    - condition: analog load cells, accuracy class (III)
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: analog load cells, accuracy class (IIII)
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: digital load cells, accuracy class (III)
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+      footnote_markers:
+      - 1)
+  - attribute: number_of_verification_scale_intervals_multi_interval
+    axis: load_cell_type / accuracy_class
+    values:
+    - condition: analog load cells, accuracy class (III)
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: analog load cells, accuracy class (IIII)
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: digital load cells, accuracy class (III)
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+  - attribute: tare_balancing_range_subtractive
+    axis: load_cell_type
+    values:
+    - condition: analog load cells
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      footnote_markers: []
+    - condition: digital load cells
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      footnote_markers: []
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4058218
+  role: evaluation_report
+- id: 1.12-4058218/1
+  pages: 48
+  role: test_report
+- id: 1.12-4058218/2
+  pages: 54
+  role: test_report
+footnotes:
+- marker: 1)
+  text: This applies to each range of single- and multiple range instruments.
+- marker: 2)
+  text: This applies for multi-interval instruments
+matrix_tables:
+- name: Technical data when using analog load cells
+  columns:
+  - accuracy_class
+  - maximum_capacity_min
+  - maximum_capacity_max
+  - number_of_verification_scale_intervals_single_multiple_range
+  - number_of_verification_scale_intervals_multi_interval
+  - tare_balancing_range_subtractive
+  column_units:
+  -
+  - kg
+  - t
+  -
+  -
+  - "%"
+  rows:
+  - accuracy_class: "(III)"
+    maximum_capacity_min: 1
+    maximum_capacity_max: 120
+    number_of_verification_scale_intervals_single_multiple_range: 10000
+    number_of_verification_scale_intervals_multi_interval: 3000
+    tare_balancing_range_subtractive: 100
+  - accuracy_class: "(IIII)"
+    maximum_capacity_min: 1
+    maximum_capacity_max: 120
+    number_of_verification_scale_intervals_single_multiple_range: 1000
+    number_of_verification_scale_intervals_multi_interval: 1000
+    tare_balancing_range_subtractive: 100
+  description: >-
+    Capacity given as '1 kg ... 120 t'; scale interval counts and tare range are upper bounds ('≤'); tare
+    range is '≤ 100 % of Max'.
+  footnotes:
+  - 1)
+  - 2)
+- name: Technical data when using digital load cells
+  columns:
+  - accuracy_class
+  - maximum_capacity_min
+  - maximum_capacity_max
+  - number_of_verification_scale_intervals_single_multiple_range
+  - number_of_verification_scale_intervals_multi_interval
+  - tare_balancing_range_subtractive
+  column_units:
+  -
+  - kg
+  - kg
+  -
+  -
+  - "%"
+  rows:
+  - accuracy_class: "(III)"
+    maximum_capacity_min: 1
+    maximum_capacity_max: 6000
+    number_of_verification_scale_intervals_single_multiple_range: 7500
+    number_of_verification_scale_intervals_multi_interval: 3000
+    tare_balancing_range_subtractive: 100
+  description: >-
+    Capacity given as '1 kg ... 6000 kg'; scale interval counts and tare range are upper bounds ('≤');
+    tare range is '≤ 100 % of Max'.
+  footnotes:
+  - 1)
+  - 2)

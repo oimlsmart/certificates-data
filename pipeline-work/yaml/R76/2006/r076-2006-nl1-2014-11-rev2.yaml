@@ -1,0 +1,203 @@
+_meta:
+  cert_id: 3870
+  num: R076/2006-NL1-2014.11 Rev. 2
+  applicant: Yamato Scale Co., Ltd.
+  issuing_year: '2016'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2014-11-rev2.pdf
+certificate:
+  number: R76/2006-NL1-14.11
+  revision: '2'
+  scheme: A
+  project_number: SO15204715
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2016-01-22'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5 – 22 Saenba-cho
+  - Akashi
+  - 673-8688
+  - Japan
+manufacturers:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5 – 22 Saenba-cho
+  - Akashi
+  - 673-8688
+  - Japan
+certified_type:
+  category: Indicator
+  type_designations:
+  - EDI-2200..
+  description: Indicator or Digital Data Processing Device
+characteristics:
+  type_level:
+    accuracy_class:
+      value: "(III) and (IIII)"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: Single interval / Multi-interval
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    tare:
+      value: T ≤ -Max
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: class (III)
+      value: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: class (IIII)
+      value: 1000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-14200034-01
+  date: '2014-10-29'
+  pages: 54
+  role: type_evaluation_report
+- id: NMi-14200034-02
+  date: '2014-10-29'
+  pages: 15
+  role: type_evaluation_report
+revision_history:
+- revision: initial
+  date: '2014-10-21'
+  changes:
+- revision: '1'
+  date: '2014-11-25'
+  changes: Correction to include Preset tare in test reports (as examined)
+- revision: '2'
+  date: '2016-01-22'
+  changes: Revision to include software version without examination
+components:
+- role: Digital Data Processing Device
+  type_designations:
+  - EDI-2200..
+  alternatives: OR
+  characteristics:
+    fraction_of_maximum_permissible_error:
+      value: 0
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_power_supply_voltage:
+      value: 12
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+- role: Indicator
+  type_designations:
+  - EDI-2200..
+  alternatives: OR
+  characteristics:
+    fraction_of_maximum_permissible_error:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    load_cell_excitation_voltage:
+      value:
+        min: 10
+        max: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 1.0
+      unit_symbol: µV
+      unit_id:
+      footnote_markers: []
+    minimum_load_cell_resistance:
+      value: 43.5
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    maximum_load_cell_resistance:
+      value: 1044
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    load_cell_connection:
+      value: 6-wire (remote sensing)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_cable_length_between_indicator_and_junction_box_or_load_cells:
+      value: No special cable length
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+matrix_tables:
+- name: Software identification
+  columns:
+  - version
+  - checksum
+  rows:
+  - version: '1.10'
+    checksum: E0DE
+  - version: '1.20'
+    checksum: AE9D
+  description:
+  footnotes: []

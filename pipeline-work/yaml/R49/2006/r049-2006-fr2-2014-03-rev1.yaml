@@ -1,0 +1,226 @@
+_meta:
+  cert_id: 3823
+  num: R049/2006-FR2-2014.03 Rev. 1
+  applicant: ITRON France
+  issuing_year: '2015'
+  status: Valid
+  issuer: FR2
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-fr2-2014-03-rev1.pdf
+certificate:
+  number: 2006-FR2-14.03.rev1
+  page_total: 1
+  member_state: FRANCE
+  date_issued: '2015-10-21'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Measuring Instruments Division Manager
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: ITRON FRANCE
+  address_lines:
+  - 9 rue Ampère
+  - 71031 MACON Cedex
+  - FRANCE
+manufacturers:
+- name: Itron Metering Systems Co., Ltd.
+  address_lines:
+  - No 50, Weihe Road, Suzhou Industrial Park
+  - Suzhou, Jiangsu
+  - CHN
+certified_type:
+  category: Water meter
+  type_designations:
+  - NEVOS / VCI
+  module_designation:
+  description: Water meter ITRON type NEVOS / VCI
+characteristics:
+  type_level:
+    indicating_device:
+      value: Metal or Plastic / liquid-filled registers
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    version:
+      value: In-Line
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    nominal_diameter:
+      value: 15
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    length:
+      value:
+        min: 115
+        max: 170
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    connections:
+      value: Threads 3/4 - G1
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mounting_position:
+      value: All positions
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    water_temperature_class:
+      value: T30 - T50
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    indicating_range:
+      value: 9999
+      unit_symbol: m³
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value: 0.02
+      unit_symbol: dm³
+      unit_id:
+      footnote_markers: []
+    cyclical_volume:
+      value: 33
+      unit_symbol: cm³
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    climatic_environment:
+      value:
+        min: 5
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    environmental_class:
+      value: B/C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_influence_class:
+      value: N/A
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    reverse_flow_measurement:
+      value: 'No'
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - "*"
+  model_level:
+  - attribute: permanent_flow_rate_q3
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6
+      value: 1.6
+    - model: Q3=2.5
+      value: 2.5
+  - attribute: overload_flow_rate_q4
+    unit_symbol: m³/h
+    values:
+    - model: Q3=1.6
+      value: 2
+    - model: Q3=2.5
+      value: 3.125
+  - attribute: q3_over_q1
+    unit_symbol:
+    values:
+    - model: Q3=1.6
+      value: 100, 125, 160, 200, 250
+    - model: Q3=2.5
+      value: 160, 200, 250, 315, 400
+  - attribute: maximum_pressure_loss_at_q3
+    unit_symbol: bar
+    values:
+    - model: Q3=1.6
+      value: 0.25
+    - model: Q3=2.5
+      value: 0.63
+  config_level: []
+recommendation:
+  id: R49
+  edition: 2006
+  accuracy_classes:
+  - 2
+test_reports:
+- id: P128960
+  date:
+  pages: 38
+  role: test_report
+- id: D7013152-AA
+  date:
+  pages: 73
+  role: documentation_file
+revision_history:
+- revision: '1'
+  date: '2015-10-21'
+  changes: Modification of manufacturer name and address, modification of indicating device type.
+model_family:
+  family_name:
+  models:
+  - model_id: Q3=1.6
+    label: Permanent flow rate Q3 = 1.6 m³/h
+  - model_id: Q3=2.5
+    label: Permanent flow rate Q3 = 2.5 m³/h
+components: []
+footnotes:
+- marker: "*"
+  text: >-
+    This meter is not designed to measure reverse flow but it is capable of withstanding an accidental
+    reverse flow without any deterioration or change in metrological properties for forward flow.
+matrix_tables:
+- name: Metrology characteristics by flow variant
+  columns:
+  - model
+  - permanent_flow_rate_q3
+  - overload_flow_rate_q4
+  - q3_over_q1
+  - maximum_pressure_loss_at_q3
+  column_units:
+  -
+  - m³/h
+  - m³/h
+  -
+  - bar
+  rows:
+  - model: Q3=1.6
+    permanent_flow_rate_q3: 1.6
+    overload_flow_rate_q4: 2
+    q3_over_q1: 100, 125, 160, 200, 250
+    maximum_pressure_loss_at_q3: 0.25
+  - model: Q3=2.5
+    permanent_flow_rate_q3: 2.5
+    overload_flow_rate_q4: 3.125
+    q3_over_q1: 160, 200, 250, 315, 400
+    maximum_pressure_loss_at_q3: 0.63
+  description: >-
+    All other characteristics (indicating device, version, nominal diameter 15 mm, length 115-170 mm,
+    connections, position, maximum admissible pressure 16 bar, water temperature class T30-T50, indicating
+    range 9999 m³, verification scale interval 0.02 dm³, cyclical volume 33 cm³, accuracy class 2, climatic
+    environment +5...+55°C, environmental class B/C, electromagnetic influence class N/A, reverse flow
+    measurement No) are shared by both variants.
+  footnotes: []

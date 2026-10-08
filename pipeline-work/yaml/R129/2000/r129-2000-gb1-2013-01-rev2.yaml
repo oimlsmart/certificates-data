@@ -1,0 +1,286 @@
+_meta:
+  cert_id: 3797
+  num: R129/2000-GB1-2013.01 Rev. 2
+  applicant: Postea Inc
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R129
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R129/2000/r129-2000-gb1-2013-01-rev2.pdf
+certificate:
+  number: R129/2000-GB1-13.01
+  project_number: TS11/0002
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2015-09-16'
+issuing_authority:
+  name: National Measurement and Regulation Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/nmro
+applicants:
+- name: Postea Inc
+  address_lines:
+  - 2750 Prosperity Ave
+  - Suite 450
+  - Fairfax
+  - VA 22031
+  - USA
+manufacturers:
+- name: Postea Inc
+  address_lines:
+  - 2750 Prosperity Ave
+  - Suite 450
+  - Fairfax
+  - VA 22031
+  - USA
+certified_type:
+  category: Multi-dimensional measuring instrument
+  type_designations:
+  - QubeVu®
+  - QubeVu® WS
+  - QubeVu® Industrial
+  - QubeVu® DimStation™
+  module_designation:
+  description: >-
+    Multi-dimensional measuring instrument designated QubeVu® for measuring square or rectangular boxes
+    only. Mounted to the metal chassis within the head: two cameras (one fixed to a zoom lens), three
+    custom printed circuit boards, a 3D sensor and an OEM single-board computer (which includes other
+    boards within its assembly). The associated software may be installed on any CE Marked PC; if required
+    any CE Marked LAN hub may be used.
+characteristics:
+  type_level:
+    scale_interval:
+      value: 0.5
+      unit_symbol: cm
+      unit_id:
+    minimum_dimension_length:
+      value: 12
+      unit_symbol: cm
+      unit_id:
+    minimum_dimension_width:
+      value: 10
+      unit_symbol: cm
+      unit_id:
+    minimum_dimension_height:
+      value: 5
+      unit_symbol: cm
+      unit_id:
+    temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    location:
+      value: Closed, non-condensing
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: camera_quantity
+    unit_symbol:
+    values:
+    - model: QubeVu WS
+      value: 2
+    - model: QubeVu Industrial
+      value: 2
+    - model: QubeVu DimStation
+      value: 1
+  config_level:
+  - attribute: maximum_dimension_length
+    axis: object_height
+    values:
+    - condition: object_height=70cm
+      value: 80
+      unit_symbol: cm
+    - condition: object_height=30cm
+      value: 120
+      unit_symbol: cm
+  - attribute: maximum_dimension_width
+    axis: object_height
+    values:
+    - condition: object_height=70cm
+      value: 60
+      unit_symbol: cm
+    - condition: object_height=30cm
+      value: 75
+      unit_symbol: cm
+  - attribute: maximum_dimension_height
+    axis: object_height
+    values:
+    - condition: object_height=70cm
+      value: 70
+      unit_symbol: cm
+    - condition: object_height=30cm
+      value: 30
+      unit_symbol: cm
+  - attribute: minimum_dimension_length
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 18
+      unit_symbol: cm
+  - attribute: minimum_dimension_width
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 18
+      unit_symbol: cm
+  - attribute: minimum_dimension_height
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 5
+      unit_symbol: cm
+  - attribute: maximum_dimension_length
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 120
+      unit_symbol: cm
+  - attribute: maximum_dimension_width
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 80
+      unit_symbol: cm
+  - attribute: maximum_dimension_height
+    axis: variant_mounting
+    values:
+    - condition: QubeVu Industrial mounted at a height of 2 metres above the measuring platform
+      value: 80
+      unit_symbol: cm
+recommendation:
+  id: R129
+  edition: 2000
+test_reports:
+- id: P01176
+  role: documentation_file
+- id: SN1270
+  role: test_report
+- id: SN1309
+  role: test_report
+- id: SN1332
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2013-11-01'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2014-12-15'
+  changes: Revision 1 issued; Software version 4.3 added; Alternative QubeVu® Industrial added
+- revision: '2'
+  date: '2015-09-21'
+  changes: Revision 2 issued; Software version 4.6 added; Alternative QubeVu® DimStation™ added
+model_family:
+  family_name: QubeVu
+  models:
+  - model_id: QubeVu WS
+    label: Workstation (base pattern as certified)
+    attributes:
+      cameras: 2
+  - model_id: QubeVu Industrial
+    label: Industrial Version
+    attributes:
+      cameras: 2
+      power_supply: built in
+      enclosure: metal
+      mounting: does not have its own stand; can be attached to a custom made or a preexisting structure
+      additional_pcb: additional printed circuit board using 3 LEDs to show status
+  - model_id: QubeVu DimStation
+    label: DimStation™
+    attributes:
+      cameras: 1
+      display: 7" touch screen display
+components:
+- role: camera
+  type_designations: []
+  characteristics:
+    quantity:
+      value: 2
+      unit_symbol:
+      unit_id:
+    zoom_lens:
+      value: one camera is fixed to a zoom lens
+      unit_symbol:
+      unit_id:
+- role: printed_circuit_board
+  type_designations:
+  - custom printed circuit boards
+  characteristics:
+    quantity:
+      value: 3
+      unit_symbol:
+      unit_id:
+- role: sensor
+  type_designations:
+  - 3D Sensor
+- role: computer
+  type_designations:
+  - OEM single-board computer
+  characteristics:
+    note:
+      value: includes other boards within its assembly
+      unit_symbol:
+      unit_id:
+- role: host_pc
+  type_designations:
+  - CE Marked PC
+  alternatives: OR
+  characteristics:
+    note:
+      value: the associated software may be installed on any CE Marked PC
+      unit_symbol:
+      unit_id:
+- role: lan_hub
+  type_designations:
+  - CE Marked LAN Hub
+  alternatives: OR
+  characteristics:
+    note:
+      value: if required any CE Marked LAN hub may be used
+      unit_symbol:
+      unit_id:
+footnotes: []
+matrix_tables:
+- name: legally_relevant_software_versions
+  columns:
+  - version
+  - checksum
+  - applies_to
+  - min_non_legally_relevant_suffix
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - version: 4.1.*.*
+    checksum: 27ef7512
+    applies_to: certified pattern
+    min_non_legally_relevant_suffix: 0.007
+  - version: 4.3.*.*
+    checksum: dfdb3fe1
+    applies_to: certified pattern
+    min_non_legally_relevant_suffix: 0.328
+  - version: 4.6.*.*
+    checksum: 902870ed
+    applies_to: QubeVu® DimStation™
+    min_non_legally_relevant_suffix: 0.674
+  - version: 4.6.*.*
+    checksum: 9a473b49
+    applies_to: QubeVu® Workstation & Industrial
+    min_non_legally_relevant_suffix: 0.674
+  description: >-
+    Legally relevant software versions and check sums, displayed in the 'QubeVu Manager > Inspector' page.
+    The *.* part tracks changes to the non-legally relevant software and must be equal to or greater than
+    the listed minimum suffix.
+  footnotes: []

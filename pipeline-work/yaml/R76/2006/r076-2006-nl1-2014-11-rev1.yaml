@@ -1,0 +1,178 @@
+_meta:
+  cert_id: 3572
+  num: R076/2006-NL1-2014.11 Rev. 1
+  applicant: Yamato Scale Co., Ltd.
+  issuing_year: '2014'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2014-11-rev1.pdf
+certificate:
+  number: R76/2006-NL1-14.11
+  project_number: '14200034'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2014-11-25'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5 – 22 Saenba-cho
+  - Akashi, 673-8688
+  - Japan
+manufacturers:
+- name: Yamato Scale Co., Ltd.
+  address_lines:
+  - 5 – 22 Saenba-cho
+  - Akashi, 673-8688
+  - Japan
+certified_type:
+  category: Indicator
+  type_designations:
+  - EDI-2200..
+  module_designation:
+  description: Indicator or Digital Data Processing Device
+characteristics:
+  type_level:
+    weighing_ranges:
+      value: Single interval or Multi-interval
+    tare:
+      value: T ≤ -Max
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+    software_checksum:
+      value: E0DE
+  config_level:
+  - attribute: maximum_number_of_verification_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 10000
+      unit_symbol:
+      unit_id:
+    - condition: IIII
+      value: 1000
+      unit_symbol:
+      unit_id:
+  - attribute: fraction_of_maximum_permissible_error
+    axis: device_role
+    values:
+    - condition: digital data processing device
+      value: 0
+      unit_symbol:
+      unit_id:
+    - condition: indicator
+      value: 0.5
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_power_supply_voltage
+    axis: device_role
+    values:
+    - condition: digital data processing device
+      value: 12
+      unit_symbol: V
+      unit_id:
+  - attribute: load_cell_power_supply_type
+    axis: device_role
+    values:
+    - condition: digital data processing device
+      value: DC
+  - attribute: load_cell_excitation_voltage
+    axis: device_role
+    values:
+    - condition: indicator
+      value:
+        min: 10
+        max: 15
+      unit_symbol: V
+      unit_id:
+  - attribute: load_cell_excitation_voltage_type
+    axis: device_role
+    values:
+    - condition: indicator
+      value: DC
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: device_role
+    values:
+    - condition: indicator
+      value: 1.0
+      unit_symbol: µV
+      unit_id:
+  - attribute: minimum_load_cell_resistance
+    axis: device_role
+    values:
+    - condition: indicator
+      value: 43.5
+      unit_symbol: Ω
+      unit_id:
+  - attribute: maximum_load_cell_resistance
+    axis: device_role
+    values:
+    - condition: indicator
+      value: 1044
+      unit_symbol: Ω
+      unit_id:
+  - attribute: load_cell_connection
+    axis: device_role
+    values:
+    - condition: indicator
+      value: 6-wire (remote sensing)
+  - attribute: maximum_cable_length
+    axis: device_role
+    values:
+    - condition: indicator
+      value: No special cable length
+recommendation:
+  id: R76
+  edition: 2006
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-14200034-01
+  date: '2014-10-29'
+  pages: 54
+  role: test_report
+- id: NMi-14200034-02
+  date: '2014-10-29'
+  pages: 15
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2014-10-21'
+  changes:
+- revision: '1'
+  date: '2014-11-25'
+  changes: Correction to include Preset tare in test reports (as examined)

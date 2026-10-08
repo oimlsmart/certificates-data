@@ -1,0 +1,270 @@
+_meta:
+  cert_id: 4395
+  num: R117/2007-NL1-2016.05 Rev. 2
+  applicant: Endress + Hauser Flowtec AG
+  issuing_year: '2017'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2016-05-rev2.pdf
+certificate:
+  number: R117/2007-NL1-16.05
+  project_number: '1901043'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2017-08-28'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kägenstrasse 7
+  - CH-4153 Reinach
+  - Switzerland
+manufacturers:
+- name: Endress + Hauser Flowtec AG
+  address_lines:
+  - Kägenstrasse 7
+  - CH-4153 Reinach
+  - Switzerland
+certified_type:
+  category: Measurement transducer
+  type_designations:
+  - Promass Q 300 DNxxx
+  module_designation:
+  description: >-
+    Flow transmitter (measurement transducer) for dynamic measuring systems for liquids other than water;
+    solely to be used in combination with dynamic mass meters (Coriolis meters) of brand Endress + Hauser.
+characteristics:
+  type_level:
+    maximum_pressure:
+      value: 100
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    density_range:
+      value:
+        min: 400
+        max: 1400
+      unit_symbol: kg/m³
+      unit_id:
+      footnote_markers: []
+    maximum_viscosity:
+      value: 517
+      unit_symbol: mPa·s
+      unit_id:
+      footnote_markers: []
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    environment_class:
+      value: M3/E2/H3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_dc:
+      value: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: DC and AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_flow_rate
+    unit_symbol: t/h
+    values:
+    - model: DN25
+      value: 20
+    - model: DN50
+      value: 80
+    - model: DN80
+      value: 200
+    - model: DN100
+      value: 400
+  - attribute: minimum_flow_rate
+    unit_symbol: t/h
+    values:
+    - model: DN25
+      value: 0.45
+    - model: DN50
+      value: 2
+    - model: DN80
+      value: 6
+    - model: DN100
+      value: 14
+  - attribute: minimum_measured_quantity
+    unit_symbol: kg
+    values:
+    - model: DN25
+      value: 10
+    - model: DN50
+      value: 20
+    - model: DN80
+      value: 100
+    - model: DN100
+      value: 200
+  config_level:
+  - attribute: product_temperature_range
+    axis: measurement_mode
+    values:
+    - condition: mass, density and volume measurement
+      value:
+        min: -10
+        max: 90
+      unit_symbol: "°C"
+    - condition: mass measurement
+      value:
+        min: -200
+        max: 90
+      unit_symbol: "°C"
+  - attribute: software_crc_modbus
+    axis: software_version
+    values:
+    - condition: 01.00.02
+      value: '0xE87F'
+    - condition: 01.00.03
+      value: '0x79B5'
+  - attribute: software_crc_hart
+    axis: software_version
+    values:
+    - condition: 01.00.02
+      value: '0x321F'
+    - condition: 01.00.03
+      value: '0x1585'
+recommendation:
+  id: R117-1
+  edition: 2007
+  accuracy_classes:
+  - 0.3
+  - 0.5
+  - 1.0
+  - 1.5
+test_reports:
+- id: NMi-15200323-01
+  date: '2016-10-25'
+  pages: 94
+  role: type_evaluation_report
+- id: NMi-16200475-01
+  date: '2016-12-22'
+  pages: 247
+  role: test_report
+- id: NMi-16200475-02
+  date: '2016-12-22'
+  pages: 16
+  role: test_report
+- id: TC7149-7
+  role: documentation_file
+- id: TC10822-1
+  role: documentation_file
+revision_history:
+- revision: Initial
+  date: '2016-12-22'
+  changes:
+- revision: '1'
+  date: '2017-08-10'
+  changes: >-
+    Maximum viscosity increased from 440 to 517 mPa·s. Based upon the measurements for the initial document
+    on Aztec on the DN100 of 431.27 mPa·s increased with the 20% as indicated in OIML R117-1, § B.A.6.2.
+- revision: '2'
+  date: '2017-08-28'
+  changes: Typing error in date of issuing and date in certificate history
+model_family:
+  family_name: Promass Q 300
+  models:
+  - model_id: DN25
+    label: Promass Q 300 DN25
+    attributes: {}
+  - model_id: DN50
+    label: Promass Q 300 DN50
+    attributes: {}
+  - model_id: DN80
+    label: Promass Q 300 DN80
+    attributes: {}
+  - model_id: DN100
+    label: Promass Q 300 DN100
+    attributes: {}
+components:
+- role: measurement sensor
+  type_designations:
+  - Promass Q
+  alternatives:
+  characteristics:
+    documentation_folder: TC7149-7
+    sensor_sizes:
+    - DN25
+    - DN50
+    - DN80
+    - DN100
+- role: electronics (transmitter)
+  type_designations:
+  - Promass 300
+  alternatives:
+  characteristics:
+    documentation_folder: TC10822-1
+footnotes:
+- marker: 1)
+  text: With xxx denoting the size of the Promass Q measurement sensor
+matrix_tables:
+- name: General characteristics of the Promass Q measurement sensor
+  columns:
+  - sensor_size
+  - maximum_flow_rate
+  - minimum_flow_rate
+  - minimum_measured_quantity
+  column_units:
+  -
+  - t/h
+  - t/h
+  - kg
+  rows:
+  - sensor_size: DN25
+    maximum_flow_rate: 20
+    minimum_flow_rate: 0.45
+    minimum_measured_quantity: 10
+  - sensor_size: DN50
+    maximum_flow_rate: 80
+    minimum_flow_rate: 2
+    minimum_measured_quantity: 20
+  - sensor_size: DN80
+    maximum_flow_rate: 200
+    minimum_flow_rate: 6
+    minimum_measured_quantity: 100
+  - sensor_size: DN100
+    maximum_flow_rate: 400
+    minimum_flow_rate: 14
+    minimum_measured_quantity: 200
+  description: 'Table 1 of the certificate: flow characteristics per Promass Q sensor size'
+  footnotes: []

@@ -1,0 +1,185 @@
+_meta:
+  cert_id: 1745
+  num: R060/2000-NL1-2006.11
+  applicant: Hottinger Baldwin Messtechnik GmbH
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2006-11.pdf
+certificate:
+  number: R60/2000-NL1-06.11
+  project_number: '511159'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-08-25'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - D-64293 Darmstadt
+  - Germany
+manufacturers:
+- name: Hottinger Baldwin Messtechnik GmbH
+  address_lines:
+  - Im Tiefen See 45
+  - D-64293 Darmstadt
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - FIT/0...
+  - FIT1...
+  - FIT/4...
+  description: A digital bending beam load cell.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    fraction_pi:
+      value: 1.0
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=5kg
+      value: 5
+      footnote_markers: []
+    - model: Emax=10kg
+      value: 10
+      footnote_markers: []
+    - model: Emax=20kg
+      value: 20
+      footnote_markers: []
+    - model: Emax=50kg
+      value: 50
+      footnote_markers: []
+    - model: Emax=75kg
+      value: 75
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: Emax=5kg
+      value: 10000
+      footnote_markers: []
+    - model: Emax=10kg
+      value: 10000
+      footnote_markers: []
+    - model: Emax=20kg
+      value: 10000
+      footnote_markers: []
+    - model: Emax=50kg
+      value: 10000
+      footnote_markers: []
+    - model: Emax=75kg
+      value: 7500
+      footnote_markers: []
+  config_level:
+  - attribute: max_load_cell_intervals_n
+    axis: capacity variant
+    values:
+    - condition: Emax 5, 10, 20, 50 kg (first variant)
+      value: 3000
+      unit_symbol:
+    - condition: Emax 5, 10, 20, 50 kg (second variant)
+      value: 4000
+      unit_symbol:
+    - condition: Emax 75 kg
+      value: 3000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: R60/2000-NL1-03.23A
+  pages: 57
+  role: test_report
+- id: R60/2000-NL1-03.23B
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-06.11A
+  pages: 21
+  role: test_report
+- id: R60/2000-NL1-06.11B
+  pages: 21
+  role: test_report
+- id: TC6000
+  role: documentation_file
+model_family:
+  family_name: FIT
+  models:
+  - model_id: Emax=5kg
+  - model_id: Emax=10kg
+  - model_id: Emax=20kg
+  - model_id: Emax=50kg
+  - model_id: Emax=75kg
+matrix_tables:
+- name: Metrological characteristics of the certified type
+  columns:
+  - characteristic
+  - unit
+  - group_1
+  - group_2
+  - group_3
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - characteristic: maximum_capacity_emax
+    unit: kg
+    group_1: 5, 10, 20, 50
+    group_2: 5, 10, 20, 50
+    group_3: '75'
+  - characteristic: accuracy_class
+    unit:
+    group_1: C
+    group_2: C
+    group_3: C
+  - characteristic: max_load_cell_intervals_n
+    unit:
+    group_1: 3000
+    group_2: 4000
+    group_3: 3000
+  - characteristic: ratio_y_emax_over_vmin
+    unit:
+    group_1: 10000
+    group_2: 10000
+    group_3: 7500
+  description: >-
+    The source table has three data columns. Columns group_1 and group_2 share the maximum capacity 5/10/20/50
+    kg (merged cell) and ratio Y = 10000, but differ in n (3000 vs 4000); group_3 is 75 kg with n = 3000
+    and Y = 7500. The three columns appear to correspond to the three type designations FIT/0..., FIT1...
+    and FIT/4... respectively.
+  footnotes: []

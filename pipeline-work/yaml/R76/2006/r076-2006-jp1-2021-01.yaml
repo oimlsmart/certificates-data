@@ -1,0 +1,245 @@
+_meta:
+  cert_id: 5282
+  num: R76/2006-A-JP1-21.01
+  applicant: A&D Company Ltd.
+  issuing_year: '2021'
+  status: Valid
+  issuer: JP1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-jp1-2021-01.pdf
+certificate:
+  number: R76/2006-A-JP1-21.01
+  scheme: A
+  page_total: 3
+  member_state: Japan
+  date_issued: '2021-02-15'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ/AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9, Tsukuba Ibaraki 305-8563, Japan
+  person_responsible: ISHIMURA Kazuhiko
+  person_title: President of AIST
+applicants:
+- name: A&D Company, Limited
+  address_lines:
+  - 3-23-14 Higashi-ikebukuro, Toshima-ku, Tokyo 170-0013 JAPAN
+manufacturers:
+- name: A&D SCALES CO., LTD.
+  address_lines:
+  - 191, Inseok-ro, Deoksan-myeon, Jincheon-gun, Chungcheongbuk-do, 27856, KOREA
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - HV-CEP series
+  - HV-15KCEP
+  - HV-60KCEP
+  - HV-200KCEP
+  module_designation: Non-automatic weighing instruments
+  description: >-
+    The HV-CEP series is a class III, self-indicating, non-automatic weighing instrument. The instruments
+    are not designed for direct sales to the public.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    legally_relevant_software_version:
+      value: P-1.xx
+    sealing:
+      value: Access to the calibration switch is prevented by a temper-evident lead and wire type seal
+  model_level:
+  - attribute: maximum_capacity_range_1
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 3
+    - model: HV-60KCEP
+      value: 15
+    - model: HV-200KCEP
+      value: 60
+  - attribute: maximum_capacity_range_2
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 6
+    - model: HV-60KCEP
+      value: 30
+    - model: HV-200KCEP
+      value: 150
+  - attribute: maximum_capacity_range_3
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 15
+    - model: HV-60KCEP
+      value: 60
+    - model: HV-200KCEP
+      value: 220
+  - attribute: verification_scale_interval_range_1
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 0.001
+    - model: HV-60KCEP
+      value: 0.005
+    - model: HV-200KCEP
+      value: 0.02
+  - attribute: verification_scale_interval_range_2
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 0.002
+    - model: HV-60KCEP
+      value: 0.01
+    - model: HV-200KCEP
+      value: 0.05
+  - attribute: verification_scale_interval_range_3
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 0.005
+    - model: HV-60KCEP
+      value: 0.02
+    - model: HV-200KCEP
+      value: 0.1
+  - attribute: minimum_capacity
+    unit_symbol: kg
+    values:
+    - model: HV-15KCEP
+      value: 0.02
+    - model: HV-60KCEP
+      value: 0.1
+    - model: HV-200KCEP
+      value: 0.4
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: 2020-004
+  date: '2021-02-04'
+  pages: 18
+  role: type_evaluation_report
+- id: 2020-004-D
+  date: '2021-02-04'
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2021-02-15'
+  changes: OIML Certificate first issued
+model_family:
+  family_name: HV-CEP series
+  models:
+  - model_id: HV-15KCEP
+    label: HV-15KCEP
+    attributes:
+      accuracy_class: III
+      max_kg_per_range:
+      - 3
+      - 6
+      - 15
+      e_kg_per_range:
+      - 0.001
+      - 0.002
+      - 0.005
+      min_kg: 0.02
+      temperature_range: "-10 to 40 °C"
+  - model_id: HV-60KCEP
+    label: HV-60KCEP
+    attributes:
+      accuracy_class: III
+      max_kg_per_range:
+      - 15
+      - 30
+      - 60
+      e_kg_per_range:
+      - 0.005
+      - 0.01
+      - 0.02
+      min_kg: 0.1
+      temperature_range: "-10 to 40 °C"
+  - model_id: HV-200KCEP
+    label: HV-200KCEP
+    attributes:
+      accuracy_class: III
+      max_kg_per_range:
+      - 60
+      - 150
+      - 220
+      e_kg_per_range:
+      - 0.02
+      - 0.05
+      - 0.1
+      min_kg: 0.4
+      temperature_range: "-10 to 40 °C"
+components:
+- role: Initial zero-setting device
+  characteristics:
+    threshold_percent_of_max:
+      value: 15
+      unit_symbol: "%"
+- role: Semi-automatic zero-setting device
+  characteristics:
+    threshold_percent_of_max:
+      value: 4
+      unit_symbol: "%"
+- role: Zero-tracking device
+  characteristics:
+    threshold_percent_of_max:
+      value: 4
+      unit_symbol: "%"
+- role: Semi-automatic subtractive tare weighing device
+  characteristics:
+    tare_range:
+      value: "-Max"
+- role: Zero indicator
+- role: Indication of stable equilibrium device
+matrix_tables:
+- name: Technical data
+  columns:
+  - type
+  - class
+  - max
+  - e
+  - min
+  - temperature_range
+  column_units:
+  -
+  -
+  - kg
+  - kg
+  - kg
+  - "°C"
+  rows:
+  - type: HV-15KCEP
+    class: III
+    max: 3/6/15
+    e: 0.001/0.002/0.005
+    min: '0.02'
+    temperature_range: "-10 to 40"
+  - type: HV-60KCEP
+    class: III
+    max: 15/30/60
+    e: 0.005/0.01/0.02
+    min: '0.1'
+    temperature_range: "-10 to 40"
+  - type: HV-200KCEP
+    class: III
+    max: 60/150/220
+    e: 0.02/0.05/0.1
+    min: '0.4'
+    temperature_range: "-10 to 40"
+  description: >-
+    Multi-range instruments: Max and e are given as three values corresponding to three partial capacity
+    ranges per model.
+  footnotes: []

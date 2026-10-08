@@ -1,0 +1,357 @@
+_meta:
+  cert_id: 1607
+  num: R051/1996-DE1-2005.01
+  applicant: Mettler-Toledo Garvens GmbH
+  issuing_year: '2006'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 1996
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/1996/r051-1996-de1-2005-01.pdf
+certificate:
+  number: R51/1996-DE1-05.01
+  page_total: 3
+  member_state: Germany
+  date_issued: '2006-01-25'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+  person_title: Direktor und Professor
+applicants:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+  - Germany
+manufacturers:
+- name: Mettler-Toledo Garvens GmbH
+  address_lines:
+  - Kampstr. 7
+  - 31180 Giesen
+  - Germany
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - AB C
+  module_designation:
+  description: >-
+    Automatic electromechanical weighing instrument as catchweigher, weigh price labeller, weigh labeller
+    or checkweigher, equipped without external lever work and with electrodynamic force compensation load
+    cells (EFC-LC), performed as single or multi interval instrument.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_belt_speed:
+      value:
+        min:
+        max: 2.5
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+    ratio_between_verification_scale_intervals:
+      value:
+        min:
+        max: 3
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: verification_scale_interval
+    axis: load_cell_type
+    values:
+    - condition: BF2-L
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+    - condition: BF8-L
+      value:
+        min: 0.1
+        max:
+      unit_symbol: g
+    - condition: BF20-L or BF20-L-P-I
+      value:
+        min: 0.2
+        max:
+      unit_symbol: g
+  - attribute: number_of_verification_scale_intervals
+    axis: load_cell_type × weighing_mode
+    values:
+    - condition: BF2-L, static weighing
+      value:
+        min:
+        max: 20000
+      unit_symbol:
+    - condition: BF2-L, dynamic weighing
+      value:
+        min:
+        max: 7500
+      unit_symbol:
+    - condition: BF8-L, static weighing
+      value:
+        min:
+        max: 3×10000/8000
+      unit_symbol:
+    - condition: BF8-L, dynamic weighing
+      value:
+        min:
+        max: 15000
+      unit_symbol:
+    - condition: BF20-L or BF20-L-P-I, static weighing
+      value:
+        min:
+        max: 40000
+      unit_symbol:
+    - condition: BF20-L or BF20-L-P-I, dynamic weighing
+      value:
+        min:
+        max: 15000
+      unit_symbol:
+  - attribute: maximum_load
+    axis: load_cell_type × weighing_mode
+    values:
+    - condition: BF2-L, static weighing
+      value:
+        min:
+        max: 2000
+      unit_symbol: g
+    - condition: BF2-L, dynamic weighing
+      value:
+        min:
+        max: 2000
+      unit_symbol: g
+    - condition: BF8-L, static weighing
+      value:
+        min:
+        max: 8000
+      unit_symbol: g
+    - condition: BF8-L, dynamic weighing
+      value:
+        min:
+        max: 7500
+      unit_symbol: g
+    - condition: BF20-L or BF20-L-P-I, static weighing
+      value:
+        min:
+        max: 20
+      unit_symbol: kg
+    - condition: BF20-L or BF20-L-P-I, dynamic weighing
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+  - attribute: minimum_load
+    axis: load_cell_type × weighing_mode
+    values:
+    - condition: BF2-L, static weighing
+      value: 20e
+      unit_symbol:
+    - condition: BF2-L, dynamic weighing
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+    - condition: BF8-L, static weighing
+      value: 20e
+      unit_symbol:
+    - condition: BF8-L, dynamic weighing
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+    - condition: BF20-L or BF20-L-P-I, static weighing
+      value: 20e
+      unit_symbol:
+    - condition: BF20-L or BF20-L-P-I, dynamic weighing
+      value:
+        min: 10
+        max:
+      unit_symbol: g
+recommendation:
+  id: R51-1
+  edition: 1996
+  accuracy_classes:
+  - X(1)
+  - Y(a)
+test_reports:
+- id: 1.12-4016790
+  pages: 16
+  role: type_evaluation_report
+- id: 1.12-4016790/1
+  pages: 37
+  role: test_report
+- id: 1.12-4016790/2
+  pages: 42
+  role: test_report
+- id: 1.12-4016790/3
+  pages: 37
+  role: test_report
+- id: 1.12-4016790/4
+  pages: 48
+  role: test_report
+components:
+- role: load cell
+  type_designations:
+  - BF2-L
+  - BF8-L
+  - BF20-L
+  - BF20-L-P-I
+  alternatives: OR
+  characteristics:
+    principle:
+      value: electrodynamic force compensation
+      unit_symbol:
+      unit_id:
+matrix_tables:
+- name: 'Table 1: Metrological data of the instrument with EFC-LC of the type BF2-L'
+  columns:
+  - attribute
+  - static_X(1)
+  - static_Y(a)
+  - dynamic_X(1)
+  - dynamic_Y(a)
+  rows:
+  - attribute: verification_scale_interval_e
+    static_X(1): "≥ 0.1 g"
+    static_Y(a): "≥ 0.1 g"
+    dynamic_X(1): "≥ 0.1 g"
+    dynamic_Y(a): "≥ 0.1 g"
+  - attribute: ratio_between_verification_scale_intervals
+    static_X(1): e(i+1)/e(i) ≤ 3
+    static_Y(a): e(i+1)/e(i) ≤ 3
+    dynamic_X(1): e(i+1)/e(i) ≤ 3
+    dynamic_Y(a): e(i+1)/e(i) ≤ 3
+  - attribute: number_of_verification_scale_intervals
+    static_X(1): "≤ 20000"
+    static_Y(a): "≤ 20000"
+    dynamic_X(1): "≤ 7500"
+    dynamic_Y(a): "≤ 7500"
+  - attribute: maximum_load
+    static_X(1): "≤ 2000 g"
+    static_Y(a): "≤ 2000 g"
+    dynamic_X(1): "≤ 2000 g"
+    dynamic_Y(a): "≤ 2000 g"
+  - attribute: minimum_load
+    static_X(1): "≥ 20e"
+    static_Y(a): "≥ 20e"
+    dynamic_X(1): "≥ 5 g"
+    dynamic_Y(a): "≥ 5 g"
+  - attribute: temperature_range
+    static_X(1): 0 °C / +40 °C
+    static_Y(a): 0 °C / +40 °C
+    dynamic_X(1): 0 °C / +40 °C
+    dynamic_Y(a): 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    static_X(1): "≤ 2.5 m/s"
+    static_Y(a): "≤ 2.5 m/s"
+    dynamic_X(1): "≤ 2.5 m/s"
+    dynamic_Y(a): "≤ 2.5 m/s"
+  description: >-
+    Metrological data of the instrument with electrodynamic force compensation load cell (EFC-LC) of the
+    type BF2-L
+  footnotes: []
+- name: 'Table 2: Metrological data of the instrument with EFC-LC of the type BF8-L'
+  columns:
+  - attribute
+  - static_X(1)
+  - static_Y(a)
+  - dynamic_X(1)
+  - dynamic_Y(a)
+  rows:
+  - attribute: verification_scale_interval_e
+    static_X(1): "≥ 0.1 g"
+    static_Y(a): "≥ 0.1 g"
+    dynamic_X(1): "≥ 0.1 g"
+    dynamic_Y(a): "≥ 0.1 g"
+  - attribute: ratio_between_verification_scale_intervals
+    static_X(1): e(i+1)/e(i) ≤ 3
+    static_Y(a): e(i+1)/e(i) ≤ 3
+    dynamic_X(1): e(i+1)/e(i) ≤ 3
+    dynamic_Y(a): e(i+1)/e(i) ≤ 3
+  - attribute: number_of_verification_scale_intervals
+    static_X(1): "≤ 3·10000/8000"
+    static_Y(a): "≤ 3·10000/8000"
+    dynamic_X(1): "≤ 15000"
+    dynamic_Y(a): "≤ 15000"
+  - attribute: maximum_load
+    static_X(1): "≤ 8000 g"
+    static_Y(a): "≤ 8000 g"
+    dynamic_X(1): "≤ 7500 g"
+    dynamic_Y(a): "≤ 7500 g"
+  - attribute: minimum_load
+    static_X(1): "≥ 20e"
+    static_Y(a): "≥ 20e"
+    dynamic_X(1): "≥ 5 g"
+    dynamic_Y(a): "≥ 5 g"
+  - attribute: temperature_range
+    static_X(1): 0 °C / +40 °C
+    static_Y(a): 0 °C / +40 °C
+    dynamic_X(1): 0 °C / +40 °C
+    dynamic_Y(a): 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    static_X(1): "≤ 2.5 m/s"
+    static_Y(a): "≤ 2.5 m/s"
+    dynamic_X(1): "≤ 2.5 m/s"
+    dynamic_Y(a): "≤ 2.5 m/s"
+  description: >-
+    Metrological data of the instrument with electrodynamic force compensation load cell (EFC-LC) of the
+    type BF8-L
+  footnotes: []
+- name: 'Table 3: Metrological data of the instrument with EFC-LC of the type BF20-L or BF20-L-P-I'
+  columns:
+  - attribute
+  - static_X(1)
+  - static_Y(a)
+  - dynamic_X(1)
+  - dynamic_Y(a)
+  rows:
+  - attribute: verification_scale_interval_e
+    static_X(1): "≥ 0.2 g"
+    static_Y(a): "≥ 0.2 g"
+    dynamic_X(1): "≥ 0.2 g"
+    dynamic_Y(a): "≥ 0.2 g"
+  - attribute: ratio_between_verification_scale_intervals
+    static_X(1): e(i+1)/e(i) ≤ 3
+    static_Y(a): e(i+1)/e(i) ≤ 3
+    dynamic_X(1): e(i+1)/e(i) ≤ 3
+    dynamic_Y(a): e(i+1)/e(i) ≤ 3
+  - attribute: number_of_verification_scale_intervals
+    static_X(1): "≤ 40000"
+    static_Y(a): "≤ 40000"
+    dynamic_X(1): "≤ 15000"
+    dynamic_Y(a): "≤ 15000"
+  - attribute: maximum_load
+    static_X(1): "≤ 20 kg"
+    static_Y(a): "≤ 20 kg"
+    dynamic_X(1): "≤ 15 kg"
+    dynamic_Y(a): "≤ 15 kg"
+  - attribute: minimum_load
+    static_X(1): "≥ 20e"
+    static_Y(a): "≥ 20e"
+    dynamic_X(1): "≥ 10 g"
+    dynamic_Y(a): "≥ 10 g"
+  - attribute: temperature_range
+    static_X(1): 0 °C / +40 °C
+    static_Y(a): 0 °C / +40 °C
+    dynamic_X(1): 0 °C / +40 °C
+    dynamic_Y(a): 0 °C / +40 °C
+  - attribute: maximum_belt_speed
+    static_X(1): "≤ 2.5 m/s"
+    static_Y(a): "≤ 2.5 m/s"
+    dynamic_X(1): "≤ 2.5 m/s"
+    dynamic_Y(a): "≤ 2.5 m/s"
+  description: >-
+    Metrological data of the instrument with electrodynamic force compensation load cell (EFC-LC) of the
+    type BF20-L or BF20-L-P-I
+  footnotes: []

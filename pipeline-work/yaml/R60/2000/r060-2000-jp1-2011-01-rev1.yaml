@@ -1,0 +1,120 @@
+_meta:
+  cert_id: 2720
+  num: R060/2000-JP1-2011.01 Rev. 1
+  applicant: Yamato Scale Co., Ltd.
+  issuing_year: '2011'
+  status: Valid
+  issuer: JP1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-jp1-2011-01-rev1.pdf
+certificate:
+  number: R60/2000-JP1-11.01
+  scheme: A
+  project_number: '11.01'
+  page_total: 3
+  member_state: Japan
+  date_issued: '2011-11-09'
+issuing_authority:
+  name: >-
+    National Metrology Institute of Japan / National Institute of Advanced Industrial Science and Technology
+    (NMIJ / AIST)
+  address_lines:
+  - AIST Tsukuba Central 3-9
+  - Tsukuba Ibaraki 305-8563
+  - Japan
+  person_responsible: Dr. Tamotsu Nomakuchi
+  person_title: President of AIST
+applicants:
+- name: YAMATO SCALE CO., LTD.
+  address_lines:
+  - 5-22, Saenba-cho
+  - Akashi, Hyogo
+  - 673-8688
+  - Japan
+manufacturers:
+- name: YAMATO SCALE CO., LTD.
+  address_lines:
+  - 5-22, Saenba-cho
+  - Akashi, Hyogo
+  - 673-8688
+  - Japan
+certified_type:
+  category: Load cell
+  type_designations:
+  - DCC1-20T
+  - DCC1-24T
+  - DCC1-36T
+  description: Compression load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+    humidity_symbol:
+      value: CH
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    minimum_dead_load_emin:
+      value: 0
+      unit_symbol: kg
+    max_number_of_load_cell_verification_intervals_nmax:
+      value: 6000, 5000, 4000, 3000
+    safe_load_limit_elim:
+      value: 1.5*Emax
+      unit_symbol: kg
+    minimum_verification_interval_vmin:
+      value: Emax/12000
+      unit_symbol: kg
+    apportionment_factor_plc:
+      value: 0.7
+    ratio_y_emax_over_vmin:
+      value: 12000
+    maximum_excitation_voltage:
+      value: 15
+      unit_symbol: V
+    cable_length:
+      value:
+        min:
+        max: 20
+      unit_symbol: m
+    cable_configuration:
+      value: 4-wire
+  model_level:
+  - attribute: maximum_capacity_emax
+    unit_symbol: kg
+    values:
+    - model: DCC1-20T
+      value: 20000
+    - model: DCC1-24T
+      value: 24000
+    - model: DCC1-36T
+      value: 36000
+  config_level:
+  - attribute: ratio_z_emax_over_2dr
+    axis: max_number_of_load_cell_verification_intervals_nmax
+    values:
+    - condition: nmax=6000
+      value: 6000
+      unit_symbol:
+recommendation:
+  id: R60
+  edition: 2000
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: 11-09/R60:2000
+  pages: 26
+  role: test_report
+revision_history:
+- revision: '1'
+model_family:
+  family_name:
+  models:
+  - model_id: DCC1-20T
+  - model_id: DCC1-24T
+  - model_id: DCC1-36T

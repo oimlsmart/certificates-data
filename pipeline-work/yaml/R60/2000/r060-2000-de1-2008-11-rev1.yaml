@@ -1,0 +1,459 @@
+_meta:
+  cert_id: 3741
+  num: R060/2000-DE1-2008.11 Rev. 1
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2015'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2008-11-rev1.pdf
+certificate:
+  number: R60/2000-DE1-08.11
+  page_total: 3
+  member_state: Germany
+  date_issued: '2015-06-08'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. O. Mack
+  person_title: Head of Working Group
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Str. 205
+  - 22145 Hamburg
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Str. 205
+  - 22145 Hamburg
+certified_type:
+  category: Load cell
+  type_designations:
+  - PR 6221
+  module_designation:
+  description: >-
+    Strain gauge compression load cell for weighbridges. The load cells (LC) of the series PR6221 are
+    compact compression load cells for self-centering pendulum applications. The strain gauge application
+    is hermetically sealed; the deep-drawn and micro plasma welded housing is made of stainless steel
+    and filled with inert gas.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    input_impedance:
+      value: 1080
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: t
+    values:
+    - model: Emax=12.5t
+      value: 12.5
+    - model: Emax=20t
+      value: 20
+    - model: Emax=25t
+      value: 25
+    - model: Emax=30t
+      value: 30
+    - model: Emax=50t
+      value: 50
+    - model: Emax=60t
+      value: 60
+    - model: Emax=75t
+      value: 75
+  - attribute: safe_load_limit
+    unit_symbol: "%"
+    values:
+    - model: Emax=12.5t
+      value: 300
+    - model: Emax=20t
+      value: 200
+    - model: Emax=25t
+      value: 150
+    - model: Emax=30t
+      value: 200
+    - model: Emax=50t
+      value: 150
+    - model: Emax=60t
+      value: 125
+    - model: Emax=75t
+      value: 100
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C3
+      value: 3000
+      unit_symbol:
+    - condition: C4
+      value: 4000
+      unit_symbol:
+    - condition: C5
+      value: 5000
+      unit_symbol:
+    - condition: C6
+      value: 6000
+      unit_symbol:
+  - attribute: rated_output
+    axis: accuracy_class and maximum_capacity
+    values:
+    - condition: C3, Emax=12.5/20/30 t
+      value: 1
+      unit_symbol: mV/V
+    - condition: C3, Emax=25/50 t
+      value: 2
+      unit_symbol: mV/V
+    - condition: C3, Emax=60 t
+      value: 2.4
+      unit_symbol: mV/V
+    - condition: C3, Emax=75 t
+      value: 3
+      unit_symbol: mV/V
+    - condition: C4, Emax=12.5/20/30 t
+      value: 1
+      unit_symbol: mV/V
+    - condition: C4, Emax=25/50 t
+      value: 2
+      unit_symbol: mV/V
+    - condition: C4, Emax=60/75 t
+      value: 1.5
+      unit_symbol: mV/V
+    - condition: C5, Emax=20/30 t
+      value: 1
+      unit_symbol: mV/V
+    - condition: C5, Emax=25 t
+      value: 2
+      unit_symbol: mV/V
+    - condition: C5, Emax=50/60/75 t
+      value: 1.5
+      unit_symbol: mV/V
+    - condition: C6, Emax=20/30 t
+      value: 1
+      unit_symbol: mV/V
+    - condition: C6, Emax=25 t
+      value: 2
+      unit_symbol: mV/V
+    - condition: C6, Emax=50/60/75 t
+      value: 1.5
+      unit_symbol: mV/V
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class (and maximum_capacity for C4)
+    values:
+    - condition: C3
+      value: Emax/14000
+      unit_symbol:
+    - condition: C4, Emax=12.5 t
+      value: Emax/18000
+      unit_symbol:
+    - condition: C4, Emax=20 t to 75 t
+      value: Emax/20000
+      unit_symbol:
+    - condition: C5
+      value: Emax/20000
+      unit_symbol:
+    - condition: C6
+      value: Emax/20000
+      unit_symbol:
+  - attribute: minimum_dead_load_output_return_dr
+    axis: accuracy_class (and maximum_capacity for C4)
+    values:
+    - condition: C3
+      value: "½Emax/6000"
+      unit_symbol:
+    - condition: C4, Emax=12.5 t
+      value: "½Emax/6000"
+      unit_symbol:
+    - condition: C4, Emax=20 t to 75 t
+      value: "½Emax/8000"
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C5
+      value: "½Emax/8000"
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: C6
+      value: "½Emax/8000"
+      unit_symbol:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+test_reports:
+- id: 1.12-4073824/1
+  pages: 20
+  role: test_report
+- id: 1.12-4073824/2
+  pages: 20
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2015-06-08'
+  changes: >-
+    The accuracy class C6 for the maximum capacities of 50 t, 60 t and 75 t were added. Conformity established
+    by the results of tests and examinations provided in the associated Test Reports.
+model_family:
+  family_name: PR6221
+  models:
+  - model_id: Emax=12.5t
+    label: PR 6221, Emax 12.5 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+  - model_id: Emax=20t
+    label: PR 6221, Emax 20 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=25t
+    label: PR 6221, Emax 25 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=30t
+    label: PR 6221, Emax 30 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=50t
+    label: PR 6221, Emax 50 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=60t
+    label: PR 6221, Emax 60 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+  - model_id: Emax=75t
+    label: PR 6221, Emax 75 t
+    attributes:
+      accuracy_classes:
+      - C3
+      - C4
+      - C5
+      - C6
+footnotes:
+- marker: 1)
+  text: For the compensated temperature range > 40°C Z = 6000
+matrix_tables:
+- name: 'Table 1: Essential data — accuracy class C3'
+  columns:
+  - parameter
+  - unit
+  - capacity_group_1
+  - capacity_group_2
+  - capacity_group_3
+  - capacity_group_4
+  rows:
+  - parameter: maximum_capacity_emax
+    unit: t
+    capacity_group_1: 12.5 / 20 / 30
+    capacity_group_2: 25 / 50
+    capacity_group_3: '60'
+    capacity_group_4: '75'
+  - parameter: rated_output
+    unit: mV/V
+    capacity_group_1: 1
+    capacity_group_2: 2
+    capacity_group_3: 2.4
+    capacity_group_4: 3
+  - parameter: temperature_range
+    unit: "°C"
+    capacity_group_1: "-10 ... +55"
+    capacity_group_2: "-10 ... +55"
+    capacity_group_3: "-10 ... +55"
+    capacity_group_4: "-10 ... +55"
+  - parameter: minimum_load_cell_verification_interval_vmin
+    unit:
+    capacity_group_1: Emax/14000
+    capacity_group_2: Emax/14000
+    capacity_group_3: Emax/14000
+    capacity_group_4: Emax/14000
+  - parameter: minimum_dead_load_output_return_dr
+    unit:
+    capacity_group_1: "½Emax/6000"
+    capacity_group_2: "½Emax/6000"
+    capacity_group_3: "½Emax/6000"
+    capacity_group_4: "½Emax/6000"
+  description: >-
+    Accuracy class C3, maximum number of load cell intervals nLC = 3000. Capacity groups give maximum
+    capacities Emax in tonnes.
+  footnotes: []
+- name: Essential data — accuracy class C4
+  columns:
+  - parameter
+  - unit
+  - capacity_group_1
+  - capacity_group_2
+  - capacity_group_3
+  - capacity_group_4
+  - capacity_group_5
+  rows:
+  - parameter: maximum_capacity_emax
+    unit: t
+    capacity_group_1: '12.5'
+    capacity_group_2: 20 / 30
+    capacity_group_3: '25'
+    capacity_group_4: '50'
+    capacity_group_5: 60 / 75
+  - parameter: rated_output
+    unit: mV/V
+    capacity_group_1: 1
+    capacity_group_2: 1
+    capacity_group_3: 2
+    capacity_group_4: 2
+    capacity_group_5: 1.5
+  - parameter: temperature_range
+    unit: "°C"
+    capacity_group_1: "-10 ... +55"
+    capacity_group_2: "-10 ... +55"
+    capacity_group_3: "-10 ... +55"
+    capacity_group_4: "-10 ... +55"
+    capacity_group_5: "-10 ... +55"
+  - parameter: minimum_load_cell_verification_interval_vmin
+    unit:
+    capacity_group_1: Emax/18000
+    capacity_group_2: Emax/20000
+    capacity_group_3: Emax/20000
+    capacity_group_4: Emax/20000
+    capacity_group_5: Emax/20000
+  - parameter: minimum_dead_load_output_return_dr
+    unit:
+    capacity_group_1: "½Emax/6000"
+    capacity_group_2: "½Emax/8000 (1)"
+    capacity_group_3: "½Emax/8000 (1)"
+    capacity_group_4: "½Emax/8000 (1)"
+    capacity_group_5: "½Emax/8000 (1)"
+  description: >-
+    Accuracy class C4, maximum number of load cell intervals nLC = 4000. Capacity groups give maximum
+    capacities Emax in tonnes.
+  footnotes:
+  - 1) For the compensated temperature range > 40°C Z = 6000
+- name: Essential data — accuracy classes C5 and C6
+  columns:
+  - parameter
+  - unit
+  - C5_group_1
+  - C5_group_2
+  - C5_group_3
+  - C6_group_1
+  - C6_group_2
+  - C6_group_3
+  rows:
+  - parameter: maximum_capacity_emax
+    unit: t
+    C5_group_1: 20 / 30
+    C5_group_2: '25'
+    C5_group_3: 50 / 60 / 75
+    C6_group_1: 20 / 30
+    C6_group_2: '25'
+    C6_group_3: 50 / 60 / 75
+  - parameter: rated_output
+    unit: mV/V
+    C5_group_1: 1
+    C5_group_2: 2
+    C5_group_3: 1.5
+    C6_group_1: 1
+    C6_group_2: 2
+    C6_group_3: 1.5
+  - parameter: temperature_range
+    unit: "°C"
+    C5_group_1: "-10 ... +55"
+    C5_group_2: "-10 ... +55"
+    C5_group_3: "-10 ... +55"
+    C6_group_1: "-10 ... +55"
+    C6_group_2: "-10 ... +55"
+    C6_group_3: "-10 ... +55"
+  - parameter: minimum_load_cell_verification_interval_vmin
+    unit:
+    C5_group_1: Emax/20000
+    C5_group_2: Emax/20000
+    C5_group_3: Emax/20000
+    C6_group_1: Emax/20000
+    C6_group_2: Emax/20000
+    C6_group_3: Emax/20000
+  - parameter: minimum_dead_load_output_return_dr
+    unit:
+    C5_group_1: "½Emax/8000 (1)"
+    C5_group_2: "½Emax/8000 (1)"
+    C5_group_3: "½Emax/8000 (1)"
+    C6_group_1: "½Emax/8000 (1)"
+    C6_group_2: "½Emax/8000 (1)"
+    C6_group_3: "½Emax/8000 (1)"
+  description: >-
+    Accuracy class C5: maximum number of load cell intervals nLC = 5000. Accuracy class C6: nLC = 6000.
+    Capacity groups give maximum capacities Emax in tonnes.
+  footnotes:
+  - 1) For the compensated temperature range > 40°C Z = 6000
+- name: Safe load limit by maximum capacity
+  columns:
+  - maximum_capacity_emax
+  - safe_load_limit
+  column_units:
+  - t
+  - "%Emax"
+  rows:
+  - maximum_capacity_emax: 12.5
+    safe_load_limit: 300
+  - maximum_capacity_emax: 20
+    safe_load_limit: 200
+  - maximum_capacity_emax: 30
+    safe_load_limit: 200
+  - maximum_capacity_emax: 25
+    safe_load_limit: 150
+  - maximum_capacity_emax: 50
+    safe_load_limit: 150
+  - maximum_capacity_emax: 60
+    safe_load_limit: 125
+  - maximum_capacity_emax: 75
+    safe_load_limit: 100
+  description: Safe load limit as a percentage of Emax for each maximum capacity.
+  footnotes: []

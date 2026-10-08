@@ -1,0 +1,433 @@
+_meta:
+  cert_id: 5521
+  num: R76/2006-A-NL1-20.69 Rev. 4
+  applicant: Mettler-Toledo (Changzhou) Measurement Technology Ltd
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2020-69-rev4.pdf
+certificate:
+  number: R76/2006-A-NL1-20.69
+  scheme: A
+  project_number: '2659880'
+  page_total: 4
+  member_state: The Netherlands
+  date_issued: '2021-10-29'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: METTLER-TOLEDO Changzhou Measurement Technology Ltd.
+  address_lines:
+  - No.111, West TaiHu Road
+  - Changzhou, Jiangsu, 213125
+  - China
+manufacturers:
+- name: METTLER-TOLEDO Changzhou Measurement Technology Ltd.
+  address_lines:
+  - No.111, West TaiHu Road
+  - Changzhou, Jiangsu, 213125
+  - China
+certified_type:
+  category: Indicator
+  type_designations:
+  - IND360
+  module_designation:
+  description: >-
+    Indicator / terminal IND360. Configurations: (a) digital load cells or weighing modules via CANbus
+    interface; (b) digital load cells or weighing modules via SICSPro interface; (c) analog load cells;
+    (d) analog load cells with optional ISB (intrinsic safety barrier). Mainboard software versions are
+    1.xx.yyyy, where xx (00-99) represents major updates and yyyy (0000-9999) represents minor updates
+    of the legally non relevant part of the software.
+characteristics:
+  type_level:
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    humidity:
+      value: non-condensing
+      unit_symbol:
+      unit_id:
+    intended_location:
+      value: Closed
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment_class:
+      value: E2
+      unit_symbol:
+      unit_id:
+    oiml_r61_class:
+      value: Ref(0,2)
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage_ac_applicability:
+      value: only for Harsh version
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_dc:
+      value:
+        min: 20
+        max: 28
+      unit_symbol: V
+      unit_id:
+    power_supply_voltage_dc_applicability:
+      value: for all versions
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC / DC
+      unit_symbol:
+      unit_id:
+    road_vehicle_power_supply:
+      value: not suitable for a road vehicle power supply
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: r76_accuracy_class
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: "(III) or (IIII)"
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: "(I), (II), (III) or (IIII)"
+      unit_symbol:
+    - condition: analog
+      value: "(III) or (IIII)"
+      unit_symbol:
+    - condition: analog_ISB_1.5V
+      value: "(III) or (IIII)"
+      unit_symbol:
+    - condition: analog_ISB_2.3V
+      value: "(III) or (IIII)"
+      unit_symbol:
+    - condition: analog_ISB_3.9V
+      value: "(III) or (IIII)"
+      unit_symbol:
+  - attribute: r51_accuracy_class
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: Y(I), Y(II), Y(a) or Y(b); XI(x), XII(x), XIII(x) or XIII(2)
+      unit_symbol:
+    - condition: analog
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+    - condition: analog_ISB_1.5V
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+    - condition: analog_ISB_2.3V
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+    - condition: analog_ISB_3.9V
+      value: Y(a) or Y(b); XIII(x) or XIII(2)
+      unit_symbol:
+  - attribute: weighing_ranges
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: Single interval
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: Single interval, multi-interval, or multiple range
+      unit_symbol:
+    - condition: analog
+      value: Single interval
+      unit_symbol:
+    - condition: analog_ISB_1.5V
+      value: Single interval
+      unit_symbol:
+    - condition: analog_ISB_2.3V
+      value: Single interval
+      unit_symbol:
+    - condition: analog_ISB_3.9V
+      value: Single interval
+      unit_symbol:
+  - attribute: max_number_of_scale_intervals_single_weighing_range
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: digital_SICSPro
+      value:
+        min:
+        max: 1000000
+      unit_symbol: divisions
+    - condition: analog
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: analog_ISB_1.5V
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: analog_ISB_2.3V
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+    - condition: analog_ISB_3.9V
+      value:
+        min:
+        max: 10000
+      unit_symbol: divisions
+  - attribute: max_number_of_scale_intervals_per_partial_weighing_range_multi_interval
+    axis: load_cell_connection
+    values:
+    - condition: digital_SICSPro
+      value:
+        min:
+        max: 100000
+      unit_symbol: divisions
+  - attribute: max_number_of_weighing_ranges
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: 1
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: 3
+      unit_symbol:
+  - attribute: load_cell_power_supply_voltage
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: 12
+      unit_symbol: V
+    - condition: digital_SICSPro
+      value: 12
+      unit_symbol: V
+  - attribute: load_cell_power_supply_type
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: DC
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: DC
+      unit_symbol:
+  - attribute: fraction_of_maximum_permitted_error
+    axis: load_cell_connection
+    values:
+    - condition: digital_CANbus
+      value: 0
+      unit_symbol:
+    - condition: digital_SICSPro
+      value: 0
+      unit_symbol:
+    - condition: analog
+      value: 0.5
+      unit_symbol:
+    - condition: analog_ISB_1.5V
+      value: 0.5
+      unit_symbol:
+    - condition: analog_ISB_2.3V
+      value: 0.5
+      unit_symbol:
+    - condition: analog_ISB_3.9V
+      value: 0.5
+      unit_symbol:
+  - attribute: minimum_signal_input_voltage
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 0
+      unit_symbol: mV
+    - condition: analog_ISB_1.5V
+      value: 0
+      unit_symbol: mV
+    - condition: analog_ISB_2.3V
+      value: 0
+      unit_symbol: mV
+    - condition: analog_ISB_3.9V
+      value: 0
+      unit_symbol: mV
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 0.3
+      unit_symbol: μV
+    - condition: analog_ISB_1.5V
+      value: 0.25
+      unit_symbol: μV
+    - condition: analog_ISB_2.3V
+      value: 0.25
+      unit_symbol: μV
+    - condition: analog_ISB_3.9V
+      value: 0.25
+      unit_symbol: μV
+  - attribute: load_cell_excitation_voltage
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 5
+      unit_symbol: V
+    - condition: analog_ISB_1.5V
+      value: 1.5
+      unit_symbol: V
+    - condition: analog_ISB_2.3V
+      value: 2.3
+      unit_symbol: V
+    - condition: analog_ISB_3.9V
+      value: 3.9
+      unit_symbol: V
+  - attribute: minimum_load_cell_resistance
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 43
+      unit_symbol: Ω
+    - condition: analog_ISB_1.5V
+      value: 43
+      unit_symbol: Ω
+    - condition: analog_ISB_2.3V
+      value: 87
+      unit_symbol: Ω
+    - condition: analog_ISB_3.9V
+      value: 350
+      unit_symbol: Ω
+  - attribute: maximum_load_cell_resistance
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 1245
+      unit_symbol: Ω
+    - condition: analog_ISB_1.5V
+      value: 1245
+      unit_symbol: Ω
+    - condition: analog_ISB_2.3V
+      value: 1245
+      unit_symbol: Ω
+    - condition: analog_ISB_3.9V
+      value: 1245
+      unit_symbol: Ω
+  - attribute: load_cell_connection
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 6-wire (remote sensing)
+      unit_symbol:
+    - condition: analog_ISB_1.5V
+      value: 6-wire (remote sensing)
+      unit_symbol:
+    - condition: analog_ISB_2.3V
+      value: 6-wire (remote sensing)
+      unit_symbol:
+    - condition: analog_ISB_3.9V
+      value: 6-wire (remote sensing)
+      unit_symbol:
+  - attribute: max_cable_length_per_cross_wire_section
+    axis: load_cell_connection
+    values:
+    - condition: analog
+      value: 1571
+      unit_symbol: m/mm²
+    - condition: analog_ISB_1.5V
+      value: 1571
+      unit_symbol: m/mm²
+    - condition: analog_ISB_2.3V
+      value: 1571
+      unit_symbol: m/mm²
+    - condition: analog_ISB_3.9V
+      value: 1571
+      unit_symbol: m/mm²
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - I
+  - II
+  - III
+  - IIII
+test_reports:
+- id: NMi-2493052-01
+  date: '2021-03-01'
+  pages: 56
+  role: type_evaluation_report
+- id: NMi-2493052-02
+  date: '2021-03-01'
+  pages: 15
+  role: type_evaluation_report
+- id: NMi-2493052-03
+  date: '2021-03-01'
+  pages: 21
+  role: type_evaluation_report
+- id: NMi-2493052-04
+  date: '2021-03-01'
+  pages: 20
+  role: type_evaluation_report
+- id: NMi-2659880-01
+  date: '2021-10-27'
+  pages: 24
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2020-12-24'
+  changes: Initial issue
+- revision: '1'
+  date: '2021-03-02'
+  changes: Type evaluation reports revised because of editorial changes
+- revision: '2'
+  date: '2021-03-04'
+  changes: Editorial change to correct maximum load cell resistance
+- revision: '3'
+  date: '2021-09-15'
+  changes: Editorial change to include DC power supply voltage for all versions
+- revision: '4'
+  date: '2021-10-29'
+  changes: Adding optional ISB (Intrinsic safety barrier)
+components:
+- role: mainboard
+  type_designations:
+  - Analog mainboard
+  characteristics:
+    software_version: 1.xx.yyyy
+- role: mainboard
+  type_designations:
+  - POWERCELL mainboard
+  characteristics:
+    software_version: 1.xx.yyyy
+    interface: CANbus
+- role: mainboard
+  type_designations:
+  - Precision mainboard
+  characteristics:
+    software_version: 1.xx.yyyy
+    interface: SICSPro

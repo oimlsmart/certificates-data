@@ -1,0 +1,228 @@
+_meta:
+  cert_id: 3385
+  num: R076/2006-NL1-2014.06
+  applicant: Precisa Gravimetrics A.G.
+  issuing_year: '2014'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2014-06.pdf
+certificate:
+  number: R76/2006-NL1-14.06
+  scheme: B
+  project_number: SO14200688
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2014-02-17'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V. (OIML Issuing Authority NL1)
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - the Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Precisa Gravimetrics AG
+  address_lines:
+  - Moosmattstrasse 32
+  - CH-8953 Dietikon
+  - Switzerland
+manufacturers:
+- name: Precisa Gravimetrics AG
+  address_lines:
+  - Moosmattstrasse 32
+  - CH-8953 Dietikon
+  - Switzerland
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - LX
+  - LS
+  - LT
+  module_designation:
+characteristics:
+  type_level:
+    maximum_number_of_scale_intervals:
+      value:
+        min:
+        max: 320000
+      unit_symbol: divisions
+      unit_id:
+    maximum_partial_weighing_ranges:
+      value: 1
+      unit_symbol:
+      unit_id:
+    tare:
+      value: T ≤ -Max
+      unit_symbol:
+      unit_id:
+    weighing_ranges:
+      value: Single interval
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    software_version_format_note:
+      value: >-
+        xx can be 00-99 or A-Z and represents the non legally relevant parts; E..D00/E..D01 represent
+        the legal-relevant part of the software
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: software_version_number
+    unit_symbol:
+    values:
+    - model: LX
+      value: xx.xx ExxD01
+    - model: LS
+      value: xx.xx ExxD01
+    - model: LT
+      value: xx.xx ExxD00
+  config_level:
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: "(I)"
+      value:
+        min: 120
+        max: 1220
+      unit_symbol: g
+      unit_id:
+    - condition: "(II)"
+      value:
+        min: 160
+        max: 10200
+      unit_symbol: g
+      unit_id:
+  - attribute: verification_scale_interval
+    axis: accuracy_class
+    values:
+    - condition: "(I)"
+      value:
+        min: 1
+        max:
+      unit_symbol: mg
+      unit_id:
+    - condition: "(II)"
+      value:
+        min: 10
+        max:
+      unit_symbol: mg
+      unit_id:
+  - attribute: temperature_range
+    axis: accuracy_class
+    values:
+    - condition: "(I)"
+      value:
+        min: 15
+        max: 25
+      unit_symbol: "°C"
+      unit_id:
+    - condition: "(II)"
+      value:
+        min: 10
+        max: 30
+      unit_symbol: "°C"
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: B
+  accuracy_classes:
+  - "(I)"
+  - "(II)"
+test_reports:
+- id: NMi-11200389-01
+  date: '2013-08-12'
+  pages: 37
+  role: type_evaluation_report
+- id: NMi-11200389-02
+  date: '2013-08-12'
+  pages: 29
+  role: type_evaluation_report
+- id: NMi-11200389-03
+  date: '2013-08-12'
+  pages: 17
+  role: type_evaluation_report
+- id: NMi-11200389-04
+  date: '2013-08-12'
+  pages: 17
+  role: type_evaluation_report
+model_family:
+  family_name: Serie LX/LS/LT
+  models:
+  - model_id: LX
+  - model_id: LS
+  - model_id: LT
+matrix_tables:
+- name: Characteristics of the non-automatic weighing instrument
+  columns:
+  - characteristic
+  - accuracy_class_I
+  - accuracy_class_II
+  rows:
+  - characteristic: accuracy_class
+    accuracy_class_I: "(I)"
+    accuracy_class_II: "(II)"
+  - characteristic: maximum_capacity
+    accuracy_class_I: 120 g ≤ Max ≤ 1220 g
+    accuracy_class_II: 160 g ≤ Max ≤ 10200 g
+  - characteristic: verification_scale_interval
+    accuracy_class_I: e ≥ 1 mg
+    accuracy_class_II: e ≥ 10 mg
+  - characteristic: maximum_number_of_scale_intervals
+    accuracy_class_I: n ≤ 320000 divisions (per partial weighing range)
+    accuracy_class_II: n ≤ 320000 divisions (per partial weighing range)
+  - characteristic: maximum_partial_weighing_ranges
+    accuracy_class_I: '1'
+    accuracy_class_II: '1'
+  - characteristic: temperature_range
+    accuracy_class_I: "+15 °C / +25 °C"
+    accuracy_class_II: "+10 °C / +30 °C"
+  - characteristic: tare
+    accuracy_class_I: T ≤ -Max
+    accuracy_class_II: T ≤ -Max
+  - characteristic: weighing_ranges
+    accuracy_class_I: Single interval
+    accuracy_class_II: Single interval
+  - characteristic: power_supply_voltage
+    accuracy_class_I: 100 – 240 V AC 50/60 Hz (with external adapter); 12 V DC (supplied by external adapter)
+    accuracy_class_II: 100 – 240 V AC 50/60 Hz (with external adapter); 12 V DC (supplied by external
+      adapter)
+  - characteristic: software_identification_type_lx_ls
+    accuracy_class_I: 'Version number: xx.xx ExxD01'
+    accuracy_class_II: 'Version number: xx.xx ExxD01'
+  - characteristic: software_identification_type_lt
+    accuracy_class_I: 'Version number: xx.xx ExxD00'
+    accuracy_class_II: 'Version number: xx.xx ExxD00'
+  description: >-
+    Values spanning both accuracy-class columns in the source table (colspan) are repeated in both columns.
+    Software version legend: xx can be 00-99 or A-Z and represents the non legally relevant parts; E..D00/E..D01
+    represent the legal-relevant part of the software.
+  footnotes: []

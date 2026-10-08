@@ -1,0 +1,316 @@
+_meta:
+  cert_id: 1357
+  num: R051/1996-DE1-2003.03 Rev. 1
+  applicant: Sartorius A.G.
+  issuing_year: '2005'
+  status: Valid
+  issuer: DE1
+  recommendation: R51
+  edition_year: 1996
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/1996/r051-1996-de1-2003-03-rev1.pdf
+certificate:
+  number: R51/1996-DE1-03.03
+  revision: '1'
+  project_number: R3-0033
+  page_total: 2
+  member_state: Germany
+  date_issued: '2005-02-18'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Roman Schwartz
+applicants:
+- name: Sartorius Aachen GmbH & Co. KG
+  address_lines:
+  - Am Gut Wolf 11
+  - 52070 Aachen
+  - Germany
+manufacturers:
+- name: Sartorius Aachen GmbH & Co. KG
+  address_lines:
+  - Am Gut Wolf 11
+  - 52070 Aachen
+  - Germany
+certified_type:
+  category: Automatic catchweighing instrument
+  type_designations:
+  - EWK xyz
+  - SYNUS xx
+  description: Scale series EWK and SYNUS for static and dynamic weighing
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_load:
+      value:
+        min:
+        max: 60000
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: belt_speed
+    axis: accuracy_class
+    values:
+    - condition: X(1)
+      value:
+        min:
+        max: 1.5
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a)
+      value:
+        min:
+        max: 1
+      unit_symbol: m/s
+      unit_id:
+      footnote_markers: []
+  - attribute: minimum_load
+    axis: accuracy_class
+    values:
+    - condition: X(1)
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a)
+      value: 20e
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: Y(a), postal scales
+      value: 5e
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: number_of_verification_scale_intervals
+    axis: verification_scale_interval_e
+    values:
+    - condition: 0.1 g ≤ e ≤ 2 g
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: 5 g ≤ e ≤ 10 g
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: verification_scale_interval_e
+    axis: number_of_verification_scale_intervals
+    values:
+    - condition: n ≤ 10000
+      value:
+        min: 0.1
+        max: 2
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    - condition: n ≤ 6000
+      value:
+        min: 5
+        max: 10
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R51-1
+  edition: 1996
+  accuracy_classes:
+  - X(1)
+  - Y(a)
+test_reports:
+- id: 1.12-4016060
+  pages: 12
+  role: type_evaluation_report
+- id: 1.12-4016060/1
+  pages: 61
+  role: test_report
+- id: 1.12-4016060/2
+  pages: 15
+  role: test_report
+revision_history:
+- revision: '1'
+  date: '2005-02-18'
+  changes: >-
+    New load cell series WZGP-XX-S added, see Report No. 1.12-4016060 (12 pages) and Test Reports No.
+    1.12-4016060/1 (61 pages) and No. 1.12-4016060/2 (15 pages). The former Report No. 1.14-03000040 (64
+    pages) is substituted by the reports mentioned above. Furthermore, the name of the company 'Dr. Hans
+    Boekels GmbH & Co.' is changed to 'Sartorius Aachen GmbH & Co. KG'.
+model_family:
+  family_name:
+  models:
+  - model_id: EWK xyz
+  - model_id: SYNUS xx
+components:
+- role: electromagnetic force compensation load cell
+  type_designations:
+  - WZ XX,XX M
+  - WZGP-XX-S
+  alternatives: OR
+matrix_tables:
+- name: Technical data of the scale series EWK and SYNUS for static and dynamic weighing
+  columns:
+  - accuracy_class
+  - belt_speed
+  - power_supply_voltage
+  - power_supply_frequency
+  - power_supply_type
+  - temperature_range
+  - number_of_verification_scale_intervals
+  - verification_scale_interval_e
+  - maximum_load
+  - minimum_load
+  - force_compensation_load_cell
+  column_units:
+  -
+  - m/s
+  - V
+  - Hz
+  -
+  - "°C"
+  -
+  - g
+  - g
+  -
+  -
+  rows:
+  - accuracy_class: X(1)
+    belt_speed:
+      value:
+        min:
+        max: 1.5
+      unit_symbol: m/s
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    power_supply_type:
+      value: AC
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    number_of_verification_scale_intervals:
+    - condition: 0.1 g ≤ e ≤ 2 g
+      value:
+        min:
+        max: 10000
+    - condition: 5 g ≤ e ≤ 10 g
+      value:
+        min:
+        max: 6000
+    verification_scale_interval_e:
+    - condition: n ≤ 10000
+      value:
+        min: 0.1
+        max: 2
+      unit_symbol: g
+    - condition: n ≤ 6000
+      value:
+        min: 5
+        max: 10
+      unit_symbol: g
+    maximum_load:
+      value:
+        min:
+        max: 60000
+      unit_symbol: g
+    minimum_load:
+      value:
+        min: 5
+        max:
+      unit_symbol: g
+    force_compensation_load_cell:
+      value: WZ XX,XX M OR WZGP-XX-S
+  - accuracy_class: Y(a)
+    belt_speed:
+      value:
+        min:
+        max: 1
+      unit_symbol: m/s
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+    power_supply_type:
+      value: AC
+    temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+    number_of_verification_scale_intervals:
+    - condition: 0.1 g ≤ e ≤ 2 g
+      value:
+        min:
+        max: 10000
+    - condition: 5 g ≤ e ≤ 10 g
+      value:
+        min:
+        max: 6000
+    verification_scale_interval_e:
+    - condition: n ≤ 10000
+      value:
+        min: 0.1
+        max: 2
+      unit_symbol: g
+    - condition: n ≤ 6000
+      value:
+        min: 5
+        max: 10
+      unit_symbol: g
+    maximum_load:
+      value:
+        min:
+        max: 60000
+      unit_symbol: g
+    minimum_load:
+    - condition: default
+      value: 20e
+    - condition: postal scales
+      value: 5e
+    force_compensation_load_cell:
+      value: WZ XX,XX M OR WZGP-XX-S
+  footnotes: []

@@ -1,0 +1,215 @@
+_meta:
+  cert_id: 3972
+  num: R117/2007-NL1-2015.01 Rev. 2
+  applicant: Emerson Process Management Micro Motion Inc.
+  issuing_year: '2016'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-nl1-2015-01-rev2.pdf
+certificate:
+  number: R117/2007-NL1-15.01
+  scheme: A
+  project_number: SO16201974
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2016-06-07'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V. (OIML Issuing Authority NL1)
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  person_responsible: C. Oosterman
+  person_title: Head Certification Board
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Emerson Process Management Micro Motion Inc.
+  address_lines:
+  - 7070 Winchester Circle
+  - Boulder, CO 80301
+  - United States of America
+manufacturers:
+- name: Emerson Process Management Micro Motion Inc.
+  address_lines:
+  - 7070 Winchester Circle
+  - Boulder, CO 80301
+  - United States of America
+certified_type:
+  category: Density sensor
+  type_designations:
+  - CDM100M
+  - CDM100P
+  module_designation:
+  description: >-
+    A density sensor (a sensor as part of a densitometer). In the metal housing two parallel tubes are
+    mounted which are set into vibrating motion by a drive coil controlled by the transmitter. Two pick-off
+    coils generate signals representative of the frequency of motion of the measurement tubes; the resonance
+    frequency depends, among other things, on the density of the liquid in the tubes. The transmitter
+    can output the resonance frequency directly or via serial communication. Together with the calibration
+    constants, a connected flow computer (optionally with external process pressure and temperature transmitters)
+    can calculate the liquid density under metering conditions and/or under standard conditions.
+characteristics:
+  type_level:
+    density_range:
+      value:
+        min: 630
+        max: 1300
+      unit_symbol: kg/m³
+      unit_id:
+    accuracy_class:
+      value: 0.3
+      unit_symbol:
+      unit_id:
+    maximum_permissible_error:
+      value: 0.8
+      unit_symbol: kg/m³
+      unit_id:
+    environment_class:
+      value: M2/E2
+      unit_symbol:
+      unit_id:
+    ambient_temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    ambient_temperature_conditions:
+      value: condensing; open and closed locations
+      unit_symbol:
+      unit_id:
+    liquid_temperature_range:
+      value:
+        min: -10
+        max: 60
+      unit_symbol: "°C"
+      unit_id:
+    maximum_pressure:
+      value: 100
+      unit_symbol: bar(g)
+      unit_id:
+    viscosity_range:
+      value:
+        min: 0.6
+        max: 8.5
+      unit_symbol: mPa·s
+      unit_id:
+    maximum_flow_rate:
+      value: 10
+      unit_symbol: kg/min
+      unit_id:
+    power_supply_voltage:
+      value: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+    power_supply_source:
+      value: flow computer or external power supply
+      unit_symbol:
+      unit_id:
+  model_level:
+  - attribute: material
+    unit_symbol:
+    values:
+    - model: CDM100M
+      value: Stainless Steel
+    - model: CDM100P
+      value: Nickel alloy C22 (N06022)
+  config_level:
+  - attribute: software_checksum
+    axis: software_version
+    values:
+    - condition: '1.62'
+      value: ED596201
+      unit_symbol:
+    - condition: '1.64'
+      value: 628A6935
+      unit_symbol:
+    - condition: '2.00'
+      value: 8C64F133
+      unit_symbol:
+recommendation:
+  id: R117-1
+  edition: 2007
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+test_reports:
+- id: NMi-12200566-01
+  date: '2015-04-13'
+  pages: 114
+  role: type_evaluation_report
+revision_history:
+- revision: Initial
+  date: '2015-03-17'
+  changes:
+- revision: '1'
+  date: '2015-06-25'
+  changes: Software version update
+- revision: '2'
+  date: '2016-06-07'
+  changes: Software version update of the non legally relevant part. Editorial changes
+model_family:
+  family_name:
+  models:
+  - model_id: CDM100M
+    label: CDM100M (Stainless Steel)
+    attributes:
+      material: Stainless Steel
+  - model_id: CDM100P
+    label: CDM100P (Nickel alloy C22 (N06022))
+    attributes:
+      material: Nickel alloy C22 (N06022)
+components:
+- role: external_power_supply
+  type_designations:
+  - QUINT PS/1AC/24 VDC/3.5
+  alternatives:
+  characteristics:
+    environment_class:
+      value: M2/E2
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+- role: external_power_supply
+  type_designations:
+  - QUINT PS/24 VDC/24 VDC/5
+  alternatives:
+  characteristics:
+    environment_class:
+      value: M2/E2
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value: 24
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:

@@ -1,0 +1,242 @@
+_meta:
+  cert_id: 4361
+  num: R117/2007-FR2-2017.02
+  applicant: ALMA
+  issuing_year: '2017'
+  status: Valid
+  issuer: FR2
+  recommendation: R117
+  edition_year: 2007
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2007/r117-2007-fr2-2017-02.pdf
+certificate:
+  number: R117/2007-FR2-17.02
+  scheme: A
+  page_total: 4
+  member_state: France
+  date_issued: '2017-07-31'
+  oiml_issuer_id: FR2
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Measuring Instruments Division Manager
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+  oiml_issuer_id: FR2
+applicants:
+- name: ALMA
+  address_lines:
+  - 4A Boulevard de la Gare - Porte 1
+  - 94470 BOISSY SAINT LEGER
+  - France
+manufacturers:
+- name: ALMA
+  address_lines:
+  - 4A Boulevard de la Gare - Porte 1
+  - 94470 BOISSY SAINT LEGER
+  - France
+certified_type:
+  category: Indicator
+  type_designations:
+  - MICROCOMPT+
+  module_designation: Not applicable
+  description: >-
+    Electronic calculator-indicator and conversion device ALMA type MICROCOMPT+ designed to be fitted
+    to measuring systems for liquids other than water; available in two versions (flameproof case EJBA
+    version and Rack version). Calculates and displays volume in metering conditions or mass, applies
+    correction coefficients according to flowrate and/or type of liquid, converts volume to base conditions
+    (using a Pt 100 temperature sensor and density acquired prior to metering or via a frequency-output
+    or serial-link density transducer), and computes pure alcoholic strength by volume and pure alcoholic
+    volume of water-alcohol mixtures per OIML R22. DUAL version operates with two measuring devices simultaneously.
+    DC version is designed for interruptible measuring systems of accuracy class 0.5 or above; AC versions
+    for interruptible or non-interruptible systems of accuracy class 0.3 or above. Conversion formulas
+    per API-ASTM-IP tables 53 and 54 and French standards NF M 08-009 and NF M 08-017. Fulfills OIML R117-1
+    (2007) and R117-2 / R117-3 (2014).
+characteristics:
+  type_level:
+    volume_scale_intervals:
+      value: 0.01 m³, 0.1 m³, 1 m³, 0.001 L, 0.01 L, 0.1 L, 1 L
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mass_scale_intervals:
+      value: 0.1 kg, 1 kg, 0.1 t, 1 t
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_indication_scale_intervals:
+      value: 999999
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_scale_intervals:
+      value: 0.1
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    density_scale_intervals:
+      value: 0.1
+      unit_symbol: kg/m³
+      unit_id:
+      footnote_markers: []
+    maximum_metering_frequency:
+      value: 500
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+    water_alcohol_liquid_temperature_range:
+      value:
+        min: 0
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    software_version:
+      value: 3.xx.yy
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: mechanical_environment_class
+    unit_symbol:
+    values:
+    - model: EJBA version
+      value: M2
+      footnote_markers: []
+    - model: Rack version
+      value: M1
+      footnote_markers: []
+  - attribute: electromagnetic_environment_class
+    unit_symbol:
+    values:
+    - model: EJBA version
+      value: E3
+      footnote_markers: []
+    - model: Rack version
+      value: E2
+      footnote_markers: []
+  - attribute: operating_temperature_range
+    unit_symbol: "°C"
+    values:
+    - model: EJBA version
+      value:
+        min: -25
+        max: 55
+      footnote_markers: []
+    - model: Rack version
+      value:
+        min: -10
+        max: 40
+      footnote_markers: []
+  - attribute: humidity_and_installation
+    unit_symbol:
+    values:
+    - model: EJBA version
+      value: Condensing humidity and installation in open environment
+      footnote_markers: []
+    - model: Rack version
+      value: Non-condensing humidity and installation in closed environment
+      footnote_markers: []
+  config_level:
+  - attribute: minimum_measured_quantity_scale_intervals
+    axis: accuracy_class_of_measuring_system
+    values:
+    - condition: class 0.3 measuring system
+      value:
+        min: 500
+        max:
+      unit_symbol:
+      footnote_markers: []
+    - condition: class 0.5 measuring system
+      value:
+        min: 200
+        max:
+      unit_symbol:
+      footnote_markers: []
+    - condition: class 1 measuring system
+      value:
+        min: 100
+        max:
+      unit_symbol:
+      footnote_markers: []
+  - attribute: applicable_measuring_system_accuracy_class
+    axis: power_supply_version
+    values:
+    - condition: DC version (interruptible measuring systems only)
+      value: 0.5 or above
+      unit_symbol:
+      footnote_markers: []
+    - condition: AC versions (interruptible or non-interruptible measuring systems)
+      value: 0.3 or above
+      unit_symbol:
+      footnote_markers: []
+  - attribute: water_alcohol_liquid_density_range
+    axis: liquid_temperature_range
+    values:
+    - condition: liquid temperature 11 °C to +40 °C
+      value:
+        min: 771.93
+        max: 999.6
+      unit_symbol: kg/m³
+      footnote_markers: []
+    - condition: liquid temperature 0 °C to +11 °C
+      value:
+        min: 796.91
+        max: 968.8
+      unit_symbol: kg/m³
+      footnote_markers: []
+recommendation:
+  id: R117
+  edition: 2007
+  scheme: A
+  accuracy_classes:
+  - '0.3'
+  - '0.5'
+  - '1'
+test_reports:
+- id: G030252 CQPE/3
+  role: test_report
+- id: G030252 CQPE/4
+  role: test_report
+- id: G030252 CQPE/7
+  role: test_report
+- id: F040746 CQPE/3
+  role: test_report
+- id: F040746 CQPE/6
+  role: test_report
+- id: F040746 CQPE/7
+  role: test_report
+- id: F040746 CQPE/8
+  role: test_report
+- id: F040746 CQPE/1
+  role: test_report
+- id: F040746 CQPE/2
+  role: test_report
+- id: F040746 CQPE/4
+  role: test_report
+- id: G030252 CQPE/1
+  role: test_report
+- id: P167462 DE/3
+  role: test_report
+- id: P167462 DE/4
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2017-08-01'
+  changes: Creation
+model_family:
+  family_name: MICROCOMPT+
+  models:
+  - model_id: EJBA version
+    label: Version with a flameproof case (EJBA version)
+    attributes:
+      case: flameproof
+  - model_id: Rack version
+    label: Version with a rack case (Rack version)
+    attributes:
+      case: rack

@@ -1,0 +1,302 @@
+_meta:
+  cert_id: 2362
+  num: R049/2006-GB1-2008.01 Rev. 1
+  applicant: Elster Metering Ltd
+  issuing_year: '2009'
+  status: Valid
+  issuer: GB1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-gb1-2008-01-rev1.pdf
+certificate:
+  number: R49/2006-GB1-08.01
+  scheme: B
+  project_number: T1151/0001
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2009-01-22'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Weights and Measures Laboratory
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  oiml_issuer_id: GB1
+applicants:
+- name: Elster Metering Limited
+  address_lines:
+  - 130 Camford Way
+  - Sundon Park
+  - Luton, Bedfordshire
+  - LU3 3AN
+  - United Kingdom
+manufacturers:
+- name: Elster Metering Limited
+  address_lines:
+  - 130 Camford Way
+  - Sundon Park
+  - Luton, Bedfordshire
+  - LU3 3AN
+  - United Kingdom
+certified_type:
+  category: Water meter
+  type_designations:
+  - V100
+  - V110
+  - V200
+  - V210
+  module_designation: Not applicable
+  description: >-
+    Family of cold-water meters utilising a common, volumetric measuring element, with a nominal capacity
+    of 13.2 revs/litre and having a rated permanent flowrate Q3 of 6.3 m³/h.
+characteristics:
+  type_level:
+    nominal_capacity:
+      value: 13.2
+      unit_symbol: revs/litre
+      unit_id:
+      footnote_markers: []
+    rated_permanent_flowrate_q3:
+      value: 6.3
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    overload_flowrate_q4:
+      value: 7.875
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    q2_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    measuring_principle:
+      value: Semi-positive displacement meter
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    environmental_class:
+      value: T30 (MAT)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment:
+      value: N/A
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_temperature:
+      value: 30
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure_bar:
+      value: 16
+      unit_symbol: bar
+      unit_id:
+      footnote_markers: []
+    orientation_requirements:
+      value: None
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    connection_type:
+      value: flange, screw thread, concentric manifold
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_inlet_pipe:
+      value: non specified
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_outlet_pipe:
+      value: non specified
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    flow_conditioner:
+      value: This type of meter is not susceptible to flow disturbances
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    mounting_orientation:
+      value: Can be installed in any position
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: optional_sensor_equipment
+    unit_symbol:
+    values:
+    - model: V100
+      value: Reed switch sensor (optional)
+    - model: V110
+      value: Reed switch sensor (optional)
+    - model: V200
+      value: Inductive pointer and sensor unit (optional) or Reed switch sensor (optional)
+    - model: V210
+      value: Inductive pointer and sensor unit (optional) or Reed switch sensor (optional)
+  config_level:
+  - attribute: q3_q1_ratio
+    axis: q3_q1_ratio
+    values:
+    - condition: R=315
+      value: 315
+    - condition: R=250
+      value: 250
+    - condition: R=200
+      value: 200
+    - condition: R=160
+      value: 160
+  - attribute: minimum_flowrate_q1
+    axis: q3_q1_ratio
+    values:
+    - condition: R=315
+      value: 0.02
+      unit_symbol: m³/h
+    - condition: R=250
+      value: 0.0252
+      unit_symbol: m³/h
+    - condition: R=200
+      value: 0.0315
+      unit_symbol: m³/h
+    - condition: R=160
+      value: 0.039375
+      unit_symbol: m³/h
+  - attribute: transitional_flowrate_q2
+    axis: q3_q1_ratio
+    values:
+    - condition: R=315
+      value: 0.032
+      unit_symbol: m³/h
+    - condition: R=250
+      value: 0.04032
+      unit_symbol: m³/h
+    - condition: R=200
+      value: 0.0504
+      unit_symbol: m³/h
+    - condition: R=160
+      value: 0.063
+      unit_symbol: m³/h
+recommendation:
+  id: R49
+  edition: 2006
+  amendment:
+  scheme: B
+  accuracy_classes:
+  - 2
+test_reports:
+- id: M049205-R49-d
+  pages: 66
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2008-11-24'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2009-01-22'
+  changes: >-
+    Revision 1 issued. Meter model V210 added. Section 3.1 updated to cover all values of R for each meter
+    model. Customer address updated. Certificate history added.
+model_family:
+  family_name:
+  models:
+  - model_id: V100
+    label: V100
+  - model_id: V110
+    label: V110
+  - model_id: V200
+    label: V200
+  - model_id: V210
+    label: V210
+matrix_tables:
+- name: Model availability by Q3/Q1 ratio
+  columns:
+  - model
+  - '315'
+  - '250'
+  - '200'
+  - '160'
+  rows:
+  - model: V100
+    '315': true
+    '250': true
+    '200': true
+    '160': true
+  - model: V110
+    '315': true
+    '250': true
+    '200': true
+    '160': true
+  - model: V200
+    '315': true
+    '250': true
+    '200': true
+    '160': true
+  - model: V210
+    '315': true
+    '250': true
+    '200': true
+    '160': true
+  description: Tick marks indicate that each meter model is certified for each Q3/Q1 (R) ratio.
+  footnotes: []
+- name: Flow characteristics by Q3/Q1 ratio
+  columns:
+  - q3_q1_ratio
+  - q2_q1
+  - q1_minimum_flowrate
+  - q2_transitional_flowrate
+  - q3_permanent_flowrate
+  - q4_overload_flowrate
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - q3_q1_ratio: 315
+    q2_q1: 1.6
+    q1_minimum_flowrate: 0.02
+    q2_transitional_flowrate: 0.032
+    q3_permanent_flowrate: 6.3
+    q4_overload_flowrate: 7.875
+  - q3_q1_ratio: 250
+    q2_q1: 1.6
+    q1_minimum_flowrate: 0.0252
+    q2_transitional_flowrate: 0.04032
+    q3_permanent_flowrate: 6.3
+    q4_overload_flowrate: 7.875
+  - q3_q1_ratio: 200
+    q2_q1: 1.6
+    q1_minimum_flowrate: 0.0315
+    q2_transitional_flowrate: 0.0504
+    q3_permanent_flowrate: 6.3
+    q4_overload_flowrate: 7.875
+  - q3_q1_ratio: 160
+    q2_q1: 1.6
+    q1_minimum_flowrate: 0.039375
+    q2_transitional_flowrate: 0.063
+    q3_permanent_flowrate: 6.3
+    q4_overload_flowrate: 7.875
+  description: Flowrate characteristics for each certified value of the ratio R = Q3/Q1.
+  footnotes: []

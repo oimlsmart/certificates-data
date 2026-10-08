@@ -1,0 +1,235 @@
+_meta:
+  cert_id: 2753
+  num: R076/2006-GB1-2012.02
+  applicant: Societa Cooperativa Bilanciai Campogalliano a.r.l
+  issuing_year: '2012'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2012-02.pdf
+certificate:
+  number: R76/2006-GB1-12.02
+  scheme: B
+  project_number: T1138/0018
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2012-03-02'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+  phone: "+44 (0)20 8943 7272"
+  website: www.bis.gov.uk/nmo
+applicants:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+manufacturers:
+- name: Società Cooperativa Bilanciai a.r.l.
+  address_lines:
+  - Via S. Ferrari No 16
+  - 41011 Campogalliano
+  - Modena
+  - Italy
+certified_type:
+  category: Indicator
+  type_designations:
+  - DD1050
+  - DD1050i
+  - DD2050
+  description: >-
+    Indicating devices designed to be used as part of a Class III or IIII non-automatic weighing instrument.
+    They operate as single interval, multi-interval or multi-range, are self-indicating and mains or DC-powered.
+    Devices include: initial zero setting, semi-automatic zero setting, zero tracking, automatic zero
+    setting (negative load indications for more than 5 s), semi-automatic subtractive tare weighing, determination
+    and indication of stability of equilibrium, zero indicator, preset tare, MPP Alibi storage device,
+    support for up to 4 load receptors and load receptor summation, weighbridge modes (AdR/RDA, RcD, RpD/RCP),
+    identification and recognition of A/D converters and digital load cells, and weight data transmission
+    in open networks or wireless transmission in protected mode complying with Welmec 7.2. Optional connection
+    to an external PC for printing of measurement data (integrated printer on the DD2050). Sealing: physical
+    via protected switch, or software via password protection with a non-resettable SW seal counter.
+characteristics:
+  type_level:
+    power_supply_type:
+      value: AC or DC
+      unit_symbol:
+      unit_id:
+    power_supply_voltage_ac:
+      value:
+        min: 110
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_voltage_dc:
+      value: 12
+      unit_symbol: V
+      unit_id:
+    display_size:
+      value: 10.4
+      unit_symbol: in
+      unit_id:
+    maximum_ad_conversion_modules:
+      value: 4
+      unit_symbol:
+      unit_id:
+    maximum_tare:
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    minimum_load_cell_impedance:
+      value: 29
+      unit_symbol: Ω
+      unit_id:
+    maximum_load_cell_impedance:
+      value: 1100
+      unit_symbol: Ω
+      unit_id:
+    minimum_input_voltage_per_scale_interval:
+      value: 0.6
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 35
+      unit_symbol: mV
+      unit_id:
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    analogue_load_cell_connection:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    max_load_cell_cable_length_per_cross_section:
+      value: 2000
+      unit_symbol: m/mm²
+      unit_id:
+    interfaces:
+      value: >-
+        RS232/422/485, Ethernet, USB, 0-10 V / 0-20 mA analogue output, digital I/O, Profibus, USB host,
+        SD card, audio
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy class / range configuration
+    values:
+    - condition: Class III, single interval
+      value: 6000
+      unit_symbol:
+      unit_id:
+    - condition: Class III, multi-interval/range (2 partial ranges)
+      value: 4000
+      unit_symbol:
+      unit_id:
+    - condition: Class III, multi-interval/range (3 partial ranges)
+      value: 3000
+      unit_symbol:
+      unit_id:
+    - condition: Class IIII, single and multi-interval/range (2 and 3 partial ranges)
+      value: 1000
+      unit_symbol:
+      unit_id:
+  - attribute: maximum_preset_tare
+    axis: range configuration
+    values:
+    - condition: single and multi-range
+      value: "-Max"
+      unit_symbol:
+      unit_id:
+    - condition: multi-interval
+      value: "-Max₁"
+      unit_symbol:
+      unit_id:
+  - attribute: load_cell_excitation_voltage
+    axis: load cell type
+    values:
+    - condition: analogue load cells
+      value: 10
+      unit_symbol: V
+      unit_id:
+    - condition: digital load cells
+      value:
+        min: 10
+        max: 18
+      unit_symbol: V
+      unit_id:
+  - attribute: apportionment_factor_pind
+    axis: load cell type
+    values:
+    - condition: analogue load cells
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    - condition: digital load cells (CPD-M)
+      value: 0
+      unit_symbol:
+      unit_id:
+    - condition: analogue load cells with DILINK junction box
+      value: 0
+      unit_symbol:
+      unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: B
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P00780
+  pages: 13
+  role: type_evaluation_report
+revision_history:
+- revision: R76/2006-GB1-12.02
+  date: '2012-03-02'
+  changes: Certificate first issued
+model_family:
+  family_name:
+  models:
+  - model_id: DD1050
+    attributes:
+      enclosure: Stainless steel and ABS
+  - model_id: DD1050i
+    attributes:
+      enclosure: Stainless steel
+      enclosed_external_power_supply: true
+  - model_id: DD2050
+    attributes:
+      enclosure: Stainless steel
+      integrated_printer: true
+components:
+- role: compatible digital load cell
+  type_designations:
+  - CPD-M
+  alternatives:
+  characteristics: {}
+- role: compatible smart junction box
+  type_designations:
+  - DILINK
+  alternatives:
+  characteristics: {}
+footnotes: []

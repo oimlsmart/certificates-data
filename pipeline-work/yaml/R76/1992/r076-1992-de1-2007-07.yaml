@@ -1,0 +1,168 @@
+_meta:
+  cert_id: 1909
+  num: R076/1992-DE1-2007.07
+  applicant: Schenk Process GmbH
+  issuing_year: '2007'
+  status: Valid
+  issuer: DE1
+  recommendation: R76
+  edition_year: 1992
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/1992/r076-1992-de1-2007-07.pdf
+certificate:
+  number: R76/1992-DE1-07.07
+  scheme: A
+  page_total: 2
+  member_state: Germany
+  date_issued: '2007-08-20'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Regierungsdirektor
+applicants:
+- name: Schenck Process GmbH
+  address_lines:
+  - Pallaswiesenstr. 100
+  - 64293 Darmstadt
+manufacturers:
+- name: Schenck Process GmbH
+  address_lines:
+  - Pallaswiesenstr. 100
+  - 64293 Darmstadt
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - DISOMAT Tersus
+  module_designation: Not applicable
+  description: >-
+    Non-automatic electromechanical weighing instrument with or without lever works. Designed as weighbridge,
+    road vehicle scale, rail-weighbridge, hopper scale, crane scale, overhead scale track as well as mobile
+    instrument in conveyor systems. The weighing instrument is equipped with a lever system or directly
+    introduces the force into one or more load cells.
+characteristics:
+  type_level:
+    tare_balancing_range:
+      value: 100
+      unit_symbol: "%"
+    preset_tare_range:
+      value: 100
+      unit_symbol: "%"
+      footnote_markers:
+      - 1)
+      - 2)
+    temperature_range:
+      value:
+        min: -30
+        max: 40
+      unit_symbol: "°C"
+      footnote_markers:
+      - 4)
+  config_level:
+  - attribute: maximum_capacity
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 2 kg ... 600 t
+    - condition: IIII
+      value: 2 kg ... 600 t
+  - attribute: max_number_of_verification_scale_intervals_n
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 8000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+    - condition: IIII
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 1)
+  - attribute: partial_range_max_intervals_ni
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 4000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+    - condition: IIII
+      value: 1000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+  - attribute: max_or_maxr_over_e1
+    axis: accuracy_class
+    values:
+    - condition: III
+      value: 15000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+      - 3)
+    - condition: IIII
+      value: 5000
+      unit_symbol:
+      footnote_markers:
+      - 2)
+      - 3)
+recommendation:
+  id: R76
+  edition: 1992
+  amendment: 1 (1994)
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: 1.12-4030529
+  pages: 13
+  role: type_evaluation_report
+- id: 1.12-4030529/1
+  pages: 42
+  role: test_report
+footnotes:
+- marker: 1)
+  text: this applies to each range of single- and multiple range instruments
+- marker: 2)
+  text: this applies only to multi-interval instruments
+- marker: 3)
+  text: this applies only to multiple range instruments
+- marker: 4)
+  text: in case the load cells are suitable for this temperature range
+matrix_tables:
+- name: Table 1 - Limiting values for weighing ranges
+  columns:
+  - attribute
+  - III
+  - IIII
+  rows:
+  - attribute: Max (maximum capacity)
+    III: 2 kg ... 600 t
+    IIII: 2 kg ... 600 t
+  - attribute: n ≤ 1)
+    III: 8000
+    IIII: 1000
+  - attribute: partial range n_i ≤ 2)
+    III: 4000
+    IIII: 1000
+  - attribute: Max / e1 ≤ 2) or Max_r / e1 ≤ 3)
+    III: 15000
+    IIII: 5000
+  - attribute: tare-balancing range
+    III: 100 % of Max
+    IIII: 100 % of Max
+  - attribute: preset tare range
+    III: 100 % of Max 1); 100 % of Max1 2)
+    IIII: 100 % of Max 1); 100 % of Max1 2)
+  - attribute: temperature range
+    III: "-30 °C / +40 °C 4)"
+    IIII: "-30 °C / +40 °C 4)"
+  description: >-
+    The weighing ranges comprising Max, verification scale intervals, number of verification scale intervals
+    and scale intervals may be selected considering the limiting values in table 1. Symbol definitions:
+    n_i = Number of scale intervals for each partial weighing range; e1 = Scale interval of the lowest
+    partial weighing range; Max_r = Max of the largest range for a multiple weighing range instrument.

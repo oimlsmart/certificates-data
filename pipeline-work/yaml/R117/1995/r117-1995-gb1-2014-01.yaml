@@ -1,0 +1,305 @@
+_meta:
+  cert_id: 3466
+  num: R117/1995-GB1-2014.01
+  applicant: Gilbarco Veeder Root
+  issuing_year: '2014'
+  status: Valid
+  issuer: GB1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-gb1-2014-01.pdf
+certificate:
+  number: R117/1995-GB1-14.01
+  scheme: A
+  project_number: TS0901/0048
+  page_total: 3
+  member_state: United Kingdom
+  date_issued: '2014-07-02'
+  oiml_issuer_id: GB1
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+  oiml_issuer_id: GB1
+applicants:
+- name: Gilbarco Veeder-Root
+  address_lines:
+  - Crompton Close
+  - Basildon
+  - Essex
+  - United Kingdom
+manufacturers:
+- name: Gilbarco Inc.
+  address_lines:
+  - 7300 W.Friendly Ave.
+  - Greensboro
+  - NC 27420
+  - USA
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - Encore
+  module_designation: Not applicable
+  description: >-
+    Liquids other than water dispenser, Encore family. Each hydraulic circuit consists of one or two meters,
+    types V, V+, C, or C+; a GPU90 or GPU140 pump and gas separator, except for use in pressurized (STP)
+    systems; and one or two delivery hose circuits. Up to four hydraulic circuits are housed in a single
+    enclosure with one common calculator. Optional features and functions: communications (remote automation),
+    vapour recovery systems, delivery speed selection either by pushbutton or nozzle selection, electronic
+    or electromechanical totalizers, preset, keypad, pushbutton options, slave displays and/or master-satellite
+    operation, additional displays with alternative number of display digits and display size (minimum
+    6 digits money and volume, 4 digits unit price, and minimum height 25 mm).
+characteristics:
+  type_level:
+    mechanical_environment_class:
+      value: M2
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment_class:
+      value: E1
+      unit_symbol:
+      unit_id:
+    hydraulic_circuits_per_enclosure:
+      value:
+        min: 1
+        max: 4
+      unit_symbol:
+      unit_id:
+    maximum_volume_indication:
+      value: 9999999 (floating decimal)
+      unit_symbol: l
+      unit_id:
+    maximum_unit_price:
+      value: 999999 (floating decimal)
+      unit_symbol:
+      unit_id:
+    maximum_price_to_pay:
+      value: 9999999 (floating decimal)
+      unit_symbol:
+      unit_id:
+    minimum_display_digits_money:
+      value: 6
+      unit_symbol:
+      unit_id:
+    minimum_display_digits_volume:
+      value: 6
+      unit_symbol:
+      unit_id:
+    minimum_display_digits_unit_price:
+      value: 4
+      unit_symbol:
+      unit_id:
+    minimum_display_digit_height:
+      value:
+        min: 25
+        max:
+      unit_symbol: mm
+      unit_id:
+  model_level:
+  - attribute: maximum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: 40 l/min
+      value: 40
+    - model: 80 l/min
+      value: 80
+    - model: 130 l/min
+      value: 130
+  - attribute: minimum_flowrate
+    unit_symbol: l/min
+    values:
+    - model: 40 l/min
+      value: 4
+    - model: 80 l/min
+      value: 4
+    - model: 130 l/min
+      value: 8
+  - attribute: minimum_measured_quantity
+    unit_symbol: l
+    values:
+    - model: 40 l/min
+      value: 2 or 5
+    - model: 80 l/min
+      value: 2, 5 or 10
+    - model: 130 l/min
+      value: 2, 5 or 10
+  - attribute: liquids
+    unit_symbol:
+    values:
+    - model: 40 l/min
+      value: >-
+        Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+        (up to 100%)
+    - model: 80 l/min
+      value: >-
+        Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+        (up to 100%)
+    - model: 130 l/min
+      value: Diesel, Biodiesel (up to 100%)
+  config_level:
+  - attribute: temperature_range
+    axis: meter and calculator configuration
+    values:
+    - condition: Low temperature version of C+ meter and heater added to the calculator enclosure
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+recommendation:
+  id: R117
+  edition: 1995
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: P01307
+  role: evaluation_report
+revision_history:
+- revision: '14.01'
+  date: '2014-07-02'
+  changes: Certificate first issued
+model_family:
+  family_name: Encore
+  models:
+  - model_id: 40 l/min
+  - model_id: 80 l/min
+  - model_id: 130 l/min
+components:
+- role: Meter
+  type_designations:
+  - V
+  - V+
+  - C
+  - C+
+  alternatives: OR
+  characteristics:
+    manufacturer: Gilbarco Veeder-Root
+    quantity_per_hydraulic_circuit:
+      min: 1
+      max: 2
+    evaluation_certificates:
+      V: GB-1344
+      V+: GB-1344
+      C: GB-1359
+      C+: GB-1359
+- role: Pump and gas separator
+  type_designations:
+  - GPU90
+  - GPU140
+  alternatives: OR
+  characteristics:
+    manufacturer: Gilbarco Veeder-Root
+    note: Except for use in pressurized (STP) systems
+    evaluation_certificates:
+      GPU90: GB-1348
+      GPU140: GB-1350
+- role: Delivery hose circuit
+  type_designations: []
+  alternatives:
+  characteristics:
+    quantity_per_hydraulic_circuit:
+      min: 1
+      max: 2
+- role: Electronic calculator
+  type_designations:
+  - Sandpiper-GSO
+  - Sandpiper
+  alternatives: OR
+  characteristics:
+    manufacturer: Gilbarco Veeder-Root
+    quantity_per_enclosure: 1
+    evaluation_certificates:
+      Sandpiper-GSO: GB-1535
+      Sandpiper: GB-1487
+footnotes: []
+matrix_tables:
+- name: Prime Component Summary
+  columns:
+  - manufacturer
+  - type
+  - evaluation_certificate
+  column_units:
+  -
+  -
+  -
+  rows:
+  - component_group: Meters
+    manufacturer: Gilbarco Veeder-Root
+    type: V, V+ meter
+    evaluation_certificate: GB-1344
+  - component_group: Meters
+    manufacturer: Gilbarco Veeder-Root
+    type: C, C+ meter
+    evaluation_certificate: GB-1359
+  - component_group: Gas Separators
+    manufacturer: Gilbarco Veeder-Root
+    type: GPU90
+    evaluation_certificate: GB-1348
+  - component_group: Gas Separators
+    manufacturer: Gilbarco Veeder-Root
+    type: GPU140
+    evaluation_certificate: GB-1350
+  - component_group: Electronic Calculators
+    manufacturer: Gilbarco Veeder-Root
+    type: Sandpiper-GSO
+    evaluation_certificate: GB-1535
+  - component_group: Electronic Calculators
+    manufacturer: Gilbarco Veeder-Root
+    type: Sandpiper
+    evaluation_certificate: GB-1487
+  description: 'Table 1: Prime Component Summary grouped into meters, gas separators and electronic calculators.'
+  footnotes: []
+- name: Flowrate characteristics
+  columns:
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  - maximum_volume_indication
+  - maximum_unit_price
+  - maximum_price_to_pay
+  - liquids
+  column_units:
+  - l/min
+  - l/min
+  - l
+  - l
+  -
+  -
+  -
+  rows:
+  - maximum_flowrate: 40
+    minimum_flowrate: 4
+    minimum_measured_quantity: 2 or 5
+    maximum_volume_indication: 9999999 (floating decimal)
+    maximum_unit_price: 999999 (floating decimal)
+    maximum_price_to_pay: 9999999 (floating decimal)
+    liquids: >-
+      Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+      (up to 100%)
+  - maximum_flowrate: 80
+    minimum_flowrate: 4
+    minimum_measured_quantity: 2, 5 or 10
+    maximum_volume_indication: 9999999 (floating decimal)
+    maximum_unit_price: 999999 (floating decimal)
+    maximum_price_to_pay: 9999999 (floating decimal)
+    liquids: >-
+      Gasoline, Gasoline with up to 86% ethanol or MTBE, Gasoline with up to 5% methanol, Diesel, Biodiesel
+      (up to 100%)
+  - maximum_flowrate: 130
+    minimum_flowrate: 8
+    minimum_measured_quantity: 2, 5 or 10
+    maximum_volume_indication: 9999999 (floating decimal)
+    maximum_unit_price: 999999 (floating decimal)
+    maximum_price_to_pay: 9999999 (floating decimal)
+    liquids: Diesel, Biodiesel (up to 100%)
+  description: Characteristics per maximum flowrate variant of the Encore family.
+  footnotes: []

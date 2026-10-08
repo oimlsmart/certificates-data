@@ -1,0 +1,342 @@
+_meta:
+  cert_id: 1587
+  num: R117/1995-CZ1-2005.02
+  applicant: ADAMOV - SYSTEMS, a.s.
+  issuing_year: '2005'
+  status: Valid
+  issuer: CZ1
+  recommendation: R117
+  edition_year: 1995
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/1995/r117-1995-cz1-2005-02.pdf
+certificate:
+  number: R117/1995-CZ-05.02
+  scheme: A
+  page_total: 3
+  member_state: Czech Republic
+  date_issued: '2005-12-12'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+  person_title: The Issuing Authority
+applicants:
+- name: ADAMOV - SYSTEMS, a.s.
+  address_lines:
+  - Mírová 2
+  - 679 04 Adamov
+  - Czech Republic
+manufacturers:
+- name: ADAMOV - SYSTEMS, a.s.
+  address_lines:
+  - Mírová 2
+  - 679 04 Adamov
+  - Czech Republic
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - V-line 899x.xxx
+  - V-line 46xx.xxx
+  - V-line 47xx.xxx
+  module_designation:
+  description: >-
+    The V-line 899x.xxx, V-line 46xx.xxx and V-line 47xx.xxx fuel dispensers for motor vehicles consist
+    of a P64x.50 or P64x.100 pumping unit with gas elimination device, M403.25P, M403.25EP, M403.32P or
+    M403.32EP meter, ADPxxx/T electronic calculator with adjustment device, ME 01-05 measuring transducer
+    (pulser), electromagnetic valve and housing with delivery nozzle. A sight glass is installed for Qmax
+    > 60 L/min. The fuel dispensers can be equipped with a vapour recovery system; there is a version
+    for installation in centrally pumped systems and a satellite delivery point can be present. The ADPxxx/T
+    electronic calculator has an ATC conversion function converting measurement data to reference conditions
+    (volume at 15 °C) and requires a Pt100 temperature transducer of class B minimum according to EN IEC
+    751.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price:
+      value: 9999
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_unit_price_digits:
+      value: 4
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay:
+      value: 999999
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_price_to_pay_digits:
+      value: 6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_flowrate
+    unit_symbol: dm³/min
+    values:
+    - model: config-1
+      value:
+        min: 40
+        max: 60
+    - model: config-2
+      value:
+        min: 70
+        max: 80
+    - model: config-3
+      value:
+        min: 100
+        max: 150
+  - attribute: minimum_flowrate
+    unit_symbol: dm³/min
+    values:
+    - model: config-1
+      value: 4
+    - model: config-2
+      value: 5
+    - model: config-3
+      value: 10
+  - attribute: minimum_measured_quantity
+    unit_symbol: dm³
+    values:
+    - model: config-1
+      value: 2
+    - model: config-2
+      value: 5
+    - model: config-3
+      value: 10
+  config_level:
+  - attribute: pumping_units
+    axis: subsystem
+    values:
+    - condition: Qmax 60 L/min subsystem
+      value: 1 x P64x.50
+      unit_symbol:
+    - condition: Qmax 80 L/min subsystem
+      value: 1 x P64x.100
+      unit_symbol:
+    - condition: Qmax 150 L/min subsystem
+      value: 2 x P64x.100
+      unit_symbol:
+  - attribute: meters
+    axis: subsystem
+    values:
+    - condition: Qmax 60 L/min subsystem
+      value: 2 x M403.25EP
+      unit_symbol:
+    - condition: Qmax 80 L/min subsystem
+      value: 1 x M403.25EP
+      unit_symbol:
+    - condition: Qmax 150 L/min subsystem
+      value: 1 x M403.32EP
+      unit_symbol:
+  - attribute: number_of_nozzles
+    axis: subsystem
+    values:
+    - condition: Qmax 60 L/min subsystem
+      value: 2
+      unit_symbol:
+    - condition: Qmax 80 L/min subsystem
+      value: 1
+      unit_symbol:
+    - condition: Qmax 150 L/min subsystem
+      value: 1
+      unit_symbol:
+recommendation:
+  id: R117
+  edition: 1995
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+test_reports:
+- id: 6031-PZ-P003-05
+  pages: 62
+  role: test_report
+model_family:
+  family_name: V-line
+  models:
+  - model_id: config-1
+    label: Dispenser with P640.50/P641.50 pumping unit and M403.25P/M403.25EP meter
+    attributes:
+      liquids:
+      - Gasoline
+      - Diesel
+  - model_id: config-2
+    label: Dispenser with P640.100/P641.100 pumping unit and M403.25P/M403.25EP meter
+    attributes:
+      liquids:
+      - Diesel
+  - model_id: config-3
+    label: Dispenser with 2 x P640.100/2 x P641.100 pumping units and M403.32P/M403.32EP meter
+    attributes:
+      liquids:
+      - Diesel
+components:
+- role: Meter
+  type_designations:
+  - M403.25P
+  - M403.25EP
+  - M403.32P
+  - M403.32EP
+  alternatives: OR
+  characteristics:
+    model_level:
+    - attribute: maximum_flowrate
+      unit_symbol: L/min
+      values:
+      - model: M403.25P
+        value: 120
+      - model: M403.25EP
+        value: 120
+      - model: M403.32P
+        value: 150
+      - model: M403.32EP
+        value: 150
+    - attribute: adjustment_device_type
+      values:
+      - model: M403.25P
+        value: mechanical
+      - model: M403.25EP
+        value: electronic only
+      - model: M403.32P
+        value: mechanical
+      - model: M403.32EP
+        value: electronic only
+- role: Pumping unit
+  type_designations:
+  - P640.50
+  - P641.50
+  - P640.100
+  - P641.100
+  alternatives: OR
+  characteristics:
+    model_level:
+    - attribute: maximum_flowrate
+      unit_symbol: L/min
+      values:
+      - model: P640.50
+        value: 60
+      - model: P641.50
+        value: 60
+      - model: P640.100
+        value: 80
+      - model: P641.100
+        value: 80
+- role: Electronic calculator with adjustment device
+  type_designations:
+  - ADP1/T
+  - ADP2/T
+  - ADPMPDx/T
+  alternatives: OR
+  characteristics:
+    model_level:
+    - attribute: maximum_number_of_controlled_subsystems
+      values:
+      - model: ADP1/T
+        value: 1
+      - model: ADP2/T
+        value: 2
+      - model: ADPMPDx/T
+        value: 10
+    type_level:
+      atc_reference_temperature:
+        value: 15
+        unit_symbol: "°C"
+        unit_id:
+        footnote_markers: []
+      required_temperature_transducer:
+        value: Pt100, accuracy class B minimum according to EN IEC 751
+        unit_symbol:
+        unit_id:
+        footnote_markers: []
+- role: Measuring transducer (pulser)
+  type_designations:
+  - ME 01-05
+- role: Temperature transducer
+  type_designations:
+  - Pt100
+  characteristics:
+    type_level:
+      accuracy_class:
+        value: B
+        unit_symbol:
+        unit_id:
+        footnote_markers: []
+      standard:
+        value: EN IEC 751
+        unit_symbol:
+        unit_id:
+        footnote_markers: []
+- role: Gas elimination device
+  type_designations: []
+- role: Sight glass
+  type_designations: []
+  characteristics:
+    type_level:
+      required_for_maximum_flowrate_above:
+        value: 60
+        unit_symbol: L/min
+        unit_id:
+        footnote_markers: []
+- role: Electromagnetic valve
+  type_designations: []
+matrix_tables:
+- name: Characteristics of the fuel dispenser configurations
+  columns:
+  - configuration
+  - meter_type
+  - pumping_units_type
+  - liquids
+  - maximum_flowrate
+  - minimum_flowrate
+  - minimum_measured_quantity
+  column_units:
+  -
+  -
+  -
+  -
+  - dm³/min
+  - dm³/min
+  - dm³
+  rows:
+  - configuration: config-1
+    meter_type: M403.25P or M403.25EP
+    pumping_units_type: P640.50 or P641.50
+    liquids: Gasoline, Diesel
+    maximum_flowrate:
+      min: 40
+      max: 60
+    minimum_flowrate: 4
+    minimum_measured_quantity: 2
+  - configuration: config-2
+    meter_type: M403.25P or M403.25EP
+    pumping_units_type: P640.100 or P641.100
+    liquids: Diesel
+    maximum_flowrate:
+      min: 70
+      max: 80
+    minimum_flowrate: 5
+    minimum_measured_quantity: 5
+  - configuration: config-3
+    meter_type: M403.32P or M403.32EP
+    pumping_units_type: 2 x P640.100 or 2 x P641.100
+    liquids: Diesel
+    maximum_flowrate:
+      min: 100
+      max: 150
+    minimum_flowrate: 10
+    minimum_measured_quantity: 10
+  description: >-
+    Meter type, pumping unit type, applicable liquids and flow characteristics for the three dispenser
+    configurations covered by the certificate.
+  footnotes: []
+additional_recommendations:
+- id: R118
+  edition: 1995

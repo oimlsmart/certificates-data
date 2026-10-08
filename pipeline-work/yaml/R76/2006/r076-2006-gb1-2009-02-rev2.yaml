@@ -1,0 +1,261 @@
+_meta:
+  cert_id: 3653
+  num: R076/2006-GB1-2009.02 Rev. 2
+  applicant: Digi Europe Ltd
+  issuing_year: '2015'
+  status: Valid
+  issuer: GB1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-gb1-2009-02-rev2.pdf
+certificate:
+  number: R76/2006-GB1-09.02
+  scheme: A
+  project_number: T1127/0035
+  page_total: 4
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2015-02-16'
+issuing_authority:
+  name: National Measurement Office
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Director, Product Certification
+  phone: "+44 (0)20 8943 7272"
+  website: www.gov.uk/nmo
+applicants:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+manufacturers:
+- name: Digi Europe Ltd
+  address_lines:
+  - Digi House
+  - Rookwood Way
+  - Haverhill
+  - Suffolk, CB9 8DG
+  - United Kingdom
+certified_type:
+  category: Indicator
+  type_designations:
+  - WPI-700
+  - WPI-701
+  - WPI-702
+  module_designation:
+  description: >-
+    Indicating device designated WPI-700, designed to be used as part of a Class III or IIII non-automatic
+    weighing instrument designated WPI-701 (single scale) and WPI-702 (dual scale). Operates as single
+    or dual interval, self-indicating, mains-powered, may include a labeller. Main features: processor
+    and converter unit comprising Teraoka TPB-2930 CPU and Teraoka TPB-03324 6-wire A/D converter; colour
+    TFT-LCD touch screen; waterproof metallic enclosure. Devices: initial zero setting, semi-automatic
+    zero setting, zero tracking, semi-automatic subtractive tare weighing, determination and indication
+    of stability of equilibrium, zero indicator, PLUs, preset tare, price calculation, dual scale operation
+    (WPI-702). Interfaces: load cell 6-wire connection, Ethernet, USB. Legal software version 2.xx.xx.xxxx
+    with metrological code in DPS700.dll protected by checksum; alternative World View software (HeaderDisplay.dll
+    version 1.0.0.10, DPS710.dll version 1.0.0.29) permits use for direct sales to the public. Calibration/configuration
+    password-protected and gated by A/D switch inside the enclosure. An alternative construction (modified
+    A/D board TPB-03484, Commel LV-67H main board, CIT-400W-Micro-ATX-Silent-PSU power supply) is also
+    covered.
+characteristics:
+  type_level:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    maximum_tare:
+      value: -50
+      unit_symbol: "%"
+      unit_id:
+    maximum_preset_tare:
+      value: "-Max1"
+      unit_symbol:
+      unit_id:
+    minimum_input_voltage_per_verification_scale_interval:
+      value: 0.67
+      unit_symbol: μV
+      unit_id:
+    measuring_range_minimum_voltage:
+      value: 0
+      unit_symbol: mV
+      unit_id:
+    measuring_range_maximum_voltage:
+      value: 40
+      unit_symbol: mV
+      unit_id:
+    fraction_of_maximum_permitted_error:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    multi_interval_range:
+      value: Max1 ≤ 50% Max2
+      unit_symbol:
+      unit_id:
+    load_cell_connection:
+      value: 6-wire shielded
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: 2.xx.xx.xxxx
+      unit_symbol:
+      unit_id:
+    legal_software_module:
+      value: DPS700.dll
+      unit_symbol:
+      unit_id:
+  model_level: []
+  config_level:
+  - attribute: power_supply_voltage
+    axis: construction
+    values:
+    - condition: original construction
+      value:
+        min: 100
+        max: 230
+      unit_symbol: V
+    - condition: alternative construction
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+  - attribute: maximum_number_of_scale_intervals
+    axis: construction / weighing mode
+    values:
+    - condition: original construction, single interval
+      value: 6000
+    - condition: original construction, multi-interval, per partial weighing range (maximum of two weighing
+        ranges)
+      value: 3000
+    - condition: original construction, Class IIII, single or multi-interval
+      value: 1000
+    - condition: alternative construction, single interval
+      value: 6000
+    - condition: >-
+        alternative construction, multi-interval, per partial weighing range (maximum of two partial weighing
+        ranges)
+      value: 3000
+  - attribute: load_cell_excitation_voltage
+    axis: construction
+    values:
+    - condition: original construction
+      value: 10
+      unit_symbol: V
+    - condition: alternative construction
+      value: 3.3
+      unit_symbol: V
+  - attribute: minimum_load_cell_impedance
+    axis: construction
+    values:
+    - condition: original construction
+      value: 87
+      unit_symbol: Ω
+    - condition: alternative construction
+      value: 43
+      unit_symbol: Ω
+  - attribute: maximum_load_cell_impedance
+    axis: construction
+    values:
+    - condition: original construction
+      value: 440
+      unit_symbol: Ω
+    - condition: alternative construction
+      value: 1100
+      unit_symbol: Ω
+  - attribute: operating_temperature_range
+    axis: construction
+    values:
+    - condition: original construction
+      value:
+        min: -10
+        max: 30
+      unit_symbol: "°C"
+    - condition: alternative construction
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+  - attribute: load_cell_cable_junction_box_to_indicator
+    axis: construction
+    values:
+    - condition: original construction
+      value: 750
+      unit_symbol: m/mm²
+    - condition: alternative construction
+      value: 1.5
+      unit_symbol: m
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: P01156
+  date:
+  pages: 25
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2009-10-19'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2013-09-27'
+  changes: Alternative construction added.
+- revision: '2'
+  date: '2015-02-16'
+  changes: Software section added.
+components:
+- role: cpu
+  type_designations:
+  - TPB-2930
+  alternatives:
+  characteristics:
+    manufacturer: Teraoka
+- role: analog_to_digital_converter
+  type_designations:
+  - TPB-03324
+  alternatives:
+  characteristics:
+    manufacturer: Teraoka
+    connection: 6-wire
+- role: display
+  type_designations: []
+  alternatives:
+  characteristics:
+    display_type: colour TFT-LCD touch screen
+- role: enclosure
+  type_designations: []
+  alternatives:
+  characteristics:
+    type: waterproof metallic
+- role: analog_to_digital_board
+  type_designations:
+  - TPB-03484-00-00 Rev 0
+  alternatives:
+  characteristics:
+    construction: alternative
+    a_d_converter: TPB-03484
+- role: main_board
+  type_designations:
+  - LV-67H
+  alternatives:
+  characteristics:
+    construction: alternative
+    manufacturer: Commel
+- role: power_supply
+  type_designations:
+  - CIT-400W-Micro-ATX-Silent-PSU
+  alternatives:
+  characteristics:
+    construction: alternative

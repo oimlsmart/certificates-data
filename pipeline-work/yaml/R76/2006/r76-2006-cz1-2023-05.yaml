@@ -1,0 +1,325 @@
+_meta:
+  cert_id: 5991
+  num: R76/2006-A-CZ1-23.05
+  applicant: RADWAG WAGI ELEKTRONICZNE Witold Lewandowski
+  issuing_year: '2023'
+  status: Valid
+  issuer: CZ1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-cz1-2023-05.pdf
+certificate:
+  number: R76/2006-A-CZ1-2023.05
+  scheme: A
+  page_total: 4
+  member_state: Czech Republic
+  date_issued: '2023-07-26'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno
+  - Czech Republic
+  person_responsible: Jan Kalandra
+applicants:
+- name: RADWAG Wagi Elektroniczne Witold Lewandowski
+  address_lines:
+  - 5 Toruńska Street
+  - 26-600 Radom
+  - Poland
+manufacturers:
+- name: RADWAG Wagi Elektroniczne Witold Lewandowski
+  address_lines:
+  - 5 Toruńska Street
+  - 26-600 Radom
+  - Poland
+certified_type:
+  category: Weighing module for NAWI
+  type_designations:
+  - HRP xxx.n.yyy
+  - PL.xxx.n.HRP.yyy
+  - HRP.EX xxx.n.yyy
+  - PL.xxx.n.HRP.EX.yyy
+  module_designation: Not applicable
+  description: >-
+    Weighing module for non-automatic weighing instruments (NAWI) of accuracy class II or III. The module
+    determines the weighing result and its status via embedded software in real time and transmits the
+    result in digital form via a protected interface to a weighing indicator operating as a terminal for
+    displaying and/or printing weighing results. Available as HRP standard version and HRP.EX version,
+    the latter powered through the dedicated power supply PM02.EX.
+characteristics:
+  type_level:
+    maximum_capacity:
+      value:
+        min:
+        max: 2000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval_e:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: II or III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operation_mode:
+      value: Dual range
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature:
+      value:
+        min: 10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    relative_humidity:
+      value:
+        min: 15
+        max: 80
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    protection_class:
+      value: IP 66/67
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    outputs_supply_voltage:
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    outputs_supply_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_output_current:
+      value: 100
+      unit_symbol: mA
+      unit_id:
+      footnote_markers: []
+    control_input_voltage_range:
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    control_input_voltage_type:
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    initial_zero_setting_device_range:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    zero_tracking_device_range:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    embedded_software_version:
+      value: 3.18 or 3.18EX (for EX versions)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    standard_interfaces:
+      value: RS 232, Ethernet, RS 485, Profibus, ProfiNet, CAN
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    standard_unprotected_interfaces:
+      value: 'digital I/O: 2 inputs / 2 outputs or 4 inputs / 4 outputs; 4 digital inputs'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ex_interfaces:
+      value: RS485
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    ex_unprotected_interfaces:
+      value: 4 digital inputs
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    connections:
+      value: Connectors and/or glands may be used for connection
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    devices_and_functions:
+      value: >-
+        Semi-automatic zero-setting device; Initial zero-setting device; Zero-tracking device; Tare device;
+        Indication stabilization device; Service menu via switch S1 on the main board; Internal adjustment;
+        Gravity compensation; Dual range
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: max_number_of_scale_intervals_n
+    axis: accuracy_class
+    values:
+    - condition: class II
+      value:
+        min:
+        max: 32000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: class III
+      value:
+        min:
+        max: 10000
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: scale_interval_d
+    axis: accuracy_class
+    values:
+    - condition: class II
+      value: 0.1e ≤ d ≤ 1e
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: class III
+      value: d = e
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_voltage
+    axis: platform_type
+    values:
+    - condition: standard platforms
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: standard platforms with optional adapter (AC input)
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: standard platforms with optional adapter (DC output)
+      value:
+        min: 12
+        max: 24
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    - condition: EX platforms (via dedicated power supply PM02.EX)
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_frequency
+    axis: platform_type
+    values:
+    - condition: EX platforms (via dedicated power supply PM02.EX)
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+      footnote_markers: []
+  - attribute: power_supply_type
+    axis: platform_type
+    values:
+    - condition: standard platforms
+      value: DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: standard platforms with optional adapter
+      value: AC input / DC output
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    - condition: EX platforms
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  - attribute: max_pan_size
+    axis: platform_leverage
+    values:
+    - condition: platform without leverage
+      value: 360 x 280
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    - condition: platform without leverage with support construction
+      value: 400 x 500
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    - condition: platform with leverage
+      value: 800 x 1000
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    - condition: platform with double leverage
+      value: 1250 x 1000
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+recommendation:
+  id: R76-1
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - II
+  - III
+test_reports:
+- id: 6052-PT-Z0003-22
+  date:
+  pages: 49
+  role: test_report
+- id: 8551-PT-E0218-22
+  date:
+  pages: 44
+  role: test_report
+- id: 0511-ER-N105-22
+  date: '2023-07-26'
+  pages: 10
+  role: type_evaluation_report
+- id: 0511-UL-N105-22
+  date:
+  pages:
+  role: documentation_file
+revision_history:
+- revision:
+  date: '2023-07-26'
+  changes: Issuing certificate
+components:
+- role: Dedicated power supply for EX platforms
+  type_designations:
+  - PM02.EX
+  alternatives:
+  characteristics: {}
+footnotes: []

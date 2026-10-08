@@ -1,0 +1,143 @@
+_meta:
+  cert_id: 4285
+  num: R129/2000-FR2-2017.01 Rev. 0
+  applicant: Honeywell Sensing and Productivity Solutions
+  issuing_year: '2017'
+  status: Valid
+  issuer: FR2
+  recommendation: R129
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R129/2000/r129-2000-fr2-2017-01-rev0.pdf
+certificate:
+  number: R129/2000-FR2-17.01
+  project_number: LNE-32978
+  page_total: 1
+  member_state: FRANCE
+  date_issued: '2017-05-18'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - France
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Responsable du Pôle Certification (Measuring Instruments Division Manager)
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: www.lne.fr
+applicants:
+- name: Honeywell Sensing and Productivity Solutions
+  address_lines:
+  - 9680 Old Bailes Road
+  - Fort Mill, SC 29707
+  - United States
+manufacturers:
+- name: Honeywell Sensing and Productivity
+  address_lines:
+  - 9680 Old Bailes Road
+  - Fort Mill, SC 29707
+  - USA
+certified_type:
+  category: Tridimensional measuring instrument
+  type_designations:
+  - AutoCube 8200-1
+  module_designation:
+  description: >-
+    Tridimensional measuring instrument operated in the automatic mode; the camera part is mounted on
+    a fixed pole; operates in a closed area with non-condensing humidity.
+characteristics:
+  type_level:
+    scale_interval_d:
+      value: 1
+      unit_symbol: cm
+    mechanical_environment:
+      value: M1
+    electromagnetic_environment:
+      value: E1
+    operating_temperature:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+    operating_environment:
+      value: closed area with non-condensing humidity
+    camera_height:
+      value:
+        min: 1.5
+        max: 1.8
+      unit_symbol: m
+    camera_angle:
+      value: 30 or 45
+      unit_symbol: "°"
+    minimum_object_size:
+      value: 10 × 10 × 10
+      unit_symbol: cm
+    minimum_space_between_objects:
+      value: 10
+      unit_symbol: cm
+    ambient_light:
+      value:
+        min: 200
+        max: 6000
+      unit_symbol: lux
+  config_level:
+  - attribute: maximum_object_size
+    axis: camera height / camera angle
+    values:
+    - condition: camera height 1.5 m, angle 30°
+      value: 70 × 70 × 70
+      unit_symbol: cm
+    - condition: camera height 1.5 m, angle 45°
+      value: 90 × 90 × 90
+      unit_symbol: cm
+    - condition: camera height 1.5 m, angle 45°
+      value: 110 × 90 × 70
+      unit_symbol: cm
+    - condition: camera height 1.8 m, angle 45°
+      value: 100 × 100 × 100
+      unit_symbol: cm
+    - condition: camera height 1.8 m, angle 45°
+      value: 120 × 100 × 70
+      unit_symbol: cm
+recommendation:
+  id: R129
+  edition: 2000
+test_reports:
+- id: P167847
+  role: type_evaluation_report
+- id: P167847_DMSI/1
+  role: test_report
+- id: P167847_DMSI/2
+  role: test_report
+- id: P167847_DMSI/3
+  role: test_report
+- id: P167847_DMSI/4
+  role: test_report
+- id: P167847_DE/1
+  role: test_report
+- id: P167847_DE/2
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2017-05-18'
+matrix_tables:
+- name: Maximum object size by camera height and angle
+  columns:
+  - camera_height
+  - camera_angle
+  - maximum_object_size
+  rows:
+  - camera_height: 1.5 m
+    camera_angle: 30°
+    maximum_object_size: 70 × 70 × 70 cm
+  - camera_height: 1.5 m
+    camera_angle: 45°
+    maximum_object_size: 90 × 90 × 90 cm OR 110 × 90 × 70 cm
+  - camera_height: 1.8 m
+    camera_angle: 45°
+    maximum_object_size: 100 × 100 × 100 cm OR 120 × 100 × 70 cm
+  description: >-
+    Maximum measurable object dimensions depend on camera height above the measuring plane and the angle
+    between the AutoCube camera and the mat.
+  footnotes: []

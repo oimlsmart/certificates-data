@@ -1,0 +1,338 @@
+_meta:
+  cert_id: 6316
+  num: R76/2006-A-NL1-20.18 Rev. 5
+  applicant: Bizerba SE & Co. KG
+  issuing_year: '2024'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2020-18-rev5.pdf
+certificate:
+  number: R76/2006-A-NL1-20.18
+  scheme: A
+  project_number: '3741825'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2024-08-29'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V., OIML Issuing Authority NL1
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Straße 65
+  - 72336 Balingen
+  - Germany
+manufacturers:
+- name: Bizerba SE & Co. KG
+  address_lines:
+  - Wilhelm-Kraut-Straße 65
+  - 72336 Balingen
+  - Germany
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - K3...
+  module_designation: Not applicable
+  description: >-
+    Non-automatic weighing instrument of type K3..., where '...' denotes a placeholder for alternative
+    variants not affecting metrological parameters. Weighing modules covered: K3, ScalePad USB, ADC-Box
+    USB, QBase.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+    verification_scale_interval:
+      value:
+        min: 1
+        max:
+      unit_symbol: g
+      unit_id:
+    weighing_ranges:
+      value: Single interval / Multi-interval
+    maximum_number_of_partial_weighing_ranges:
+      value: 3
+      unit_symbol:
+      unit_id:
+    semi_automatic_tare:
+      value:
+        min:
+        max: -100
+      unit_symbol: "%"
+      unit_id:
+      reference: Max
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    power_supply_voltage:
+      value:
+        min: 120
+        max: 240
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+    application:
+      value: Intended to be used for direct sales to the public
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: weighing_module
+    values:
+    - condition: weighing module K3
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+    - condition: weighing module ScalePad USB
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+    - condition: weighing module ADC-Box USB
+      value: calculated using the compatibility of modules form, contained in EN 45501:2015 clause F.4
+      unit_symbol:
+    - condition: weighing module QBase
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+  - attribute: maximum_number_of_scale_intervals
+    axis: weighing_range_configuration
+    values:
+    - condition: single interval (one weighing range)
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+    - condition: multi-interval (per partial weighing range)
+      value:
+        min:
+        max: 3000
+      unit_symbol:
+  - attribute: preset_tare
+    axis: weighing_range_configuration
+    values:
+    - condition: single-interval instruments
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      reference: Max
+    - condition: multi-interval instruments
+      value:
+        min:
+        max: 100
+      unit_symbol: "%"
+      reference: Max1
+recommendation:
+  id: R76-1
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-2243314-01
+  revision: '1'
+  date: '2019-08-12'
+  pages: 55
+  role: test_report
+- id: NMi-2409818-01
+  date: '2020-02-18'
+  pages: 11
+  role: test_report
+- id: NMi-2431931-01
+  date: '2020-04-14'
+  pages: 45
+  role: test_report
+- id: NMi-2477454-01
+  date: '2021-04-15'
+  pages: 51
+  role: test_report
+- id: NMi-2477454-02
+  date: '2021-04-15'
+  pages: 18
+  role: test_report
+- id: NMi-2529842-01
+  date: '2021-04-15'
+  pages: 17
+  role: test_report
+- id: 1.12-4037754/6
+  date: '2011-05-30'
+  pages: 56
+  role: test_report
+- id: NMi-3001387-01
+  date: '2022-10-18'
+  pages: 26
+  role: test_report
+- id: NMi-3001387-02
+  date: '2022-10-18'
+  pages: 14
+  role: test_report
+- id: NMi-3741825-01
+  date: '2024-08-29'
+  pages: 15
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2020-04-14'
+  changes: "-"
+- revision: '1'
+  date: '2020-07-20'
+  changes: Correction of the maximum capacity specification (30 kg instead of 15 kg).
+- revision: '2'
+  date: '2021-04-15'
+  changes: >-
+    Added Scale OEM Module software version 015 and ID's 8282 and 1171. Added OIML report NMi-2477454-01.
+- revision: '3'
+  date: '2022-10-18'
+  changes: Adding ADPD ADC-Box USB and weighing modules ScalePad USB and QBase.
+- revision: '4'
+  date: '2023-01-05'
+  changes: Editorial changes to the table of characteristics. Addition of a new software version.
+- revision: '5'
+  date: '2024-08-29'
+  changes: Added a new software version. Added report NMi-3741825-01.
+components:
+- role: weighing module
+  type_designations:
+  - K3
+  characteristics:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+      unit_id:
+- role: weighing module
+  type_designations:
+  - ScalePad USB
+  characteristics:
+    maximum_capacity:
+      value:
+        min:
+        max: 15
+      unit_symbol: kg
+      unit_id:
+- role: weighing module (A/D converter)
+  type_designations:
+  - ADC-Box USB
+  characteristics:
+    maximum_capacity:
+      value: calculated using the compatibility of modules form, contained in EN 45501:2015 clause F.4
+      unit_symbol:
+      unit_id:
+- role: weighing module
+  type_designations:
+  - QBase
+  characteristics:
+    maximum_capacity:
+      value:
+        min: 3
+        max: 30
+      unit_symbol: kg
+      unit_id:
+- role: terminal (Scale OEM Module)
+  type_designations:
+  - Scale OEM Module
+  characteristics:
+    legally_relevant_software:
+    - software_version: '013'
+      software_id_windows: '7640'
+      software_id_linux: '0369'
+      footnote_markers:
+      - 1)
+    - software_version: '015'
+      software_id_windows: '8282'
+      software_id_linux: '1171'
+      footnote_markers:
+      - 1)
+- role: A/D board software
+  type_designations:
+  - ADW
+  characteristics:
+    legally_relevant_software:
+    - software_version: '010'
+      software_id: '6153'
+      footnote_markers:
+      - 1)
+    - software_version: '011'
+      software_id: '5232'
+      footnote_markers:
+      - 1)
+    - software_version: '030'
+      software_id: '1446'
+      footnote_markers:
+      - 1)
+    - software_version: '014'
+      software_id: '4751'
+      footnote_markers:
+      - 1)
+footnotes:
+- marker: 1)
+  text: >-
+    The identification of the non-legally relevant software version can optionally be added to the identification
+    of the legally relevant software version, separated by "::" (example: "013::x.y" or "010::x.y" or
+    "030::x.y" or "014::x,y").
+matrix_tables:
+- name: Terminal software identification (Scale OEM Module)
+  columns:
+  - software_version
+  - software_id_windows
+  - software_id_linux
+  column_units:
+  -
+  -
+  -
+  rows:
+  - software_version: '013'
+    software_id_windows: '7640'
+    software_id_linux: '0369'
+  - software_version: '015'
+    software_id_windows: '8282'
+    software_id_linux: '1171'
+  description: >-
+    Legally relevant software version numbers and software IDs for the Scale OEM Module terminal, for
+    Windows and Linux.
+  footnotes:
+  - 1)
+- name: A/D board software identification (ADW)
+  columns:
+  - software_version
+  - software_id
+  column_units:
+  -
+  -
+  rows:
+  - software_version: '010'
+    software_id: '6153'
+  - software_version: '011'
+    software_id: '5232'
+  - software_version: '030'
+    software_id: '1446'
+  - software_version: '014'
+    software_id: '4751'
+  description: Legally relevant software version numbers and software IDs for the A/D board (ADW).
+  footnotes:
+  - 1)

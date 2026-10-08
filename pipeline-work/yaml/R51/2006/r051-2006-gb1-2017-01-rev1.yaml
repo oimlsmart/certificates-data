@@ -1,0 +1,269 @@
+_meta:
+  cert_id: 4358
+  num: R051/2006-GB1-2017.01 Rev. 1
+  applicant: Sparc Systems Ltd
+  issuing_year: '2017'
+  status: Valid
+  issuer: GB1
+  recommendation: R51
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R51/2006/r051-2006-gb1-2017-01-rev1.pdf
+certificate:
+  number: R51/2006-GB1-17.01
+  project_number: P01438
+  page_total: 4
+  member_state: United Kingdom
+  date_issued: '2017-07-13'
+issuing_authority:
+  name: NMO
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Mannie Panesar
+  person_title: Head of Technical Services
+  phone: "+44 (0) 20 8943 7272"
+  website: www.gov.uk/government/organisations/regulatory-delivery
+applicants:
+- name: Sparc Systems Ltd
+  address_lines:
+  - Sparc House
+  - Merebrook Business Park
+  - Hanley Road
+  - Malvern
+  - Worcestershire
+  - WR13 6NP
+  - United Kingdom
+manufacturers:
+- name: Sparc Systems Ltd
+  address_lines:
+  - Sparc House
+  - Merebrook Business Park
+  - Hanley Road
+  - Malvern
+  - Worcestershire
+  - WR13 6NP
+  - United Kingdom
+certified_type:
+  category: Checkweigher
+  type_designations:
+  - 420 Series
+  - TS420 Series
+  - Sentinel 420
+  - Cerberus 420
+  - Theia 420
+  module_designation: Not applicable
+  description: >-
+    Family of mains-powered, single-interval, automatic weighing instruments (checkweighers, Category
+    X) designated the TS420 Series, designed to weigh packs dynamically. The instruments comprise a cabinet,
+    touch screen user interface (HMI), in-feed and out-feed conveyors, a weighing unit with weigh conveyor,
+    mechanical handling facilities and sorting devices, and may be equipped with a metal detector. Constructed
+    in stainless steel on a fabricated floor-standing frame with adjustable feet; photocells on the frame
+    detect packs; the control cabinet houses the electrical hardware including the A/D board and flash
+    card memory holding legally relevant parameters. Models are designated 420 Series with functional
+    prefixes (e.g. Sentinel 420 for stand alone, Cerberus 420 for metal detection, Theia 420 for X-ray).
+    Weighing device is a strain gauge load cell below the centre of the weigh conveyor. Devices: semi-automatic
+    zero setting, zero tracking, initial zero setting, pre-set tare, data storage device. Interfaces:
+    Ethernet and USB. CF card, HMI board and load cell connection to the electronics are sealed via a
+    tamper-evident solution. Alternatively, any compatible load cell may be used provided it has a respective
+    OIML R60 Certificate of Conformity with the necessary data for the declaration of compatibility of
+    modules, is not a load cell with digital output, has n_lc, Y, Z the same or better than the tested
+    HBM PW16AC3 (Emax = 30 kg), has the same design and material, uses no oil damper, and has sensitivity
+    greater than 0.33 uV/div. Legally relevant software consists of two parts (HMI and Controller) held
+    in read-only directories; parameters are secured by password and a non-editable Parameter Modification
+    Counter, and calibration by password and a Calibration Count, both held on the Controller.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: XIII(1)
+      unit_symbol:
+      unit_id:
+    climatic_environment:
+      value: Closed, non-condensing
+      unit_symbol:
+      unit_id:
+    electromagnetic_environment:
+      value: E1 and E2
+      unit_symbol:
+      unit_id:
+    temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+    number_of_verification_scale_intervals_n:
+      value: 3000
+      unit_symbol:
+      unit_id:
+    interfaces:
+      value: Ethernet, USB
+      unit_symbol:
+      unit_id:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    power_supply_frequency:
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+      unit_id:
+    semi_automatic_zero_setting_limit:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    zero_tracking_limit:
+      value:
+        min:
+        max: 4
+      unit_symbol: "%"
+      unit_id:
+    initial_zero_setting_limit:
+      value:
+        min:
+        max: 20
+      unit_symbol: "%"
+      unit_id:
+    zero_setting_interval:
+      value:
+        min:
+        max: 30
+      unit_symbol: min
+      unit_id:
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=3000g
+      value: 3000
+    - model: Max=6000g
+      value: 6000
+    - model: Max=15000g
+      value: 15000
+  - attribute: minimum_capacity
+    unit_symbol: g
+    values:
+    - model: Max=3000g
+      value: 50
+    - model: Max=6000g
+      value: 100
+    - model: Max=15000g
+      value: 250
+  - attribute: scale_interval
+    unit_symbol: g
+    values:
+    - model: Max=3000g
+      value: 1
+    - model: Max=6000g
+      value: 2
+    - model: Max=15000g
+      value: 5
+  config_level:
+  - attribute: preset_tare
+    axis: model / pack weight range
+    values:
+    - condition: Max=3000g, 50-500 g
+      value: no tare
+      unit_symbol:
+      unit_id:
+    - condition: Max=3000g, 500-3000 g
+      value:
+        min:
+        max: -130
+      unit_symbol: g
+      unit_id:
+    - condition: Max=6000g, 100-1000 g
+      value: no tare
+      unit_symbol:
+      unit_id:
+    - condition: Max=6000g, 1000-6000 g
+      value:
+        min:
+        max: -260
+      unit_symbol: g
+      unit_id:
+    - condition: Max=15000g, 250-2500 g
+      value: no tare
+      unit_symbol:
+      unit_id:
+    - condition: Max=15000g, 2500-15000 g
+      value:
+        min:
+        max: -650
+      unit_symbol: g
+      unit_id:
+  - attribute: maximum_belt_speed
+    axis: pack weight range
+    values:
+    - condition: 50-500 g
+      value: 100
+      unit_symbol: m/min
+      unit_id:
+    - condition: 500-3000 g
+      value: 80
+      unit_symbol: m/min
+      unit_id:
+recommendation:
+  id: R51
+  edition: 2006
+  accuracy_classes:
+  - XIII(1)
+test_reports:
+- id: P01438
+  pages: 13
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2017-02-01'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2017-07-13'
+  changes: 'Software: editorial error correction - HMI Checksum (CRC-32) A7197742 changed to 42A36389.'
+model_family:
+  family_name: TS420 Series
+  models:
+  - model_id: Max=3000g
+  - model_id: Max=6000g
+  - model_id: Max=15000g
+components:
+- role: load_cell
+  type_designations:
+  - HBM PW16AC3
+  alternatives: OR
+  characteristics:
+    maximum_capacity:
+      value: 30
+      unit_symbol: kg
+      unit_id:
+    manufacturer:
+      value: HBM
+      unit_symbol:
+      unit_id:
+- role: legally_relevant_software_hmi
+  type_designations:
+  - 0746xxx/1
+  alternatives:
+  characteristics:
+    checksum_crc32:
+      value: 42A36389
+      unit_symbol:
+      unit_id:
+- role: legally_relevant_software_controller
+  type_designations:
+  - 0745xxx/1
+  alternatives:
+  characteristics:
+    checksum_crc32:
+      value: ED436F81
+      unit_symbol:
+      unit_id:

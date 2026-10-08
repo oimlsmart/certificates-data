@@ -1,0 +1,114 @@
+_meta:
+  cert_id: 6129
+  num: R76/2006-A-FR2-24.01 Rev. 0
+  applicant: Precia SA
+  issuing_year: '2024'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-fr2-2024-01-rev0.pdf
+certificate:
+  number: R76/2006-A-FR2-24.01
+  scheme: A
+  project_number: '27432'
+  page_total: 1
+  member_state: FRANCE
+  date_issued: '2024-01-31'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais (LNE)
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Emeric MOREL
+  person_title: Head of Instrumentation Certification Department
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+applicants:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+manufacturers:
+- name: PRECIA SA
+  address_lines:
+  - BP 106
+  - 07001 PRIVAS CEDEX
+  - FRANCE
+certified_type:
+  category: Indicator
+  type_designations:
+  - X1104-TG
+  module_designation: Digital terminal module
+  description: >-
+    X1104-TG module is a separate module intended to be integrated in a non-automatic weighing instrument.
+    X1104-TG module is a purely digital terminal module. It does not include a measurement processing
+    device. It is available as a metal or composite enclosure in a table-top version, a front panel version
+    or for wall mounting. This terminal can also, from software version 3.4.0, define a specific channel
+    allowing the calculation of the algebraic sum of values from up to 8 measurement channels.
+characteristics:
+  type_level:
+    power_supply_voltage:
+      value: 230
+      unit_symbol: V
+      unit_id:
+    power_supply_frequency:
+      value: 50
+      unit_symbol: Hz
+      unit_id:
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+    apportionment_factor_pind:
+      value: 0
+      unit_symbol:
+      unit_id:
+    software_version:
+      value: V3.z.t
+      unit_symbol:
+      unit_id:
+    software_version_note:
+      value: '"z" and "t" are numbers between 0 and 255 and are modifiable'
+      unit_symbol:
+      unit_id:
+  config_level:
+  - attribute: max_measurement_channels_algebraic_summation
+    axis: software_version
+    values:
+    - condition: software version >= 3.4.0
+      value:
+        value: 8
+        unit_symbol:
+        unit_id:
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - II
+  - III
+  - IIII
+test_reports:
+- id: LNE P138676 (PCI/4)
+  pages: 2
+  role: evaluation_report
+- id: LNE P118307 (PCI/5)
+  pages: 17
+  role: evaluation_report
+- id: LNE P118307 (DE/3)
+  pages: 22
+  role: test_report
+- id: LNE P219553
+  pages: 5
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2024-01-31'
+  changes: >-
+    Initial certificate. This certificate is revision n°2 of OIML-MAA certificate R76/2006-FR2-14.03.
+    Clarification of the algebraic summation with X1104-TG module.

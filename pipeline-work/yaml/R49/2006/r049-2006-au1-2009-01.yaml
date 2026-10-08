@@ -1,0 +1,217 @@
+_meta:
+  cert_id: 2280
+  num: R049/2006-AU1-2009.01
+  applicant: Sensus GmbH Ludwigshafen
+  issuing_year: '2009'
+  status: Valid
+  issuer: AU1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-au1-2009-01.pdf
+certificate:
+  number: R49-1/2006-AU1-09.01
+  project_number: R2008/175
+  page_total: 3
+  member_state: Australia
+  date_issued: '2009-08-26'
+issuing_authority:
+  name: National Measurement Institute
+  address_lines:
+  - Bradfield Rd
+  - Lindfield NSW 2070
+  - Australia
+  person_responsible: Alex Winchester
+  person_title: Project Scientist
+applicants:
+- name: Sensus Metering Systems GmbH
+  address_lines:
+  - Industriestrasse 16
+  - 67063 Ludwigshafen
+  - Germany
+manufacturers:
+- name: Sensus Metering Systems GmbH
+  address_lines:
+  - Industriestrasse 16
+  - 67063 Ludwigshafen
+  - Germany
+certified_type:
+  category: Water meter
+  type_designations:
+  - 220C
+  description: >-
+    Sensus model 220C water meter. A positive displacement, volumetric rotary piston water meter with
+    a permanent flowrate Q3 of 2.5 m³/h intended for the metering of cold, potable water.
+characteristics:
+  type_level:
+    measuring_principle:
+      value: positive displacement, volumetric rotary piston
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: '2'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    environmental_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    electromagnetic_environment:
+      value: n/a
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_temperature:
+      value: 30
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    limiting_condition_water_temperature:
+      value: 50
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    maximum_admissible_pressure:
+      value: 1.6
+      unit_symbol: MPa
+      unit_id:
+      footnote_markers: []
+    orientation_requirements:
+      value: any
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    connection_type:
+      value: screw thread
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_of_inlet_pipe:
+      value: 0
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    minimum_straight_length_of_outlet_pipe:
+      value: 0
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    flow_conditioner:
+      value: not required
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    meter_length:
+      value:
+        min: 115
+        max:
+      unit_symbol: mm
+      unit_id:
+      footnote_markers: []
+    thread:
+      value: G ¾ B
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    indicating_device:
+      value: >-
+        Mechanical digital indicator having a series of eight aligned digits providing a maximum display
+        of 9999.9999 m³
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    other_relevant_information:
+      value: Provision for the attachment of a supplementary device for data transmission
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    q2_over_q1_ratio:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    q3_permanent_flowrate:
+      value: 2.5
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+    q4_overload_flowrate:
+      value: 3.125
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: q3_over_q1_ratio
+    unit_symbol:
+    values:
+    - model: Q3/Q1=200
+      value: 200
+      footnote_markers: []
+    - model: Q3/Q1=160
+      value: 160
+      footnote_markers: []
+  - attribute: q1_minimum_flowrate
+    unit_symbol: m³/h
+    values:
+    - model: Q3/Q1=200
+      value: 0.0125
+      footnote_markers: []
+    - model: Q3/Q1=160
+      value: 0.015
+      footnote_markers: []
+  - attribute: q2_transitional_flowrate
+    unit_symbol: m³/h
+    values:
+    - model: Q3/Q1=200
+      value: 0.02
+      footnote_markers: []
+    - model: Q3/Q1=160
+      value: 0.025
+      footnote_markers: []
+recommendation:
+  id: R49-1
+  edition: 2006
+  accuracy_classes:
+  - '2'
+test_reports:
+- id: CB170268
+  date: '2009-07-27'
+  pages: 44
+  role: test_report
+model_family:
+  family_name:
+  models:
+  - model_id: Q3/Q1=200
+  - model_id: Q3/Q1=160
+matrix_tables:
+- name: Flow characteristics by model variant
+  columns:
+  - attribute
+  - q3_over_q1_ratio
+  - q2_over_q1_ratio
+  - q1_minimum_flowrate
+  - q2_transitional_flowrate
+  - q3_permanent_flowrate
+  - q4_overload_flowrate
+  rows:
+  - attribute: q3_over_q1_ratio
+    q3_over_q1_ratio:
+    q2_over_q1_ratio: 1.6
+    q1_minimum_flowrate: 0.0125
+    q2_transitional_flowrate: 0.02
+    q3_permanent_flowrate: 2.5
+    q4_overload_flowrate: 3.125
+  - attribute: q3_over_q1_ratio_160
+    q3_over_q1_ratio: 160
+    q2_over_q1_ratio: 1.6
+    q1_minimum_flowrate: 0.015
+    q2_transitional_flowrate: 0.025
+    q3_permanent_flowrate: 2.5
+    q4_overload_flowrate: 3.125
+  description: >-
+    Table transposed: each value column corresponds to one certified variant of the Sensus model 220C,
+    distinguished by the Q3/Q1 ratio (200 or 160). Flowrates in m³/h.
+  footnotes: []

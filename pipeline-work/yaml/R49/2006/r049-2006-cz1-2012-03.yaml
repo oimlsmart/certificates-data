@@ -1,0 +1,493 @@
+_meta:
+  cert_id: 2915
+  num: R049/2006-CZ1-2012.03
+  applicant: Ningbo Water Meter Co., Ltd
+  issuing_year: '2012'
+  status: Valid
+  issuer: CZ1
+  recommendation: R49
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2006/r049-2006-cz1-2012-03.pdf
+certificate:
+  number: R49/2006-CZ-12.03
+  page_total: 3
+  member_state: Czech Republic
+  date_issued: '2012-05-09'
+issuing_authority:
+  name: Czech Metrology Institute
+  address_lines:
+  - Okružní 31
+  - 638 00 Brno, CZ
+  person_responsible: Jan Kalandra
+  person_title: The Issuing Authority
+applicants:
+- name: Ningbo Water Meter Co., Ltd.
+  address_lines:
+  - No. 99, Lane 268, Beihai Road
+  - 315033 Ningbo
+  - China
+manufacturers:
+- name: Ningbo Water Meter Co., Ltd.
+  address_lines:
+  - No. 99, Lane 268, Beihai Road
+  - 315033 Ningbo
+  - China
+certified_type:
+  category: Water meter
+  type_designations:
+  - SJ-SDC
+  description: >-
+    Single jet rotary vane wheel water meter with dry mechanical indicating device (Plastic Can Calculator)
+    or super dry mechanical indicating device (Copper Can Calculator). Body of brass, bronze or plastic
+    with connecting threads and inlet strainer. Construction variants SJ-SDC (D3) and SJ-SDC (D7), the
+    latter with an adjusting screw. Three calculator variants (5 drums with 4 rotary pointers, 8 drums
+    with 1 pointer, 7 drums with 2 pointers), each with a star wheel (6 or 20 arms) for rapid testing.
+    Optionally equipped with a reed impulse transmitter for remote reading. Installed in arbitrary positions
+    with indicating device on the top or on the side.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: 2
+      unit_symbol:
+      unit_id:
+    ratio_q2_q1:
+      value: 1.6
+      unit_symbol:
+      unit_id:
+    ratio_q4_q3:
+      value: 1.25
+      unit_symbol:
+      unit_id:
+    mpe_lower_flowrate_zone:
+      value:
+        min: -5
+        max: 5
+      unit_symbol: "%"
+      unit_id:
+    temperature_class:
+      value: T30, T50, T30/90, T90
+      unit_symbol:
+      unit_id:
+    water_pressure_class:
+      value: MAP 16
+      unit_symbol:
+      unit_id:
+    pressure_loss_class:
+      value: ΔP 63
+      unit_symbol:
+      unit_id:
+    indicating_range:
+      value: 99999
+      unit_symbol: m³
+      unit_id:
+    resolution_of_indicating_device:
+      value: 0.00005 or 0.00002
+      unit_symbol: m³
+      unit_id:
+    flow_profile_sensitivity_classes:
+      value: U0 D0
+      unit_symbol:
+      unit_id:
+    reed_switch_max_voltage:
+      value:
+        min:
+        max: 24
+      unit_symbol: V
+      unit_id:
+    reed_switch_max_current:
+      value:
+        min:
+        max: 0.01
+      unit_symbol: A
+      unit_id:
+    reed_switch_k_factor:
+      value: 0.001, 0.01, 0.1, 1
+      unit_symbol: impulse/L
+      unit_id:
+  model_level:
+  - attribute: nominal_diameter
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value: 15
+    - model: DN20
+      value: 20
+    - model: DN25
+      value: 25
+    - model: DN32
+      value: 32
+    - model: DN40
+      value: 40
+  - attribute: resolution_of_device_for_rapid_testing
+    unit_symbol: pulse/L
+    values:
+    - model: DN15
+      value: 67.5
+    - model: DN20
+      value: 42.7636
+    - model: DN25
+      value: 22.2353
+    - model: DN32
+      value: 12.15
+    - model: DN40
+      value: 9.4714
+  - attribute: orientation_limitation
+    unit_symbol:
+    values:
+    - model: DN15
+      value: 'No'
+    - model: DN20
+      value: 'No'
+    - model: DN25
+      value: H
+    - model: DN32
+      value: H
+    - model: DN40
+      value: H
+  - attribute: length_l
+    unit_symbol: mm
+    values:
+    - model: DN15
+      value:
+        min: 80
+        max: 190
+    - model: DN20
+      value: 130
+    - model: DN25
+      value: 160
+    - model: DN32
+      value: 160
+    - model: DN40
+      value: 200
+  - attribute: connection_type_screw_thread_size
+    unit_symbol:
+    values:
+    - model: DN15
+      value: G¾B or G1B
+    - model: DN20
+      value: G1B
+    - model: DN25
+      value: G1¼B or G1½B
+    - model: DN32
+      value: G1½B
+    - model: DN40
+      value: G2B
+  config_level:
+  - attribute: ratio_q3_q1
+    axis: installation_position
+    values:
+    - condition: H installations
+      value:
+        min:
+        max: 80
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: any other installations (DN15, DN20 only)
+      value:
+        min:
+        max: 50
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+  - attribute: mpe_upper_flowrate_zone
+    axis: water_temperature
+    values:
+    - condition: water temperature ≤ 30 °C
+      value:
+        min: -2
+        max: 2
+      unit_symbol: "%"
+      unit_id:
+    - condition: water temperature > 30 °C
+      value:
+        min: -3
+        max: 3
+      unit_symbol: "%"
+      unit_id:
+  - attribute: minimum_flowrate_q1
+    axis: nominal_diameter_and_installation_position
+    values:
+    - condition: DN15, H
+      value:
+        min: 0.0313
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN15, V
+      value:
+        min: 0.05
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, H
+      value:
+        min: 0.05
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, V
+      value:
+        min: 0.08
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN25, H
+      value:
+        min: 0.0788
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN32, H
+      value:
+        min: 0.125
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN40, H
+      value:
+        min: 0.2
+        max:
+      unit_symbol: m³/h
+      unit_id:
+  - attribute: transitional_flowrate_q2
+    axis: nominal_diameter_and_installation_position
+    values:
+    - condition: DN15, H
+      value:
+        min: 0.05
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN15, V
+      value:
+        min: 0.08
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, H
+      value:
+        min: 0.08
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, V
+      value:
+        min: 0.128
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN25, H
+      value:
+        min: 0.126
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN32, H
+      value:
+        min: 0.2
+        max:
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN40, H
+      value:
+        min: 0.32
+        max:
+      unit_symbol: m³/h
+      unit_id:
+  - attribute: permanent_flowrate_q3
+    axis: nominal_diameter_and_installation_position
+    values:
+    - condition: DN15, H
+      value:
+        min:
+        max: 2.5
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN15, V
+      value:
+        min:
+        max: 2.5
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN20, H
+      value:
+        min:
+        max: 4.0
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN20, V
+      value:
+        min:
+        max: 4.0
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN25, H
+      value:
+        min:
+        max: 6.3
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN32, H
+      value:
+        min:
+        max: 10.0
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: DN40, H
+      value:
+        min:
+        max: 16.0
+      unit_symbol: m³/h
+      unit_id:
+      footnote_markers:
+      - 1)
+  - attribute: overload_flowrate_q4
+    axis: nominal_diameter_and_installation_position
+    values:
+    - condition: DN15, H
+      value:
+        min:
+        max: 3.13
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN15, V
+      value:
+        min:
+        max: 3.13
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, H
+      value:
+        min:
+        max: 5.0
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN20, V
+      value:
+        min:
+        max: 5.0
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN25, H
+      value:
+        min:
+        max: 7.88
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN32, H
+      value:
+        min:
+        max: 12.5
+      unit_symbol: m³/h
+      unit_id:
+    - condition: DN40, H
+      value:
+        min:
+        max: 20.0
+      unit_symbol: m³/h
+      unit_id:
+recommendation:
+  id: R49
+  edition: 2006
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 6015-PT-P0089-11
+  pages: 111
+  role: test_report
+model_family:
+  family_name: SJ-SDC
+  models:
+  - model_id: DN15
+  - model_id: DN20
+  - model_id: DN25
+  - model_id: DN32
+  - model_id: DN40
+footnotes:
+- marker: 1)
+  text: >-
+    The ratio Q3/Q1 shall be chosen from the R10 line from ISO 3:1973 and this value shall be higher than
+    10.
+- marker: 1)
+  text: The value of Q3 shall be chosen from the R5 line of ISO 3:1973.
+matrix_tables:
+- name: Flowrates by nominal diameter and installation position
+  columns:
+  - nominal_diameter
+  - installation_position
+  - minimum_flowrate_q1
+  - transitional_flowrate_q2
+  - permanent_flowrate_q3
+  - overload_flowrate_q4
+  column_units:
+  - mm
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  - m³/h
+  rows:
+  - nominal_diameter: 15
+    installation_position: H
+    minimum_flowrate_q1: 0.0313
+    transitional_flowrate_q2: 0.05
+    permanent_flowrate_q3: 2.5
+    overload_flowrate_q4: 3.13
+  - nominal_diameter: 15
+    installation_position: V
+    minimum_flowrate_q1: 0.05
+    transitional_flowrate_q2: 0.08
+    permanent_flowrate_q3: 2.5
+    overload_flowrate_q4: 3.13
+  - nominal_diameter: 20
+    installation_position: H
+    minimum_flowrate_q1: 0.05
+    transitional_flowrate_q2: 0.08
+    permanent_flowrate_q3: 4.0
+    overload_flowrate_q4: 5.0
+  - nominal_diameter: 20
+    installation_position: V
+    minimum_flowrate_q1: 0.08
+    transitional_flowrate_q2: 0.128
+    permanent_flowrate_q3: 4.0
+    overload_flowrate_q4: 5.0
+  - nominal_diameter: 25
+    installation_position: H
+    minimum_flowrate_q1: 0.0788
+    transitional_flowrate_q2: 0.126
+    permanent_flowrate_q3: 6.3
+    overload_flowrate_q4: 7.88
+  - nominal_diameter: 32
+    installation_position: H
+    minimum_flowrate_q1: 0.125
+    transitional_flowrate_q2: 0.2
+    permanent_flowrate_q3: 10.0
+    overload_flowrate_q4: 12.5
+  - nominal_diameter: 40
+    installation_position: H
+    minimum_flowrate_q1: 0.2
+    transitional_flowrate_q2: 0.32
+    permanent_flowrate_q3: 16.0
+    overload_flowrate_q4: 20.0
+  description: >-
+    Q1 and Q2 are minimum values (≥); Q3 and Q4 are maximum values (≤). Q3 values carry footnote 1). Values
+    use decimal points; source used decimal commas.
+  footnotes:
+  - marker: 1)
+    text: The value of Q3 shall be chosen from the R5 line of ISO 3:1973.

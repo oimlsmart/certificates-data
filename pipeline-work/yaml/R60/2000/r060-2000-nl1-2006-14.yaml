@@ -1,0 +1,194 @@
+_meta:
+  cert_id: 1748
+  num: R060/2000-NL1-2006.14
+  applicant: Precia SA
+  issuing_year: '2006'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-nl1-2006-14.pdf
+certificate:
+  number: R60/2000-NL1-06.14
+  project_number: '607103'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2006-08-31'
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Hugo de Grootplein 1
+  - 3314 EG Dordrecht
+  - The Netherlands
+  - P.O. Box 394
+  - 3300 AJ Dordrecht
+  - NL
+  person_responsible: Ing. C. Oosterman
+  person_title: Manager Product Certification
+  phone: "+31 78 6332332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+applicants:
+- name: Precia Molen
+  address_lines:
+  - 'Siège Social: Le Ruissol'
+  - BP 106 F-07003, Privas
+  - FRANCE
+manufacturers:
+- name: Precia Molen
+  address_lines:
+  - 'Siège Social: Le Ruissol'
+  - BP 106 F-07003, Privas
+  - FRANCE
+certified_type:
+  category: Load cell
+  type_designations:
+  - CSI...
+  description: A shear beam load cell
+characteristics:
+  type_level:
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_pi:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=300-500 kg
+      value:
+        min: 300
+        max: 500
+      footnote_markers: []
+    - model: Emax=500-2000 kg
+      value:
+        min: 500
+        max: 2000
+      footnote_markers: []
+    - model: Emax=2000-10000 kg
+      value:
+        min: 2000
+        max: 10000
+      footnote_markers: []
+  - attribute: max_number_of_verification_intervals_nmax
+    unit_symbol:
+    values:
+    - model: Emax=300-500 kg
+      value: 4000
+      footnote_markers: []
+    - model: Emax=500-2000 kg
+      value: 6000
+      footnote_markers: []
+    - model: Emax=2000-10000 kg
+      value: 4000
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    unit_symbol:
+    values:
+    - model: Emax=300-500 kg
+      value: 12000
+      footnote_markers: []
+    - model: Emax=500-2000 kg
+      value: 15000
+      footnote_markers: []
+    - model: Emax=2000-10000 kg
+      value: 10000
+      footnote_markers: []
+  - attribute: ratio_z_emax_over_2dr
+    unit_symbol:
+    values:
+    - model: Emax=300-500 kg
+      value: 4000
+      footnote_markers: []
+    - model: Emax=500-2000 kg
+      value: 8000
+      footnote_markers: []
+    - model: Emax=2000-10000 kg
+      value: 4000
+      footnote_markers: []
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C
+test_reports:
+- id: TC6482
+  role: documentation_file
+- id: R60/2000-NL1-04.04
+  pages: 40
+  role: test_report
+- id: R60/2000-NL1-05.10
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-06.05
+  pages: 37
+  role: test_report
+- id: R60/2000-NL1-06.13
+  pages: 37
+  role: test_report
+model_family:
+  family_name: CSI...
+  models:
+  - model_id: Emax=300-500 kg
+    label: 300 kg up to and including 500 kg
+    attributes: {}
+  - model_id: Emax=500-2000 kg
+    label: 500 kg up to and including 2000 kg
+    attributes: {}
+  - model_id: Emax=2000-10000 kg
+    label: 2000 kg up to and including 10000 kg
+    attributes: {}
+matrix_tables:
+- name: Load cell specifications
+  columns:
+  - maximum_capacity
+  - accuracy_class
+  - max_number_of_verification_intervals_nmax
+  - ratio_y_emax_over_vmin
+  - ratio_z_emax_over_2dr
+  column_units:
+  - kg
+  -
+  -
+  -
+  -
+  rows:
+  - maximum_capacity:
+      min: 300
+      max: 500
+    accuracy_class: C
+    max_number_of_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 12000
+    ratio_z_emax_over_2dr: 4000
+  - maximum_capacity:
+      min: 500
+      max: 2000
+    accuracy_class: C
+    max_number_of_verification_intervals_nmax: 6000
+    ratio_y_emax_over_vmin: 15000
+    ratio_z_emax_over_2dr: 8000
+  - maximum_capacity:
+      min: 2000
+      max: 10000
+    accuracy_class: C
+    max_number_of_verification_intervals_nmax: 4000
+    ratio_y_emax_over_vmin: 10000
+    ratio_z_emax_over_2dr: 4000
+  description: >-
+    Specifications by capacity range: n_max is the maximum number of load cell verification intervals,
+    Y = Emax/Vmin, Z = Emax/(2 * DR).
+  footnotes: []

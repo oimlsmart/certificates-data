@@ -1,0 +1,194 @@
+_meta:
+  cert_id: 2194
+  num: R060/2000-DE1-2009.08
+  applicant: Sartorius Mechatronics T&H GmbH
+  issuing_year: '2009'
+  status: Valid
+  issuer: DE1
+  recommendation: R60
+  edition_year: 2000
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2000/r060-2000-de1-2009-08.pdf
+certificate:
+  number: R60/2000-DE1-09.08
+  page_total: 2
+  member_state: Germany
+  date_issued: '2009-03-12'
+issuing_authority:
+  name: Physikalisch-Technische Bundesanstalt
+  address_lines:
+  - Bundesallee 100
+  - 38116 Braunschweig
+  person_responsible: Dr. Panagiotis Zervos
+  person_title: Direktor und Professor
+applicants:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+manufacturers:
+- name: Sartorius Mechatronics T&H GmbH
+  address_lines:
+  - Meiendorfer Straße 205
+  - 22145 Hamburg
+  - Germany
+certified_type:
+  category: Load cell
+  type_designations:
+  - MP77
+  module_designation:
+  description: >-
+    Strain gauge bending beam load cell. The load cells of the series MP77 are double bending beam load
+    cells made of stainless steel; the strain gauge application is hermetically sealed by means of a welded
+    on metal bellow.
+characteristics:
+  type_level:
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    dead_load:
+      value: 0
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    dead_load_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 200
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    input_impedance:
+      value: 380
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    values:
+    - model: Emax=10kg
+      value: 10
+    - model: Emax=20kg
+      value: 20
+    - model: Emax=50kg
+      value: 50
+    - model: Emax=100kg
+      value: 100
+    - model: Emax=200kg
+      value: 200
+    - model: Emax=250kg
+      value: 250
+    - model: Emax=500kg
+      value: 500
+  config_level:
+  - attribute: max_load_cell_intervals_nlc
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: 1000
+      unit_symbol:
+    - condition: C3MR
+      value: 3000
+      unit_symbol:
+    - condition: C3MR+
+      value: 3000
+      unit_symbol:
+  - attribute: minimum_load_cell_verification_interval_vmin
+    axis: accuracy_class
+    values:
+    - condition: C1
+      value: Emax/5000
+      unit_symbol: kg
+    - condition: C3MR
+      value: Emax/10000
+      unit_symbol: kg
+    - condition: C3MR+
+      value: Emax/12000
+      unit_symbol: kg
+recommendation:
+  id: R60
+  edition: 2000
+  accuracy_classes:
+  - C1
+  - C3MR
+  - C3MR+
+test_reports:
+- id: 1.12-4039340-1
+  pages: 22
+  role: test_report
+- id: 1.12-4039340-2
+  pages: 18
+  role: test_report
+model_family:
+  family_name: MP77
+  models:
+  - model_id: Emax=10kg
+    label: MP77, Emax 10 kg
+  - model_id: Emax=20kg
+    label: MP77, Emax 20 kg
+  - model_id: Emax=50kg
+    label: MP77, Emax 50 kg
+  - model_id: Emax=100kg
+    label: MP77, Emax 100 kg
+  - model_id: Emax=200kg
+    label: MP77, Emax 200 kg
+  - model_id: Emax=250kg
+    label: MP77, Emax 250 kg
+  - model_id: Emax=500kg
+    label: MP77, Emax 500 kg
+matrix_tables:
+- name: 'Table 1: Essential data'
+  columns:
+  - attribute
+  - unit_symbol
+  - C1
+  - C3MR
+  - C3MR+
+  column_units:
+  -
+  -
+  -
+  -
+  -
+  rows:
+  - attribute: max_load_cell_intervals_nlc
+    unit_symbol:
+    C1: 1000
+    C3MR: 3000
+    C3MR+: 3000
+  - attribute: rated_output
+    unit_symbol: mV/V
+    C1: 2
+    C3MR: 2
+    C3MR+: 2
+  - attribute: maximum_capacity
+    unit_symbol: kg
+    C1: 10/20/50/100/200/250/500
+    C3MR: 10/20/50/100/200/250/500
+    C3MR+: 10/20/50/100/200/250/500
+  - attribute: minimum_load_cell_verification_interval_vmin
+    unit_symbol: kg
+    C1: Emax/5000
+    C3MR: Emax/10000
+    C3MR+: Emax/12000
+  description: >-
+    Metrological characteristics of the MP77 load cells for application in approved weighing instruments,
+    by accuracy class.
+  footnotes: []

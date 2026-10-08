@@ -1,0 +1,208 @@
+_meta:
+  cert_id: 5307
+  num: R76/2006-A-FR2-20.01 Rev. 1
+  applicant: Scaime S.A.S
+  issuing_year: '2021'
+  status: Valid
+  issuer: FR2
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-fr2-2020-01-rev1.pdf
+certificate:
+  number: R76/2006-FR2-20.01
+  scheme: A
+  page_total: 4
+  member_state: FRANCE
+  date_issued: '2021-03-12'
+issuing_authority:
+  name: Laboratoire National de Métrologie et d'Essais
+  address_lines:
+  - 1, rue Gaston Boissier
+  - 75724 Paris Cedex 15
+  - FRANCE
+  person_responsible: Thomas LOMMATZSCH
+  person_title: Head of the Instrumentation and IT Certification
+  phone: 01 40 43 37 00
+  email: info@lne.fr
+  website: lne.fr
+applicants:
+- name: SCAIME SAS
+  address_lines:
+  - Technosite Altéa 294, rue Georges Charpak
+  - 74100 JUVIGNY
+  - FRANCE
+manufacturers:
+- name: SCAIME SAS
+  address_lines:
+  - Technosite Altéa 294, rue Georges Charpak
+  - 74100 JUVIGNY
+  - FRANCE
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - eNod4 WSC
+  description: >-
+    Electronic non-automatic weighing instruments with digital indication, with or without levers, with
+    one weighing range with single interval. They integrate an indicator module Scaime type eNod4 WT intended
+    to be connected to one or several load cells with analog output. The indicator module can be in a
+    single housing or in separate housings, with the transmitter and terminal parts in separate boxes.
+    The load cell has an OIML R60 certificate and is not marked NH; compatibility of indicator and load
+    cell(s) is established by the manufacturer by means of the compatibility of modules form of OIML R76/2006
+    annex F.
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III or IIII
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity_min:
+      value: 200
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    maximum_capacity_max:
+      value: 500
+      unit_symbol: t
+      unit_id:
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 0.2
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    maximum_tare_effect:
+      value: "- Max"
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+      footnote_markers: []
+    software_identification_analog_data_processing_unit:
+      value: '2'
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    software_identification_terminal:
+      value: 2.XX (XX can be modified)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_number_of_scale_intervals
+    axis: accuracy_class
+    values:
+    - condition: III
+      value:
+        min:
+        max: 6000
+      unit_symbol:
+      footnote_markers: []
+    - condition: IIII
+      value:
+        min:
+        max: 1000
+      unit_symbol:
+      footnote_markers: []
+  - attribute: minimum_capacity
+    axis: accuracy_class
+    values:
+    - condition: III
+      value:
+        min: 20
+        max:
+      unit_symbol: e
+      footnote_markers: []
+    - condition: III (instruments that determine a transport tariff)
+      value:
+        min: 5
+        max:
+      unit_symbol: e
+      footnote_markers: []
+    - condition: IIII
+      value:
+        min: 10
+        max:
+      unit_symbol: e
+      footnote_markers: []
+recommendation:
+  id: R76
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: LNE n° P170128 - Document DMSI/1
+  date:
+  pages: 32
+  role: test_report
+- id: LNE n° P170128 - Document DE/1
+  date:
+  pages: 20
+  role: test_report
+- id: LNE n° P170128 - Document DE/2
+  date:
+  pages: 12
+  role: test_report
+- id: LNE n° PCI-P170128/3
+  date:
+  pages: 78
+  role: evaluation_report
+revision_history:
+- revision: '0'
+  date: '2020-11-04'
+  changes: Initial certificate
+- revision: '1'
+  date: '2021-03-12'
+  changes: >-
+    Revision which cancels and replaces the initial certificate to correct the temperature range: [-10
+    °C / +40 °C] instead of [+10 °C / +40 °C].
+components:
+- role: indicator module
+  type_designations:
+  - eNod4 WT
+  alternatives:
+  characteristics:
+    housing_configurations:
+    - single housing
+    - transmitter and terminal parts in separate boxes
+- role: analogue data processing unit (transmitter)
+  type_designations:
+  - eNod4
+  - eNod4-C IO
+  - D-IO1
+  alternatives:
+  characteristics:
+    connectable_quantity:
+      min: 1
+      max: 6
+- role: terminal
+  type_designations:
+  - eNodTouch
+  alternatives:
+  characteristics:
+    versions:
+    - standard
+    - version with USB ports
+- role: Ethernet box
+  type_designations:
+  - Box Ethernet
+  alternatives:
+  characteristics: {}
+- role: load cell
+  type_designations: []
+  alternatives:
+  characteristics:
+    output: analog
+    approval: OIML R60 certificate
+    nh_marked: false

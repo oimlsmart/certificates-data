@@ -1,0 +1,222 @@
+_meta:
+  cert_id: 5751
+  num: R60/2017-A-NL1-22.34 Rev. 0
+  applicant: Giropes SL.
+  issuing_year: '2022'
+  status: Valid
+  issuer: NL1
+  recommendation: R60
+  edition_year: 2017
+  extraction_method: glm-extract
+  source_pdf: certificates/R60/2017/r60-2017-nl1-2022-34-rev0.pdf
+certificate:
+  number: R60/2017-A-NL1-22-34
+  scheme: A
+  project_number: '2506809'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2022-10-06'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Giropes SL
+  address_lines:
+  - Pol. Ind. Empordà Internacional, C/ Molló 3
+  - 17469 Villamalla, Girona
+  - Spain
+manufacturers:
+- name: Giropes SL
+  address_lines:
+  - Pol. Ind. Empordà Internacional, C/ Molló 3
+  - 17469 Villamalla, Girona
+  - Spain
+certified_type:
+  category: Load cell
+  type_designations:
+  - GY17
+  - GY18
+  - GY19
+  module_designation: Analog-passive load cell
+  description: 'A single point load cell, with strain gauges. Registered trade name: GIROPES.'
+characteristics:
+  type_level:
+    minimum_dead_load:
+      value: 0
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    accuracy_class:
+      value: C
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    rated_output:
+      value: 2
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    rated_output_tolerance:
+      value: 0.3
+      unit_symbol: mV/V
+      unit_id:
+      footnote_markers: []
+    max_load_cell_intervals_nlc:
+      value: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    ratio_z_emax_over_2dr:
+      value: 6000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    input_impedance:
+      value: 404
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    input_impedance_tolerance:
+      value: 10
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    apportionment_factor_plc:
+      value: 0.7
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    humidity_class:
+      value: NH
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    safe_overload:
+      value: 150
+      unit_symbol: "%"
+      unit_id:
+      footnote_markers: []
+    safe_overload_reference:
+      value: Emax
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    output_impedance:
+      value: 350
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    output_impedance_tolerance:
+      value: 3
+      unit_symbol: Ω
+      unit_id:
+      footnote_markers: []
+    recommended_excitation:
+      value: 10
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_maximum:
+      value: 15
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    excitation_type:
+      value: AC/DC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    transducer_material:
+      value: Aluminium
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    atmospheric_protection:
+      value: Silicon rubber
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level:
+  - attribute: maximum_capacity
+    axis: Emax range
+    values:
+    - condition: GY17/GY18/GY19, 50 kg up to 500 kg
+      value:
+        min: 50
+        max: 500
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    - condition: GY17/GY18/GY19, 500 kg up to and including 1000 kg
+      value:
+        min: 500
+        max: 1000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+  - attribute: ratio_y_emax_over_vmin
+    axis: Emax range
+    values:
+    - condition: 50 kg up to 500 kg
+      value: 20000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+    - condition: 500 kg up to and including 1000 kg
+      value: 17000
+      unit_symbol:
+      unit_id:
+      footnote_markers:
+      - 1)
+recommendation:
+  id: R60
+  edition: 2017
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - C
+test_reports:
+- id: NMi-2287911-09
+  date: '2022-07-29'
+  pages: 50
+  role: type_evaluation_report
+- id: NMi-2287911-10
+  date: '2022-07-29'
+  pages: 46
+  role: type_evaluation_report
+revision_history:
+- revision: '0'
+  date: '2022-10-06'
+  changes: Initial issue.
+model_family:
+  family_name: GIROPES
+  models:
+  - model_id: GY17
+    label: GY17
+  - model_id: GY18
+    label: GY18
+  - model_id: GY19
+    label: GY19
+footnotes:
+- marker: 1)
+  text: The characteristics for nmax, Y and Z can be reduced separately.

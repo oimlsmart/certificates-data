@@ -1,0 +1,205 @@
+_meta:
+  cert_id: 5472
+  num: R76/2006-A-NL1-18.01 Rev. 1
+  applicant: Dibal S.A
+  issuing_year: '2021'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r076-2006-nl1-2018-01-rev1.pdf
+certificate:
+  number: R76/2006-A-NL1-18.01
+  revision: '1'
+  scheme: A
+  project_number: '2603790'
+  page_total: 2
+  member_state: The Netherlands
+  date_issued: '2021-08-19'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijssseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 6362332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Dibal S.A.
+  address_lines:
+  - Astintze Kalea, 26 - Pol. Ind. Neinver
+  - 48160 Derio, Vizcaya
+  - Spain
+manufacturers:
+- name: Dibal S.A.
+  address_lines:
+  - Astintze Kalea, 26 - Pol. Ind. Neinver
+  - 48160 Derio, Vizcaya
+  - Spain
+certified_type:
+  category: Non-automatic weighing instrument
+  type_designations:
+  - KS-JPOS
+  - K-POS
+  module_designation:
+  description:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_capacity:
+      value:
+        min: 6
+        max: 30
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    verification_scale_interval:
+      value:
+        min: 2
+        max:
+      unit_symbol: g
+      unit_id:
+      footnote_markers: []
+    weighing_ranges:
+      value: Single interval or Multiple range
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_partial_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_weighing_ranges:
+      value: 2
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_scale_intervals:
+      value:
+        min:
+        max: 3000
+      unit_symbol: divisions
+      unit_id:
+      footnote_markers: []
+    max_scale_intervals_scope:
+      value: per weighing range
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    tare_limit:
+      value: T <= Max - e for single interval instruments; T <= Max1 - e1 for multiple range instruments
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    temperature_range:
+      value:
+        min: 5
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+    power_supply_voltage:
+      value: 5
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    power_supply_interface:
+      value: USB
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    application:
+      value: Intended to be used for direct sales to the public
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+  model_level: []
+  config_level: []
+recommendation:
+  id: R76
+  edition: 2006
+  amendment:
+  scheme: A
+  accuracy_classes:
+  - III
+test_reports:
+- id: NMi-1901393-01
+  date: '2018-01-12'
+  pages: 57
+  role: type_evaluation_report
+- id: NMi-2603790-01
+  date: '2021-08-19'
+  pages: 19
+  role: test_report
+revision_history:
+- revision: Initial
+  date: '2018-01-15'
+  changes:
+- revision: '1'
+  date: '2021-08-19'
+  changes: Adding PC software versions and checksum
+components:
+- role: Weighing CPU firmware
+  type_designations:
+  - WLDIBAL
+  alternatives:
+  characteristics:
+    version: 2.0.3
+    checksum: 110C
+- role: PC software
+  type_designations:
+  - JPOSDIBAL
+  - Net XP
+  - Net
+  alternatives: OR
+  characteristics:
+    framework:
+    - Java
+    - ".NET (Win XP or equivalent)"
+    - ".NET (Win 7 or higher)"
+    version:
+    - 1.x.xx (x = 0...9)
+    - 3.1.x.x (x = 0...9)
+    - 3.0.x.x (x = 0...9)
+    checksum:
+    - 8A7DED6411F674524CC47FB81
+    - 6529ABA3
+    - 2ADDCC7C
+footnotes: []
+matrix_tables:
+- name: PC software identification
+  columns:
+  - framework
+  - name
+  - version
+  - checksum
+  column_units:
+  -
+  -
+  -
+  -
+  rows:
+  - framework: Java
+    name: JPOSDIBAL
+    version: 1.x.xx (x = 0...9)
+    checksum: 8A7DED6411F674524CC47FB81
+  - framework: ".NET (Win XP or equivalent)"
+    name: Net XP
+    version: 3.1.x.x (x = 0...9)
+    checksum: 6529ABA3
+  - framework: ".NET (Win 7 or higher)"
+    name: Net
+    version: 3.0.x.x (x = 0...9)
+    checksum: 2ADDCC7C
+  description: Three alternative PC software variants approved for use with the certified weighing instruments.
+  footnotes: []

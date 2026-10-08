@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261008220145868523542c584fa5",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me parse this certificate.\n\nCertificate number: R85/1998-NL1-05.01\nProject number: 500019\nPage total: 2\nMember state: The Netherlands\nDate issued: March 17th, 2005 (the issuing authority signature date). The CIML member signed March 18th, 2005. Usually date_issued is the issuing authority date: 2005-03-17.\n\nOIML issuer id: not explicitly present. Skip.\n\nIssuing authority:\n- name: NMi Certin B.V.\n- address_lines: [\"Hugo de Grootplein 1\", \"3314 EG Dordrecht\"]\n- person_responsible: Ing. C. Oosterman\n- No phone/email/website.\n\nApplicant: Endress + Hauser GmbH + Co. KG, Hauptstrasse 1, Maulburg, Germany.\nManufacturer: same.\n\nCertified type:\n- category: \"Automatic level gauge\" — it's a level gauge. Category could be \"Automatic level gauge\" (R85 is automatic level gauges for displacer and radar types... actually R85 is \"Automatic level gauges for measuring the level of liquid in fixed storage tanks\"). Category: \"Automatic level gauge\".\n- type_designations: [\"Micropilot S FMR 530 DN 150\"] — model Micropilot S FMR 530 DN 150. Type designation maybe \"Micropilot S FMR 530 DN 150\". Include.\n- module_designation: not applicable — could be null. Not mentioned. Omit or null.\n- description: \"Automatic level gauge for measuring the level of liquid in fixed storage tanks\"\n\nmodel_family: only one model, so omit? The rules say include ONLY if cert covers >1 model variant. So omit.\n\ncharacteristics: none numeric given. Omit type_level or empty. I could include a type_level with e.g. accuracy class? Accuracy class is in recommendation. I'll leave characteristics out or with empty type_level. Better to omit characteristics entirely since no values.\n\nRecommendation:\n- id: \"R85\"\n- edition: 1998\n- amendment: null\n- scheme: certificate scheme... The scheme field in recommendation? The schema says scheme (A|B) at certificate level and in recommendation scheme. Hmm. Certificate number R85/1998-NL1-05.01 — is this scheme A or B? OIML-CS scheme A vs B: Scheme A involves issuing authority performing evaluation; scheme B relies on manufacturer's testing. Not stated. I could omit scheme. Actually the certificate-level scheme field: not determinable. Omit.\n\n- accuracy_classes: [2] → \"2\"? The schema says accuracy_classes[]. \"for accuracy class 2\" → [\"2\"] or [2]. I'll use [\"2\"]. Hmm, accuracy classes typically strings like \"C\", \"2\". I'll use [\"2\"].\n\ntest_reports:\n- R85/1998-NL-01.01, 33 pages, role: test_report (it says \"associated Test Report\")\n- CPC/500091/01, 22 pages, role: test_report\n- CPC/500091/02, 24 pages, role: test_report\n- CPC/500091/03, 21 pages, role: test_report\n- CPC/500091/04, 21 pages, role: test_report\n\nDates for test reports: not given. Omit.\n\nrevision_history: not present. Omit.\n\nfootnotes: none.\n\ncertificate.scheme: omit since unknown. Actually, hmm — could be that NL certs are scheme A? Not stated; rule 8 says don't fabricate. Omit.\n\ncertificate number field: \"number\": \"R85/1998-NL1-05.01\"\n\ndate_issued: \"2005-03-17\" — format? Probably ISO. I'll use \"2005-03-17\".\n\nOutput JSON.",
+      "signature": "9ec6bfae84ab4f74a204bb3b"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"certificate\": {\n    \"number\": \"R85/1998-NL1-05.01\",\n    \"project_number\": \"500019\",\n    \"page_total\": 2,\n    \"member_state\": \"The Netherlands\",\n    \"date_issued\": \"2005-03-17\"\n  },\n  \"issuing_authority\": {\n    \"name\": \"NMi Certin B.V.\",\n    \"address_lines\": [\n      \"Hugo de Grootplein 1\",\n      \"3314 EG Dordrecht\"\n    ],\n    \"person_responsible\": \"Ing. C. Oosterman\"\n  },\n  \"applicants\": [\n    {\n      \"name\": \"Endress + Hauser GmbH + Co. KG\",\n      \"address_lines\": [\n        \"Hauptstrasse 1\",\n        \"Maulburg\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"manufacturers\": [\n    {\n      \"name\": \"Endress + Hauser GmbH + Co. KG\",\n      \"address_lines\": [\n        \"Hauptstrasse 1\",\n        \"Maulburg\",\n        \"Germany\"\n      ]\n    }\n  ],\n  \"certified_type\": {\n    \"category\": \"Automatic level gauge\",\n    \"type_designations\": [\n      \"Micropilot S FMR 530 DN 150\"\n    ],\n    \"description\": \"Automatic level gauge for measuring the level of liquid in fixed storage tanks\"\n  },\n  \"recommendation\": {\n    \"id\": \"R85\",\n    \"edition\": 1998,\n    \"accuracy_classes\": [\"2\"]\n  },\n  \"test_reports\": [\n    {\n      \"id\": \"R85/1998-NL-01.01\",\n      \"pages\": 33,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/01\",\n      \"pages\": 22,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/02\",\n      \"pages\": 24,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/03\",\n      \"pages\": 21,\n      \"role\": \"test_report\"\n    },\n    {\n      \"id\": \"CPC/500091/04\",\n      \"pages\": 21,\n      \"role\": \"test_report\"\n    }\n  ]\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 3604,
+    "output_tokens": 1343,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

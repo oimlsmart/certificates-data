@@ -1,0 +1,201 @@
+_meta:
+  cert_id: 2624
+  num: R106/1997-GB1-2007.01 Rev. 2
+  applicant: Avery Berkel
+  issuing_year: '2011'
+  status: Valid
+  issuer: GB1
+  recommendation: R106
+  edition_year: 1997
+  extraction_method: glm-extract
+  source_pdf: certificates/R106/1997/r106-1997-gb1-2007-01-rev2.pdf
+certificate:
+  number: R106/1997-GB1-07.01
+  scheme: A
+  project_number: T1106/0017
+  page_total: 3
+  member_state: United Kingdom of Great Britain and Northern Ireland
+  date_issued: '2011-02-24'
+issuing_authority:
+  name: National Weights and Measures Laboratory (part of National Measurement Office)
+  address_lines:
+  - Stanton Avenue
+  - Teddington
+  - Middlesex
+  - TW11 0JZ
+  - United Kingdom
+  person_responsible: Paul Dixon
+  person_title: Product Certification Manager
+applicants:
+- name: Avery Weigh-Tronix Ltd
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+manufacturers:
+- name: Avery Weigh-Tronix Ltd
+  address_lines:
+  - Foundry Lane
+  - Smethwick
+  - West Midlands B66 2LP
+  - United Kingdom
+certified_type:
+  category: Automatic rail-weighbridge
+  type_designations:
+  - Railweight TSR4000
+  module_designation: Not applicable
+  description: Automatic rail-weighbridge, Railweight TSR4000. Further characteristics see page 2.
+characteristics:
+  type_level:
+    maximum_operating_speed:
+      value:
+        min:
+        max: 10
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+    minimum_operating_speed:
+      value:
+        min: 0.1
+        max:
+      unit_symbol: km/h
+      unit_id:
+      footnote_markers: []
+    maximum_wagon_weight:
+      value:
+        min:
+        max: 120000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_wagon_weight:
+      value:
+        min: 6000
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    scale_interval:
+      value:
+        min: 20
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    maximum_capacity_per_axle:
+      value:
+        min:
+        max: 33000
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    minimum_capacity_per_axle:
+      value:
+        min: 3000
+        max:
+      unit_symbol: kg
+      unit_id:
+      footnote_markers: []
+    max_weighline_transducers:
+      value: 16
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    max_weighline_transducer_pairs:
+      value: 8
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    maximum_number_and_type_of_wagons_per_train:
+      value: Determined at verification
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    direction_of_weighing:
+      value: Bi-directional (train pushed/pulled)
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    power_supply_type:
+      value: AC
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    operating_temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id:
+      footnote_markers: []
+  config_level:
+  - attribute: accuracy_class
+    axis: weighing_mode
+    values:
+    - condition: coupled wagon weighing
+      value: 0.5
+      unit_symbol:
+    - condition: total train weighing
+      value: 0.2
+      unit_symbol:
+  - attribute: power_supply_voltage
+    axis: motherboard_and_power_supply_configuration
+    values:
+    - condition: standard
+      value:
+        min: 90
+        max: 230
+      unit_symbol: V
+    - condition: with Advantech PCI-6873 motherboard and an Enhance 200W Micro ATX power supply unit
+      value:
+        min: 115
+        max: 230
+      unit_symbol: V
+  - attribute: power_supply_frequency
+    axis: motherboard_and_power_supply_configuration
+    values:
+    - condition: standard
+      value: 50
+      unit_symbol: Hz
+    - condition: with Advantech PCI-6873 motherboard and an Enhance 200W Micro ATX power supply unit
+      value:
+        min: 47
+        max: 63
+      unit_symbol: Hz
+recommendation:
+  id: R106
+  edition: 1997
+  scheme: A
+  accuracy_classes:
+  - '0.5'
+  - '0.2'
+test_reports:
+- id: TR:0518
+  role: test_report
+- id: TR:0594
+  role: test_report
+- id: F20221
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2010-10-28'
+  changes: Certificate first issued.
+- revision: '1'
+  date: '2010-04-13'
+  changes: Capacity increased to 16,500 kg per wheel.
+- revision: '2'
+  date: '2011-02-24'
+  changes: Alternative motherboard and power supply unit.
+components:
+- role: motherboard
+  type_designations:
+  - Advantech PCI-6873
+  alternatives: OR
+  characteristics: {}
+- role: power_supply_unit
+  type_designations:
+  - Enhance 200W Micro ATX
+  alternatives: OR
+  characteristics: {}
+footnotes: []
