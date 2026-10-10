@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010100629d75bedc41cfa49d3",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The fragment is a revision history table. Let me extract it.\n\nRows:\n- Initial | 2 November 2020 | -\n- 1 | 26 August 2021 | Revision due to new hardware: Field terminal board version BD. Main Board version AJ.\n- 2 | 18 August 2022 | Addition of firmware V3.40.\n- 3 | 13 December 2022 | New Board (Ethernet Range Extender)\n- 4 | 11 June 2025 | Addition of Q.Sonic max6 6-path meters for accuracy Class 1.0 only.\n\nSchema: revision_history[]: revision (string), date, changes.\n\nDates should be ISO? Not specified; I'll use ISO format \"2020-11-02\" etc. The schema says `date`. I'll use ISO format.\n\nOutput only revision_history.",
+      "signature": "3979e6408fd64acca19b776a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"revision_history\": [\n    {\n      \"revision\": \"Initial\",\n      \"date\": \"2020-11-02\",\n      \"changes\": null\n    },\n    {\n      \"revision\": \"1\",\n      \"date\": \"2021-08-26\",\n      \"changes\": \"Revision due to new hardware: Field terminal board version BD. Main Board version AJ.\"\n    },\n    {\n      \"revision\": \"2\",\n      \"date\": \"2022-08-18\",\n      \"changes\": \"Addition of firmware V3.40.\"\n    },\n    {\n      \"revision\": \"3\",\n      \"date\": \"2022-12-13\",\n      \"changes\": \"New Board (Ethernet Range Extender)\"\n    },\n    {\n      \"revision\": \"4\",\n      \"date\": \"2025-06-11\",\n      \"changes\": \"Addition of Q.Sonic max6 6-path meters for accuracy Class 1.0 only.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 3239,
+    "output_tokens": 389,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

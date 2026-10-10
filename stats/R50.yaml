@@ -1,22 +1,26 @@
 recommendation: R50
-sample_size: 5
+sample_size: 9
 summary:
-  certs_with_model_family: 3
-  certs_with_components: 4
+  certs_with_model_family: 6
+  certs_with_components: 7
   certs_with_matrix_tables: 1
   certs_with_footnotes: 2
-  total_model_variants: 14
+  total_model_variants: 20
   total_matrix_tables: 1
 type_level_characteristics:
   accuracy_class:
     fill_rate: 1.0
-    present_count: 5
+    present_count: 9
     unit_symbol:
     top_values:
+    - range: min=1, max=None
+      count: 3
     - value: N/A
       count: 5
+    - value: 0.5 & 1
+      count: 1
   belt_length:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: m
     unit_id: u:meter
@@ -24,46 +28,96 @@ type_level_characteristics:
     - value: 4
       count: 1
   belt_speed:
-    fill_rate: 0.4
-    present_count: 2
+    fill_rate: 0.333
+    present_count: 3
     unit_symbol: m/s
-    unit_id: u:meter_per_second
     top_values:
+    - range: min=0.2, max=0.5
+      count: 2
     - range: min=0.5, max=5.2
       count: 1
-    - range: min=0.2, max=0.5
-      count: 1
   belt_speed_v:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: m/s
     unit_id: u:meter_per_second
     top_values:
     - value: 2
       count: 1
+  belt_velocity_type:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Single speed
+      count: 1
+  climatic_environment:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Condensing (open)
+      count: 1
+  climatic_environment_class:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Condensing (open)
+      count: 1
+  climatic_environment_condensation:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Condensing (open)
+      count: 1
   climatic_environment_condition:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
     - value: Non-condensing(closed)
       count: 1
+  climatic_temperature_range:
+    fill_rate: 0.222
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-10, max=40
+      count: 2
+  electromagnetic_class:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: E2
+      count: 1
+  electromagnetic_environment:
+    fill_rate: 0.333
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: E1, E2
+      count: 2
+    - value: E1 and E2
+      count: 1
   electromagnetic_environment_class:
-    fill_rate: 0.4
+    fill_rate: 0.222
     present_count: 2
     unit_symbol:
     top_values:
     - value: E2
       count: 2
   embedded_software_identification:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
     - value: WIM3-7.4-20230824
       count: 1
   humidity_class:
-    fill_rate: 0.6
+    fill_rate: 0.333
     present_count: 3
     by_unit:
       "°C":
@@ -77,17 +131,42 @@ type_level_characteristics:
         top_values:
         - value: H1
           count: 1
-  load_cell_cable:
-    fill_rate: 0.4
+  interfaces:
+    fill_rate: 0.222
     present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Load cell connection (hardwired), Speed sensor, RS232, RS485, Digital I/O, Modbus connection
+      count: 1
+    - value: Load cell connection (hardwired); Speed sensor; RS232; RS485; Digital I/O; Modbus connection
+      count: 1
+  load_cell_cable:
+    fill_rate: 0.556
+    present_count: 5
     unit_symbol:
     top_values:
     - value: 4
       count: 1
+    - value: 4 wire and screen
+      count: 3
     - value: 4-wire and shield
       count: 1
+  load_cell_excitation_voltage:
+    fill_rate: 0.333
+    present_count: 3
+    by_unit:
+      V:
+        count: 2
+        top_values:
+        - value: 10
+          count: 2
+      Vdc:
+        count: 1
+        top_values:
+        - value: 10
+          count: 1
   load_cells_excitation_voltage:
-    fill_rate: 0.4
+    fill_rate: 0.222
     present_count: 2
     unit_symbol: V
     unit_id: u:volt
@@ -97,32 +176,33 @@ type_level_characteristics:
     - value: 5
       count: 1
   material:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
     - value: Bulk material (the ceramic particles were used for in-situ product tests during type evaluation)
       count: 1
   maximum_capacity:
-    fill_rate: 0.6
-    present_count: 3
+    fill_rate: 0.444
+    present_count: 4
     by_unit:
       kg:
-        count: 2
+        count: 3
         top_values:
+        - value: 55.6
+          count: 1
         - range: min=2667, max=2667
           count: 1
         - range: min=55.6, max=55.6
           count: 1
-        unit_id: u:kilogram
       'null':
         count: 1
         top_values:
         - value: N/A
           count: 1
   maximum_flow_rate:
-    fill_rate: 0.8
-    present_count: 4
+    fill_rate: 0.556
+    present_count: 5
     by_unit:
       'null':
         count: 2
@@ -137,16 +217,20 @@ type_level_characteristics:
         - value: N/A
           count: 1
         unit_id: u:metric_ton_per_hour
+      kg/h:
+        count: 1
+        top_values:
+        - range: min=20000, max=100000
+          count: 1
   maximum_load_cell_impedance:
-    fill_rate: 0.4
-    present_count: 2
+    fill_rate: 0.556
+    present_count: 5
     unit_symbol: Ω
-    unit_id: u:ohm
     top_values:
     - value: 1100
-      count: 2
+      count: 5
   maximum_pulse_frequency:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: Hz
     unit_id: u:hertz
@@ -154,7 +238,7 @@ type_level_characteristics:
     - value: 1000
       count: 1
   measuring_range:
-    fill_rate: 0.4
+    fill_rate: 0.222
     present_count: 2
     unit_symbol: mV
     unit_id: u:volt
@@ -163,8 +247,24 @@ type_level_characteristics:
       count: 1
     - value: 5
       count: 1
+  measuring_range_maximum_voltage:
+    fill_rate: 0.333
+    present_count: 3
+    unit_symbol: mV
+    top_values:
+    - value: 50
+      count: 3
+  measuring_range_minimum_voltage:
+    fill_rate: 0.333
+    present_count: 3
+    unit_symbol: mV
+    top_values:
+    - value: 7.6
+      count: 2
+    - value: 2.6
+      count: 1
   minimum_dead_load_voltage:
-    fill_rate: 0.4
+    fill_rate: 0.222
     present_count: 2
     by_unit:
       μV:
@@ -180,17 +280,18 @@ type_level_characteristics:
           count: 1
         unit_id: u:volt
   minimum_flow_rate:
-    fill_rate: 0.8
-    present_count: 4
+    fill_rate: 0.556
+    present_count: 5
     by_unit:
       "%":
-        count: 2
+        count: 3
         top_values:
+        - value: 20
+          count: 1
         - range: min=10, max=N/A
           count: 1
         - range: min=20, max=N/A
           count: 1
-        unit_id: u:percent
       'null':
         count: 1
         top_values:
@@ -202,36 +303,59 @@ type_level_characteristics:
         - range: min=240, max=240
           count: 1
         unit_id: u:metric_ton_per_hour
+  minimum_flow_rate_reference:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Qmax
+      count: 1
   minimum_input_voltage_per_verification_scale_interval:
-    fill_rate: 0.4
-    present_count: 2
-    unit_symbol: μV
-    unit_id: u:volt
-    top_values:
-    - value: 3.13
-      count: 1
-    - value: 2.5
-      count: 1
+    fill_rate: 0.556
+    present_count: 5
+    by_unit:
+      μV:
+        count: 4
+        top_values:
+        - value: 2
+          count: 2
+        - value: 3.13
+          count: 1
+        - value: 2.5
+          count: 1
+      µV:
+        count: 1
+        top_values:
+        - value: 2
+          count: 1
   minimum_load_cell_impedance:
-    fill_rate: 0.4
-    present_count: 2
+    fill_rate: 0.556
+    present_count: 5
     unit_symbol: Ω
-    unit_id: u:ohm
     top_values:
+    - value: 28
+      count: 3
     - value: 75
       count: 1
     - value: 87.5
       count: 1
   minimum_totalised_load:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: t
     unit_id: u:metric_ton
     top_values:
     - value: 3.6
       count: 1
+  minimum_totalized_load:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Depending on configuration
+      count: 1
   minimum_totalized_load_sigmin:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: t
     unit_id: u:metric_ton
@@ -239,17 +363,18 @@ type_level_characteristics:
     - value: 24
       count: 1
   operating_speed:
-    fill_rate: 0.4
-    present_count: 2
+    fill_rate: 0.556
+    present_count: 5
     unit_symbol: m/s
-    unit_id: u:meter_per_second
     top_values:
+    - range: min=0.2, max=5.0
+      count: 3
     - range: min=0.4, max=5.0
       count: 1
     - range: min=0.5, max=3.5
       count: 1
   power_supply_dc:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: VDC
     unit_id: u:volt
@@ -257,80 +382,133 @@ type_level_characteristics:
     - value: 24
       count: 1
   power_supply_frequency:
-    fill_rate: 0.8
-    present_count: 4
+    fill_rate: 0.778
+    present_count: 7
     unit_symbol: Hz
-    unit_id: u:hertz
     top_values:
     - range: min=50, max=50
       count: 4
+    - range: min=50, max=60
+      count: 3
   power_supply_type:
-    fill_rate: 0.6
-    present_count: 3
+    fill_rate: 0.778
+    present_count: 7
     unit_symbol:
     top_values:
     - value: AC
-      count: 3
+      count: 6
+    - value: DC
+      count: 1
   power_supply_voltage:
-    fill_rate: 0.8
-    present_count: 4
+    fill_rate: 0.556
+    present_count: 5
     unit_symbol: V
-    unit_id: u:volt
     top_values:
     - range: min=220, max=220
       count: 2
+    - range: min=12, max=24
+      count: 1
     - range: min=100, max=240
       count: 1
     - range: min=110, max=120
       count: 1
-  qmin_reference:
-    fill_rate: 0.2
+  products_weighed:
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
-    - value: Qmax
+    - value: Food products
       count: 1
+  qmax:
+    fill_rate: 0.333
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: Dependent upon application
+      count: 3
+  qmin:
+    fill_rate: 0.333
+    present_count: 3
+    by_unit:
+      'null':
+        count: 2
+        top_values:
+        - value: "≥ 20% Qmax"
+          count: 2
+      "%":
+        count: 1
+        top_values:
+        - range: min=20, max=None
+          count: 1
+  qmin_reference:
+    fill_rate: 0.222
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Qmax
+      count: 2
   reduction_ratio:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
     - value: 0.5
       count: 1
+  reduction_ratio_load_receptor:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '1:2'
+      count: 1
   sigma_min:
-    fill_rate: 0.4
-    present_count: 2
+    fill_rate: 0.444
+    present_count: 4
     unit_symbol:
     top_values:
     - value: Dependent upon application
-      count: 2
+      count: 4
   software_identification:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol:
     top_values:
     - value: Ver 2.3
       count: 1
+  sum_min:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Dependent upon application
+      count: 1
   temperature_range:
-    fill_rate: 0.6
-    present_count: 3
+    fill_rate: 0.444
+    present_count: 4
     unit_symbol: "°C"
-    unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
-      count: 3
+      count: 4
+  temperature_range_indicator:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-10, max=40
+      count: 1
   totalisation_scale_interval:
-    fill_rate: 0.8
-    present_count: 4
+    fill_rate: 0.778
+    present_count: 7
     by_unit:
       t:
-        count: 3
+        count: 6
         top_values:
+        - range: min=0.001, max=None
+          count: 3
         - range: min=0.001, max=N/A
           count: 2
         - value: d≥0.001t
           count: 1
-        unit_id: u:metric_ton
       kg:
         count: 1
         top_values:
@@ -338,30 +516,36 @@ type_level_characteristics:
           count: 1
         unit_id: u:kilogram
   totalisation_scale_interval_d:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: kg
     unit_id: u:kilogram
     top_values:
     - value: 10
       count: 1
+  totalization_scale_interval:
+    fill_rate: 0.111
+    present_count: 1
+    unit_symbol: kg
+    top_values:
+    - value: 1
+      count: 1
   weigh_length:
-    fill_rate: 0.6
-    present_count: 3
+    fill_rate: 0.778
+    present_count: 7
     by_unit:
       'null':
-        count: 2
+        count: 5
         top_values:
         - value: Dependent upon application
-          count: 2
+          count: 5
       m:
-        count: 1
+        count: 2
         top_values:
         - value: 1
-          count: 1
-        unit_id: u:meter
+          count: 2
   weigh_length_wl:
-    fill_rate: 0.2
+    fill_rate: 0.111
     present_count: 1
     unit_symbol: m
     unit_id: u:meter
@@ -375,6 +559,8 @@ model_level_attributes:
   minimum_flow_rate: 1
   minimum_totalized_load: 1
 config_level_attributes:
+  power_supply_voltage: 3
+  number_of_weighing_platforms: 1
   number_of_weigh_idlers: 1
 matrix_table_names:
   Specifications for M2400-B04-FB02-900-Flowscale: 1

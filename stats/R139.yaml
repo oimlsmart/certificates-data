@@ -1,18 +1,20 @@
 recommendation: R139
-sample_size: 39
+sample_size: 50
 summary:
-  certs_with_model_family: 21
-  certs_with_components: 23
-  certs_with_matrix_tables: 12
-  certs_with_footnotes: 8
-  total_model_variants: 59
-  total_matrix_tables: 17
+  certs_with_model_family: 30
+  certs_with_components: 31
+  certs_with_matrix_tables: 19
+  certs_with_footnotes: 10
+  total_model_variants: 128
+  total_matrix_tables: 30
 type_level_characteristics:
   accuracy_class:
-    fill_rate: 1.0
-    present_count: 39
+    fill_rate: 0.9
+    present_count: 45
     unit_symbol:
     top_values:
+    - value: 1.5
+      count: 6
     - value: '2'
       count: 13
     - value: '1.5'
@@ -25,25 +27,109 @@ type_level_characteristics:
       count: 1
     - value: '["1.5", "2"]'
       count: 1
+  ambient_humidity:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: non condensing
+      count: 1
+  ambient_temperature:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    top_values:
+    - range: min=-40, max=55
+      count: 1
+  ambient_temperature_range:
+    fill_rate: 0.16
+    present_count: 8
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-40, max=55
+      count: 8
   ambient_temperature_range_cdwxsb:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - range: min=-40, max=55
       count: 1
-  environmental_class:
-    fill_rate: 0.077
-    present_count: 3
+  climatic_class:
+    fill_rate: 0.02
+    present_count: 1
     unit_symbol:
     top_values:
+    - value: E2
+      count: 1
+  delivery_hose_max_length:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: m
+    top_values:
+    - value: 6
+      count: 1
+  delivery_hose_maximum_length:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: m
+    top_values:
+    - value: 6
+      count: 1
+  design_pressure:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - range: min=0, max=300
+      count: 1
+  design_temperature:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-40, max=60
+      count: 1
+  dispenser_design:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: one-sided or double-sided
+      count: 1
+  environment_class:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M2 / E1
+      count: 1
+  environment_classes:
+    fill_rate: 0.08
+    present_count: 4
+    unit_symbol:
+    top_values:
+    - value: M1 / E1
+      count: 2
+    - value: M2 / E1
+      count: 1
+    - value: M2 / E2
+      count: 1
+  environmental_class:
+    fill_rate: 0.1
+    present_count: 5
+    unit_symbol:
+    top_values:
+    - value: M2 / E2
+      count: 2
     - value: M1
       count: 2
     - value: M2
       count: 1
   environmental_classes:
-    fill_rate: 0.769
-    present_count: 30
+    fill_rate: 0.66
+    present_count: 33
     unit_symbol:
     top_values:
     - value: '{"mechanical" => "M1", "electromagnetic" => "E2"}'
@@ -54,6 +140,12 @@ type_level_characteristics:
       count: 5
     - value: '{"mechanical" => "M1"}'
       count: 2
+    - value: see fixed instruments or devices installed outdoors
+      count: 1
+    - value: fixed instruments or devices installed outdoors
+      count: 1
+    - value: M1 / E2
+      count: 1
     - value: '{"mechanical" => "M3", "electromagnetic" => "E2", "humidity" => "H3"}'
       count: 1
     - value: '{"electromagnetic" => "E1", "mechanical" => "M2"}'
@@ -61,36 +153,71 @@ type_level_characteristics:
     - value: '{"mechanical" => "M2", "electromagnetic" => "E1"}'
       count: 1
   environmental_classification:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: M1
       count: 1
+  explosion_protection_marking:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: II 2G IIA T3
+      count: 1
+  filling_pressure_reference_temperature:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - value: 15
+      count: 2
   flow_direction:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: bi-directional
       count: 1
   flow_rate:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: Depending on flow sensor used
       count: 1
+  flow_rate_range:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: kg/min
+    top_values:
+    - range: min=0.8, max=80
+      count: 1
   gas_temperature:
-    fill_rate: 0.051
+    fill_rate: 0.04
     present_count: 2
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=0
       count: 2
+  gas_temperature_range:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-40, max=60
+      count: 1
+  humidity_class:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M2
+      count: 1
   intended_for:
-    fill_rate: 0.051
+    fill_rate: 0.04
     present_count: 2
     unit_symbol:
     top_values:
@@ -99,28 +226,30 @@ type_level_characteristics:
     - value: Hydrogen(H2)
       count: 1
   intended_for_measurement:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: Compressed Natural Gas
       count: 1
   intended_for_measurement_of:
-    fill_rate: 0.462
-    present_count: 18
+    fill_rate: 0.4
+    present_count: 20
     unit_symbol:
     top_values:
     - value: Compressed gases including Hydrogen
       count: 4
     - value: Compressed Natural Gas(CNG)
       count: 3
+    - value: Compressed Natural Gas
+      count: 2
     - value: Hydrogen(H2)
       count: 2
     - value: Hydrogen refuelling
       count: 2
     - value: Hydrogen
       count: 2
-    - value: Compressed Natural Gas
+    - value: CNG
       count: 1
     - value: Compressed gaseous fuels
       count: 1
@@ -128,10 +257,8 @@ type_level_characteristics:
       count: 1
     - value: CNG or Hydrogen
       count: 1
-    - value: Compressed gas(e.g.CNG or hydrogen)
-      count: 1
   intended_for_the_measurement_of:
-    fill_rate: 0.308
+    fill_rate: 0.24
     present_count: 12
     unit_symbol:
     top_values:
@@ -148,14 +275,126 @@ type_level_characteristics:
     - value: Hydrogen refuelling
       count: 1
   mass_meter_communication:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: RS-485 communication protocol
       count: 1
+  max_fast_fill_pressure_pvmax:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 26.5
+      count: 1
+  max_filling_pressure_pv:
+    fill_rate: 0.08
+    present_count: 4
+    unit_symbol: MPa
+    top_values:
+    - value: 20.0
+      count: 4
+  max_filling_pressure_pvmax:
+    fill_rate: 0.06
+    present_count: 3
+    by_unit:
+      MPa:
+        count: 2
+        top_values:
+        - value: 26.5
+          count: 2
+      bar:
+        count: 1
+        top_values:
+        - value: 230
+          count: 1
+  max_filling_pressure_reference_temperature:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - value: 15
+      count: 2
+  max_flow_rate_qmax:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: kg/min
+    top_values:
+    - value: 40
+      count: 1
+  max_gas_pressure_pmax:
+    fill_rate: 0.06
+    present_count: 3
+    unit_symbol: MPa
+    top_values:
+    - value: 30.0
+      count: 3
+  max_gas_storage_pressure_pst:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol: MPa
+    top_values:
+    - value: 30.0
+      count: 2
+  max_measurement_systems:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 1
+  max_number_of_cars_filled_simultaneously:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 1
+  max_number_of_measurement_systems:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 2
+  max_number_of_simultaneous_vehicles:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 1
+  max_pressure_of_gas_pmax:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 30.0
+      count: 1
+  max_pressure_pmax:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 30.0
+      count: 1
+  max_storage_pressure_pst:
+    fill_rate: 0.06
+    present_count: 3
+    unit_symbol: MPa
+    top_values:
+    - value: 30.0
+      count: 3
+  maximum_fill_pressure:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: bar(g)
+    top_values:
+    - range: min=200, max=250
+      count: 1
   maximum_flow_rate:
-    fill_rate: 0.179
+    fill_rate: 0.14
     present_count: 7
     by_unit:
       kg/min:
@@ -174,57 +413,62 @@ type_level_characteristics:
         - range: min=0.133, max=4
           count: 1
   maximum_mass_indication:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 6
       count: 1
   maximum_number_of_main_indicating_device:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 4
       count: 1
   maximum_number_of_nozzles:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 4
       count: 1
   maximum_number_of_nozzles_connected_to_each_indicating_device:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 1
       count: 1
   maximum_operating_pressure:
-    fill_rate: 0.051
-    present_count: 2
+    fill_rate: 0.06
+    present_count: 3
     unit_symbol: bar(g)
-    unit_id: u:bar
     top_values:
     - range: min=200, max=250
-      count: 2
+      count: 3
   maximum_pressure:
-    fill_rate: 0.256
-    present_count: 10
+    fill_rate: 0.24
+    present_count: 12
     by_unit:
       bar(g):
-        count: 5
+        count: 6
         top_values:
-        - value: 300
-          count: 1
         - value: 350
+          count: 2
+        - value: 300
           count: 1
         - value: 875
           count: 1
         - value: N/A
           count: 2
-        unit_id: u:bar
+      bar:
+        count: 2
+        top_values:
+        - value: 300
+          count: 1
+        - value: 1060
+          count: 1
       MPa:
         count: 2
         top_values:
@@ -240,14 +484,8 @@ type_level_characteristics:
           count: 1
         - value: N/A
           count: 1
-      bar:
-        count: 1
-        top_values:
-        - value: 1060
-          count: 1
-        unit_id: u:bar
   maximum_pressure_cng050:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: bar(g)
     unit_id: u:bar
@@ -255,7 +493,7 @@ type_level_characteristics:
     - value: 317
       count: 1
   maximum_pressure_cngmass:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: bar(g)
     unit_id: u:bar
@@ -263,7 +501,7 @@ type_level_characteristics:
     - value: 350
       count: 1
   maximum_pressure_of_gas:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: MPa
     unit_id: u:pascal
@@ -271,7 +509,7 @@ type_level_characteristics:
     - value: 20
       count: 1
   maximum_pressure_of_the_gas_pmax:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: MPa
     unit_id: u:pascal
@@ -279,49 +517,48 @@ type_level_characteristics:
     - value: 87.5
       count: 1
   maximum_price_indication:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 6
       count: 1
   maximum_price_to_pay:
-    fill_rate: 0.128
+    fill_rate: 0.1
     present_count: 5
     unit_symbol:
     top_values:
     - value: 6
       count: 5
   maximum_quantity_indication:
-    fill_rate: 0.103
+    fill_rate: 0.08
     present_count: 4
     unit_symbol:
     top_values:
     - value: 6
       count: 4
   maximum_storage_pressure:
-    fill_rate: 0.128
-    present_count: 5
+    fill_rate: 0.14
+    present_count: 7
     by_unit:
+      bar(g):
+        count: 4
+        top_values:
+        - range: min=200, max=300
+          count: 4
       MPa:
         count: 2
         top_values:
         - value: 25
           count: 2
         unit_id: u:pascal
-      bar(g):
-        count: 2
-        top_values:
-        - range: min=200, max=300
-          count: 2
-        unit_id: u:bar
       'null':
         count: 1
         top_values:
         - value: 500
           count: 1
   maximum_unit_price:
-    fill_rate: 0.128
+    fill_rate: 0.1
     present_count: 5
     unit_symbol:
     top_values:
@@ -330,42 +567,109 @@ type_level_characteristics:
     - value: 4
       count: 1
   maximum_unit_price_indication:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 6
       count: 1
   maximum_volume_indication:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: 6
       count: 1
+  measured_gas:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: natural gas (CNG)
+      count: 1
+    - value: natural gas (methane)
+      count: 1
+  measured_medium:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Compressed Natural Gas
+      count: 2
+  measured_product:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Compressed Natural Gas
+      count: 2
+  min_flow_rate_qmin:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: kg/min
+    top_values:
+    - value: 1
+      count: 1
+  min_gas_pressure_pmin:
+    fill_rate: 0.06
+    present_count: 3
+    unit_symbol: MPa
+    top_values:
+    - value: 2.0
+      count: 2
+    - value: 0.3
+      count: 1
+  min_measured_quantity_mmq:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: kg
+    top_values:
+    - value: 2
+      count: 1
+  min_pressure_of_gas_pmin:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 2.0
+      count: 1
+  min_pressure_pmin:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 2.0
+      count: 1
+  minimum_maximum_flow_rate:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol: kg/min
+    top_values:
+    - range: min=1.3, max=77
+      count: 2
   minimum_measured_quantity:
-    fill_rate: 0.41
-    present_count: 16
+    fill_rate: 0.36
+    present_count: 18
     by_unit:
       kg:
-        count: 15
+        count: 17
         top_values:
         - value: 1
-          count: 11
+          count: 13
         - value: 2
           count: 2
         - value: 0.2
           count: 1
         - value: '{"CNGMass" => 5, "CNG050" => 1}'
           count: 1
-        unit_id: u:kilogram
+        unit_id: u:kg
       'null':
         count: 1
         top_values:
         - value: 1
           count: 1
   minimum_measured_quantity_cng050:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg
     unit_id: u:kilogram
@@ -373,7 +677,7 @@ type_level_characteristics:
     - value: 1
       count: 1
   minimum_measured_quantity_cngmass:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg
     unit_id: u:kilogram
@@ -381,15 +685,16 @@ type_level_characteristics:
     - value: 1
       count: 1
   minimum_measured_quantity_mmq:
-    fill_rate: 0.026
-    present_count: 1
+    fill_rate: 0.06
+    present_count: 3
     unit_symbol: kg
-    unit_id: u:kilogram
     top_values:
+    - value: 2
+      count: 2
     - value: 1
       count: 1
   nominal_maximum_capacity:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg/min
     unit_id: u:kilogram_per_minute
@@ -397,7 +702,7 @@ type_level_characteristics:
     - value: 3.6
       count: 1
   nominal_maximum_capacity_qmax:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg/min
     unit_id: u:kilogram_per_minute
@@ -405,7 +710,7 @@ type_level_characteristics:
     - value: 3.6
       count: 1
   nominal_minimum_capacity:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg/min
     unit_id: u:kilogram_per_minute
@@ -413,32 +718,63 @@ type_level_characteristics:
     - value: 0.133
       count: 1
   nominal_minimum_capacity_qmin:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: kg/min
     unit_id: u:kilogram_per_minute
     top_values:
     - value: 0.133
       count: 1
+  number_of_measurement_systems:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=2
+      count: 1
+  number_of_pressure_banks:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=3
+      count: 1
+  number_of_sequential_fillings:
+    fill_rate: 0.04
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - range: min=1, max=4
+      count: 1
+    - range: min=1, max=3
+      count: 1
+  number_of_supply_stages:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=3
+      count: 1
   output:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: Pulses
       count: 1
   power_supply_frequency:
-    fill_rate: 0.538
-    present_count: 21
+    fill_rate: 0.52
+    present_count: 26
     by_unit:
       Hz:
-        count: 17
+        count: 22
         top_values:
+        - value: 50
+          count: 4
         - range: min=50, max=60
-          count: 13
+          count: 14
         - range: min=50, max=50
           count: 4
-        unit_id: u:hertz
       'null':
         count: 4
         top_values:
@@ -447,23 +783,25 @@ type_level_characteristics:
         - range: min=50, max=60
           count: 2
   power_supply_type:
-    fill_rate: 0.41
-    present_count: 16
+    fill_rate: 0.4
+    present_count: 20
     unit_symbol:
     top_values:
     - value: AC
-      count: 11
+      count: 13
     - value: AC/DC
       count: 4
     - value: DC
-      count: 1
+      count: 3
   power_supply_voltage:
-    fill_rate: 0.744
-    present_count: 29
+    fill_rate: 0.68
+    present_count: 34
     by_unit:
       V:
-        count: 19
+        count: 24
         top_values:
+        - value: 230
+          count: 5
         - range: min=230, max=230
           count: 10
         - range: min=185, max=245
@@ -480,7 +818,6 @@ type_level_characteristics:
           count: 1
         - range: min=15, max=26
           count: 1
-        unit_id: u:volt
       V DC:
         count: 3
         top_values:
@@ -518,26 +855,42 @@ type_level_characteristics:
         - range: min=100, max=240
           count: 1
         unit_id: u:volt
+  pressure_relief_valve_opening_pressure:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 253
+      count: 1
+  product_temperature:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    top_values:
+    - range: min=-25, max=55
+      count: 1
   product_temperature_range:
-    fill_rate: 0.41
-    present_count: 16
+    fill_rate: 0.4
+    present_count: 20
     by_unit:
       "°C":
-        count: 14
+        count: 18
         top_values:
         - range: min=-25, max=55
-          count: 3
-        - range: min=-40, max=40
-          count: 3
+          count: 4
         - range: min=-40, max=55
+          count: 4
+        - range: min=-40, max=40
           count: 3
         - range: min=-40, max=0
           count: 3
         - range: min=-50, max=125
+          count: 2
+        - range: min=-50, max=80
           count: 1
         - value: '{"CNGMass" => {"min" => -40, "max" => 55}, "CNG050" => {"min" => -25, "max" => 55}}'
           count: 1
-        unit_id: u:degree_Celsius
       'null':
         count: 2
         top_values:
@@ -546,7 +899,7 @@ type_level_characteristics:
         - value: Depending on flow sensor used
           count: 1
   product_temperature_range_cng050:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -554,7 +907,7 @@ type_level_characteristics:
     - range: min=-25, max=55
       count: 1
   product_temperature_range_cngmass:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -562,7 +915,7 @@ type_level_characteristics:
     - range: min=-40, max=55
       count: 1
   ratio_qmax_over_qmin:
-    fill_rate: 0.103
+    fill_rate: 0.08
     present_count: 4
     unit_symbol:
     top_values:
@@ -570,8 +923,56 @@ type_level_characteristics:
       count: 3
     - range: min=10, max=N/A
       count: 1
+  scale_interval_mass_display:
+    fill_rate: 0.08
+    present_count: 4
+    unit_symbol: kg
+    top_values:
+    - value: 0.01
+      count: 2
+    - value: 0.01 or 0.001
+      count: 2
+  sequential_filling:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=3
+      count: 1
+  sequential_filling_operations:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=3
+      count: 1
+  sequential_filling_range:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=1, max=3
+      count: 1
+  shutoff_pressure:
+    fill_rate: 0.02
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 230
+      count: 1
+  software_checksum:
+    fill_rate: 0.08
+    present_count: 4
+    unit_symbol:
+    top_values:
+    - value: 3C4A
+      count: 2
+    - value: 0X13BD2D46
+      count: 1
+    - value: 9C99
+      count: 1
   software_identification:
-    fill_rate: 0.205
+    fill_rate: 0.16
     present_count: 8
     unit_symbol:
     top_values:
@@ -595,8 +996,19 @@ type_level_characteristics:
       count: 1
     - value: '{"version_number" => "H900", "checksum" => "82E9E447"}'
       count: 1
+  software_version_number:
+    fill_rate: 0.08
+    present_count: 4
+    unit_symbol:
+    top_values:
+    - value: '3.52'
+      count: 2
+    - value: 01.01.00
+      count: 1
+    - value: A30203
+      count: 1
   temperature_range:
-    fill_rate: 0.769
+    fill_rate: 0.6
     present_count: 30
     by_unit:
       "°C":
@@ -619,80 +1031,114 @@ type_level_characteristics:
         - range: min=-40, max=55
           count: 2
   type:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: MM-001
       count: 1
   type_of_gas:
-    fill_rate: 0.026
-    present_count: 1
+    fill_rate: 0.04
+    present_count: 2
     unit_symbol:
     top_values:
+    - value: natural gas (methane)
+      count: 1
     - value: Hydrogen
       count: 1
   type_of_gas_to_be_measured:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: Hydrogen
       count: 1
   types_of_gas_or_mixtures_of_gas:
-    fill_rate: 0.026
+    fill_rate: 0.02
     present_count: 1
     unit_symbol:
     top_values:
     - value: Compressed natural gas
       count: 1
 model_level_attributes:
-  maximum_pressure: 16
-  maximum_flow_rate: 15
-  minimum_flow_rate: 12
-  mmq: 11
+  maximum_pressure: 19
+  maximum_flow_rate: 18
+  minimum_flow_rate: 15
+  mmq: 12
   temperature_range: 11
-  diameter_in_outlet: 8
+  diameter_in_outlet: 11
   power_supply_voltage: 7
+  minimum_measured_quantity: 7
   environmental_classes: 6
-  minimum_measured_quantity: 6
   product_temperature_range: 5
-  power_supply_frequency: 3
-  maximum_unit_price: 3
   maximum_price_to_pay: 3
+  maximum_unit_price: 3
   flow_rate_range: 3
+  power_supply_frequency: 3
   intended_for_measurement_of: 2
   software_identification: 2
   intended_for_the_measurement_of: 2
   maximum_volume_indication: 2
-  maximum_mass_indication: 1
-  fluid_temperature_range: 1
-  environment_classes: 1
-  flow_direction: 1
-  maximum_operating_pressure: 1
-  maximum_pressure_of_the_gas_pmax: 1
   accuracy_class: 1
+  protection: 1
+  maximum_operating_pressure: 1
+  flow_direction: 1
+  environment_classes: 1
+  fluid_temperature_range: 1
+  maximum_mass_indication: 1
+  number_of_inlets: 1
+  number_of_sides: 1
+  number_of_nozzles: 1
+  max_flow_rate: 1
+  min_flowrate_qmin: 1
+  gas_temperature_range: 1
+  minimum_measured_quantity_mmq: 1
+  maximum_pressure_of_the_gas_pmax: 1
   maximum_storage_pressure_pst: 1
   maximum_fast_fill_pressure_pv: 1
-  protection: 1
-  connection: 1
-  pn_body: 1
-  pt: 1
-  ps: 1
-  sensor_constant_c: 1
   temperature_range_of_the_gas: 1
   electrical_power_supply: 1
+  sensor_constant_c: 1
+  ps: 1
+  pt: 1
+  pn_body: 1
+  connection: 1
 config_level_attributes:
+  power_supply_voltage: 7
   temperature_range: 4
-  power_supply_voltage: 4
-  product_temperature_range: 1
+  gas_temperature_range: 3
+  max_flowrate_qmax: 3
+  min_flowrate_qmin: 3
+  minimum_measured_quantity: 3
+  maximum_pressure: 3
+  ambient_temperature_range: 2
+  product_temperature_range: 2
   maximum_flow_rate: 1
+  number_of_gas_supplies: 1
+  power_supply_frequency: 1
+  max_filling_pressure_pv: 1
+  min_measured_quantity_mmq: 1
+  scale_interval_mass_display: 1
+  minimum_measured_quantity_mmq: 1
+  min_flow_rate_qmin: 1
+  max_flow_rate_qmax: 1
 matrix_table_names:
   Software versions of the MVD series electronics: 4
-  Software versions of the 5700 electronics: 3
   Software identification: 3
-  General characteristics of the family of instruments: 2
+  Software versions of the 5700 electronics: 3
+  General characteristics of the family of instruments: 3
+  Basic technical data by used measurement transducer: 2
   Overview parts of the measuring instrument: 2
-  Identification plate details: 1
-  General characteristics of the family of instruments type CNGmass: 1
   General characteristics: 1
+  General characteristics of the family of instruments type CNGmass: 1
+  Identification plate details: 1
+  Software versions of the calculating and indicating device type EAS2 (Tables 6): 1
+  General characteristics of the family of instruments (measurement transducer type CNGMass, Table 4): 1
+  Software versions of the calculating and indicating device type EAS2: 1
+  General characteristics of the measurement transducer type CNGMass by meter size: 1
+  'Table 2: Metrological parameters/registers of mass meter Endress & Hauser CNGmass': 1
+  'Table 1: Metrological parameters/registers of mass meter Micro Motion CNG050': 1
+  Type plate example – Qmax/Qmin/MMQ per meter configuration: 1
+  Flow ranges by filling configuration (type plate example, Figure 5): 1
+  Basic technical data by measurement transducer (Section 2): 1
+  Dispenser characteristic by model: 1
