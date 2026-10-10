@@ -1,18 +1,26 @@
 recommendation: R137
-sample_size: 99
+sample_size: 232
 summary:
-  certs_with_model_family: 91
-  certs_with_components: 2
-  certs_with_matrix_tables: 37
-  certs_with_footnotes: 14
-  total_model_variants: 613
-  total_matrix_tables: 51
+  certs_with_model_family: 216
+  certs_with_components: 48
+  certs_with_matrix_tables: 159
+  certs_with_footnotes: 45
+  total_model_variants: 2084
+  total_matrix_tables: 294
 type_level_characteristics:
   accuracy_class:
-    fill_rate: 0.889
-    present_count: 88
+    fill_rate: 0.772
+    present_count: 179
     unit_symbol:
     top_values:
+    - value: 1.5
+      count: 45
+    - value: 0.5
+      count: 29
+    - value: 1.0
+      count: 10
+    - value: 1
+      count: 1
     - value: '1.5'
       count: 37
     - value: '0.5'
@@ -21,23 +29,56 @@ type_level_characteristics:
       count: 15
     - value: '1'
       count: 15
+    - value: '1.0'
+      count: 4
+    - value: 0.5 and/or 1.0
+      count: 2
+  adjustment_method:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: N-point piece-wise linearization
+      count: 1
+  ambient_humidity:
+    fill_rate: 0.026
+    present_count: 6
+    unit_symbol:
+    top_values:
+    - value: non-condensing
+      count: 2
+    - value: condensing
+      count: 2
+    - value: condensing humidity
+      count: 2
   ambient_temperature_range:
-    fill_rate: 0.02
-    present_count: 2
+    fill_rate: 0.526
+    present_count: 122
     by_unit:
+      "°C":
+        count: 121
+        top_values:
+        - range: min=-25, max=55
+          count: 73
+        - range: min=-40, max=70
+          count: 17
+        - range: min=-10, max=55
+          count: 15
+        - range: min=-40, max=55
+          count: 9
+        - range: min=5, max=55
+          count: 4
+        - range: min=-20, max=60
+          count: 2
+        - range: min=-20, max=50
+          count: 1
       'null':
         count: 1
         top_values:
         - value: "-40℃/+70℃"
           count: 1
-      "°C":
-        count: 1
-        top_values:
-        - range: min=-25, max=55
-          count: 1
-        unit_id: u:degree_Celsius
   ambient_temperature_range_evcd:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -45,7 +86,7 @@ type_level_characteristics:
     - range: min=-40, max=55
       count: 2
   ambient_temperature_range_with_evcd:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -53,21 +94,57 @@ type_level_characteristics:
     - range: min=-40, max=55
       count: 1
   ancillary_devices:
-    fill_rate: 0.01
+    fill_rate: 0.022
+    present_count: 5
+    unit_symbol:
+    top_values:
+    - value: Reed device (optional)
+      count: 2
+    - value: Not applicable
+      count: 1
+    - value: 4G, GPRS or NB-IoT communication module, NFC
+      count: 1
+    - value: NB-IoT communication
+      count: 1
+  application_software_checksum:
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
-    - value: NB-IoT communication
+    - value: 178BED4E
+      count: 1
+  application_software_version:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: V16.00.01.50
+      count: 1
+  approved_electronics:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: G2 and G3
+      count: 1
+  backup_power_supply:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        Internal battery pack (keeps the meter running during a power failure when powered by the external
+        supply)
       count: 1
   base_pressure:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.034
+    present_count: 8
     by_unit:
       'null':
-        count: 2
+        count: 7
         top_values:
         - value: Not applicable
-          count: 2
+          count: 7
       bar:
         count: 1
         top_values:
@@ -75,36 +152,175 @@ type_level_characteristics:
           count: 1
         unit_id: u:bar
   base_temperature:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.034
+    present_count: 8
     by_unit:
       'null':
-        count: 2
+        count: 7
         top_values:
         - value: Not applicable
-          count: 2
+          count: 7
       "°C":
         count: 1
         top_values:
         - value: 15
           count: 1
         unit_id: u:degree_Celsius
+  bi_directional_flow_measurement:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        supported; outlet pipe and flow conditioner shall be identical to the inlet; verification in one
+        direction only; meter and pipe spools including thermowell(s) calibrated as a meter package
+      count: 1
+  bi_directional_measurement:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Yes, if calibrated in both directions
+      count: 1
+  bidirectional_additional_temperature_sensor_position_upstream:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 1
+  bidirectional_flow_measurement:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 'true'
+      count: 1
+  blade_angle:
+    fill_rate: 0.022
+    present_count: 5
+    by_unit:
+      "°":
+        count: 4
+        top_values:
+        - value: 45
+          count: 4
+      degrees:
+        count: 1
+        top_values:
+        - value: 45
+          count: 1
+  blade_quantity:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 24
+      count: 2
+  bore_variants:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Reduced bore and full bore
+      count: 1
+  case_material:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Steel
+      count: 2
+  cases_material:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Aluminium or Steel
+      count: 1
+  climatic_environment_class:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: E2
+      count: 3
   communication_module:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: G GPRSNB-IoTLoRaWANSF Sigfox
       count: 1
-  connection_threads_size:
-    fill_rate: 0.01
+  communication_output:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: RS-485 / RS-232
+      count: 2
+  connection_distance:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: mm
+    top_values:
+    - range: min=None, max=160
+      count: 2
+  connection_size:
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
+    - value: '1" BS746 / 20LT / 10LT / Sprague #1A'
+      count: 1
+  connection_thread_size:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: G3/4", G7/8", G1", G1¼"
+      count: 2
+    - value: M30x2, G3/4", G7/8", G1", G1¼", NPT3/4", NPT1", NPT1¼", 3/4" BS746, 1" BS746, 1¼" BS746
+      count: 1
+  connection_threads_size:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: M30x2, M34x1.5, G1", G7/8", G3/4", BS1", BS3/4", NPT1", NPT3/4"
+      count: 1
     - value: M30x2, G7/8", G1", G1¼", M34x1.5, BS746 1
       count: 1
+  control_element:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      m³/h:
+        count: 1
+        top_values:
+        - value: 0.2
+          count: 1
+      m³/lh:
+        count: 1
+        top_values:
+        - value: 0.2
+          count: 1
+  core_processor_software_checksum:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 218C30B
+      count: 1
+  core_processor_software_version:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '5.40'
+      count: 1
   counting_scale:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: dm³
     unit_id: u:liter
@@ -112,82 +328,146 @@ type_level_characteristics:
     - value: 1
       count: 1
   cyclic_volume:
-    fill_rate: 0.061
-    present_count: 6
+    fill_rate: 0.082
+    present_count: 19
     unit_symbol: dm³
     unit_id: u:liter
     top_values:
     - value: 1.2
-      count: 4
+      count: 12
     - value: 2
-      count: 1
+      count: 2
     - value: 0.9
+      count: 2
+    - value: 1.0
+      count: 2
+    - value: 0.7
       count: 1
   density_range:
-    fill_rate: 0.01
-    present_count: 1
-    unit_symbol: kg/m3
-    unit_id: u:kilogram_per_cubic_meter
-    top_values:
-    - range: min=1.4, max=450
-      count: 1
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      kg/m³:
+        count: 2
+        top_values:
+        - range: min=1.4, max=450
+          count: 1
+        - range: min=3.8, max=None
+          count: 1
+      kg/m3:
+        count: 1
+        top_values:
+        - range: min=1.4, max=450
+          count: 1
+        unit_id: u:kilogram_per_cubic_meter
   designed_for:
-    fill_rate: 0.545
-    present_count: 54
+    fill_rate: 0.582
+    present_count: 135
     unit_symbol:
     top_values:
     - value: Condensing humidity
-      count: 38
+      count: 97
     - value: condensing humidity
-      count: 8
+      count: 22
     - value: Non condensing humidity
-      count: 4
+      count: 8
     - value: Non-condensing humidity and condensing humidity
-      count: 2
+      count: 4
+    - value: Non condensing humidity / condensing humidity
+      count: 1
     - value: Non-condensing humidity
       count: 1
     - value: Non-condensing humidity/condensing humidity
       count: 1
-  designed_for_humidity_conditions:
-    fill_rate: 0.03
-    present_count: 3
+    - value: Non-condensing humidity & condensing humidity
+      count: 1
+  designed_for_humidity:
+    fill_rate: 0.004
+    present_count: 1
     unit_symbol:
     top_values:
+    - value: Condensing humidity
+      count: 1
+  designed_for_humidity_conditions:
+    fill_rate: 0.026
+    present_count: 6
+    unit_symbol:
+    top_values:
+    - value: Not applicable (the meter has no electronics)
+      count: 2
     - value: Not applicable
       count: 2
     - value: Not applicable (the gas meter has no electronics)
-      count: 1
+      count: 2
   destined_for:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.047
+    present_count: 11
     unit_symbol:
     top_values:
     - value: Gas volume
-      count: 3
+      count: 9
+    - value: >-
+        Gas volume of natural gas, type H or L, or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m³ and 54.7 MJ/m³ at 15 °C and 1.01325 bar, including mixtures
+        with a hydrogen concentration of up to 23% by volume
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L; or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m3 and 54.7 MJ/m3 at 15 °C and 1.01325 bar, including mixtures
+        with a hydrogen concentration of up to 23% by volume
+      count: 1
   destined_for_measurement:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.207
+    present_count: 48
     unit_symbol:
     top_values:
+    - value: Gas volume
+      count: 35
+    - value: Gas volume of natural gas, type H or L
+      count: 2
     - value: gas volume
       count: 1
     - value: Gas volume of natural gas type H and L
       count: 1
-    - value: Gas volume
+    - value: Gas volume of natural gas type H or L
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L, or natural gas type H, L and E, including mixtures with
+        hydrogen
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L, or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m³ and 54.7 MJ/m³ at 15 °C and 1.01325 bar, including mixtures
+        with a hydrogen concentration of up to 23% by volume
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L, or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m3 and 54.7 MJ/m3, including mixtures with a hydrogen concentration
+        of up to 23% by volume
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L, or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m3 and 54.7 MJ/m3 at 15 °C and 1.01325 bar, including mixtures
+        with a hydrogen concentration of up to 23% by volume
+      count: 1
+    - value: >-
+        Gas volume of natural gas, type H or L; or gas volume of natural gas, type H, L and E, with a
+        Gross Wobbe Index between 39.1 MJ/m3 and 54.7 MJ/m3 at 15 °C and 1.01325 bar, including mixtures
+        with a hydrogen concentration of up to 23% by volume
       count: 1
   destined_for_measurement_of:
-    fill_rate: 0.303
-    present_count: 30
+    fill_rate: 0.203
+    present_count: 47
     unit_symbol:
     top_values:
     - value: Gas volume
-      count: 27
+      count: 44
     - value: Gas volume of natural gas, type H or L
       count: 2
     - value: Gas volume of natural gas, type H, L and E
       count: 1
   destined_for_the_measurement_of:
-    fill_rate: 0.263
+    fill_rate: 0.112
     present_count: 26
     unit_symbol:
     top_values:
@@ -208,105 +488,344 @@ type_level_characteristics:
         a hydrogen concentration of up to 23% by volume.
       count: 1
   distance_between_connections:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.013
+    present_count: 3
     unit_symbol: mm
-    unit_id: u:meter
     top_values:
     - range: min=110, max=130
-      count: 1
+      count: 3
   distance_between_the_connections:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol: mm
     unit_id: u:meter
     top_values:
     - range: min=110, max=130
       count: 2
+  downstream_installation:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: minimum 5D straight pipe; temperature sensor may be installed between 2D and 5D
+      count: 1
   electrical_power:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.034
+    present_count: 8
     unit_symbol:
     top_values:
     - value: Not applicable
-      count: 2
+      count: 6
+    - value: Lithium battery
+      count: 1
     - value: Lithium battery, 3.6V
       count: 1
+  electromagnetic_class:
+    fill_rate: 0.073
+    present_count: 17
+    unit_symbol:
+    top_values:
+    - value: Not applicable (the meter has no electronics)
+      count: 10
+    - value: E1
+      count: 3
+    - value: Not applicable (the gas meter has no electronics)
+      count: 3
+    - value: Not applicable
+      count: 1
   electromagnetic_environment_class:
-    fill_rate: 0.121
-    present_count: 12
+    fill_rate: 0.056
+    present_count: 13
     unit_symbol:
     top_values:
     - value: N/A
       count: 9
     - value: E1
       count: 3
-  environmental_classes:
-    fill_rate: 0.636
-    present_count: 63
+    - value: E2
+      count: 1
+  electromagnetic_environmental_class:
+    fill_rate: 0.004
+    present_count: 1
     unit_symbol:
     top_values:
+    - value: E2
+      count: 1
+  electronic_components:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 'false'
+      count: 1
+  environmental_class:
+    fill_rate: 0.099
+    present_count: 23
+    unit_symbol:
+    top_values:
+    - value: M1 / E2
+      count: 8
+    - value: M1
+      count: 6
+    - value: M2 / E2
+      count: 3
+    - value: E2
+      count: 3
+    - value: M1 / E2 condensing humidity
+      count: 1
+    - value: E1
+      count: 1
+    - value: M1 / E1
+      count: 1
+  environmental_class_climatic:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: E1
+      count: 1
+    - value: E2
+      count: 1
+  environmental_class_e:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: E2
+      count: 1
+  environmental_class_electromagnetic:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: E2
+      count: 1
+  environmental_class_m:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M2
+      count: 1
+  environmental_class_mechanical:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: M1
+      count: 2
+    - value: M2
+      count: 1
+  environmental_classes:
+    fill_rate: 0.513
+    present_count: 119
+    unit_symbol:
+    top_values:
+    - value: M1 / E2
+      count: 32
     - value: '{"mechanical" => "M1", "electromagnetic" => "E2"}'
       count: 28
     - value: '{"mechanical" => "M1", "electromagnetic" => "E1"}'
       count: 12
+    - value: M1 / E1
+      count: 10
     - value: '{"mechanical" => "M1/M2", "electromagnetic" => "E2"}'
       count: 10
+    - value: M1/E2
+      count: 6
+    - value: M2 / E2
+      count: 5
     - value: '{"mechanical" => "M2", "electromagnetic" => "E2"}'
       count: 5
     - value: '{"mechanical" => "M1"}'
       count: 4
-    - value: M1/E2
-      count: 2
-    - value: '{"mechanical" => "M2", "electromagnetic" => "Not applicable"}'
-      count: 1
-    - value: '{"mechanical" => "M3", "electromagnetic" => "E3"}'
-      count: 1
-  flow_direction:
-    fill_rate: 0.212
-    present_count: 21
+    - value: M1/E1
+      count: 3
+  ex_marking:
+    fill_rate: 0.004
+    present_count: 1
     unit_symbol:
     top_values:
+    - value: Ex ia IIA T3 Gb
+      count: 1
+  fixed_density_and_pressure_setting:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Fixed density and fixed pressure setting shall be applied before calibration in the USM setting
+      count: 1
+  flow_conditioner:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Zanker compliant design
+      count: 1
+  flow_conditioner_type:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Spearman
+      count: 2
+  flow_direction:
+    fill_rate: 0.259
+    present_count: 60
+    unit_symbol:
+    top_values:
+    - value: Uni-directional (indicated with arrow)
+      count: 22
     - value: Uni-directional(indicated with arrow)
       count: 9
+    - value: Bi-directional
+      count: 9
     - value: Uni-directional
-      count: 4
-    - value: Uni-directional (indicated with arrow)
-      count: 3
+      count: 6
+    - value: Forward flow only (left to right)
+      count: 5
     - value: Left to right or right to left
-      count: 2
+      count: 3
     - value: Forward flow only
       count: 1
-    - value: Bi-directional
+    - value: bi-directional
       count: 1
-    - value: Uni-Directional-forward
+    - value: bi-directional supported; verification of a bi-directional meter in one direction is sufficient
+      count: 1
+    - value: uni-directional
+      count: 1
+  flow_disturbance:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Mild & Severe
+      count: 1
+  flow_disturbance_installation_requirements:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: No specific installation requirements
+      count: 1
+  flow_rate_formula:
+    fill_rate: 0.047
+    present_count: 11
+    by_unit:
+      'null':
+        count: 9
+        top_values:
+        - value: Q = v · (1/4) · π · D² · 3600
+          count: 2
+        - value: Q = v · ¼ · π · D² · 3600, where Q = flow rate, v = velocity, D = internal diameter
+          count: 1
+        - value: Q = v · (1/4) · π · D² · 3600 (Q in m³/h, v in m/s, D in m)
+          count: 1
+        - value: Q = v * (pi/4) * D^2 * 3600 (Q in m3/h, v in m/s, D in m)
+          count: 1
+        - value: Q = v · 1/4 · π · D² · 3600 (Q in m³/h, v in m/s, D in m)
+          count: 1
+        - value: Q = V · (1/4) · π · ID² · 3600 = 900 · π · ID² · V
+          count: 1
+        - value: >-
+            Q = 900 · π · D² · v, with Q = flow rate (m³/h), v = velocity (m/s), D = nominal bore size
+            diameter (m)
+          count: 1
+        - value: >-
+            Q = 3600 · 1/4 · π · D² · v = 900 · π · D² · v, where Q = flow rate [m³/h], v = velocity [m/s],
+            D = nominal bore size diameter [m]
+          count: 1
+      m³/h:
+        count: 2
+        top_values:
+        - value: Q = v · 1/4 · π · D² · 3600
+          count: 2
+  flow_rate_limits_note:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        Higher values of Qmin and lower values of Qmax are allowed on condition that Qmin ≤ 0.05 Qmax
+        and Qmax / Qt ≥ 5
+      count: 1
+  flow_rate_range:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      'null':
+        count: 1
+        top_values:
+        - value: see Table 2
+          count: 1
+      L/h:
+        count: 1
+        top_values:
+        - range: min=40, max=10000
+          count: 1
+  flow_rate_range_condition:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Qmin ≤ 0.05 Qmax and Qmax/Qt ≥ 5
+      count: 1
+  flow_rate_range_constraints:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Qmin ≤ 0.05 · Qmax and Qmax / Qt ≥ 5
+      count: 1
+  flow_ratio_conditions:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: If 5 ≤ Qmax:Qmin < 50 then Qmax:Qt ≥ 5; if Qmax:Qmin ≥ 50 then Qmax:Qt ≥ 10
+      count: 1
+  gas_ambient_and_transducer_temperature_range:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-40, max=55
+      count: 2
+  gas_density_range_at_actual_conditions:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: kg/m³
+    top_values:
+    - range: min=0.5, max=None
       count: 1
   gas_temperature_range:
-    fill_rate: 0.808
-    present_count: 80
+    fill_rate: 0.802
+    present_count: 186
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-25, max=55
-      count: 58
-    - range: min=-10, max=40
-      count: 6
+      count: 130
     - range: min=-10, max=55
-      count: 5
+      count: 20
     - range: min=-40, max=70
-      count: 3
+      count: 8
+    - range: min=-10, max=40
+      count: 7
+    - range: min=-40, max=55
+      count: 6
+    - range: min=5, max=55
+      count: 4
     - range: min=-40, max=100
       count: 3
-    - range: min=-40, max=55
-      count: 2
     - range: min=-20, max=50
-      count: 1
-    - range: min=-10, max=50
-      count: 1
+      count: 2
+    - range: min=-40, max=80
+      count: 2
     - range: min=-40, max=150
-      count: 1
+      count: 2
   gas_temperature_range_evcd:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -314,41 +833,282 @@ type_level_characteristics:
     - range: min=-30, max=80
       count: 2
   gas_temperature_range_with_evcd:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-30, max=80
       count: 1
-  indicating_device:
-    fill_rate: 0.02
+  gas_volume_display:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Mechanical
+      count: 1
+  gross_wobbe_index:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: MJ/m³
+    top_values:
+    - range: min=39.1, max=54.7
+      count: 2
+  gross_wobbe_index_range:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: MJ/m³
+    top_values:
+    - range: min=39.1, max=54.7
+      count: 3
+  gross_wobbe_index_reference_pressure:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: bar
+    top_values:
+    - value: 1.01325
+      count: 2
+  gross_wobbe_index_reference_temperature:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - value: 15
+      count: 2
+  humidity:
+    fill_rate: 0.009
     present_count: 2
     unit_symbol:
     top_values:
+    - value: Condensing humidity
+      count: 2
+  humidity_class:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Not applicable (the meter has no electronics)
+      count: 1
+  humidity_conditions:
+    fill_rate: 0.03
+    present_count: 7
+    unit_symbol:
+    top_values:
+    - value: Not applicable (the meter has no electronics)
+      count: 2
+    - value: Not applicable (the gas meter has no electronics)
+      count: 2
+    - value: Not applicable
+      count: 1
+    - value: Condensing humidity
+      count: 1
+    - value: Non-condensing humidity & condensing humidity
+      count: 1
+  humidity_design:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: condensing humidity
+      count: 1
+    - value: Non-condensing humidity / condensing humidity
+      count: 1
+  humidity_protection:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Condensing humidity
+      count: 1
+  humidity_suitability:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Condensing humidity
+      count: 1
+  hydrogen_concentration:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%vol"
+    top_values:
+    - range: min=None, max=23
+      count: 1
+  indicating_device:
+    fill_rate: 0.03
+    present_count: 7
+    unit_symbol:
+    top_values:
+    - value: Mechanical
+      count: 3
+    - value: Electronic
+      count: 2
     - value: Type O or C
       count: 1
-    - value: Electronic
+    - value: Mechanic
       count: 1
   indicating_range:
-    fill_rate: 0.02
-    present_count: 2
+    fill_rate: 0.095
+    present_count: 22
     unit_symbol: m³
-    unit_id: u:cubic_meter
     top_values:
+    - value: 99999
+      count: 8
     - value: 99999.999
-      count: 1
+      count: 5
+    - value: 9999999.9999
+      count: 4
     - value: 999999.99
+      count: 2
+    - value: 999999.999
+      count: 1
+    - value: 9999.9999
+      count: 1
+    - value: xxxxx.xxx
+      count: 1
+  ingress_protection:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: IP65
+      count: 1
+  inlet_pipe:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 5D – FC – 5D
+      count: 1
+  inlet_pipe_diameter_tolerance:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: "%"
+    top_values:
+    - range: min=-3, max=3
+      count: 3
+  inlet_pipe_length:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: D
+    top_values:
+    - value: 20
+      count: 2
+  inlet_pipe_nominal_diameter_max_tolerance:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%"
+    top_values:
+    - value: 3
+      count: 1
+  inlet_pipe_nominal_diameter_tolerance:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%"
+    top_values:
+    - range: min=-3, max=3
+      count: 1
+  inlet_piping_configuration:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        5D piping followed by a CPA 55E straightener followed by 10D piping at the inlet of the meter
+        (document 10078/0-10)
+      count: 1
+  inlet_piping_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: DN
+    top_values:
+    - value: 0
+      count: 1
+  installation_conditions:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: Not applicable
+      count: 1
+    - value: not applicable
+      count: 1
+    - value: No specific installation conditions applicable
+      count: 1
+  installation_conditions_downstream:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: minimum of 5D straight pipes
+      count: 1
+  installation_conditions_upstream:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 10D + Zanker + 5D of straight pipe
+      count: 1
+  installation_downstream:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 4D outlet pipe
+      count: 1
+    - value: 4D of outlet pipe
+      count: 1
+  installation_orientation:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: All orientations
+      count: 1
+  installation_outlet_piping:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 3D straight piping (for both mild and severe disturbances)
+      count: 1
+  installation_requirements:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        Meter installed with minimally 5D inlet pipe + NOVA 50E design compliant flow conditioner + 10D
+        of straight inlet pipe upstream and 4D of outlet pipe; thermowell may be mounted at 2–5D from
+        the outlet of the meter
+      count: 1
+  installation_upstream:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: minimally 5D + NOVA 50E design compliant flow conditioner + 10D straight inlet pipe
+      count: 1
+    - value: minimally 5D + a NOVA 50E design compliant flow conditioner + 10D of straight inlet pipe
+      count: 1
+  installation_upstream_piping:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        mild disturbances: 5D straight piping; severe disturbances: 5D straight piping + flow conditioner
+        + 5D straight piping
       count: 1
   intended_for:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol:
     top_values:
     - value: Gas volume
       count: 2
   intended_for_measurement:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
@@ -357,50 +1117,218 @@ type_level_characteristics:
         bar,including mixtures with a hydrogen concentration of up to 23% by volume.
       count: 1
   intended_for_measurement_of:
-    fill_rate: 0.061
-    present_count: 6
+    fill_rate: 0.034
+    present_count: 8
     unit_symbol:
     top_values:
+    - value: Natural gas
+      count: 3
     - value: Gas volume
       count: 2
     - value: Gaseous, including CO2 and Natural gas
       count: 1
     - value: Gas volume (natural gas)
       count: 1
-    - value: Natural gas
-      count: 1
     - value: >-
         Natural gas types H,L and E, with a Gross Wobbe Index between 39.1 MJ/m3 and 54.7 MJ/m3 at 15°C
         and 1.01325 bar
       count: 1
   intended_for_the_measurement_of:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol:
     top_values:
     - value: Gas volume
       count: 2
+  intended_measurement:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Gas volume
+      count: 1
+    - value: Gas volume (natural gas)
+      count: 1
+  intended_measurement_medium:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gaseous, including CO2 and natural gas
+      count: 1
+  intended_medium:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Natural gas
+      count: 1
+    - value: Natural Gas
+      count: 1
+  internal_pressure_or_temperature_sensor:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: not used
+      count: 1
   lubrication:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: Aeroshell Fluid 10
       count: 1
-  manufacturer_trade_mark:
-    fill_rate: 0.01
+  lubrication_fluid:
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
+    - value: Aeroshell Fluid 10
+      count: 1
+  lubrication_oil_type:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: Mineral base oil, type "XZbase 100 A"
+      count: 2
+  male_thread_options:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M30x2, G7/8", G3/4"
+      count: 1
+  manufacturer_mark:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Daniel
+      count: 1
+  manufacturer_trade_mark:
+    fill_rate: 0.017
+    present_count: 4
+    unit_symbol:
+    top_values:
+    - value: Qianwei Kromschroder Meters(Chongqing) Co., Ltd.
+      count: 1
     - value: INNOVER®
       count: 1
+    - value: H∆NWEST
+      count: 1
+    - value: INNOVER
+      count: 1
+  manufacturer_trademark:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: QW//CSSC
+      count: 1
+  manufacturers_trade_mark:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Pietro Fiorentini
+      count: 1
+  max_hydrogen_concentration:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%vol"
+    top_values:
+    - range: min=None, max=23
+      count: 1
+  max_inlet_pipe_nominal_diameter_difference:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%"
+    top_values:
+    - range: min=None, max=3
+      count: 1
+  max_operating_pressure_range_ratio_pmax_over_pmin:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6.25
+      count: 1
+  max_operating_pressure_ratio_pmax_over_pmin:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 6.25
+      count: 2
+  max_operating_pressure_with_permanently_lubricated_bearings:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar(g)
+    top_values:
+    - value: 16
+      count: 1
+  max_operating_range_ratio_pmax_over_pmin:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6.25
+      count: 1
+  max_pressure_loss_at_qmax:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: Pa
+    top_values:
+    - value: 200
+      count: 1
+  max_pressure_ratio_pmax_over_pmin:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6.25
+      count: 1
+  max_qmin_to_qmax_ratio:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - range: min=None, max=0.05
+      count: 3
+  max_ratio_qmin_to_qmax:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 0.05
+      count: 1
+  max_welded_diameter_step:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%"
+    top_values:
+    - range: min=None, max=3
+      count: 1
+  max_welding_diameter_step:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: "%"
+    top_values:
+    - value: 3
+      count: 2
+    - range: min=None, max=3
+      count: 1
   maximum_flow_rate:
-    fill_rate: 0.04
-    present_count: 4
+    fill_rate: 0.022
+    present_count: 5
     by_unit:
       m³/h:
-        count: 3
+        count: 4
         top_values:
+        - value: 2.5
+          count: 1
         - range: min=6, max=6
           count: 1
         - range: min=10, max=10
@@ -414,8 +1342,66 @@ type_level_characteristics:
         - range: min=40, max=10000
           count: 1
         unit_id: u:liter_per_hour
+  maximum_flow_rate_qmax:
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      m³/h:
+        count: 2
+        top_values:
+        - value: 10
+          count: 1
+        - value: 25
+          count: 1
+      kg/h:
+        count: 1
+        top_values:
+        - value: Qmax = S * M * SOS_gas * rho_gas (Formula 1)
+          count: 1
+  maximum_hydrogen_concentration:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: "%vol"
+    top_values:
+    - range: min=None, max=23
+      count: 2
+  maximum_mass_flow_rate_formula:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: kg/h
+    top_values:
+    - value: Qmax = M × 2 × S × SOS_gas × ρ_act × 3600 (Formula 1)
+      count: 1
+  maximum_operating_pressure:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 0.5
+      count: 1
+  maximum_operating_pressure_external_oil_pump_lubricated_bearings:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar(g)
+    top_values:
+    - value: 100
+      count: 1
+  maximum_operating_pressure_permanently_lubricated_bearings:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar(g)
+    top_values:
+    - value: 16
+      count: 1
+  maximum_permissible_pressure_loss_in_qmax:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: Pa
+    top_values:
+    - value: 200
+      count: 1
   maximum_pmax_atmos_hpxxa:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
@@ -423,61 +1409,80 @@ type_level_characteristics:
     - value: 1.5
       count: 1
   maximum_pmax_atmos_xxs:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
     top_values:
     - value: 0.5
       count: 1
+  maximum_pmax_hp_xxa:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 1.5
+      count: 1
+  maximum_pmax_xx_s:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 0.5
+      count: 1
   maximum_pressure:
-    fill_rate: 0.626
-    present_count: 62
+    fill_rate: 0.543
+    present_count: 126
     by_unit:
       bar:
-        count: 29
+        count: 63
         top_values:
         - value: 0.5
-          count: 15
+          count: 34
         - value: 425
-          count: 4
+          count: 6
+        - value: 103
+          count: 6
         - value: 20
+          count: 6
+        - value: 153
           count: 3
+        - value: 16
+          count: 2
         - value: 0.1
           count: 2
-        - value: 16
+        - value: 4
           count: 1
         - value: 1.5
           count: 1
-        - value: 103
-          count: 1
         - value: N/A
           count: 2
-        unit_id: u:bar
       bar(a):
-        count: 11
+        count: 23
         top_values:
         - value: 153
-          count: 11
-        unit_id: u:bar
+          count: 21
+        - value: 103
+          count: 2
+      mbar:
+        count: 20
+        top_values:
+        - value: 500
+          count: 20
       bar(g):
-        count: 8
+        count: 13
         top_values:
         - value: 0.5
-          count: 3
+          count: 4
         - value: 16
+          count: 4
+        - value: 21
           count: 3
         - value: 4
           count: 1
-        - value: 21
+        - value: 0.3
           count: 1
         unit_id: u:bar
-      mbar:
-        count: 8
-        top_values:
-        - value: 500
-          count: 8
-        unit_id: u:millibar
       bar a:
         count: 3
         top_values:
@@ -486,6 +1491,13 @@ type_level_characteristics:
         - value: 153
           count: 1
         unit_id: u:bar
+      'null':
+        count: 2
+        top_values:
+        - value: See tables 2 and 4
+          count: 1
+        - value: N/A
+          count: 1
       kPa:
         count: 1
         top_values:
@@ -498,20 +1510,15 @@ type_level_characteristics:
         - value: 0.5
           count: 1
         unit_id: u:bar
-      'null':
-        count: 1
-        top_values:
-        - value: N/A
-          count: 1
   maximum_pressure_aluminium_housing:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: 1.5
       count: 1
   maximum_pressure_atmos_hp_xxa:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
@@ -519,7 +1526,7 @@ type_level_characteristics:
     - value: 1.5
       count: 1
   maximum_pressure_atmos_xxs:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
@@ -527,74 +1534,333 @@ type_level_characteristics:
     - value: 0.5
       count: 1
   maximum_pressure_in_use_pmax:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
     top_values:
     - value: 0.5
       count: 1
+  maximum_pressure_pmax:
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      bar(g):
+        count: 2
+        top_values:
+        - value: 0.5
+          count: 2
+      kPa:
+        count: 1
+        top_values:
+        - value: 30
+          count: 1
   maximum_pressure_steel_housing:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: 0.5
       count: 1
   maximum_qmax:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 6
       count: 1
+  maximum_velocity_vmax:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: m/s
+    top_values:
+    - value: 36.6
+      count: 2
+  maximum_welding_diameter_step:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: "%"
+    top_values:
+    - value: 3
+      count: 3
+  maximum_working_pressure:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - value: 0.5
+      count: 1
   maximum_working_pressure_pmax:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
     top_values:
     - value: 1.5
       count: 1
-  mechanical_environment_class:
+  measurand:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gas volume
+      count: 1
+  measured_fluid:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gaseous
+      count: 1
+  measured_gas_types:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Natural gas types H, L and E
+      count: 1
+  measured_medium:
+    fill_rate: 0.017
+    present_count: 4
+    unit_symbol:
+    top_values:
+    - value: Natural gas
+      count: 4
+  measured_quantity:
     fill_rate: 0.121
-    present_count: 12
+    present_count: 28
+    unit_symbol:
+    top_values:
+    - value: Gas volume
+      count: 26
+    - value: gas volume
+      count: 2
+  measurement_direction:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Bi-directional (verification in one direction sufficient)
+      count: 1
+  measurement_fluid:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gaseous
+      count: 1
+  measurement_paths:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 1
+  measurement_quantity:
+    fill_rate: 0.039
+    present_count: 9
+    unit_symbol:
+    top_values:
+    - value: Gas volume
+      count: 9
+  measurement_sensor_design:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Full bore sensor and Reduced bore sensor
+      count: 1
+  measurement_target:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gas volume of natural gas, type H or L
+      count: 1
+  measuring_principle:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: Ultrasonic
+      count: 1
+    - value: Diaphragm
+      count: 1
+    - value: Coriolis
+      count: 1
+  measuring_range_minimum:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '1:20'
+      count: 1
+  mechanical_class:
+    fill_rate: 0.078
+    present_count: 18
     unit_symbol:
     top_values:
     - value: M1
-      count: 7
+      count: 11
     - value: M2
-      count: 5
-  minimum_flow_rate:
-    fill_rate: 0.03
+      count: 7
+  mechanical_classes:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M1
+      count: 1
+  mechanical_environment_class:
+    fill_rate: 0.078
+    present_count: 18
+    unit_symbol:
+    top_values:
+    - value: M1
+      count: 12
+    - value: M2
+      count: 6
+  mechanical_environmental_class:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M1
+      count: 1
+  meter_size:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: E10
+      count: 1
+  metrological_class:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M1
+      count: 1
+  metrology_software_checksum:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6F5697AE
+      count: 1
+  metrology_software_version:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: V40.33
+      count: 1
+  min_qmax_to_qt_ratio:
+    fill_rate: 0.013
     present_count: 3
+    unit_symbol:
+    top_values:
+    - range: min=5, max=None
+      count: 3
+  min_ratio_qmax_to_qt:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 5
+      count: 1
+  minimum_downstream_straight_pipe:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 5D
+      count: 1
+  minimum_flow_rate:
+    fill_rate: 0.017
+    present_count: 4
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
     top_values:
+    - value: 0.016
+      count: 1
     - range: min=0.016, max=0.016
       count: 1
     - range: min=0.04, max=0.04
       count: 1
     - range: min=0.16, max=0.16
       count: 1
+  minimum_flow_rate_qmin:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: m³/h
+    top_values:
+    - value: 0.04
+      count: 1
+    - value: 0.16
+      count: 1
+  minimum_flow_velocity_vmin:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: m/s
+    top_values:
+    - value: 0.5
+      count: 2
+  minimum_inlet_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 2 DN
+      count: 1
   minimum_maximum_pressure:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: bar
     unit_id: u:bar
     top_values:
     - range: min=8, max=255
       count: 1
+  minimum_measuring_range:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: '1:20'
+      count: 3
+  minimum_measuring_range_ratio:
+    fill_rate: 0.022
+    present_count: 5
+    unit_symbol:
+    top_values:
+    - value: 20
+      count: 1
+    - value: '1:20'
+      count: 4
+  minimum_outlet_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: DN
+    top_values:
+    - value: 3
+      count: 1
+  minimum_outlet_straight_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: D
+    top_values:
+    - range: min=3, max=None
+      count: 1
   minimum_pressure:
-    fill_rate: 0.061
-    present_count: 6
+    fill_rate: 0.039
+    present_count: 9
     by_unit:
       bar(g):
-        count: 5
+        count: 7
         top_values:
         - value: 0
-          count: 5
+          count: 7
         unit_id: u:bar
       kPa:
         count: 1
@@ -602,8 +1868,41 @@ type_level_characteristics:
         - value: 0.2
           count: 1
         unit_id: u:pascal
+      bar:
+        count: 1
+        top_values:
+        - value: 0
+          count: 1
+  minimum_pressure_pmin:
+    fill_rate: 0.017
+    present_count: 4
+    by_unit:
+      bar(g):
+        count: 3
+        top_values:
+        - value: 0
+          count: 3
+      kPa:
+        count: 1
+        top_values:
+        - value: 0.2
+          count: 1
+  minimum_qmax_to_qmin_ratio:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=5, max=None
+      count: 1
+  minimum_qmax_to_qt_ratio:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=5, max=None
+      count: 1
   minimum_qmin:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
@@ -611,15 +1910,191 @@ type_level_characteristics:
     - value: 0.016
       count: 1
   minimum_qt:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.2
       count: 1
+  minimum_straight_inlet_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 2 DN
+      count: 1
+  minimum_straight_outlet_pipe_length:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      DN:
+        count: 1
+        top_values:
+        - value: 5
+          count: 1
+      'null':
+        count: 1
+        top_values:
+        - value: 5DN
+          count: 1
+  minimum_straight_pipe_downstream:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: D
+    top_values:
+    - value: 3
+      count: 1
+  minimum_transition_velocity_vt:
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      m/s:
+        count: 2
+        top_values:
+        - value: 1/10 vmax
+          count: 1
+        - value: Vmax/10
+          count: 1
+      'null':
+        count: 1
+        top_values:
+        - value: 1/10 vmax
+          count: 1
+  minimum_velocity_vmin:
+    fill_rate: 0.039
+    present_count: 9
+    unit_symbol: m/s
+    top_values:
+    - value: 0.5
+      count: 7
+    - value: 0.3
+      count: 2
+  minimum_velocity_vt:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      m/s:
+        count: 1
+        top_values:
+        - value: vmax/10
+          count: 1
+      'null':
+        count: 1
+        top_values:
+        - value: 1/10 vmax
+          count: 1
+  minimum_working_pressure:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: atmospheric
+      count: 1
+  nominal_diameter:
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      mm:
+        count: 2
+        top_values:
+        - value: 23
+          count: 1
+        - value: 130
+          count: 1
+      'null':
+        count: 1
+        top_values:
+        - value: M30X2, NPT3/4, 3/4 (BS746)
+          count: 1
+  number_of_drums_after_comma:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 0
+      count: 2
+  number_of_drums_before_comma:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 8
+      count: 2
+  number_of_measurement_paths:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 3
+  number_of_metrologically_relevant_transducer_paths:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6
+      count: 1
+  oil_density:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: kg/m³
+    top_values:
+    - value: 818
+      count: 1
+    - value: 0.818
+      count: 1
+  oil_kinematic_viscosity_at_40_deg_c:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: mm²/s
+    top_values:
+    - value: 2.5
+      count: 1
+  oil_kinematic_viscosity_at_minus_40_deg_c:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: mm²/s
+    top_values:
+    - value: 58.48
+      count: 1
+  oil_pour_point:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: "°C"
+    top_values:
+    - value: -80
+      count: 2
+  operating_positions:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: horizontal flow, vertical flow up and vertical flow down
+      count: 1
+  operating_pressure_absolute:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar
+    top_values:
+    - range: min=8, max=255
+      count: 1
+  operating_pressure_range:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      bar(a):
+        count: 1
+        top_values:
+        - range: min=8, max=200
+          count: 1
+      bar(g):
+        count: 1
+        top_values:
+        - range: min=0, max=120
+          count: 1
   operating_pressure_range_isolated_mounts:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
@@ -631,113 +2106,305 @@ type_level_characteristics:
         and including 259 bar.
       count: 1
   operating_pressure_range_standard_mounts:
-    fill_rate: 0.01
-    present_count: 1
-    unit_symbol:
-    top_values:
-    - value: >-
-        The spoolpiece and transducers may be used at a pressure between 7 and 425 bar(g). For this pressure
-        range the flow characteristics as mentioned in table 2 are applicable. If the minimum pressure
-        is between 3,5 and 7 bar(g), the values for Qmax have to be reduced to 50% of the values indicated
-        in table 2. For T32 transducers only: if the minimum pressure is between 7 and 10 bar(g), the
-        values for Qmax have to be reduced to 80% of the values indicated in table 2. If the minimum pressure
-        is between 3,5 and 7 bar(g), the values for Qmax have to be reduced to 50% of the values indicated
-        in table 2. The measuring range shall be 1:20 minimally.
-      count: 1
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      bar(g):
+        count: 1
+        top_values:
+        - range: min=7, max=425
+          count: 1
+      'null':
+        count: 1
+        top_values:
+        - value: >-
+            The spoolpiece and transducers may be used at a pressure between 7 and 425 bar(g). For this
+            pressure range the flow characteristics as mentioned in table 2 are applicable. If the minimum
+            pressure is between 3,5 and 7 bar(g), the values for Qmax have to be reduced to 50% of the
+            values indicated in table 2. For T32 transducers only: if the minimum pressure is between
+            7 and 10 bar(g), the values for Qmax have to be reduced to 80% of the values indicated in
+            table 2. If the minimum pressure is between 3,5 and 7 bar(g), the values for Qmax have to
+            be reduced to 50% of the values indicated in table 2. The measuring range shall be 1:20 minimally.
+          count: 1
   orientation:
-    fill_rate: 0.697
-    present_count: 69
+    fill_rate: 0.754
+    present_count: 175
     unit_symbol:
     top_values:
     - value: All orientations
-      count: 22
+      count: 52
     - value: Horizontal
-      count: 15
+      count: 30
     - value: Connection ports vertical
+      count: 28
+    - value: Horizontal, vertical up and vertical down (all orientations)
+      count: 17
+    - value: all orientations
       count: 11
+    - value: Horizontal; vertical up; vertical down and all orientations
+      count: 6
+    - value: Horizontal / Vertical up / Vertical down (all orientations)
+      count: 6
     - value: Horizontal/Vertical up/Vertical down(all orientations)
       count: 6
     - value: connection ports vertical
-      count: 3
-    - value: Horizontal, vertical up and vertical down (all orientations)
+      count: 4
+    - value: All orientations (horizontal / vertical up / vertical down)
       count: 2
-    - value: Horizontal; vertical up; vertical down and all orientations
-      count: 2
-    - value: Connection Ports vertical
-      count: 1
-    - value: Horizontal/Vertical up/Vertical down (all orientations)
-      count: 1
-    - value: 'Non MPV: horizontal, vertical up; MPV: horizontal, vertical up and vertical down'
-      count: 1
   orientation_mpv:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.017
+    present_count: 4
     unit_symbol:
     top_values:
+    - value: horizontal, vertical up and vertical down (all orientations)
+      count: 3
     - value: horizontal, vertical up and vertical down(all orientations)
       count: 1
   orientation_non_mpv:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.017
+    present_count: 4
     unit_symbol:
     top_values:
     - value: horizontal, vertical up
-      count: 1
+      count: 4
   outlet_pipe:
-    fill_rate: 0.01
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      'null':
+        count: 2
+        top_values:
+        - value: 5D
+          count: 2
+      D:
+        count: 1
+        top_values:
+        - value: 5
+          count: 1
+        unit_id: u:darcy
+  outlet_pipe_length:
+    fill_rate: 0.013
+    present_count: 3
+    by_unit:
+      D:
+        count: 2
+        top_values:
+        - value: 5
+          count: 2
+      'null':
+        count: 1
+        top_values:
+        - value: 5D
+          count: 1
+  outlet_piping_length:
+    fill_rate: 0.004
     present_count: 1
-    unit_symbol: D
-    unit_id: u:darcy
+    unit_symbol: DN
     top_values:
-    - value: 5
+    - value: 0
+      count: 1
+  outlet_straight_pipe_length:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: D
+    top_values:
+    - value: 3
+      count: 1
+    - range: min=3, max=None
+      count: 1
+  overall_height:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: mm
+    top_values:
+    - value: 217
+      count: 1
+  overall_width:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: mm
+    top_values:
+    - value: 146
       count: 1
   overload_flow_qr:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 7.2
       count: 1
+  overload_flow_rate:
+    fill_rate: 0.026
+    present_count: 6
+    by_unit:
+      m³/h:
+        count: 3
+        top_values:
+        - value: 3
+          count: 1
+        - value: 1.2 * Qmax
+          count: 1
+        - value: 1.2 × Qmax
+          count: 1
+      'null':
+        count: 3
+        top_values:
+        - value: 1.2 × Qmax
+          count: 2
+        - value: 1.2 · Qmax
+          count: 1
   overload_flow_rate_qr:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.017
+    present_count: 4
     unit_symbol: m³/h
-    unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 30
+      count: 2
+    - value: 12
+      count: 1
+    - value: 1.2 Qmax
       count: 1
   path_angle:
-    fill_rate: 0.03
-    present_count: 3
-    unit_symbol:
-    top_values:
-    - value: 50
-      count: 1
-    - value: 62.5
-      count: 1
-    - value: '60'
-      count: 1
+    fill_rate: 0.052
+    present_count: 12
+    by_unit:
+      "°":
+        count: 9
+        top_values:
+        - value: 62.5
+          count: 3
+        - value: 50
+          count: 1
+        - value: 75
+          count: 1
+        - value: 60
+          count: 1
+        - range: min=60, max=80
+          count: 3
+      'null':
+        count: 3
+        top_values:
+        - value: 50
+          count: 1
+        - value: 62.5
+          count: 1
+        - value: '60'
+          count: 1
   path_configuration:
-    fill_rate: 0.02
-    present_count: 2
+    fill_rate: 0.022
+    present_count: 5
     unit_symbol:
     top_values:
     - value: 'Q.Sonic max: 6 direct paths and 2 reflection swirl paths. Q.Sonic max6: 6 direct paths'
       count: 1
+    - value: 6 horizontal direct measuring paths or 4 + 2 paths in an X-shape
+      count: 1
+    - value: Direct measuring paths in an X-shape
+      count: 1
+    - value: 'Direct measuring paths in an X-shape; 6-path meters: 4+2 paths; 8-path meters: 4+4 paths'
+      count: 1
     - value: 'Direct measuring paths in an X-shape: -6-path meters:4+2paths -8-path meters:4+4paths'
       count: 1
-  power_supply_type:
-    fill_rate: 0.02
+  path_configurations:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        4 paths (single meter); 4+1 (4 pay and 1 check); 4+2 (4 pay and 2 check); 4+3 (4 pay and 3 check);
+        4+4 (pay and check, or 2 separate meters)
+      count: 1
+  pipe_diameter_match_tolerance:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "%"
+    top_values:
+    - range: min=None, max=3
+      count: 1
+  pmax:
+    fill_rate: 0.009
     present_count: 2
+    unit_symbol: bar
+    top_values:
+    - value: 0.5
+      count: 1
+    - value: 0.7
+      count: 1
+  pn:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: MPa
+    top_values:
+    - value: 1.6
+      count: 1
+  power_supply:
+    fill_rate: 0.026
+    present_count: 6
+    unit_symbol:
+    top_values:
+    - value: Battery powered
+      count: 6
+  power_supply_frequency:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: Hz
+    top_values:
+    - range: min=50, max=60
+      count: 1
+  power_supply_type:
+    fill_rate: 0.276
+    present_count: 64
     unit_symbol:
     top_values:
     - value: DC
-      count: 2
+      count: 59
+    - value: Battery powered
+      count: 4
+    - value: DC battery
+      count: 1
   power_supply_voltage:
-    fill_rate: 0.414
-    present_count: 41
+    fill_rate: 0.478
+    present_count: 111
     by_unit:
+      V:
+        count: 62
+        top_values:
+        - value: 3.6
+          count: 5
+        - value: 24
+          count: 4
+        - range: min=18, max=28
+          count: 21
+        - range: min=18, max=30
+          count: 12
+        - range: min=10, max=36
+          count: 9
+        - range: min=10.4, max=36
+          count: 2
+        - range: min=20, max=30
+          count: 2
+        - range: min=3.6, max=3.6
+          count: 2
+        - range: min=19.2, max=26.4
+          count: 2
+        - range: min=3.5, max=3.6
+          count: 1
+      'null':
+        count: 26
+        top_values:
+        - value: Not applicable
+          count: 12
+        - value: N/A
+          count: 10
+        - value: 3.6V DC battery
+          count: 1
+        - value: 10-36V DC
+          count: 1
+        - value: Battery powered
+          count: 1
+        - value: 3.6V DC internal battery
+          count: 1
       V DC:
         count: 22
         top_values:
@@ -750,27 +2417,6 @@ type_level_characteristics:
         - range: min=3.5, max=3.6
           count: 1
         unit_id: u:volt
-      'null':
-        count: 13
-        top_values:
-        - value: N/A
-          count: 10
-        - value: 3.6V DC battery
-          count: 1
-        - value: 10-36V DC
-          count: 1
-        - value: 3.6V DC internal battery
-          count: 1
-      V:
-        count: 5
-        top_values:
-        - range: min=18, max=30
-          count: 2
-        - range: min=3.6, max=3.6
-          count: 2
-        - range: min=6, max=24
-          count: 1
-        unit_id: u:volt
       VDC:
         count: 1
         top_values:
@@ -778,23 +2424,208 @@ type_level_characteristics:
           count: 1
         unit_id: u:volt
   power_supply_voltage_ac:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.013
+    present_count: 3
     unit_symbol: V
-    unit_id: u:volt
     top_values:
     - range: min=196, max=240
+      count: 2
+    - range: min=85, max=240
+      count: 1
+  power_supply_voltage_battery:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: V
+    top_values:
+    - value: 14.4
+      count: 1
+  power_supply_voltage_dc:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: V
+    top_values:
+    - range: min=6, max=24
+      count: 1
+    - range: min=18, max=100
+      count: 1
+  power_supply_voltage_external:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: V
+    top_values:
+    - range: min=14, max=28
+      count: 1
+  power_supply_voltage_tolerance:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: V
+    top_values:
+    - value: 6
+      count: 1
+  prescribed_extra_inlet_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 2 DN
+      count: 1
+  prescribed_extra_inlet_pipe_length_mild_flow_disturbances:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: not required
+      count: 1
+  prescribed_extra_inlet_pipe_length_severe_flow_disturbances:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: DN
+    top_values:
+    - value: 2
+      count: 1
+  prescribed_inlet_pipe_length:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: DN
+    top_values:
+    - value: 2
+      count: 1
+  pressure_range:
+    fill_rate: 0.026
+    present_count: 6
+    by_unit:
+      bar:
+        count: 4
+        top_values:
+        - range: min=8, max=255
+          count: 3
+        - range: min=1, max=16
+          count: 1
+      bar(a):
+        count: 2
+        top_values:
+        - range: min=4, max=16
+          count: 2
+  pressure_range_absolute:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: bar(a)
+    top_values:
+    - range: min=1, max=20
+      count: 1
+  product_temperature_range:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "°C"
+    top_values:
+    - range: min=-40, max=70
+      count: 1
+  pulse_value:
+    fill_rate: 0.009
+    present_count: 2
+    by_unit:
+      m³/imp:
+        count: 1
+        top_values:
+        - value: 0.01
+          count: 1
+      m³:
+        count: 1
+        top_values:
+        - value: 0.01
+          count: 1
+  pulse_value_per_impulse:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m³
+    top_values:
+    - value: 0.01
       count: 1
   pulse_weight:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: dm³
     unit_id: u:liter
     top_values:
     - value: 10
       count: 1
+  qmax:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: m³/h
+    top_values:
+    - value: 6
+      count: 1
+    - value: 2.5
+      count: 1
+    - value: 10
+      count: 1
+  qmin:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: m³/h
+    top_values:
+    - value: 0.016
+      count: 2
+    - value: 0.04
+      count: 1
+  qr:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: m³/h
+    top_values:
+    - value: 3
+      count: 1
+    - value: 12
+      count: 1
+  qt:
+    fill_rate: 0.017
+    present_count: 4
+    by_unit:
+      m³/h:
+        count: 3
+        top_values:
+        - value: 0.2
+          count: 1
+        - value: 0.25
+          count: 1
+        - value: 0.6
+          count: 1
+      kg/h:
+        count: 1
+        top_values:
+        - value: "≤ Qmax/5"
+          count: 1
+  ratio_qmax_qmin:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=20, max=None
+      count: 1
+  ratio_qmax_qt:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - range: min=5, max=None
+      count: 1
+  reduced_bore_chamfer_angle:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: "°"
+    top_values:
+    - value: 7
+      count: 1
+  related_documentation:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: EU-Type examination certificate T12483
+      count: 1
   resolution:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: dm³
     unit_id: u:liter
@@ -802,7 +2633,7 @@ type_level_characteristics:
     - value: 0.2
       count: 1
   scale_interval:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol: m³
     unit_id: u:cubic_meter
@@ -810,22 +2641,54 @@ type_level_characteristics:
     - value: 0.00025
       count: 2
   software_checksum:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.039
+    present_count: 9
     unit_symbol:
     top_values:
     - value: 0
       count: 1
+    - value: E9B0C4B7
+      count: 2
+    - value: '0x456AE670'
+      count: 1
+    - value: D4F94254 / F0591D45 / 0EE46EDA
+      count: 1
+    - value: 682b3936
+      count: 1
+    - value: D3B853D2
+      count: 1
+    - value: 761BF30F
+      count: 1
+    - value: 3E6E23C0
+      count: 1
+  software_extensions_not_applicable:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: S, L, D and T
+      count: 1
+  software_fpga_version:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 1.0.0
+      count: 2
   software_identification:
-    fill_rate: 0.162
-    present_count: 16
+    fill_rate: 0.151
+    present_count: 35
     unit_symbol:
     top_values:
     - value: Not applicable
-      count: 5
+      count: 21
+    - value: C4, CRC 6087
+      count: 1
     - value: '711001 – CRC: D457E139'
       count: 1
     - value: '{"version_number" => "1.24", "checksum" => "1869761847"}'
+      count: 1
+    - value: Version number 1.24, Checksum 1869761847; Version number 1.27, Checksum 2717395331
       count: 1
     - value: '{"version_number" => "1.22,", "checksum" => "3499386616"}'
       count: 1
@@ -835,17 +2698,10 @@ type_level_characteristics:
       count: 1
     - value: '{"version_number" => "1.24", "checksum" => "1869761847;"}'
       count: 1
-    - value: '{"version_number" => "500001", "checksum" => "7BF2"}'
-      count: 1
-    - value: >-
-        Main version 1.0.3 / FPGA 1.0.0 Checksum E9B0C4B7; Main 1.0.4 / FPGA 1.0.1 Checksum 77A54A9D;
-        Main 1.0.6 / FPGA 1.0.4 Checksum 43F6D289; Main 1.0.7 / FPGA 1.0.4 Checksum 544882BB; Main 2.0.1
-        / FPGA 2.0.1 Checksum 67D31506; Main 2.3.1 / FPGA 2.3.0 Checksum 3C12C30A
-      count: 1
-    - value: '{"version_number" => "01902506"}'
+    - value: Software is not metrological relevant
       count: 1
   software_identification_3414_3415_3416_3417:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
@@ -854,50 +2710,155 @@ type_level_characteristics:
         1.35 1438734832
       count: 1
   software_identification_3414_3415_3416_3417_3418:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: 1.41 2979557838 1.42 3866406840
       count: 1
   software_identification_application_checksum:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: DB9A08AA
       count: 1
   software_identification_application_version:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: V16.00.01.50
       count: 1
+  software_identification_index_checksum:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '15394'
+      count: 1
+  software_identification_index_version_number:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 06.xx-xx
+      count: 1
   software_identification_metrology_checksum:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: 6
       count: 1
   software_identification_metrology_version:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: V40.33
       count: 1
-  sound_frequency:
-    fill_rate: 0.01
+  software_identification_ufe_checksum:
+    fill_rate: 0.004
     present_count: 1
-    unit_symbol: Hz
-    unit_id: u:hertz
+    unit_symbol:
     top_values:
-    - value: 200000
+    - value: '05665'
+      count: 1
+  software_identification_ufe_version_number:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '00007'
+      count: 1
+  software_main_version:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 1.0.3
+      count: 2
+  software_risk_class:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: C
+      count: 1
+  software_type:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: P
+      count: 1
+  software_version:
+    fill_rate: 0.043
+    present_count: 10
+    unit_symbol:
+    top_values:
+    - value: '01902506'
+      count: 3
+    - value: 1.0.2.3
+      count: 2
+    - value: KAFKA 2.0.0.0 / KAFKA 2.0.0.1 / KAFKA 2.0.0.2
+      count: 1
+    - value: LV-0002
+      count: 1
+    - value: 01.02.02.05
+      count: 1
+    - value: 4.4X
+      count: 1
+    - value: 5.2.3.6
+      count: 1
+  software_version_hart_5:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 5.3.6
+      count: 1
+  software_version_hart_7:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 7.2.6
+      count: 1
+  software_version_number:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: V0.0.1.7
+      count: 1
+    - value: '01902506'
+      count: 1
+  sound_frequency:
+    fill_rate: 0.026
+    present_count: 6
+    by_unit:
+      kHz:
+        count: 5
+        top_values:
+        - value: 200
+          count: 5
+      Hz:
+        count: 1
+        top_values:
+        - value: 200000
+          count: 1
+        unit_id: u:hertz
+  specific_installation_conditions:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: not applicable
       count: 1
   storage_temperature:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -905,15 +2866,22 @@ type_level_characteristics:
     - range: min=-30, max=70
       count: 1
   t_sp:
-    fill_rate: 0.01
-    present_count: 1
-    unit_symbol: "°C"
-    unit_id: u:degree_Celsius
-    top_values:
-    - value: 15
-      count: 1
+    fill_rate: 0.022
+    present_count: 5
+    by_unit:
+      'null':
+        count: 4
+        top_values:
+        - value: Not applicable
+          count: 4
+      "°C":
+        count: 1
+        top_values:
+        - value: 15
+          count: 1
+        unit_id: u:degree_Celsius
   temperature_range:
-    fill_rate: 0.818
+    fill_rate: 0.349
     present_count: 81
     by_unit:
       "°C":
@@ -941,78 +2909,371 @@ type_level_characteristics:
             T11: -20℃/+55℃ T32: -40℃/+55℃ T12: -20℃/+55℃ T41: -50℃/+100℃ T21: -20℃/+55℃ T200: -50℃/+125℃
             T22: -40℃/+55℃
           count: 1
+  temperature_sensor_distance_from_outlet:
+    fill_rate: 0.022
+    present_count: 5
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 5
+  temperature_sensor_installation:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        at 2–5D from the outlet of the meter or of a dedicated measuring skid section; for bi-directional
+        applications an additional temperature sensor can be installed 2–5D upstream
+      count: 1
+  thermowell_distance_from_meter_outlet:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 1
+    - range: min=1.5, max=5
+      count: 1
+  thermowell_distance_from_outlet:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 1
+  thermowell_position:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 2–5D from the outlet of the meter
+      count: 1
+  thermowell_position_from_meter_outlet:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 3
+  thermowell_position_from_outlet:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: D
+    top_values:
+    - range: min=2, max=5
+      count: 1
+  totalizer_volume_integer_digits:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 9
+      count: 1
+  trade_mark:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: TDM
+      count: 1
+  transducer_frequency:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: MHz
+    top_values:
+    - value: 0.2
+      count: 1
+  transducer_path_configuration:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 6 horizontal direct paths, 2 paths on each level evenly distributed
+      count: 1
   transducer_type:
-    fill_rate: 0.02
+    fill_rate: 0.009
     present_count: 2
     unit_symbol:
     top_values:
     - value: USM nominal size <=12" Type UIM-U2; USM nominal size >12" Type UIM-U5
       count: 2
   transducers:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.009
+    present_count: 2
     unit_symbol:
     top_values:
     - value: MHz
+      count: 2
+  transition_flow_velocity_vt:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m/s
+    top_values:
+    - value: Vmax/10
       count: 1
+  transition_velocity:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m/s
+    top_values:
+    - value: vmax/10
+      count: 1
+  transition_velocity_vt:
+    fill_rate: 0.022
+    present_count: 5
+    unit_symbol: m/s
+    top_values:
+    - value: Vmax/10
+      count: 3
+    - value: vmax/10
+      count: 2
   transitional_flow_rate:
-    fill_rate: 0.03
-    present_count: 3
+    fill_rate: 0.017
+    present_count: 4
     unit_symbol: m³/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.6
       count: 2
+    - value: 0.25
+      count: 1
     - value: 2.5
       count: 1
-  tsp:
-    fill_rate: 0.02
+  transitional_flow_rate_qt:
+    fill_rate: 0.009
     present_count: 2
+    unit_symbol: m³/h
+    top_values:
+    - value: 0.6
+      count: 1
+    - value: 2.5
+      count: 1
+  transmitter_software_version:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '4.30'
+      count: 1
+  tsp:
+    fill_rate: 0.013
+    present_count: 3
     unit_symbol:
     top_values:
     - value: Not applicable
-      count: 2
+      count: 3
+  tube_cross_section_area_formula:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m²
+    top_values:
+    - value: S = (π/4) × d²
+      count: 1
   type:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: GALLUS/CQ3000
       count: 1
   unit:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol:
     top_values:
     - value: m³
       count: 1
+  upstream_installation:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: minimum 20D straight pipe + FC-80 flow conditioner + 5D straight pipe
+      count: 1
+  verification_scale_interval:
+    fill_rate: 0.116
+    present_count: 27
+    unit_symbol: m³
+    top_values:
+    - value: 0.0002
+      count: 11
+    - value: 0.001
+      count: 8
+    - value: 0.0001
+      count: 5
+    - value: 0.00015
+      count: 1
+    - value: 0.02
+      count: 1
+    - value: 0.00025
+      count: 1
+  vmin:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m/s
+    top_values:
+    - value: 0.5
+      count: 1
+  volume_display:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Volume at metering conditions or volume at base conditions
+      count: 1
+  vt:
+    fill_rate: 0.013
+    present_count: 3
+    unit_symbol: m/s
+    top_values:
+    - value: vmax/10
+      count: 1
+    - value: 0.1 x Vmax
+      count: 1
+    - value: Vmax/10
+      count: 1
+  vt_class_0_5_or_1_0:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m/s
+    top_values:
+    - value: Vmax/10
+      count: 1
+  vt_class_1_0_unidirectional:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol: m/s
+    top_values:
+    - value: Vmax/10
+      count: 1
+  vt_ratio:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 1/10 Vmax
+      count: 1
+  welded_configuration_max_diameter_step:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol: "%"
+    top_values:
+    - value: 3
+      count: 2
+  welded_installation_note:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        Meters can be welded directly without flanges; the complete meter package (meter including welded
+        piping) shall be calibrated to guarantee compliance with Class 0.5
+      count: 1
+  wobbe_index_reference_conditions:
+    fill_rate: 0.009
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 15 °C and 1.01325 bar
+      count: 2
+  working_position:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: H
+      count: 1
   working_pressure:
-    fill_rate: 0.02
+    fill_rate: 0.017
+    present_count: 4
+    by_unit:
+      'null':
+        count: 3
+        top_values:
+        - value: >-
+            The meter is either programmed with a density and viscosity setting, corresponding to the
+            applied gas at preset pressure or using live pressure value from the optional pressure sensor.
+            When using a preset value, the maximum operating range for pressure p_max/p_min is 6.25 symmetrically
+            divided around the preset pressure.
+          count: 1
+        - value: >-
+            Meter is either programmed with a density and viscosity setting corresponding to the applied
+            gas at preset pressure, or uses live pressure value from the optional pressure sensor
+          count: 1
+        - value: >-
+            The meter is either programmed with a density and viscosity setting, corresponding to the
+            applied gas at preset pressure or using live pressure value from the optional pressure sensor.
+            When using a preset value, the maximum operating range for pressure pmax/pmin is 6.25 symmetrically
+            divided around the preset pressure.
+          count: 1
+      bar:
+        count: 1
+        top_values:
+        - range: min=0, max=4
+          count: 1
+  working_pressure_description:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        The meter is either programmed with a density and viscosity setting corresponding to the applied
+        gas at preset pressure, or uses a live pressure value from the optional pressure sensor.
+      count: 1
+  working_pressure_mode:
+    fill_rate: 0.009
     present_count: 2
     unit_symbol:
     top_values:
     - value: >-
-        The meter is either programmed with a density and viscosity setting, corresponding to the applied
-        gas at preset pressure or using live pressure value from the optional pressure sensor. When using
-        a preset value, the maximum operating range for pressure p_max/p_min is 6.25 symmetrically divided
-        around the preset pressure.
+        Either programmed with a density and viscosity setting corresponding to the applied gas at preset
+        pressure, or using live pressure value from the optional pressure sensor
       count: 1
     - value: >-
-        The meter is either programmed with a density and viscosity setting, corresponding to the applied
-        gas at preset pressure or using live pressure value from the optional pressure sensor. When using
-        a preset value, the maximum operating range for pressure pmax/pmin is 6.25 symmetrically divided
-        around the preset pressure.
+        preset density and viscosity setting corresponding to the applied gas at preset pressure, or live
+        pressure value from the optional pressure sensor
+      count: 1
+  working_pressure_principle:
+    fill_rate: 0.004
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: >-
+        Programmed with a density and viscosity setting corresponding to the applied gas at preset pressure,
+        or using live pressure value from the optional pressure sensor
       count: 1
   working_pressure_range:
-    fill_rate: 0.01
-    present_count: 1
-    unit_symbol: bar(g)
-    unit_id: u:bar
-    top_values:
-    - range: min=N/A, max=0.15
-      count: 1
+    fill_rate: 0.043
+    present_count: 10
+    by_unit:
+      bar(g):
+        count: 8
+        top_values:
+        - range: min=0, max=20
+          count: 3
+        - range: min=N/A, max=0.15
+          count: 1
+        - range: min=0, max=16
+          count: 1
+        - range: min=0, max=0.5
+          count: 1
+        - range: min=None, max=0.5
+          count: 1
+        - range: min=1.5, max=100
+          count: 1
+        unit_id: u:bar
+      'null':
+        count: 1
+        top_values:
+        - value: atmospheric up to and including 20 bar(g)
+          count: 1
+      bar:
+        count: 1
+        top_values:
+        - range: min=1, max=16
+          count: 1
   working_temperature_range_tw:
-    fill_rate: 0.01
+    fill_rate: 0.004
     present_count: 1
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -1020,115 +3281,489 @@ type_level_characteristics:
     - range: min=-10, max=40
       count: 1
 model_level_attributes:
+  qt: 50
   transitional_flow_rate: 50
+  qmax: 50
   maximum_flow_rate: 49
+  cyclic_volume: 47
+  overload_flow_rate_qr: 46
   minimum_flow_rate: 43
+  qmin: 41
+  indicating_range: 40
+  nominal_diameter: 37
+  maximum_flow_rate_qmax: 28
+  transitional_flow_rate_qt: 28
+  minimum_flow_rate_qmin: 27
   scale_interval: 25
-  indicating_range: 24
-  cyclic_volume: 22
-  overload_flow_rate_qr: 22
-  nominal_diameter: 13
-  minimum_qmin: 8
+  inner_diameter: 22
+  vmax: 18
+  vmin: 14
+  minimum_qmin: 12
+  vt: 11
+  accuracy_class: 11
+  verification_scale_interval: 10
+  g_value: 8
+  maximum_working_pressure_pmax: 7
   maximum_pressure: 7
-  maximum_working_pressure_pmax: 5
-  accuracy_class: 5
-  vmax: 4
-  vmin: 4
-  control_element: 4
-  minimum_working_pressure_pmin: 4
-  g_value: 4
+  control_element: 7
+  maximum_velocity_vmax: 7
+  diameter: 6
+  minimum_qt: 6
+  meter_size: 6
+  maximum_flow_velocity_vmax: 5
+  minimum_working_pressure_pmin: 5
+  overload_flow_rate: 5
+  pmax: 5
+  minimum_flow_velocity_vmin: 5
+  qr: 5
+  vmin_class_1_0_unidirectional: 4
+  vmin_class_0_5_or_1_0: 4
+  diameter_d: 4
   maximum_pmax: 4
-  overload_flow_rate: 4
   temperature_range: 4
-  minimum_transitional_flow_velocity_vt: 3
-  maximum_flow_velocity_vmax: 3
-  maximum_vmax: 3
-  vt: 3
-  minimum_flow_velocity_vmin: 3
+  vt_class_1_0_unidirectional: 3
+  minimum_velocity_vmin: 3
+  maximum_pressure_pmax: 3
+  weight: 3
+  nominal_bore_size: 3
+  maximum_mach_number: 3
+  impeller_diameter: 3
+  blade_height: 3
+  vane_thickness: 3
+  internal_diameter_of_tubes: 3
+  number_of_blades: 3
+  number_of_drums_behind_comma: 3
+  number_of_drums_before_comma: 3
+  vt_class_0_5_or_1_0: 3
   minimum_vmin: 3
-  diameter_d: 3
+  maximum_vmax: 3
+  diameter_size_inch: 3
+  maximum_qmax: 3
   minimum_internal_bore_idmin: 3
   maximum_internal_bore_idmax: 3
+  minimum_transitional_flow_velocity_vt: 3
+  transitional_flow_velocity_vt: 3
+  qmin_mr_1_20_8_100_bar_g: 2
+  qmin_mr_1_30_8_100_bar_g: 2
+  qmin_mr_1_20_0_100_bar_g: 2
+  qmin_mr_1_30_16_100_bar_g: 2
   minimum_working_pressure: 2
-  minimum_qt: 2
-  maximum_qmax: 2
-  inner_diameter: 2
-  diameter: 2
+  manufacturable_size_range: 2
+  typical_bore_range: 2
+  v_t: 2
+  path_configuration: 2
+  diameter_size_dn: 2
+  v_max: 2
+  v_min: 2
+  housing_material: 2
   maximum_permissible_pressure_loss: 2
-  minimum_q: 2
-  maximum_q: 2
-  volume_v: 2
-  weight: 2
-  typical_ranges: 2
+  material: 2
+  lf_pulse_output: 2
+  connection_distance: 2
   volume: 2
+  basic_transfer_relationship_revolutions: 2
+  typical_ranges: 2
+  volume_v: 2
+  maximum_q: 2
+  minimum_q: 2
+  maximum_qmax_g701_g704_transducers_severe_disturbance: 1
+  minimum_pressure_pmin: 1
+  inlet_outlet_piping: 1
+  main_shaft_diameter_inlet: 1
+  main_shaft_diameter_outlet: 1
+  dynamic_load_rating_cr_inlet: 1
+  dynamic_load_rating_cr_outlet: 1
+  static_load_rating_c0r_inlet: 1
+  static_load_rating_c0r_outlet: 1
+  maximum_permissible_pressure_loss_at_qmax: 1
+  working_pressure: 1
+  qmax_rho_max_ge_40_52: 1
+  type: 1
+  version: 1
+  qmax_mild_disturbance: 1
+  qmax_severe_disturbance: 1
+  verification_scale_interval_control_element: 1
+  vmin_class_05_or_10: 1
+  vt_class_05_or_10: 1
+  vmin_class_10_unidirectional: 1
+  vt_class_10_unidirectional: 1
+  verification_scale_interval_before_the_comma: 1
+  verification_scale_interval_behind_the_comma: 1
+  vsi_drums_before_comma: 1
+  vsi_drums_behind_comma: 1
+  vsi_control_element: 1
+  measuring_paths: 1
+  available_size_range: 1
+  metrological_measuring_paths: 1
+  optional_non_metrological_measuring_path: 1
+  minimum_qmin_tgas_le_50c: 1
+  minimum_qmin_tgas_le_100c: 1
+  maximum_qmax_g500_g603_transducers_mild_and_severe_disturbance: 1
+  maximum_qmax_g701_g704_transducers_mild_disturbance: 1
+  qmax_min_inner_diameter: 1
+  qt_min_inner_diameter: 1
+  qmin_min_inner_diameter: 1
+  qmax_max_inner_diameter: 1
+  qt_max_inner_diameter: 1
+  qmin_max_inner_diameter: 1
+  maximum_qmax_mild: 1
+  maximum_qmax_severe: 1
+  maximum_qmax_mild_8path: 1
+  maximum_qmax_severe_8path: 1
   minimum_qt_8path: 1
   minimum_qmin_8path: 1
-  maximum_qmax_severe_8path: 1
-  meter_size: 1
+  dn_nominal_bore_size: 1
+  nominal_bore_size_dn: 1
   connection_size: 1
-  maximum_qmax_mild_8path: 1
-  maximum_qmax_severe: 1
-  maximum_qmax_mild: 1
-  nominal_bore_size: 1
-  maximum_pmax_bhpy: 1
-  maximum_pmax_amly: 1
-  internal_diameter_of_tubes: 1
-  verification_scale_interval_before_the_comma: 1
-  "n": 1
-  maximum_mach_number: 1
+  qmin_rho_min_lt_6_51: 1
+  internal_flow_channel_bore_diameter: 1
+  qmin_rho_min_ge_6_51: 1
+  qmax_rho_max_lt_40_52: 1
+  maximum_qmax_mild_disturbance: 1
+  maximum_qmax_severe_disturbance: 1
+  max_qmax_mild_disturbance: 1
+  max_qmax_severe_disturbance: 1
   orientation: 1
-  verification_scale_interval_behind_the_comma: 1
-  type: 1
+  internal_bore_minimum: 1
+  internal_bore_maximum: 1
+  internal_bore_reduced_bore_meter: 1
+  internal_bore_full_bore_meter: 1
+  dn: 1
   minimum_pressure: 1
-  lf_pulse_output: 1
-  working_pressure: 1
-  material: 1
-  maximum_permissible_pressure_loss_delta_p: 1
-  qmax_qmin_ratio: 1
-  qmax_qt_ratio: 1
-  counter_decimal_places: 1
-  lf: 1
-  flow_direction: 1
-  dimension_a: 1
-  dimension_b: 1
-  dimension_c: 1
-  dimension_d: 1
-  dimension_e: 1
-  thread_type: 1
-  diameter_dn: 1
-  number_of_drums_before_comma: 1
-  number_of_drums_behind_comma: 1
-  nominal_size: 1
+  "n": 1
+  maximum_pmax_amly: 1
+  maximum_pmax_bhpy: 1
+  pressure_range: 1
+  minimum_inner_diameter: 1
+  maximum_inner_diameter: 1
+  meter_size_range: 1
+  measurement_paths: 1
+  type_g_value: 1
+  minimum_flow_rate_qmin_measuring_ratio_1_20: 1
+  qmin_measuring_ratio_1_20_pressure_range: 1
+  minimum_flow_rate_qmin_measuring_ratio_1_30: 1
+  qmin_measuring_ratio_1_30_pressure_range: 1
+  ambient_temperature_range: 1
+  gas_temperature_range: 1
+  case_material: 1
   minimum_vt: 1
+  cases_material: 1
+  qmin_tgas_le_50c: 1
+  qmin_tgas_le_100c: 1
+  pmin: 1
+  applicable_meter_types: 1
+  thread_type: 1
+  dimension_e: 1
+  blade_angle: 1
+  diameter_dn: 1
+  cyclic_volume_v: 1
+  transition_velocity_vt: 1
+  qmin_mr1_50_4_to_101_bar_g: 1
+  qmin_mr1_30_0_to_101_bar_g: 1
+  qmin_meter_ratio_1_50: 1
+  nominal_size: 1
+  qmin_mr_1_20: 1
+  qmin_mr_1_30: 1
+  qmin_mr_1_50: 1
+  qmin_measuring_ratio_1_30: 1
+  qmin_measuring_ratio_1_50: 1
+  number_of_measuring_paths: 1
+  internal_bore: 1
+  qmin_meter_ratio_1_30: 1
+  nominal_diameter_dn: 1
+  qmin_meter_ratio_1_20: 1
+  dimension_d: 1
+  qmax_qmin_ratio: 1
+  size: 1
+  minimum_internal_bore_id_min: 1
+  maximum_internal_bore_id_max: 1
+  maximum_permissible_pressure_loss_delta_p: 1
+  max_pressure_loss: 1
+  min_internal_bore_id_min: 1
+  max_internal_bore_id_max: 1
+  min_flow_velocity_vmin: 1
+  max_flow_velocity_vmax: 1
+  minimum_internal_bore: 1
+  maximum_internal_bore: 1
+  minimum_flow_velocity: 1
+  min_internal_bore: 1
+  max_internal_bore: 1
+  min_flow_velocity: 1
+  transitional_flow_velocity: 1
+  max_flow_velocity: 1
+  dimension_c: 1
+  dimension_b: 1
+  dimension_a: 1
+  flow_direction: 1
+  v_min_class_1_0_unidirectional: 1
+  v_t_class_1_0_unidirectional: 1
+  vmin_class_1_0: 1
+  vt_class_1_0: 1
+  vmax_class_0_5_or_1_0: 1
+  maximum_velocity: 1
+  minimum_velocity: 1
+  minimum_velocity_class_1_0_unidirectional: 1
+  max_velocity: 1
+  min_velocity: 1
+  transition_velocity: 1
+  lf: 1
+  counter_decimal_places: 1
+  qmax_qt_ratio: 1
 config_level_attributes:
-  t_p_configuration: 1
-  tg_tm_range: 1
-  minimum_number_of_drums_before_comma: 1
-  minimum_number_of_drums_behind_comma: 1
-  control_element: 1
+  gas_temperature_range: 18
+  operating_pressure_range: 9
+  path_configuration: 8
+  transducer_type: 7
+  environmental_class: 7
+  accuracy_class: 7
+  inlet_piping_configuration: 6
+  ambient_temperature_range: 6
+  maximum_velocity_vmax: 5
+  qmax_reduction_factor: 5
+  maximum_pressure_pmax: 5
+  verification_scale_interval: 5
+  qmax_reduction: 4
+  maximum_pressure: 4
+  distance_between_connections: 4
+  inlet_piping_installation: 3
+  downstream_straight_pipe_length: 3
+  upstream_straight_pipe_length: 3
+  software_checksum: 3
+  number_of_drums_before_the_comma: 3
+  number_of_drums_behind_the_comma: 3
+  applicable_pressure_range: 3
+  minimum_straight_inlet_pipe_length: 3
+  maximum_operating_pressure: 3
+  sound_frequency: 2
+  straight_inlet_pipe_length: 2
+  control_element: 2
+  typical_bore_range: 2
+  number_of_drums_behind_comma: 2
+  number_of_drums_before_comma: 2
+  path_angle: 2
+  minimum_installation_conditions_up_and_downstream: 2
+  qmax_qmin_ratio: 1
+  measuring_paths_non_metrological_relevant: 1
+  measuring_paths_metrological_relevant: 1
+  qmax_over_qt: 1
+  applicable_meter_types: 1
+  minimum_velocity: 1
+  transition_velocity: 1
+  maximum_velocity: 1
+  connection_size: 1
+  number_of_pressure_calibrations: 1
+  inlet_piping_length: 1
+  outlet_piping_length: 1
+  inlet_piping_and_flow_straightener: 1
+  environmental_classes: 1
+  measurement_sensor_configuration: 1
+  accuracy_class_welded_installation: 1
+  minimum_upstream_straight_pipe_length: 1
+  outlet_piping: 1
+  upstream_inlet_piping: 1
+  electromagnetic_environment_class: 1
+  minimum_upstream_straight_pipe: 1
+  number_of_measuring_paths: 1
+  installation_positions: 1
+  flow_conditioner: 1
+  minimum_qmax_over_qt_ratio: 1
+  configuration_description: 1
+  metrological_relevant_transducer_paths: 1
+  flow_disturbance: 1
+  verification_scale_interval_control_element: 1
+  number_of_drums_before_decimal_point: 1
+  kinematic_viscosity: 1
+  thermowell_distance_from_meter_outlet: 1
+  number_of_drums_behind_decimal_point: 1
+  working_pressure_calibration_requirement: 1
+  maximum_calibration_pressure: 1
   indicating_range: 1
   scale_interval: 1
   centreline_distance: 1
-  connection_size: 1
+  minimum_transitional_velocity_vt: 1
+  gas_temperature_range_tmin_tmax: 1
+  maximum_flow_velocity_vmax: 1
+  register_drums_behind_comma: 1
+  register_drums_before_comma: 1
+  bearing_lubrication: 1
+  static_load_rating_c0r_outlet: 1
+  static_load_rating_c0r_inlet: 1
+  dynamic_load_rating_c_outlet: 1
+  dynamic_load_rating_c_inlet: 1
+  main_shaft_diameter_outlet: 1
+  main_shaft_diameter_inlet: 1
+  number_of_blades: 1
+  vane_thickness: 1
+  blade_height: 1
+  impeller_diameter: 1
+  qmin_validity_pressure_range: 1
+  tg_tm_range: 1
+  t_p_configuration: 1
+  connection_distance: 1
+  pmax: 1
+  connection_male_thread: 1
+  male_thread: 1
+  male_connection_thread_type: 1
+  mechanical_environment_class: 1
+  meter_configuration: 1
+  achievable_accuracy_class: 1
+  installation_configuration: 1
+  installation_requirements: 1
+  transition_velocity_vt: 1
+  minimum_velocity_vmin: 1
+  min_downstream_straight_pipe: 1
+  min_upstream_straight_pipe_after_flow_conditioner: 1
+  min_upstream_straight_pipe_before_flow_conditioner: 1
+  minimum_temperature_sensor_distance: 1
+  minimum_outlet_piping_length: 1
+  minimum_inlet_piping_length: 1
+  thermowell_distance_from_downstream_flange: 1
+  minimum_straight_pipe_upstream: 1
+  minimum_transition_velocity_vt: 1
+  vmax: 1
+  communication_module: 1
+  flow_straightener_options: 1
+  power_supply: 1
+  minimum_number_of_drums_behind_comma: 1
+  minimum_number_of_drums_before_comma: 1
 matrix_table_names:
-  General characteristics of the family of instruments: 22
-  Verification scale interval: 5
-  Flow characteristics by size: 4
-  Flow rate range conditions: 2
+  General characteristics of the family of instruments: 69
+  Software identification: 33
+  Verification scale interval: 12
+  Software identification (version and checksum): 7
+  Flow characteristics by size: 6
+  General characteristics of the family of instruments (Table 2): 6
+  Table 2 General characteristics of the family of instruments: 6
+  Essential characteristics of the family of instruments: 5
+  Table 2 - General characteristics of the family of instruments: 3
+  Additional information of the instrument type: 3
+  'Table 3: Bearing characteristics': 3
+  Flow rate range conditions: 3
+  Essential characteristics: 3
+  'Table 3: Verification scale interval': 2
+  'Table 2: Essential characteristics': 2
+  Table 2 — General characteristics of the family of instruments (flow characteristics): 2
+  Software versions: 2
+  Software identification (Table 2): 2
+  Meter path configurations: 2
+  Additional information concerning the type — flow characteristics by size: 2
   Dimensional characteristics: 2
-  Essential characteristics of the family of instruments: 1
+  Table 3 - General characteristics of the family of instruments (G1.6 to G6): 1
+  Table 2 — General characteristics of the family of instruments (velocity and bore by meter size): 1
+  Table 4 - General characteristics of the family of instruments (G10 to G40): 1
+  Table 2 – General characteristics of the family of instruments (flow characteristics by meter size): 1
+  Table 2 - General characteristics of the family of instruments (flow characteristics by meter size): 1
+  Table 2 - General characteristics of the family of instruments (flow characteristics): 1
+  Table 2 – Essential characteristics of the family of instruments: 1
+  Table 2 - Software identification (index software): 1
+  Meter configurations in a single housing: 1
+  Table 2 - Metrology processing software: 1
+  Table 2 - Bootloader: 1
+  Software identification (versions and checksums by meter size): 1
+  General characteristics of the family of instruments (G10 to G40): 1
+  General characteristics of the family of instruments (G1.6 to G6): 1
+  Table 3 — General characteristics of the family of instruments (G1.6 to G6): 1
+  Table 4 — General characteristics of the family of instruments (G10 to G40): 1
+  software_identification: 1
+  Table 2 — Software identification: 1
+  Table 2 — Metrology processing software: 1
+  Table 2 — Bootloader: 1
+  family_characteristics_by_meter_size: 1
+  Bootloader software (Table 2): 1
+  Metrology processing software (Table 2): 1
+  General characteristics of the family of instruments (Table 4): 1
+  General characteristics of the family of instruments (Table 3): 1
+  Accuracy class per meter type and installation configuration (tables 1-3): 1
+  General characteristics of the 8-path meters: 1
+  'Table 2: General characteristics of the 6-path meters': 1
+  'Table 3: General characteristics of the 8-path meters': 1
+  General characteristics of the family of instruments — Standard (6 Path): 1
+  Transducer types and characteristics: 1
+  General characteristics of the family of instruments (Standard, 6 path): 1
+  Production locations: 1
+  General characteristics of the family of instruments (4 Path Ultrasonic gas meter): 1
+  General characteristics of the 2-path meters: 1
+  General characteristics of the 4-path meters: 1
+  Table 2 General characteristics of the 2-path meters: 1
+  Table 3 General characteristics of the 4-path meters: 1
+  Table 4 Software identification: 1
+  Flow characteristics of the gas meter: 1
+  Software identification of the gas meter: 1
+  Flow rate range of the family of instruments: 1
+  Operating ranges per transducer type (table 5): 1
+  Flow characteristics ALTOSONIC V12 (Check) by pipe size (table 6): 1
+  Flow characteristics ALTOSONIC V12D (Check) by pipe size (table 7): 1
+  Flow characteristics ALTOSONIC V12E (Check) by pipe size (table 8): 1
+  "Operating ranges of the instrument per used transducer type (ALTOSONIC V12 (Check) and ALTOSONIC V12D (Check))": 1
+  Flow characteristics by nominal diameter - ALTOSONIC V12 (Check): 1
+  Flow characteristics by nominal diameter - ALTOSONIC V12D (Check): 1
+  General characteristics of the family of instruments (velocity limits by diameter size): 1
+  Inlet and outlet piping: 1
+  Table 2 - General characteristics of the family of instruments - Measuring part: 1
+  Table 3 - General characteristics of the family of instruments - Bearings: 1
+  Table 4 - General characteristics of the family of instruments - Essential characteristics: 1
+  Table 5 - Verification scale interval: 1
+  Table 2 — Essential characteristics of the family of instruments: 1
+  Table 3 — Verification scale interval: 1
+  General characteristics of the 6-path meters: 1
+  General characteristics of the family of instruments (Table 4, G10-G40): 1
+  'Table 1 (page 3): Main characteristics of EMT-L, EMT-S, EMT-Lx and EMT-Dc (DN 50-250)': 1
+  Flow characteristics by model: 1
+  'Table 5: Verification scale interval (mechanical register)': 1
+  "Table 4: Flow rate and pressure range characteristics (header in source reads 'Bearing characteristics')": 1
+  'Table 2: Essential parts (turbine wheel dimensions)': 1
+  Register configuration by meter size: 1
+  RRM characteristics by cyclic volume and G-value: 1
+  'Table 5: Verification scale interval and register configuration': 1
+  'Table 4: Flow rate characteristics by DN, type and pressure range': 1
+  'Table 2: Essential parts (turbine wheel)': 1
+  'Table 4: Flow rate and pressure range characteristics': 1
+  'Table 2: Essential parts — turbine wheel dimensions': 1
+  Flow characteristics by type: 1
+  Minimum number of drums by meter size: 1
+  'Table 3: Essential characteristics FMR-Dual': 1
+  'Table 2: Essential characteristics FMR': 1
+  Register characteristics: 1
+  FMR-Dual characteristics: 1
+  FMR characteristics: 1
+  Table 2 - Main characteristics: 1
+  "Main characteristics, essential characteristics, conditional parts and essential parts by type, DN and G-value": 1
+  Temperature range options: 1
+  T&P configuration options: 1
+  Flow characteristics by model variant: 1
+  Additional information of the instrument type by size: 1
+  Additional information of the instrument type — flow characteristics by size and case material: 1
+  Metrological characteristics by size: 1
+  Physical dimensions: 1
+  Dimensions and flange data by DN: 1
+  Type specifications by DN and meter size: 1
+  General characteristics of the family of instruments (Table 3, G1.6-G6): 1
+  Table 2 – General characteristics of the family of instruments: 1
   Installation conditions - Straight piping configuration: 1
   General characteristics of the Q.Sonic max6 family of instruments (continued): 1
   General characteristics of the Q.Sonic max6 family of instruments: 1
   General characteristics of the Q.Sonic max family of instruments: 1
-  Essential characteristics: 1
+  Minimum straight piping configuration as upstream inlet (installation conditions): 1
+  Table 4 — General characteristics of the Q.Sonic max6 family of instruments: 1
+  Table 3 — General characteristics of the Q.Sonic max family of instruments: 1
+  Installation conditions for flow disturbance: 1
+  Table 2 — General characteristics of the family of instruments (velocity limits by nominal size): 1
+  General characteristics of the family of instruments (velocity limits by diameter): 1
+  Installation configurations for flow disturbance: 1
+  Software identification (version and checksum) for 3414, 3415, 3416, 3417, 3418: 1
+  Software identification (version and checksum) for 3414, 3415, 3416, 3417: 1
+  Transducers: 1
+  Verification scale interval (register): 1
+  Bearing characteristics: 1
+  Essential parts (turbine wheel dimensions): 1
+  Approved software versions (WELMEC 7.2): 1
+  Table 1 General characteristics (velocity per diameter size): 1
+  General characteristics of the family of instruments (flow characteristics by meter size): 1
+  General characteristics of the family of instruments — flow characteristics: 1
+  Table 1 - Software identification: 1
+  Table 2 (continued) — General characteristics of the family of instruments: 1
+  Table 3 Register: 1
+  'Table 2 Continued, FMG-Dual (table header: FMR-Dual)': 1
+  General characteristics of the family of instruments (FMR and FMR-Dual) — FMR table: 1
+  Table 1 General characteristics: 1
   Register built up: 1
-  Flow characteristics by model: 1
-  Flow characteristics by model variant: 1
-  Physical dimensions: 1
-  Flow characteristics by type: 1
-  Register characteristics: 1
-  FMR-Dual characteristics: 1
-  FMR characteristics: 1
-  Temperature range options: 1
-  T&P configuration options: 1
