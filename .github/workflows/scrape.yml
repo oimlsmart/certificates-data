@@ -2,9 +2,7 @@ name: scrape
 
 on:
   schedule:
-    # Weekly, Monday 03:17 UTC. The cadence is the maintainer's decision;
-    # adjust here. Every run preserves the previous manifest as a dated
-    # snapshot before the register is re-read.
+    # Weekly, Monday 03:17 UTC. The cadence is the maintainer's decision.
     - cron: "17 3 * * 1"
   workflow_dispatch: {}
 
@@ -21,10 +19,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+
       - name: Install scraper dependencies
         run: pip install requests
 
-      - name: Snapshot the current manifest
+      - name: Snapshot the current register state
         run: |
           mkdir -p "snapshots/$(date +%Y%m%d)"
           cp manifest.jsonl "snapshots/$(date +%Y%m%d)/manifest.jsonl"
@@ -32,16 +34,38 @@ jobs:
       - name: Scrape the register
         run: |
           # The preserved scraper resolves its output roots from its own
-          # location; run it from the repository root so the raw tier and
-          # manifest update in place. The copy is removed after the run.
+          # location; run it from the repository root so the tiers update
+          # in place. The copy is removed after the run.
           cp pipeline-work/download_oiml_certs.py ./download_oiml_certs.py
           python download_oiml_certs.py
           rm download_oiml_certs.py
 
-      - name: Commit snapshot and scrape
+      - name: Diff snapshots into the append-only change log
+        run: ruby bin/diff_manifests.rb
+
+      - name: Regenerate the deterministic datasets
+        run: |
+          ruby bin/extract_history.rb
+          ruby bin/build_organizations.rb
+          ruby bin/reconcile_records.rb
+          ruby bin/build_fused_records.rb
+          ruby bin/build_stats.rb
+          ruby bin/enrich_register_only.rb
+          ruby bin/quality_report.rb
+          ruby bin/denominators_report.rb
+
+      - name: Validate everything against the schemas
+        run: ruby bin/validate_datasets.rb
+
+      - name: Commit the cycle
         run: |
           git config user.name "certificates-data scrape"
           git config user.email "actions@users.noreply.github.com"
-          git add manifest.jsonl snapshots certificates
-          git commit -m "scrape $(date +%Y%m%d): manifest snapshot + register refresh" || echo "nothing to commit"
+          git add manifest.jsonl snapshots certificates datasets stats
+          git commit -m "scrape $(date +%Y%m%d): snapshot, register refresh, change log, datasets regenerated" || echo "nothing to commit"
           git push
+
+      # NOTE: new PDFs the scrape downloads still need model extraction
+      # (vision + structured), which requires the Z_AI_API_KEY secret —
+      # until that secret is configured, extraction runs from a session.
+      # Everything else in the cycle is fully automated above.

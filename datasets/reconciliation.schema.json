@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/reconciliation-v1.json",
+  "title": "Two-surface reconciliation (layer one, deterministic)",
+  "type": "object",
+  "required": ["cert_id", "num", "record", "comparisons", "overall"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer" },
+    "num": { "type": "string" },
+    "record": { "type": "string" },
+    "comparisons": { "type": "array", "items": { "type": "object" } },
+    "overall": { "type": "string", "enum": ["reconciled", "variant", "conflict"] }
+  }
+}

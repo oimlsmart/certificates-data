@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/certificates/register-only-enrichment-v1.json",
+  "title": "Deterministic enrichment of register-only rows",
+  "type": "object",
+  "required": ["cert_id", "num", "type_designations", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer" },
+    "num": { "type": ["string", "null"] },
+    "instrument_category": { "type": ["string", "null"] },
+    "type_designations": { "type": "array", "items": { "type": "string" } },
+    "source": { "type": "string" }
+  }
+}

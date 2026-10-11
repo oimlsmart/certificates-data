@@ -1,19 +1,28 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# The first real history diff: compares the newest manifest against the
-# previous snapshot, one change record per field-level change
-# (cert_id, num, field, from, to, observed_at, snapshot pair). New rows and
-# vanished rows are recorded as row_added / row_removed. Deterministic,
-# regenerable, model-free.
+# The change log between register snapshots: one record per field-level
+# register change, each citing the register's own certificate page.
+# APPENDS per snapshot pair — history never overwrites; a pair already
+# recorded is skipped. Pipeline bookkeeping fields (download_status,
+# local_path) are not register facts and are excluded.
 
 require "json"
+require "fileutils"
 
 REPO = File.expand_path("..", __dir__)
 snapshots = Dir.glob("#{REPO}/snapshots/*").map { |d| File.basename(d) }.sort
 raise "need at least two snapshots to diff" if snapshots.size < 2
-prev_name = snapshots[-2]
-curr_name = snapshots[-1]
+
+out_path = "#{REPO}/datasets/history/changes.jsonl"
+existing_pairs = Set.new
+if File.exist?(out_path)
+  File.readlines(out_path).each do |l|
+    pair = JSON.parse(l)["snapshot_pair"] rescue nil
+    existing_pairs << pair.join("->") if pair
+  end
+end
+require "set"
 
 load = lambda do |name|
   rows = {}
@@ -24,44 +33,47 @@ load = lambda do |name|
   rows
 end
 
-prev = load.(prev_name)
-curr = load.(curr_name)
-changes = []
+new_changes = 0
+(0...(snapshots.size - 1)).each do |i|
+  prev_name = snapshots[i]
+  curr_name = snapshots[i + 1]
+  next if existing_pairs.include?("#{prev_name}->#{curr_name}")
 
-(prev.keys | curr.keys).sort.each do |id|
-  a = prev[id]
-  b = curr[id]
-  if a && !b
-    changes << { "cert_id" => id, "num" => a["num"], "field" => "row", "change" => "row_removed",
-                 "from" => nil, "to" => nil, "observed_at" => curr_name,
-                 "snapshot_pair" => [prev_name, curr_name], "register_view" => "https://www.oiml.org/en/oiml-cs/certificat_view?certificate=#{(b || a)['num']}" }
-    next
+  prev = load.(prev_name)
+  curr = load.(curr_name)
+  changes = []
+
+  (prev.keys | curr.keys).sort.each do |id|
+    a = prev[id]
+    b = curr[id]
+    view = "https://www.oiml.org/en/oiml-cs/certificat_view?certificate=#{((a || b) || {})['num'].to_s}"
+    if a && !b
+      changes << { "cert_id" => id, "num" => a["num"], "field" => "row", "change" => "row_removed",
+                   "from" => nil, "to" => nil, "observed_at" => curr_name,
+                   "snapshot_pair" => [prev_name, curr_name], "register_view" => view }
+      next
+    end
+    if b && !a
+      changes << { "cert_id" => id, "num" => b["num"], "field" => "row", "change" => "row_added",
+                   "from" => nil, "to" => nil, "observed_at" => curr_name,
+                   "snapshot_pair" => [prev_name, curr_name], "register_view" => view }
+      next
+    end
+    register_fields = a.keys - ["download_status", "local_path"]
+    register_fields.each do |field|
+      next if a[field] == b[field]
+      changes << { "cert_id" => id, "num" => b["num"] || a["num"], "field" => field,
+                   "change" => "field_changed", "from" => a[field], "to" => b[field],
+                   "observed_at" => curr_name, "snapshot_pair" => [prev_name, curr_name],
+                   "register_view" => view }
+    end
   end
-  if b && !a
-    changes << { "cert_id" => id, "num" => b["num"], "field" => "row", "change" => "row_added",
-                 "from" => nil, "to" => nil, "observed_at" => curr_name,
-                 "snapshot_pair" => [prev_name, curr_name], "register_view" => "https://www.oiml.org/en/oiml-cs/certificat_view?certificate=#{(b || a)['num']}" }
-    next
+
+  File.open(out_path, "a:UTF-8") do |f|
+    changes.each { |c| f.puts(JSON.generate(c)) }
   end
-  # download_status and local_path are this pipeline own bookkeeping, not register facts
-  register_fields = a.keys - ["download_status", "local_path"]
-  register_fields.each do |field|
-    next if a[field] == b[field]
-    changes << { "cert_id" => id, "num" => b["num"] || a["num"], "field" => field,
-                 "change" => "field_changed", "from" => a[field], "to" => b[field],
-                 "observed_at" => curr_name, "snapshot_pair" => [prev_name, curr_name], "register_view" => "https://www.oiml.org/en/oiml-cs/certificat_view?certificate=#{(b || a)['num']}" }
-  end
+  new_changes += changes.size
+  by = changes.group_by { |c| c["change"] }.transform_values(&:size)
+  puts "#{prev_name} -> #{curr_name}: #{changes.size} records #{by.inspect}"
 end
-
-require "fileutils"
-FileUtils.mkdir_p("#{REPO}/datasets/history")
-File.open("#{REPO}/datasets/history/changes.jsonl", "w:UTF-8") do |f|
-  changes.each { |c| f.puts(JSON.generate(c)) }
-end
-
-by_change = changes.group_by { |c| c["change"] }.transform_values(&:size)
-by_field = changes.select { |c| c["change"] == "field_changed" }.group_by { |c| c["field"] }.transform_values(&:size)
-puts "diff #{prev_name} -> #{curr_name}: #{changes.size} change records"
-puts "  #{by_change.inspect}"
-puts "  fields: #{by_field.inspect}" unless by_field.empty?
-puts "wrote datasets/history/changes.jsonl"
+puts "appended #{new_changes} change records (existing pairs skipped: #{existing_pairs.size})"

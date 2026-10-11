@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/adjudications-v1.json",
+  "title": "Model-adjudicated verdicts (reconciliation layer two)",
+  "type": "object",
+  "required": ["cert_id", "num", "axes"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer" },
+    "num": { "type": "string" },
+    "axes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["axis", "verdict", "best_value"],
+        "additionalProperties": true,
+        "properties": {
+          "axis": { "type": "string" },
+          "verdict": { "type": "string", "enum": ["same-entity", "different-entity", "document-noise", "unverifiable"] },
+          "best_value": { "type": ["string", "null"] },
+          "why": { "type": "string" }
+        }
+      }
+    }
+  }
+}
