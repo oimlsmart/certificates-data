@@ -41,11 +41,18 @@ rescue StandardError
 end
 
 stats = { fused: 0, register_only: 0, axes_adjudicated: 0 }
+defects = []
 require "fileutils"
 FileUtils.mkdir_p("#{REPO}/datasets/certificates")
 File.open("#{REPO}/datasets/certificates/records.jsonl", "w:UTF-8") do |out|
   manifest.keys.sort.each do |cid|
     reg = manifest[cid]
+    # the register itself sometimes returns defective rows (null num); they
+    # cannot be certificate records without identity — state the defect, skip
+    if reg["num"].to_s.strip.empty?
+      defects << { "cert_id" => cid, "observed" => reg, "defect" => "null num from the register" }
+      next
+    end
     entry = records_by_cert[cid]
     fused = {
       "cert_id" => cid,
@@ -87,5 +94,6 @@ File.open("#{REPO}/datasets/certificates/records.jsonl", "w:UTF-8") do |out|
   end
 end
 
+File.write("#{REPO}/datasets/certificates/register-defects.json", JSON.pretty_generate(defects)) unless defects.empty?
 puts "fused records: #{stats[:fused]} with document · #{stats[:register_only]} register-only · #{stats[:axes_adjudicated]} adjudicated axes"
 puts "wrote datasets/certificates/records.jsonl"

@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/certificates/records-v1.json",
+  "title": "The fused certificate record",
+  "description": "One row per register certificate: the register's own fields, the document's structured content, and the reconciliation of the two. Register-only rows carry document: null.",
+  "type": "object",
+  "required": ["cert_id", "register", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer" },
+    "register": {
+      "type": "object",
+      "required": ["num", "status", "register_view"],
+      "additionalProperties": false,
+      "properties": {
+        "num": { "type": "string" },
+        "name": { "type": ["string", "null"] },
+        "applicant": { "type": ["string", "null"] },
+        "issuing_year": { "type": ["string", "null"] },
+        "status": { "type": "string", "enum": ["Valid", "Suspended", "Withdrawn"] },
+        "id_status": { "type": ["integer", "null"] },
+        "file_name": { "type": ["string", "null"] },
+        "register_view": { "type": "string", "pattern": "^https://www\\.oiml\\.org/" }
+      }
+    },
+    "document": { "type": ["object", "null"] },
+    "provenance": {
+      "type": "object",
+      "required": [],
+      "additionalProperties": { "type": ["string", "boolean"] }
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": ["overall", "axes"],
+      "additionalProperties": false,
+      "properties": {
+        "overall": { "type": "string", "enum": ["reconciled", "variant", "conflict"] },
+        "axes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["axis", "verdict"],
+            "additionalProperties": true,
+            "properties": {
+              "axis": { "type": "string", "enum": ["num", "applicant", "issuing_year", "issuer_code"] },
+              "register": { "type": ["string", "integer", "null"] },
+              "document": { "type": ["string", "integer", "null"] },
+              "verdict": { "type": "string", "enum": ["match", "variant", "conflict"] },
+              "adjudication": {
+                "type": "object",
+                "required": ["verdict", "best_value"],
+                "properties": {
+                  "verdict": { "type": "string", "enum": ["same-entity", "different-entity", "document-noise", "unverifiable"] },
+                  "best_value": { "type": ["string", "null"] },
+                  "why": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
