@@ -123,6 +123,7 @@ characteristics:
     - model: DN15
       value: 1
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: maximum_pressure
     unit_symbol: bar(g)
     values:
@@ -148,9 +149,11 @@ characteristics:
     - condition: fuelling cars
       value: 2
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: fuelling buses/trucks
       value: 5
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: product_temperature_range
     axis: measurement transducer type
     values:
@@ -159,11 +162,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: CNGMass
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: number_of_gas_supplies
     axis: system configuration
     values:
@@ -274,7 +279,7 @@ components:
     minimum_measured_quantity:
       value: 1
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     maximum_pressure:
       value: 317 or 345 (depending on flange type)
       unit_symbol: bar(g)
@@ -304,11 +309,11 @@ components:
         min: 15
         max: 26
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_with_mvd_direct_connect_is:
       value: 24 ±20%
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     software_version_number:
       value: '3.52'
       unit_symbol:
@@ -351,17 +356,17 @@ components:
     power_supply_voltage_ac:
       value: 26
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     software_version_number:
       value: 01.01.00
       unit_symbol:

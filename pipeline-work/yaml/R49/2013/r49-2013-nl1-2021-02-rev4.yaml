@@ -68,7 +68,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -78,7 +78,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -102,7 +102,7 @@ characteristics:
     maximum_pressure_loss:
       value: 0.1
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     grounding_required:
       value: true
       unit_symbol:
@@ -325,6 +325,7 @@ characteristics:
       value: 9999999
     - model: DN800
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum
     unit_symbol: m³
     values:
@@ -358,6 +359,7 @@ characteristics:
       value: 0.01
     - model: DN800
       value: 0.1
+    unit_id: u:cubic_meter
   - attribute: totalizer_resolution_setting
     unit_symbol:
     values:
@@ -434,12 +436,14 @@ characteristics:
         max: 265
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: DC
       value:
         min: 9
         max: 36
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -449,6 +453,7 @@ characteristics:
         max: 65
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
 recommendation:
   id: R49
   edition: 2013

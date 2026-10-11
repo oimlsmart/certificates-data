@@ -70,7 +70,7 @@ characteristics:
     volume_resolution:
       value: 0.001
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     ratio_q2_q1:
       value: 1.6
       unit_symbol:
@@ -109,7 +109,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     electromagnetic_environment:
       value: E1, E2
@@ -134,12 +134,12 @@ characteristics:
     indicating_range:
       value: 9999999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
     resolution_of_indicating_device:
       value: 0.01
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
     eut_testing_category:
       value: Electromagnetic water meter
@@ -234,7 +234,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     empty_pipe_detection:
       value: 'on'
       unit_symbol:
@@ -282,6 +282,7 @@ characteristics:
       value:
         min: 10
         max: 48
+    unit_id: u:volt
   - attribute: power_supply_type
     unit_symbol:
     values:
@@ -516,6 +517,7 @@ characteristics:
       value: 999999
     - model: DN80 Q3/Q1=400
       value: 999999
+    unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device
     unit_symbol: m³
     values:
@@ -531,6 +533,7 @@ characteristics:
       value: 0.001
     - model: DN80 Q3/Q1=400
       value: 0.001
+    unit_id: u:cubic_meter
   - attribute: nominal_diameter
     unit_symbol: mm
     values:
@@ -829,15 +832,19 @@ characteristics:
     - condition: PTFE
       value: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Polypropylene
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Rilsan
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Ebonite
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: module_designation
     axis: power_supply_module
     values:
@@ -863,6 +870,7 @@ characteristics:
       value:
         min: 10
         max: 48
+    unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_module
     values:
@@ -884,6 +892,7 @@ characteristics:
       value:
         min: 45
         max: 66
+    unit_id: u:hertz
   - attribute: internal_backup_source_voltage
     axis: power_supply_module
     unit_symbol: V
@@ -892,6 +901,7 @@ characteristics:
       value: 3.7
     - condition: LV
       value: 3.7
+    unit_id: u:volt
   - attribute: internal_backup_battery_capacity
     axis: power_supply_module
     unit_symbol: mAh
@@ -950,6 +960,7 @@ characteristics:
       value: 50
     - condition: Ebonite
       value: 50
+    unit_id: u:degree_Celsius
   - attribute: temperature_class
     axis: liner_material
     values:
@@ -967,9 +978,11 @@ characteristics:
     - condition: liner PTFE
       value: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: liner polypropylene, Rilsan and Ebonite
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_permissible_error_lower_flowrate_zone
     axis: accuracy_class
     values:
@@ -1014,16 +1027,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LV
       value:
         min: 24
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LLV
       value:
         min: 10
         max: 48
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_module
     values:
@@ -1041,20 +1057,24 @@ characteristics:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: MS2500 / MV110 LV
       value:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: internal_backup_battery_voltage
     axis: power_supply_module
     values:
     - condition: MS2500 / MV110 HV
       value: 3.7
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LV
       value: 3.7
       unit_symbol: V
+      unit_id: u:volt
   - attribute: internal_backup_battery_capacity
     axis: power_supply_module
     values:
@@ -1105,9 +1125,11 @@ characteristics:
     - condition: PTFE liner
       value: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: polypropylene, Rilsan and Ebonite liner
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: power_supply_voltage
     axis: power supply module
     values:
@@ -1116,16 +1138,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LV
       value:
         min: 24
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LLV
       value:
         min: 10
         max: 48
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power supply module
     values:
@@ -1146,11 +1171,13 @@ characteristics:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: MS2500 / MV110 LV
       value:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: internal_backup_source
     axis: power supply module
     values:
@@ -1193,9 +1220,11 @@ characteristics:
     - condition: PTFE liner
       value: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: polypropylene, Rilsan or Ebonite liner
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: power_supply_type
     axis: power_supply_module
     values:
@@ -1276,16 +1305,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LV
       value:
         min: 24
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LLV
       value:
         min: 10
         max: 48
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_variant
     values:
@@ -1306,20 +1338,24 @@ characteristics:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: MS2500 / MV110 LV
       value:
         min: 45
         max: 66
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: internal_backup_battery_voltage
     axis: power_supply_variant
     values:
     - condition: MS2500 / MV110 HV
       value: 3.7
       unit_symbol: V
+      unit_id: u:volt
     - condition: MS2500 / MV110 LV
       value: 3.7
       unit_symbol: V
+      unit_id: u:volt
   - attribute: internal_backup_battery_capacity
     axis: power_supply_variant
     values:
@@ -1496,6 +1532,7 @@ components:
           max: 240
         unit_symbol: V
         footnote_markers: []
+        unit_id: u:volt
       power_supply_type:
         value: AC
         unit_symbol:
@@ -1506,6 +1543,7 @@ components:
           max: 66
         unit_symbol: Hz
         footnote_markers: []
+        unit_id: u:hertz
       permanent_flow_rate_q3:
         value: 160
         unit_symbol: m³/h
@@ -1524,6 +1562,7 @@ components:
           max: 55
         unit_symbol: "°C"
         footnote_markers: []
+        unit_id: u:degree_Celsius
       electromagnetic_environment_classes:
         value: B, O, E1, E2
         unit_symbol:
@@ -1541,6 +1580,7 @@ components:
         value: 16
         unit_symbol: bar
         footnote_markers: []
+        unit_id: u:bar
       ingress_protection_rating:
         value: 68
         unit_symbol:

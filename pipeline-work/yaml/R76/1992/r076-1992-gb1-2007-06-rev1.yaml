@@ -88,14 +88,14 @@ characteristics:
         min: 30
         max: 60
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     - condition: Max 60/150 kg variant (interval 1 / interval 2)
       value:
         min: 60
         max: 150
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
   - attribute: minimum_capacity
     axis: capacity_variant
@@ -103,12 +103,12 @@ characteristics:
     - condition: Max 30/60 kg variant
       value: 200
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     - condition: Max 60/150 kg variant
       value: 400
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
   - attribute: verification_scale_interval_e
     axis: capacity_variant
@@ -118,14 +118,14 @@ characteristics:
         min: 10
         max: 20
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     - condition: Max 60/150 kg variant (interval 1 / interval 2)
       value:
         min: 20
         max: 50
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
   - attribute: tare_capacity
     axis: capacity_variant
@@ -133,12 +133,12 @@ characteristics:
     - condition: Max 30/60 kg variant (subtractive)
       value: -29.99
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     - condition: Max 60/150 kg variant (subtractive)
       value: -59.98
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
 recommendation:
   id: R76
@@ -254,10 +254,12 @@ matrix_tables:
     capacity_variant_2_max_60_150_kg:
       min: 60
       max: 150
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     capacity_variant_1_max_30_60_kg: 200
     capacity_variant_2_max_60_150_kg: 400
+    unit_id: u:gram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     capacity_variant_1_max_30_60_kg:
@@ -266,10 +268,12 @@ matrix_tables:
     capacity_variant_2_max_60_150_kg:
       min: 20
       max: 50
+    unit_id: u:gram
   - attribute: tare_capacity
     unit_symbol: kg
     capacity_variant_1_max_30_60_kg: -29.99
     capacity_variant_2_max_60_150_kg: -59.98
+    unit_id: u:kilogram
   description: >-
     Transposed table: Max, Min, e (dual interval e1/e2) and T (subtractive tare) for the two Dolphin Series
     capacity variants. Dual-interval notation 30/60 kg denotes Max1/Max2 of a single instrument.

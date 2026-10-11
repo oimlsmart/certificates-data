@@ -68,14 +68,17 @@ characteristics:
     excitation_voltage:
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     load_cell_interface:
       value: 4-wire or 6-wire
     minimum_input_impedance:
       value: 58
       unit_symbol: Ω
+      unit_id: u:ohm
     maximum_input_impedance:
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
     electromagnetic_class:
       value: E2
     power_supply_voltage:
@@ -83,6 +86,7 @@ characteristics:
         min: 9
         max: 32
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: DC
     power_supply_restriction:
@@ -129,18 +133,22 @@ characteristics:
     - condition: e ≥ 0.3 μV
       value: 21
       unit_symbol: min
+      unit_id: u:minute
     - condition: e ≥ 1.0 μV
       value: 75
       unit_symbol: min
+      unit_id: u:minute
   - attribute: minimum_warm_up_time
     axis: verification_scale_interval
     values:
     - condition: e ≥ 0.3 μV
       value: 15
       unit_symbol: min
+      unit_id: u:minute
     - condition: e ≥ 1.0 μV
       value: 8
       unit_symbol: min
+      unit_id: u:minute
 recommendation:
   id: R51
   edition: 2006

@@ -58,22 +58,22 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     safe_load_limit_elim:
       value: 1.5 * Emax
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     minimum_verification_interval_vmin:
       value: Emax / 10000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     apportionment_factor_plc:
       value: 0.7
@@ -93,7 +93,7 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     excitation_voltage_type:
       value: AC/DC
@@ -103,12 +103,12 @@ characteristics:
     input_impedance_rlc:
       value: 440
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     cable_length:
       value: 3
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
     cable_construction:
       value: 4wire
@@ -128,6 +128,7 @@ characteristics:
     - model: LC1205-K500
       value: 500
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: max_load_cell_intervals_nmax
     axis: n_max option
@@ -164,21 +165,21 @@ model_family:
       maximum_capacity_emax:
         value: 100
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
   - model_id: LC1205-K200
     attributes:
       maximum_capacity_emax:
         value: 200
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
   - model_id: LC1205-K500
     attributes:
       maximum_capacity_emax:
         value: 500
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
 matrix_tables:
 - name: Characteristics

@@ -59,7 +59,7 @@ characteristics:
     max_pressure_loss:
       value: 0.16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     environmental_class:
       value: B and C
       unit_symbol:
@@ -103,7 +103,7 @@ characteristics:
     maximum_pressure_loss:
       value: 0.16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -556,6 +556,7 @@ characteristics:
       value:
         min: 0
         max: 50
+    unit_id: u:bar
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -603,6 +604,7 @@ characteristics:
       value:
         min: 999999
         max: 9999999
+    unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device
     unit_symbol: L
     values:
@@ -628,6 +630,7 @@ characteristics:
       value: 1
     - model: DN200
       value: 10
+    unit_id: u:lambert
   - attribute: length_of_water_meter
     unit_symbol: mm
     values:
@@ -1332,6 +1335,7 @@ characteristics:
       value:
         min: 0
         max: 40
+    unit_id: u:bar
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -1391,6 +1395,7 @@ characteristics:
       value: 9999999
     - model: DN900
       value: 9999999
+    unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device
     unit_symbol: L
     values:
@@ -1428,6 +1433,7 @@ characteristics:
       value: 100
     - model: DN900
       value: 100
+    unit_id: u:lambert
   - attribute: length_of_water_meter
     unit_symbol: mm
     values:
@@ -1472,18 +1478,22 @@ characteristics:
     - condition: AC
       value: 250
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 42
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_voltage_min
     axis: power_supply_type
     values:
     - condition: AC
       value: 90
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -1492,6 +1502,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: temperature_class
     axis: lining_material
     values:
@@ -1507,18 +1518,22 @@ characteristics:
     - condition: AC
       value: 250
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 42
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_supply_voltage_umin
     axis: power_supply_type
     values:
     - condition: AC
       value: 90
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: supply_frequency
     axis: power_supply_type
     values:
@@ -1527,6 +1542,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R49
   edition: 2006

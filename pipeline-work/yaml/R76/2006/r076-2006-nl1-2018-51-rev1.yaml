@@ -62,7 +62,7 @@ characteristics:
         min: 6
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     weighing_ranges:
       value: Single interval, Multi-interval
       unit_symbol:
@@ -90,13 +90,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -123,11 +123,13 @@ characteristics:
         min: 6
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: external weighing platforms
       value:
         min: 6
         max: 3000
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: weighing_range_type
     values:
@@ -136,11 +138,13 @@ characteristics:
         min: 2
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: multi-interval
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: max_scale_intervals_multi_interval
     axis: scope
     values:

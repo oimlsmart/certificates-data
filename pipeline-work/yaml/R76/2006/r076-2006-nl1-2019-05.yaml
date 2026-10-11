@@ -62,14 +62,14 @@ characteristics:
         min: 1
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 0.2
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     maximum_number_of_partial_weighing_ranges:
       value: 2
@@ -81,7 +81,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     software_identification:
       value: V1.xx (xx = 00...99)
@@ -122,9 +122,11 @@ characteristics:
         min: 220
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply
     values:
@@ -142,6 +144,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

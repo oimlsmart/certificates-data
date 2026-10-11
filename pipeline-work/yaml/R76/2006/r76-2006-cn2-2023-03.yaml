@@ -70,19 +70,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_current:
       value: 1.5
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
       footnote_markers: []
     software_version:
       value: 2.xx
@@ -97,6 +97,7 @@ characteristics:
       value: 40
     - model: LNA-15/30
       value: 100
+    unit_id: u:gram
   - attribute: tare_weighing_range
     unit_symbol: kg
     values:
@@ -104,6 +105,7 @@ characteristics:
       value: -5.998
     - model: LNA-15/30
       value: -14.995
+    unit_id: u:kilogram
   - attribute: crc_legally_relevant_parameters
     unit_symbol:
     values:
@@ -118,45 +120,57 @@ characteristics:
     - condition: LNA-6/15, range 1
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: LNA-6/15, range 2
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: LNA-15/30, range 1
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: LNA-15/30, range 2
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: variant / partial weighing range
     values:
     - condition: LNA-6/15, range 1
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-6/15, range 2
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-15/30, range 1
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-15/30, range 2
       value: 10
       unit_symbol: g
+      unit_id: u:gram
   - attribute: actual_scale_interval
     axis: variant / partial weighing range
     values:
     - condition: LNA-6/15, range 1
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-6/15, range 2
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-15/30, range 1
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: LNA-15/30, range 2
       value: 10
       unit_symbol: g
+      unit_id: u:gram
   - attribute: number_of_verification_scale_intervals
     axis: partial weighing range
     values:

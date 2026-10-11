@@ -99,7 +99,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
   model_level:
   - attribute: weighing_range
@@ -138,6 +138,7 @@ characteristics:
     - model: '220'
       value: 25
       footnote_markers: []
+    unit_id: u:ohm
   - attribute: maximum_load_cell_impedance
     unit_symbol: Ω
     values:
@@ -156,6 +157,7 @@ characteristics:
     - model: '220'
       value: 1000
       footnote_markers: []
+    unit_id: u:ohm
   config_level:
   - attribute: excitation_voltage
     axis: power source / model
@@ -163,12 +165,12 @@ characteristics:
     - condition: All models, default (mains operation)
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     - condition: Model 215 operated on battery
       value: 8
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
 recommendation:
   id: R76

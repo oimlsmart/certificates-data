@@ -67,6 +67,7 @@ characteristics:
     power_supply_voltage:
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: DC from external mains adapter
     mains_adapter_input_voltage:
@@ -74,23 +75,28 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     maximum_number_of_scale_intervals:
       value: 10000
       unit_symbol:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     minimum_load_cell_impedance:
       value: 43.75
       unit_symbol: Ω
+      unit_id: u:ohm
     maximum_load_cell_impedance:
       value: 1000
       unit_symbol: Ω
+      unit_id: u:ohm
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.5
       unit_symbol: µV
@@ -108,6 +114,7 @@ characteristics:
         min: -10
         max: -40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     load_cell_cable_maximum_length:
       value: 22
       unit_symbol: m/mm²
@@ -218,6 +225,7 @@ characteristics:
       value: 60
     - condition: CTI1200Sx-150
       value: 150
+    unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     axis: scale_configuration
     unit_symbol: kg
@@ -242,6 +250,7 @@ characteristics:
       value: 0.02
     - condition: CTI1200Sx-150
       value: 0.05
+    unit_id: u:kilogram
   - attribute: dead_load_of_receptor
     axis: scale_configuration
     unit_symbol: kg
@@ -266,6 +275,7 @@ characteristics:
       value: 10
     - condition: CTI1200Sx-150
       value: 10
+    unit_id: u:kilogram
   - attribute: load_cell_type
     axis: scale_configuration
     values:
@@ -333,6 +343,7 @@ characteristics:
       value: 180
       footnote_markers:
       - "*)"
+    unit_id: u:kilogram
   - attribute: number_of_load_cells
     axis: scale_configuration
     values:

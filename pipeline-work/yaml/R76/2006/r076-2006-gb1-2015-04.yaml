@@ -55,12 +55,12 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
       footnote_markers: []
     minimum_capacity_postal_tariffs:
       value: 5
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
       footnote_markers: []
     maximum_tare:
       value: -100
@@ -72,14 +72,14 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage_dc:
       value:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC (via PSU) or DC
@@ -91,7 +91,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     initial_zero_setting_range:
       value:
@@ -166,6 +166,7 @@ characteristics:
         min: 5
         max: 80
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -184,6 +185,7 @@ characteristics:
         min: 2
         max:
       footnote_markers: []
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -196,6 +198,7 @@ characteristics:
     - model: BSQ-1214-080
       value: 110
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: temperature_range
     axis: temperature range option
@@ -205,11 +208,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: 'reduced range alternative, instrument bearing legend ''Temperature range: +5°C / 40°C'''
       value:
         min: 5
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_number_of_scale_intervals
     axis: interval operation
     values:

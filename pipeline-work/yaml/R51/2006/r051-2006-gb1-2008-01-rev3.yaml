@@ -75,7 +75,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     humidity_conditions:
       value: Non-condensing (closed)
@@ -92,7 +92,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -102,12 +102,12 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     load_cell_excitation_voltage:
       value: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
   model_level:
   - attribute: maximum_capacity
@@ -122,6 +122,7 @@ characteristics:
     - model: Heavy Range variant
       value: 12000
       footnote_markers: []
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -141,6 +142,7 @@ characteristics:
     - model: Super Heavy Range variant
       value: 3000
       footnote_markers: []
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -157,6 +159,7 @@ characteristics:
     - model: Heavy Range variant
       value: 2
       footnote_markers: []
+    unit_id: u:gram
   - attribute: load_cell_maximum_capacity_emax
     unit_symbol: kg
     values:
@@ -172,6 +175,7 @@ characteristics:
     - model: Super Heavy Range variant
       value: 100
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: maximum_subtractive_tare_relative_to_max
     unit_symbol: "%"
     values:
@@ -196,6 +200,7 @@ characteristics:
     - model: Super Heavy Range variant
       value: 5000
       footnote_markers: []
+    unit_id: u:gram
   - attribute: operating_speed
     unit_symbol: m/min
     values:
@@ -215,24 +220,30 @@ characteristics:
     - condition: range 1
       value: 10
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: range 2
       value: 20
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: range 3
       value: 50
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: scale_interval
     axis: 'Super Heavy Range variant: multi-interval range'
     values:
     - condition: range 1
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: range 2
       value: 10
       unit_symbol: g
+      unit_id: u:gram
     - condition: range 3
       value: 20
       unit_symbol: g
+      unit_id: u:gram
   - attribute: maximum_belt_speed
     axis: load range × variant
     values:

@@ -75,13 +75,13 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 200
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -89,11 +89,11 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     weighing_unit_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     initial_zero_setting_device_range:
       value:
         min:
@@ -148,57 +148,71 @@ characteristics:
     - condition: load cell CLC-10L or CLC-10N
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: load cell CLC-25L or CLC-25N
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: maximum_capacity
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
     - condition: Max = 30 kg
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 60 kg
       value: 60
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 120 kg
       value: 120
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: minimum_capacity
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
     - condition: Max = 30 kg
       value: 100
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 60 kg
       value: 200
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 120 kg
       value: 400
       unit_symbol: g
+      unit_id: u:gram
   - attribute: verification_scale_interval_e
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
     - condition: Max = 30 kg
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 60 kg
       value: 10
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 120 kg
       value: 20
       unit_symbol: g
+      unit_id: u:gram
   - attribute: subtractive_tare_limit
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
     - condition: Max = 30 kg
       value: -29.995
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 60 kg
       value: -59.99
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 120 kg
       value: -119.98
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: load_cell_model
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
@@ -217,12 +231,15 @@ characteristics:
     - condition: Max = 30 kg
       value: 60
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 60 kg
       value: 150
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 120 kg
       value: 300
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: temperature_range
     axis: IP-AI with weighing platform type S (alternative 5)
     values:
@@ -231,6 +248,7 @@ characteristics:
         min: 0
         max: 35
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76-1
   edition: 2006
@@ -275,7 +293,7 @@ components:
     emax:
       value: 10
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     nlc:
       value: 3000
       unit_symbol:
@@ -292,7 +310,7 @@ components:
     emax:
       value: 25
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     nlc:
       value: 3000
       unit_symbol:
@@ -307,7 +325,7 @@ components:
     emax:
       value: 60
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: load cell for weighing platform type S, Max 60 kg (alternative 5)
   type_designations:
   - ZLC-150L
@@ -318,7 +336,7 @@ components:
     emax:
       value: 150
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: load cell for weighing platform type S, Max 120 kg (alternative 5)
   type_designations:
   - ZLC-300L
@@ -329,7 +347,7 @@ components:
     emax:
       value: 300
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 matrix_tables:
 - name: Load cells by instrument capacity
   columns:

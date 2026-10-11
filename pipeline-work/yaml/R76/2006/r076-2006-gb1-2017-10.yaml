@@ -76,13 +76,13 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_dc:
       value:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     maximum_tare:
       value: -100
       unit_symbol: "%"
@@ -108,7 +108,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     interfaces:
       value: >-
         BSQ digital base interface; 3 x logic level inputs; 3 x open collector outputs; 2 x RS232 serial
@@ -139,18 +139,21 @@ characteristics:
     - condition: 5V EXC analogue load cell interface option card
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     axis: load_cell_input_variant
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 58.33
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_impedance
     axis: load_cell_input_variant
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     axis: load_cell_input_variant
     values:
@@ -196,6 +199,7 @@ characteristics:
     - condition: 5V EXC analogue load cell interface option card
       value: 30
       unit_symbol: m
+      unit_id: u:meter
   - attribute: maximum_preset_tare
     axis: range_configuration
     values:
@@ -240,7 +244,7 @@ components:
     excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     maximum_boards:
       value: 2
       unit_symbol:

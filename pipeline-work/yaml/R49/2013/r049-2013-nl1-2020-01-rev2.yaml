@@ -91,13 +91,13 @@ characteristics:
         min: 5
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_range_flow_sensor:
       value:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -107,7 +107,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -115,7 +115,7 @@ characteristics:
     maximum_admissible_pressure_equivalent:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     orientation:
       value: All positions
       unit_symbol:
@@ -129,29 +129,29 @@ characteristics:
         min: 85
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     mains_power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     dc_power_supply_voltage:
       value:
         min: 6
         max: 32
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_nominal_voltage:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_operating_voltage_range:
       value:
         min: 2.9
         max: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     software_identification:
       value: 03.00.03 (checksum B26AFE6B); 03.00.04 (checksum 6E98963A)
       unit_symbol:
@@ -1135,6 +1135,7 @@ characteristics:
       value: 0.4
     - condition: larger than DN50
       value: 0.63
+    unit_id: u:bar
   - attribute: pressure_loss_class
     axis: meter_size (virtual or full bore)
     values:
@@ -1154,105 +1155,136 @@ characteristics:
       value: 0.16
     - condition: DN250 and larger
       value: 0.1
+    unit_id: u:bar
   - attribute: indicating_range_max
     axis: bore × power_supply × meter_size
     values:
     - condition: reduced bore, AC mains powered, DN40-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN40-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN40-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN40-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_min
     axis: bore × power_supply × meter_size
     values:
     - condition: reduced bore, AC mains powered, DN40-DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, AC mains powered, DN80-DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, AC mains powered, DN250-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN40-DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN80-DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN250-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN40-DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN65-DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN200-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN40-DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN65-DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN200-DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_max
     axis: bore × power_supply × meter_size
     values:
     - condition: reduced bore, AC mains powered, DN40-DN80
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, AC mains powered, DN100-DN250
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, AC mains powered, DN300-DN600
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN40-DN50
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN65-DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN200-DN450
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: reduced bore, battery/renewable energy powered, DN500-DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN40-DN65
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN80-DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN200-DN300
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, AC mains powered, DN350-DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN40-DN125
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN150-DN500
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: full bore, battery/renewable energy powered, DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49
   edition: 2013

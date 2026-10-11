@@ -54,7 +54,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     humidity:
       value: non-condensing
@@ -134,6 +134,7 @@ characteristics:
     - condition: Analog load cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_excitation_waveform
     axis: configuration
     values:
@@ -145,6 +146,7 @@ characteristics:
     - condition: Digital load cells or weighing module
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_type
     axis: configuration
     values:
@@ -162,6 +164,7 @@ characteristics:
     - condition: Analog load cells
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: max_load_cell_resistance
     axis: configuration
     values:
@@ -201,9 +204,11 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -212,6 +217,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

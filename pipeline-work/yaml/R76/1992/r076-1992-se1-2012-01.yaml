@@ -67,16 +67,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 200
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -97,6 +100,7 @@ characteristics:
       value: 30
     - model: UNI-3 L2H
       value: 30
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -110,6 +114,7 @@ characteristics:
       value: 200
     - model: UNI-3 L2H
       value: 200
+    unit_id: u:gram
   - attribute: scale_interval_e1
     unit_symbol: g
     values:
@@ -117,6 +122,7 @@ characteristics:
       value: 2
     - model: UNI-3 L2
       value: 5
+    unit_id: u:gram
   - attribute: scale_interval_e2
     unit_symbol: g
     values:
@@ -124,6 +130,7 @@ characteristics:
       value: 5
     - model: UNI-3 L2
       value: 10
+    unit_id: u:gram
   - attribute: scale_interval_e
     unit_symbol: g
     values:
@@ -133,6 +140,7 @@ characteristics:
       value: 10
     - model: UNI-3 L2H
       value: 10
+    unit_id: u:gram
   - attribute: maximum_tare_effect
     unit_symbol: kg
     values:
@@ -146,6 +154,7 @@ characteristics:
       value: -14.99
     - model: UNI-3 L2H
       value: -14.99
+    unit_id: u:kilogram
   config_level:
   - attribute: scale_interval
     axis: weighing range segment
@@ -153,15 +162,19 @@ characteristics:
     - condition: UNI-3 L1, 0 to 5.998 kg (Max1)
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: UNI-3 L1, 6 to 15 kg
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: UNI-3 L2, 0 to 14.995 kg
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: UNI-3 L2, 15 to 30 kg
       value: 10
       unit_symbol: g
+      unit_id: u:gram
 recommendation:
   id: R76
   edition: 2006
@@ -200,6 +213,7 @@ components:
     capacity:
       value: 25
       unit_symbol: kg
+      unit_id: u:kilogram
     n_max:
       value: 3000
       unit_symbol:
@@ -214,6 +228,7 @@ components:
     capacity:
       value: 50
       unit_symbol: kg
+      unit_id: u:kilogram
     n_max:
       value: 3000
       unit_symbol:

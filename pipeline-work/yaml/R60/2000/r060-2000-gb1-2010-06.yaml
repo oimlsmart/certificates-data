@@ -78,18 +78,21 @@ characteristics:
       value: 18
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     input_impedance_rlc:
       value:
         min: 345
         max: 355
       unit_symbol: Ω
       footnote_markers: []
+      unit_id: u:ohm
     temperature_rating:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     safe_overload_relative:
       value: 150
       unit_symbol: "%"
@@ -98,6 +101,7 @@ characteristics:
       value: 5
       unit_symbol: m
       footnote_markers: []
+      unit_id: u:meter
     wiring_configuration:
       value: 4 wire
       unit_symbol:
@@ -120,6 +124,7 @@ characteristics:
       value: 1000
     - model: Emax=2000kg
       value: 2000
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_load_cell_verification_intervals_nlc
     axis: accuracy_class
@@ -163,18 +168,23 @@ characteristics:
     - condition: C1
       value: Emax/5000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: C2
       value: Emax/7000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: C3
       value: Emax/12000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: C3M
       value: Emax/16000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: C4
       value: Emax/16000
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: ratio_z_emax_over_2dr
     axis: accuracy_class
     values:

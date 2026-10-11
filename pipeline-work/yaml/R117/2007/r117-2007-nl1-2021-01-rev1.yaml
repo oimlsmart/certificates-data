@@ -83,7 +83,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_for_measurement_of:
       value: >-
         Oil and oil products, chemicals, potable liquids, liquefied gases under pressure measured at temperatures
@@ -341,6 +341,7 @@ characteristics:
       value: 100
     - model: Promass Q DN100
       value: 200
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_pressure
     axis: sensor_family
@@ -365,26 +366,31 @@ characteristics:
         min: -10
         max: 200
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass F, accuracy class 1.5
       value:
         min: -200
         max: 85
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass X, accuracy class 0.3/0.5/1.0
       value:
         min: -10
         max: 180
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass X, accuracy class 1.5
       value:
         min: -10
         max: 85
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass O, accuracy class 0.3/0.5
       value:
         min: -10
         max: 200
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass O, accuracy class 1.0/1.5
       value: NA
     - condition: Promass Q, accuracy class 0.3/0.5/1.0
@@ -392,11 +398,13 @@ characteristics:
         min: -10
         max: 200
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass Q, accuracy class 1.5
       value:
         min: -200
         max: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: temperature_range_liquid_for_density_and_volume_measurement
     axis: sensor_family_and_accuracy_class
     values:
@@ -405,6 +413,7 @@ characteristics:
         min: -10
         max: 85
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass F, accuracy class 1.5
       value: NA
     - condition: Promass X, accuracy class 0.3/0.5/1.0
@@ -412,6 +421,7 @@ characteristics:
         min: -10
         max: 85
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass X, accuracy class 1.5
       value: NA
     - condition: Promass O, accuracy class 0.3/0.5
@@ -419,6 +429,7 @@ characteristics:
         min: -10
         max: 85
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass O, accuracy class 1.0/1.5
       value: NA
     - condition: Promass Q, accuracy class 0.3/0.5/1.0
@@ -426,6 +437,7 @@ characteristics:
         min: -10
         max: 200
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Promass Q, accuracy class 1.5
       value: NA
 recommendation:
@@ -684,7 +696,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_conditions:
       value: condensing humidity
       unit_symbol:
@@ -692,19 +704,19 @@ components:
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_ac:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: DC or AC
       unit_symbol:

@@ -67,7 +67,7 @@ characteristics:
         min: 0.3
         max: 40
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     pressure_range_mpa:
       value:
         min: 0.03
@@ -112,16 +112,19 @@ characteristics:
     - condition: battery
       value: 3.6
       unit_symbol: V
+      unit_id: u:volt
     - condition: external_power_supply (AC)
       value:
         min: 85
         max: 265
       unit_symbol: V
+      unit_id: u:volt
     - condition: external_power_supply (DC)
       value:
         min: 19
         max: 30
       unit_symbol: V
+      unit_id: u:volt
   - attribute: supply_frequency
     axis: power_supply
     values:
@@ -130,6 +133,7 @@ characteristics:
         min: 47
         max: 63
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: maximum_power
     axis: power_supply
     values:
@@ -139,6 +143,7 @@ characteristics:
     - condition: external_power_supply
       value: 4
       unit_symbol: W
+      unit_id: u:watt
   model_level:
   - attribute: q1
     unit_symbol: m³/h

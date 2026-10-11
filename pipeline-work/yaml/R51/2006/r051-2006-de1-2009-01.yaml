@@ -50,16 +50,19 @@ characteristics:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     maximum_load:
       value:
         min:
         max: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     temperature_range:
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   config_level:
   - attribute: maximum_belt_speed
     axis: weighing_module_type_and_operation_mode
@@ -69,16 +72,19 @@ characteristics:
         min:
         max: 1.47
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: weighing modules WS10E or WS20E (Tab. 2), operation in motion
       value:
         min:
         max: 0.59
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: weighing modules WS10E or WS20E (Tab. 2), start-stop operation
       value:
         min:
         max: 1
       unit_symbol: m/s
+      unit_id: u:meter_per_second
   - attribute: number_of_verification_scale_intervals
     axis: weighing_module_type_and_range_configuration
     values:
@@ -104,11 +110,13 @@ characteristics:
         min: 20
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: XIII(1), XIII(x ≥ 2)
       value:
         min: 50
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: tare
     axis: weighing_module_type
     values:

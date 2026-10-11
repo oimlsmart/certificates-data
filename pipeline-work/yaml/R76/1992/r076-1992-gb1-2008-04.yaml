@@ -55,7 +55,7 @@ characteristics:
     minimum_capacity:
       value: 0.04
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     minimum_capacity_definition:
       value: 20e
@@ -67,7 +67,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     display_digits:
       value: 5
@@ -81,21 +81,26 @@ characteristics:
     - condition: single-interval
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: dual-interval
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: interval configuration
     values:
     - condition: single-interval
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: dual-interval, lower range (0 to 6 kg)
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: dual-interval, upper range (6 to 15 kg)
       value: 5
       unit_symbol: g
+      unit_id: u:gram
   - attribute: number_of_scale_intervals
     axis: interval configuration
     values:
@@ -136,7 +141,7 @@ components:
       maximum_capacity:
         value: 20
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
 matrix_tables:
 - name: Weighing characteristics by interval configuration

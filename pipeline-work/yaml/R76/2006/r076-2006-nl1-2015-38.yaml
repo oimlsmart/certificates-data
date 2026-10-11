@@ -62,14 +62,14 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     weighing_ranges:
       value: Single interval or Multi-interval
@@ -100,7 +100,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
   model_level:
   - attribute: power_supply_voltage_rs232
@@ -108,11 +108,13 @@ characteristics:
     values:
     - model: AD2000
       value: 12
+    unit_id: u:volt
   - attribute: power_supply_voltage_usb
     unit_symbol: V
     values:
     - model: AD2000
       value: 5
+    unit_id: u:volt
   - attribute: power_supply_voltage_ac
     unit_symbol: V
     values:
@@ -120,6 +122,7 @@ characteristics:
       value:
         min: 100
         max: 240
+    unit_id: u:volt
   - attribute: power_supply_frequency
     unit_symbol: Hz
     values:
@@ -127,6 +130,7 @@ characteristics:
       value:
         min: 50
         max: 60
+    unit_id: u:hertz
   - attribute: power_supply_type
     unit_symbol:
     values:

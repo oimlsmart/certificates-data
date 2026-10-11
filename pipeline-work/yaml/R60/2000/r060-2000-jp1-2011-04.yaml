@@ -57,15 +57,15 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_verification_interval_vmin:
       value: Emax/7000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.7
       unit_symbol:
@@ -85,7 +85,7 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: AC/DC
       unit_symbol:
@@ -93,11 +93,11 @@ characteristics:
     input_impedance_rlc:
       value: 410
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     cable_length_maximum:
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     cable_details:
       value: >-
         6-conductor shielded; Red: Excitation+, Green: Signal+, Orange: Remote Sensing+, Blue: Signal-,
@@ -112,6 +112,7 @@ characteristics:
       value: 400
     - model: LCB06K600E
       value: 800
+    unit_id: u:kilogram
   - attribute: safe_load_limit_elim
     unit_symbol: kg
     values:
@@ -119,6 +120,7 @@ characteristics:
       value: 600
     - model: LCB06K600E
       value: 1200
+    unit_id: u:kilogram
   - attribute: max_load_cell_verification_intervals_nmax
     unit_symbol:
     values:

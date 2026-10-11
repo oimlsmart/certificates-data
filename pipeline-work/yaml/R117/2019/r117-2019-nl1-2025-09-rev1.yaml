@@ -77,7 +77,7 @@ characteristics:
     maximum_pressure:
       value: 3.6
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     environmental_classes:
       value: M2 / E1
     power_supply_voltage:
@@ -85,13 +85,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
   model_level: []
@@ -129,9 +129,11 @@ characteristics:
     - condition: Qmax of the measuring system is 60 L/min or more
       value: 2
       unit_symbol: L
+      unit_id: u:lambert
     - condition: Qmax of the measuring system is less than 60 L/min (MMQ shall not exceed 5 litres)
       value: 5
       unit_symbol: L
+      unit_id: u:lambert
   - attribute: ambient_temperature_range
     axis: display_configuration
     values:
@@ -140,11 +142,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: multimedia display board
       value:
         min: -10
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R117-1
   edition: 2019
@@ -226,13 +230,13 @@ components:
           min: 100
           max: 240
         unit_symbol: V
-        unit_id:
+        unit_id: u:volt
       power_supply_frequency:
         value:
           min: 50
           max: 60
         unit_symbol: Hz
-        unit_id:
+        unit_id: u:hertz
       power_supply_type:
         value: AC
       software_identification:
@@ -255,11 +259,13 @@ components:
           min: -25
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       - condition: multimedia display board
         value:
           min: -10
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
 - role: Gas separator / gas elimination device (optional)
   type_designations:
   - PPS
@@ -279,11 +285,11 @@ components:
       minimum_pressure:
         value: 1.8
         unit_symbol: bar
-        unit_id:
+        unit_id: u:bar
       maximum_pressure:
         value: 3.6
         unit_symbol: bar
-        unit_id:
+        unit_id: u:bar
 matrix_tables:
 - name: Flow rates by liquid temperature range (Table 1)
   columns:

@@ -64,13 +64,13 @@ characteristics:
         min: 1.5
         max: 15
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     verification_scale_interval:
       value:
         min: 0.5
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     maximum_number_of_scale_intervals:
       value:
         min:
@@ -82,7 +82,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     tare:
       value: T ≤ -Max
       unit_symbol:
@@ -111,12 +111,15 @@ characteristics:
     - condition: AC/DC adapter
       value: 9
       unit_symbol: V
+      unit_id: u:volt
     - condition: batteries (6 x 1.5 V)
       value: 9
       unit_symbol: V
+      unit_id: u:volt
     - condition: rechargeable battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_option
     values:

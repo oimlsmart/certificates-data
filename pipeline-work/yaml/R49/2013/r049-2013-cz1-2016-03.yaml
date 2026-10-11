@@ -98,7 +98,7 @@ characteristics:
     battery_voltage:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     minimum_battery_life_time:
       value: 5
       unit_symbol: years
@@ -539,6 +539,7 @@ characteristics:
       value: 999999
     - model: MAGB1-DN150-R50
       value: 999999
+    unit_id: u:cubic_meter
   - attribute: length_of_horizontal_water_meter
     unit_symbol: mm
     values:
@@ -612,9 +613,11 @@ characteristics:
     - condition: normal mode
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: calibration (high resolution) mode
       value: 1.0e-06
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: electromagnetic_environment_class
     axis: version
     values:
@@ -628,6 +631,7 @@ characteristics:
     - condition: remote version
       value: 6
       unit_symbol: m
+      unit_id: u:meter
 recommendation:
   id: R49
   edition: 2013

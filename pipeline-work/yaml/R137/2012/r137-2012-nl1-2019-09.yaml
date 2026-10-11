@@ -72,7 +72,7 @@ characteristics:
     maximum_pressure:
       value: 103
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     ambient_temperature_range:
       value:
@@ -103,7 +103,7 @@ characteristics:
         min: 18
         max: 28
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: DC
@@ -120,14 +120,14 @@ characteristics:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id:
+      unit_id: u:debye
       footnote_markers: []
     bidirectional_additional_temperature_sensor_position_upstream:
       value:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id:
+      unit_id: u:debye
       footnote_markers: []
     maximum_welding_diameter_step:
       value: 3
@@ -189,6 +189,7 @@ characteristics:
       value: 28.0
     - model: DN400
       value: 27.0
+    unit_id: u:meter_per_second
   - attribute: vmin
     unit_symbol: m/s
     values:
@@ -208,6 +209,7 @@ characteristics:
       value: 0.3
     - model: DN400
       value: 0.3
+    unit_id: u:meter_per_second
   - attribute: vt
     unit_symbol: m/s
     values:
@@ -227,6 +229,7 @@ characteristics:
       value: Vmax/10
     - model: DN400
       value: Vmax/10
+    unit_id: u:meter_per_second
   config_level:
   - attribute: min_upstream_straight_pipe_before_flow_conditioner
     axis: flow_conditioner_type
@@ -234,27 +237,33 @@ characteristics:
     - condition: NOVA 50E flow conditioner
       value: 5
       unit_symbol: D
+      unit_id: u:debye
     - condition: PTB flow conditioner
       value: 5
       unit_symbol: D
+      unit_id: u:debye
   - attribute: min_upstream_straight_pipe_after_flow_conditioner
     axis: flow_conditioner_type
     values:
     - condition: NOVA 50E flow conditioner
       value: 10
       unit_symbol: D
+      unit_id: u:debye
     - condition: PTB flow conditioner
       value: 5
       unit_symbol: D
+      unit_id: u:debye
   - attribute: min_downstream_straight_pipe
     axis: flow_conditioner_type
     values:
     - condition: NOVA 50E flow conditioner
       value: 4
       unit_symbol: D
+      unit_id: u:debye
     - condition: PTB flow conditioner
       value: 3
       unit_symbol: D
+      unit_id: u:debye
 recommendation:
   id: R137-1
   edition: 2012

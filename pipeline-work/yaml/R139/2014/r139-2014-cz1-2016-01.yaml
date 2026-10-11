@@ -70,9 +70,11 @@ characteristics:
     min_measured_quantity_mmq:
       value: 2
       unit_symbol: kg
+      unit_id: u:kilogram
     scale_interval_mass_display:
       value: 0.01 or 0.001
       unit_symbol: kg
+      unit_id: u:kilogram
     max_storage_pressure_pst:
       value: 30.0
       unit_symbol: MPa
@@ -88,6 +90,7 @@ characteristics:
     max_filling_pressure_reference_temperature:
       value: 15
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     max_filling_pressure_pvmax:
       value: 26.5
       unit_symbol: MPa
@@ -98,9 +101,11 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
+      unit_id: u:hertz
   config_level:
   - attribute: max_flow_rate_qmax
     axis: used measurement transducer
@@ -128,11 +133,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: CNGmass
       value:
         min: -50
         max: 80
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: ambient_temperature_range
     axis: used measurement transducer
     values:
@@ -141,11 +148,13 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: CNGmass
       value:
         min: -40
         max: 60
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R139
   edition: 2014
@@ -239,16 +248,19 @@ components:
     maximum_pressure:
       value: 345
       unit_symbol: bar
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     environment_classes:
       value: M3 / E3
     sw_versions_700_800:
@@ -277,16 +289,19 @@ components:
     maximum_pressure:
       value: 350
       unit_symbol: bar
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 60
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     environment_classes:
       value: B / C
     sw_version:
@@ -304,14 +319,17 @@ components:
     scale_interval:
       value: 0.01 or 0.001
       unit_symbol: kg
+      unit_id: u:kilogram
     minimum_measured_quantity:
       value: 2
       unit_symbol: kg
+      unit_id: u:kilogram
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     environment_classes:
       value: M1 / E1 / H3
     sw_version:
@@ -327,6 +345,7 @@ components:
     maximum_length:
       value: 6
       unit_symbol: m
+      unit_id: u:meter
 - role: delivery_nozzle
   type_designations:
   - STÄUBLI GMV 06 (NGV1)

@@ -58,9 +58,11 @@ characteristics:
         min: 30
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
     verification_scale_interval:
       value: 20 or 50
       unit_symbol: g
+      unit_id: u:gram
     maximum_number_of_scale_intervals:
       value:
         min:
@@ -69,11 +71,13 @@ characteristics:
     maximum_time_interval_automatic_zero_setting:
       value: 6
       unit_symbol: min
+      unit_id: u:minute
     dynamic_setting_range:
       value:
         min: -5
         max: 5
       unit_symbol: kg
+      unit_id: u:kilogram
     weighing_ranges:
       value: Single interval
     tare:
@@ -83,6 +87,7 @@ characteristics:
     power_supply_voltage:
       value: 24
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: DC
     cpu_software_version:
@@ -110,16 +115,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: 'configuration 2: 102 m/min, +5 °C/+40 °C'
       value:
         min: 5
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: 'configuration 3: 120 m/min, -10 °C/+40 °C'
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: minimum_capacity
     axis: configuration (transport system speed × temperature range)
     values:
@@ -128,16 +136,19 @@ characteristics:
         min: 6
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: 'configuration 2: 102 m/min, +5 °C/+40 °C'
       value:
         min: 5
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: 'configuration 3: 120 m/min, -10 °C/+40 °C'
       value:
         min: 10
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
 recommendation:
   id: R51
   edition: 2006

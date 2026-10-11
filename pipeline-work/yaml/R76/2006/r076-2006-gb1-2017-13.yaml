@@ -101,7 +101,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_type:
       value: DC
       unit_symbol:
@@ -141,7 +141,7 @@ characteristics:
   model_level:
   - attribute: power_supply_voltage
     unit_symbol: V
-    unit_id:
+    unit_id: u:volt
     values:
     - model: ED
       value: 12
@@ -314,6 +314,7 @@ characteristics:
         max: 10
     - condition: PW-II, Max=10 kg
       value: 10
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     axis: capacity variant per model
     unit_symbol: g
@@ -402,6 +403,7 @@ characteristics:
       value: 40
     - condition: PW-II, Max=10 kg
       value: 100
+    unit_id: u:gram
   - attribute: verification_scale_interval
     axis: capacity variant per model (dual-interval variants given as e1/e2)
     unit_symbol: g
@@ -532,6 +534,7 @@ characteristics:
         max: 5
     - condition: PW-II, Max=10 kg
       value: 5
+    unit_id: u:gram
   - attribute: max_tare
     axis: 'capacity variant per model (subtractive tare limit, negative as printed: T <= value)'
     unit_symbol: kg
@@ -620,6 +623,7 @@ characteristics:
       value: -3.998
     - condition: PW-II, Max=10 kg
       value: -10
+    unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006

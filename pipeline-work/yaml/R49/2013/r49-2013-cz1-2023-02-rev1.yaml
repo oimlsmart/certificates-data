@@ -83,11 +83,13 @@ characteristics:
         min: 5
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     electromagnetic_environment:
       value: E2
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -114,9 +116,11 @@ characteristics:
     power_supply_voltage_max:
       value: 4.2
       unit_symbol: V
+      unit_id: u:volt
     power_supply_voltage_min:
       value: 2
       unit_symbol: V
+      unit_id: u:volt
     minimum_battery_life_time:
       value: 5
       unit_symbol: years
@@ -127,15 +131,19 @@ characteristics:
     normal_resolution_volume:
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     high_resolution_volume_calibration_mode:
       value: 0.001
       unit_symbol: L
+      unit_id: u:lambert
     remote_version_max_cable_length:
       value: 10
       unit_symbol: m
+      unit_id: u:meter
     rs485_max_cable_length:
       value: 30
       unit_symbol: m
+      unit_id: u:meter
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -245,6 +253,7 @@ characteristics:
       value: 99999999
     - model: MAGB2-DN300
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: indicating_device_resolution
     unit_symbol: m³
     values:
@@ -272,6 +281,7 @@ characteristics:
       value: 0.001
     - model: MAGB2-DN300
       value: 0.001
+    unit_id: u:cubic_meter
   config_level:
   - attribute: mpe_upper_flowrate_zone
     axis: water_temperature

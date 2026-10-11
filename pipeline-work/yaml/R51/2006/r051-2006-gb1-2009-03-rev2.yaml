@@ -69,6 +69,7 @@ characteristics:
         min: 0
         max: 35
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     climatic_environment:
       value: Non-condensing (closed)
     em_environments:
@@ -81,11 +82,13 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     software_version:
       value: '1.1'
     minimum_input_voltage_per_scale_interval:
@@ -94,11 +97,13 @@ characteristics:
     high_resolution_mode:
       value: 0.1
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
     automatic_zero_setting_period:
       value:
         min:
         max: 3
       unit_symbol: h
+      unit_id: u:hour
     semi_automatic_zero_setting_max_correction:
       value:
         min:
@@ -118,6 +123,7 @@ characteristics:
     - condition: single interval
       value: -450
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
     - condition: multi interval
       value: -450
       unit_symbol: e1
@@ -127,15 +133,19 @@ characteristics:
     - condition: single interval, 0-1500e
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: single interval, 1501e-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 0-1500e2
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 1501e2-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
 recommendation:
   id: R51
   edition: 2006
@@ -179,6 +189,7 @@ components:
     emax:
       value: 10 or 15
       unit_symbol: kg
+      unit_id: u:kilogram
     applies_to:
       value: Entry/Mid-range and Top range configurations
 - role: load_cell
@@ -189,6 +200,7 @@ components:
     emax:
       value: 50 or 75
       unit_symbol: kg
+      unit_id: u:kilogram
     applies_to:
       value: Heavy range configurations
 - role: alternative_load_cell

@@ -80,7 +80,7 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -90,11 +90,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     battery_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_capacity:
       value: 3.6
       unit_symbol: Ah
@@ -108,11 +108,11 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_excitation_type:
       value: DC
       unit_symbol:
@@ -120,7 +120,7 @@ characteristics:
     load_cell_impedance:
       value: 350
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.5
       unit_symbol: μV
@@ -355,98 +355,123 @@ characteristics:
     - condition: Max = 6 kg (single-interval)
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 6/15 kg (dual-interval)
       value:
         min: 6
         max: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15 kg (single-interval)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15/30 kg (dual-interval)
       value:
         min: 15
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 30 kg (single-interval)
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: minimum_capacity
     axis: capacity_configuration (ZEMIC L6D fitted)
     values:
     - condition: Max = 6 kg (single-interval)
       value: 40
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 6/15 kg (dual-interval)
       value: 40
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 15 kg (single-interval)
       value: 100
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 15/30 kg (dual-interval)
       value: 100
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 30 kg (single-interval)
       value: 200
       unit_symbol: g
+      unit_id: u:gram
   - attribute: verification_scale_interval_e
     axis: capacity_configuration (ZEMIC L6D fitted)
     values:
     - condition: Max = 6 kg (single-interval)
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 6/15 kg (dual-interval)
       value:
         min: 2
         max: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 15 kg (single-interval)
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 15/30 kg (dual-interval)
       value:
         min: 5
         max: 10
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max = 30 kg (single-interval)
       value: 10
       unit_symbol: g
+      unit_id: u:gram
   - attribute: maximum_subtractive_tare
     axis: capacity_configuration (ZEMIC L6D fitted)
     values:
     - condition: Max = 6 kg (single-interval)
       value: 3
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 6/15 kg (dual-interval)
       value: 5.998
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15 kg (single-interval)
       value: 7.5
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15/30 kg (dual-interval)
       value: 14.995
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 30 kg (single-interval)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: load_cell_emax
     axis: capacity_configuration (ZEMIC L6D fitted)
     values:
     - condition: Max = 6 kg (single-interval)
       value: 12
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 6/15 kg (dual-interval)
       value: 25
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15 kg (single-interval)
       value: 25
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 15/30 kg (dual-interval)
       value: 40
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max = 30 kg (single-interval)
       value: 40
       unit_symbol: kg
+      unit_id: u:kilogram
 recommendation:
   id: R76-1
   edition: 2006
@@ -633,7 +658,7 @@ components:
         min: 12
         max: 40
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 matrix_tables:
 - name: Model variants and designation
   columns:

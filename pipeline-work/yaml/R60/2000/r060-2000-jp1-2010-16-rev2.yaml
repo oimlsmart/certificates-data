@@ -54,15 +54,15 @@ characteristics:
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_verification_interval_vmin:
       value: Emax/16000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.7
       unit_symbol:
@@ -76,7 +76,7 @@ characteristics:
         min: 7.5
         max: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -86,7 +86,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: maximum_capacity_emax
     unit_symbol: kg
@@ -101,6 +101,7 @@ characteristics:
       value: 30000
     - model: DC002-40T
       value: 40000
+    unit_id: u:kilogram
   - attribute: cable_length_maximum
     unit_symbol: m
     values:
@@ -114,6 +115,7 @@ characteristics:
       value: 12
     - model: DC002-40T
       value: 15
+    unit_id: u:meter
   config_level:
   - attribute: max_load_cell_verification_intervals_nmax
     axis: variant

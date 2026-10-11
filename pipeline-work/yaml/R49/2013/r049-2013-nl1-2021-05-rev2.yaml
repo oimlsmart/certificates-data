@@ -75,7 +75,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -103,7 +103,7 @@ characteristics:
         min: 3.0
         max: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
   model_level:
   - attribute: inlet_outlet_diameter
     unit_symbol: mm
@@ -348,11 +348,13 @@ characteristics:
         min: 0.1
         max: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T50
       value:
         min: 0.1
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: pressure_loss_class
     axis: bore
     values:
@@ -368,9 +370,11 @@ characteristics:
     - condition: full bore
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
     - condition: reduced bore
       value: 0.25
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: software_checksum
     axis: software_version
     values:
@@ -386,18 +390,22 @@ characteristics:
     - condition: DN40-DN100 full bore / DN50-DN125 reduced bore
       value: 999999.9999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN125-DN200 full bore / DN150-DN300 reduced bore
       value: 9999999.999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: meter_size_group
     values:
     - condition: DN40-DN100 full bore / DN50-DN125 reduced bore
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN125-DN200 full bore / DN150-DN300 reduced bore
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49-1
   edition: 2013

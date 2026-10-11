@@ -98,7 +98,7 @@ characteristics:
     battery_voltage:
       value: 1.5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     battery_quantity:
       value: 6
@@ -108,12 +108,12 @@ characteristics:
     mains_adaptor_output_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adaptor_output_current:
       value: 1
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
       footnote_markers: []
     display_type:
       value: LCD
@@ -171,6 +171,7 @@ characteristics:
       value: 15
     - model: MS-5900 (Max 20 kg)
       value: 20
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -194,6 +195,7 @@ characteristics:
       value: 100
     - model: MS-5900 (Max 20 kg)
       value: 200
+    unit_id: u:gram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -229,6 +231,7 @@ characteristics:
       value: 5
     - model: MS-5900 (Max 20 kg)
       value: 10
+    unit_id: u:gram
   - attribute: maximum_tare
     unit_symbol: kg
     values:
@@ -252,6 +255,7 @@ characteristics:
       value: -9.995
     - model: MS-5900 (Max 20 kg)
       value: -20.0
+    unit_id: u:kilogram
   - attribute: temperature_range
     unit_symbol: "°C"
     values:
@@ -295,6 +299,7 @@ characteristics:
       value:
         min: 0
         max: 40
+    unit_id: u:degree_Celsius
   - attribute: number_of_buttons
     unit_symbol:
     values:
@@ -399,15 +404,19 @@ components:
       - condition: MS-4200
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4200
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
 - role: load_cell
   type_designations:
   - Tedea 1022
@@ -420,21 +429,27 @@ components:
       - condition: MS-4200
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4200
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4201
         value: 75
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4202L
         value: 150
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
     - attribute: quantity_per_instrument
       axis: instrument_model
       values:
@@ -452,15 +467,19 @@ components:
       - condition: MS-4200
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4200
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-5900
         value: 35
         unit_symbol: kg
+        unit_id: u:kilogram
 - role: load_cell
   type_designations:
   - ZEMIC L6D8
@@ -473,9 +492,11 @@ components:
       - condition: MS-4201
         value: 75
         unit_symbol: kg
+        unit_id: u:kilogram
       - condition: MS-4202L
         value: 150
         unit_symbol: kg
+        unit_id: u:kilogram
     - attribute: quantity_per_instrument
       axis: instrument_model
       values:

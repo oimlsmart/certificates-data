@@ -59,7 +59,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     mechanical_environment_class:
       value: M3
     electromagnetic_environment_class:
@@ -71,19 +71,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency_ac:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value:
         min: 12
         max: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_dc_note:
       value: suitable for road vehicle power supply
   config_level:
@@ -113,11 +113,11 @@ characteristics:
     - condition: analog load cells
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     - condition: analog load cells with zener barriers on the load cell interface
       value: 2.44
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
   - attribute: load_cell_excitation_waveform
     axis: configuration
     values:
@@ -153,22 +153,22 @@ characteristics:
     - condition: analog load cells
       value: 43
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     - condition: analog load cells with zener barriers on the load cell interface
       value: 87
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: configuration
     values:
     - condition: analog load cells
       value: 3300
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     - condition: analog load cells with zener barriers on the load cell interface
       value: 3300
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permissible_error
     axis: configuration
     values:
@@ -208,7 +208,7 @@ characteristics:
     - condition: digital load cells or weighing module, when powered by the indicator
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
 recommendation:
   id: R76-1
   edition: 2006

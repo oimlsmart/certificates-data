@@ -61,19 +61,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     minimum_dead_load:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     safe_load_limit:
       value: 1.5*Emax
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_verification_interval_vmin:
       value: Emax/10000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.7
       unit_symbol:
@@ -85,11 +85,11 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     input_impedance_rlc:
       value: 400
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     cable_wiring:
       value: 4-wire
       unit_symbol:
@@ -114,6 +114,7 @@ characteristics:
       value: 20
     - model: IR-30
       value: 30
+    unit_id: u:metric_ton
   - attribute: rated_output
     unit_symbol: mV/V
     values:
@@ -152,6 +153,7 @@ characteristics:
       value: 9
     - model: IR-30
       value: 11
+    unit_id: u:meter
   config_level:
   - attribute: max_load_cell_verification_intervals_nmax
     axis: permitted nmax value
@@ -201,7 +203,7 @@ model_family:
       maximum_capacity:
         value: 20
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: HR II-30
     label:
     attributes:
@@ -209,7 +211,7 @@ model_family:
       maximum_capacity:
         value: 30
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: HR II-50
     label:
     attributes:
@@ -217,7 +219,7 @@ model_family:
       maximum_capacity:
         value: 50
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: HR II-100
     label:
     attributes:
@@ -225,7 +227,7 @@ model_family:
       maximum_capacity:
         value: 100
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: HR III-50
     label:
     attributes:
@@ -233,7 +235,7 @@ model_family:
       maximum_capacity:
         value: 50
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: HR III-80
     label:
     attributes:
@@ -241,7 +243,7 @@ model_family:
       maximum_capacity:
         value: 80
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: IR-20
     label:
     attributes:
@@ -249,7 +251,7 @@ model_family:
       maximum_capacity:
         value: 20
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: IR-30
     label:
     attributes:
@@ -257,7 +259,7 @@ model_family:
       maximum_capacity:
         value: 30
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
 matrix_tables:
 - name: Characteristics by model series
   columns:

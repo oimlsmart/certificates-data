@@ -63,12 +63,12 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: DC
@@ -80,14 +80,14 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     external_power_supply_input_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     external_power_supply_input_type:
       value: AC
@@ -145,6 +145,7 @@ characteristics:
     - model: MP70X2
       value: 40
       footnote_markers: []
+    unit_id: u:gram
   - attribute: maximum_capacity
     unit_symbol: kg
     values:
@@ -156,6 +157,7 @@ characteristics:
         min: 6
         max: 15
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -167,6 +169,7 @@ characteristics:
         min: 2
         max: 5
       footnote_markers: []
+    unit_id: u:gram
   config_level:
   - attribute: maximum_capacity
     axis: weighing_interval_MP70X2
@@ -174,18 +177,22 @@ characteristics:
     - condition: interval 1
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: interval 2
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     axis: weighing_interval_MP70X2
     values:
     - condition: interval 1
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: interval 2
       value: 5
       unit_symbol: g
+      unit_id: u:gram
   - attribute: platform_dimensions
     axis: model_size
     values:

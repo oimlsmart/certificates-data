@@ -59,14 +59,14 @@ characteristics:
         min: 3
         max: 15
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     max_number_of_scale_intervals_per_partial_weighing_range:
       value:
@@ -85,7 +85,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     weighing_ranges:
       value: Single interval / Multi-interval
@@ -121,11 +121,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC supplied by AC/DC adapter
       value:
         min: 7.5
         max: 15
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_configuration
     values:
@@ -134,6 +136,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

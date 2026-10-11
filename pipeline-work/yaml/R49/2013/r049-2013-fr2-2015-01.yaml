@@ -88,7 +88,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 20
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     flow_profile_stability_type:
       value: SD3
@@ -105,7 +105,7 @@ characteristics:
         min: 5
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     mechanical_environment_class:
       value: N/A
@@ -227,6 +227,7 @@ characteristics:
       value: 9999999
       footnote_markers:
       - "*"
+    unit_id: u:cubic_meter
   - attribute: verification_interval
     unit_symbol: dm³
     values:
@@ -401,6 +402,7 @@ characteristics:
         min:
         max: 16
       footnote_markers: []
+    unit_id: u:bar
   config_level:
   - attribute: pressure_loss_at_q3
     axis: 'WE100-WE125 group: DN and flow rate'
@@ -411,24 +413,28 @@ characteristics:
         max: 10
       unit_symbol: bar
       footnote_markers: []
+      unit_id: u:bar
     - condition: Q3 = 100 m³/h, DN125
       value:
         min:
         max: 16
       unit_symbol: bar
       footnote_markers: []
+      unit_id: u:bar
     - condition: Q3 = 160 m³/h, DN100
       value:
         min:
         max: 25
       unit_symbol: bar
       footnote_markers: []
+      unit_id: u:bar
     - condition: Q3 = 160 m³/h, DN125
       value:
         min:
         max: 40
       unit_symbol: bar
       footnote_markers: []
+      unit_id: u:bar
 recommendation:
   id: R49
   edition: 2013

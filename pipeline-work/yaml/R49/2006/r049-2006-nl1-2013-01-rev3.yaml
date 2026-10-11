@@ -63,12 +63,14 @@ characteristics:
       value: 16
       unit_symbol: bar
       footnote_markers: []
+      unit_id: u:bar
     admissible_temperature:
       value:
         min: 0.1
         max: 50
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     orientation:
       value: All positions
       unit_symbol:
@@ -490,6 +492,7 @@ characteristics:
       footnote_markers:
       - 2)
       - 4)
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -608,6 +611,7 @@ characteristics:
       footnote_markers:
       - 3)
       - 4)
+    unit_id: u:cubic_meter
   config_level:
   - attribute: power_supply_voltage_max
     axis: power_supply_type
@@ -615,24 +619,30 @@ characteristics:
     - condition: AC
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_voltage_min
     axis: power_supply_type
     values:
     - condition: AC
       value: 100
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -641,6 +651,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: DC
       value:
       unit_symbol:
@@ -649,6 +660,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R49
   edition: 2006

@@ -60,11 +60,11 @@ characteristics:
     minimum_dead_load:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     safe_load_limit:
       value: 1.5*Emax
       unit_symbol: t
-      unit_id:
+      unit_id: u:metric_ton
     apportionment_factor_plc:
       value: 0.8
       unit_symbol:
@@ -74,7 +74,7 @@ characteristics:
         min: 6
         max: 8
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -82,13 +82,13 @@ characteristics:
     cable_length:
       value: 15
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: maximum_capacity
     unit_symbol: t
@@ -117,6 +117,7 @@ characteristics:
       value: 50
     - model: CC1-H-50T-IS
       value: 50
+    unit_id: u:metric_ton
   config_level:
   - attribute: max_load_cell_intervals_nmax
     axis: n_max option (maximum number of load cell verification intervals)
@@ -139,15 +140,19 @@ characteristics:
     - condition: n_max=6000
       value: 1000*Emax/15000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: n_max=5000
       value: 1000*Emax/12500
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: n_max=4000
       value: 1000*Emax/10000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: n_max=3000
       value: 1000*Emax/8000
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: ratio_y_emax_over_vmin
     axis: n_max option (maximum number of load cell verification intervals)
     values:
@@ -194,81 +199,81 @@ model_family:
       maximum_capacity:
         value: 10
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-20T
     label: CC1-H-xxT where xx equals Emax
     attributes:
       maximum_capacity:
         value: 20
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-25T
     label: CC1-H-xxT where xx equals Emax
     attributes:
       maximum_capacity:
         value: 25
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-30T
     label: CC1-H-xxT where xx equals Emax
     attributes:
       maximum_capacity:
         value: 30
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-40T
     label: CC1-H-xxT where xx equals Emax
     attributes:
       maximum_capacity:
         value: 40
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-50T
     label: CC1-H-xxT where xx equals Emax
     attributes:
       maximum_capacity:
         value: 50
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-10T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 10
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-20T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 20
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-25T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 25
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-30T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 30
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-40T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 40
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
   - model_id: CC1-H-50T-IS
     label: CC1-H-xxT-IS where xx equals Emax
     attributes:
       maximum_capacity:
         value: 50
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton

@@ -69,6 +69,7 @@ characteristics:
         min: -5
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     climatic_environment:
       value: non-condensing (closed)
     electromagnetic_environment:
@@ -76,9 +77,11 @@ characteristics:
     power_supply_voltage:
       value: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
+      unit_id: u:hertz
     power_supply_type:
       value: AC
     semi_automatic_zero_setting_range_percent_of_max:
@@ -105,6 +108,7 @@ characteristics:
         min:
         max: 5
       unit_symbol: s
+      unit_id: u:sidereal_second
     dynamic_setting_range_percent_of_nominal_weight:
       value:
         min: -20
@@ -126,6 +130,7 @@ characteristics:
       value: 3000
     - model: DACS-G-S060-R2
       value: 6000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -139,6 +144,7 @@ characteristics:
       value: 125
     - model: DACS-G-S060-R2
       value: 350
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -152,6 +158,7 @@ characteristics:
       value: 1
     - model: DACS-G-S060-R2
       value: 2
+    unit_id: u:gram
   - attribute: maximum_number_of_scale_intervals
     unit_symbol:
     values:
@@ -172,9 +179,11 @@ characteristics:
     - condition: Range 1
       value: 26
       unit_symbol: min
+      unit_id: u:minute
     - condition: Range 2
       value: 65
       unit_symbol: min
+      unit_id: u:minute
   - attribute: adc_version
     axis: software variant
     values:
@@ -292,6 +301,7 @@ model_family:
       load_cell_maximum_capacity:
         value: 12
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: DACS-G-S015-R2-1500g
     label: DACS-G-S015 Series, Range 2 (Standard), Max 1500 g
     attributes:
@@ -301,6 +311,7 @@ model_family:
       load_cell_maximum_capacity:
         value: 12
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: DACS-G-S015-R2-2500g
     label: DACS-G-S015 Series, Range 2 (Standard), Max 2500 g
     attributes:
@@ -310,6 +321,7 @@ model_family:
       load_cell_maximum_capacity:
         value: 12
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: DACS-G-S060-R1
     label: DACS-G-S060 Series, Range 1 (High Precision)
     attributes:
@@ -319,6 +331,7 @@ model_family:
       load_cell_maximum_capacity:
         value: 60
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: DACS-G-S060-R2
     label: DACS-G-S060 Series, Range 2 (Standard)
     attributes:
@@ -328,6 +341,7 @@ model_family:
       load_cell_maximum_capacity:
         value: 60
         unit_symbol: kg
+        unit_id: u:kilogram
 components:
 - role: load_cell
   type_designations:
@@ -338,9 +352,11 @@ components:
     maximum_capacity_for_dacs_g_s015:
       value: 12
       unit_symbol: kg
+      unit_id: u:kilogram
     maximum_capacity_for_dacs_g_s060:
       value: 60
       unit_symbol: kg
+      unit_id: u:kilogram
     output_signal:
       value: analog (strain gauge)
     manufacturer:

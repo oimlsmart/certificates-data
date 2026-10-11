@@ -64,7 +64,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     climatic_environment_condition:
       value: Non-condensing (closed)
       unit_symbol:
@@ -78,7 +78,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -86,15 +86,15 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     load_cell_excitation_voltage_dc:
       value: 5.5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     display_size:
       value: 10.4
       unit_symbol: in
-      unit_id:
+      unit_id: u:inch
     interfaces:
       value: RS 232, USB, Ethernet
       unit_symbol:
@@ -133,6 +133,7 @@ characteristics:
       value: 12000
     - model: Super Heavy Range
       value: 10000/20000/50000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -150,6 +151,7 @@ characteristics:
       value: 500
     - model: Super Heavy Range
       value: 3000
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -163,6 +165,7 @@ characteristics:
       value: 2
     - model: Super Heavy Range
       value: 5/10/20
+    unit_id: u:gram
   - attribute: max_number_of_scale_intervals_n
     unit_symbol:
     values:
@@ -187,6 +190,7 @@ characteristics:
       value: 30
     - model: Super Heavy Range
       value: 150
+    unit_id: u:kilogram
   - attribute: maximum_tare
     unit_symbol: g
     values:
@@ -198,6 +202,7 @@ characteristics:
       value: 1200
     - model: Super Heavy Range
       value: 5000
+    unit_id: u:gram
   - attribute: operating_speed
     unit_symbol: m/min
     values:
@@ -214,9 +219,11 @@ characteristics:
     - condition: Min to 200 g
       value: ">= 0.5"
       unit_symbol: g
+      unit_id: u:gram
     - condition: 200 g to Max
       value: ">= 1"
       unit_symbol: g
+      unit_id: u:gram
   - attribute: maximum_belt_speed
     axis: load_range (Lightweight variant)
     values:
@@ -268,6 +275,7 @@ characteristics:
     - condition: Net > 50 g
       value: 40
       unit_symbol: g
+      unit_id: u:gram
 recommendation:
   id: R51
   edition: 2006

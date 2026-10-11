@@ -80,17 +80,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 58.33
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_scale_interval:
       value: 0.8
@@ -146,7 +146,7 @@ characteristics:
     load_cell_connection_max_length_6_wire:
       value: 30
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
     load_cell_connection_length_factor:
       value: 60
@@ -209,6 +209,7 @@ characteristics:
       value: 90
     - model: BS-2424-200
       value: 200
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -234,6 +235,7 @@ characteristics:
       value: 400
     - model: BS-2424-200
       value: 1000
+    unit_id: u:gram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -259,6 +261,7 @@ characteristics:
       value: 20
     - model: BS-2424-200
       value: 50
+    unit_id: u:gram
   - attribute: maximum_tare
     unit_symbol: kg
     values:
@@ -284,6 +287,7 @@ characteristics:
       value: 90
     - model: BS-2424-200
       value: 200
+    unit_id: u:kilogram
   - attribute: emax
     unit_symbol: kg
     values:
@@ -309,6 +313,7 @@ characteristics:
       value: 113
     - model: BS-2424-200
       value: 440
+    unit_id: u:kilogram
   config_level:
   - attribute: power_supply_voltage
     axis: indicating_device_variant
@@ -320,6 +325,7 @@ characteristics:
       unit_symbol: V
       footnote_markers:
       - "*"
+      unit_id: u:volt
     - condition: ZM301-SDz, ZM303-SDz, ZQ375-SD1
       value:
         min: 110
@@ -327,6 +333,7 @@ characteristics:
       unit_symbol: V
       footnote_markers:
       - "*"
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: indicating_device_variant
     values:
@@ -335,6 +342,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: indicating_device_variant
     values:

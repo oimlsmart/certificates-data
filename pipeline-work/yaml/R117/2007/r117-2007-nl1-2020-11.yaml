@@ -55,7 +55,7 @@ characteristics:
     maximum_pressure:
       value: 100
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     density_range:
       value:
@@ -79,7 +79,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     humidity:
       value: condensing
@@ -89,21 +89,21 @@ characteristics:
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage_ac:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     intended_media:
       value: Oil and oil products, chemicals, potable liquids and liquefied gases under pressure
@@ -179,6 +179,7 @@ characteristics:
     - model: DN100
       value: 200
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: product_temperature_range
     axis: measurement_mode
@@ -189,12 +190,14 @@ characteristics:
         max: 90
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     - condition: mass measurement
       value:
         min: -200
         max: 200
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
 recommendation:
   id: R117-1
   edition: 2007

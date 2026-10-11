@@ -75,13 +75,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -91,11 +91,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     battery_supply_voltage:
       value: 6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_supply_type:
       value: DC battery
       unit_symbol:
@@ -117,6 +117,7 @@ characteristics:
         min: 1.5
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: load_receptor
     values:
@@ -125,12 +126,14 @@ characteristics:
         min: 0.5
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: load_cell_excitation_voltage
     axis: load_receptor
     values:
     - condition: external load receptor
       value: 3.3
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load_receptor
     values:
@@ -143,12 +146,14 @@ characteristics:
     - condition: external load receptor
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_receptor
     values:
     - condition: external load receptor
       value: 1050
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permissible_error
     axis: load_receptor
     values:

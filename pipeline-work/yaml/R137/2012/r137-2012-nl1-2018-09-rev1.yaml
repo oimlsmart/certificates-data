@@ -79,7 +79,7 @@ characteristics:
     maximum_pressure:
       value: 425
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     ambient_temperature_range:
       value:
         min: -40
@@ -99,7 +99,7 @@ characteristics:
         min: 10.4
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -107,11 +107,11 @@ characteristics:
     vmin:
       value: 0.5
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
     vt:
       value: 0.1 x Vmax
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
   model_level:
   - attribute: number_of_measuring_paths
     unit_symbol:
@@ -155,6 +155,7 @@ characteristics:
       value: 23
     - condition: DN1050
       value: 21
+    unit_id: u:meter_per_second
   - attribute: gas_temperature_range
     axis: transducer_type
     unit_symbol: "°C"
@@ -183,6 +184,7 @@ characteristics:
       value:
         min: -50
         max: 100
+    unit_id: u:degree_Celsius
   - attribute: software_checksum
     axis: software_version_number
     values:

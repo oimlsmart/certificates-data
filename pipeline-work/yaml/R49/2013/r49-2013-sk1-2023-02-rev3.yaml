@@ -67,7 +67,7 @@ characteristics:
     volume_indication_range:
       value: 999999.999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
     installation_positions:
       value: horizontal and vertical
@@ -89,7 +89,7 @@ characteristics:
     maximum_working_pressure_map:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     maximum_permitted_error_lower_flow_rates:
       value: 5
       unit_symbol: "%"
@@ -97,19 +97,19 @@ characteristics:
     scale_interval:
       value: 0.001
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     scale_interval_testing_mode:
       value: 1.0e-06
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     calculator_capacity:
       value: 999999.999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     calculator_capacity_testing_mode:
       value: 999.999999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     accuracy_class:
       value: 2
       unit_symbol:
@@ -151,7 +151,7 @@ characteristics:
     maximum_working_pressure:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     maximum_permitted_error_lower_zone:
       value:
         min: -5
@@ -496,6 +496,7 @@ characteristics:
       value: 0.25
     - model: DN20-Q3=4-R800
       value: 0.25
+    unit_id: u:bar
   - attribute: nominal_diameter_dn
     unit_symbol: mm
     values:
@@ -881,6 +882,7 @@ characteristics:
       value: 0.16
     - model: DN40-Q3=25-R400
       value: 0.16
+    unit_id: u:bar
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -1025,21 +1027,25 @@ characteristics:
         min: 0.1
         max: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T50
       value:
         min: 0.1
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T30/70
       value:
         min: 30
         max: 70
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T70
       value:
         min: 0.1
         max: 70
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_permitted_error_upper_flow_rates
     axis: water_temperature
     values:

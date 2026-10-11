@@ -64,7 +64,7 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     number_of_weighing_channels:
       value: 1
       unit_symbol:
@@ -72,7 +72,7 @@ characteristics:
     load_cell_excitation_voltage_eexc:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     minimum_input_voltage_per_scale_interval_dumin:
       value: 0.5
       unit_symbol: μV
@@ -88,17 +88,17 @@ characteristics:
     minimum_load_cell_impedance_rlmin:
       value: 43.75
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     maximum_load_cell_impedance_rlmax:
       value: 1245
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     operating_temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     fraction_of_maximum_permitted_error_pind:
       value: 0.4
       unit_symbol:
@@ -154,18 +154,22 @@ characteristics:
     - condition: AC mains
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: battery
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_connection_cable_maximum_length
     axis: cable_cross_section
     values:
     - condition: 0.68 mm² section
       value: 150
       unit_symbol: m
+      unit_id: u:meter
     - condition: 1 mm² section
       value: 220
       unit_symbol: m
+      unit_id: u:meter
 recommendation:
   id: R76
   edition: 2006

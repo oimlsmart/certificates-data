@@ -67,7 +67,7 @@ characteristics:
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_admissible_pressure:
       value: 5.1
@@ -199,12 +199,15 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: ac_24v
       value: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: mains_dc
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -213,11 +216,13 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: ac_24v
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

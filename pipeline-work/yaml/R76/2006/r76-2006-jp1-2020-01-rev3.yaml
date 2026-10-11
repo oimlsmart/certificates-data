@@ -88,6 +88,7 @@ characteristics:
       value: 7.5/15
     - model: Max=30kg
       value: 30
+    unit_id: u:kilogram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -105,6 +106,7 @@ characteristics:
       value: 5/10
     - model: Max=30kg
       value: 10
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -122,6 +124,7 @@ characteristics:
       value: 100
     - model: Max=30kg
       value: 200
+    unit_id: u:gram
   config_level:
   - attribute: temperature_range
     axis: interval_configuration
@@ -131,11 +134,13 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Multi-interval
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76-1
   edition: 2006

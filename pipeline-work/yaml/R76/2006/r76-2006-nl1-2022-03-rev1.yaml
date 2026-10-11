@@ -60,7 +60,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -72,7 +72,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     software_type:
       value: Loadable software, runs on a Windows operating system
@@ -168,15 +168,18 @@ characteristics:
     - condition: Analog load cells
       value: 10
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage
     axis: load_cell_type
     values:
     - condition: Digital load cells or weighing module — provided by IND700
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: Digital load cells or weighing module — external power supply
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: load_cell_type
     values:
@@ -195,12 +198,14 @@ characteristics:
     - condition: Analog load cells
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_type
     values:
     - condition: Analog load cells
       value: 3300
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load_cell_type
     values:

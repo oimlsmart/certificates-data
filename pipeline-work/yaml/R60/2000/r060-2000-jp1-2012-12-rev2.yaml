@@ -73,7 +73,7 @@ characteristics:
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     apportionment_factor_plc:
       value: 0.8
@@ -83,14 +83,14 @@ characteristics:
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: t
-      unit_id:
+      unit_id: u:metric_ton
       footnote_markers: []
     excitation_voltage:
       value:
         min: 6
         max: 8
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     excitation_voltage_type:
       value: DC
@@ -100,14 +100,14 @@ characteristics:
     cable_length_maximum:
       value: 20
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
     temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
   model_level:
   - attribute: maximum_capacity_emax
@@ -158,6 +158,7 @@ characteristics:
     - model: CC2-25T
       value: 25
       footnote_markers: []
+    unit_id: u:metric_ton
   config_level:
   - attribute: minimum_verification_interval_vmin
     axis: load cell series / nmax class
@@ -166,26 +167,32 @@ characteristics:
       value: 1000*Emax/15000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 5000
       value: 1000*Emax/12500
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 4000
       value: 1000*Emax/10000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: CC1-H-xxT / CC1-H-xxT-IS, nmax = 3000
       value: 1000*Emax/8000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: CC2-xxT, nmax = 4000
       value: 1000*Emax/10000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: CC2-xxT, nmax = 3000
       value: 1000*Emax/8000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: ratio_y_emax_over_vmin
     axis: load cell series / nmax class
     values:

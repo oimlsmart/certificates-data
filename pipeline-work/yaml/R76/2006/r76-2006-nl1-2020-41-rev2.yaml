@@ -59,14 +59,14 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 0.5
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     weighing_ranges:
       value: single interval or multi-interval
@@ -83,7 +83,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     application:
       value: Intended to be used for direct sales to the public
@@ -123,12 +123,15 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC by adapter
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC battery
       value: 14.8
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_source
     values:
@@ -149,6 +152,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76-1
   edition: 2006

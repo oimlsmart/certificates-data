@@ -105,7 +105,7 @@ characteristics:
     battery_voltage:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     minimum_battery_life:
       value: 5
       unit_symbol: years
@@ -125,7 +125,7 @@ characteristics:
     rs485_max_cable_length:
       value: 3
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
   model_level:
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
@@ -577,6 +577,7 @@ characteristics:
       value: 9999999
     - model: DN300 R50
       value: 9999999
+    unit_id: u:cubic_meter
   - attribute: body_length
     unit_symbol: mm
     values:
@@ -760,18 +761,18 @@ characteristics:
     - condition: normal mode
       value: 0.001
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     - condition: calibration mode
       value: 1.0e-06
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
   - attribute: max_cable_length
     axis: meter_version
     values:
     - condition: remote version
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
 model_family:
   family_name: MAGB1
   models:

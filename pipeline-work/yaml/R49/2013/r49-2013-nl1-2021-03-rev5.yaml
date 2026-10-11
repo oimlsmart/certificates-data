@@ -75,7 +75,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -85,7 +85,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -115,7 +115,7 @@ characteristics:
         min: 2.9
         max: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     software_identification:
       value: See table 5
       unit_symbol:
@@ -594,6 +594,7 @@ characteristics:
       value: 99999999
       footnote_markers:
       - "*"
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -661,6 +662,7 @@ characteristics:
       value: 0.1
     - model: DN600 (class 2)
       value: 0.1
+    unit_id: u:cubic_meter
   config_level:
   - attribute: pressure_loss_class
     axis: bore_type
@@ -677,9 +679,11 @@ characteristics:
     - condition: full bore meter
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
     - condition: reduced bore
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
 recommendation:
   id: R49-1
   edition: 2013

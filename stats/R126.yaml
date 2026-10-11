@@ -1,15 +1,23 @@
 recommendation: R126
-sample_size: 9
+sample_size: 10
 summary:
   certs_with_model_family: 5
-  certs_with_components: 3
+  certs_with_components: 4
   certs_with_matrix_tables: 0
   certs_with_footnotes: 0
   total_model_variants: 10
   total_matrix_tables: 0
 type_level_characteristics:
+  ambient_operating_temperature:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    top_values:
+    - range: min=-5, max=45
+      count: 1
   battery_power:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -24,7 +32,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:watt
   charger_input_frequency:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -39,7 +47,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:hertz
   charger_input_voltage:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -54,7 +62,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:volt
   charger_output_power:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -69,7 +77,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:watt
   charger_output_voltage:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -83,8 +91,15 @@ type_level_characteristics:
         - value: 12
           count: 1
         unit_id: u:volt
+  indication_scale_interval_normal_mode:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol: mg/l
+    top_values:
+    - value: 0.01
+      count: 1
   indication_scale_normal:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: mg/l
     unit_id: u:milligram_per_liter
@@ -92,7 +107,7 @@ type_level_characteristics:
     - value: 0.01
       count: 1
   indication_step_normal:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     unit_symbol: mg/l
     unit_id: u:milligram_per_liter
@@ -100,7 +115,7 @@ type_level_characteristics:
     - value: 0.01
       count: 2
   level_of_disclosure_normal_mode:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: mg/l
     unit_id: u:milligram_per_liter
@@ -108,7 +123,7 @@ type_level_characteristics:
     - value: 0.01
       count: 1
   max_time_after_power_on:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -116,7 +131,7 @@ type_level_characteristics:
     - value: 15
       count: 1
   max_time_from_standby:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -124,7 +139,7 @@ type_level_characteristics:
     - value: 5
       count: 1
   max_warm_up_time_after_power_on:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -132,7 +147,7 @@ type_level_characteristics:
     - value: 15
       count: 1
   max_warm_up_time_from_standby:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -140,15 +155,15 @@ type_level_characteristics:
     - value: 5
       count: 1
   measuring_range:
-    fill_rate: 0.778
-    present_count: 7
+    fill_rate: 0.8
+    present_count: 8
     by_unit:
       mg/l:
-        count: 4
+        count: 5
         top_values:
-        - range: min=0, max=2
-          count: 2
         - range: min=0, max=3
+          count: 3
+        - range: min=0, max=2
           count: 2
         unit_id: u:milligram_per_liter
       mg/L:
@@ -163,7 +178,7 @@ type_level_characteristics:
         - range: min=0.0, max=2.0
           count: 1
   power_on_time:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -171,7 +186,7 @@ type_level_characteristics:
     - value: 12
       count: 1
   power_supply_battery:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -186,7 +201,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:volt
   scale_interval:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -200,8 +215,29 @@ type_level_characteristics:
         - value: 0.01
           count: 1
         unit_id: u:milligram_per_liter
+  software:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: M 16
+      count: 1
+  software_checksum:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: '0xB7D3'
+      count: 1
+  software_version:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 8322950 1.4
+      count: 1
   standby_to_operational_time:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -209,7 +245,7 @@ type_level_characteristics:
     - value: 4
       count: 1
   storage_temperature_range:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -224,7 +260,7 @@ type_level_characteristics:
           count: 1
         unit_id: u:degree_Celsius
   temperature_range:
-    fill_rate: 0.778
+    fill_rate: 0.7
     present_count: 7
     by_unit:
       "°C":
@@ -245,7 +281,7 @@ type_level_characteristics:
         - range: min=0, max=40
           count: 1
   time_to_operate_after_power_on:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -253,7 +289,7 @@ type_level_characteristics:
     - value: 10
       count: 1
   time_to_operate_from_standby:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: min
     unit_id: u:sidereal_minute
@@ -261,15 +297,22 @@ type_level_characteristics:
     - value: 3
       count: 1
   verification_scale:
-    fill_rate: 0.333
+    fill_rate: 0.3
     present_count: 3
     unit_symbol: mg/l
     unit_id: u:milligram_per_liter
     top_values:
     - value: 0.001
       count: 3
+  verification_scale_interval:
+    fill_rate: 0.1
+    present_count: 1
+    unit_symbol: mg/l
+    top_values:
+    - value: 0.001
+      count: 1
   verification_step:
-    fill_rate: 0.111
+    fill_rate: 0.1
     present_count: 1
     unit_symbol: mg/l
     unit_id: u:milligram_per_liter
@@ -277,7 +320,7 @@ type_level_characteristics:
     - value: 0.001
       count: 1
   warm_up_time:
-    fill_rate: 0.222
+    fill_rate: 0.2
     present_count: 2
     by_unit:
       'null':
@@ -299,5 +342,6 @@ model_level_attributes:
   power_supply_voltage: 1
   power_supply_components: 1
   optional_internal_battery: 1
-config_level_attributes: {}
+config_level_attributes:
+  maximum_time_of_implementation: 1
 matrix_table_names: {}

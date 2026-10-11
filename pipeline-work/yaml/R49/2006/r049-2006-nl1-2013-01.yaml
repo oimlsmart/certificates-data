@@ -57,14 +57,14 @@ characteristics:
     maximum_admissible_pressure:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     admissible_temperature:
       value:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     orientation:
       value: All positions
@@ -398,69 +398,85 @@ characteristics:
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN40
       value: 99999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN50
       value: 99999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 999999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN80
       value: 999999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN100
       value: 999999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN125
       value: 999999
       unit_symbol: m³
       footnote_markers:
       - "[2]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN300
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN500
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN800
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN900
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1000
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1200
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: meter_size
     values:
@@ -470,93 +486,115 @@ characteristics:
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN40
       value: 0.0001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN50
       value: 0.0001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 0.001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN80
       value: 0.001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN100
       value: 0.001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN125
       value: 0.001
       unit_symbol: m³
       footnote_markers:
       - "[3]"
       - "[4]"
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN300
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN500
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN800
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN900
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1000
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1200
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: power_supply_voltage_maximum
     axis: power_supply_type
     values:
     - condition: AC
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_voltage_minimum
     axis: power_supply_type
     values:
     - condition: AC
       value: 100
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -565,11 +603,13 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: AC/DC (AC portion)
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R49
   edition: 2006

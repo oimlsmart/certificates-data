@@ -51,15 +51,15 @@ characteristics:
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_verification_interval_vmin:
       value: Emax/10000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.7
       unit_symbol:
@@ -79,7 +79,7 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: AC/DC
       unit_symbol:
@@ -87,11 +87,11 @@ characteristics:
     input_impedance_rlc:
       value: 440
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     cable_length:
       value: 5
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     cable_configuration:
       value: 4-wire
       unit_symbol:
@@ -101,7 +101,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: maximum_capacity_emax
     unit_symbol: kg
@@ -115,6 +115,7 @@ characteristics:
     - model: LC1205-T005
       value: 5000
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_number_of_load_cell_verification_intervals_nmax
     axis: usage_option

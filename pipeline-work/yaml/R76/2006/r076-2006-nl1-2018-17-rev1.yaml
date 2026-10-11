@@ -81,7 +81,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_type:
       value: DC or AC/DC adapter or battery
@@ -113,12 +113,14 @@ characteristics:
         max: 12000
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: ct
       value:
         min: 1600
         max: 16000
       unit_symbol: ct
       footnote_markers: []
+      unit_id: u:carat
   - attribute: verification_scale_interval
     axis: capacity_unit
     values:
@@ -128,12 +130,14 @@ characteristics:
         max:
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: ct
       value:
         min: 0.1
         max:
       unit_symbol: ct
       footnote_markers: []
+      unit_id: u:carat
   - attribute: power_supply_voltage
     axis: power_source
     values:
@@ -141,16 +145,19 @@ characteristics:
       value: 6
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: external AC/DC adapter
       value:
         min: 100
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: battery (4 × 1.5 V AA cells)
       value: 6
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_source
     values:
@@ -160,6 +167,7 @@ characteristics:
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

@@ -73,13 +73,13 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     climatic_environment_temperature:
       value:
         min: 0
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity_conditions:
       value: Non-condensing (closed)
       unit_symbol:
@@ -91,11 +91,11 @@ characteristics:
     load_cell_excitation_voltage:
       value: 14
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -105,7 +105,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     display_keyboard_location:
       value: Control and display unit
       unit_symbol:
@@ -136,6 +136,7 @@ characteristics:
       value: 1500
     - model: Top range 1500 g (e 2 g)
       value: 1500
+    unit_id: u:gram
   - attribute: maximum_capacity
     unit_symbol: kg
     values:
@@ -149,6 +150,7 @@ characteristics:
       value: 27.5
     - model: Heavy range 40 kg (e 20 g)
       value: 40
+    unit_id: u:kilogram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -176,6 +178,7 @@ characteristics:
       value: 10
     - model: Heavy range 40 kg (e 20 g)
       value: 20
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -203,6 +206,7 @@ characteristics:
       value: 50 or 75
     - model: Heavy range 40 kg (e 20 g)
       value: 50 or 75
+    unit_id: u:kilogram
   config_level:
   - attribute: tare
     axis: interval_mode
@@ -210,24 +214,30 @@ characteristics:
     - condition: single interval
       value: -450
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
     - condition: multi-interval
       value: -450
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
   - attribute: maximum_operating_speed
     axis: interval_mode_and_weighing_range
     values:
     - condition: single interval, 0-1500e
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: single interval, 1501e-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 0-1500e2
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 1501e2-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
 recommendation:
   id: R51
   edition: 2006
@@ -324,7 +334,7 @@ components:
     maximum_capacity_emax:
       value: 10 or 15
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: Load cell (Heavy range)
   type_designations:
   - Tedea Huntleigh 1260 C3
@@ -333,7 +343,7 @@ components:
     maximum_capacity_emax:
       value: 50 or 75
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: Alternative load cell (per compatibility conditions)
   type_designations: []
   alternatives: OR

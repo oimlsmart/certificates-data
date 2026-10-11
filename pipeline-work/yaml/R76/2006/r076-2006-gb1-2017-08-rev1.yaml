@@ -158,6 +158,7 @@ characteristics:
       value: 60
     - model: IP-AI + Type S (Max=120 kg)
       value: 120
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -167,6 +168,7 @@ characteristics:
       value: 200
     - model: IP-AI + Type S (Max=120 kg)
       value: 400
+    unit_id: u:gram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -176,6 +178,7 @@ characteristics:
       value: 10
     - model: IP-AI + Type S (Max=120 kg)
       value: 20
+    unit_id: u:gram
   - attribute: maximum_subtractive_tare
     unit_symbol: kg
     values:
@@ -185,6 +188,7 @@ characteristics:
       value: -59.99
     - model: IP-AI + Type S (Max=120 kg)
       value: -119.98
+    unit_id: u:kilogram
   - attribute: load_cell_model
     unit_symbol:
     values:
@@ -203,6 +207,7 @@ characteristics:
       value: 150
     - model: IP-AI + Type S (Max=120 kg)
       value: 300
+    unit_id: u:kilogram
   - attribute: temperature_range
     unit_symbol: "°C"
     values:
@@ -218,6 +223,7 @@ characteristics:
       value:
         min: 0
         max: 35
+    unit_id: u:degree_Celsius
   config_level:
   - attribute: instrument_maximum_capacity
     axis: load_cell_configuration
@@ -226,10 +232,12 @@ characteristics:
       value: 6
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: load cell CLC-25L (Ishida) or CLC-25N (NMB)
       value: 15
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: load_cell_maximum_capacity_emax
     axis: instrument_maximum_capacity
     values:
@@ -237,10 +245,12 @@ characteristics:
       value: 10
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: Max = 15 kg
       value: 25
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: max_load_cell_intervals_nlc
     axis: instrument_maximum_capacity
     values:
@@ -261,10 +271,12 @@ characteristics:
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: IP-AI with weighing platform type S
       value: 50
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

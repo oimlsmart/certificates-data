@@ -74,14 +74,14 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -91,7 +91,7 @@ characteristics:
     zero_indicator_tolerance:
       value: 0.25
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
       footnote_markers: []
     protective_interfaces:
       value: Ethernet (RJ-45 and Wireless), SD Card, USB
@@ -124,6 +124,7 @@ characteristics:
     - model: 30kg
       value: 30
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -139,6 +140,7 @@ characteristics:
     - model: 30kg
       value: 100
       footnote_markers: []
+    unit_id: u:gram
   - attribute: temperature_range
     unit_symbol: "°C"
     values:
@@ -162,6 +164,7 @@ characteristics:
         min: 0
         max: 35
       footnote_markers: []
+    unit_id: u:degree_Celsius
   - attribute: scale_interval_e1
     unit_symbol: g
     values:
@@ -171,6 +174,7 @@ characteristics:
     - model: 15kg multi-interval
       value: 2
       footnote_markers: []
+    unit_id: u:gram
   - attribute: scale_interval_e2
     unit_symbol: g
     values:
@@ -180,6 +184,7 @@ characteristics:
     - model: 15kg multi-interval
       value: 5
       footnote_markers: []
+    unit_id: u:gram
   - attribute: scale_interval_e
     unit_symbol: g
     values:
@@ -189,6 +194,7 @@ characteristics:
     - model: 30kg
       value: 5
       footnote_markers: []
+    unit_id: u:gram
   - attribute: maximum_capacity_first_interval_max1
     unit_symbol: kg
     values:
@@ -198,6 +204,7 @@ characteristics:
     - model: 15kg multi-interval
       value: 5.998
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: maximum_tare_effect
     unit_symbol: kg
     values:
@@ -213,6 +220,7 @@ characteristics:
     - model: 30kg
       value: -29.995
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: scale_interval_e1_applicable_range
     axis: capacity subrange (multi-interval models)
@@ -222,11 +230,13 @@ characteristics:
         min: 0
         max: 2.999
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: 15kg multi-interval (0 to Max1)
       value:
         min: 0
         max: 5.998
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: scale_interval_e2_applicable_range
     axis: capacity subrange (multi-interval models)
     values:
@@ -235,11 +245,13 @@ characteristics:
         min: 3
         max: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: 15kg multi-interval (6 to 15 kg)
       value:
         min: 6
         max: 15
       unit_symbol: kg
+      unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006
@@ -348,7 +360,7 @@ components:
     capacity:
       value: 10
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     nmax:
       value: 3000
@@ -370,7 +382,7 @@ components:
     capacity:
       value: 25
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     nmax:
       value: 3000
@@ -391,7 +403,7 @@ components:
     capacity:
       value: 60
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     nmax:
       value: 6000

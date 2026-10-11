@@ -65,7 +65,7 @@ characteristics:
         min: 300
         max: 3000
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     number_of_intervals:
       value:
         min:
@@ -73,12 +73,13 @@ characteristics:
     subtractive_tare:
       value: "≤ -Max"
       unit_symbol: g
+      unit_id: u:gram
     interface:
       value: Protective, according to paragraph 5.3.6
     supply_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
     external_power_supply_voltage:
@@ -86,7 +87,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     external_power_supply_type:
       value: AC
     power_supply_frequency:
@@ -94,11 +95,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     internal_battery_voltage:
       value: 6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     internal_battery:
       value: optional
     indicator_temperature_range:
@@ -106,7 +107,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     software_identification:
       value: '2.05'
   model_level:
@@ -133,6 +134,7 @@ characteristics:
       value: 3000
     - model: EX3000H
       value: 3000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -156,6 +158,7 @@ characteristics:
       value: 25
     - model: EX3000H
       value: 25
+    unit_id: u:gram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -179,6 +182,7 @@ characteristics:
       value: 0.5
     - model: EX3000H
       value: 0.5
+    unit_id: u:gram
   - attribute: scale_interval_d
     unit_symbol: g
     values:
@@ -202,6 +206,7 @@ characteristics:
       value: 0.5
     - model: EX3000H
       value: 0.05
+    unit_id: u:gram
   - attribute: number_of_intervals
     unit_symbol:
     values:
@@ -294,6 +299,7 @@ characteristics:
       value: 5000
     - model: EX3000H
       value: 5000
+    unit_id: u:gram
   - attribute: load_cell_vmin
     unit_symbol: g
     values:
@@ -337,6 +343,7 @@ characteristics:
       value:
         min:
         max: 0.5
+    unit_id: u:gram
   config_level:
   - attribute: maximum_capacity
     axis: counting_mode
@@ -344,60 +351,76 @@ characteristics:
     - condition: EX1200
       value: 6000
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1200H
       value: 6000
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500
       value: 7500
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500H
       value: 7500
       unit_symbol: ct
+      unit_id: u:carat
   - attribute: minimum_capacity
     axis: counting_mode
     values:
     - condition: EX1200
       value: 50
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1200H
       value: 50
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500
       value: 50
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500H
       value: 50
       unit_symbol: ct
+      unit_id: u:carat
   - attribute: verification_scale_interval_e
     axis: counting_mode
     values:
     - condition: EX1200
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1200H
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500H
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
   - attribute: scale_interval_d
     axis: counting_mode
     values:
     - condition: EX1200
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1200H
       value: 0.1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500
       value: 1
       unit_symbol: ct
+      unit_id: u:carat
     - condition: EX1500H
       value: 0.1
       unit_symbol: ct
+      unit_id: u:carat
 recommendation:
   id: R76
   edition: 2006

@@ -71,14 +71,14 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC/DC
@@ -90,7 +90,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     software_identification:
       value: AA-BB-01.dd.ee-FF-G
@@ -132,6 +132,7 @@ characteristics:
       value:
         min: 5.3
         max: 12.6
+    unit_id: u:volt
   - attribute: number_of_separate_excitations
     unit_symbol:
     values:
@@ -160,9 +161,11 @@ characteristics:
         min: 9
         max: 28
       unit_symbol: V
+      unit_id: u:volt
     - condition: Built-in battery
       value: 12
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R76
   edition: 2006

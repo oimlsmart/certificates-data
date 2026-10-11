@@ -53,7 +53,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     humidity:
       value: non-condensing
@@ -80,7 +80,7 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -92,14 +92,14 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     external_power_supply_voltage:
       value:
         min: 12
         max: 30
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     external_power_supply_type:
       value: DC
@@ -111,7 +111,7 @@ characteristics:
         min: 12
         max: 30
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     vehicle_battery_power_supply_type:
       value: DC
@@ -184,6 +184,7 @@ characteristics:
     - condition: digital load cells or weighing modules
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_type
     axis: load_cell_type
     values:
@@ -214,9 +215,11 @@ characteristics:
     - condition: without zener barriers
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: with zener barriers, without load cell(s) connected
       value: 4.1
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_excitation_waveform
     axis: zener barriers (analog load cells)
     values:
@@ -241,9 +244,11 @@ characteristics:
     - condition: without zener barriers
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: with zener barriers
       value: 87.5
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: max_load_cell_resistance
     axis: zener barriers (analog load cells)
     values:

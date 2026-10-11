@@ -86,6 +86,7 @@ characteristics:
         max: 40
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     load_cell_excitation_waveform:
       value: square wave
       unit_symbol:
@@ -96,22 +97,26 @@ characteristics:
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value:
         min: 12
         max: 30
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     power_supply_voltage_vehicle_battery:
       value: 24
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     software_identification_checksum:
       value: '15487782'
       unit_symbol:
@@ -130,9 +135,11 @@ characteristics:
     - condition: without zener barriers
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: with zener barriers (voltage measured without load)
       value: 4.1
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: zener_barriers
     values:
@@ -148,9 +155,11 @@ characteristics:
     - condition: without zener barriers
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: with zener barriers
       value: 87.5
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_number_of_load_platforms
     axis: zener_barriers
     values:

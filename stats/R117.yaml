@@ -1,17 +1,18 @@
 recommendation: R117
-sample_size: 345
+sample_size: 350
 summary:
-  certs_with_model_family: 223
-  certs_with_components: 271
-  certs_with_matrix_tables: 209
-  certs_with_footnotes: 127
-  total_model_variants: 1743
-  total_matrix_tables: 417
+  certs_with_model_family: 226
+  certs_with_components: 275
+  certs_with_matrix_tables: 214
+  certs_with_footnotes: 128
+  total_model_variants: 1758
+  total_matrix_tables: 429
 type_level_characteristics:
   ac_dc_converter_input_frequency:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: Hz
+    unit_id: u:hertz
     top_values:
     - range: min=50, max=60
       count: 1
@@ -19,6 +20,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - range: min=100, max=230
       count: 1
@@ -26,16 +28,17 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - range: min=20, max=30
       count: 1
   accuracy_class:
-    fill_rate: 0.69
-    present_count: 238
+    fill_rate: 0.689
+    present_count: 241
     unit_symbol:
     top_values:
     - value: 0.5
-      count: 144
+      count: 147
     - value: 0.3
       count: 22
     - value: 0.6
@@ -54,6 +57,13 @@ type_level_characteristics:
       count: 2
     - value: '1'
       count: 2
+  adblue_maximum_flow_rate:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol: L/min
+    top_values:
+    - value: 50
+      count: 1
   air_separator_max_flow_rate:
     fill_rate: 0.003
     present_count: 1
@@ -73,7 +83,7 @@ type_level_characteristics:
     - value: condensing humidity
       count: 1
   ambient_humidity:
-    fill_rate: 0.055
+    fill_rate: 0.054
     present_count: 19
     unit_symbol:
     top_values:
@@ -82,12 +92,12 @@ type_level_characteristics:
     - value: condensing
       count: 4
   ambient_humidity_condition:
-    fill_rate: 0.006
-    present_count: 2
+    fill_rate: 0.009
+    present_count: 3
     unit_symbol:
     top_values:
     - value: condensing humidity
-      count: 2
+      count: 3
   ambient_humidity_conditions:
     fill_rate: 0.006
     present_count: 2
@@ -103,14 +113,14 @@ type_level_characteristics:
     - value: condensing; open and closed locations
       count: 1
   ambient_temperature_conditions:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
     - value: condensing; open and closed locations
       count: 4
   ambient_temperature_limits:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     by_unit:
       "°C":
@@ -146,22 +156,24 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - value: 55
       count: 1
   ambient_temperature_range:
-    fill_rate: 0.29
-    present_count: 100
+    fill_rate: 0.297
+    present_count: 104
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-25, max=55
-      count: 41
+      count: 42
     - range: min=-40, max=55
-      count: 26
+      count: 27
     - range: min=-40, max=70
-      count: 17
+      count: 18
     - range: min=-10, max=55
-      count: 7
+      count: 8
     - range: min=-25, max=40
       count: 4
     - range: min=-25, max=60
@@ -242,11 +254,23 @@ type_level_characteristics:
     - value: road tanker systems; aviation hydrant carts
       count: 1
   approved_conversion_methods:
-    fill_rate: 0.006
-    present_count: 2
+    fill_rate: 0.009
+    present_count: 3
     unit_symbol:
     top_values:
     - range: min=1250.0, max=7.0
+      count: 1
+    - value: >-
+        API Manual of Petroleum Measurements Standards, Chapter 11.1 (2004 tables), tables 53A, 53B, 53D,
+        54A, 54B, 54C, 54D, 59A, 59B, 59D, 60A, 60B, 60C and 60D (also known as ASTM D1250-04); ASTM D1555M-2016
+        (Calculation of Volume and Weight of Industrial Aromatic Hydrocarbons and Cyclohexane); API Manual
+        of Petroleum Measurements Standards, chapter 11.2.1M-1996 (compressibility calculation for hydrocarbons
+        in the range from 638 kg/m3 to 1074 kg/m3); API Manual of Petroleum Measurements Standards, chapter
+        11.2.2M-1997 (compressibility calculation for hydrocarbons in the range from 350 kg/m3 to 637
+        kg/m3); Tables 53E, 54E, 59E and 60E from GPA Technical Publication TP-27-2007 (also known as
+        API Manual of Petroleum Measurements Standards, Chapter 11.2.4); TP-15 vapour pressure calculations
+        conform to API 11.2.5-2007; API Manual of Petroleum Measurements Standards, chapter 11.3.4-2019
+        (Denatured Ethanol and Gasoline Component Blend Densities and Volume Correction Factors)
       count: 1
     - value: >-
         ["API Manual of Petroleum Measurements Standards, Chapter 11, Physical Properties Data, Section
@@ -264,7 +288,7 @@ type_level_characteristics:
     - range: min=1250.0, max=4.0
       count: 1
   approved_density_range:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol: kg/m3
     unit_id: u:kilogram_per_cubic_meter
@@ -336,8 +360,8 @@ type_level_characteristics:
     - value: Pulser communication cable via RS-485(shielded)
       count: 1
   approved_inputs:
-    fill_rate: 0.02
-    present_count: 7
+    fill_rate: 0.023
+    present_count: 8
     unit_symbol:
     top_values:
     - value: >-
@@ -345,6 +369,11 @@ type_level_characteristics:
         TCP connection", "HART", "HART superimposed on4...20mA signal", "Modbus RS485", "Time period signal
         for density input"]
       count: 2
+    - value: >-
+        Volume / mass A/B impulses; 4 wire Pt100 RTD; Time period signal for density; 4…20 mA signal for
+        temperature, pressure and density; Ethernet connection; RS232C; Up to 14 double, phase-shifted
+        pulse channels (level A)
+      count: 1
     - value: >-
         -Volume/massA/Bimpulses; -4wirePt100RTD; -Time period signal for density; -4...20mA signal for
         temperature, pressure and density; -Ethernet connection; -RS232C; -Up to14double,phase-shifted
@@ -398,10 +427,12 @@ type_level_characteristics:
     - value: POS communication cable via RS-485(shielded)
       count: 1
   approved_outputs:
-    fill_rate: 0.017
-    present_count: 6
+    fill_rate: 0.02
+    present_count: 7
     unit_symbol:
     top_values:
+    - value: RS232C connection for an optional printer (printer output with parity check); Ethernet connection
+      count: 1
     - value: "-RS232Cconnectionforanoptionalprinter(printeroutputwithparitycheck); -Ethernetconnection;"
       count: 1
     - value: '["LCD display", "RJ45 Modbus TCP connection", "Modbus RS485"]'
@@ -464,6 +495,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: l
+    unit_id: u:liter
     top_values:
     - value: 2.55
       count: 1
@@ -482,7 +514,7 @@ type_level_characteristics:
     - value: H3
       count: 3
   communication_interface:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -540,7 +572,7 @@ type_level_characteristics:
     - range: min=1, max=2
       count: 1
   density:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol: kg/m³
     top_values:
@@ -551,7 +583,7 @@ type_level_characteristics:
     - range: min=900, max=1100
       count: 1
   density_range:
-    fill_rate: 0.113
+    fill_rate: 0.111
     present_count: 39
     by_unit:
       kg/m³:
@@ -692,12 +724,12 @@ type_level_characteristics:
     - value: 6
       count: 1
   display_type:
-    fill_rate: 0.012
-    present_count: 4
+    fill_rate: 0.014
+    present_count: 5
     unit_symbol:
     top_values:
     - value: electronic
-      count: 2
+      count: 3
     - value: Electronic
       count: 2
   documentation_folder:
@@ -718,6 +750,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: D
+    unit_id: u:debye
     top_values:
     - range: min=3, max=None
       count: 1
@@ -802,7 +835,7 @@ type_level_characteristics:
     - value: M2/E2
       count: 1
   environmental_class:
-    fill_rate: 0.07
+    fill_rate: 0.069
     present_count: 24
     unit_symbol:
     top_values:
@@ -839,34 +872,35 @@ type_level_characteristics:
     - value: M3
       count: 1
   environmental_classes:
-    fill_rate: 0.351
-    present_count: 121
+    fill_rate: 0.36
+    present_count: 126
     unit_symbol:
     top_values:
     - value: '{"mechanical" => "M1", "electromagnetic" => "E1"}'
       count: 16
     - value: M1 / E1
-      count: 9
+      count: 10
     - value: M3 / E2 + E3
-      count: 9
+      count: 10
     - value: M2 / E2
       count: 8
     - value: M3 / E2 / H3
       count: 8
     - value: '{"mechanical" => "M3", "humidity" => "H3"}'
       count: 5
-    - value: '{"mechanical" => "M1", "electromagnetic" => "E1", "humidity" => "H3"}'
+    - value: M1, E1, H3
+      count: 4
+    - value: '{"mechanical" => "M1", "electromagnetic" => "E2"}'
       count: 4
     - value: '{"mechanical" => "M3"}'
       count: 4
-    - value: '{"mechanical" => "M3", "electromagnetic" => "E3", "humidity" => "H3"}'
-      count: 4
-    - value: '{"mechanical" => "M1", "electromagnetic" => "E2"}'
+    - value: '{"mechanical" => "M1", "electromagnetic" => "E1", "humidity" => "H3"}'
       count: 4
   environmental_range:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-25, max=55
       count: 1
@@ -895,6 +929,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - range: min=20, max=30
       count: 1
@@ -902,6 +937,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 14
       count: 1
@@ -909,6 +945,7 @@ type_level_characteristics:
     fill_rate: 0.006
     present_count: 2
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=55
       count: 2
@@ -965,7 +1002,7 @@ type_level_characteristics:
             range
           count: 1
   flow_rate_range:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol: L/min
     top_values:
@@ -1007,6 +1044,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: cSt
+    unit_id: u:centistokes
     top_values:
     - value: 18
       count: 1
@@ -1025,7 +1063,7 @@ type_level_characteristics:
     - value: H3
       count: 5
   humidity_condition:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -1064,7 +1102,7 @@ type_level_characteristics:
     - value: 2
       count: 1
   hydraulic_circuits_per_enclosure:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -1173,7 +1211,7 @@ type_level_characteristics:
         or Biodiesel up to 100%)
       count: 1
   intended_for_measurement:
-    fill_rate: 0.032
+    fill_rate: 0.031
     present_count: 11
     unit_symbol:
     top_values:
@@ -1196,12 +1234,12 @@ type_level_characteristics:
     - value: low-viscosity mineral oils with a viscosity of 1.1 mPa·s-8.0 mPa·s.
       count: 1
   intended_for_measurement_of:
-    fill_rate: 0.122
-    present_count: 42
+    fill_rate: 0.126
+    present_count: 44
     unit_symbol:
     top_values:
     - value: Liquids other than water
-      count: 5
+      count: 6
     - value: >-
         Liquid petroleum and related products, liquids food and chemical products in liquid state with
         density between 700 and 1100kg/m3
@@ -1220,11 +1258,11 @@ type_level_characteristics:
       count: 2
     - value: Oil and oil products, alcohol, chemical products, and potable liquids
       count: 2
-    - value: Oil and oil products, chemicals and potable liquids
-      count: 1
     - value: '["Oil and oil products", "chemicals", "potable liquids"]'
       count: 1
     - value: Mass;Uncorrected volume;Standard volume;Density;Temperature
+      count: 1
+    - value: '["Mass", "Uncorrected volume", "Standard volume", "Density", "Temperature"]'
       count: 1
   intended_for_the_measurement_of:
     fill_rate: 0.023
@@ -1274,14 +1312,16 @@ type_level_characteristics:
     - value: Hydrocarbon based oils (fuels)
       count: 1
   intended_measurement:
-    fill_rate: 0.041
-    present_count: 14
+    fill_rate: 0.043
+    present_count: 15
     unit_symbol:
     top_values:
     - value: Liquids other than water
       count: 4
     - value: Hydrocarbon based oils (fuels)
       count: 3
+    - value: Hydrocarbon oils
+      count: 2
     - value: gasoline and gasoline-oil mixtures (Two Stroke Oil)
       count: 1
     - value: gasoline/gasoil or blend
@@ -1291,8 +1331,6 @@ type_level_characteristics:
     - value: Liquids
       count: 1
     - value: liquid petroleum and related products, liquid food and chemical products in liquid state
-      count: 1
-    - value: Hydrocarbon oils
       count: 1
     - value: >-
         Oil and oil products, chemicals, potable liquids, liquefied gases under pressure measured at temperatures
@@ -1316,7 +1354,7 @@ type_level_characteristics:
     - value: liquid petroleum and related products, liquids food and chemical products in liquid state
       count: 1
   intended_measurement_media:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -1349,7 +1387,7 @@ type_level_characteristics:
     - value: liquid petroleum and related products, liquids food and chemical products in liquid state
       count: 1
   intended_media:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -1441,7 +1479,7 @@ type_level_characteristics:
     - value: 15
       count: 1
   liquid:
-    fill_rate: 0.107
+    fill_rate: 0.106
     present_count: 37
     unit_symbol:
     top_values:
@@ -1461,9 +1499,10 @@ type_level_characteristics:
     - value: gasoline/gasoil
       count: 2
   liquid_temperature_range:
-    fill_rate: 0.055
+    fill_rate: 0.054
     present_count: 19
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-5, max=35
       count: 8
@@ -1473,8 +1512,31 @@ type_level_characteristics:
       count: 4
     - range: min=-25, max=50
       count: 3
+  liquid_temperature_range_adblue:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    top_values:
+    - range: min=-5, max=50
+      count: 1
+  liquid_temperature_range_fuels:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol: "°C"
+    unit_id: u:degree_Celsius
+    top_values:
+    - range: min=-20, max=50
+      count: 1
+  liquid_viscosity:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol: mPa·s
+    top_values:
+    - range: min=0.4, max=8
+      count: 1
   liquids:
-    fill_rate: 0.197
+    fill_rate: 0.194
     present_count: 68
     unit_symbol:
     top_values:
@@ -1515,6 +1577,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: cSt
+    unit_id: u:centistokes
     top_values:
     - value: 0.82
       count: 1
@@ -1552,6 +1615,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: m
+    unit_id: u:meter
     top_values:
     - range: min=None, max=30
       count: 1
@@ -1665,6 +1729,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: m
+    unit_id: u:meter
     top_values:
     - range: min=None, max=30
       count: 1
@@ -1708,7 +1773,7 @@ type_level_characteristics:
     - value: 99999.9 (programmable, optional feature)
       count: 1
   maximum_ethanol_content:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     by_unit:
       "%":
@@ -1726,7 +1791,7 @@ type_level_characteristics:
         - value: 20
           count: 1
   maximum_flow_rate:
-    fill_rate: 0.09
+    fill_rate: 0.089
     present_count: 31
     by_unit:
       L/min:
@@ -1781,7 +1846,7 @@ type_level_characteristics:
     - range: min=40, max=130
       count: 1
   maximum_flowrate:
-    fill_rate: 0.154
+    fill_rate: 0.151
     present_count: 53
     by_unit:
       L/min:
@@ -1866,11 +1931,12 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: Hz
+    unit_id: u:hertz
     top_values:
     - value: 500
       count: 1
   maximum_methanol_content:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     by_unit:
       "%":
@@ -1888,7 +1954,7 @@ type_level_characteristics:
         - value: 20
           count: 1
   maximum_mtbe_content:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     by_unit:
       "%":
@@ -1959,15 +2025,23 @@ type_level_characteristics:
       count: 1
     - range: min=None, max=9
       count: 1
+  maximum_power_consumption:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol: W
+    unit_id: u:watt
+    top_values:
+    - value: 750
+      count: 1
   maximum_pressure:
-    fill_rate: 0.293
-    present_count: 101
+    fill_rate: 0.297
+    present_count: 104
     by_unit:
       bar(g):
-        count: 58
+        count: 59
         top_values:
         - value: 3.5
-          count: 17
+          count: 18
         - value: 100
           count: 12
         - value: 10
@@ -1987,22 +2061,23 @@ type_level_characteristics:
         - value: 25
           count: 1
       bar:
-        count: 21
+        count: 22
         top_values:
         - value: 100
           count: 11
         - value: 3.0
           count: 6
+        - value: 3.6
+          count: 2
         - value: 10
           count: 1
         - value: 10.5
           count: 1
         - value: 2.4
           count: 1
-        - value: 3.6
-          count: 1
+        unit_id: u:bar
       MPa:
-        count: 16
+        count: 17
         top_values:
         - value: 0.35
           count: 6
@@ -2013,6 +2088,8 @@ type_level_characteristics:
         - value: 0.28
           count: 1
         - value: 0.22
+          count: 1
+        - value: 0.25
           count: 1
       bar(a):
         count: 3
@@ -2041,6 +2118,7 @@ type_level_characteristics:
     fill_rate: 0.006
     present_count: 2
     unit_symbol: bar
+    unit_id: u:bar
     top_values:
     - value: 1.37
       count: 2
@@ -2053,6 +2131,7 @@ type_level_characteristics:
         top_values:
         - value: 20
           count: 1
+        unit_id: u:pound_force_per_square_inch
       PSI:
         count: 1
         top_values:
@@ -2123,10 +2202,10 @@ type_level_characteristics:
       count: 1
   maximum_price_to_pay:
     fill_rate: 0.209
-    present_count: 72
+    present_count: 73
     by_unit:
       'null':
-        count: 33
+        count: 34
         top_values:
         - value: 9999.99
           count: 8
@@ -2144,10 +2223,10 @@ type_level_characteristics:
           count: 1
         - value: 99999.99
           count: 1
+        - value: 9999999999
+          count: 1
         - value: 99999.99 (Floating Decimal)
           count: 2
-        - value: 9999999 (floating decimal)
-          count: 1
       EURO/L:
         count: 16
         top_values:
@@ -2197,7 +2276,7 @@ type_level_characteristics:
         - value: 9999999
           count: 1
   maximum_price_to_pay_digits:
-    fill_rate: 0.107
+    fill_rate: 0.106
     present_count: 37
     by_unit:
       'null':
@@ -2272,7 +2351,7 @@ type_level_characteristics:
     - value: 999999.99
       count: 1
   maximum_total_volume_or_price_digits:
-    fill_rate: 0.032
+    fill_rate: 0.031
     present_count: 11
     unit_symbol:
     top_values:
@@ -2300,10 +2379,10 @@ type_level_characteristics:
       count: 3
   maximum_unit_price:
     fill_rate: 0.214
-    present_count: 74
+    present_count: 75
     by_unit:
       'null':
-        count: 33
+        count: 34
         top_values:
         - value: 99.99
           count: 9
@@ -2319,11 +2398,11 @@ type_level_characteristics:
           count: 1
         - value: 9999.99
           count: 1
+        - value: 99999999
+          count: 1
         - value: 99999.99 (Floating Decimal)
           count: 2
         - value: 999999 (floating decimal)
-          count: 1
-        - value: 9999(4) or 999999(6)
           count: 1
       EURO/L:
         count: 19
@@ -2371,7 +2450,7 @@ type_level_characteristics:
     - value: 999.99
       count: 1
   maximum_unit_price_digits:
-    fill_rate: 0.107
+    fill_rate: 0.106
     present_count: 37
     by_unit:
       'null':
@@ -2438,7 +2517,7 @@ type_level_characteristics:
     - value: 4
       count: 2
   maximum_viscosity:
-    fill_rate: 0.11
+    fill_rate: 0.109
     present_count: 38
     by_unit:
       mPa·s:
@@ -2485,13 +2564,23 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - value: 20
       count: 1
   maximum_volume:
-    fill_rate: 0.012
-    present_count: 4
+    fill_rate: 0.014
+    present_count: 5
     by_unit:
+      'null':
+        count: 3
+        top_values:
+        - value: 9999999999
+          count: 1
+        - value: 999999(6) or 99999999(8)
+          count: 1
+        - value: 999999(7)or9999999(8)
+          count: 1
       l:
         count: 2
         top_values:
@@ -2499,17 +2588,12 @@ type_level_characteristics:
           count: 1
         - value: 9999
           count: 1
-      'null':
-        count: 2
-        top_values:
-        - value: 999999(6) or 99999999(8)
-          count: 1
-        - value: 999999(7)or9999999(8)
-          count: 1
+        unit_id: u:liter
   maximum_volume_6_digits:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: l
+    unit_id: u:liter
     top_values:
     - value: 9999.0
       count: 1
@@ -2537,7 +2621,7 @@ type_level_characteristics:
         - value: 999999.99 or 99999.999 (programmable)
           count: 1
   maximum_volume_indication:
-    fill_rate: 0.162
+    fill_rate: 0.16
     present_count: 56
     by_unit:
       L:
@@ -2553,6 +2637,7 @@ type_level_characteristics:
           count: 3
         - value: 999999.99
           count: 1
+        unit_id: u:lambert
       l:
         count: 10
         top_values:
@@ -2562,6 +2647,7 @@ type_level_characteristics:
           count: 1
         - value: 9999999 (floating decimal)
           count: 1
+        unit_id: u:liter
       digits:
         count: 5
         top_values:
@@ -2609,6 +2695,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=50
       count: 1
@@ -2679,19 +2766,22 @@ type_level_characteristics:
     - value: Not applicable
       count: 1
   measurement_unit:
-    fill_rate: 0.026
-    present_count: 9
+    fill_rate: 0.029
+    present_count: 10
     by_unit:
+      L:
+        count: 5
+        top_values:
+        - value: Volume
+          count: 4
+        - value: volume
+          count: 1
+        unit_id: u:lambert
       'null':
         count: 5
         top_values:
         - value: Volume [L]
           count: 5
-      L:
-        count: 4
-        top_values:
-        - value: Volume
-          count: 4
   measuring_module_max_flow_rate:
     fill_rate: 0.003
     present_count: 1
@@ -2845,6 +2935,7 @@ type_level_characteristics:
     fill_rate: 0.009
     present_count: 3
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 5
       count: 2
@@ -2854,6 +2945,7 @@ type_level_characteristics:
     fill_rate: 0.009
     present_count: 3
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 5
       count: 2
@@ -2907,11 +2999,12 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: D
+    unit_id: u:debye
     top_values:
     - value: 3
       count: 1
   minimum_flow_rate:
-    fill_rate: 0.032
+    fill_rate: 0.031
     present_count: 11
     by_unit:
       L/min:
@@ -2946,7 +3039,7 @@ type_level_characteristics:
     - range: min=0.2, max=None
       count: 1
   minimum_flowrate:
-    fill_rate: 0.2
+    fill_rate: 0.197
     present_count: 69
     by_unit:
       L/min:
@@ -3000,11 +3093,11 @@ type_level_characteristics:
     - value: 2D
       count: 1
   minimum_measured_quantity:
-    fill_rate: 0.38
-    present_count: 131
+    fill_rate: 0.377
+    present_count: 132
     by_unit:
       L:
-        count: 99
+        count: 100
         top_values:
         - value: 2
           count: 50
@@ -3026,6 +3119,7 @@ type_level_characteristics:
           count: 1
         - range: min=2, max=5
           count: 1
+        unit_id: u:lambert
       l:
         count: 20
         top_values:
@@ -3043,6 +3137,7 @@ type_level_characteristics:
           count: 1
         - range: min=2.01, max=201
           count: 1
+        unit_id: u:liter
       'null':
         count: 11
         top_values:
@@ -3091,6 +3186,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: l
+    unit_id: u:liter
     top_values:
     - value: 2.0 or 5.0
       count: 1
@@ -3116,11 +3212,11 @@ type_level_characteristics:
     - value: 1
       count: 1
   minimum_pressure:
-    fill_rate: 0.038
-    present_count: 13
+    fill_rate: 0.04
+    present_count: 14
     by_unit:
       MPa:
-        count: 11
+        count: 12
         top_values:
         - value: 0.12
           count: 7
@@ -3129,6 +3225,8 @@ type_level_characteristics:
         - value: 0.1
           count: 1
         - value: 0.03
+          count: 1
+        - value: 0.15
           count: 1
       bar(g):
         count: 2
@@ -3149,6 +3247,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: s
+    unit_id: u:sidereal_second
     top_values:
     - value: 3
       count: 1
@@ -3156,8 +3255,16 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - range: min=10, max=None
+      count: 1
+  minimum_ratio_qmax_over_qmin:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 10
       count: 1
   minimum_reynolds_number:
     fill_rate: 0.003
@@ -3195,7 +3302,7 @@ type_level_characteristics:
     - range: min=0, max=None
       count: 1
   minimum_working_pressure:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     by_unit:
       MPa:
@@ -3249,6 +3356,7 @@ type_level_characteristics:
         top_values:
         - value: 5
           count: 1
+        unit_id: u:lambert
       kg:
         count: 1
         top_values:
@@ -3259,6 +3367,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 220
       count: 1
@@ -3312,6 +3421,7 @@ type_level_characteristics:
     fill_rate: 0.043
     present_count: 15
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-25, max=55
       count: 15
@@ -3331,6 +3441,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 400
       count: 1
@@ -3351,7 +3462,7 @@ type_level_characteristics:
     - value: 1060×460×2100
       count: 1
   path_angle:
-    fill_rate: 0.035
+    fill_rate: 0.034
     present_count: 12
     by_unit:
       'null':
@@ -3371,7 +3482,7 @@ type_level_characteristics:
         - value: 60
           count: 4
   pattern_designation:
-    fill_rate: 0.012
+    fill_rate: 0.011
     present_count: 4
     unit_symbol:
     top_values:
@@ -3410,18 +3521,19 @@ type_level_characteristics:
         top_values:
         - value: 3.5
           count: 5
+        unit_id: u:bar
       kPa:
         count: 1
         top_values:
         - value: 1034
           count: 1
   pos_interface:
-    fill_rate: 0.003
-    present_count: 1
+    fill_rate: 0.006
+    present_count: 2
     unit_symbol:
     top_values:
     - value: RS-485
-      count: 1
+      count: 2
   power_failure_bypass:
     fill_rate: 0.003
     present_count: 1
@@ -3437,20 +3549,21 @@ type_level_characteristics:
     - value: 4 x size AA batteries
       count: 1
   power_supply_frequency:
-    fill_rate: 0.093
-    present_count: 32
+    fill_rate: 0.1
+    present_count: 35
     by_unit:
       Hz:
-        count: 30
+        count: 33
         top_values:
         - value: 50
           count: 8
         - range: min=50, max=60
-          count: 18
+          count: 21
         - range: min=50, max=50
           count: 3
         - range: min=50.0, max=60.0
           count: 1
+        unit_id: u:hertz
       'null':
         count: 2
         top_values:
@@ -3466,14 +3579,14 @@ type_level_characteristics:
     - value: flow computer or external power supply
       count: 5
   power_supply_type:
-    fill_rate: 0.18
-    present_count: 62
+    fill_rate: 0.186
+    present_count: 65
     unit_symbol:
     top_values:
     - value: DC
-      count: 35
+      count: 36
     - value: AC
-      count: 22
+      count: 24
     - value: AC/DC
       count: 2
     - value: AC mains
@@ -3491,11 +3604,11 @@ type_level_characteristics:
     - value: 24
       count: 1
   power_supply_voltage:
-    fill_rate: 0.27
-    present_count: 93
+    fill_rate: 0.277
+    present_count: 97
     by_unit:
       V:
-        count: 77
+        count: 81
         top_values:
         - value: 230
           count: 13
@@ -3504,19 +3617,20 @@ type_level_characteristics:
         - value: 220
           count: 4
         - range: min=9, max=28
-          count: 13
+          count: 14
         - range: min=230, max=400
           count: 6
         - range: min=24, max=24
           count: 5
         - range: min=10.4, max=36
           count: 4
+        - range: min=115, max=230
+          count: 3
         - range: min=110, max=240
-          count: 2
-        - range: min=110, max=230
           count: 2
         - range: min=5, max=12
           count: 2
+        unit_id: u:volt
       VDC:
         count: 10
         top_values:
@@ -3556,6 +3670,7 @@ type_level_characteristics:
     fill_rate: 0.014
     present_count: 5
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - range: min=100, max=240
       count: 5
@@ -3563,6 +3678,7 @@ type_level_characteristics:
     fill_rate: 0.014
     present_count: 5
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 24
       count: 5
@@ -3570,6 +3686,7 @@ type_level_characteristics:
     fill_rate: 0.006
     present_count: 2
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 24
       count: 2
@@ -3589,6 +3706,7 @@ type_level_characteristics:
         top_values:
         - value: 6
           count: 2
+        unit_id: u:volt
   pressure_range:
     fill_rate: 0.009
     present_count: 3
@@ -3613,30 +3731,31 @@ type_level_characteristics:
     - value: floating decimal
       count: 1
   product_pressure_range:
-    fill_rate: 0.006
-    present_count: 2
+    fill_rate: 0.009
+    present_count: 3
     unit_symbol: bar(g)
-    unit_id: u:bar
     top_values:
     - range: min=0, max=100
-      count: 2
+      count: 3
   product_temperature_range:
-    fill_rate: 0.206
-    present_count: 71
+    fill_rate: 0.211
+    present_count: 74
     by_unit:
       "°C":
-        count: 63
+        count: 66
         top_values:
         - range: min=-40, max=140
-          count: 14
+          count: 15
         - range: min=-5, max=35
           count: 12
         - range: min=-10, max=50
-          count: 11
+          count: 12
         - range: min=-25, max=50
           count: 6
         - range: min=-40, max=50
           count: 4
+        - range: min=-50, max=150
+          count: 3
         - range: min=-200, max=60
           count: 3
         - range: min=-30, max=50
@@ -3645,8 +3764,7 @@ type_level_characteristics:
           count: 2
         - range: min=-200, max=-120
           count: 2
-        - range: min=-50, max=150
-          count: 2
+        unit_id: u:degree_Celsius
       'null':
         count: 5
         top_values:
@@ -3827,22 +3945,25 @@ type_level_characteristics:
     fill_rate: 0.006
     present_count: 2
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 0.01
       count: 1
     - value: 0,001 L for Volume <2L; 0,01 L for 2L<Volume<100L; 0,1 L for 100L<Volume<1000L; 1L for Volume>1000L
       count: 1
   scale_interval_of_indication:
-    fill_rate: 0.006
-    present_count: 2
+    fill_rate: 0.009
+    present_count: 3
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 0.01
-      count: 2
+      count: 3
   scale_interval_of_the_indication:
     fill_rate: 0.014
     present_count: 5
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 0.01
       count: 4
@@ -3857,6 +3978,7 @@ type_level_characteristics:
         top_values:
         - value: 0.01
           count: 4
+        unit_id: u:liter
       'null':
         count: 2
         top_values:
@@ -3931,7 +4053,7 @@ type_level_characteristics:
     - value: AK (advanced), BK (base), EK (entry), GK (lpg)
       count: 1
   software_identification:
-    fill_rate: 0.072
+    fill_rate: 0.071
     present_count: 25
     unit_symbol:
     top_values:
@@ -4073,7 +4195,7 @@ type_level_characteristics:
     - value: SW000070 and SW000082
       count: 1
   sound_frequency:
-    fill_rate: 0.035
+    fill_rate: 0.034
     present_count: 12
     by_unit:
       MHz:
@@ -4120,6 +4242,7 @@ type_level_characteristics:
     fill_rate: 0.006
     present_count: 2
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 220
       count: 1
@@ -4147,7 +4270,7 @@ type_level_characteristics:
     - value: optional, in accordance with Evaluation Report P01196
       count: 1
   temperature_range:
-    fill_rate: 0.313
+    fill_rate: 0.309
     present_count: 108
     by_unit:
       "°C":
@@ -4193,6 +4316,7 @@ type_level_characteristics:
     fill_rate: 0.023
     present_count: 8
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=55
       count: 3
@@ -4213,6 +4337,7 @@ type_level_characteristics:
     fill_rate: 0.017
     present_count: 6
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=60
       count: 3
@@ -4364,6 +4489,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - value: 0.1
       count: 1
@@ -4371,6 +4497,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: m
+    unit_id: u:meter
     top_values:
     - range: min=None, max=1
       count: 1
@@ -4412,6 +4539,13 @@ type_level_characteristics:
     unit_symbol:
     top_values:
     - value: Petrol, kerosene, diesel, ethanol or FAME/RME
+      count: 1
+  types_of_liquids:
+    fill_rate: 0.003
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Gasoline, kerosene, diesel and AdBlue (32.5% aqueous urea solution)
       count: 1
   unit_price_decimal_display:
     fill_rate: 0.003
@@ -4458,7 +4592,7 @@ type_level_characteristics:
     - range: min=None, max=3.17
       count: 1
   viscosity_range:
-    fill_rate: 0.067
+    fill_rate: 0.066
     present_count: 23
     by_unit:
       mPa·s:
@@ -4497,9 +4631,10 @@ type_level_characteristics:
         - range: min=0.4, max=8.0
           count: 1
   viscosity_reference_temperature:
-    fill_rate: 0.035
+    fill_rate: 0.034
     present_count: 12
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - value: 20
       count: 12
@@ -4507,6 +4642,7 @@ type_level_characteristics:
     fill_rate: 0.014
     present_count: 5
     unit_symbol: L
+    unit_id: u:lambert
     top_values:
     - value: 2
       count: 5
@@ -4514,6 +4650,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: V
+    unit_id: u:volt
     top_values:
     - value: 220
       count: 1
@@ -4585,6 +4722,7 @@ type_level_characteristics:
     fill_rate: 0.003
     present_count: 1
     unit_symbol: "°C"
+    unit_id: u:degree_Celsius
     top_values:
     - range: min=0, max=40
       count: 1
@@ -4605,9 +4743,9 @@ type_level_characteristics:
     - value: 00c3fad1
       count: 1
 model_level_attributes:
-  maximum_flow_rate: 81
-  minimum_measured_quantity: 76
-  minimum_flow_rate: 74
+  maximum_flow_rate: 82
+  minimum_measured_quantity: 77
+  minimum_flow_rate: 75
   maximum_pressure: 40
   mmq: 37
   temperature_range: 27
@@ -4876,199 +5014,212 @@ config_level_attributes:
   minimum_flowrate: 27
   minimum_measured_quantity: 21
   product_temperature_range: 19
-  power_supply_voltage: 14
-  maximum_pressure: 11
-  liquid: 9
-  flow_rate_range: 9
+  power_supply_voltage: 15
+  maximum_pressure: 12
+  flow_rate_range: 10
   power_supply_frequency: 9
+  liquid: 9
+  ambient_temperature_range: 8
   maximum_price_to_pay: 8
   maximum_unit_price: 8
-  ambient_temperature_range: 7
-  maximum_flow_rate: 7
+  maximum_flow_rate: 8
   minimum_flow_rate: 7
+  maximum_flow_rate_qmax: 7
+  minimum_flow_rate_qmin: 7
   liquid_temperature_range: 6
-  minimum_flow_rate_qmin: 6
-  maximum_flow_rate_qmax: 5
+  accuracy_class: 5
   maximum_volume_indication: 5
-  maximum_viscosity: 5
   temperature_range: 5
-  liquid_temperature_range_mass_measurement: 4
-  accuracy_class: 4
-  extended_temperature_range: 4
+  maximum_viscosity: 5
   maximum_volume_indication_digits: 4
   maximum_unit_price_digits: 4
   maximum_price_to_pay_digits: 4
-  maximum_flowrate_qmax: 3
+  extended_temperature_range: 4
+  liquid_temperature_range_mass_measurement: 4
   pmax: 3
-  software_version: 2
-  upstream_straight_pipe_length: 2
-  software_checksum: 2
-  maximum_pressure_pmax: 2
-  flow_conditioner: 2
-  volume_sensor_flow_rate_range: 2
-  qmax_qmin_ratio: 2
-  temperature_range_liquid_for_mass_measurement: 2
+  maximum_flowrate_qmax: 3
   temperature_range_liquid_for_density_and_volume_measurement: 2
+  upstream_straight_pipe_length: 2
+  flow_conditioner: 2
+  maximum_pressure_pmax: 2
   liquid_temperature_range_density_and_volume_measurement: 2
-  qmin: 2
-  liquids: 2
-  applicable_liquids: 2
-  viscosity_range: 2
-  liquid_temperature_range_density_volume_measurement: 2
   power_supply_type: 2
-  density_calculation_performed_by: 1
-  temperature_range_liquid_mass: 1
-  transducer_connection: 1
-  measurement_type: 1
-  environmental_classes: 1
-  minimum_product_temperature: 1
-  maximum_product_temperature: 1
-  duty_type: 1
-  flow_rate_limitation: 1
-  product_density_range: 1
-  scale_interval: 1
-  approval_viscosity: 1
-  rtd_pt100_elements: 1
-  downstream_straight_pipe_length: 1
-  minimum_reynolds_number: 1
-  optional_input_output_module: 1
-  chamber_configuration: 1
-  input_output_version: 1
-  display_language: 1
-  qmin_class_0_5_l_per_min: 1
-  applicable_meter_sizes: 1
-  liquid_temperature_range_for_density_and_volume_measurement: 1
-  qmin_class_0_3_l_per_min: 1
-  qmin_accuracy_class_0_5: 1
-  liquid_temperature_range_for_mass_measurement: 1
+  liquid_temperature_range_density_volume_measurement: 2
+  software_checksum: 2
+  software_version: 2
+  volume_sensor_flow_rate_range: 2
+  temperature_range_liquid_for_mass_measurement: 2
+  qmax_qmin_ratio: 2
+  viscosity_range: 2
+  qmin: 2
+  applicable_liquids: 2
+  liquids: 2
   liquid_temperature_range_density_volume: 1
   liquid_temperature_range_mass: 1
-  gas_separator_and_transducer_configuration: 1
-  gas_separators_and_measurement_transducers: 1
-  products_delivered_simultaneously: 1
-  number_of_measuring_systems: 1
-  number_of_measurement_transducers: 1
-  flowrate_change_up: 1
-  minimum_flowrate_qmin: 1
-  installation_mode: 1
-  number_of_pulsers: 1
-  number_of_volume_sensors: 1
-  used_measurement_transducer: 1
-  applicable_liquid: 1
-  qmax: 1
-  minimum_measured_quantity_vmin: 1
-  operating_temperature_range: 1
-  number_of_nozzles: 1
   meters: 1
-  pumping_units: 1
-  product_hose_pump_configuration: 1
-  maximum_allowable_pressure_pemax: 1
-  maximum_pe_max_pressure: 1
-  test_oil_viscosity: 1
-  software_crc_hart: 1
-  software_crc_modbus: 1
-  measuring_systems: 1
+  number_of_nozzles: 1
+  operating_temperature_range: 1
+  qmin_accuracy_class_0_5: 1
+  qmin_class_0_3_l_per_min: 1
+  qmin_class_0_5_l_per_min: 1
+  minimum_measured_quantity_vmin: 1
+  chamber_configuration: 1
+  qmax: 1
+  minimum_reynolds_number: 1
+  downstream_straight_pipe_length: 1
+  rtd_pt100_elements: 1
   hydraulic_modules: 1
+  duty_type: 1
+  minimum_measured_quantity_mmq: 1
+  temperature_range_liquid_mass: 1
+  measurement_type: 1
+  environmental_classes: 1
+  flow_rate_limitation: 1
+  scale_interval: 1
+  minimum_submerged_pump_running_time_before_delivery: 1
+  pipeline_slope: 1
+  approval_viscosity: 1
+  optional_input_output_module: 1
+  input_output_version: 1
+  display_language: 1
+  applicable_meter_sizes: 1
+  product_hose_pump_configuration: 1
+  liquid_temperature_range_for_density_and_volume_measurement: 1
+  liquid_temperature_range_for_mass_measurement: 1
+  pumping_units: 1
+  number_of_measurement_transducers: 1
+  number_of_measuring_systems: 1
   permitted_liquids: 1
   water_alcohol_liquid_density_range: 1
   applicable_measuring_system_accuracy_class: 1
   minimum_measured_quantity_scale_intervals: 1
   minimum_ratio_qmax_over_qmin: 1
   ratio_max_to_min_flow_rate: 1
+  products_delivered_simultaneously: 1
   type_of_liquids: 1
+  gas_separators_and_measurement_transducers: 1
+  gas_separator_and_transducer_configuration: 1
+  hydraulic_system_units_per_dispenser_enclosure: 1
   qmax_over_qmin: 1
   qmax_over_qmin_ratio: 1
   flow_range: 1
   number_of_sub_systems: 1
-  hydraulic_system_units_per_dispenser_enclosure: 1
+  applicable_liquid: 1
+  maximum_product_temperature: 1
+  minimum_product_temperature: 1
+  transducer_connection: 1
+  used_measurement_transducer: 1
+  density_calculation_performed_by: 1
+  product_density_range: 1
+  number_of_volume_sensors: 1
+  maximum_allowable_pressure_pemax: 1
+  maximum_pe_max_pressure: 1
+  test_oil_viscosity: 1
+  number_of_pulsers: 1
+  installation_mode: 1
+  software_crc_hart: 1
+  software_crc_modbus: 1
+  minimum_flowrate_qmin: 1
+  flowrate_change_up: 1
+  measuring_systems: 1
 matrix_table_names:
-  Software identification: 22
-  Flow characteristics of the configurations: 11
+  Software identification: 23
+  Flow characteristics of the configurations: 12
   Flow characteristics by sensor size: 8
   General characteristics of the family of instruments: 8
   General characteristics of the Promass Q measurement sensor: 7
-  General characteristics of the measurement sensor type C+: 6
   General characteristics of the measurement sensor type V and V+: 6
+  General characteristics of the measurement sensor type C+: 6
   General characteristics of the gas elimination device type GPU90: 6
-  Software specifications: 5
-  Table 2 Flow characteristics of the configurations: 5
   Software versions and checksum of the calculating/indicating device type Apollo-II: 5
-  General characteristics of the transducers: 4
-  Table 1 - General characteristics of the family of instruments of type M(S)xx: 4
+  Table 2 Flow characteristics of the configurations: 5
+  Software specifications: 5
   General characteristics of the calculating/indicating device type Apollo-II: 4
   General characteristics of the calculating/indicating device type Tulip: 4
+  General characteristics of the transducers: 4
   Software identification of the Promass 300 and Promass 500 electronics: 4
-  Characteristics of the fuel dispenser by configuration: 3
-  "Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5": 3
-  Table 2 - General characteristics of the family of instruments of type BMxx: 3
-  Table 3 - General characteristics of the family of instruments of type DMxx: 3
+  Table 1 - General characteristics of the family of instruments of type M(S)xx: 4
   Characteristics of fuel dispensers for Motor Vehicles, model Quantium XXXX: 3
-  Metrological characteristics by accuracy class: 3
-  Characteristics of the family of instruments: 3
-  Table 1 General characteristics: 3
-  Table 3 General characteristics of the measurement sensor type C+: 3
   Table 4 General characteristics of the measurement sensor type V and V+: 3
+  Table 3 General characteristics of the measurement sensor type C+: 3
+  Table 1 General characteristics: 3
+  Characteristics of the fuel dispenser by configuration: 3
+  Table 3 - General characteristics of the family of instruments of type DMxx: 3
+  Table 2 - General characteristics of the family of instruments of type BMxx: 3
+  Metrological characteristics by accuracy class: 3
   Software identification of the calculating/indicating device type Tulip: 3
-  Metrological characteristics of the certified pattern: 2
-  Characteristics: 2
-  Technical data by type: 2
-  Software versions and checksum of the calculating/indicating device type Sandpiper -III: 2
-  General characteristics of the family of meters: 2
-  General characteristics of the calculating/indicating device type Sandpiper-III (USA): 2
-  General characteristics of the measuring instrument: 2
-  General characteristics: 2
-  Flow characteristics: 2
-  Table 1 General characteristics of the Promass Q measurement sensor: 2
-  Table 8 Software versions and checksum of the calculating/indicating device type Apollo-II: 2
-  Software version and Checksum of the calculating/indicating device type Tulip: 2
+  "Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5": 3
+  Characteristics of the family of instruments: 3
   Table 6 General characteristics of the calculating/indicating device type Tulip: 2
   Table 5 General characteristics of the measurement sensor type BATCHFLUX 3200 C: 2
+  Metrological characteristics of the certified pattern: 2
+  Software version and Checksum of the calculating/indicating device type Tulip: 2
+  Table 8 Software versions and checksum of the calculating/indicating device type Apollo-II: 2
+  Characteristics: 2
+  Technical data by type: 2
+  Software versions: 2
+  General characteristics of the family of meters: 2
+  General characteristics of the measuring instrument: 2
+  Table 1 General characteristics of the Promass Q measurement sensor: 2
   Maximum flowrate of the gas elimination device type EGS_1 and EGS_2: 2
   Software version of the measurement transducer type UFC 5: 2
   Software version of the MCD tool: 2
   Table 1 — General characteristics of the family of instruments of type M(S)xx: 2
   Table 6 Software versions and checksum of the calculating/indicating device type Apollo-II: 2
   Table 6 - Software identification of the Promass 300 and Promass 500 electronics: 2
-  Software versions: 2
-  Metrological characteristics by liquid: 2
-  Metrological characteristics by flowrate configuration: 2
   Metering characteristics by flowrate class: 2
+  Metrological characteristics by flowrate configuration: 2
   Metering characteristics by flowrate configuration: 2
+  Flow characteristics: 2
+  General characteristics: 2
+  General characteristics of the calculating/indicating device type Sandpiper-III (USA): 2
   Model configurations: 2
-  Model configuration: 2
+  Software versions and checksum of the calculating/indicating device type Sandpiper -III: 2
   Configuration by model: 2
-  Validated software versions and checksums — LCD PIC Firmware: 1
-  Validated software versions and checksums — PIC Firmware: 1
-  Validated software versions and checksums — Internal Core Software: 1
-  Validated software versions and checksums — Transmitter Software (Weights & Measures): 1
-  General characteristics (continuation from previous page — part not identified in this fragment): 1
-  3500 / 3700 software versions: 1
-  1700 / 2700 / 2500 software versions: 1
-  Software versions with no checksum: 1
-  820 Remote Dual Core Processor software versions: 1
-  800 Enhanced Core Processor software versions: 1
+  Metrological characteristics by liquid: 2
+  Model configuration: 2
+  "Software of the calculating/indicating device type iMC running on the conditional multimedia CPU board (Table 5)": 1
+  Table 2 - General characteristics of the family of instruments of type DMxx: 1
+  Table 1 - General characteristics of the family of instruments of type BMxx: 1
+  Table 3 Software Identification: 1
+  Table 2 Flow characteristics of the family of meter: 1
+  Flow characteristics of the family of meter: 1
+  Software versions of the 5700 electronics: 1
+  Software versions of the MVD series electronics: 1
+  Specific characteristics of the measurement sensors: 1
+  Specific characteristics of the measurement sensors (Table 2): 1
+  Tables 6-7 - Software versions of the 5700 electronics: 1
+  Characteristics of fuel dispensers for Motor Vehicles, model "Quantium XXXX": 1
+  Specific characteristics of the meter type BMxx: 1
+  Specific characteristics of the meter type DM: 1
+  Specific characteristics of the measurement sensor type CMFxxxy, DS600: 1
   700 Core Processor software versions: 1
-  Corrected minimum measured quantity (MMQ) by type: 1
-  Validated older software versions without checksums — MultiLoad II calculating/indicating device: 1
-  Validated software versions with checksums — MultiLoad II type EXL and type DIV-2: 1
-  Validated software versions with checksums — MultiLoad II type SMP: 1
-  Validated software versions and checksums: 1
-  Fuel dispenser characteristics by flowrate class: 1
-  Table 2 — General characteristics of the family of instruments: 1
-  Table 3 — General characteristics of the transducers: 1
-  Table 4 — Software specifications: 1
-  Characteristics of the A series fuel dispenser by flowrate class: 1
-  Table 2 — Characteristics of the family of instruments: 1
-  Table 3 — Software specifications: 1
-  Approved options for the CG300 electronics module and input/output variants: 1
-  "Software version and checksum of the calculating/indicating device type Sandpiper-Apollo and Apollo 2022": 1
-  Characteristics by flowrate category: 1
+  800 Enhanced Core Processor software versions: 1
+  820 Remote Dual Core Processor software versions: 1
+  Software versions with no checksum: 1
+  1700 / 2700 / 2500 software versions: 1
+  3500 / 3700 software versions: 1
+  General characteristics (continuation from previous page — part not identified in this fragment): 1
+  Software of the calculating/indicating device type iMC (Table 4): 1
+  Validated software versions and checksums — Transmitter Software (Weights & Measures): 1
+  Table 3 Flow characteristics of electronic model of the gas extractor: 1
+  Table 2 - Specific characteristics of the Promass F measurement sensors (DN100-DN250): 1
+  Table 3 - Specific characteristics of the Promass X measurement sensors (DN350): 1
+  Table 4 - Specific characteristics of the Promass O measurement sensors (DN8-DN80): 1
+  Table 4 - Specific characteristics of the Promass O measurement sensors (DN100-DN250): 1
+  Table 5 - Specific characteristics of the Promass Q measurement sensors (DN25-DN100): 1
+  Table 2 - Specific characteristics of the Promass F measurement sensors (DN8 to DN80): 1
+  Table 2 - Specific characteristics of the Promass F measurement sensors (DN100 to DN250): 1
+  Table 3 - Specific characteristics of the Promass X measurement sensors: 1
   Table 4 - Specific characteristics of the Promass O measurement sensors (DN8 to DN80): 1
   Table 4 - Specific characteristics of the Promass O measurement sensors (DN100 to DN250): 1
   Table 5 - Specific characteristics of the Promass Q measurement sensors: 1
   Specific characteristics of the CMF series of measurement sensors (Table 2): 1
   Specific characteristics of the CMFHC series of measurement sensors (Table 3): 1
   Table 2 - Specific characteristics of the CMF series of measurement sensors: 1
+  Volume Sensor Flow Rate Ranges: 1
+  Pumping Unit Specifications: 1
+  Construction: 1
   Specific characteristics of the CMF series of measurement sensors: 1
   Table 3 — Specific characteristics of the CMFHC series of measurement sensors: 1
   Table 5 — Software versions of the MVD series electronics: 1
@@ -5077,110 +5228,83 @@ matrix_table_names:
   Table 7 - Software versions of the 5700 electronics: 1
   Table 2 - Specific characteristics of the measurement sensors: 1
   Tables 4-6 - Software versions of the MVD series electronics: 1
-  Tables 6-7 - Software versions of the 5700 electronics: 1
-  Specific characteristics of the measurement sensors (Table 2): 1
-  Specific characteristics of the measurement sensors: 1
-  Software versions of the MVD series electronics: 1
-  Software versions of the 5700 electronics: 1
-  Flow characteristics of the family of meter: 1
-  Table 2 Flow characteristics of the family of meter: 1
-  Table 3 Software Identification: 1
-  Table 1 - General characteristics of the family of instruments of type BMxx: 1
-  Table 2 - General characteristics of the family of instruments of type DMxx: 1
-  Specific characteristics of the meter type BMxx: 1
-  Specific characteristics of the meter type DM: 1
-  Specific characteristics of the measurement sensor type CMFxxxy, DS600: 1
-  Table 2 Flow characteristics of mechanical model of the gas extractor: 1
-  Table 9 Software versions and checksum of the calculating/indicating device type Apollo-Astra: 1
-  Table 10 General characteristics of the gas elimination device type GPU90: 1
-  Flow characteristics of AUS dispenser configurations: 1
-  Characteristics of the fuel dispenser configurations: 1
-  Characteristics by fuel dispenser type: 1
-  Configuration per model: 1
-  Flow characteristics of fuel dispenser: 1
-  General characteristics of the calculating/indicating device type CZ series: 1
-  "Software identification of the electronic calculating and indicating device type LNG Metering Computer": 1
-  "Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer": 1
-  "Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer (continued)": 1
-  Approved measurements by sensor type: 1
-  Software versions and checksums: 1
-  Sensor type accuracy classes by application: 1
-  Software versions and checksums for Promass 300 and 500 electronics: 1
-  General characteristics of Promass 300 and 500 electronics: 1
-  Sensor type accuracy classes: 1
-  Promass 300 and 500 electronics characteristics: 1
-  Specific characteristics of the OPTIMASS 2000 measurement sensors: 1
-  Specific characteristics of the OPTIMASS 6000 measurement sensors (DN8-DN80): 1
-  Specific characteristics of the OPTIMASS 6000 measurement sensors (DN100-DN250): 1
-  General characteristics of the MFC400 electronics: 1
-  Table 2 Software identification: 1
-  Program checksum;Combined kernel,File System&Firmware: 1
-  Construction: 1
-  Pumping Unit Specifications: 1
-  Volume Sensor Flow Rate Ranges: 1
-  Table 3 Flow characteristics of electronic model of the gas extractor: 1
   Characteristics of the family of instruments (Table 2): 1
   Software specifications (Table 3): 1
   Approved inputs and outputs - CG number coding (CG300 ab xyz): 1
   Description characteristics: 1
   Characteristics by maximum flow rate: 1
+  Approved software versions and checksums: 1
   Table 2 Flow characteristics: 1
-  Metrological characteristics by flowrate range: 1
-  Characteristics by flowrate range: 1
-  Flowrate characteristics: 1
+  Sensor type accuracy classes by application: 1
+  Software versions and checksums: 1
+  Approved measurements by sensor type: 1
+  "Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer (continued)": 1
   Table 5 General characteristics of the calculating/indicating device type Apollo-II: 1
   Table 7 General characteristics of the calculating/indicating device type Tulip: 1
   Table 8 General characteristics of the gas elimination device type GPU90: 1
-  Prime Component Summary: 1
-  Performance characteristics by flow configuration: 1
-  Prime Component Characteristics: 1
-  Metrological characteristics by meter type and maximum flowrate: 1
-  Operating characteristics by meter type and flowrate: 1
+  "Table 2 Software identification of the electronic calculating and indicating device type NANO or NANO flow computer": 1
+  "Software identification of the electronic calculating and indicating device type LNG Metering Computer": 1
+  General characteristics of the calculating/indicating device type CZ series: 1
+  Flow characteristics of fuel dispenser: 1
+  Software versions and CRC checksum of the calculating/indicating device type Sandpiper-III: 1
   software identification of the calculating/indicating device type Tulip: 1
-  Dispensing characteristics by maximum flowrate: 1
-  Flowrate configurations: 1
-  Hydraulic circuit characteristics by meter type and maximum flowrate: 1
-  Meter configuration flow limits per hydraulic circuit: 1
+  Flow characteristics of AUS dispenser configurations: 1
+  Table 10 General characteristics of the gas elimination device type GPU90: 1
   Table 7 General characteristics of the calculating/indicating device type Apollo-II: 1
-  Characteristics by measuring system type: 1
+  Table 9 Software versions and checksum of the calculating/indicating device type Apollo-Astra: 1
   Table 9 General characteristics of the gas elimination device type GPU90: 1
   "Table 7 General characteristics of the calculating/indicating device type Apollo-II and/or Apollo-Astra": 1
+  Validated software versions and checksums — Internal Core Software: 1
+  Validated software versions and checksums — PIC Firmware: 1
+  Validated software versions and checksums — LCD PIC Firmware: 1
+  Validated older software versions without checksums — MultiLoad II calculating/indicating device: 1
+  Overview parts of the measuring instrument (Table 2): 1
+  Validated software versions with checksums — MultiLoad II type EXL and type DIV-2: 1
+  Validated software versions with checksums — MultiLoad II type SMP: 1
+  Validated software versions and checksums: 1
+  Flow rates by liquid temperature range (Table 1): 1
+  Table 2 — General characteristics of the family of instruments: 1
+  Table 3 — General characteristics of the transducers: 1
+  Table 4 — Software specifications: 1
+  Program checksum;Combined kernel,File System&Firmware: 1
+  Table 2 Software identification: 1
+  General characteristics of the MFC400 electronics: 1
+  Specific characteristics of the OPTIMASS 6000 measurement sensors (DN100-DN250): 1
+  Specific characteristics of the OPTIMASS 6000 measurement sensors (DN8-DN80): 1
+  Specific characteristics of the OPTIMASS 2000 measurement sensors: 1
+  Promass 300 and 500 electronics characteristics: 1
+  Sensor type accuracy classes: 1
+  General characteristics of Promass 300 and 500 electronics: 1
+  Table 2 — Characteristics of the family of instruments: 1
+  Table 3 — Software specifications: 1
+  Approved options for the CG300 electronics module and input/output variants: 1
+  "Software version and checksum of the calculating/indicating device type Sandpiper-Apollo and Apollo 2022": 1
+  Software versions and checksums for Promass 300 and 500 electronics: 1
+  Table 2 Flow characteristics of mechanical model of the gas extractor: 1
   ? >-
-    Characteristics with one 'TQP-HS (PAS V3)' gas elimination device, two 'TQM' measurement transducers
-    (in parallel) and one 'TQC' calculating/indicating device
+    Characteristics of fuel dispensers for motor vehicles, model Quantium XXXX (with one EPZ or TQP-RS
+    gas elimination device, one TQM measurement transducer and one TQC calculating/indicating device)
   : 1
   ? >-
     Characteristics with one 'EPZ', 'TQP-RS' or 'TK80' gas elimination device, one 'TQM' measurement transducer
     and one 'TQC' calculating/indicating device
   : 1
-  MMQ by type (corrected unit): 1
-  Firmware versions (corrected): 1
-  Technical data: 1
-  Software identification (legally relevant software): 1
-  Metering characteristics by flowrate variant: 1
   ? >-
-    Characteristics of fuel dispensers for motor vehicles, model Quantium XXXX (with one EPZ or TQP-RS
-    gas elimination device, one TQM measurement transducer and one TQC calculating/indicating device)
+    Characteristics with one 'TQP-HS (PAS V3)' gas elimination device, two 'TQM' measurement transducers
+    (in parallel) and one 'TQC' calculating/indicating device
   : 1
-  Characteristics of fuel dispensers for Motor Vehicles, model "Quantium XXXX": 1
-  Characteristics of fuel dispensers for motor vehicles, model Quantium XXXX: 1
-  Global Vision flow characteristics by configuration: 1
-  Characteristics of model Global Vision by configuration: 1
-  Characteristics per flowrate configuration: 1
-  Characteristics by configuration: 1
-  Characteristics of Global Vista measuring systems by configuration: 1
-  Software versions of the measurement transducer type UFC 5 (model dependent) - ALTOSONIC 5 + UFC 5: 1
-  Software versions of the measurement transducer type UFC 5 (platform dependent): 1
-  General characteristics of the Promass Q measurement sensor (Table 1): 1
-  General characteristics of the Promass 300 and Promass 500 electronics: 1
-  'Table 2: Overview of the different sizes and flow characteristics': 1
-  Table 1 - General characteristics of the family of instruments (M(S)xx series): 1
-  BMxx series characteristics: 1
-  DM series characteristics: 1
-  Characteristics of the Global Vista fuel dispenser by configuration: 1
-  Table 2 - General characteristics of the family of instruments (flow characteristics by meter size): 1
-  "Table 4 - Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5": 1
-  "Table 6a - Software versions of the measurement transducer type UFC 5 (model dependent) - ALTOSONIC 5 + UFC 5": 1
+  ? >-
+    Characteristics with two 'TQP-HS (PAS V3)' gas elimination devices, two 'TQM' measurement transducers
+    (in parallel) and one 'TQC' calculating/indicating device
+  : 1
+  ? >-
+    Characteristics of fuel dispensers model 'Quantium XXXX' with one EPZ, TQP-RS or TK80 gas elimination
+    device, one TQM measurement transducer and one TQC calculating/indicating device
+  : 1
+  ? >-
+    Characteristics of fuel dispensers model 'Quantium XXXX' with one TQP-HS (PAS V3) gas elimination
+    device, two TQM measurement transducers (in parallel) and one TQC calculating/indicating device
+  : 1
   ? >-
     Characteristics of fuel dispensers model 'Quantium XXXX' with two TQP-HS (PAS V3) gas elimination
     devices, two TQM measurement transducers (in parallel) and one TQC calculating/indicating device
@@ -5196,26 +5320,14 @@ matrix_table_names:
   : 1
   Characteristics of fuel dispensers for Motor Vehicles, model Quantum XXXX (display variant 1): 1
   Characteristics of fuel dispensers for Motor Vehicles, model Quantum XXXX (display variant 2): 1
-  ? >-
-    Characteristics of fuel dispensers model 'Quantium XXXX' with one TQP-HS (PAS V3) gas elimination
-    device, two TQM measurement transducers (in parallel) and one TQC calculating/indicating device
-  : 1
   Characteristics of the certified fuel dispensing systems: 1
   Metrological characteristics of the SOMO SME series fuel dispensers: 1
-  ? >-
-    Characteristics of fuel dispensers model 'Quantium XXXX' with one EPZ, TQP-RS or TK80 gas elimination
-    device, one TQM measurement transducer and one TQC calculating/indicating device
-  : 1
   Metrological characteristics of the fuel dispensers: 1
   Metrological characteristics: 1
   Identification of the certified pattern — hose configurations: 1
   Metrological characteristics of the fuel dispensing units: 1
   Metrological characteristics by flow rate (accuracy class 0.5): 1
   Metrological characteristics by maximum flow rate: 1
-  ? >-
-    Characteristics with two 'TQP-HS (PAS V3)' gas elimination devices, two 'TQM' measurement transducers
-    (in parallel) and one 'TQC' calculating/indicating device
-  : 1
   Product and hose configuration by model: 1
   Flow characteristics by quality and blending range: 1
   Model feature matrix: 1
@@ -5226,35 +5338,88 @@ matrix_table_names:
   Metrological characteristics by model: 1
   Flowrate, indication and permitted liquids: 1
   Dispenser configuration summary by meter type and maximum flowrate: 1
-  Software and checksum: 1
+  Table 6 Software version of the measurement transducer type UFC 5: 1
+  Configuration per model: 1
+  Characteristics by fuel dispenser type: 1
+  Characteristics of the fuel dispenser configurations: 1
+  Characteristics by measuring system type: 1
+  Meter configuration flow limits per hydraulic circuit: 1
+  Hydraulic circuit characteristics by meter type and maximum flowrate: 1
+  Flowrate configurations: 1
+  Dispensing characteristics by maximum flowrate: 1
+  Operating characteristics by meter type and flowrate: 1
+  Metrological characteristics by meter type and maximum flowrate: 1
+  Prime Component Characteristics: 1
+  Performance characteristics by flow configuration: 1
+  Prime Component Summary: 1
+  Flowrate characteristics: 1
+  Characteristics by flowrate range: 1
+  Metrological characteristics by flowrate range: 1
+  Characteristics by flowrate category: 1
+  Characteristics of the A series fuel dispenser by flowrate class: 1
+  Fuel dispenser characteristics by flowrate class: 1
+  Characteristics of the fuel dispenser HA / HI series by flowrate configuration: 1
+  Characteristics of fuel dispenser HA / HI series by flowrate range: 1
+  Characteristics by flowrate variant: 1
+  Fuel dispenser characteristics by flowrate category: 1
+  Technical data by flowrate configuration: 1
+  Characteristics of the SK700 fuel dispenser per configuration: 1
+  Characteristics of the Global Vista fuel dispenser by configuration: 1
+  Characteristics of Global Vista measuring systems by configuration: 1
+  Characteristics by configuration: 1
+  Characteristics per flowrate configuration: 1
+  Characteristics of model Global Vision by configuration: 1
+  Global Vision flow characteristics by configuration: 1
+  Characteristics of fuel dispensers for motor vehicles, model Quantium XXXX: 1
+  Table 7 Software version of the MCD tool: 1
+  Flow characteristics of the family of meters: 1
+  General characteristics of the family of meters (Table 2): 1
+  "Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5 (Table 4)": 1
+  Software version of the measurement transducer type UFC 5 (Table 6): 1
+  Software version of the MCD tool (Table 7): 1
+  "Table 2 Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Full Bore design": 1
+  "Table 3 Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Reduced Bore design": 1
+  Table 4 Software versions, corresponding software revisions and checksums for G3 electronics: 1
+  Table 2 - Flow characteristics for all meter types with Full Bore design: 1
+  Table 3 - Flow characteristics for all meter types with Reduced Bore design: 1
   Table 4 - Software versions, corresponding software revisions and checksums for G3 electronics: 1
   Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Full Bore design: 1
   Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Reduced Bore design: 1
   Software versions, corresponding software revisions and checksums for G3 electronics: 1
-  Fuel dispenser characteristics by flowrate category: 1
-  Characteristics by flowrate variant: 1
-  Characteristics of fuel dispenser HA / HI series by flowrate range: 1
   Table 4 - Further general characteristics of the meters: 1
   Table 1 General characteristics of the family of instruments of type M(S)xx: 1
   Table 2 General characteristics of the family of instruments of type BMxx: 1
   Table 3 General characteristics of the family of instruments of type DMxx: 1
-  Characteristics of the fuel dispenser HA / HI series by flowrate configuration: 1
   Table 2 — General characteristics of the family of instruments of type BMxx: 1
   Table 3 — General characteristics of the family of instruments of type DMxx: 1
   General characteristics of the family of instruments (SB25x, B27x, B28x): 1
   General characteristics of the family of instruments (B29x to B38x): 1
   General characteristics of the family of instruments — SB25x, B27x, B28x (page 2): 1
   General characteristics of the family of instruments — B29x, B3zx, B38x (page 3): 1
+  Software identification — operating system: 1
+  LCR.iQ software part and version: 1
+  I/O board software part and version: 1
+  SENSEiQ board software part and version: 1
   Production locations: 1
   Table 2 - Specific characteristics of the Promass F measurement sensors (DN8-DN80): 1
-  Table 2 - Specific characteristics of the Promass F measurement sensors (DN100-DN250): 1
-  Table 3 - Specific characteristics of the Promass X measurement sensors (DN350): 1
-  Table 4 - Specific characteristics of the Promass O measurement sensors (DN8-DN80): 1
-  Table 4 - Specific characteristics of the Promass O measurement sensors (DN100-DN250): 1
-  Table 5 - Specific characteristics of the Promass Q measurement sensors (DN25-DN100): 1
-  Table 2 - Specific characteristics of the Promass F measurement sensors (DN8 to DN80): 1
-  Table 2 - Specific characteristics of the Promass F measurement sensors (DN100 to DN250): 1
-  Table 3 - Specific characteristics of the Promass X measurement sensors: 1
+  Software and checksum: 1
+  Corrected minimum measured quantity (MMQ) by type: 1
+  MMQ by type (corrected unit): 1
+  Firmware versions (corrected): 1
+  Technical data: 1
+  Software identification (legally relevant software): 1
+  Metering characteristics by flowrate variant: 1
+  Software versions of the measurement transducer type UFC 5 (model dependent) - ALTOSONIC 5 + UFC 5: 1
+  Software versions of the measurement transducer type UFC 5 (platform dependent): 1
+  General characteristics of the Promass Q measurement sensor (Table 1): 1
+  General characteristics of the Promass 300 and Promass 500 electronics: 1
+  'Table 2: Overview of the different sizes and flow characteristics': 1
+  Table 1 - General characteristics of the family of instruments (M(S)xx series): 1
+  BMxx series characteristics: 1
+  DM series characteristics: 1
+  Table 2 - General characteristics of the family of instruments (flow characteristics by meter size): 1
+  "Table 4 - Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5": 1
+  "Table 6a - Software versions of the measurement transducer type UFC 5 (model dependent) - ALTOSONIC 5 + UFC 5": 1
   Table 6b - Software versions of the measurement transducer type UFC 5 (platform dependent): 1
   General characteristics of the gas elimination device type EGS_1 and EGS_2: 1
   M(S)xx general characteristics of the family of instruments: 1
@@ -5267,19 +5432,5 @@ matrix_table_names:
   Software modules of the calculating/indicating device TQC, TQC EIO, TQC EST (overview): 1
   Software versions of the calculating and indicating type TQCL and TQCL-C: 1
   Flow characteristics by meter size: 1
-  Characteristics of the SK700 fuel dispenser per configuration: 1
-  Technical data by flowrate configuration: 1
   Table 2 General characteristics of the family of meters: 1
   "Table 4 Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5": 1
-  Table 6 Software version of the measurement transducer type UFC 5: 1
-  Table 7 Software version of the MCD tool: 1
-  Flow characteristics of the family of meters: 1
-  General characteristics of the family of meters (Table 2): 1
-  "Characteristics of the ultrasonic transmitters/receivers of the measurement sensor type ALTOSONIC 5 UFS 5 (Table 4)": 1
-  Software version of the measurement transducer type UFC 5 (Table 6): 1
-  Software version of the MCD tool (Table 7): 1
-  "Table 2 Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Full Bore design": 1
-  "Table 3 Flow characteristics for meter types LEFM 240Ci, LEFM 244Ci and LEFM 280Ci with Reduced Bore design": 1
-  Table 4 Software versions, corresponding software revisions and checksums for G3 electronics: 1
-  Table 2 - Flow characteristics for all meter types with Full Bore design: 1
-  Table 3 - Flow characteristics for all meter types with Reduced Bore design: 1

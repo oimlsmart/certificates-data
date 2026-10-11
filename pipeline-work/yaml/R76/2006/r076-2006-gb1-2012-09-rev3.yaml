@@ -75,21 +75,21 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC single phase
@@ -101,7 +101,7 @@ characteristics:
         min: 4
         max: 6
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     minimum_capacity:
       value: 20e
@@ -142,17 +142,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 3.3
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 43
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.88
@@ -177,7 +177,7 @@ characteristics:
     load_cell_cable_maximum_length:
       value: 1.5
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
     dps700_dll_version:
       value: 2.xx.xx.xxxx
@@ -215,6 +215,7 @@ characteristics:
     - model: HC5600
       value: 3
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -230,12 +231,14 @@ characteristics:
     - model: HC5600
       value: 2
       footnote_markers: []
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
     - model: HC5600
       value: 40
       footnote_markers: []
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -248,6 +251,7 @@ characteristics:
     - model: LI-700E (Max 10 kg)
       value: 20
       footnote_markers: []
+    unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006

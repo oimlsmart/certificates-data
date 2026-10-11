@@ -54,7 +54,7 @@ characteristics:
     maximum_pressure:
       value: 100
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     density_range:
       value:
         min: 400
@@ -70,7 +70,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_class:
       value: M3/E2/H3
       unit_symbol:
@@ -113,6 +113,7 @@ characteristics:
       value: 100
     - model: DN100
       value: 200
+    unit_id: u:kilogram
   config_level:
   - attribute: product_temperature_range
     axis: measurement_type
@@ -122,11 +123,13 @@ characteristics:
         min: -10
         max: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: mass measurement
       value:
         min: -200
         max: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R117-1
   edition: 2007
@@ -202,7 +205,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity:
       value: condensing
       unit_symbol:
@@ -210,19 +213,19 @@ components:
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_ac:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     software_identification:
       value: Version 01.00.02 (CRC 0xE87F Modbus; 0x321F Hart); Version 01.00.03 (CRC 0x79B5 Modbus; 0x1585
         Hart)

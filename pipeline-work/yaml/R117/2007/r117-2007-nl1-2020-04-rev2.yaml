@@ -65,11 +65,11 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -154,6 +154,7 @@ characteristics:
       value: 5
     - model: DN600
       value: 10
+    unit_id: u:cubic_meter
   - attribute: minimum_reynolds_number
     unit_symbol:
     values:
@@ -209,11 +210,13 @@ characteristics:
         min: -200
         max: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: carbon_steel
       value:
         min: -40
         max: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: product_temperature_range
     axis: transducer_version
     values:
@@ -222,21 +225,25 @@ characteristics:
         min: -40
         max: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-LT-Ex (LT)
       value:
         min: -200
         max: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HT-Ex (HT)
       value:
         min: -40
         max: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HV-Ex (HV)
       value:
         min: -40
         max: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_pressure
     axis: transducer_version
     values:
@@ -258,15 +265,19 @@ characteristics:
     - condition: UFS 5-R-EX (STD)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-LT-Ex (LT)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-HT-Ex (HT)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-HV-Ex (HV)
       value: 1500
       unit_symbol: cSt
+      unit_id: u:centistokes
   - attribute: transducer_connection
     axis: transducer_version
     values:
@@ -354,7 +365,7 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     viscosity_range:
       value:
         min: 0.1
@@ -405,7 +416,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     outputs:
       value: Frequency output; KROHNE serial protocol using MODBUS over RS485 or TCP/IP
       unit_symbol:

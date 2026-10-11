@@ -82,7 +82,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -92,7 +92,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -100,7 +100,7 @@ characteristics:
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     orientation:
       value: All positions (Horizontal, vertical or diagonal)
       unit_symbol:
@@ -527,6 +527,7 @@ characteristics:
       value: 99999999
     - model: DN1800
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -586,6 +587,7 @@ characteristics:
       value: 1
     - model: DN1800
       value: 1
+    unit_id: u:cubic_meter
   config_level:
   - attribute: pressure_loss_class
     axis: optiflux_type_and_meter_size
@@ -602,9 +604,11 @@ characteristics:
     - condition: OPTIFLUX 5000, sizes DN25 up to and including DN100
       value: 0.25
       unit_symbol: bar
+      unit_id: u:bar
     - condition: OPTIFLUX 5000, sizes > DN100 and other OPTIFLUX types
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: power_supply_voltage
     axis: power_supply_option
     values:
@@ -613,14 +617,17 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC (grounding mandatory)
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC (grounding mandatory)
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -629,11 +636,13 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: AC/DC (grounding mandatory)
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R49-1
   edition: 2013

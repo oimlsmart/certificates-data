@@ -74,7 +74,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -84,7 +84,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -515,6 +515,7 @@ characteristics:
       value: 99999999
     - model: DN1800
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -574,6 +575,7 @@ characteristics:
       value: 1
     - model: DN1800
       value: 1
+    unit_id: u:cubic_meter
   config_level:
   - attribute: power_supply_voltage
     axis: power_supply_option
@@ -583,14 +585,17 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: 'option 2: DC (grounding mandatory)'
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: 'option 3: AC/DC (grounding mandatory)'
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_option
     values:
@@ -608,11 +613,13 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: 'option 3: AC/DC (grounding mandatory)'
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: pressure_loss_class
     axis: type_variant_and_meter_size
     values:

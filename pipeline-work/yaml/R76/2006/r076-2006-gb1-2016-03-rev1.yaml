@@ -78,6 +78,7 @@ characteristics:
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
@@ -92,6 +93,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     maximum_number_of_partial_ranges:
       value: 3
       unit_symbol:
@@ -170,13 +172,16 @@ characteristics:
         card(s)
       value: 10
       unit_symbol: V DC
+      unit_id: u:volt
     - condition: ZM505, ZM510 - standard build or fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 10
       unit_symbol: V DC
+      unit_id: u:volt
     - condition: fitted with 5V EXC analogue load cell interface option card(s)
       value: 5
       unit_symbol: V DC
+      unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     axis: load_cell_input_variant
     values:
@@ -184,13 +189,16 @@ characteristics:
         card(s)
       value: 10.94
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: ZM505, ZM510 - standard build or fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 14.58
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: fitted with 5V EXC analogue load cell interface option card(s)
       value: 58.33
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     axis: load_cell_input_variant
     values:
@@ -225,6 +233,7 @@ characteristics:
     - condition: fitted with 5V EXC analogue load cell interface option card(s)
       value: 30
       unit_symbol: m
+      unit_id: u:meter
   - attribute: power_supply_voltage
     axis: power_supply_variant
     values:
@@ -233,11 +242,13 @@ characteristics:
         min: 12
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: ZM505-SD3, ZM510-SD4, ZM605-SD4, ZM615-SD5
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_variant
     values:
@@ -255,6 +266,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_source
     axis: power_supply_variant
     values:

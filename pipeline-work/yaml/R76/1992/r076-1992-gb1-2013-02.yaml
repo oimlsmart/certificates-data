@@ -62,7 +62,7 @@ characteristics:
         min: 5
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     display_type:
       value: LCD fitted into load receptor
@@ -123,12 +123,12 @@ characteristics:
     battery_voltage:
       value: 1.5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adaptor_output_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adaptor_output_current:
       value: 300
@@ -143,12 +143,12 @@ characteristics:
     battery_low_warning_threshold:
       value: 2.1
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adaptor_low_warning_threshold:
       value: 4.4
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     interfaces:
       value: DC voltage input port
@@ -177,6 +177,7 @@ characteristics:
     - model: M-300 15 kg (dual-interval)
       value: 15
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: minimum_capacity_20e
     unit_symbol: kg
     values:
@@ -186,6 +187,7 @@ characteristics:
     - model: M-300 15 kg (dual-interval)
       value: 0.04
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -195,12 +197,14 @@ characteristics:
     - model: M-300 15 kg (dual-interval)
       value: 2
       footnote_markers: []
+    unit_id: u:gram
   - attribute: verification_scale_interval_e_second_range
     unit_symbol: g
     values:
     - model: M-300 15 kg (dual-interval)
       value: 5
       footnote_markers: []
+    unit_id: u:gram
   - attribute: number_of_scale_intervals_n
     unit_symbol:
     values:
@@ -218,10 +222,12 @@ characteristics:
       value: 2
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: 6-15 kg
       value: 5
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
 recommendation:
   id: R76
   edition: 1992
@@ -247,7 +253,7 @@ components:
     maximum_capacity:
       value: 7.5
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: weighing electronics
   characteristics:
     measuring_principle:
