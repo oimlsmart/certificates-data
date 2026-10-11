@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011091957ff75a370125c435b",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\nRegister: \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\"\nDocument: \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\"\n\nThe only difference is \"Instrument\" vs \"Instruments\" — a plural/singular difference in the same company name. This is clearly spelling drift / minor lexical variation of the same entity. Rule: spelling drift, legal-suffix drift, accent differences = same-entity.\n\nWhich is the best value? The rule says same-entity gets... let's look at rules. For same-entity it says \"same-entity\" verdict. Best value isn't explicitly specified for same-entity except for number/year format differences which use register's canonical form. For same-entity name drift, typically the register is canonical (it's a curated database). The document is the legal instrument, though. Hmm.\n\nRules explicitly assign best_value for document-noise (register) and different-entity (document). For same-entity, no explicit rule, but the number/year rule uses the register's canonical form — implying register is canonical for same-entity. Also, \"Instruments\" is actually the correct legal name of Mettler-Toledo (Changzhou) Precision Instruments Ltd.? Let me think. The actual company is \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\" — I believe the real name includes \"Instruments\". Actually, searching memory: METTLER TOLEDO (CHANGZHOU) PRECISION INSTRUMENTS LTD. is the actual entity name. But the register here says \"Instrument\". The document says \"Instruments\". The document is the legal instrument per the rules' spirit.\n\nBut per the rule structure: for same-entity, the example given (number/year format) uses register's canonical form. The fused record likely normalizes to register canonical form. Given the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" This suggests the default for same-entity is register's canonical form. I'll go with register's value.\n\nActually, hmm — one could argue the document is the legal instrument so document value should win. But the rules only assign document precedence for different-entity. For same-entity, register canonical form seems the intended default. So best_value = \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\"\n\nVerdict: same-entity. Why: only a singular/plural spelling drift for the same company.\n\nOutput one JSON object.",
+      "signature": "bf520ce751e241c4a5ce8b6c"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\", \"why\": \"The only difference is a singular/plural spelling drift ('Instrument' vs 'Instruments') in the same company name, so the register's canonical form is kept.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 489,
+    "output_tokens": 584,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

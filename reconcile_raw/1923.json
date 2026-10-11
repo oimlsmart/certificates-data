@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101110271465c0c64e22e045a6",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\nAxis: applicant\n- Register: \"Precisa Gravimetrics A.G.\"\n- Document: \"Precisa Gravimetrics AG\"\n\nThis is clearly the same company - Precisa Gravimetrics AG is a Swiss company. The difference is \"A.G.\" vs \"AG\" - this is legal-suffix formatting drift (periods in abbreviation). Per the rules, legal-suffix drift = same-entity.\n\nFor the best value: the rules say for same-entity, number/year format differences clearly denoting same certificate get register's canonical form. But for spelling/legal-suffix drift = same-entity... what's the best value? Looking at the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" This rule is about number/year format. For name suffix drift, the general principle seems to be register canonical form applies for noise cases. Hmm.\n\nThe verdict options don't have separate best_value prescriptions for same-entity beyond the number/year rule. But conventionally in fusion, the register is the canonical database row, so the register's canonical form would be preferred. Actually wait — the rules say for different-entity, best_value = document's since certificate is legal instrument. For same-entity, presumably the register's canonical form is preferred (register is the system of record). Also \"A.G.\" vs \"AG\" — the actual legal name of the Swiss company is \"Precisa Gravimetrics AG\" (Swiss companies use \"AG\" without periods typically). But the register form with periods \"A.G.\" is the German abbreviation style (Aktiengesellschaft). Either way, same entity.\n\nBest value: register's canonical form \"Precisa Gravimetrics A.G.\" — hmm, or document's? For same-entity with suffix drift, the register is the canonical database, so I'd say register. The rule explicitly mentions register canonical form for same-entity in the number/year case, suggesting same-entity → register canonical. I'll go with the register value.\n\nActually, let me reconsider. The certificate document is the legal instrument. But the fused record — the register is the database of record. The rules only explicitly assign document value for different-entity. For same-entity, register canonical form makes sense as the normalization target. I'll pick \"Precisa Gravimetrics A.G.\" from register.\n\nHmm, but arguably \"Precisa Gravimetrics AG\" (no periods) is the more correct modern legal form. However, following the stated rules, same-entity → register's canonical form. Go with register.",
+      "signature": "bcfbfc2a54e34ff6a274ccf5"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Precisa Gravimetrics A.G.\",\n      \"why\": \"The only difference is punctuation in the legal suffix (A.G. vs AG), which is classic legal-suffix drift for the same Swiss company, so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 487,
+    "output_tokens": 622,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

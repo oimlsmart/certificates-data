@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011110144f828da5a6e684246",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nThe axis is issuer_code:\n- register: \"GB1\"\n- document: \"0135\"\n\nContext: This is an OIML certificate. The certificate ID format is R076/2006-GB1-2017.12, where \"GB1\" is the issuing authority code (GB1 = United Kingdom, National Measurement Office, issuing body 1). The register says GB1.\n\nThe document text says \"0135\" for issuer. Hmm, \"0135\" — where would that come from? Possibly an extraction artifact. The certificate context shows \"<!-- issuer: GB1 -->\" embedded in the document's own comments, which actually agrees with the register. But the extracted \"document\" value for the axis is \"0135\".\n\nWait — the document context includes \"<!-- issuer: GB1 -->\" which matches the register. But the conflict says document: \"0135\". This \"0135\" likely comes from some other part of the PDF — perhaps a page number, a postal code, a phone number fragment, or an OCR noise. UK postcodes? \"GB1\" is the OIML issuing authority code for the UK (NMO). \"0135\" doesn't look like an issuer code at all — it looks like a numeric fragment, possibly OCR noise from a page number or something like a serial.\n\nActually, GB1 is the OIML authority code for the United Kingdom's NMO. \"0135\" isn't a valid OIML issuing authority code format (those are like GB1, DE1, FR1, CN1, US1(AM), etc.). So \"0135\" is likely extraction/OCR noise.\n\nGiven the rules: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nSo verdict: document-noise, best_value: \"GB1\".\n\nWhy: \"0135\" is not a valid OIML issuing-authority code and appears to be an extraction artifact (the certificate's own header even carries issuer: GB1), so keep the register's GB1.\n\nReturn one JSON object with axes array.",
+      "signature": "69211211bb2f409ca457d437"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"issuer_code\", \"verdict\": \"document-noise\", \"best_value\": \"GB1\", \"why\": \"\\\"0135\\\" is not a valid OIML issuing-authority code and reads as an extraction/OCR artifact, while the register's \\\"GB1\\\" matches the UK NMO issuer embedded in the certificate's own header, so the canonical register value should be kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 422,
+    "output_tokens": 550,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

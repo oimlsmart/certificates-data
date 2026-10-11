@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011091057e30804dea3774ebc",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Vishay Precision or Tedea-Huntleigh\"\n- Document: \"Vishay Precision Group – Transducers\"\n\nThe document value is \"Vishay Precision Group – Transducers\" — Vishay Precision Group is a real legal entity; Tedea-Huntleigh is a brand of Vishay Precision Group (VPG acquired Tedea-Huntleigh). So the register's \"Vishay Precision or Tedea-Huntleigh\" is a broader/ambiguous statement, whereas the document names \"Vishay Precision Group – Transducers\". These refer to the same corporate family/entity — Tedea-Huntleigh is a Vishay Precision Group company. So verdict: same-entity.\n\nBest value: Which one? The rules say number/year format differences use register's canonical form; genuinely different companies use document's value. For same-entity... The fused record should carry the more precise/canonical value. The document is the legal instrument; \"Vishay Precision Group – Transducers\" is the specific applicant as stated on the certificate. The register value \"Vishay Precision or Tedea-Huntleigh\" is ambiguous (an \"or\" indicating uncertainty in the register). The document gives a definite value. For same-entity, best value could be the register's canonical form — but the rule specifically says register canonical form applies to number/year format differences. For applicant same-entity, the document's more specific legal name seems best. Actually, the document is the legal instrument, and \"Vishay Precision Group – Transducers\" is the specific holder. Tedea-Huntleigh is a division/brand of VPG. So best_value: \"Vishay Precision Group – Transducers\".\n\nHmm, but one could argue the register is the curated database. The register's value contains \"or\" which is disambiguation noise, less authoritative. Document is the legal instrument. I'll pick document value with verdict same-entity.\n\nOutput single JSON object.",
+      "signature": "2026225ad6f446e694d29c0b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Vishay Precision Group – Transducers\",\n      \"why\": \"Tedea-Huntleigh is a brand/division of Vishay Precision Group, so both values denote the same corporate applicant; the register's 'or' shows unresolved ambiguity while the certificate names the precise legal holder, so the document's specific form wins.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 513,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

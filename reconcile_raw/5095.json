@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011113048b0dd72f9ef9f418a",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\nAxis: applicant\n- Register: \"Mettler-Toledo Inc.\"\n- Document: \"Mettler-Toledo, LLC\"\n\nBoth are \"Mettler-Toledo\" with different legal suffixes: \"Inc.\" vs \"LLC\". According to the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\"\n\nSo verdict: same-entity. Best value: the register's canonical form. The rules say for same-entity legal-suffix drift, it's same-entity — and for number/year format differences it explicitly says register canonical form. For same-entity generally, the fused record should carry... The rules specify best_value for document-noise (register) and different-entity (document). For same-entity, presumably the register's canonical form since it says \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That implies register canonical form is preferred for same-entity.\n\nSo best_value: \"Mettler-Toledo Inc.\"\n\nWhy: \"Inc.\" vs \"LLC\" is legal-suffix drift on the same company name, so same entity; keep the register's canonical form.\n\nReturn one JSON object with axes array containing one entry.",
+      "signature": "fefcefbbb34c4614aa3a347c"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo Inc.\", \"why\": \"The names differ only in legal-suffix drift ('Inc.' vs 'LLC') on the same Mettler-Toledo company, so keep the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 326,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

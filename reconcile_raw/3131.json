@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011103701cde7c39b75ed40cf",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Zhongshan Camry Electronics Co. LTD\" and document says \"Zhongshan Camry Electronic Co., LTD\".\n\nDifference: \"Electronics\" vs \"Electronic\". This is spelling/morphological drift of the same company name. Also punctuation drift (\"Co. LTD\" vs \"Co., LTD\"). These are same-entity per the rules. Best value: which one? The rules say same-entity verdicts don't specify best_value explicitly except for number/year format (register's canonical form). For same-entity name drift, the fused record should carry... the rules only explicitly say document-noise → register value, different-entity → document value, number/year → register canonical. For same-entity spelling drift, we need to pick. The certificate is the legal instrument; document is likely authoritative for the name. But the register here is the OIML-CS database. Hmm.\n\nRules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" No best_value specified for that case explicitly. I'll choose the document's value since certificate is the legal instrument (consistent with the different-entity rationale). Actually, one could argue register canonical. But the certificate document is the legal instrument; the name as printed on the certificate should be the fused value. I'll go with document value \"Zhongshan Camry Electronic Co., LTD\".\n\nVerdict: same-entity. Why: only pluralization/punctuation drift of the same company name.",
+      "signature": "df670a2e990c4c6d8473b425"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Zhongshan Camry Electronic Co., LTD\",\n      \"why\": \"The two strings differ only by trivial morphology/punctuation ('Electronics' vs 'Electronic', 'Co. LTD' vs 'Co., LTD') for the same Chinese manufacturer, so they denote the same applicant, and the fused record carries the form printed on the certificate as the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 410,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

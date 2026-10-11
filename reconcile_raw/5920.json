@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101022251906585169dcc34702",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: axis applicant, register \"ESIT Elektonik A.Ş.\", document \"Esit Elektronik A.Ş.\"\n\n\"Elektonik\" vs \"Elektronik\" — likely OCR error in register (\"Elektonik\" missing 'r') vs document \"Elektronik\". Spelling drift of the same Turkish company ESIT Elektronik A.Ş. So same-entity. Best value: which one? The rule says spelling drift = same-entity. But best_value — for same-entity, presumably the document's value since certificate is legal instrument? The rules specify: document-noise → best_value from register; different-entity → best_value = document's; number/year same certificate → register's canonical form. For same-entity spelling drift, not explicitly stated. The certificate is the legal instrument, so the document's spelling \"Esit Elektronik A.Ş.\" is correct — register likely has OCR typo \"Elektonik\". Also capitalization: \"ESIT\" vs \"Esit\" — branding may be uppercase; but \"Elektronik\" vs \"Elektonik\" clearly register typo. Best value: document's \"Esit Elektronik A.Ş.\"\n\nVerdict: same-entity, best_value document form.",
+      "signature": "a974277987104bed95f98de7"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Esit Elektronik A.Ş.\",\n      \"why\": \"Both refer to the same Turkish company; 'Elektonik' in the register is a one-letter spelling slip, and the certificate (the legal instrument) carries the correct form 'Elektronik'.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 502,
+    "output_tokens": 359,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

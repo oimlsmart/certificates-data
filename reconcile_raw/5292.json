@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110935321aff6194220943de",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\"\nDocument: \"Mettler-Toledo (ChangZhou) Precision Instruments Ltd.\"\n\nDifferences:\n1. \"Changzhou\" vs \"ChangZhou\" — capitalization drift of the city name. Same-entity.\n2. \"Instrument Ltd.\" vs \"Instruments Ltd.\" — singular vs plural of \"Instrument(s)\". That's minor spelling drift, same entity. The actual company name... Mettler-Toledo (Changzhou) Precision Instrument Co., Ltd. is common. Either way, this is spelling drift.\n\nThis is clearly the same entity. Which is the best value? The rules say same-entity doesn't explicitly say whose value to take, but for certificate data, the document is the legal instrument. However the rules for same-entity cases: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That rule is about number/year format. For name drift, no explicit rule on best_value, but generally the document (legal instrument) should be authoritative, unless extraction noise. The document value here isn't noisy — it's from the certificate's own text. However, the register value might be the canonical form. Hmm.\n\nGiven the certificate is the legal instrument, best_value should be the document's rendering: \"Mettler-Toledo (ChangZhou) Precision Instruments Ltd.\" But one could argue the register's canonical form. The rules explicitly assign register's canonical form only for number/year and document-noise cases. For same-entity name drift, the sensible choice: document's value since certificate is the legal instrument (analogous to different-entity reasoning). Also, \"ChangZhou\" with capital Z is how it appears in the document; the official registered name of Mettler-Toledo's Changzhou entity... Actually the real company is \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" (or Co., Ltd.). But we can't verify externally. The instruction pattern: document is the legal instrument → prefer document value when it's a genuine rendering of the name.\n\nI'll pick document value.\n\nVerdict: same-entity. Why: differences are capitalization (\"ChangZhou\") and a singular/plural drift (\"Instrument(s)\"), same company.\n\nJSON output only.",
+      "signature": "516e592ea92d42a8940a5afa"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo (ChangZhou) Precision Instruments Ltd.\", \"why\": \"The two strings differ only by capitalization drift (Changzhou/ChangZhou) and a singular/plural drift (Instrument/Instruments), so they denote the same legal entity, and the fused record takes the certificate document's rendering since it is the legal instrument.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 481,
+    "output_tokens": 587,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

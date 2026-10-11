@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010222653417aafe7e5f64825",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Zhejiang Songchuan Instruments Technology Co., Ltd\" vs document says \"Zhejiang Songchuan Instrument Technology Co., Ltd\". Difference: \"Instruments\" vs \"Instrument\". That's spelling/plural drift — same-entity. Best value: the register's canonical form? The rules say spelling drift = same-entity. What's the best value? The rules explicitly say for different-entity best_value = document's, for document-noise best_value from register, for number/year same-entity with register's canonical form. For spelling drift same-entity, presumably register canonical form is best since the register is the OIML-CS database row (canonical). I'd use register's value: \"Zhejiang Songchuan Instruments Technology Co., Ltd\". Actually the actual company name is \"Zhejiang Songchuan Instrument Technology Co., Ltd\"? Doesn't matter; rules say register canonical form is fine. Verdict: same-entity, best_value = register's.",
+      "signature": "0600dad4b3064404865f97d2"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zhejiang Songchuan Instruments Technology Co., Ltd\", \"why\": \"The only difference is plural drift ('Instrument' vs 'Instruments') in an otherwise identical company name, so this is spelling drift on the same entity; keep the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 482,
+    "output_tokens": 284,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

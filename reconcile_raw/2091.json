@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011082002773c49c8b74d4a28",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nRegister: \"PULS ELECTRONIK SISTEMLERI\"\nDocument: \"PULS ELEKTRONIK SISTEMLERI MAK.SAN. IC VE DIS TIC. LTD. STI.\"\n\nThe core name is \"PULS ELECTRONIK SISTEMLERI\" vs \"PULS ELEKTRONIK SISTEMLERI\" — only difference is C vs K in \"ELECTRONIK\"/\"ELEKTRONIK\" (spelling drift, common Turkish transliteration variants). The document adds legal suffix \"MAK.SAN. IC VE DIS TIC. LTD. STI.\" (Makina Sanayi İç ve Dış Ticaret Limited Şirketi) — legal-suffix drift.\n\nPer the rules: spelling drift, legal-suffix drift = same-entity. Best value: which one? The rules say for same-entity, for number/year format differences use register canonical form. For spelling/suffix drift, the fused record should carry... the rules don't explicitly say which value for same-entity in general, only for number/year cases (\"with the register's canonical form\"). But for different-entity, best_value = document's. Hmm.\n\nThe general instruction: \"pick the best value for a fused record.\" For same-entity with drift, the more complete document value could be preferable since the certificate is the legal instrument and the document carries the full legal name. But the rules only specify register canonical for number/year differences. For same-entity spelling drift, I'd argue the document value is richer (full legal name), and the certificate document is the legal instrument. However, one could also argue register canonical form for consistency.\n\nThe rules explicitly say: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" This implies for other same-entity cases (spelling/suffix drift), the best value might be the document's fuller form. Since the document is the legal instrument, its full legal name \"PULS ELEKTRONIK SISTEMLERI MAK.SAN. IC VE DIS TIC. LTD. STI.\" is the better fused value. Also \"ELEKTRONIK\" matches the actual Turkish spelling.\n\nI'll go with same-entity, best_value = document's full name, why: only spelling drift (C→K) plus legal suffix expansion, same company; the certificate carries the full legal name.\n\nOne sentence why.",
+      "signature": "f3e35e8fe26d4a65b175313e"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"PULS ELEKTRONIK SISTEMLERI MAK.SAN. IC VE DIS TIC. LTD. STI.\", \"why\": \"The names differ only by a C/K transliteration drift and the document adds the full legal suffix (MAK.SAN. ... LTD. STI.), so it is the same company and the certificate's complete legal name is the better fused value.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 627,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

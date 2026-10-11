@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011080205406e6389733c42f1",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Trimble Navigation New Zealand Limited\", document says \"Trimble Navigation NZ Limited\".\n\n\"NZ\" vs \"New Zealand\" is an abbreviation difference — same entity. Both are spelling drift / abbreviation of the same company name. Which best value? The register is the canonical form; the rule says spelling drift = same-entity. For best_value, likely the register's canonical form (full legal name) is preferred, since \"New Zealand Limited\" is more complete/formal. The rule for different-entity says best_value = document's because the certificate is the legal instrument. For same-entity, the register's canonical form is typically used (like the number/year rule explicitly says register's canonical form). So best_value = \"Trimble Navigation New Zealand Limited\".\n\nOutput one JSON object with axes array containing one axis.",
+      "signature": "8f11fd2635ce4473bba9f110"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Trimble Navigation New Zealand Limited\", \"why\": \"\\\"NZ\\\" is a standard abbreviation of \\\"New Zealand\\\" in the same company name, so this is spelling drift and the fused record keeps the register's fuller canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 242,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102224189803a249cbf7466d",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\naxis: applicant\n- register: \"Mettler-Toledo Cargoscan AS\"\n- document: \"Mettler-Toledo Cargoscan AS, Norway\"\n\nThe document adds \", Norway\" — a country suffix. Is this an address fragment glued into a name? It's a legal/geographic qualifier. The company name is \"Mettler-Toledo Cargoscan AS\" — a Norwegian company (Cargoscan was a Mettler-Toledo subsidiary in Norway). The \", Norway\" is a location qualifier, not part of the legal name. But per the rules, \"Extraction artifacts (address fragments glued into a name...)\" = document-noise with best_value from the register. \", Norway\" is a country appended, which could be considered address/location info glued into the name.\n\nHowever, it could also be \"same-entity\" since it clearly denotes the same company with just a country suffix appended — similar to legal-suffix drift? The rules say spelling drift, legal-suffix drift, accent differences = same-entity. Country suffix isn't quite legal-suffix drift. The rule for document-noise covers \"address fragments glued into a name\". \", Norway\" is a geographic/address fragment glued onto the name.\n\nHmm, but is it noise or a meaningful enhancement? The fused record's best value — either way it should be \"Mettler-Toledo Cargoscan AS\" (register canonical form) or the document form. If same-entity, what's best_value? The rules for same-entity examples: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" So same-entity tends to use register's canonical form.\n\nIf document-noise: best_value from the register — also \"Mettler-Toledo Cargoscan AS\".\n\nEither verdict leads to the same best_value. Which verdict is more apt? \", Norway\" is a country designator, likely from the certificate text where the applicant is stated with country. It's arguably a legitimate part of how the certificate names the applicant (\"Mettler-Toledo Cargoscan AS, Norway\"), i.e., entity + country. But as a fused applicant name field, the canonical legal name is without the country. The \", Norway\" is supplementary location info — akin to an address fragment glued into the name. I'd classify as document-noise with best_value from register. Alternatively same-entity because it's clearly the same entity and the difference is a geographic qualifier, not drift.\n\nThe rule list: same-entity covers spelling/legal-suffix/accent drift and number/year format differences for certificates. \", Norway\" doesn't fit those categories. Document-noise covers address fragments glued into a name. A country name appended is essentially an address fragment. So document-noise fits best.\n\nbest_value: \"Mettler-Toledo Cargoscan AS\" (register).\n\nReturn one JSON object with axes array containing one entry.",
+      "signature": "c244c46b14a8404281531438"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"Mettler-Toledo Cargoscan AS\", \"why\": \"The document appends the country name ', Norway' as a geographic/address qualifier onto the legal entity name, which is clearly the same company as the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 684,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,334 @@
+_meta:
+  cert_id: 6981
+  num: R49/2013-A-SK1-26.06 Rev. 1
+  applicant: Willfar Information Technology Company Limited
+  issuing_year: '2026'
+  status: Valid
+  issuer: SK1
+  recommendation: R49
+  edition_year: 2013
+  extraction_method: glm-extract
+  source_pdf: certificates/R49/2013/r49-2013-sk1-2026-06-rev1.pdf
+certificate:
+  number: R49/2013-A-SK1-26.06
+  scheme: A
+  page_total: 12
+  member_state: Slovakia
+  date_issued: '2026-07-30'
+issuing_authority:
+  name: Slovak Legal Metrology (SLM)
+  address_lines:
+  - Geologická 9966/1
+  - 821 06 Bratislava-Podunajské Biskupice, Slovakia
+  - Product Certification Body
+  - Hviezdoslavova 31
+  - 974 01 Banská Bystrica, Slovakia
+  person_responsible: Ing. Dušan Šmigura, PhD.
+  person_title: Director of PCB
+applicants:
+- name: Willfar Information Technology Company Limited
+  address_lines:
+  - '468 # West Tongzipo Road, Hi-Tech Industrial Development Zone'
+  - Changsha, Hunan, P.R.China
+manufacturers:
+- name: Willfar Information Technology Company Limited
+  address_lines:
+  - '468 # West Tongzipo Road, Hi-Tech Industrial Development Zone'
+  - Changsha, Hunan, P.R.China
+certified_type:
+  category: Water meter
+  type_designations:
+  - AFlow LXC
+  module_designation: Ultrasonic water meter with electronic indication device
+  description: >-
+    Compact ultrasonic water meter with electronic indication device for measuring, memorizing and displaying
+    the volume of clean water in residential use. Measurement is based on the ultrasonic bidirectional
+    transit-time principle (difference in time-of-flight of ultrasonic pulses downstream vs upstream).
+    Can be installed to operate in all positions and is designed to measure reverse flow. Body available
+    in brass or composite.
+characteristics:
+  type_level:
+    measurement_principle:
+      value: ultrasonic bidirectional transit-time
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    installation_positions:
+      value: all positions
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    display_digits:
+      value: 10
+      unit_symbol:
+      unit_id:
+      footnote_markers: []
+    indication_range:
+      value: 999999.999
+      unit_symbol: m³
+      unit_id:
+      footnote_markers: []
+    main_battery_voltage:
+      value:
+        min: 2.9
+        max: 3.7
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    main_battery_lifetime:
+      value: 18
+      unit_symbol: years
+      unit_id:
+      footnote_markers: []
+    backup_battery_voltage:
+      value:
+        min: 2.9
+        max: 3.7
+      unit_symbol: V
+      unit_id:
+      footnote_markers: []
+    backup_battery_lifetime:
+      value: 18
+      unit_symbol: years
+      unit_id:
+      footnote_markers: []
+  model_level:
+  - attribute: body_material
+    unit_symbol:
+    values:
+    - model: AFlow LXC (brass body)
+      value: brass
+      footnote_markers: []
+    - model: AFlow LXC (composite body)
+      value: composite
+      footnote_markers: []
+  config_level:
+  - attribute: test_mode_display_resolution
+    axis: display_code
+    values:
+    - condition: 174 (indicated volume measured during test)
+      value: 1.0e-06
+      unit_symbol: m³
+      footnote_markers: []
+    - condition: 175 (instantaneous flow rate measured during test)
+      value: 1.0e-06
+      unit_symbol: m³/h
+      footnote_markers: []
+    - condition: 176 (water temperature measured during test)
+      value: 0.1
+      unit_symbol: "°C"
+      footnote_markers: []
+recommendation:
+  id: R49
+  edition: 2013
+  scheme: A
+  accuracy_classes:
+  - 2
+test_reports:
+- id: 2026/ER057/SK1
+  date: '2026-06-12'
+  pages: 17
+  role: type_evaluation_report
+- id: 2026/ER044/SK1
+  date: '2026-07-30'
+  pages: 17
+  role: type_evaluation_report
+- id: Technical documentation file Hunan Winmeter_AFlow LXC_00
+  date: '2026-06-12'
+  pages: 34
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2026-06-12'
+  changes: Certificate first issued
+- revision: '1'
+  date: '2026-07-30'
+  changes: >-
+    Add: reverse flow for brass water meters; composite water meters with forward and reverse flow. Updated:
+    name of manufacturer 'Hunan Winmeter Energy Technology Co., Ltd.' to 'Willfar Information Technology
+    Company Limited'
+model_family:
+  family_name: AFlow LXC
+  models:
+  - model_id: AFlow LXC (brass body)
+    label: brass water meter
+  - model_id: AFlow LXC (composite body)
+    label: composite water meter
+components:
+- role: flow_sensor
+  type_designations: []
+  alternatives:
+  characteristics:
+    body: brass or composite cylindrical body with inlet and outlet
+    measuring_support: inner plastic elements (pipe support-down and pipe support-up) placed in the cylindrical
+      body
+    reflectors: two reflectors (Inlet, Outlet) installed in the centre of the meter body (pipe)
+    transducers: >-
+      two ultrasonic transducers at the upstream and downstream of the measurement channel to transmit
+      and receive ultrasonic signals
+- role: calculator_and_indication_device
+  type_designations: []
+  alternatives:
+  characteristics:
+    display: >-
+      electronic scrolling LCD display with 10 digits; sub-multiples of a cubic meter indicated with a
+      frame above the six digits after the decimal point
+    pcba: >-
+      two PCBA: measuring PCBA located on the water meter body above the transducers; main PCBA located
+      under LCD display (LCD, button, optical port, wireless communication, memory, battery)
+    button: "'Touch' button for switching display functions"
+- role: battery
+  type_designations: []
+  alternatives:
+  characteristics:
+    chemistry: lithium, non-replaceable
+    size: D
+- role: backup_battery
+  type_designations: []
+  alternatives:
+  characteristics:
+    chemistry: lithium, non-replaceable
+    size: 1/2AA
+    optional: true
+- role: communication_interface
+  type_designations:
+  - optical
+  - pulse
+  - RS485
+  - Wired M-Bus
+  - Wireless M-Bus
+  - LoRaWAN
+  - Sigfox
+  - GPRS
+  - NB-IoT
+  - dual module
+  alternatives: OR
+  characteristics: {}
+- role: optical_interface
+  type_designations:
+  - infrared interface
+  alternatives:
+  characteristics:
+    purpose: local management and maintenance
+- role: filter
+  type_designations: []
+  alternatives:
+  characteristics:
+    optional: false
+- role: pressure_sensor
+  type_designations: []
+  alternatives:
+  characteristics:
+    optional: true
+- role: temperature_sensor
+  type_designations: []
+  alternatives:
+  characteristics:
+    optional: true
+footnotes: []
+matrix_tables:
+- name: User mode display codes
+  columns:
+  - code
+  - description
+  rows:
+  - code: "-"
+    description: display test (an 'eights' test)
+  - code: "-"
+    description: display test (a 'blanks' test)
+  - code: '004'
+    description: the total measured volume (m³)
+  - code: '011'
+    description: software version
+  - code: '012'
+    description: software date (YY-MM-DD)
+  - code: '181'
+    description: software checksum
+  - code: '194'
+    description: measurement firmware version
+  - code: '195'
+    description: measurement firmware version date
+  - code: '196'
+    description: measurement firmware CRP
+  description: Scrolling display contents in user mode
+  footnotes: []
+- name: Test mode display codes
+  columns:
+  - code
+  - description
+  - display_precision
+  - display_precision_unit
+  rows:
+  - code: '174'
+    description: indicated volume measured by water meter during test
+    display_precision: 1.0e-06
+    display_precision_unit: m³
+  - code: '175'
+    description: instantaneous flow rate measured by water meter during test
+    display_precision: 1.0e-06
+    display_precision_unit: m³/h
+  - code: '176'
+    description: water temperature measured by water meter during test
+    display_precision: 0.1
+    display_precision_unit: "°C"
+  description: Scrolling display contents in test mode
+  footnotes: []
+- name: Accountable alarms and error codes
+  columns:
+  - special_information
+  - prompt
+  - comment
+  rows:
+  - special_information: Save data upon shutdown when all batteries of the meter
+    prompt: CLoSE--
+    comment: Indicates that the power-off data saving process is being executed.
+  - special_information: Display voltage of main battery
+    prompt: dy X.XX
+    comment: X.XX is the voltage of main battery
+  - special_information: Battery
+    prompt: Err-81
+    comment: Need to change main battery
+  - special_information: Error code description
+    prompt: E-100
+    comment: Magnetic interference fault
+  - special_information: Error code description
+    prompt: E-101
+    comment: Open cover
+  - special_information: Error code description
+    prompt: E-102
+    comment: Battery remove
+  - special_information: Error code description
+    prompt: E-105
+    comment: Reverse flow
+  - special_information: Error code description
+    prompt: E-110
+    comment: Water leaks
+  - special_information: Error code description
+    prompt: E-111
+    comment: Sampling abnormal
+  - special_information: Error code description
+    prompt: E-112
+    comment: M days no water consumption ('M' indicates a configurable value)
+  - special_information: Error code description
+    prompt: E-113
+    comment: Level 1 Overload water flow
+  - special_information: Error code description
+    prompt: E-117
+    comment: Level 1 fast water leakage
+  - special_information: Error code description
+    prompt: E-118
+    comment: Level 1 fast water leakage
+  - special_information: Error code description
+    prompt: E-121
+    comment: Level 2 Overload water flow
+  - special_information: Error code description
+    prompt: E-123
+    comment: Low temperature alarm
+  - special_information: Error code description
+    prompt: E-124
+    comment: High temperature alarm
+  - special_information: Error code description
+    prompt: E-125
+    comment: Communication module mismatch
+  description: Alarms and prompts shown when a fault condition occurs and measurement stops
+  footnotes: []

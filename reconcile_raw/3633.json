@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011103410a32bca8c7ae44853",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"IRD Inc.\"\n- Document: \"IRD Inc. International Road Dynamics\"\n\nThe document value \"IRD Inc. International Road Dynamics\" appears to be the full name — \"IRD Inc.\" is the abbreviation and \"International Road Dynamics\" is the expansion of the acronym IRD. IRD Inc. is indeed International Road Dynamics Inc., a company based in Saskatchewan, Canada that makes weigh-in-motion systems (relevant to OIML R76, automatic weighing instruments... actually R76 is non-automatic weighing instruments). So the document value is a fuller form of the same company name.\n\nIs this same-entity? Yes — \"IRD\" = \"International Road Dynamics\". The document's value is the expanded/full legal name. Per rules: spelling drift, legal-suffix drift, accent differences = same-entity. This is essentially an expansion of an acronym — same entity.\n\nWhich is the best value for the fused record? The certificate is the legal instrument; the document's fuller name \"IRD Inc. International Road Dynamics\" is more complete. The rule says different-entity → best_value from document. For same-entity, no explicit rule on best value except number formats → register canonical. Hmm. For applicant same-entity, best value should probably be the document's fuller name since the certificate is the legal instrument and the fuller form is more informative and accurate. Actually, wait — is \"IRD Inc. International Road Dynamics\" a glued extraction artifact? The rule says \"address fragments glued into a name\" = document-noise. Here it's not an address fragment; it's the company's full name (IRD Inc. is the legal name; International Road Dynamics is the trade name / acronym expansion). The likely actual certificate text reads \"IRD Inc. International Road Dynamics\" as the applicant line. So it's not noise.\n\nVerdict: same-entity, best_value: \"IRD Inc. International Road Dynamics\" — the fuller form from the certificate document, since the certificate is the legal instrument and the expanded name adds precision without contradiction.\n\nAlternatively one could argue best_value = \"IRD Inc.\" from register for canonical form. But rules only specify register canonical for number/year differences. For name same-entity, the legal instrument's fuller name is better. I'll pick document's value.\n\nOutput one JSON object with axes array containing one entry.",
+      "signature": "b028e166506c4f029b845e77"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"IRD Inc. International Road Dynamics\",\n      \"why\": \"The document value is just the expanded form of the acronym (IRD = International Road Dynamics), so it denotes the same applicant, and the fuller name from the certificate (the legal instrument) is the more precise value to carry.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 454,
+    "output_tokens": 574,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

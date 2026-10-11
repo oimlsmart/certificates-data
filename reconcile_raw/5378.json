@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011093700c8b61ac5b27f4148",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The axis is \"num\": register says \"R60/2017-A-NL1-21.27\", document says \"R60/2017-A-NL1-21-27\". Also, the document context includes an HTML comment: `<!-- num: R60/2017-A-NL1-21.27 -->` which matches the register exactly — that's the extraction metadata. The visible certificate text says \"Number R60/2017-A-NL1-21-27\".\n\nSo the difference is just \".\" vs \"-\" separator between \"21\" and \"27\". This is a number format difference that clearly denotes the same certificate. Per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nVerdict: same-entity, best_value = \"R60/2017-A-NL1-21.27\" (the register's canonical form).\n\nOne JSON object as requested.",
+      "signature": "e0add3b864d64979a907007e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R60/2017-A-NL1-21.27\", \"why\": \"The certificate number differs only in the 21.27 vs 21-27 separator, a formatting variant that clearly denotes the same certificate, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 447,
+    "output_tokens": 279,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

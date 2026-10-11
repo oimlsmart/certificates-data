@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010220625190b67457d5e47e9",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\nRegister: \"Mithra Petrol Ekipmanlari lthalat Ihracat San. Tic.LTD.ST!.\"\nDocument: \"Mithra Petrol Ekipmanları Ithalat Ihracat San.Tic.LTD.STI.\"\n\nBoth are clearly the same Turkish company: \"Mithra Petrol Ekipmanları İthalat İhracat San. Tic. LTD. ŞTİ.\" (or similar). The differences:\n\n- \"Ekipmanlari\" vs \"Ekipmanları\" — accent difference (ı vs ı̇ / a vs ı with diacritic)\n- \"lthalat\" vs \"Ithalat\" — the register has \"lthalat\" (lowercase L instead of capital I — a classic OCR/extraction artifact where İ/I becomes l). Document has \"Ithalat\" correct.\n- \"ST!.\" vs \"STI.\" — \"!\" instead of \"I\" — OCR noise in the register version actually.\n- Spacing: \"San. Tic.LTD.STI.\" vs \"San.Tic.LTD.STI.\" — minor spacing drift.\n\nWait — the rule says \"Extraction artifacts ... = document-noise with best_value from the register.\" But here the extraction artifact (l instead of I, ! instead of I) is in the register value, not the document value. Hmm.\n\nActually the document's embedded comments say \"extraction_method: glm-ocr\" — so the document context itself is OCR-extracted. The register value has OCR noise (\"lthalat\" with lowercase L, \"ST!.\" with exclamation mark). The document value is the cleaner one: \"Mithra Petrol Ekipmanları Ithalat Ihracat San.Tic.LTD.STI.\"\n\nThis is same-entity: it's the same Turkish company name with accent/character drift. The verdict should be \"same-entity\". For best_value, which is better? The rules say spelling drift, legal-suffix drift, accent differences = same-entity. It doesn't explicitly say which value wins for same-entity. But \"document-noise\" would give best_value from register — but this isn't document-noise; the noise is in the register.\n\nFor same-entity verdict, the fused record should carry the cleaner, more correct value. The document value is cleaner (\"Ithalat\" with proper I, \"STI.\" with proper I, \"Ekipmanları\" with proper Turkish diacritic). The certificate is the legal instrument, and the document value here is a more faithful representation. So best_value = \"Mithra Petrol Ekipmanları Ithalat Ihracat San.Tic.LTD.STI.\"\n\nAlternatively, one might argue the register is the canonical form per the number/year rule — but that rule applies specifically to certificate numbers/years, not names.\n\nSo: verdict \"same-entity\", best_value = document's value, why: identical Turkish company; register has OCR artifacts (l for İ, ! for I) while document spelling is correct.\n\nReturn one JSON object with axes array containing one axis entry.",
+      "signature": "3aee746dbacb4979ae2386fc"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mithra Petrol Ekipmanları Ithalat Ihracat San.Tic.LTD.STI.\",\n      \"why\": \"Both render the same Turkish company, but the register value contains OCR artifacts ('lthalat' with lowercase L, 'ST!.' with an exclamation mark) while the certificate document carries the cleaner, more faithful spelling.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 759,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

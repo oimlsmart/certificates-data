@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011110806c3b9f45f66984067",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: applicant axis.\n\nRegister: \"Mettler-Toledo Inc.\"\nDocument: \"Mettler-Toledo LLC\"\n\nBoth are Mettler-Toledo, same company name core, differing only in legal suffix (Inc. vs LLC). Rules say legal-suffix drift = same-entity. Best value: which one? For same-entity, the fused record should carry... the rules say for same-entity (spelling drift etc.), presumably register canonical form. For document-noise, best_value from register. For different-entity, best_value = document's. For same-entity with number/year format, register's canonical form. So same-entity → register value: \"Mettler-Toledo Inc.\"\n\nNote: interestingly, the document context comment says applicant: Mettler-Toledo Inc., but the extracted text says LLC. Hmm — the document context metadata says \"Mettler-Toledo Inc.\" while the visible text... actually the visible text only shows \"Issuing authority NMi Certin B.V.\" The applicant \"Mettler-Toledo LLC\" comes from the document presumably. Anyway, per rules, legal-suffix drift = same-entity, best value register's \"Mettler-Toledo Inc.\"\n\nActually, wait — should the best value be the register's or the document's for same-entity? The rules only explicitly state register's canonical form for number/year. For same-entity generally, the sensible default is register (canonical DB form). So best_value: \"Mettler-Toledo Inc.\"\n\nReturn one JSON object.",
+      "signature": "5b936650eacc4a44a7239382"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mettler-Toledo Inc.\",\n      \"why\": \"Both values name the same Mettler-Toledo company, differing only in legal-suffix drift (Inc. vs LLC), so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 478,
+    "output_tokens": 397,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

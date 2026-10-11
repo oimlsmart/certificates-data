@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011070705dc1b647272e345ae",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R049/2006-FR2-2012.02 Rev. 1\"\n- Document: \"2006-FR2-12.02 rév. 1\"\n\nThe register form is the OIML-CS canonical form: \"R049/2006-FR2-2012.02 Rev. 1\"\nThe document shows \"2006-FR2-12.02 rév. 1\"\n\nThese are clearly the same certificate: 2006 = year designation from R49/2006 recommendation; FR2 = France issuing authority (LNE); 2012.02 vs 12.02 — the document abbreviated 2012 as 12; Rev. 1 vs rév. 1 — accent/abbreviation difference (rév = French abbreviation of révision; \"Rev.\" English). Same-entity.\n\nPer rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value = register's \"R049/2006-FR2-2012.02 Rev. 1\".\n\nWhy: The document's abbreviated form (12.02 vs 2012.02, rév. vs Rev.) clearly denotes the same certificate number, so keep the register's canonical form.\n\nOutput JSON with one axis.",
+      "signature": "1633ba1ce38e4e19a633c24b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R049/2006-FR2-2012.02 Rev. 1\",\n      \"why\": \"The document's '2006-FR2-12.02 rév. 1' is just an abbreviated rendering of the same certificate (year 2012 shortened to 12, 'rév.' the French form of 'Rev.'), so the fused record keeps the register's canonical full form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 410,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

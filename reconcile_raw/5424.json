@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011110607c6c2dcdd347e438a",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Intercomp\"\n- Document: \"Intercomp Company\"\n\nThe register says \"Intercomp\" and the document says \"Intercomp Company\". The document is the legal instrument (the certificate itself), and \"Intercomp Company\" is the fuller legal name. This isn't spelling drift or a legal-suffix drift exactly... well, actually it could be considered similar — \"Intercomp\" vs \"Intercomp Company\". The rules say:\n\n- spelling drift, legal-suffix drift, accent differences = same-entity\n- Extraction artifacts = document-noise with register value\n- Genuinely different names = different-entity with document value\n- Number/year format = same-entity with register canonical form\n\n\"Intercomp\" vs \"Intercomp Company\" — this is the same entity; the document just has the fuller name with \"Company\" appended. This is like legal-suffix drift (the document includes \"Company\" as part of the legal name). The best value would be the document's since it's the legal instrument and same-entity... wait, but for same-entity, what's the best value? The rules don't explicitly say for same-entity in the name case. For number/year same-entity, register canonical form. For document-noise, register value. For different-entity, document value.\n\nHmm. For same-entity name variations, which is best? The certificate is the legal instrument, so the document's fuller form \"Intercomp Company\" would arguably be more accurate/complete. But there's no explicit rule. Let me think: the rules specify best_value only for document-noise (register) and different-entity (document). For same-entity, presumably either; but the general principle \"the certificate is the legal instrument\" suggests document value is preferred when the document provides a fuller legal name. However, the register is the canonical database. For consistency, I'd say: same-entity, best_value = \"Intercomp Company\" because the certificate is the legal instrument and gives the fuller legal name, consistent with the different-entity rule's rationale. Alternatively, register canonical form \"Intercomp\" for consistency.\n\nActually, let me reconsider. The pattern in the rules: when values are merely formatting of the same certificate (numbers/years), use register canonical. When noise, use register. When genuinely different, use document. For same-entity names, the doc value seems natural since the doc is the legal instrument — the rule states \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument)\". The rationale \"certificate is the legal instrument\" supports preferring document value in general when it's a valid representation. \"Intercomp Company\" is more complete and legally accurate. I'll go with document value.\n\nVerdict: same-entity. Why: \"Company\" is just a fuller legal-name form of the same applicant; not an extraction artifact since it's a plausible legal suffix expansion.\n\nOutput format: one JSON object with axes array.",
+      "signature": "693d594d4da4442f8246496a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Intercomp Company\",\n      \"why\": \"The document's 'Intercomp Company' is just the fuller legal form of the same applicant, and since the certificate is the legal instrument its complete name is the better value.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 699,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

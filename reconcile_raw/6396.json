@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011100538f9bc16cd60244de8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Guangdong Kenwei Intellectualized Machinery Co., Ltd \" (note trailing space)\n- Document: \"Guangdong Kenwei Intellectualised Machinery Co., Ltd\"\n\nDifference: \"Intellectualized\" (American spelling with -ize) vs \"Intellectualised\" (British spelling with -ise). Also the register has a trailing space.\n\nPer the rules: spelling drift = same-entity. The best value should be... hmm. For same-entity, which value do we pick? The rules say for number/year format differences = register's canonical form. For same-entity generally, the register is the canonical database row, so best_value should be the register's canonical form (trimmed). Also document-noise uses register. Different-entity uses document.\n\nSo verdict: same-entity, best_value = register's value, trimmed: \"Guangdong Kenwei Intellectualized Machinery Co., Ltd\"\n\nWhy: spelling variant (-ized vs -ised) and trailing whitespace indicate the same company; use the register's canonical form.\n\nOutput one JSON object.",
+      "signature": "5b2a8b3e57534022a2417214"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Guangdong Kenwei Intellectualized Machinery Co., Ltd\",\n      \"why\": \"The only differences are -ized/-ised spelling drift and a trailing space, so it is the same company; keep the register's canonical form, whitespace-trimmed.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 486,
+    "output_tokens": 312,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111120253cc0f88376af4c53",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"ArjoHuntleigh AB\", document says \"Arjo Huntleigh AB\". This is a spacing difference in the company name — spelling drift / spacing variant. Same entity. Best value: which one? The rules say spelling drift = same-entity, but best_value isn't explicitly specified for same-entity except in the number/year case where register's canonical form is used. For same-entity spelling drift, the document is the legal instrument; but the register is the OIML-CS canonical database. Hmm.\n\nRules:\n- spelling drift, legal-suffix drift, accent differences = same-entity (no best_value rule given explicitly)\n- document-noise: best_value from register\n- different-entity: best_value = document's\n- number/year format: same-entity with register's canonical form\n\nFor spelling drift, either could be used. The document is the legal instrument — the certificate itself. Common practice in fusion: prefer the document as authoritative legal source unless it's noise. Given the different-entity rule favors document as legal instrument, and the document-noise rule favors register, for same-entity spelling drift the sensible choice is the document's form since it's the legal instrument's own rendering. Actually, \"ArjoHuntleigh\" (no space) might be the register's canonical, and \"Arjo Huntleigh\" with space is on the certificate. The actual company is \"ArjoHuntleigh AB\" (often styled without space). But the certificate itself says \"Arjo Huntleigh AB\".\n\nI'll pick same-entity with best_value from the document since certificate is the legal instrument — or register? The number/year rule explicitly says register's canonical form for format differences, but that's specific to certificate identifiers. For names, the legal instrument (document) should carry. I'll go with document value \"Arjo Huntleigh AB\"? Hmm, but arguably \"ArjoHuntleigh AB\" is the official branding. However, per fusion rules and legal instrument priority, document value wins for non-noise same-entity conflicts. Actually many fusion systems prefer the register canonical form for consistency. The rules only specify best_value for noise (register) and different-entity (document) and number format (register canonical). For spelling drift same-entity, unspecified — I'll justify picking the document's value as it's the legal instrument, mirroring the different-entity rationale.\n\nAlternatively pick register's for canonical consistency. The prompt's tone: register = database row, document = legal instrument. Different-entity favors document explicitly because certificate is legal instrument. That principle suggests document for same-entity too, unless noise. I'll choose document.\n\nReturn JSON only (plus maybe nothing else). Format: one JSON object with axes array.",
+      "signature": "af42c681fdcd41608c2a6dcc"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Arjo Huntleigh AB\",\n      \"why\": \"The two forms differ only by an intra-name space (spelling/spacing drift) and clearly denote the same Swedish manufacturer, so the fused record carries the certificate document's rendering as the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 641,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

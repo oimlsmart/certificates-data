@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111102082126486cec6e4fc2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The register says applicant is \"Sartorius Weighing Technology GmbH\", the document (certificate itself, as the legal instrument) says \"Sartorius Lab Instruments GmbH & Co KG\".\n\nIs this spelling drift or legal-suffix drift? No — these are genuinely different legal entity names. Sartorius Weighing Technology GmbH and Sartorius Lab Instruments GmbH & Co. KG are actually different legal entities within the Sartorius group (historically, Sartorius Weighing Technology GmbH was renamed/restructured; Sartorius Lab Instruments GmbH & Co. KG is the current operating entity). But per the rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nThe names differ beyond suffix drift — different legal form (GmbH vs GmbH & Co KG) and different middle names. So verdict: different-entity, best_value: \"Sartorius Lab Instruments GmbH & Co KG\".\n\nOne JSON object with axes array containing one axis.",
+      "signature": "5a97ae5238314c7cb44d318e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"Sartorius Lab Instruments GmbH & Co KG\", \"why\": \"The names differ beyond spelling or suffix drift (different legal entity names and legal form), so the certificate document's designation prevails as the legal instrument.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 487,
+    "output_tokens": 292,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

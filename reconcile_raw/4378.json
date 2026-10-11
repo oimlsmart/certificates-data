@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101109164547b33ca2ebad4284",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Vishay Precision Transducer India Ltd.\" vs document says \"Vishay Transducers India Ltd.\"\n\nLet me analyze. The document text says \"Applicant and Manufacturer Vishay Transducers India Ltd.\" The register says \"Vishay Precision Transducer India Ltd.\"\n\nIs this spelling drift / same entity? \"Precision\" is missing in the document, and \"Transducer\" vs \"Transducers\" (plural). Hmm. This could be an OCR/extraction truncation — the document text appears truncated (\"Kancheepu\" cut off at the end), so the extraction may have truncated text. Actually, looking at the document context, the text ends mid-word \"Kancheepu\" — clearly truncated. The applicant name in the document might actually be \"Vishay Precision Transducers India Ltd.\" in the actual PDF but the extraction cut it or OCR missed \"Precision\".\n\nThe real company: Vishay Precision Transducers India Ltd? Actually Vishay Transducers India Ltd. is a real entity (formerly VPG). Vishay Transducers India Pvt Ltd is part of Vishay Precision Group. Hmm.\n\nPer the rules: spelling drift, legal-suffix drift = same-entity. \"Transducer\" vs \"Transducers\" is plural drift. But \"Precision\" vs no \"Precision\" — a missing middle word. That's more than spelling drift; it changes the name. However, given the document is truncated (\"Kancheepu\"), it could be extraction noise losing \"Precision\".\n\nRules: \"Genuinely different company or person names = different-entity (best_value = the document's...)\". Is \"Vishay Precision Transducer India Ltd.\" vs \"Vishay Transducers India Ltd.\" genuinely different companies? No — they're the same Vishay entity; likely same legal entity with slight naming variance, or the document extraction dropped \"Precision\".\n\nThe safest verdict: same-entity, best_value = register's \"Vishay Precision Transducer India Ltd.\"? But rules say same-entity doesn't specify best_value source; for number/year format differences it's register's canonical form. For name drift, presumably best_value from the register (canonical form) makes sense for fused record.\n\nActually wait — the rule for different-entity says best_value = document's. For same-entity, it doesn't state. Since the register is the canonical database row, best_value = register's form.\n\nAlso \"document-noise\" option: extraction artifacts. The document text is truncated at the end, suggesting the extraction is lossy; \"Precision\" may have been dropped by extraction. That's plausible: verdict could be \"document-noise\" with best_value from register. Hmm.\n\nWhich is better? The rules define document-noise as \"address fragments glued into a name, obvious OCR noise\". Dropping a word isn't quite OCR noise glued in, but lossy extraction is an artifact. However, \"Vishay Transducers India Ltd.\" reads as a plausible complete company name, not obvious noise. The differences: singular vs plural \"Transducer(s)\", missing \"Precision\", \"Ltd.\" consistent. Given real-world: Vishay Precision Group's Indian entity is \"Vishay Precision Transducers India Private Limited\"? Let me recall: VPG Transducers — \"Vishay Precision Transducers India Pvt. Ltd.\" Hmm, actually NMi certificates R60/2000-NL1-17.50 — applicant \"Vishay Precision Transducers India Pvt. Ltd.\" I'm not certain.\n\nGiven the certificate is the legal instrument, but the register presumably comes from OIML-CS database which lists applicant officially. OIML-CS register for this certificate: applicant \"Vishay Precision Transducers India Private Limited\" maybe. The document text as extracted says \"Vishay Transducers India Ltd.\"\n\nGiven rules, I'd say: same-entity (spelling drift / plausible truncation), best_value = register's form as canonical. But could argue document-noise due to truncation losing \"Precision\". The missing word is more than accent/suffix drift. The rules: \"Genuinely different company... = different-entity\". These aren't genuinely different companies — same Vishay India operation. So same-entity seems right, best_value = register's fuller name.\n\nI'll output JSON.\n\nverdict: same-entity, best_value: \"Vishay Precision Transducer India Ltd.\", why: plural/singular and dropped word are minor name drift for the same Vishay India entity; register form is canonical.\n\nKeep to one sentence.",
+      "signature": "b969692d25f24760a5751ce2"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Vishay Precision Transducer India Ltd.\", \"why\": \"The document's 'Vishay Transducers India Ltd.' is a minor spelling/plural drift (likely a lossy extraction that dropped 'Precision') of the same Vishay India entity, so the register's fuller canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 466,
+    "output_tokens": 1013,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

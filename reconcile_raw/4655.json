@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011103530bc982ffc4f7941e6",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo AG\"\n- Document: \"Mettler-Toledo (Schweiz) GmbH\"\n\nThe register says \"Mettler-Toledo AG\" and the document says \"Mettler-Toledo (Schweiz) GmbH\". These are different legal entities. \"Mettler-Toledo AG\" vs \"Mettler-Toledo (Schweiz) GmbH\" — these are different legal forms (AG vs GmbH) and different names. This is not just a legal-suffix drift; \"Mettler-Toledo (Schweiz) GmbH\" is a distinct legal entity from \"Mettler-Toledo AG\". Actually, Mettler-Toledo (Schweiz) GmbH is the Swiss sales/service company, while Mettler-Toledo AG is another entity. So these are genuinely different company names — different-entity.\n\nPer rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nSo verdict: different-entity, best_value: \"Mettler-Toledo (Schweiz) GmbH\".\n\nOne short sentence why: The legal form and registered name differ (AG vs (Schweiz) GmbH), indicating distinct legal entities, so the certificate's own named applicant prevails.\n\nOutput JSON.",
+      "signature": "cc911f0f345a4eb3aa71a378"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"different-entity\",\n      \"best_value\": \"Mettler-Toledo (Schweiz) GmbH\",\n      \"why\": \"AG vs. (Schweiz) GmbH are distinct registered legal entities, not spelling/suffix drift, so the certificate's own applicant as the legal instrument wins.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 459,
+    "output_tokens": 372,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011064819f31b68ffbe154810",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nThe axis is \"applicant\":\n- Register: \"Basic Electronics Company Limited, CR#2050129466\"\n- Document: \"Basic Electronics Company Limited\"\n\nThe register includes a commercial registration number (CR#2050129466) appended to the name. The document just has the company name. Per the rules: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nHmm, but which direction? The register has the extended version (with CR number). The document has just the clean name. The CR# fragment is likely from the register's database enrichment — the register might have stored the applicant name plus CR number. Is the CR number part of the legal applicant name? No — it's a commercial registration identifier glued into the name field. This is more like the register gluing an identifier into the name.\n\nActually, the rules describe document-noise as extraction artifacts in the document, with best_value from the register. Here it's the reverse: the register has the artifact (CR# appended). The document is cleaner.\n\nOptions:\n1. same-entity — the names clearly denote the same company; the CR number is just an identifier. Best value would be... For same-entity with number/year format differences, register canonical form. But this is a name field.\n2. different-entity — no, clearly the same company.\n3. document-noise — the noise is in the register, not the document.\n\nThe best fused value: The document is the legal instrument, and \"Basic Electronics Company Limited\" is the clean legal name. The CR# is supplementary metadata that shouldn't be glued into the name. So best_value = \"Basic Electronics Company Limited\" (the document's form), since the certificate is the legal instrument and the CR number is a register-side annotation glued into the name field.\n\nVerdict: it's the same entity. The verdict \"same-entity\" fits — spelling/legal-suffix drift = same-entity. The CR# suffix is not a spelling drift though. But \"different-entity\" is clearly wrong. \"document-noise\" doesn't fit since the document is clean. \"unverifiable\" doesn't fit — we can verify it's the same company.\n\nSo verdict: same-entity. Best value: the document's clean form \"Basic Electronics Company Limited\" because the CR number is a register-side annotation that belongs in a separate field, and the certificate is the legal instrument. Alternatively, keep register value since it's more complete?\n\nThe rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\" This implies when same-entity, register canonical form is preferred for number/year format differences. But here the register value contains a glued artifact. The rule about extraction artifacts says best_value from the register — but that's when the document has the noise.\n\nI think the sensible fusion: same-entity, best_value = document's \"Basic Electronics Company Limited\" — clean legal name; CR number is auxiliary data not part of the name, and the certificate (legal instrument) carries the clean name.\n\nWhy sentence: The CR number is a register-side annotation appended to an identical company name; the certificate's clean legal name is the authoritative form, so same entity with the document's value.\n\nOutput one JSON object.",
+      "signature": "7e80b4bab53b4c209c05eed5"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Basic Electronics Company Limited\", \"why\": \"The names are identical apart from a commercial-registration identifier (CR#2050129466) glued onto the register's copy; the clean legal name from the certificate (the legal instrument) should carry, with the CR number stored as separate metadata.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 513,
+    "output_tokens": 781,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

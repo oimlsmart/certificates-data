@@ -1,0 +1,238 @@
+_meta:
+  cert_id: 7001
+  num: R137/2012-A-IT2-26.03
+  applicant: Qianwei Meters (Chongqing) Co., Ltd.
+  issuing_year: '2026'
+  status: Valid
+  issuer: IT2
+  recommendation: R137
+  edition_year: 2012
+  extraction_method: glm-extract
+  source_pdf: certificates/R137/2012/r137-2012-it2-2026-03.pdf
+certificate:
+  number: R137/2012-A-IT2-26.03
+  scheme: A
+  page_total: 7
+  member_state: Italy
+  date_issued: '2026-09-18'
+issuing_authority:
+  name: Tifernogas S.r.l.
+  address_lines:
+  - Via R. Morandi 44/d
+  - 06012 Città di Castello (PG)
+  - Italy
+  person_responsible: Paolo Tafani Alunno
+  person_title: Head of OIML Issuing Authority
+applicants:
+- name: Qianwei Meters (Chongqing) Co., Ltd.
+  address_lines:
+  - No. 69, Middle Section, Huangshan Avenue
+  - Dazhulin Subdistrict
+  - Liangjiang New Area
+  - Chongqing
+  - China
+manufacturers:
+- name: Qianwei Meters (Chongqing) Co., Ltd.
+  address_lines:
+  - No. 69, Middle Section, Huangshan Avenue
+  - Dazhulin Subdistrict
+  - Liangjiang New Area
+  - Chongqing
+  - China
+certified_type:
+  category: Gas meter
+  type_designations:
+  - QK7000 GXX
+  - QK7000 G1.6
+  - QK7000 G2.5
+  - QK7000 G4
+  module_designation: Not applicable
+  description: Ultrasonic gas meter
+characteristics:
+  type_level:
+    manufacturer_trade_mark:
+      value: QW//CSSC
+    accuracy_class:
+      value: 1.5
+    connection_threads_size:
+      value: M30x2, BS3/4", BSPT3/4", G3/4", NPT3/4", G7/8"
+    environmental_classes:
+      value: M1 / E1
+    ambient_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    gas_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+    orientation:
+      value: Connection Ports Vertical
+    flow_direction:
+      value: Forward flow only
+    indicating_device:
+      value: Electronic
+    ancillary_devices:
+      value: NB-IoT communication
+    electrical_power_supply:
+      value: Lithium battery
+    working_voltage:
+      value: DC 3.6 V / DC 6.0 V
+    software_identification:
+      value: '4.11 – CRC: 0x059156'
+    case_material:
+      value: Steel
+    maximum_operating_pressure:
+      value: 0.5
+      unit_symbol: bar
+    connection_distance:
+      value: 130
+      unit_symbol: mm
+    explosion_protection:
+      value: Ex II 3G Ex h ic IIB T3 Gc
+    suitable_gas:
+      value: air, natural gas
+    gas_range:
+      value: H, L, E
+  model_level:
+  - attribute: qmax
+    unit_symbol: m³/h
+    values:
+    - model: G1.6
+      value: 2.5
+    - model: G2.5
+      value: 4
+    - model: G4
+      value: 6
+  - attribute: qt
+    unit_symbol: m³/h
+    values:
+    - model: G1.6
+      value: 0.25
+    - model: G2.5
+      value: 0.4
+    - model: G4
+      value: 0.6
+  - attribute: qmin
+    unit_symbol: m³/h
+    values:
+    - model: G1.6
+      value: 0.016
+    - model: G2.5
+      value: 0.025
+    - model: G4
+      value: 0.04
+  config_level:
+  - attribute: base_pressure
+    axis: pt_conversion
+    values:
+    - condition: with PT conversion
+      value: 1.01325
+      unit_symbol: bar
+  - attribute: base_temperature
+    axis: pt_conversion
+    values:
+    - condition: with PT conversion
+      value: 20
+      unit_symbol: "°C"
+  - attribute: tsp
+    axis: pt_conversion
+    values:
+    - condition: with PT conversion
+      value: 20
+      unit_symbol: "°C"
+  - attribute: volume_indication
+    axis: pt_conversion
+    values:
+    - condition: without PT conversion
+      value: Vm
+    - condition: with PT conversion
+      value: Vb
+  - attribute: pulse_output
+    axis: flow_range
+    values:
+    - condition: qt < q < qmax
+      value: 5
+      unit_symbol: L/pul
+    - condition: qmin < q < qt
+      value: 1
+      unit_symbol: L/pul
+recommendation:
+  id: R137
+  edition: 2012
+  amendment: Amendment 2014
+  scheme: A
+  accuracy_classes:
+  - 1.5
+test_reports:
+- id: TER26.04
+  date: '2026-09-16'
+  pages: 44
+  role: type_evaluation_report
+- id: QW 2024/000094
+  role: documentation_file
+revision_history:
+- revision: '0'
+  date: '2026-09-18'
+  changes: Certificate Issuing
+model_family:
+  family_name: QK7000
+  models:
+  - model_id: G1.6
+    label: QK7000 G1.6
+    attributes: {}
+  - model_id: G2.5
+    label: QK7000 G2.5
+    attributes: {}
+  - model_id: G4
+    label: QK7000 G4
+    attributes: {}
+matrix_tables:
+- name: Additional information of the instrument type
+  columns:
+  - size
+  - designation
+  - qmax
+  - qt
+  - qmin
+  - cases_material
+  - pmax
+  - connection_distance
+  column_units:
+  -
+  -
+  - m³/h
+  - m³/h
+  - m³/h
+  -
+  - bar
+  - mm
+  rows:
+  - size: G1.6
+    designation: QK7000 G1.6
+    qmax: 2.5
+    qt: 0.25
+    qmin: 0.016
+    cases_material: Steel
+    pmax: 0.5
+    connection_distance: 130
+  - size: G2.5
+    designation: QK7000 G2.5
+    qmax: 4
+    qt: 0.4
+    qmin: 0.025
+    cases_material: Steel
+    pmax: 0.5
+    connection_distance: 130
+  - size: G4
+    designation: QK7000 G4
+    qmax: 6
+    qt: 0.6
+    qmin: 0.04
+    cases_material: Steel
+    pmax: 0.5
+    connection_distance: 130
+  description: Flow characteristics and construction details per meter size (G1.6, G2.5, G4)
+  footnotes: []

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011100240f50b1d3c84894e7d",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Zhonghang Electronicc Measuring Instruments (Xi'an) Co., Ltd.\"\n- Document: \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\"\n\nThe difference: \"Electronicc\" vs \"Electronic\". The register has \"Electronicc\" which appears to be a typo/OCR error (double 'c'). The document has the cleaner \"Electronic\".\n\nRules: spelling drift = same-entity. But which best_value? The rules say:\n- Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register. Here the noise would be in the register (\"Electronicc\" looks like OCR noise), not the document.\n- For same-entity spelling drift... the verdict is \"same-entity\". What best_value? The rules don't explicitly say for spelling drift, but logically the fused record should carry the cleaner, correct spelling. The document is the legal instrument (the certificate's own text). The register likely ingested from the document with a typo.\n\nActually, note the document context itself contains \"Zhonghang Electronicc Measuring Instruments (Xi'an) Co., Ltd.\" in the extraction comments (applicant: Zhonghang Electronicc...) — interesting! The comment block says \"Electronicc\" but the actual document text visible... wait, the visible text doesn't actually show the applicant name in the body — only in the extraction metadata comment. Hmm.\n\nLet me re-read: \"<!-- applicant: Zhonghang Electronicc Measuring Instruments (Xi'an) Co., Ltd. -->\" — so the document's metadata comment also says \"Electronicc\". But the conflict as stated says document: \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\" So the question presents the document value as \"Electronic\" (single c).\n\nGiven the framing of the question, the conflict is register \"Electronicc\" vs document \"Electronic\". The verdict: same-entity (spelling drift — likely OCR double-c in the register). Best value: the document's \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\" because the certificate is the legal instrument, and \"Electronicc\" is an obvious typo/OCR duplication.\n\nAlternatively, could this be \"document-noise\"? No — document-noise means noise is in the document, best value from register. Here the typo appears in the register value per the conflict listing. So verdict = same-entity, best_value = document's form (cleaner spelling, certificate is legal instrument).\n\nHmm, but the rule for same-entity number/year format says \"register's canonical form\" — that's specific to numbers/years, not names. For names, spelling drift same-entity; best value should be the correct spelling — the document's, since the certificate is the legal instrument.\n\nReturn one JSON object with one axis.",
+      "signature": "1893fe801c524112b29280df"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\",\n      \"why\": \"The doubled 'c' in the register's 'Electronicc' is obvious spelling/OCR drift of the same company name, and the certificate document (the legal instrument) carries the correct spelling.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 523,
+    "output_tokens": 688,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

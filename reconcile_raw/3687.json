@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010215013991754a3eb3e4b51",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the two conflicting axes.\n\nAxis 1: applicant\n- Register: \"Wayne Fueling System Sweden AB\"\n- Document: \"Wayne Fueling Systems Sweden AB\"\n\nDifference: \"System\" vs \"Systems\". This is spelling drift (singular vs plural). The rules say spelling drift, legal-suffix drift, accent differences = same-entity. \"Wayne Fueling Systems Sweden AB\" — actually the real company is \"Wayne Fueling Systems Sweden AB\" (plural is correct in reality). But per the rules, spelling drift = same-entity, and the fused record should carry... hmm, which value? The rule says \"same-entity\" but doesn't explicitly state best_value for same-entity in spelling drift. Let me re-read.\n\n\"Rules: spelling drift, legal-suffix drift, accent differences = same-entity. Extraction artifacts ... = document-noise with best_value from the register. Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument). Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo the only rules explicitly stating best_value: document-noise → register; different-entity → document; number/year format → register canonical. For same-entity spelling drift, no explicit best_value rule. But logically: since document is the legal instrument, and it's the same entity, the document's value is likely more authoritative — the certificate itself. The document says \"Wayne Fueling Systems Sweden AB\". Actually the real legal name is \"Wayne Fueling Systems Sweden AB\". So best_value = \"Wayne Fueling Systems Sweden AB\" (document). That aligns with the principle that certificate is legal instrument.\n\nHmm, but could argue register canonical form. But the register is a database row which may itself have extraction errors. Given the certificate is the legal instrument, and spelling drift is same entity, best value should come from the document: \"Wayne Fueling Systems Sweden AB\".\n\nActually wait — let me think about the intent. The rules differentiate: document-noise → register value; different-entity → document value. For same-entity spelling drift, either could work, but the \"certificate is the legal instrument\" principle suggests document value. Also, for number/year same certificate → register canonical form is explicitly stated, implying that for other same-entity cases, the document might be preferred. So best_value = document's \"Wayne Fueling Systems Sweden AB\".\n\nAxis 2: issuer_code\n- Register: \"NL1\"\n- Document: \"101\"\n\nThe certificate number is R117/1995-NL1-06.03, so issuer code is NL1. The document text includes an HTML comment `<!-- issuer: NL1 -->`. Where does \"101\" come from? Possibly from the text \"Person responsibl...\" — hmm, no. Maybe OCR noise or some page artifact. The \"OIML Member state\" line: \"NMi **OIML Member state** The Netherlands\". Hmm, \"101\" doesn't appear in the visible text except... not at all. So \"101\" is likely an extraction artifact/noise. The issuer code NL1 appears in the certificate number and in the embedded comment. So \"101\" is unverifiable or document-noise.\n\nActually \"101\" could be OCR misreading of \"IOI\" or something, or a page number, or extraction artifact. It doesn't correspond to anything in the visible document text. The best classification: document-noise (extraction artifact), best_value = \"NL1\" from register. Alternatively \"unverifiable\" — but the document context clearly supports NL1 (certificate number contains NL1, comment issuer: NL1), so \"101\" is clearly noise. Verdict: document-noise, best_value \"NL1\".\n\nHmm, could \"101\" be a project number fragment? \"Project number SO15200471\" — no. Address \"3314 EG\" — no. So noise.\n\nFormat: one JSON object with axes array. Keep \"why\" short sentences.\n\nOutput JSON only, presumably. The user says \"Return one JSON object\". I'll return the JSON, possibly in a code block. Probably just the JSON object. I'll give it cleanly.",
+      "signature": "eb94434e200f4bd68be57d7c"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Wayne Fueling Systems Sweden AB\",\n      \"why\": \"'System' vs 'Systems' is trivial spelling drift for the same company, and the certificate as the legal instrument carries the plural form.\"\n    },\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"NL1\",\n      \"why\": \"'101' appears nowhere in the certificate body, while NL1 is confirmed by both the certificate number R117/1995-NL1-06.03 and the embedded issuer comment, so '101' is an extraction artifact.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 492,
+    "output_tokens": 1040,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

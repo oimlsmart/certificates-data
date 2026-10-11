@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011074643c6931217cfbe40d3",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R49/2013-A-FR2-23.05 Rev. 3\"\n- Document: \"R49/2013-A-FR2-23.05 rév.3\"\n\nThese are clearly the same certificate number. The differences are:\n1. \"Rev.\" vs \"rév.\" — English vs French abbreviation for \"revision\" (the certificate is from France, LNE). Accent/language difference.\n2. Space before \"3\": \"Rev. 3\" vs \"rév.3\" — spacing difference.\n\nBoth denote the same certificate. The rule says: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" Also \"spelling drift, legal-suffix drift, accent differences = same-entity.\"\n\nSo verdict: same-entity, best_value: \"R49/2013-A-FR2-23.05 Rev. 3\" (register's canonical form).\n\nReturn JSON object as specified.",
+      "signature": "557b3af1810c44209de056ee"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R49/2013-A-FR2-23.05 Rev. 3\", \"why\": \"The document's French 'rév.3' is a language/spacing variant of the register's English 'Rev. 3'; both clearly denote the same certificate, so keep the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 480,
+    "output_tokens": 304,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

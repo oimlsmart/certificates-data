@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110904590447b2082a484065",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\naxis: applicant\n- register: \"Xiamen Loadcell Technology Co., Ltd\"\n- document: \"Xiamen Loadcell Technology Co., Ltd. (LCT)\"\n\nThe document version is the same name plus a parenthetical abbreviation \"(LCT)\". This is the same company — \"LCT\" is just an abbreviation for Xiamen Loadcell Technology. This falls under \"spelling drift, legal-suffix drift, accent differences = same-entity.\" The \"(LCT)\" is an abbreviation, not a different company.\n\nWhich is the best value? The rules say: same-entity verdicts generally pick... The register is the canonical form per rule about numbers/years. For same-entity generally, the fused record should carry the register's canonical value — the document adds the abbreviation which is not really different info. The register value is cleaner: \"Xiamen Loadcell Technology Co., Ltd\". The document's \"(LCT)\" is just an added abbreviation, arguably not noise per se but the register's canonical form is cleaner.\n\nVerdict: same-entity, best_value: register value \"Xiamen Loadcell Technology Co., Ltd\".\n\nWhy: Same company; the document merely appends the common abbreviation (LCT), so keep the register's canonical name.",
+      "signature": "c54b399b921e44048b2b1d63"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Xiamen Loadcell Technology Co., Ltd\",\n      \"why\": \"The document adds only the common abbreviation '(LCT)' to an identical company name, so they denote the same entity and the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 351,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

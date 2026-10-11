@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111142406ed358d452de4eda",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo AG\"\n- Document: \"Mettler-Toledo GmbH MTG\"\n\nBoth are Mettler-Toledo entities. \"AG\" (Aktiengesellschaft) vs \"GmbH\" (Gesellschaft mit beschränkter Haftung) are different legal forms — this isn't just a legal-suffix drift like \"GmbH\" vs \"GbR\" spelling drift; AG and GmbH are genuinely different legal entity types. However, the question is whether these denote the same company. Mettler-Toledo AG is the Swiss entity (Greifensee, Switzerland); Mettler-Toledo GmbH is the German entity (Giessen, Germany). They are genuinely different legal entities (different companies within the same corporate group). The \"MTG\" likely is an abbreviation appended, possibly extraction artifact or the document's own abbreviation.\n\nPer rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nIs \"Mettler-Toledo AG\" vs \"Mettler-Toledo GmbH MTG\" a spelling/suffix drift? Suffix drift examples: \"Mettler-Toledo GmbH\" vs \"Mettler-Toledo Gesellschaft mit beschränkter Haftung\" — same entity. But AG vs GmbH are different legal forms entirely. Mettler-Toledo AG (Switzerland) vs Mettler-Toledo GmbH (Germany) are distinct legal persons. So this is different-entity.\n\nBut wait — could the document extraction be noise? The \"MTG\" suffix might be noise. But the core name \"Mettler-Toledo GmbH\" is a coherent, plausible company name (the German subsidiary). PTB (German issuer) would typically issue to the German entity Mettler-Toledo GmbH. So the document's value is plausible as the legal instrument's statement. The register might be wrong or normalized to the group parent.\n\nVerdict: different-entity; best_value = \"Mettler-Toledo GmbH MTG\" — though maybe should we strip \"MTG\"? The rules say best_value = the document's. The document's value includes \"MTG\". Should we keep it? The rules say best_value = the document's, since the certificate is the legal instrument. The extraction artifact rule applies only to address fragments glued in or OCR noise; \"MTG\" could be an abbreviation on the certificate itself. I'd keep the document value as-is: \"Mettler-Toledo GmbH MTG\". Hmm, but \"MTG\" seems like an abbreviation that may be part of the certificate (e.g., \"Mettler-Toledo GmbH (MTG)\"). I'll keep it but note.\n\nActually, is it different-entity? AG vs GmbH: same brand, different legal persons. Given the certificate is the legal instrument and PTB (Germany) issuing, the German GmbH is likely the actual applicant. So different-entity, best_value from document.\n\nOne short sentence why: \"AG (Swiss parent) and GmbH (German subsidiary) are distinct legal persons, and the issuing authority PTB's certificate names the GmbH, so the document's value wins.\"\n\nKeep JSON format exactly as requested: {\"axes\": [...]}",
+      "signature": "3258cf92902d4654bbf2db1f"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"Mettler-Toledo GmbH MTG\", \"why\": \"AG (Swiss parent) and GmbH (German subsidiary) are distinct legal persons, not suffix drift, and since the certificate is the legal instrument its named applicant prevails.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 475,
+    "output_tokens": 751,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011103256116fc7c6a8e342ee",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze each conflict axis.\n\n**Axis num:**\n- Register: \"R076/2006-CH1-2009.01\"\n- Document: \"R76_2006-CH1-09.01\"\n\nThe register id is 2359, certificate number R076/2006-CH1-2009.01. The document shows \"R76_2006-CH1-09.01\". OIML recommendation is R76 (2006 edition), issued by CH1 (Switzerland, METAS), year 2009, number .01. The source PDF path is \"certificates/R76/2006/r076-2006-ch1-2009-01.pdf\" — note the file name uses r076-2006-ch1-2009-01, matching the register. The document text embeds \"R76_2006-CH1-09.01\" — the \"09.01\" is year shorthand (2009 → 09) and underscore instead of slash. These clearly denote the same certificate: R76 (2006), CH1, 2009, suffix .01. Rule: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" So verdict same-entity, best_value = \"R076/2006-CH1-2009.01\".\n\n**Axis applicant:**\n- Register: \"Mettler-Toledo AG\"\n- Document: \"METTLER-TOLEDO AG, LabTec\"\n\n\"METTLER-TOLEDO AG\" is uppercase of register — spelling drift/case difference, same entity. But \", LabTec\" — is that an address fragment, a lab/division name, or a genuinely different applicant? LabTec could be a division or the authorized lab. The rule: \"Extraction artifacts (address fragments glued into a name...) = document-noise with best_value from the register. Genuinely different company or person names = different-entity.\"\n\nIs \", LabTec\" an address fragment or a distinct company? \"Mettler-Toledo AG, LabTec\" — LabTec is a lab suffix, possibly the testing laboratory designation appended. It's not an address per se, but it looks like a glued fragment — the applicant is Mettler-Toledo AG; LabTec might be a subdivision or a separate entity appended. Hmm. Which verdict?\n\nOptions:\n1. same-entity with best_value... if same-entity, best_value would presumably be one canonical — but the document has extra content. The rules say same-entity is for spelling/legal-suffix/accent drift; the document value here contains extra text.\n2. document-noise: extraction artifact glued into a name → best_value from register. \", LabTec\" looks like an appended fragment (maybe a location/lab name) glued into the applicant field during extraction. The certificate text is just header context; the extraction method line suggests automated extraction where such concatenations occur.\n3. different-entity: if LabTec were a genuinely different company, best_value = document's. But \"Mettler-Toledo AG, LabTec\" isn't a different company name — it's Mettler-Toledo AG with an appended qualifier.\n\nGiven it's not a genuinely different company (the core name matches), and it's not mere spelling drift (extra fragment), document-noise fits best: the \", LabTec\" fragment is likely a division/lab designation or an extraction artifact; best_value from the register: \"Mettler-Toledo AG\".\n\nActually, could LabTec be a location? Mettler-Toledo has facilities; LabTec... There's \"Mettler-Toledo LabTec\" possibly a business unit in Switzerland? Even so, the applicant of record is Mettler-Toledo AG per the register, and the appended fragment is noise relative to the applicant field. Document-noise → best_value register.\n\nSo final JSON:\n\n{\"axes\": [\n {\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R076/2006-CH1-2009.01\", \"why\": \"...\"},\n {\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"Mettler-Toledo AG\", \"why\": \"...\"}\n]}\n\nKeep whys short. Output only the JSON object.",
+      "signature": "9add9412a5ea431488edfed6"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R076/2006-CH1-2009.01\",\n      \"why\": \"R76_2006-CH1-09.01 is the same certificate with shorthand year (09) and an underscore for the slash, so the register's canonical form applies.\"\n    },\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"Mettler-Toledo AG\",\n      \"why\": \"The core name matches the register (case drift only), but ', LabTec' is a glued-on lab/division fragment from extraction, not the applicant of record.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 457,
+    "output_tokens": 1080,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

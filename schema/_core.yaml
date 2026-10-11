@@ -355,3 +355,20 @@ definitions:
         items: { type: object }
       footnotes: { $ref: "#/definitions/FootnoteList" }
     additionalProperties: false
+  # --- CNML signed-certificate extension (adopted from the cnml consumers, audit G10) ---
+
+  EvaluationReportRef:
+    type: object
+    required: [id, digest]
+    properties:
+      id:
+        type: string
+        description: The evaluation report entity id
+      date:
+        type: string
+        description: "The ER date (ISO-8601), when declared"
+      digest:
+        type: string
+        pattern: "^sha256:[0-9a-f]{64}$"
+        description: sha256 over the ER entity canonical JSON (sorted keys)
+    additionalProperties: false

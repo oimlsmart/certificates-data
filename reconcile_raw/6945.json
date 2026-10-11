@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011152413ba8cb62192374dce",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"3 S Fabrications (Pvt) Ltd\"\n- Document: \"3S Fabrications (Pvt) Ltd.\"\n\nThe difference: \"3 S\" vs \"3S\" — a spacing difference, plus a trailing period after \"Ltd\" vs \"Ltd\" (the document has \"Ltd.\" with a period, the register has \"Ltd\" without).\n\nPer the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\"\n\nThis is clearly a spacing/spelling drift and legal-suffix punctuation drift for the same company name. \"3 S Fabrications\" vs \"3S Fabrications\" — same entity. The trailing period on \"Ltd.\" is legal-suffix formatting drift.\n\nVerdict: same-entity.\n\nBest value: Which one should the fused record carry? The rules say for same-entity, examples mention \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" For spelling drift, the rule doesn't explicitly say which to pick, but for same-entity generally, the register's canonical form makes sense for database consistency. However, the document is the legal instrument... Let me re-read.\n\n\"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nFor same-entity, the only explicit best_value rule is for number/year format: \"with the register's canonical form.\" The implication seems to be that for same-entity cases, the register's canonical form is preferred (that's why document-noise also uses register). The document's legal instrument priority only kicks in for genuinely different entities.\n\nSo best_value: \"3 S Fabrications (Pvt) Ltd\" (register's canonical form).\n\nWhy: \"3 S\" vs \"3S\" is spacing drift and \"Ltd\" vs \"Ltd.\" is suffix punctuation drift, clearly the same company; keep the register's canonical form.\n\nOutput one JSON object.",
+      "signature": "7a8ac92e6d33401a8994904e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"3 S Fabrications (Pvt) Ltd\", \"why\": \"\\\"3 S\\\" vs \\\"3S\\\" is whitespace drift and \\\"Ltd\\\" vs \\\"Ltd.\\\" is suffix punctuation drift, so it is clearly the same company; keep the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 485,
+    "output_tokens": 492,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

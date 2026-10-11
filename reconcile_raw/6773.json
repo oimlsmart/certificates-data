@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111003110ff15a564ad745af",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Zhonghang Electronicc Measuring Instruments (Xi'an) Co., Ltd.\" (with \"Electronicc\" — a typo/duplicate c) vs document says \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\"\n\nThis is spelling drift — same entity. Which best value? Rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" They don't explicitly say which value to take for same-entity in spelling drift case. The \"document-noise\" rule says best_value from register when extraction artifacts. But here the document value appears to be the correct spelling (\"Electronic\") while the register has the typo (\"Electronicc\"). The document is the legal instrument; the certificate document itself is authoritative for spelling. Typically in fusion, prefer the document (certificate is the legal instrument) unless it's noise. Here the document spelling is correct, register has an OCR/typo error \"Electronicc\". So same-entity, best_value = document's value (correct spelling).\n\nReturn one JSON object.",
+      "signature": "19825fc2c34548b188530adc"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zhonghang Electronic Measuring Instruments (Xi'an) Co., Ltd.\", \"why\": \"Both denote the same applicant; 'Electronicc' in the register is a spelling drift/typo, and the certificate's correctly spelled name should be carried as the legal instrument.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 523,
+    "output_tokens": 299,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

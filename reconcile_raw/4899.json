@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011092638b8116e741c3d41bd",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Beydemir Vinc Incsaat Otomotiv San. ve Tic. Ltd. Sti\"\n- Document: \"Beydemir Vinc Insaat Otomotiv San. ve Tic. Ltd. Sti\"\n\nDifference: \"Incsaat\" vs \"Insaat\". \"Insaat\" is the Turkish word for construction (inşaat). \"Incsaat\" appears to be a typo/extraction error — the \"c\" is likely a misread of \"ş\" or a typo. The document says \"Insaat\" which is the correct spelling of the Turkish word.\n\nPer the rules: spelling drift, legal-suffix drift, accent differences = same-entity. So verdict = \"same-entity\".\n\nNow what's the best_value? The rules say: for same-entity (spelling drift), what value should the fused record carry? The rules explicitly state best_value only for document-noise (register) and different-entity (document). For same-entity number/year format differences, register canonical form. For spelling drift... hmm, the rules don't explicitly say. But the general principle: the certificate is the legal instrument, so document value should win unless the register's canonical form is preferable (for number/year). For spelling drift in a company name, which is better?\n\n\"Insaat\" is the correct Turkish spelling (inşaat without diacritics). \"Incsaat\" is likely a typo in the register (perhaps OCR or transcription error). The document is the legal instrument, so the document's spelling \"Beydemir Vinc Insaat Otomotiv San. ve Tic. Ltd. Sti\" should be preferred.\n\nBut wait — some might argue register canonical form. The rules only specify register canonical form for \"Number/year format differences\". For spelling drift in names, the certificate document is the legal instrument (as stated in the different-entity rule reasoning). So best_value = document's value: \"Beydemir Vinc Insaat Otomotiv San. ve Tic. Ltd. Sti\".\n\nVerdict: same-entity. Best value: the document's correct spelling. Why: \"Incsaat\" is a spelling drift/typo of Turkish \"Insaat\" (construction), clearly the same company; the document's spelling is correct and it's the legal instrument.\n\nOutput one JSON object.",
+      "signature": "7b33d45346d94f2cb2b354a9"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Beydemir Vinc Insaat Otomotiv San. ve Tic. Ltd. Sti\",\n      \"why\": \"'Incsaat' is a simple spelling drift of the Turkish word 'Insaat' in an otherwise identical company name, so it's the same entity; the document's spelling is the correct one and the certificate is the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 492,
+    "output_tokens": 607,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

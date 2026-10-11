@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102152287e75cea3d9644550",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Larsen & Toubro Ltd (L&T)\"\n- Document: \"Larsen & Toubro Limited (L&T) Petrol Dispensing Pumps & Systems\"\n\nThe document value appears to be the applicant name with a description of the product/scope glued into it: \"Petrol Dispensing Pumps & Systems\" is clearly a product description, not part of the company name. This looks like an extraction artifact where the product description got concatenated with the company name.\n\nHowever, the rules say: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nBut this isn't a genuinely different company — \"Larsen & Toubro Ltd\" vs \"Larsen & Toubro Limited\" is legal-suffix drift (same-entity), and \"Petrol Dispensing Pumps & Systems\" is an extraction artifact (product description glued into the name).\n\nPer rules: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nSo the verdict should be \"document-noise\" with best_value from the register: \"Larsen & Toubro Ltd (L&T)\".\n\nWait — but is \"Petrol Dispensing Pumps & Systems\" actually part of the official applicant designation? In OIML certificates, sometimes the applicant is listed with a product line. But the rule explicitly says \"address fragments glued into a name\" = document-noise. A product category glued into a name fits the same pattern — extraction artifact.\n\nAlso the applicant in the register \"Larsen & Toubro Ltd (L&T)\" matches the embedded comment in the document context: \"<!-- applicant: Larsen & Toubro Ltd (L&T) -->\" — interesting, the document's own metadata comment says the same as the register. The \"document\" value in the conflict presumably comes from the certificate's rendered text.\n\nSo verdict: document-noise, best_value = \"Larsen & Toubro Ltd (L&T)\".\n\nWhy: The document's value is the same company with a product description (\"Petrol Dispensing Pumps & Systems\") glued on — an extraction artifact; \"Ltd\" vs \"Limited\" is legal-suffix drift.\n\nReturn one JSON object.",
+      "signature": "e1075da87f6448809a5d3633"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"Larsen & Toubro Ltd (L&T)\",\n      \"why\": \"The document value is the same company ('Limited' vs 'Ltd' is legal-suffix drift) with the product category 'Petrol Dispensing Pumps & Systems' glued onto the name as an extraction artifact, so the register's clean canonical form should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 482,
+    "output_tokens": 605,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

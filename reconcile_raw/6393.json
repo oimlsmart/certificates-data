@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011074843d682e977bff9473b",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The register says \"Nanjing 'Ningyuan 􀀑nt􀀔lligelt Instrument Co., Ltd. \" and the document says \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\"\n\nThe register value has:\n- A stray apostrophe after \"Nanjing\" before \"Ningyuan\" — noise\n- \"􀀑nt􀀔lligelt\" — this is clearly OCR/extraction noise for \"Intelligent\" (private use area characters 􀀑, 􀀔 replacing \"I\" and \"e\", and \"gelt\" instead of \"gent\" — OCR misread of \"gent\" as \"gelt\")\n\nSo the register value is corrupted by extraction artifacts, while the document value \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\" is clean and clearly refers to the same company.\n\nPer rules: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nHmm, but here the noise is in the register, not the document. The rules say document-noise means the noise is in the document and best_value comes from register. But here the noise is in the register. What verdict applies?\n\nOptions:\n- \"same-entity\" with best_value = document's clean value? The rule says spelling drift = same-entity, and best_value for same-entity... the rules don't explicitly say what best_value is for same-entity except for number/year formats (register's canonical form). For spelling drift, presumably the cleaner/more authoritative value.\n\nActually wait — \"document-noise\" verdict: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\" The intent is that when the document carries extraction artifacts, the register is cleaner. But here the reverse: the register carries the artifacts. So the best_value should be the document's clean value.\n\nThe verdict taxonomy: \"document-noise\" seems to be the category for extraction artifacts regardless of which side. But the rule ties best_value to register in that case because the assumption was noise in document. Here noise in register.\n\nAlternatively, verdict \"same-entity\" since it's clearly the same company (spelling/OCR drift), and best_value = document's value because it's the clean reading and the certificate is the legal instrument.\n\nI think the best answer: verdict \"same-entity\" (it's the same company, OCR noise in the register), best_value = \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\" (the clean form from the document). Or verdict \"document-noise\"? No — the noise is in the register, so calling it document-noise would be misleading.\n\nHmm, but the verdict options are fixed. The categories:\n- same-entity: spelling drift etc.\n- different-entity\n- document-noise: extraction artifacts with best_value from register\n- unverifiable\n\nHere the register has OCR noise. The relationship is clearly same entity — \"􀀑nt􀀔lligelt\" is OCR of \"Intelligent\", \"'Ningyuan\" vs \"Ningyuan\" is just a stray apostrophe. So verdict \"same-entity\" with best_value = the clean document value.\n\nWhy: The register string contains OCR corruption (private-use glyphs for \"Intelligent\") and a stray apostrophe; the document's spelling is the clean canonical form of the same company.\n\nOne JSON object:\n\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\", \"why\": \"The register string carries OCR corruption (private-use glyphs inside 'Intelligent') and a stray apostrophe, so it is the same company as the cleanly printed document name.\"}]}\n\nThat fits. Output just JSON.",
+      "signature": "fc81c8a15b894dbcb769d9fe"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\", \"why\": \"The register string is corrupted by OCR noise (private-use glyphs in 'Intelligent') and a stray apostrophe, while the document carries the clean spelling of the same company, so the fused record should use the document's readable form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 505,
+    "output_tokens": 896,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

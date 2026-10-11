@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101109280749ec8ed6ea4d4a87",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"PULS ELECTRONIK SISTEMELERI\" — wait, let me read carefully. Register: \"PULS ELECTRONIK SISTEMLERI\"\n- Document: \"PULS ELECTRONIK SISTEMLERI MAK. SAN. IÇ VE DIŞ TIC. LTD. ŞTI.\"\n\nThe register has the short form \"PULS ELECTRONIK SISTEMLERI\" while the document has the full legal name \"PULS ELECTRONIK SISTEMLERI MAK. SAN. IÇ VE DIŞ TIC. LTD. ŞTI.\" which is the Turkish full company name including legal suffix \"MAK. SAN. IÇ VE DIŞ TIC. LTD. ŞTI.\" (Makina Sanayi İç ve Dış Ticaret Limited Şirketi — Machinery Manufacturing Import Export Limited Company).\n\nThis is the same entity — the document just includes the full legal name with legal suffixes. Per the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\"\n\nThe question is what best_value should be. The rule says for same-entity, it doesn't explicitly state which value to use. For same-entity cases like number/year format, it says \"same-entity with the register's canonical form.\" But for applicant, the register's canonical form is a truncation of the document's. Hmm.\n\nActually, the rule for number/year says register canonical. For same-entity in names, the rule doesn't specify. But generally, the certificate document is the legal instrument — the full legal name from the document would be more complete and authoritative. However, register canonical form is often preferred for consistency.\n\nLet me think. The rules:\n1. spelling drift, legal-suffix drift, accent differences = same-entity\n2. Extraction artifacts = document-noise with best_value from register\n3. Genuinely different names = different-entity (best_value = document's, since certificate is legal instrument)\n4. Number/year format differences = same-entity with register's canonical form\n\nFor same-entity name conflicts, the verdict is \"same-entity\" and the best value... The document has the fuller, more complete legal name. Since the certificate is the legal instrument, and the document value is a superset (register's value is a prefix of the document's), the document's full legal name seems best. But one could argue register canonical form for consistency.\n\nHmm. The rule says for different-entity, best_value = document's \"since the certificate is the legal instrument.\" That logic would suggest that when the document provides authoritative info, it wins. The register's short name is just a truncated version. The fused record should carry the complete legal name — the document's value. The register value is essentially the same entity but abbreviated.\n\nActually, I think the best answer is: verdict \"same-entity\", best_value = the document's full legal name \"PULS ELECTRONIK SISTEMLERI MAK. SAN. IÇ VE DIŞ TIC. LTD. ŞTI.\" because the document is the legal instrument and carries the complete legal identity, while the register merely truncated it. The register's short form is a subset (prefix) of the document's name, confirming same entity.\n\nAlternatively, one might argue register canonical form. But the \"same-entity with register's canonical form\" rule is specific to number/year format differences. For names, I'll go with the document's fuller name.\n\nWhy sentence: \"The register carries a truncated form of the company name; the document supplies the complete legal name of the same Turkish company, which should be preserved as the authoritative legal identity.\"\n\nNote: \"SISTEMLERI\" vs \"SISTEMLERI\" — same. \"IÇ\" and \"DIŞ\" have diacritics in document but register doesn't include those words at all. So it's a truncation, not drift.\n\nOutput one JSON object with axes array containing one entry.",
+      "signature": "e3890ff455d74a7a8b4b31a2"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"PULS ELECTRONIK SISTEMLERI MAK. SAN. IÇ VE DIŞ TIC. LTD. ŞTI.\",\n      \"why\": \"The register carries a truncated form of the same Turkish company name; the document supplies the complete legal name with trade/designation suffixes, and as the legal instrument its fuller identity should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 486,
+    "output_tokens": 946,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

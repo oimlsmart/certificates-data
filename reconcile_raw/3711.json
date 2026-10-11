@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102227121691f9c1b5ef461c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: axis \"applicant\". Register says \"GoldCard Smart Group Co., Ltd.\" Document says \"GoldCard High Tech Co., Ltd.\"\n\nWait, let me check the document context. The embedded comment says `<!-- applicant: GoldCard Smart Group Co., Ltd. -->` which matches the register. But the conflict axis says document: \"GoldCard High Tech Co., Ltd.\" Hmm. The visible certificate text says \"OIML Certificate of Conformity ... OIML Member State The Netherlands Number R137/2012-NL1-15.02 Project number 13200784 ... Issuing authority NMi Certin B.V. Person responsible: C. O\" — truncated. The applicant name doesn't appear in the visible text excerpt, but the conflict states the document says \"GoldCard High Tech Co., Ltd.\"\n\nSo per the rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\n\"GoldCard Smart Group Co., Ltd.\" vs \"GoldCard High Tech Co., Ltd.\" — these are genuinely different company names, not spelling drift or suffix drift. \"Smart Group\" vs \"High Tech\" are different middle names. However, these could be related companies (GoldCard Smart Group vs GoldCard High Tech are actually related entities in reality — Goldcard Smart Group). But per the rules, genuinely different company names = different-entity, best_value = document's.\n\nActually, wait — is it possible that \"High Tech\" is OCR noise or extraction error? The rules say spelling drift, suffix drift, accent differences = same-entity. \"Smart Group\" → \"High Tech\" is not drift; it's a different name entirely. So different-entity, best_value = document's value.\n\nThe fused record should carry \"GoldCard High Tech Co., Ltd.\" per the rule that the certificate is the legal instrument.\n\nBut hold on — one nuance: the document's own embedded comment metadata says applicant: GoldCard Smart Group Co., Ltd. That suggests the extraction pipeline captured the register value into the document's comment. But the conflict says document: \"GoldCard High Tech Co., Ltd.\" presumably extracted from the actual certificate text (perhaps in a part not shown). The visible text is truncated at \"Person responsible: C. O\" so applicant isn't visible in the snippet. We should trust the conflict description.\n\nVerdict: different-entity, best_value \"GoldCard High Tech Co., Ltd.\".\n\nWhy: \"Smart Group\" and \"High Tech\" are genuinely distinct company names, not drift, so the document's legal name wins.\n\nReturn one JSON object.",
+      "signature": "403fd72900964b8ca218af7a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"GoldCard High Tech Co., Ltd.\", \"why\": \"\\\"Smart Group\\\" vs \\\"High Tech\\\" are genuinely distinct company middle names rather than spelling/suffix drift, and the certificate is the legal instrument, so its applicant name wins.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 481,
+    "output_tokens": 618,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

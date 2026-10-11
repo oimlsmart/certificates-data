@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101022263253c0f5e722a042cb",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says applicant \"Intercomp\", document says \"Intercomp Company\". This is legal-suffix drift / name expansion — \"Intercomp\" vs \"Intercomp Company\" clearly denotes the same entity. Rule: legal-suffix drift = same-entity. Best value: which one? Rules say same-entity; for spelling/legal-suffix drift, presumably keep register's canonical form? The rule for same-entity doesn't explicitly say which value, but the \"Number/year format differences... = same-entity with the register's canonical form\" suggests register canonical for same-entity generally. For legal-suffix drift, best value likely register's \"Intercomp\" (canonical register form). Hmm, but the document is the legal instrument; yet the rule assigns document best_value only for different-entity. So for same-entity, default to register's canonical form.\n\nSo: verdict \"same-entity\", best_value \"Intercomp\", why: \"Intercomp\" and \"Intercomp Company\" differ only by a legal-suffix/name expansion of the same entity, so keep the register's canonical form.",
+      "signature": "93cd9c61f95446a5bde8dbf1"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Intercomp\", \"why\": \"\\\"Intercomp\\\" and \\\"Intercomp Company\\\" are the same entity differing only by a legal-suffix/name expansion, so the fused record keeps the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 468,
+    "output_tokens": 288,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

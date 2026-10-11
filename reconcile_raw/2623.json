@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102226016e3e9dd9b1a14c41",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\"\nDocument: \"Esit Elektronik Ltd. Sti.\"\n\nThese are Turkish company names. \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\" is the full legal name (ESIT Electronic Systems Manufacturing and Trade Limited Company). \"Esit Elektronik Ltd. Sti.\" is the abbreviated form: \"Ltd. Sti.\" = \"Limited Şirketi\" abbreviated. \"Esit\" vs \"ESIT\" is a case difference. \"Elektronik\" matches.\n\nSo this is clearly the same entity — spelling drift, legal-suffix abbreviation, capitalization differences. Verdict: same-entity.\n\nBest value: Which one? The rules say same-entity verdicts but best_value... For number/year, register's canonical form. For applicant same-entity, what's the best value? The register value is the full legal name — probably better for a fused record since it's more complete and matches the register's canonical form. The rule explicitly says for same-entity: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That rule is about numbers/years specifically. For names, the general principle could be either. The document is the legal instrument, but the register's full name is more canonical/complete. Hmm.\n\nActually, the document's text is truncated (\"Esit Elektronik Ltd. Sti. Nişantepe Mahalles\" — the address follows, cut off). The document value \"Esit Elektronik Ltd. Sti.\" is an abbreviation. The register value is the full legal name which is more informative and canonical. I'd choose the register's value as best_value for same-entity when the document form is an abbreviation and the register is the full canonical name.\n\nI'll say same-entity, best_value = register value, why: abbreviation and capitalization drift of the same Turkish company (\"Ltd. Sti.\" = \"Limited Şirketi\"), so keep the register's full canonical legal name.\n\nOne short sentence.",
+      "signature": "8de333d6e7f2450a9a387600"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\",\n      \"why\": \"The document's 'Esit Elektronik Ltd. Sti.' is merely a capitalized, abbreviated form of the same Turkish company ('Ltd. Sti.' = 'Limited Sirketi'), so the register's full canonical legal name is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 491,
+    "output_tokens": 550,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

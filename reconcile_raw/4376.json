@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101109162432c650b994e44f9e",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Vishay Precision Transducer India Ltd.\"\nDocument: \"Vishay Precision Transducers Indica Ltd.\"\n\nThe register says \"Vishay Precision Transducer India Ltd.\" The document says \"Vishay Precision Transducers Indica Ltd.\"\n\n\"Indica\" is likely a truncation artifact — the document text is cut off: \"Vishay Precision Transducers Indica Ltd. OZ-22 Hi-Tech S\" — this looks like the PDF text extraction was truncated mid-sentence. \"Indica Ltd.\" — hmm, actually the real company name is \"Vishay Precision Transducers (India) Ltd.\" — actually, let me think. The real entity: Vishay Precision Transducers India Pvt. Ltd. or similar. The document says \"Indica\" which is suspicious — it could be OCR noise or extraction truncation where \"India\" became \"Indica\" or the text is truncated.\n\nActually looking at the document text: \"Vishay Precision Transducers Indica Ltd. OZ-22 Hi-Tech S\" — this appears truncated (\"Hi-Tech S...\" likely \"Hi-Tech Special Economic Zone\" or similar address). So \"Indica\" might be part of the company name being mangled — \"Vishay Precision Transducers India\" is the real name; \"Indica\" could be an OCR/extraction artifact of \"India\" — perhaps \"India\" plus something, or truncation of \"India Pvt.\" etc.\n\nRules: spelling drift, legal-suffix drift, accent differences = same-entity. Extraction artifacts = document-noise with best_value from register.\n\n\"Indica\" vs \"India\" — this is arguably OCR noise / extraction artifact. Also \"Transducer\" vs \"Transducers\" is trivial plural drift (same-entity). \"Indica\" is likely OCR noise or truncation artifact from the PDF. The document itself is truncated mid-text (\"OZ-22 Hi-Tech S\"), suggesting the extraction is imperfect.\n\nSo verdict: document-noise, best_value from register: \"Vishay Precision Transducer India Ltd.\"\n\nWait — but is it \"genuinely different company name\"? \"Vishay Precision Transducers Indica Ltd.\" — there's no such company \"Indica\". The real company on the actual OIML certificate R60/2000-NL1-17.48 is \"Vishay Precision Transducers (India) Pvt. Ltd.\" or \"Vishay Precision Transducer India Pvt. Ltd.\" The document text shows \"Indica Ltd.\" which is anomalous. Given truncation elsewhere, this is extraction artifact. So document-noise, register value wins.\n\nOne-sentence why: \"Indica\" appears to be an OCR/truncation artifact of \"India\" (the surrounding text is truncated mid-address), so the register's name is authoritative.\n\nReturn single JSON object with one axis entry.",
+      "signature": "c1a406a8854c44cc88ec7775"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"Vishay Precision Transducer India Ltd.\", \"why\": \"\\\"Indica\\\" is an obvious OCR/truncation artifact of \\\"India\\\" (the surrounding document text is itself cut off mid-address), and \\\"Transducer(s)\\\" is mere plural drift, so the register's clean canonical name is the reliable value.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 468,
+    "output_tokens": 693,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

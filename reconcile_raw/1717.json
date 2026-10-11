@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111023552bebb6526f864ed9",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: applicant — register \"SHTRIKH-M\" vs document \"Shtrih-M\". This is a transliteration/casing difference of the same Russian company (Shtrikh-M, a Russian POS manufacturer). Spelling drift / casing difference = same-entity. Which best_value? The rules say for same-entity, we pick the best value — for number/year format differences use register's canonical form; for spelling drift, it's same-entity, best value should be the register's canonical form presumably (consistent canonical form from register). The register form \"SHTRIKH-M\" is the canonical registry form. Actually the certificate is the legal instrument, but for same-entity spelling drift, the rules only specify best_value for number/year (register's canonical form) and different-entity (document's). For same-entity spelling drift, a fused record should carry the register's canonical form for consistency. I'll pick \"SHTRIKH-M\".\n\nAlso note document context has a cert number discrepancy: R76/1992-NL1-06.14 vs R076/1992-NL1-2006.14 — but the axis asked is only applicant. Only include that axis? The instruction: \"For each conflicting axis\" — only one axis given: applicant. Return one JSON object with axes array containing applicant.\n\nVerdict: same-entity, best_value \"SHTRIKH-M\", why: casing/transliteration variant of same company.",
+      "signature": "27d63a718c43426b90918242"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"SHTRIKH-M\", \"why\": \"The document's 'Shtrih-M' is only a casing/transliteration variant of the same company name, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 367,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101111440692b3660dea0649d5",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R76/2006-A-DK2-22.02 Rev. 1\"\n- Document: \"R76/2006-A-DK2-2022.02 Revision 1\"\n\nBoth refer to the same certificate: R76/2006-A-DK2-22.02 Rev. 1. The document writes \"2022.02\" vs \"22.02\" (year format difference: 2022 vs 22), and \"Revision 1\" vs \"Rev. 1\" (abbreviation difference). These clearly denote the same certificate. Per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: register's form \"R76/2006-A-DK2-22.02 Rev. 1\".\n\nNote: The document text also contains \"OIML Certificate No. R76/2006-A-DK2\" truncated, but the conflict axis gives the document value as \"R76/2006-A-DK2-2022.02 Revision 1\". \n\nReturn one JSON object with axes array.",
+      "signature": "c8db2a332edf466ba23383d8"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R76/2006-A-DK2-22.02 Rev. 1\",\n      \"why\": \"The document expands '22' to '2022' and 'Rev.' to 'Revision', which are pure year/abbreviation format variants of the same certificate number, so the register's canonical form is retained.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 506,
+    "output_tokens": 355,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

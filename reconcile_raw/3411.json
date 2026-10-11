@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110908499015d98120ce42b8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nThe register says applicant: \"Hottinger Baldwin Messtechnik GmbH\"\nThe document says applicant: \"Flintec GmbH\"\n\nThese are two genuinely different company names. Hottinger Baldwin Messtechnik (HBM) is a German measurement technology company. Flintec is also a German (originally Swedish) weighing technology company. These are clearly different entities — not spelling drift, not legal-suffix drift, not OCR noise.\n\nPer the rules: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nSo verdict: different-entity, best_value: \"Flintec GmbH\".\n\nWait — but I should also consider: the document context shows an HTML comment saying `<!-- applicant: Hottinger Baldwin Messtechnik GmbH -->` — that's metadata embedded in the extraction. The visible document text says \"Applicant and Manufacturer Flintec GmbH Bemannsbruch 9 74909 Meckesheim German[y]\". So the document itself (the visible certificate text) names Flintec GmbH as the applicant/manufacturer. The embedded comment may carry the register's stale value. The actual certificate text is the legal instrument.\n\nInteresting note: R60 is the OIML recommendation for load cells. HBM and Flintec both make load cells. But the certificate document says Flintec GmbH. The register row says HBM. Possibly the register is wrong or referencing a different certificate. Either way, the rules are clear: genuinely different company names → different-entity, best_value from document.\n\nOutput format: one JSON object with axes array.\n\nThe why sentence: \"The certificate text names Flintec GmbH as applicant/manufacturer, a genuinely different company from HBM, so the document's value wins.\"\n\nKeep it one short sentence.",
+      "signature": "c98473720c8f47149d110061"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"different-entity\",\n      \"best_value\": \"Flintec GmbH\",\n      \"why\": \"The certificate's visible text names Flintec GmbH (Meckesheim) as applicant and manufacturer, a genuinely different company from Hottinger Baldwin Messtechnik, so the legal instrument's value wins over the register row.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 472,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

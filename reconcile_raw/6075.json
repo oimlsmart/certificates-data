@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101109530655fc7dc136cd44f8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The axis is `num`:\n- register: \"R60/2017-A-NL1-23.28 Rev. 0\"\n- document: \"R60/2017-A-NL1-23-28\"\n\nThese are the same certificate number, just formatted differently: \"23.28\" vs \"23-28\" (dot vs hyphen separator), and the register includes \"Rev. 0\" while the document says \"revision 0\" in text (though the num field from document omits it). Per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: \"R60/2017-A-NL1-23.28 Rev. 0\" (register's canonical form).\n\nWait — should the best value include \"Rev. 0\"? The register form includes it, and the document body says \"revision 0\", so revision 0 is corroborated. The register's canonical form includes Rev. 0, and the rule says number/year format differences that denote same certificate = same-entity with register's canonical form. So best_value = \"R60/2017-A-NL1-23.28 Rev. 0\".\n\nWhy: dot vs hyphen in \"23.28\"/\"23-28\" is a formatting difference for the same NMi certificate, and the revision is corroborated by the document text (\"revision 0\"), so keep the register's canonical form.\n\nReturn one JSON object only.",
+      "signature": "00d98da6cef246b28eee3068"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R60/2017-A-NL1-23.28 Rev. 0\", \"why\": \"The only difference is separator formatting ('23.28' vs '23-28') for the same NMi certificate, and the document text itself confirms 'revision 0', so the register's canonical form stands.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 457,
+    "output_tokens": 407,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

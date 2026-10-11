@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111114141590fc1566044b96",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: compare register vs document for axis \"applicant\".\n\nRegister: \"Mettler-Toledo (Changzhou) Measurement Technology Ltd\"\nDocument: \"Mettler Toledo (Chanzhou) Measurement Technology Ltd.\"\n\nDifferences:\n- Hyphen: \"Mettler-Toledo\" vs \"Mettler Toledo\" — legal/punctuation drift, same-entity per rules.\n- \"Changzhou\" vs \"Chanzhou\" — spelling drift (actually the correct city is Changzhou; Chanzhou appears to be OCR typo or actual certificate typo). Per rules, spelling drift = same-entity.\n- Trailing period: minor.\n\nSo verdict: same-entity. Best value: register's canonical form \"Mettler-Toledo (Changzhou) Measurement Technology Ltd\" — per rules same-entity... which value? The rule says same-entity covers spelling drift etc. For number/year, register canonical. For same-entity applicant, best value should be the register's canonical form (register is authoritative database). The rules only explicitly assign document value for different-entity. For same-entity, register canonical form is sensible. So best_value: \"Mettler-Toledo (Changzhou) Measurement Technology Ltd\".\n\nReturn one JSON object.",
+      "signature": "bca1a4680a924e0486e14c99"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo (Changzhou) Measurement Technology Ltd\", \"why\": \"The document form differs only by a dropped hyphen, a spelling slip (Chanzhou vs Changzhou), and a trailing period, so it is the same company; the register's canonical spelling is retained.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 502,
+    "output_tokens": 339,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

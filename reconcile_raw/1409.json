@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110804395eb01d75cd78480e",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R060/2000-CN1-2005.01\"\n- Document: \"R60/2000-CNL-05.01\"\n\nThe document's own text shows the certificate number as \"R60/2000- CNL- 05.01\" (with OCR spacing artifacts). The source PDF path is \"certificates/R60/2000/r060-2000-cn1-2005-01.pdf\" and the register id is 1409, num R060/2000-CN1-2005.01.\n\nOIML certificates for R60 (automatic rail weighbridges? No, R60 is load cells) typically have numbers like \"R60/2000-CN1-05.01\" — the format is Recommendation/revision-Issuing country/body-Year.Serial. Here \"R60/2000\" refers to OIML R60 (2000 edition). \"CN1\" would be... actually CN is the country code for China; CN1 might denote the issuing body (Office of OIML Affairs, China). \"2005.01\" = year 2005, number 01. The document says \"05.01\" which is 2005 abbreviated as \"05\" plus serial 01. And \"CNL\" appears to be an OCR error for \"CN1\" (the numeral 1 misread as letter L).\n\nSo both denote the same certificate. The register's canonical form \"R060/2000-CN1-2005.01\" — note it uses \"R060\" vs document \"R60\". OIML R60 is the international recommendation \"Metrological requirements for load cells\". Certificate numbers usually are \"R60/2000-...\" but the register might store it with a prefix. The rule: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\n\"05.01\" vs \"2005.01\" — year format difference. \"CNL\" vs \"CN1\" — OCR noise (L vs 1). \"R60\" vs \"R060\" — slight format difference. The issuing year is 2005 per the document metadata, and 05.01 matches 2005.01. So same certificate, different formatting/OCR artifacts.\n\nVerdict: same-entity, best_value = register's canonical form \"R060/2000-CN1-2005.01\".\n\nWhy: The document's \"R60/2000-CNL-05.01\" matches the register with OCR noise (CNL≈CN1) and abbreviated year (05=2005), so it's the same certificate; use the register's canonical form.\n\nOutput one JSON object.",
+      "signature": "b489b09fbc8349f1b06f7f5b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R060/2000-CN1-2005.01\", \"why\": \"The document's 'R60/2000-CNL-05.01' is the same certificate with OCR noise (CNL≈CN1) and an abbreviated year (05=2005), so the register's canonical form should be kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 437,
+    "output_tokens": 674,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

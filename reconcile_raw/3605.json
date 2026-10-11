@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011070809a4a3fb66aadd490d",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "We have a conflict on axis \"num\":\n\n- register: \"R049/2006-FR2-2013.01 Rev. 1\"\n- document: \"R49 : 2006-FR2-13.01 rev. 1\"\n\nThese denote the same OIML certificate number. The register form is canonical: \"R049/2006-FR2-2013.01 Rev. 1\" — R049 is the OIML recommendation R49, year 2006, issuing authority FR2 (France/LNE), certificate number 2013.01, revision 1. The document writes \"R49 : 2006-FR2-13.01 rev. 1\" — same certificate, just formatting differences (R49 vs R049, 13.01 vs 2013.01, lowercase \"rev.\"). Per rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value = register value \"R049/2006-FR2-2013.01 Rev. 1\".\n\nReturn one JSON object with axes array containing one entry.",
+      "signature": "6ab686ec72d346ccb2d879b0"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R049/2006-FR2-2013.01 Rev. 1\",\n      \"why\": \"The document's 'R49 : 2006-FR2-13.01 rev. 1' is just an informal formatting of the same certificate (R49≡R049, 13.01≡2013.01, lowercase rev.), so the register's canonical form should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 374,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

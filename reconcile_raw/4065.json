@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101108010945162a474d804ea8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The register says applicant is \"DIGI SENS AG\". The document says \"DIGI SENS AG Digitale Messtechnik\". Looking at the certificate text: \"**Applicant and Manufacturer** DIGI SENS AG Digitale Messtechnik Freiburgstrasse 65 Murten 3280 Switzerland\".\n\nSo the document value \"DIGI SENS AG Digitale Messtechnik\" is actually the beginning of a block that includes \"Freiburgstrasse 65 Murten 3280 Switzerland\" — \"Digitale Messtechnik\" appears to be part of the company's tagline/description (\"Digital Measurement Technology\" in German) that got glued into the extracted name, or it could be part of the company name. Actually, DIGI SENS AG's tagline is \"Digitale Messtechnik\". The extraction glues the name and the subtitle/address together. So this is an extraction artifact — document-noise, best_value from register: \"DIGI SENS AG\".\n\nVerdict: document-noise.",
+      "signature": "914516dc3f214f99af85ea3f"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"DIGI SENS AG\", \"why\": \"The document value is the company name fused with its tagline 'Digitale Messtechnik' (and the start of the address block) during extraction; the actual applicant is DIGI SENS AG per both sources.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 471,
+    "output_tokens": 302,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

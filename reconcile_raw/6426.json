@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011095411a2c866115704467e",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nRegister: \"BAYKON Endustriel Kontrol Sistemleri San ve Tic A.S.\"\nDocument: \"BAYKON Endustriyel Kontrol Sistemleri San. Tic. A.S.\"\n\nThese are the same Turkish company. \"Endustriel\" vs \"Endustriyel\" — spelling drift (likely one is missing 'y'). \"San ve Tic\" vs \"San. Tic.\" — punctuation drift in the legal suffix (Sanayi ve Ticaret abbreviated as \"San. ve Tic.\" or \"San. Tic.\"). Both refer to BAYKON Industrial Control Systems. So verdict: same-entity.\n\nBest value: Which one? Rules say spelling drift, legal-suffix drift, accent differences = same-entity. It doesn't explicitly say which best_value for same-entity in the spelling case; only for number/year it says register's canonical form. For same-entity generally, the register is presumably the canonical database row; the fused record should carry the register's canonical form. The rule for different-entity explicitly says document's value because certificate is legal instrument. For same-entity, best to use register's canonical form. So best_value = register's value: \"BAYKON Endustriel Kontrol Sistemleri San ve Tic A.S.\"\n\nHmm, but one could argue document's more correct Turkish \"Endustriyel\" is better. However, canonicalization preference: register is the database row; fused record typically carries register canonical form for same-entity unless it's the legal instrument matter. The rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That suggests for same-entity, register canonical form is preferred generally. I'll go with register's value.\n\nWhy: same company, only spelling/punctuation drift in the Turkish legal name and abbreviation.\n\nReturn JSON object exactly as specified.",
+      "signature": "3b0ac02af8144ec6981e4135"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"BAYKON Endustriel Kontrol Sistemleri San ve Tic A.S.\",\n      \"why\": \"Both refer to the same Turkish company (BAYKON Industrial Control Systems); differences are only minor spelling ('Endustriel'/'Endustriyel') and punctuation drift in the 'San./ve/Tic.' legal-suffix abbreviation, so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 494,
+    "output_tokens": 499,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

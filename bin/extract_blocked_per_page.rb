@@ -46,7 +46,8 @@ def call_page(key, image, note)
       http.open_timeout = 30
       http.read_timeout = 600
       req = Net::HTTP::Post.new(ENDPOINT.request_uri)
-      req["Authorization"] = "Bearer #{api_key}"
+      req["x-api-key"] = api_key
+      req["anthropic-version"] = "2023-06-01"
       req["Content-Type"] = "application/json"
       req.body = body
       res = http.request(req)
@@ -78,9 +79,9 @@ File.foreach("#{REPO}/manifest.jsonl") do |line|
   manifest_by_path[row["local_path"]] ||= row if row["local_path"]
 end
 
-stems = Dir.glob("#{REPO}/ocr_raw/_run*.log").flat_map do |log|
+stems = (ENV["STEMS"] ? ENV["STEMS"].split(",") : Dir.glob("#{REPO}/ocr_raw/_run10.log").flat_map do |log|
   File.readlines(log).grep(/^FAIL/).map { |l| l[/^FAIL (\S+):/, 1] }
-end.compact.uniq.reject { |s| File.exist?("#{REPO}/ocr_raw/#{s}.json") }
+end.compact.uniq.reject { |s| File.exist?("#{REPO}/ocr_raw/#{s}.json") })
 puts "content-filter blocked certificates: #{stems.size}"
 stems.each { |s| puts "  #{s}" }
 exit 0 if stems.empty?
@@ -110,7 +111,8 @@ stems.each do |stem|
         per_page << { "page" => i + 1, "status" => "blocked", "detail" => "provider content filter rejected this page at 200 and 130 dpi" }
         puts "  page #{i + 1}: BLOCKED"
       elsif response["error"] || content_of(response).to_s.empty?
-        raise "page #{i + 1} of #{stem}: #{response.to_s[0, 200]}"
+        per_page << { "page" => i + 1, "status" => "blocked", "detail" => "api error: #{response.to_s[0, 160]}" }
+        puts "  page #{i + 1}: BLOCKED (api error)"
       else
         per_page << { "page" => i + 1, "status" => "ok", "response" => response }
         puts "  page #{i + 1}: ok (#{content_of(response).size} chars)"

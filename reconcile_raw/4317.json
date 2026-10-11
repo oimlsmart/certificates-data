@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011105934898e0343d2e94396",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nThe register says issuer_code: \"GB1\"\nThe document says issuer_code: \"0135\"\n\nLooking at the certificate document context: The certificate number is \"R76/2006-GB1-17.05\" on the document itself. The issuer code embedded in the certificate number is \"GB1\". The document header says \"NMO\" (National Measurement Office / National Measurement and Regulation Office of the UK). The \"GB1\" appears to be the UK's issuer code within the OIML-CS system — GB is the country code for the United Kingdom, and GB1 is the issuing authority code.\n\nThe document value \"0135\" — where does that come from? Possibly it's an internal certificate number suffix like \"17.05\" — hmm, \"0135\" could be a page number artifact, an OCR artifact, or some other number in the document (like a serial number, an approval number, etc.). Actually in the page 1 text, \"OIML Certificate No R76/2006-GB1-17.05\" — no \"0135\" visible there. The \"0135\" appears to be extraction noise — maybe an OCR misread of something else, or a different identifier on the certificate (e.g., an application number, a UK internal number).\n\nNote the document's own certificate number explicitly embeds \"GB1\": \"R76/2006-GB1-17.05\". So the issuer code according to the certificate's own number is GB1, matching the register. The value \"0135\" is likely noise (maybe from the footer, page number, some other code, or an OCR misread).\n\nSo verdict: document-noise, best_value = \"GB1\" (the register value), because the certificate's own visible number carries GB1 and \"0135\" doesn't correspond to a recognizable OIML issuing authority code format (typically country code + digit, like GB1, FR1, DE1, etc.).\n\nLet me check: OIML-CS issuing authorities — GB1 is indeed the UK (NMO). \"0135\" doesn't match the two-or-three character country+number pattern... Actually OIML codes are like \"GB1\", \"FR1\", \"CN1\", etc. \"0135\" could be an internal NMO file number. But since it's not the issuer code format and it doesn't appear in the visible certificate number, it's likely an extraction artifact or a different field's value misattributed.\n\nThe verdict per rules: \"Extraction artifacts ... obvious OCR noise = document-noise with best_value from the register.\"\n\nCould it be \"same-entity\"? The rule for number/year format differences: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" But \"0135\" doesn't clearly denote the same thing as GB1; GB1 denotes the UK issuing authority. \"0135\" isn't a format variant of GB1. So document-noise fits best.\n\nAnswer JSON:\n\n{\n  \"axes\": [\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"GB1\",\n      \"why\": \"The certificate's own title block reads 'OIML Certificate No R76/2006-GB1-17.05', confirming GB1 as the issuer, so '0135' is an extraction/OCR artifact (e.g., a stray internal number), not the issuer code.\"\n    }\n  ]\n}\n\nKeep why one short sentence.",
+      "signature": "78a4c529ee01432891782c48"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"GB1\",\n      \"why\": \"The certificate's own visible certificate number 'R76/2006-GB1-17.05' embeds the issuer code GB1 (matching the register), so '0135' is an extraction/OCR artifact or a stray internal number rather than a genuine alternative issuer code.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 858,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

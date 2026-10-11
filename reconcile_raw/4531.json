@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110815065171af23a2db47dc",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\"\n- Document: \"Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi\"\n\nDifferences:\n- \"ESIT\" vs \"Esit\" — capitalization\n- \"Imalat\" vs \"İmalat\" — dotted İ vs plain I (accent/diacritic difference, Turkish)\n- \"Sirketi\" vs \"Şirketi\" — Ş vs S (accent difference)\n- \"Limited Sirketi\" vs \"Limited Şirketi\" — same legal suffix \"Limited Şirketi\" (A.Ş. vs Ltd. Şti. — no, both say Limited Şirketi)\n\nThese are all spelling/accent/case differences of the same Turkish company name. Per the rules, accent differences and case differences = same-entity.\n\nBest value: Since it's same-entity, the fused record should carry... The rule says \"spelling drift, legal-suffix drift, accent differences = same-entity\" but doesn't explicitly say which value. Typically the document is the legal instrument, so the document's form with correct Turkish characters would be preferred. Actually, in the extraction context, the register value appears to be a normalized ASCII version. The best value for a fused record — I'd pick the document's value since the certificate is the legal instrument and has proper Turkish orthography (İ, Ş). The rules specify best_value only for different-entity (document) and document-noise (register). For same-entity, either could work, but the document's canonical legal form makes sense. However, some fusion systems prefer the register's canonical form for consistency. The rules mention \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form\" — that suggests for identifier-like axes, register canonical. For names, the document is the legal instrument.\n\nI'll go with the document's value: \"Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi\" — correct diacritics, from the legal instrument.\n\nVerdict: same-entity.\n\nOutput one JSON object.",
+      "signature": "8b81ff24f6104c199eb31184"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Esit Elektronik Sistemler İmalat ve Ticaret Limited Şirketi\",\n      \"why\": \"The two forms differ only in case (ESIT/Esit) and Turkish diacritics (İmalat/Imalat, Şirketi/Sirketi), which is accent/case drift of the same legal entity, so the fused record carries the document's properly accented form as the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 511,
+    "output_tokens": 586,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

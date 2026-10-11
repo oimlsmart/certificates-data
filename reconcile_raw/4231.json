@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101111223966b8b11d259a4def",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"RADWAG WAGI ELEKTRONICZNE Witold Lewandowski\"\n- Document: \"Radwag Wagi Elektroniczne\"\n\nThe register value appears to be \"RADWAG WAGI ELEKTRONICZNE\" plus \"Witold Lewandowski\" glued on. The document says \"Radwag Wagi Elektroniczne\". Witold Lewandowski is actually the founder/owner of Radwag — his name appears in the company registration context. The register value looks like it might have the person's name glued onto the company name — an extraction artifact (address fragment / owner name glued into a name)? Actually, the rule says \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nHmm, but here the \"noise\" is in the register, not the document. The verdict options: same-entity, different-entity, document-noise, unverifiable. \"document-noise\" per rules means noise best_value from the register. Here the noise is on the register side — the register has the person name glued on.\n\nWait — actually \"Witold Lewandowski\" is the real founder of RADWAG (Radwag Wagi Elektroniczne, founded by Witold Lewandowski). So the register value may come from a field combining company + owner. But per the certificate document (the legal instrument), the applicant is \"Radwag Wagi Elektroniczne\".\n\nThe core comparison: \"RADWAG WAGI ELEKTRONICZNE Witold Lewandowski\" vs \"Radwag Wagi Elektroniczne\". Case differences only (same-entity drift). The extra \"Witold Lewandowski\" is appended — it's the same company entity with an extra person name glued. So the entity is the same: Radwag Wagi Elektroniczne. The verdict should be \"same-entity\" — because after normalizing case, the company name matches; the appended person name is supplementary info glued in, not a different company.\n\nBut which verdict label fits best? Options:\n- same-entity: spelling drift, case drift — yes the company is the same.\n- different-entity: would be if genuinely different company or person names — no, the company matches.\n- document-noise: noise in document, best from register — here the noise is in the register, not the document.\n\nThe rules say different-entity requires genuinely different company or person names. The company names match modulo case. So same-entity. Best value: The fused record should carry... The document is the legal instrument; the document value is the clean legal name \"Radwag Wagi Elektroniczne\" with proper capitalization. The register value has glued person name. For same-entity, the rule about canonical form only mentions number/year format. For names, the best value for a fused record — given the document is the legal instrument, and the register value contains glued extra text (artifact), the best value should be the document's clean form \"Radwag Wagi Elektroniczne\".\n\nHmm, but rule for document-noise says best_value from register — that applies when noise is in document. Here noise (glued name) is in register. The verdict taxonomy doesn't have \"register-noise\". Best fit: same-entity (the company is the same entity; case-only drift; extra glued token). Best value: the document's properly-cased, un-glued legal name.\n\nActually, let me reconsider whether \"same-entity\" verdict with best_value = document value is consistent. The rules only prescribe best_value for document-noise (register's) and different-entity (document's). For same-entity on names, no prescribed value; we choose the cleaner canonical one — the document's, since it's the legal instrument and properly cased without glued artifact.\n\nSo:\n\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Radwag Wagi Elektroniczne\", \"why\": \"Both denote the same company with only case drift; the register's trailing 'Witold Lewandowski' is a glued owner-name artifact, so the certificate's clean legal name is preferred.\"}]}\n\nOne short sentence. Return single JSON object.",
+      "signature": "6eb60475c3054172b6a575f9"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Radwag Wagi Elektroniczne\", \"why\": \"Both denote the same company with only case drift, and the register's appended 'Witold Lewandowski' is a glued owner-name artifact, so the certificate's clean legal name is preferred.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 491,
+    "output_tokens": 989,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

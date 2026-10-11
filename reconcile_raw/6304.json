@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101022101700af19c2b0414ccb",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Tokheim India Pvt. Ltd\"\n- Document: \"Tokheim India Private Limited\"\n\n\"Pvt. Ltd\" vs \"Private Limited\" — this is exactly legal-suffix drift / abbreviation difference. Same company, same entity. \"Tokheim India\" is the same name; \"Pvt. Ltd\" is an abbreviation of \"Private Limited\". So verdict: same-entity.\n\nBest value: rules say for same-entity, what value should the fused record carry? The rules specify best_value for different-entity (document's) and document-noise (register's), and for number/year format differences = register's canonical form. For same-entity name drift, the register is the canonical database row; typically best value would be the register's canonical form. The rules only explicitly say register's canonical form for number/year, but the spirit suggests register for same-entity. Also \"Genuinely different company = document's value\". So for same-entity drift, best_value = register's value \"Tokheim India Pvt. Ltd\".\n\nWhy: one short sentence: \"Pvt. Ltd vs Private Limited is legal-suffix abbreviation drift for the same company.\"\n\nReturn JSON object.",
+      "signature": "4bef705b896d43b292269e46"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Tokheim India Pvt. Ltd\", \"why\": \"\\\"Pvt. Ltd\\\" is just an abbreviation of \\\"Private Limited\\\", so this is legal-suffix drift for the same company, and the fused record keeps the register's canonical form.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 495,
+    "output_tokens": 324,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

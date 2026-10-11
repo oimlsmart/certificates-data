@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101110272693ce69195ffb4227",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Tingling Industry Developmental Zone\"\n- Document: \"Shanghai Teraoka Electronic Co., LTD\"\n\nThe document context includes HTML comments at the top which appear to be extraction artifacts:\n- `<!-- applicant: Tingling Industry Developmental Zone -->` — this is in the comment block, likely extracted metadata from the register side or from previous extraction, embedded in the document context.\n\nThe actual certificate text says: \"NMi Nederlands Meetinstituut ... OIML Certificate N° R76/1992-NL1-07.32 ... NMi Certin B.V. ...\"\n\nHmm, the certificate text itself doesn't visibly mention \"Shanghai Teraoka Electronic Co., LTD\" in the given excerpt. The conflict statement says document = \"Shanghai Teraoka Electronic Co., LTD\". The comment block says applicant: Tingling Industry Developmental Zone — that's likely metadata extracted and embedded as comment (extraction_method: glm-5.3-flash), which might reflect register value or prior extraction.\n\nThe question: which is the best value for the fused record?\n\nRules:\n- spelling drift, legal-suffix drift, accent differences = same-entity.\n- Extraction artifacts = document-noise with best_value from register.\n- Genuinely different company or person names = different-entity (best_value = document's, since certificate is the legal instrument).\n\n\"Tingling Industry Developmental Zone\" vs \"Shanghai Teraoka Electronic Co., LTD\" — these are genuinely different names. \"Tingling Industry Developmental Zone\" sounds like a place/zone name (an industrial development zone), not a company — it looks like a bad extraction artifact (maybe \"Tianling Industrial Development Zone\" or the applicant's address zone). \"Shanghai Teraoka Electronic Co., LTD\" is a plausible company name (Teraoka is a real company — Digi/Teraoka Seiko; Shanghai Teraoka Electronic Co Ltd is a known entity).\n\nGiven these are genuinely different names (not spelling drift), per rules it's \"different-entity\" and best_value = the document's value: \"Shanghai Teraoka Electronic Co., LTD\".\n\nBut wait — could \"Tingling Industry Developmental Zone\" be an extraction artifact? It reads like a geographic zone, not a company. It could be a mangled extraction of an address (\"...Industrial Development Zone, ...\"). However, the rules say extraction artifacts = \"address fragments glued into a name, obvious OCR noise\" and best_value from the register. Here the register carries the weird value. The rule for document-noise assigns best_value from the register — but if the register value is the artifact, that rule wouldn't apply because the artifact is in the register, not the document.\n\nThe document value \"Shanghai Teraoka Electronic Co., LTD\" is a coherent, real company name. The certificate is the legal instrument. So verdict: different-entity, best_value = \"Shanghai Teraoka Electronic Co., LTD\".\n\nHmm, but is it possible that the register value \"Tingling Industry Developmental Zone\" is a mis-extraction of the applicant's address (e.g., an industrial development zone in some city)? Even so, the decision framework: genuinely different names = different-entity, best value = document's. The document (the certificate itself) says \"Shanghai Teraoka Electronic Co., LTD\" — the legal instrument. So different-entity with document's value.\n\nActually, let me double-check: could this be \"same-entity\" via spelling drift? No — \"Tingling Industry Developmental Zone\" vs \"Shanghai Teraoka Electronic Co., LTD\" share nothing.\n\nCould it be \"unverifiable\"? We have the document context, which presumably supports the document value per the conflict statement. The conflict statement is authoritative for what register and document say. So different-entity.\n\nBest value: \"Shanghai Teraoka Electronic Co., LTD\".\n\nOne-sentence why: The two names are entirely unrelated (a development-zone string vs a distinct company), so per the rules the certificate's legally binding applicant name wins.\n\nOutput JSON with axes array.",
+      "signature": "7501009d16284dad9a24a5fc"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"different-entity\",\n      \"best_value\": \"Shanghai Teraoka Electronic Co., LTD\",\n      \"why\": \"\\\"Tingling Industry Developmental Zone\\\" and \\\"Shanghai Teraoka Electronic Co., LTD\\\" share no spelling/suffix drift and are plainly different names, so the certificate's legally binding applicant name prevails.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 953,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101111495920d8f0594b034399",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Zebra Technologies\"\n- Document: \"Zebra Technologies Corp\"\n\nIs \"Zebra Technologies\" vs \"Zebra Technologies Corp\" the same entity? Yes — legal-suffix drift (\"Corp\") is explicitly listed as same-entity. Zebra Technologies Corporation is the legal name; \"Zebra Technologies\" is a common short form.\n\nWhich is best_value? The rules say for same-entity, what's the best value? Let me check the rules carefully:\n\n- spelling drift, legal-suffix drift, accent differences = same-entity.\n- Extraction artifacts = document-noise with best_value from the register.\n- Genuinely different = different-entity (best_value = document's).\n- Number/year format differences = same-entity with the register's canonical form.\n\nFor same-entity generally (the first rule), no explicit best_value stated. But the last rule for numbers says \"register's canonical form\" — that suggests the general principle: register holds canonical form. Also, the register is the OIML-CS database row, which is canonical. For legal-suffix drift, the register's \"Zebra Technologies\" is fine as canonical; or the document's \"Zebra Technologies Corp\" since the certificate is the legal instrument? But that preference for document is only specified for different-entity. For same-entity, the register's canonical form seems appropriate. Hmm, but one could argue the certificate as legal instrument carries the fuller legal name \"Zebra Technologies Corp\".\n\nGiven the rule pattern: same-entity cases default to register's canonical form (as shown in the number rule). Also there's no downside. The safest: verdict same-entity, best_value \"Zebra Technologies\" (register's canonical form), why: legal-suffix drift only, same company; register provides canonical form.\n\nActually, let me reconsider: Could \"Zebra Technologies Corp\" be an extraction artifact? No, it's not noise — it's a legitimate legal suffix. Same-entity.\n\nReturn JSON only.",
+      "signature": "4d4b7131703541f6a5717a81"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zebra Technologies\", \"why\": \"This is only legal-suffix drift ('Corp' added), so both refer to the same company, and the register's form is kept as canonical.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 471,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

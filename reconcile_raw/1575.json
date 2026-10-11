@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011102332e9c69bcf1b054bd6",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Radwag Zaklad Mechaniki\"\n- Document: \"Radwag Zaklad Mechaniki Precyzyjnej\"\n\nThe actual company name is \"Radwag Wagony Elektroniczne\" — well, historically Radwag was \"Radwag Zakład Mechaniki Precyzyjnej\" (Radwag Precision Mechanics Works). The document's value \"Radwag Zaklad Mechaniki Precyzyjnej\" is a fuller form — \"Zakład Mechaniki Precyzyjnej\" = \"Precision Mechanics Plant\". The register truncated it to \"Radwag Zaklad Mechaniki\".\n\nSo this is not different-entity; it's the same company, with the document carrying the fuller/more complete name. The rules say: spelling drift, legal-suffix drift, accent differences = same-entity. Here the document value is a superset — the register truncated part of the name. Is that \"same-entity\"? Yes — clearly the same company. The best value: which one should the fused record carry?\n\nThe rules: document-noise → best from register. Different-entity → document's. Same-entity → for number/year format differences, register's canonical form. But for same-entity name drift, what's best? The document is the legal instrument (as stated in different-entity rule rationale). The document's fuller name \"Radwag Zaklad Mechaniki Precyzyjnej\" is more accurate/complete. I'd pick the document's value as best since it's the more complete form from the legal certificate, and it's not noise.\n\nVerdict: same-entity. Best value: document's fuller form. Why: the register truncated the company name; the certificate carries the full legal name of the same company.\n\nAlternatively, one could argue register canonical form, but the register value looks like a truncation/normalization artifact. The document being the legal instrument, its fuller name is preferable.\n\nReturn JSON only.",
+      "signature": "800e0652bda7471296ab4ae0"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Radwag Zaklad Mechaniki Precyzyjnej\", \"why\": \"The document carries the fuller legal name of the same company while the register value is a truncated form, so the fused record should keep the certificate's complete name.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 490,
+    "output_tokens": 487,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

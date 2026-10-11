@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111029008a7a3b94643e465c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo (Albstadt) GmbH\"\n- Document: \"Mettler-Toledo GmbH\"\n\nThe document's embedded comment says `<!-- applicant: Mettler-Toledo (Albstadt) GmbH -->` — but the document context text itself shows the certificate header with the issuing authority (NMi Certin B.V.), not the applicant name visible in the extracted text. The \"document\" side of the conflict is \"Mettler-Toledo GmbH\".\n\nWait, let me re-read. The register says \"Mettler-Toledo (Albstadt) GmbH\" and the document says \"Mettler-Toledo GmbH\". Hmm, actually the embedded comments say applicant: Mettler-Toledo (Albstadt) GmbH, which matches the register. But the conflict as stated says document: \"Mettler-Toledo GmbH\".\n\nInteresting — perhaps the visible document text differs, or another field. Regardless, the conflict given is:\n- register: \"Mettler-Toledo (Albstadt) GmbH\"\n- document: \"Mettler-Toledo GmbH\"\n\nThese denote the same entity: Mettler-Toledo GmbH with the Albstadt site/facility designation. \"(Albstadt)\" is a location qualifier indicating the branch/plant. Is this \"legal-suffix drift\" or \"genuinely different company\"? Mettler-Toledo (Albstadt) GmbH vs Mettler-Toledo GmbH — the (Albstadt) is a site designator; legally it could be the same company, Mettler-Toledo GmbH, headquartered in Albstadt. In OIML certificates, the applicant is often listed with location. So these are the same entity — the register's version is more specific (includes the city), and both refer to the same company. This fits \"same-entity\" under spelling/legal-suffix drift? It's not exactly suffix drift, but it's the same company with a location qualifier. The rules say \"spelling drift, legal-suffix drift, accent differences = same-entity\". The (Albstadt) qualifier is more of a specificity difference, not a different company. Genuinely different company or person names would be different-entity — this isn't a genuinely different company.\n\nWhich best_value? Rules: same-entity verdicts don't specify which value; document-noise uses register's value; different-entity uses document's value; number/year format same-entity uses register's canonical form. For applicant same-entity, the more specific register value \"Mettler-Toledo (Albstadt) GmbH\" is arguably better for the fused record since the register is the canonical database row and it's more precise. Actually, since the certificate is the legal instrument, one might prefer the document. But the document value \"Mettler-Toledo GmbH\" is a less specific version. The embedded metadata comment in the document actually says \"Mettler-Toledo (Albstadt) GmbH\" matching the register. Hmm.\n\nGiven the document text shown doesn't visibly include the applicant (the person responsible section is cut off), the \"document\" value likely comes from elsewhere in the PDF. The fused record should carry the more complete/precise value: \"Mettler-Toledo (Albstadt) GmbH\" — same entity, register form is canonical and more specific.\n\nVerdict: same-entity; best_value: \"Mettler-Toledo (Albstadt) GmbH\"; why: the \"(Albstadt)\" qualifier is a site/location designator for the same legal company, so register's fuller canonical form is kept.\n\nReturn one JSON object with axes array containing one entry.",
+      "signature": "20e9c25e3a1248fd9156813a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mettler-Toledo (Albstadt) GmbH\",\n      \"why\": \"The '(Albstadt)' qualifier is a site/location designator on the same legal company, so the register's fuller canonical form is retained for the fused record.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 479,
+    "output_tokens": 844,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

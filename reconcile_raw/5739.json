@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102210017096360560814ce4",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Dover Fueling Solutions UK Limited (Filial)\"\n- Document: \"Dover Fueling Solutions UK Limited Filial (DFS)\"\n\nThese are essentially the same company. The document adds \"(DFS)\" abbreviation and drops parentheses around \"Filial\". This is spelling/format drift — same entity. Which best value? Rules say: spelling drift, legal-suffix drift, accent differences = same-entity. For best_value, the rules only specify explicit best_value for document-noise (register) and different-entity (document). For same-entity, likely the register's canonical form. The register is \"Dover Fueling Solutions UK Limited (Filial)\" — that's the canonical form. The document's \"(DFS)\" is an added abbreviation. So best_value = register's form.\n\nVerdict: same-entity, best_value = \"Dover Fueling Solutions UK Limited (Filial)\".\n\nReturn one JSON object with axes array.",
+      "signature": "e097185bcaeb406e9abc5aff"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Dover Fueling Solutions UK Limited (Filial)\",\n      \"why\": \"Both strings denote the same company; the document merely drops parentheses around 'Filial' and appends the '(DFS)' abbreviation, which is cosmetic drift, so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 296,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

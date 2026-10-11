@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101111521307648093185f4155",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Precisa Gravimetrics A.G.\"\n- Document: \"Precisa Gravimetrics AG\"\n\nThis is a legal-suffix drift: \"A.G.\" vs \"AG\" — same company, German \"Aktiengesellschaft\". Per the rules, legal-suffix drift = same-entity. Best value: which form? The rules say number/year format differences → register's canonical form. For same-entity spelling drift, the best value — the certificate is the legal instrument, so presumably document value. But the rule says \"spelling drift, legal-suffix drift, accent differences = same-entity\" but doesn't explicitly say best_value. For document-noise it says best_value from register. For different-entity, best_value = document's. For number/year, register's canonical form.\n\nFor same-entity spelling drift, the document is the legal instrument; the document says \"Precisa Gravimetrics AG\". The register has \"A.G.\" with periods. Both refer to the same company. Which is best? Arguably the document's form since the certificate is the legal instrument. The rule only explicitly assigns document value for different-entity, but the general principle that the certificate is the legal instrument suggests document form. However, for number/year it says register canonical form. For applicant name, I'd go with document's value \"Precisa Gravimetrics AG\" since it's the legal instrument and the more standard modern form. Actually, hmm — some fusion systems prefer register canonical form for consistency. But the rules explicitly say register canonical form only for number/year. For spelling drift, no explicit best value, but \"Genuinely different company\" gets document's value \"since the certificate is the legal instrument.\" That rationale extends: the certificate document is authoritative for names. I'll pick document's \"Precisa Gravimetrics AG\".\n\nWhy: one sentence — legal-suffix punctuation drift (A.G. vs AG) refers to the same company; document form is canonical.\n\nOutput one JSON object.",
+      "signature": "0571453d6f28410287b7d832"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Precisa Gravimetrics AG\",\n      \"why\": \"The two forms differ only in legal-suffix punctuation (A.G. vs AG), denoting the same Swiss company, and the fused record should carry the document's form since the certificate is the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 480,
+    "output_tokens": 516,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011063550f845485d7eaa4396",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nRegister: \"Raychem RPG Private Ltd.\"\nDocument: \"Raychem RPG (P) Ltd.\"\n\nThese are the same company. \"Private Ltd.\" vs \"(P) Ltd.\" — legal-suffix drift. Both refer to Raychem RPG, an Indian company. Same entity. Best value: the register's canonical form seems appropriate for same-entity cases... The rules say for same-entity (spelling drift, legal-suffix drift, accent differences = same-entity), but don't explicitly state which value to use for same-entity. For number/year format differences, they say \"same-entity with the register's canonical form.\" For document-noise, best_value from the register. For different-entity, best_value = document's.\n\nFor same-entity spelling/suffix drift, presumably best value is register canonical form (consistent with the pattern). Both \"Raychem RPG Private Ltd.\" and \"Raychem RPG (P) Ltd.\" denote Raychem RPG Private Limited. Register form is canonical: \"Raychem RPG Private Ltd.\" Actually the official name is \"Raychem RPG (P) Ltd.\" per company records, but per the rules, register canonical form for same-entity. The safest per rule consistency: same-entity → register canonical form (implied by the number/year rule; the other same-entity case is spelling drift which typically we'd normalize to register). I'll go with the register value.\n\nVerdict: same-entity, best_value \"Raychem RPG Private Ltd.\" with note that \"(P) Ltd.\" is an abbreviation of \"Private Ltd.\"",
+      "signature": "9e4cc7bcaedb483c8bbece7b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Raychem RPG Private Ltd.\",\n      \"why\": \"Both forms denote the same company, with '(P) Ltd.' being a common abbreviation of 'Private Ltd.' (legal-suffix drift), so the fused record keeps the register's canonical form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 475,
+    "output_tokens": 406,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

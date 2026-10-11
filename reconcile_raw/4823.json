@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010220112c16de0e11a58442b",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Hyteck (GB) Ltd\", document says \"Hytek (GB) Ltd\".\n\nRules: spelling drift = same-entity. Best value? For same-entity with spelling drift, which value should the fused record carry? The rules say:\n- spelling drift, legal-suffix drift, accent differences = same-entity\n- For document-noise, best_value from register.\n- For different-entity, best_value = document's.\n- For number/year format differences = same-entity with register's canonical form.\n\nFor same-entity spelling drift, the rules don't explicitly say. Hmm. The certificate is the legal instrument, so the document's spelling (\"Hytek (GB) Ltd\") is likely the legally correct one as printed on the certificate. Actually, \"Hyteck\" vs \"Hytek\" — which is correct? The register presumably derived from the document. The document itself is the legal instrument. Since it's same-entity (spelling drift), and the certificate is the legal instrument, the best value should probably be the document's value: \"Hytek (GB) Ltd\".\n\nWait, but let me think. The rule for different-entity says document wins because certificate is legal instrument. For same-entity number formats, register canonical form wins. For spelling drift within the same entity, the legal instrument's own printed name is arguably authoritative. The register value \"Hyteck\" may itself be an extraction error or the register's own spelling. Since the certificate document is the legal instrument, and spelling drift is same-entity, the fused record should carry the document's spelling: \"Hytek (GB) Ltd\".\n\nHmm, but one could argue register's canonical form. The rule only specifies register canonical for number/year format differences. For spelling drift, unspecified — default to document since certificate is legal instrument. I'll go with document value.\n\nActually, let me reconsider: register value \"Hyteck (GB) Ltd\" — document \"Hytek (GB) Ltd\". The company is \"Hytek (GB) Ltd\" — actually real-world: NMO certificates for R117... Hytek (GB) Ltd is a real company (fuel dispensers?). Hytek (GB) Ltd is indeed a real UK company doing fuel dispensing equipment. So \"Hytek\" is correct. Document value wins.\n\nVerdict: same-entity, best_value: \"Hytek (GB) Ltd\".\n\nOne JSON object.",
+      "signature": "5dfc0e0fe5704f7ab6719b50"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Hytek (GB) Ltd\", \"why\": \"The single-character spelling drift (Hyteck/Hytek) clearly denotes the same applicant, and the certificate document is the legal instrument, so its printed name is authoritative.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 462,
+    "output_tokens": 566,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101110592432cc4d8a7cdb489d",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "We have a conflict on axis issuer_code:\n- register: \"GB1\"\n- document: \"0135\"\n\nContext: The certificate is issued by the UK (GB1 = Great Britain, authority code 1, likely the NMO — National Measurement Office / issuing authority GB1 in the OIML-CS). The document text includes \"Member State of OIML United Kingdom of Great Britain and Northern Ireland\". The \"0135\" value — where would it come from? Possibly a page number, certificate number fragment, or some number extracted from the PDF. It doesn't appear in the shown document context. \"0135\" could be an extraction artifact or some numeric code on the document (e.g., an NMO form number). GB1 is the OIML issuing authority code for the UK. The document says \"United Kingdom of Great Britain and Northern Ireland\" — GB1 corresponds to UK's issuing authority.\n\n\"0135\" is not a plausible issuer code for this certificate; likely an extraction artifact (OCR noise, page number, or internal document number). So verdict: document-noise, best_value = \"GB1\".\n\nAlternatively, could \"0135\" be a genuine different entity? No — the certificate is clearly issued by GB1 (UK). 0135 doesn't correspond to any known issuing authority code for this certificate. So document-noise is the right verdict.\n\nWhy sentence: \"GB1 is the OIML issuing authority code for the UK (consistent with 'United Kingdom of Great Britain and Northern Ireland' on the certificate); '0135' matches no authority code and is likely an extraction artifact/OCR noise.\"\n\nOutput single JSON object.",
+      "signature": "42ef8d8bc92749a2b669094d"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"issuer_code\", \"verdict\": \"document-noise\", \"best_value\": \"GB1\", \"why\": \"GB1 is the OIML issuing-authority code for the United Kingdom, consistent with the certificate's own header ('United Kingdom of Great Britain and Northern Ireland'), while '0135' matches no authority code in the document text and is evidently an extraction/OCR artifact.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 429,
+    "output_tokens": 441,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

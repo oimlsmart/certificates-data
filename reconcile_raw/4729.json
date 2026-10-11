@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011075246add99f03b5c94a74",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Xuzhou WIKA Electronics Control Technology Co. Ltd.\"\nDocument: \"Xuzhou Hirschman Electronics Co., Ltd.\"\n\nThese are genuinely different company names. \"WIKA\" vs \"Hirschman\" — these are different brand/company names. WIKA is a German measurement company; Hirschmann is another brand. Actually, historically, Xuzhou Hirschmann Electronics... Hmm, but the rule says: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nIs this a spelling drift? \"WIKA Electronics Control Technology Co. Ltd.\" vs \"Hirschman Electronics Co., Ltd.\" — no, these are clearly different names: \"WIKA\" vs \"Hirschman\" are completely different words, and the company name differs (\"Electronics Control Technology\" vs \"Electronics\"). Not a suffix drift. Not extraction noise (both look like clean company names).\n\nSo verdict: different-entity, best_value = document's \"Xuzhou Hirschman Electronics Co., Ltd.\"\n\nWait, but note the document context contains a metadata comment: \"<!-- applicant: Xuzhou WIKA Electronics Control Technology Co. Ltd. -->\" — that's the register's applicant in the HTML comment. But the document's own body text presumably says \"Xuzhou Hirschman Electronics Co., Ltd.\" The conflict as presented says register vs document. The certificate document is the legal instrument, so best_value = document's value.\n\nInteresting nuance: In reality, the embedded comment in the document text matches the register, which could suggest the register value was propagated into the doc annotation. But the visible certificate text presumably states the actual applicant. The rules are clear: genuinely different company names → different-entity, best_value = document's.\n\nAnswer with one JSON object.",
+      "signature": "62abb4a109534f1fa28a8cf9"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"Xuzhou Hirschman Electronics Co., Ltd.\", \"why\": \"\\\"WIKA Electronics Control Technology\\\" and \\\"Hirschman Electronics\\\" are genuinely different company names (not spelling, suffix, or OCR drift), and the certificate itself is the legal instrument, so its stated applicant wins.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 489,
+    "output_tokens": 467,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

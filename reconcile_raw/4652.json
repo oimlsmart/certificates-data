@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010221457b3fb104a39934d02",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register says \"Teraoka Seiko Co., Ltd.\" and document says \"Teraoaka Seiko Co., Ltd.\" — the document has \"Teraoaka\" which is a typo/OCR noise of \"Teraoka\". Also note the certificate metadata comment says applicant: \"Teraoka Seiko Co., Ltd.\" — so even the document's embedded comment has the correct spelling. The visible text has \"Teraoaka\" — clearly a typo (transposed letters: Teraoka vs Teraoaka). This is spelling drift / OCR noise = same-entity. Best value: register's \"Teraoka Seiko Co., Ltd.\"\n\nPer rules: spelling drift = same-entity; best value would be the register's canonical form. Actually the rule says spelling drift = same-entity, but doesn't explicitly say best value. Extraction artifacts = document-noise with best_value from register. \"Teraoaka\" is an OCR/extraction typo — arguably document-noise. Either way, verdict could be \"same-entity\" (spelling drift) or \"document-noise\". Since it's a single-letter transposition typo likely OCR noise, \"document-noise\" with register value seems apt. But spelling drift is explicitly listed as same-entity. Hmm. The distinction: spelling drift like \"Teraoka\" vs \"Teraoka Seiko K.K.\" = same-entity. Here \"Teraoaka\" is an obvious OCR/typo noise — an extraction artifact. I'd say verdict: \"same-entity\" with best_value register form, or \"document-noise\" with best_value register. Both defensible. Given it's an obvious OCR noise (transposed letters), I'll go with \"document-noise\" — actually the rules say extraction artifacts (address fragments glued, obvious OCR noise) = document-noise with best_value from register. \"Teraoaka\" is a one-letter transposition, likely from PDF text extraction/OCR. That's an obvious typo. I'll say document-noise with best_value from register. Alternatively same-entity. I'll choose \"same-entity\" since it's spelling drift of the same company name — but \"Teraoaka\" isn't a plausible alternate spelling; it's a typo. I'll go with \"document-noise\" and best_value \"Teraoka Seiko Co., Ltd.\" and note it's a transposition typo/OCR noise of the same company.",
+      "signature": "9ceea9f46e0d4394a3e5f4ea"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"Teraoka Seiko Co., Ltd.\", \"why\": \"\\\"Teraoaka\\\" is an obvious one-letter transposition typo/OCR noise for Teraoka Seiko Co., Ltd. — even the document's own embedded comment carries the correct spelling — so the register's canonical form wins.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 475,
+    "output_tokens": 593,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

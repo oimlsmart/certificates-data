@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110902462e251e7b65824cd2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R060/2000-NL1-2012.43\"\n- Document: \"R60/2000-NL1-12-43\"\n\nThe document is the certificate itself, which shows \"R60/2000-NL1-12-43\". The register says \"R060/2000-NL1-2012.43\".\n\nThis is a number/year format difference. Both clearly denote the same certificate:\n- \"R60/2000\" vs \"R060/2000\" — the OIML recommendation R60 (which is often written as R60 or R060)\n- \"NL1\" — issuing body\n- \"12\" vs \"2012\" — year format (2-digit vs 4-digit)\n- \"43\" — serial number\n\nAlso the file name in source_pdf: \"r060-2000-nl1-2012-43.pdf\" — which matches the register form \"r060-2000-nl1-2012-43\". The cert_id is 3029, matching register id 3029.\n\nPer the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: \"R060/2000-NL1-2012.43\", why: it's the same certificate with year/number formatting drift (12 vs 2012, R60 vs R060); register form is canonical.\n\nOutput one JSON object as specified.",
+      "signature": "dfb905a4afe140859112f03f"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R060/2000-NL1-2012.43\", \"why\": \"Both forms denote the same certificate (R60/R060, year '12' vs '2012', serial 43), so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 449,
+    "output_tokens": 415,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}
