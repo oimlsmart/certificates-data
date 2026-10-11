@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101111062981985d03f2b14b9d",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict carefully.\n\nThe axis is `issuer_code`:\n- Register: \"GB1\"\n- Document: \"NMO\"\n\nContext: This is an OIML certificate. OIML certificates are issued by issuing authorities/bodies designated by member states. The certificate ID is \"R76/2006-A-GB1-20.02\" — the \"GB1\" here is the issuing authority code for the United Kingdom's first issuing body, which is NMO (National Measurement Office, UK — formerly NWML, National Weights and Measures Laboratory). GB1 is the OIML-designated issuing authority code for the UK's NMO.\n\nSo the register's \"GB1\" is the issuing authority code in the certificate number, and the document's \"NMO\" is the name of the organization (National Measurement Office) that appears in the letterhead/logo of the certificate.\n\nAre they the same entity? Yes — NMO is the organization behind the issuing authority code GB1. GB1 is a code; NMO is the name. They denote the same issuing body.\n\nThe axis is specifically \"issuer_code\" — a code field. The register value \"GB1\" is the code. The document value \"NMO\" is not really a code; it's the organization name/logo. For an issuer_code axis, the fused record should carry the register's canonical code form \"GB1\", since the document's \"NMO\" is the organization's name extracted from the logo/letterhead, not the code.\n\nVerdict: This is \"same-entity\" — GB1 is the issuing authority code for NMO (UK). The document's extraction of \"NMO\" from the letterhead logo is the same issuing body. Best value: since the axis is \"issuer_code\", the canonical code \"GB1\" from the register should be carried. The rules say \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" This is analogous — code vs. name denoting the same issuer = same-entity, and for a code axis, the register's canonical code form is best.\n\nAlternatively, could one argue \"document-noise\"? The \"NMO\" comes from a logo extraction (\"[NMO logo: royal coat of arms... followed by] NMO\"). But NMO is genuinely the issuing authority's name; it's not noise — it's a name/code mismatch for the same entity. The register holds codes; the document shows names. They refer to the same issuing authority.\n\nSo verdict: \"same-entity\", best_value: \"GB1\" (the register's canonical code form, since the axis is issuer_code and the register form is canonical for codes).\n\nWhy: GB1 is the OIML issuing-authority code for the UK's NMO, so both refer to the same issuer; the code axis should carry the register's canonical code.\n\nReturn one JSON object.",
+      "signature": "cbcba31ce5344f04ba2f6f0c"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"GB1\",\n      \"why\": \"GB1 is the OIML issuing-authority code for the UK's National Measurement Office (NMO), so the register's code and the certificate letterhead name denote the same issuer; since this axis is a code field, the register's canonical code form should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 426,
+    "output_tokens": 707,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101022234093bf901100d64ddc",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Zebra Technologies\"\n- Document: \"Zebra Technologies Corp\"\n\nThe document shows \"Zebra Technologies Corp\" — with \"Corp\" as a legal suffix, and the document also includes address context \"1 Zebra Plaza Holtsville, NY 11742 United States\" which is properly separated as address, not glued into the name. The document value includes a legal suffix (\"Corp\"), which per the rules is \"legal-suffix drift\" = same-entity.\n\nBest value: The rule says same-entity with legal-suffix drift. What's the best value? For same-entity cases, typically the register's canonical form is preferred (like the number/year rule says \"register's canonical form\"). For spelling/suffix drift, the fused record should carry... hmm. The rules specify best_value explicitly only for document-noise (register) and different-entity (document). For same-entity, the convention is register's canonical form. So best_value = \"Zebra Technologies\" from the register. Though one could argue the document's fuller legal name is better. The rules pattern: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" For spelling drift / legal-suffix drift / accent differences = same-entity — presumably also register canonical form. I'll use register's value \"Zebra Technologies\".\n\nVerdict: same-entity.",
+      "signature": "7b0487e4761b45509897c91d"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zebra Technologies\", \"why\": \"The document merely adds the legal suffix 'Corp' to the register's name, which is legal-suffix drift for the same company, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 456,
+    "output_tokens": 362,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

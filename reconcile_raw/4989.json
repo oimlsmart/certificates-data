@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011093236ff509e978a104012",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Locosc Ningbo Precision Technology Co. Ltd.\"\nDocument: \"Locosc Precision Technology Co., Ltd.\"\n\nThe register has \"Ningbo\" in the name; the document doesn't. Is this spelling drift or a genuinely different name?\n\nLocosc is a real Chinese company: Ningbo Locosc Precision Technology Co., Ltd. Actually the real company is \"Ningbo Locosc Precision Technology Co., Ltd.\" The document says \"Locosc Precision Technology Co., Ltd.\" — the register adds \"Ningbo\" as part of the name (or as a city qualifier placed before \"Precision\").\n\nRules say:\n- spelling drift, legal-suffix drift, accent differences = same-entity.\n- extraction artifacts (address fragments glued into a name) = document-noise with best_value from register.\n- genuinely different company names = different-entity, best_value = document's.\n\nIs \"Ningbo\" an address fragment? Ningbo is a city. It could be an address fragment glued into the name in the register. Or it could be part of the legal registered name (\"Ningbo Locosc Precision Technology Co., Ltd.\"). In this document, the word \"Ningbo\" appears in the certificate's context as part of the file path and cert_id comment? Actually the document context shows applicant as \"Locosc Precision Technology Co., Ltd.\" without Ningbo. The register has \"Locosc Ningbo Precision Technology Co. Ltd.\"\n\nBoth refer to the same company — Locosc, based in Ningbo. The addition of the city name is a common variation (legal name may include city). This is not a genuinely different company. So verdict: same-entity.\n\nBest value: For same-entity, which value should the fused record carry? The rules specify best_value handling for different-entity (document's) and document-noise (register). For same-entity, it says \"Number/year format differences ... = same-entity with the register's canonical form.\" For spelling drift, presumably pick the document's form since the certificate is the legal instrument? The rule only explicitly states best_value for number/year (register's canonical). Hmm.\n\nFor same-entity spelling drift, best practice: prefer the document since it's the legal instrument. The document says \"Locosc Precision Technology Co., Ltd.\" But the register's \"Locosc Ningbo Precision Technology Co. Ltd.\" includes the city which might be part of the official registered name (Chinese companies often include city: Ningbo Locosc...). The actual OIML certificate R60/2017-A-NL1-19.33 — Locosc Precision Technology Co., Ltd. Hmm.\n\nWhich is \"best\" for the fused record? Given the document is the legal instrument and both denote the same entity, the document's form is authoritative. I'll go with same-entity, best_value = document's \"Locosc Precision Technology Co., Ltd.\", why: city qualifier drift/\"Ningbo\" placement is a naming variation of the same applicant; document is the legal instrument.\n\nAlternatively one could argue \"Ningbo\" is an address fragment glued into the register name — but the rule for document-noise applies to extraction artifacts with best_value from the register, which doesn't fit here. The most defensible: same-entity; best_value = document's form.\n\nOutput JSON with one axis entry.",
+      "signature": "a63e519fce85437d878ba81f"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Locosc Precision Technology Co., Ltd.\",\n      \"why\": \"The register's 'Ningbo' is a city qualifier/name-order variation for the same Locosc applicant, not a different company, and the certificate document is the legal instrument so its exact rendering wins.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 466,
+    "output_tokens": 774,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

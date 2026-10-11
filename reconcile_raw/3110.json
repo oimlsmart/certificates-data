@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011085857256cd7c2a0fd4989",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The register says applicant: \"Keli Electric Manufacturing (Ningbo) Co., Ltd.\"\nThe document says: \"Keli Sensing Technology (Ningbo) Co., Ltd.\"\n\nThese are genuinely different company names — \"Keli Electric Manufacturing\" vs \"Keli Sensing Technology\". These are not spelling drift or legal suffix drift; the core entity names differ. Keli Sensing Technology (Ningbo) Co., Ltd. is a real company that makes load cells (relevant to R60, which is the OIML recommendation for weighing load cells). \"Keli Electric Manufacturing\" appears to be a register entry error or a different company. Actually, Keli Sensing Technology is well-known for load cells. So this is a genuinely different company name → different-entity, best_value = the document's.\n\nThe rule: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nSo verdict: different-entity, best_value: \"Keli Sensing Technology (Ningbo) Co., Ltd.\"",
+      "signature": "3cc791d0aa414c66be6774ca"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"Keli Sensing Technology (Ningbo) Co., Ltd.\", \"why\": \"The names differ beyond suffix/spelling drift — 'Electric Manufacturing' vs 'Sensing Technology' are distinct corporate identities, and the legal instrument's name governs.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 495,
+    "output_tokens": 303,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

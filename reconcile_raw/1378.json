@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010214728aebdc362f1474931",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Tokheim Netherlands B.V.\"\n- Document: \"Tokheim, Retail Petroleum System Unit 6320\"\n\nThe register says the applicant is \"Tokheim Netherlands B.V.\" The document says \"Tokheim, Retail Petroleum System Unit 6320\" — which looks like a product/system description rather than a company name. \"Retail Petroleum System Unit 6320\" is likely the name of the measuring system/product (e.g., Tokheim fuel dispensers model 6320), not the applicant entity. Actually, on OIML certificates, the applicant is the company, and the certificate often describes the instrument: \"Retail Petroleum System Unit 6320\" would be the instrument type described. So the document value appears to be a product/system designation, possibly mis-extracted as the applicant.\n\nHmm, but the rules say: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\nIs \"Tokheim, Retail Petroleum System Unit 6320\" a genuinely different company name? It's not a company name — it's a product name. It's likely extraction noise: the extractor grabbed the instrument description instead of the applicant name. Also note the certificate text in the document context mentions applicant: Tokheim Netherlands B.V. in the HTML comments (which mirror the register). The visible text says \"OIML Certificate N° R117/1995-NL1-05.02\".\n\nSo the document value \"Tokheim, Retail Petroleum System Unit 6320\" is a product designation, not a legal entity. This is best classified as document-noise (extraction artifact) with best_value from the register: \"Tokheim Netherlands B.V.\".\n\nAlternatively, one could argue different-entity: \"Tokheim\" is the same company family, and \"Retail Petroleum System Unit 6320\" is the product — but the axis is \"applicant\" which should be a company. The register value is a proper legal company name; the document value is a product/system description. Per rules, extraction artifacts = document-noise with best_value from register.\n\nVerdict: document-noise, best_value: \"Tokheim Netherlands B.V.\".\n\nWhy: The document string names the instrument (product) rather than an applicant entity, i.e., an extraction artifact/misfield, so keep the register's legal company name.\n\nReturn the JSON object.",
+      "signature": "d98ba4b1e37c4070be650c0a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"Tokheim Netherlands B.V.\",\n      \"why\": \"The document string 'Tokheim, Retail Petroleum System Unit 6320' names the measured instrument/product, not a legal applicant entity, so it is an extraction misfield and the register's legal company name should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 609,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

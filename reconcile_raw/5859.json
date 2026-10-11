@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011114943948bbfa7d5194bcb",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\n- Register: \"Shanghai Teraoka Electronic Co., Ltd.\"\n- Document: \"Shanghai Teraoka Electronics Co. Ltd.\"\n\nDifferences:\n1. \"Electronic\" vs \"Electronics\" — one character difference (\"s\"), spelling drift\n2. \"Co., Ltd.\" vs \"Co. Ltd.\" — punctuation drift in legal suffix\n\nBoth are classic spelling drift / legal-suffix drift cases. The entity is clearly the same: Shanghai Teraoka Electronic Co., Ltd., a manufacturer of weighing instruments (Digiscale / Teraoka), appears in OIML certificates.\n\nSo verdict: \"same-entity\". Best value: register's canonical form \"Shanghai Teraoka Electronic Co., Ltd.\" — per rule \"spelling drift, legal-suffix drift, accent differences = same-entity.\" The rules for number/year say register canonical form; for same-entity generally, the fused record should carry the register's canonical form (the register is the OIML-CS database, which is canonical). The document-noise rule says best_value from register; different-entity says best_value = document's. For same-entity, presumably register's canonical form is best.\n\nOne nuance: the register value uses a comma: \"Co., Ltd.\" while document is \"Co. Ltd.\" Also \"Electronic\" vs \"Electronics\". Which is the actual legal name? The certificate is the legal instrument, but the rule explicitly says spelling drift = same-entity, and for same-entity the canonical form... The rule only explicitly gives canonical form guidance for number/year. For same-entity name drift, best value should presumably be register's canonical form too, since register is the OIML-CS database row which is curated. I'll go with register.\n\nOutput one JSON object with the axes array.",
+      "signature": "22fe5a5c5f2a4743b7dae995"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Shanghai Teraoka Electronic Co., Ltd.\",\n      \"why\": \"The only differences are pluralization drift ('Electronic' vs 'Electronics') and punctuation drift in the legal suffix ('Co.,' vs 'Co.'), which clearly denote the same company; the fused record keeps the register's canonical form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 474,
+    "output_tokens": 470,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

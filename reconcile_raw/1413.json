@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011083739dbd845ae45b247bc",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\"\n- Document: \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\"\n\nThe difference: \"Instruments\" vs \"Instrument\". This is singular vs plural — spelling drift / minor morphological difference. The actual company's registered name: Mettler-Toledo (Changzhou) Precision Instruments Ltd. — let me think. The actual Chinese entity is \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\" I believe the actual registered name is \"梅特勒-托莱多(常州)精密仪器有限公司\" which translates to Mettler-Toledo (Changzhou) Precision Instruments Ltd. Both forms appear in documents. Either way, per rules, spelling drift = same-entity. Best value: register's canonical form.\n\nVerdict: same-entity, best_value = register value.\n\nOutput format: one JSON object with axes array.",
+      "signature": "1f6400ccf70e4838939080cd"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\",\n      \"why\": \"The only difference is singular vs. plural 'Instrument(s)' — spelling drift for the same legal entity, so keep the register's canonical form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 485,
+    "output_tokens": 292,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

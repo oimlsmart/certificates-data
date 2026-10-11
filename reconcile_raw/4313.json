@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110757360ac061d3d6504fd9",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nThe certificate: R051/2006-GB1-2017.02, register id 4313.\n\nThe document context contains embedded metadata:\n- cert_id: 4313\n- num: R051/2006-GB1-2017.02\n- applicant: Strainstall UK Limited\n- issuing_year: 2017\n- status: Valid\n- issuer: GB1\n- source_pdf: r051-2006-gb1-2017-02.pdf\n\nThe visible document text says: \"OIML Certificate No R51/2006-GB1-17.02\" — issued by NMO (UK), which is the GB1 issuing authority (UK's National Measurement Office). The \"GB1\" in the certificate number is the issuing authority code for the United Kingdom.\n\nConflicting axis: issuer_code\n- register: \"GB1\"\n- document: \"0135\"\n\nWhere does \"0135\" come from? It's not in the visible document text snippet. The visible text shows \"GB1\" as part of the certificate number (R51/2006-GB1-17.02), and the embedded metadata comment also says issuer: GB1. The value \"0135\" doesn't appear anywhere in the provided document context. So the document value \"0135\" isn't verifiable from the document — it could be an extraction artifact, possibly from a page number, an approval number fragment, or OCR noise from something else. Actually \"0135\" might be a fragment from something like \"GB 0135\" or an NMO approval number... But we can't see it in the document text.\n\nGiven the rules:\n- \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nThe document value \"0135\" doesn't correspond to any issuer code visible in the document. The UK issuing authority under OIML-CS for R51 is GB1 (NMO/BIPM listed). \"0135\" looks like an OCR artifact or unrelated numeric fragment. So verdict: document-noise, best_value: \"GB1\".\n\nWhy: The document itself identifies the issuer as GB1 (both in the metadata comment and the certificate number R51/2006-GB1-17.02, issued by NMO UK); \"0135\" appears nowhere in the certificate text and looks like an extraction artifact, so carry the register's \"GB1\".\n\nReturn one JSON object.\n\nOutput format: single JSON object with axes array containing one entry.\n\n{\"axes\": [{\"axis\": \"issuer_code\", \"verdict\": \"document-noise\", \"best_value\": \"GB1\", \"why\": \"...\"}]}\n\nKeep why short: \"The certificate text and its own metadata both identify the UK issuing authority as GB1; '0135' appears nowhere in the document and is an extraction artifact, so keep the register's GB1.\"",
+      "signature": "8ef725b711e44d82aca228ec"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"GB1\",\n      \"why\": \"The certificate's own text identifies the issuer as GB1 (NMO United Kingdom, both in the 'issuer: GB1' metadata and the number R51/2006-GB1-17.02); '0135' appears nowhere in the document and is an extraction/OCR artifact, so the fused record should keep the register's GB1.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 429,
+    "output_tokens": 752,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110927566fd79a041a284fb5",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"PULS ELECTRONIK SISTEMLERI\"\n- Document: \"PULS ELECTRONIK SISTEMLERI MAK. SAN. İÇ VE DIŞ TIC. LTD. ŞTI.\"\n\nThe register has a shorter form: \"PULS ELECTRONIK SISTEMLERI\" (PULS ELECTRONIC SYSTEMS). The document has the full legal name: \"PULS ELECTRONIK SISTEMLERI MAK. SAN. İÇ VE DIŞ TIC. LTD. ŞTI.\" (PULS ELEKTRONİK SİSTEMLERİ MAKİNA SANAYİ İÇ VE DIŞ TİCARET LİMİTED ŞİRKETİ).\n\nIs this same-entity? The register's value is a truncation/prefix of the document's full legal name. The document value starts with exactly the register value, then adds legal-suffix / trade descriptors: \"MAK. SAN. İÇ VE DIŞ TIC. LTD. ŞTI.\" (machine manufacturing industry, domestic and foreign trade, limited company).\n\nPer the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" The document form is the register value plus legal-suffix/type descriptors. That's a clear same-entity case — the register just carries a shortened trading name, and the certificate gives the full legal corporate name.\n\nWhich best value? The rules say for different-entity, best_value = document's (legal instrument). For same-entity, they don't explicitly say which to pick, except for certificate numbers where register canonical form wins. For applicant names, the certificate is the legal instrument; the fuller legal name is more precise. The fused record should carry the document's full legal name, since it's strictly more complete and comes from the legal instrument. Also the register's value is a prefix — likely a truncated extraction. So best_value = the document's value.\n\nVerdict: same-entity. Best value: document's full legal name. Why: the register's string is a truncated form of the same company; the document adds only legal-form descriptors, and the certificate's full legal name is authoritative.\n\nReturn JSON object only.",
+      "signature": "7e5608cbe257453abf8a3d3d"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"PULS ELECTRONIK SISTEMLERI MAK. SAN. İÇ VE DIŞ TIC. LTD. ŞTI.\",\n      \"why\": \"The register's string is a truncated prefix of the same company name, with the document adding only legal-form descriptors (MAK. SAN. ... LTD. ŞTI.), so they are one entity and the certificate's full legal name is the authoritative, more complete value.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 600,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

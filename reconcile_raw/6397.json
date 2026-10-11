@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110748221c2d3cee5de44dd4",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Nanjing 'Ningyuan 􀀑nt􀀔lligelt Instrument Co., Ltd. \"\n- Document: \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\"\n\nThe register value has:\n1. A stray apostrophe: \"Nanjing 'Ningyuan\" — extraneous quote character\n2. Private Use Area Unicode characters: 􀀑nt􀀔lligelt — these are glyph-mapping OCR artifacts (the PDF used custom font encoding; \"Intelligent\" was extracted as \"􀀑nt􀀔lligelt\" where 􀀑 = I, 􀀔 = i, and \"lligelt\" is OCR misreading of \"lligent\" — actually \"Intelligent\" vs \"Intelligelt\": the 'n' at the end was read as 'l' or similar)\n\nWait, the register itself contains the noisy version: \"􀀑nt􀀔lligelt\" — PUA characters replacing \"I\" and \"i\" (and possibly \"ge\" vs \"lt\"). The document value is the clean \"Intelligent\".\n\nSo the register value appears to be the corrupted extraction (from the same PDF, presumably), while the document context (which in this dataset seems to be the cleaner extracted text) has the clean name. Actually interesting — normally the rule says document-noise → best_value from register. But here the register holds the noisy value and the document holds the clean one.\n\nHmm, let me re-read the rules:\n- \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\nBut the noise here is in the register, not the document. The verdict category \"document-noise\" seems to describe noise coming from the document side. Here the document side is clean. The register side has OCR/encoding artifacts (PUA characters from font subsetting in the PDF, misrendered glyphs).\n\nSo which verdict? The options: same-entity, different-entity, document-noise, unverifiable.\n\nClearly this is the same entity: \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\" The register value is just a corrupted extraction with PUA glyphs and a stray apostrophe, plus trailing space.\n\nGiven the noise is on the register side, \"document-noise\" doesn't quite fit since the document is clean. The best verdict is probably \"same-entity\" with best_value = the document's clean form: \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\"\n\nAlternatively, one could label it \"document-noise\"... no, that would be wrong because the noise is in the register.\n\nThe rules say: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" OCR noise in the register — the register here isn't canonical in this case. The general principle: the certificate is the legal instrument, so the document's clean name is best. Also common sense: PUA characters are invalid for a fused record.\n\nSo verdict: \"same-entity\", best_value: \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\", why: register value carries OCR/font-extraction artifacts (PUA glyphs, stray apostrophe) of the same name; document is clean.\n\nWait — but rule says \"Extraction artifacts ... = document-noise with best_value from the register.\" That rule is about artifacts in the document. Here artifacts are in the register. Since the categories are fixed, same-entity fits: it's spelling drift / extraction corruption of the same name. The best value should be the document's clean one because the certificate is the legal instrument and the register's string is corrupted.\n\nActually, let me double check: the document context itself contains the comment \"<!-- applicant: Nanjing 'Ningyuan 􀀑nt􀀔lligelt Instrument Co., Ltd. -->\" — interesting! The document context includes a comment with the same corrupted name as the register. So the register was populated from this extraction. But the visible body of the certificate text renders \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\" presumably in the actual HTML the names appear clean... Actually the snippet given is truncated (\"OIML Cer...\"), so we don't see the body applicant line. But the problem states the conflict as register vs document: document = \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\"\n\nSo the answer: same-entity, best_value = document's clean string.\n\nOne sentence why: Both are the same applicant; the register string contains PDF font-extraction artifacts (PUA glyphs \"􀀑nt􀀔lligelt\", stray apostrophe) while the certificate document shows the clean legal name, so fuse on the document form.\n\nOutput single JSON object.",
+      "signature": "33b26a1915d041e7ae759ae5"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Nanjing Ningyuan Intelligent Instrument Co., Ltd.\",\n      \"why\": \"The register string is the same applicant corrupted by PDF font-extraction artifacts (PUA glyphs in '􀀑nt􀀔lligelt', a stray apostrophe, trailing space), while the certificate — the legal instrument — renders the clean name 'Intelligent', so the fused record should carry the document's form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 525,
+    "output_tokens": 1137,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

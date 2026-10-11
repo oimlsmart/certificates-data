@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101110463790b1b612e0a344aa",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: two values for applicant axis.\n\nRegister: \"Tscale Electronic Mfg (Kunshan) Co., Ltd\"\nDocument: \"Tscale Electronics Mfg. (Kunshan) Co., Ltd.\"\n\nDifferences: \"Electronic\" vs \"Electronics\" (plural), \"Mfg\" vs \"Mfg.\" (period), \"Ltd\" vs \"Ltd.\" (period). These are minor spelling drift / punctuation drift — same entity. Which best_value? Rules say spelling drift = same-entity, but doesn't specify whose value to use. For applicant, the certificate is the legal instrument... but rule for different-entity says best_value = document's because certificate is legal instrument. For same-entity spelling drift, presumably prefer register's canonical form? Hmm. The rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That's about number/year. For applicant, same-entity — either value works; typically prefer the register's canonical form for consistency, or the document's since legal instrument. The document value has \"Electronics\" and proper periods. The certificate document is the legal instrument; but the rule explicitly assigns document preference only to different-entity. For same-entity, safe default: register's canonical form (register is the curated fused base). I'll go with register value? Hmm.\n\nActually consider: applicant name on certificate as issued is authoritative for the applicant's legal name. But drift could be OCR (\"extraction_method: glm-ocr\") — the document value itself comes from OCR; register value likely canonicalized. Given same-entity and OCR artifacts, register canonical form is safer. I'll pick register's value: \"Tscale Electronic Mfg (Kunshan) Co., Ltd\".\n\nVerdict: same-entity.",
+      "signature": "a2b04f09ad9f406bb4c0b18b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Tscale Electronic Mfg (Kunshan) Co., Ltd\", \"why\": \"The two forms differ only by an 's' and punctuation periods — classic spelling/suffix drift for the same company — so the register's canonical (non-OCR) form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 514,
+    "output_tokens": 447,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

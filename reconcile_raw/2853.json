@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101108565318162857a3a24c89",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Vishay Israel Ltd. Transducers\"\n- Document: \"Tedea-Huntleigh or Vishay Precision\"\n\nThe certificate itself shows \"Tedea-Huntleigh or Vishay Precision\" as the applicant, with \"2 Haofan St., Holo\" (likely Holon, Israel — truncated address). The register says \"Vishay Israel Ltd. Transducers\".\n\nNow, Tedea-Huntleigh and Vishay Precision are related companies. Tedea-Huntleigh is a brand of Vishay Precision Group. Vishay Israel Ltd. Transducers is another related entity. Actually, Tedea-Huntleigh Israel Ltd. was acquired by Vishay Measurements Group / Vishay Precision Group. Vishay Israel Ltd., Transducers Division is the legal entity in Israel (Netanya? or Holon). Tedea-Huntleigh is the brand name for load cells made by Vishay Israel Ltd. Transducers.\n\nSo \"Tedea-Huntleigh or Vishay Precision\" vs \"Vishay Israel Ltd. Transducers\" — these are related but the names are genuinely different. Are they the same entity? Tedea-Huntleigh is a brand; Vishay Precision is a group. Vishay Israel Ltd. Transducers is the legal manufacturing entity. The certificate text itself says \"Tedea-Huntleigh or Vishay Precision\" which looks like a handwritten or typed applicant field with an \"or\" — that could be extraction noise or genuine dual naming.\n\nHmm. Is this \"same-entity\"? Tedea-Huntleigh load cells are manufactured by Vishay Israel Ltd. Transducers. So the applicant could legitimately be named either way, but strictly they're different names: one is a brand name, the other a legal entity name. The rule says: \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\"\n\n\"Tedea-Huntleigh or Vishay Precision\" vs \"Vishay Israel Ltd. Transducers\" — these aren't spelling drift; they're genuinely different names (brand vs legal entity). So verdict = different-entity, best_value = document's \"Tedea-Huntleigh or Vishay Precision\".\n\nAlternatively, one could argue same-entity because the whole corporate family is Vishay and Tedea-Huntleigh is Vishay Precision Group brand. But the rules are explicit: same-entity is for spelling/legal-suffix/accent drift only. \"Tedea-Huntleigh\" is not a variant of \"Vishay Israel Ltd. Transducers.\" The document is the legal instrument, and the applicant as printed on the certificate is \"Tedea-Huntleigh or Vishay Precision\" (truncated by context, but that's what's given). So different-entity with best_value from document.\n\nThe \"or\" in the document value might hint at extraction artifact (\"Tedea-Huntleigh or Vishay Precision\" seems like a deliberate dual listing on the cert — some NMi certs list \"Applicant: Tedea-Huntleigh or Vishay Precision\"). Actually on NMi certificates for Tedea load cells, applicant is often listed as \"Vishay Israel Ltd., Transducers Division\" while the brand is Tedea-Huntleigh. But per the given data, the document says Tedea-Huntleigh or Vishay Precision.\n\nVerdict: different-entity, best_value = \"Tedea-Huntleigh or Vishay Precision\".\n\nWhy: brand/group trade name differs from the registered legal entity name; certificate is the legal instrument so carry its applicant.\n\nOne short sentence.\n\nJSON output only one object.",
+      "signature": "d8f2394d3d374ad38db25d7e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"different-entity\", \"best_value\": \"Tedea-Huntleigh or Vishay Precision\", \"why\": \"The document names the applicant as the Tedea-Huntleigh/Vishay Precision trading identity, not a spelling variant of the registered legal entity 'Vishay Israel Ltd. Transducers', and the certificate is the legal instrument.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 477,
+    "output_tokens": 830,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

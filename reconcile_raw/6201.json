@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111151086e27b67726464c2f",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: conflict on axis \"applicant\": register says \"Zebra Technologies\", document says \"Zebra Technologies Corp\". This is legal-suffix drift — same entity. Rules say spelling drift, legal-suffix drift = same-entity. Best value: for same-entity, what should the fused record carry? The rules say \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" For same-entity generally, presumably register canonical form is preferred? The rules only specify best_value explicitly for document-noise (register) and different-entity (document). For same-entity, the register is the canonical database; \"Zebra Technologies\" is the register's form. Legal-suffix drift: \"Corp\" is a legal suffix. So same-entity, best_value = \"Zebra Technologies\" (register canonical form). Why: legal-suffix drift (\"Corp\") denotes the same applicant, keep register's canonical form.\n\nOutput one JSON object.",
+      "signature": "25e35862785c48fbbe558210"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zebra Technologies\", \"why\": \"The document merely adds the legal suffix 'Corp' to the same applicant, so the register's canonical name is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 256,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011114951adec5d098bb44fd4",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict:\n\n- Register: \"Shanghai Teraoka Electronic Co., Ltd.\"\n- Document: \"Shanghai Teraoka Electronics Co.,Ltd.\"\n\nDifference: \"Electronic\" vs \"Electronics\". This is spelling drift of a word (singular vs plural) in a company name, plus punctuation/formatting differences in the suffix (\"Co., Ltd.\" vs \"Co.,Ltd.\"). Per the rules, spelling drift and legal-suffix drift = same-entity. Best value — the rules say for same-entity, best_value presumably the register's canonical form? Actually the rules only specify best_value explicitly for different-entity (document's) and document-noise (register's). For same-entity, the register's canonical form seems sensible since register is the database row / canonical registry. Number/year format differences = same-entity with register's canonical form. For name drift, best value should be register's canonical form too.\n\nVerdict: same-entity, best_value: \"Shanghai Teraoka Electronic Co., Ltd.\" (register's form).\n\nOne short sentence why: only a singular/plural spelling drift in the company name; same entity, keep register's canonical form.",
+      "signature": "6b00727adb1c4b1b8a9b0a79"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Shanghai Teraoka Electronic Co., Ltd.\",\n      \"why\": \"The only differences are a singular/plural spelling drift ('Electronic' vs 'Electronics') and punctuation/suffix spacing, which denote the same company, so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 331,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

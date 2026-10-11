@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102205472904fdba98e845a9",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: two values for \"applicant\" axis:\n- register: \"Endress + Hauser Flowtec AG\"\n- document: \"Endress+Hauser Flowtec AG\"\n\nDifference: spaces around the \"+\" in \"Endress + Hauser\" vs \"Endress+Hauser\". This is spacing/formatting drift — clearly the same company. Per rules, spelling drift, legal-suffix drift = same-entity. Which best value? The certificate document is the legal instrument; the document says \"Endress+Hauser Flowtec AG\" (as printed on the certificate). For same-entity, the rules say for number/year format differences use register's canonical form, but for same-entity generally, which value should the fused record carry? The rule says for different-entity, best value = document's. For same-entity with number/year format differences, best_value = register's canonical form. Here it's a name spelling/spacing drift. Arguably the document's form \"Endress+Hauser Flowtec AG\" matches the official branding and the legal instrument. But the register is the OIML-CS database canonical row. Hmm.\n\nThe rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" They don't specify best_value for that case except for number/year formats. Given the certificate is the legal instrument, the document's form is authoritative for the name. I'll pick document's \"Endress+Hauser Flowtec AG\" — matches the legal certificate text. Either is defensible; I'll go with document since the certificate is the legal instrument and the compact form matches the manufacturer's branding.\n\nActually, let me reconsider: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" This suggests register canonical form for identifiers. For names, the document is the legal instrument. The applicant name is a legal entity name on the certificate. I'll use the document's value.\n\nOne JSON object.",
+      "signature": "64315937378f4da883e0c561"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Endress+Hauser Flowtec AG\", \"why\": \"The only difference is spacing around the '+' in the company name, which is trivial formatting drift identifying the same applicant, and the fused record should carry the compact form as printed on the legal certificate document.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 466,
+    "output_tokens": 482,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,203 @@
+_meta:
+  cert_id: 6942
+  num: R76/2006-A-NL1-25.14 Rev. 1
+  applicant: Técnicas de Electrónica Y Automatismos, S.A.
+  issuing_year: '2026'
+  status: Valid
+  issuer: NL1
+  recommendation: R76
+  edition_year: 2006
+  extraction_method: glm-extract
+  source_pdf: certificates/R76/2006/r76-2006-nl1-2025-14-rev1.pdf
+certificate:
+  number: R76/2006-A-NL1-25.14
+  scheme: A
+  project_number: '4087013'
+  page_total: 3
+  member_state: The Netherlands
+  date_issued: '2026-07-07'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijseweg 11
+  - 2629 JA Delft
+  - the Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Técnicas de Electrónica y Automatismos, S.A.
+  address_lines:
+  - C/Espronceda 180
+  - '08018 Barcelona'
+  - Spain
+manufacturers:
+- name: Técnicas de Electrónica y Automatismos, S.A.
+  address_lines:
+  - C/Espronceda 180
+  - '08018 Barcelona'
+  - Spain
+certified_type:
+  category: Indicator
+  type_designations:
+  - Matrix II
+  module_designation:
+characteristics:
+  type_level:
+    accuracy_class:
+      value: III or IIII
+    weighing_ranges:
+      value: Single interval or Multiple range
+    maximum_number_of_weighing_ranges:
+      value: 2
+    maximum_number_of_load_platforms:
+      value: 2
+    temperature_range:
+      value:
+        min: -10
+        max: 40
+      unit_symbol: "°C"
+      unit_id: u:degree_Celsius
+    electromagnetic_environment_class:
+      value: E2
+    power_supply_restriction:
+      value: Not suitable for a road vehicle power supply
+    software_identification:
+      value: V1.x or V2.x (x is a number between 0 and 9999)
+    software_version_display_method:
+      value: >-
+        Displayed at start-up or by pressing the keys in the sequence SETUP → INDICATOR → CONFIG → SW.VERSION
+  config_level:
+  - attribute: maximum_number_of_scale_intervals_one_weighing_range
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value:
+        min:
+        max: 6000
+  - attribute: maximum_number_of_scale_intervals_multiple_range
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells (per weighing range)
+      value:
+        min:
+        max: 6000
+  - attribute: load_cell_excitation_voltage_dc
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 6
+      unit_symbol: V
+  - attribute: load_cell_power_supply_voltage_dc
+    axis: load_cell_type
+    values:
+    - condition: Digital load cells
+      value: 18
+      unit_symbol: V
+  - attribute: minimum_signal_input_voltage
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 0
+      unit_symbol: mV
+  - attribute: minimum_input_voltage_per_verification_scale_interval
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 0.6
+      unit_symbol: µV
+  - attribute: minimum_load_cell_resistance
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 43
+      unit_symbol: Ω
+  - attribute: maximum_load_cell_resistance
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 2000
+      unit_symbol: Ω
+  - attribute: fraction_of_maximum_permissible_error
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 0.5
+    - condition: Digital load cells
+      value: 0
+  - attribute: load_cell_interface
+    axis: load_cell_type
+    values:
+    - condition: Analog load cells
+      value: 6-wire with sense technology, may be configured as 4-wire
+  - attribute: maximum_cable_length_per_cross_wire_section
+    axis: load_cell_type
+    values:
+    - condition: >-
+        Analog load cells (if sense technology is not used, load cells are connected directly without
+        junction box or extension cable)
+      value: 400
+      unit_symbol: m/mm²
+  - attribute: power_supply_voltage
+    axis: power_supply_type
+    values:
+    - condition: AC mains
+      value:
+        min: 100
+        max: 240
+      unit_symbol: V
+    - condition: DC
+      value: 18
+      unit_symbol: V
+  - attribute: power_supply_frequency
+    axis: power_supply_type
+    values:
+    - condition: AC mains
+      value:
+        min: 50
+        max: 60
+      unit_symbol: Hz
+recommendation:
+  id: R76-1
+  edition: 2006
+  scheme: A
+  accuracy_classes:
+  - III
+  - IIII
+test_reports:
+- id: NMi-3799097-01
+  date: '2025-09-04'
+  pages: 38
+  role: test_report
+- id: NMi-3799097-02
+  date: '2025-09-04'
+  pages: 22
+  role: test_report
+- id: NMi-3799097-03
+  date: '2025-09-04'
+  pages: 22
+  role: test_report
+- id: NMi-3799097-04
+  date: '2025-09-04'
+  pages: 9
+  role: test_report
+- id: NMi-4087013-01
+  date: '2026-07-07'
+  pages: 15
+  role: test_report
+- id: NMi-4087013-02
+  date: '2026-07-07'
+  pages: 24
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2025-09-12'
+  changes: Initial issue.
+- revision: '1'
+  date: '2026-07-07'
+  changes: >-
+    Evaluation of Combination of platforms as weighing range and adding new software identification. Increasing
+    maximum loadcell impedance.

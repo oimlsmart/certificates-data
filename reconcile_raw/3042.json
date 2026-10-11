@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011072155023f7757fb884f1c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R049/2006-NL1-2012.01 Rev. 1\"\n- Document: \"R49-1/2006-NL1-12.01 revision 1\" (from the certificate title: \"OIML Certificate N° R49-1/2006-NL1-12.01 revision 1\")\n\nThe rule says: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nLet me verify they denote the same certificate:\n- R049 vs R49: the Recommendation is R 49 (Measuring systems for liquefied natural gas? Actually R49 is \"Measuring systems for hydrogen fuel\" — no, R139 is hydrogen; R49 is \"Measuring systems for liquefied natural gas\"? Let me not worry; R049 vs R49 is just zero-padding).\n- /2006: OIML Recommendation R49 (2006) edition year. Both have 2006.\n- NL1: issuing authority NL1 (NMi, Netherlands). Both.\n- 2012.01 vs 12.01: year format difference — 2012 vs '12 (two-digit year). Same certificate number 01. Both revision 1 (\"Rev. 1\" vs \"revision 1\").\n\nSo clearly the same certificate, just formatting differences: zero padding, hyphen vs slash separators, two-digit year abbreviation. Register canonical form: \"R049/2006-NL1-2012.01 Rev. 1\".\n\nWait — the document also includes \"-1\" after R49: \"R49-1/2006-NL1-12.01\". Hmm, that could be \"R 49-1\" meaning a part? Actually the file name is \"r049-2006-nl1-2012-01-rev1.pdf\" — the \"-01\" is the certificate number 01. In the document title \"R49-1/2006-NL1-12.01\", the \"-1\" might be part of the certificate numbering like \"R 49-1/2006-NL1-12.01\" — hmm. Actually OIML certificates are often labeled like \"R49/2006-NL1-12.01\". The document title shows \"R49-1/2006-NL1-12.01 revision 1\". The \"-1\" could be an artifact or the document might be for part 1... But given the embedded comments in the document context (extraction_method, cert_id 3042, num: R049/2006-NL1-2012.01 Rev. 1), the register value matches the extraction. The rule explicitly covers this: number/year format differences clearly denoting the same certificate → same-entity with register's canonical form.\n\nVerdict: same-entity, best_value = \"R049/2006-NL1-2012.01 Rev. 1\".\n\nOne short sentence why: zero-padding (R049/R49), separator and two-digit-year (2012 vs 12) differences plus matching revision denote the same certificate; register form is canonical.\n\nOutput one JSON object.",
+      "signature": "09913ad0b46a4a4bbe7d73dc"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R049/2006-NL1-2012.01 Rev. 1\", \"why\": \"Zero-padding (R049 vs R49-1), slash/hyphen separators, and two-digit vs four-digit year (2012 vs 12) are pure formatting drift, and both carry revision 1, so they denote the same certificate; the register form is canonical.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 462,
+    "output_tokens": 787,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

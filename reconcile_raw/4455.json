@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010220254e5f50d7cd82247a7",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: compare register vs document for axis \"applicant\".\n\nRegister: \"Tokheim Sofitam Applications S.A.S.\"\nDocument: \"Tokheim Sofitam Applications S.A.S part of Dover Fueling Solutions\"\n\nThe document value contains the same company name but with \"part of Dover Fueling Solutions\" appended. Is this an extraction artifact (glued text) or genuinely additional info? The document text says \"Applicant and Manufacturer: Tokheim Sofitam Applications S.A.S part of Do\" — the \"part of Do\" is truncated, presumably \"part of Dover Fueling Solutions\". This looks like the certificate itself describes Tokheim Sofitam as \"part of Dover Fueling Solutions\" — that's a corporate relationship, so the document's fuller text may be legitimate certificate content, not noise. However, the rule says: extraction artifacts (address fragments glued into a name) = document-noise with best_value from register. Here \"part of Dover Fueling Solutions\" is a corporate affiliation phrase, not an address fragment or OCR noise. The core company name is identical (S.A.S. vs S.A.S — legal-suffix drift, same entity).\n\nVerdict: same-entity? Or document-noise? The names refer to the same entity; the document adds descriptive affiliation. The rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" The suffix difference S.A.S. vs S.A.S is minor. The appended \"part of Dover Fueling Solutions\" — is that part of the name? It's descriptive. So same-entity, best_value: the register's canonical form \"Tokheim Sofitam Applications S.A.S.\" since it's the clean canonical legal name. Actually should best_value be the document's richer value? The rule says number/year format differences = same-entity with register's canonical form. For same-entity generally, best value could be either. Given the fused record should carry the canonical name, register's form is cleaner. The document's extra phrase is contextual info, not part of the legal name.\n\nAlternatively, one could argue document-noise because \"part of Dover Fueling Solutions\" is glued on (truncated in raw text \"part of Do\"). But it's not OCR noise; it's meaningful. The document is truncated (\"part of Do\" cut off), and the parsed document field completed it. The certificate indeed states the applicant is part of Dover Fueling Solutions. Hmm.\n\nThe safest: verdict \"same-entity\", best_value = \"Tokheim Sofitam Applications S.A.S.\" with why noting the document appends a corporate affiliation, not a different entity.\n\nOutput format: single JSON object with axes array.",
+      "signature": "a4a2f942d33546269102eec3"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Tokheim Sofitam Applications S.A.S.\", \"why\": \"The document names the identical company (S.A.S. suffix drift only) and merely appends the corporate affiliation 'part of Dover Fueling Solutions', which is descriptive context rather than a different legal entity, so the register's canonical legal name is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 633,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011094611620a4c83182b4ba8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R60/2017-A-NL1-22.32 Rev. 0\"\n- Document: \"R60/2017-A-NL1-22-32\"\n\nThe register form is \"R60/2017-A-NL1-22.32 Rev. 0\" — this appears to be a canonical form used in the OIML-CS database. The document says \"R60/2017-A-NL1-22-32 revision 0\" (from the certificate text: \"Number R60/2017-A-NL1-22-32 revision 0\").\n\nThese clearly denote the same certificate: \"22.32\" vs \"22-32\" is just a separator/number format difference (dot vs hyphen). Also \"Rev. 0\" vs \"revision 0\" is the same thing.\n\nPer the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value = register's form: \"R60/2017-A-NL1-22.32 Rev. 0\".\n\nAlso note the cert_id 5749 matches, issuer NL1, year 2022 matches \"22\" in the number — all consistent.\n\nReturn one JSON object with the axes array containing one entry.",
+      "signature": "5677a994435d417b908967e9"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R60/2017-A-NL1-22.32 Rev. 0\", \"why\": \"The document's 'R60/2017-A-NL1-22-32' is the same certificate number as the register's canonical form, differing only in separator style ('-32' vs '.32') and 'revision 0' vs 'Rev. 0', so the register's canonical form wins.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 467,
+    "output_tokens": 401,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

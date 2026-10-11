@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011102915a76db14b45c842de",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Shanghai Teraoka Electronic Co., Ltd.\"\n- Document: \"Shanghai Teraoka Electronics Co Ltd.\"\n\nCompare: \"Electronic\" vs \"Electronics\" — slight plural drift. \"Co., Ltd.\" vs \"Co Ltd.\" — punctuation/legal-suffix formatting drift. Same entity clearly. This is spelling drift / legal-suffix drift = same-entity.\n\nBest value: Which one should the fused record carry? The rules say same-entity. For applicant (a company name), which is best? The document is the legal instrument... but the rule for different-entity says document's value is best because certificate is legal instrument. For same-entity, the rule about number/year formats says register's canonical form. For names with drift, typically the document is the authoritative source since the certificate is the legal instrument. Hmm.\n\nThe rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" They don't explicitly say which value to pick for same-entity on names. But the general principle stated: \"the certificate is the legal instrument\" — document text is authoritative. So best_value = document's value \"Shanghai Teraoka Electronics Co Ltd.\" Actually, the register likely came from extraction too. The register value has proper punctuation \"Co., Ltd.\" — which is the more standard legal form for a Chinese company (有限公司 = Co., Ltd.). Hmm.\n\nGiven the stated rule for different-entity explicitly prefers document as legal instrument, the underlying principle favors the document value for names. For same-entity spelling drift, either is defensible; but consistency: the fused record should carry the document's rendering since the certificate is the legal instrument. However, one could argue the register's canonical form is better normalized (with punctuation). The rule mentions \"register's canonical form\" only for number/year format differences. So for name drift, I'd pick the document's value.\n\nActually wait — let me reconsider. The register value \"Shanghai Teraoka Electronic Co., Ltd.\" is more formally punctuated. The document value \"Shanghai Teraoka Electronics Co Ltd.\" drops punctuation. Both refer to the same company. Since certificate is legal instrument, best_value = document value.\n\nHmm, but there is a counterargument: the register canonical form might be preferable for matching/dedup. The rules only mandate register canonical form for numbers/years. I'll go with document value and note it's the legal instrument.\n\nVerdict: same-entity, best_value: \"Shanghai Teraoka Electronics Co Ltd.\" — why: only plural/punctuation drift (\"Electronic\" vs \"Electronics\", \"Co., Ltd.\" vs \"Co Ltd\") denoting the same company.\n\nOutput one JSON object.",
+      "signature": "02d2f4eb10f944a5a0840f1a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Shanghai Teraoka Electronics Co Ltd.\",\n      \"why\": \"The two renderings differ only by plural/punctuation drift ('Electronic' vs 'Electronics', 'Co., Ltd.' vs 'Co Ltd'), clearly denoting the same company, so the fused record carries the certificate document's wording as the legal instrument.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 664,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

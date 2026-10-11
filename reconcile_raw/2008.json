@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011080715c8ed1018866444d3",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: compare register vs document for axis \"applicant\".\n\nRegister: \"Qingdao Tongle Electronic Technology C.o. Ltd\"\nDocument: \"Qingdao Tongle Electronic Technology CO., LTD\"\n\nBoth refer to the same company name; difference is in the legal suffix casing/punctuation: \"C.o. Ltd\" vs \"CO., LTD\". That's legal-suffix drift and formatting — same-entity. Best value: which form should the fused record carry? The rules say same-entity: \"spelling drift, legal-suffix drift, accent differences = same-entity\". Best value should presumably be the document's since the certificate is the legal instrument, or the register's canonical form? The rules only specify best_value for document-noise (register) and different-entity (document) and same-entity for number/year (register canonical). For same-entity spelling drift, the document is the legal instrument, so the document's cleaner form is preferable. \"Qingdao Tongle Electronic Technology CO., LTD\" is the more standard legal form. The register's \"C.o. Ltd\" looks like an extraction artifact itself (odd casing). So best_value = document's value.\n\nVerdict: same-entity. Why: only casing/punctuation drift in the legal suffix \"CO., LTD\" vs \"C.o. Ltd\" denotes the same company.",
+      "signature": "bf365939491a4b3395e5054a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Qingdao Tongle Electronic Technology CO., LTD\",\n      \"why\": \"The two strings differ only in casing/punctuation of the legal suffix (\\\"C.o. Ltd\\\" vs \\\"CO., LTD\\\"), clearly denoting the same company, and the document's form is the proper legal rendering from the certificate itself.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 376,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

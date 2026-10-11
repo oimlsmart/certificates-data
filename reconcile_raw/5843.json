@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011073615a9a3aa65536f48fc",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: num\n- Register: \"R49/2006-FR2-11.01 Rev. 0\"\n- Document: \"2006-FR2-11.01 rev0\"\n\nThese are clearly the same certificate number. The register includes the \"R49/\" prefix and \"Rev. 0\" formatting, while the document has \"2006-FR2-11.01 rev0\" — the same core identifier (2006-FR2-11.01) with revision formatting drift (rev0 vs Rev. 0). The register's form is the canonical form per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: \"R49/2006-FR2-11.01 Rev. 0\"\n\nWhy: One short sentence explaining that the document's string is the same certificate identifier with minor formatting drift, so use register's canonical form.\n\nOutput format: single JSON object with axes array.",
+      "signature": "2a780914ab40411ca38b4d50"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R49/2006-FR2-11.01 Rev. 0\", \"why\": \"The document's '2006-FR2-11.01 rev0' is the same certificate identifier as the register's value with only prefix and revision formatting drift, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 457,
+    "output_tokens": 311,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

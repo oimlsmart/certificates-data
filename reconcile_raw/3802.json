@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011091035ad4e7a7f2fc84945",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: applicant\n- register: \"Dongguan South China Sea Electronic Company Ltd\"\n- document: \"Dongguan South China Sea Electronic Co., Ltd.\"\n\nThis is clearly the same company, just a legal-suffix/spelling drift: \"Company Ltd\" vs \"Co., Ltd.\" — abbreviation and punctuation differences. Rule says spelling drift, legal-suffix drift = same-entity.\n\nBest value: which one? The rule for same-entity doesn't explicitly say which value to pick, but the \"document-noise\" rule says best_value from the register. For same-entity, presumably we pick the document's form since the certificate is the legal instrument? Actually the rules only specify best_value explicitly for document-noise (register) and different-entity (document). For same-entity, we need to decide. The certificate document is the legal instrument, so the document's own rendering of the applicant name would be preferable: \"Dongguan South China Sea Electronic Co., Ltd.\" However, one could argue register canonical form. The rules mention \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" That's for number/year format specifically — register canonical form. For applicant names, same-entity... Hmm.\n\nGiven the document is the legal instrument, and the only register-canonical-form rule is for certificate numbers, I'd pick the document's value \"Dongguan South China Sea Electronic Co., Ltd.\" as best_value since the certificate is the legal instrument and the more standard legal suffix form.\n\nSo verdict: same-entity, best_value: \"Dongguan South China Sea Electronic Co., Ltd.\", why: spelling/legal-suffix drift (\"Company Ltd\" vs \"Co., Ltd.\") denotes the same company, and the certificate document is the legal instrument.\n\nReturn one JSON object with axes array containing the applicant axis.",
+      "signature": "e4f031f98f144ead8169bb8a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Dongguan South China Sea Electronic Co., Ltd.\",\n      \"why\": \"'Company Ltd' vs 'Co., Ltd.' is pure legal-suffix/punctuation drift for the same company, and the certificate document is the legal instrument so its rendering is carried into the fused record.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 470,
+    "output_tokens": 476,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

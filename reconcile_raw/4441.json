@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011112524ea29fcae9fcc4a4c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Precisa Gravimetrics A.G.\"\n- Document: \"Precisa Gravimetrics AG\"\n\nThis is clearly a legal-suffix/formatting drift: \"A.G.\" vs \"AG\" — the same Swiss company (Aktiengesellschaft). Per rules, legal-suffix drift = same-entity. Best value: which one? The rules say for same-entity, we need to pick the best value. For number/year format differences, the register's canonical form. For spelling drift, presumably pick... The rules say \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\" For same-entity, the register is canonical (as shown by the number/year rule). The document itself says \"Precisa Gravimetrics AG\" — which is the correct legal form actually (Swiss AG without dots). But per rules, register is canonical for same-entity? The rule explicitly only says for number/year format differences, the register's canonical form. For spelling drift cases, ambiguous. Given the register is the canonical database and same-entity, best_value = register's form \"Precisa Gravimetrics A.G.\" Hmm, but the document is the legal instrument. However, since it's the same entity and the certificate document itself confirms the name, either is defensible. The register is the canonical database, and the fused record typically takes register canonical form for same-entity matches. I'll go with register form.\n\nActually, let me think: the rules for same-entity don't explicitly say which value; only for number/year differences they specify register canonical. The default fused record behavior: register is canonical. I'll use register value with a why noting suffix drift (\"A.G.\" vs \"AG\" same Swiss legal form).\n\nVerdict: same-entity, best_value: \"Precisa Gravimetrics A.G.\" (register canonical form).",
+      "signature": "768120c4a9a740e7bd54c6e5"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Precisa Gravimetrics A.G.\", \"why\": \"'A.G.' vs 'AG' is mere legal-suffix formatting drift for the same Swiss company, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 482,
+    "output_tokens": 473,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

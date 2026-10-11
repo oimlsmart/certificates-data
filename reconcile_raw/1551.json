@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011064735d6b9f4b709854d5c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"ACTARIS S.A.S.\"\n- Document: \"ACTARISS.A.S.\"\n\nThe document value \"ACTARISS.A.S.\" appears to be missing a space between \"ACTARIS\" and \"S.A.S.\" — this is clearly a spacing extraction artifact (OCR/extraction noise gluing the company name and legal suffix together). \"ACTARIS S.A.S.\" vs \"ACTARISS.A.S.\" — same company, just missing whitespace.\n\nAccording to the rules:\n- spelling drift, legal-suffix drift, accent differences = same-entity\n- Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register\n\nIs this spelling drift (same-entity) or an extraction artifact (document-noise)?\n\nThe missing space is a classic extraction/OCR artifact — whitespace loss during text extraction. The rules say \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\" A glued/missing space causing words to run together fits \"glued into\" — the name and suffix got glued together. This is document-noise.\n\nAlternatively, one could argue it's spelling drift = same-entity with best_value... but same-entity would presumably take register's canonical form too? Actually same-entity rules say \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form\" — that's for number/year. For spelling drift same-entity, best_value could be either, but register is canonical typically.\n\nWhich verdict is more precise? \"ACTARISS.A.S.\" is clearly an extraction artifact — the space was lost. The document-noise verdict with best_value from register fits perfectly: \"document-noise\" means the document's rendering is corrupted, and the register's clean value is used.\n\nVerdict: document-noise, best_value: \"ACTARIS S.A.S.\", why: the document string is the register value with a lost space (OCR/extraction artifact gluing name and legal suffix).\n\nOutput JSON:\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"ACTARIS S.A.S.\", \"why\": \"The document string 'ACTARISS.A.S.' is just the register value with the space before the legal suffix lost in extraction, so the register form is kept.\"}]}",
+      "signature": "27c7a83fedc744c4bd8dab2c"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"document-noise\", \"best_value\": \"ACTARIS S.A.S.\", \"why\": \"The document string 'ACTARISS.A.S.' is the register value with the space before the legal suffix lost to an extraction/OCR artifact, so the clean register form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 473,
+    "output_tokens": 579,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011104706e378d409eb8a4138",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: applicant axis. Register: \"Shang Hai Digital Balance Electronic Co., LTD\". Document: \"Shanghai Digital Balance Electronic Co., Ltd.\"\n\nBoth refer to the same company: \"Shang Hai\" vs \"Shanghai\" — spelling drift/romanization variant of the same name (上海). Legal suffix \"LTD\" vs \"Ltd.\" — suffix drift. So same-entity. Best value: which one? Rules say same-entity — need to pick best value. For same-entity with register canonical form rule only applies to number/year formats. For applicant same-entity, best value should be the register's canonical form presumably (fused record should carry a canonical value). The rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" It doesn't explicitly say best value for same-entity name conflicts, but generally register is the canonical curated record. The document-noise rule says best_value from register; different-entity says document's value. For same-entity, register's canonical form makes sense (register is presumably curated). So best_value = register value: \"Shang Hai Digital Balance Electronic Co., LTD\".\n\nHmm, but could argue document value is the legal instrument. But same-entity means only cosmetic differences; use register canonical. I'll go with register.",
+      "signature": "491d011c021a400da293589b"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Shang Hai Digital Balance Electronic Co., LTD\", \"why\": \"\\\"Shang Hai\\\" vs \\\"Shanghai\\\" is romanization/spelling drift and \\\"LTD\\\" vs \\\"Ltd.\\\" is legal-suffix drift for the same company, so the register's canonical form is retained.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 347,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

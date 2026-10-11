@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011093839fa94dcccc9a44d27",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: certificate number axis conflict.\n\nRegister: \"R60/2017-A-NL1-22.01 Rev. 1\"\nDocument: \"R60/2017-A-NL1-22-01\"\n\nThe document text shows \"R60/2017-A-NL1-22-01 revision 1\" — the register includes \"Rev. 1\" and uses a dot \"22.01\" vs document \"22-01\". These are number/year format differences clearly denoting the same certificate: same-entity, best_value = register's canonical form (per the rule).\n\nNote the register includes \" Rev. 1\" while document says \"revision 1\" separately. The rule: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: \"R60/2017-A-NL1-22.01 Rev. 1\".\n\nReturn JSON object with axes array containing one entry.",
+      "signature": "f15d34a75b9d4cedaa1de8c3"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R60/2017-A-NL1-22.01 Rev. 1\", \"why\": \"Both forms denote the same NL1 2022 certificate with only separator drift (dot vs hyphen) and the register additionally folds in the revision, so the register's canonical form wins.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 294,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

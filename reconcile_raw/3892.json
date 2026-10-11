@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011105909fe88086d46db4c65",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: issuer_code\n- Register: \"GB1\"\n- Document: \"0135\"\n\nContext: The certificate document text shows:\n- cert_id: 3892 (matches register id 3892)\n- num: R076/2006-GB1-2016.05 (matches the register's certificate number, containing \"GB1\")\n- issuer: GB1 (in the embedded metadata/comments)\n- The certificate body shows \"National Measurement & Regulation Office\" — the UK issuing authority — Member State: United Kingdom.\n\nThe certificate number itself is \"R076/2006-GB1-2016.05\" which contains \"GB1\" as the issuing country/service code. GB1 is the OIML issuing country code for the United Kingdom (GB = Great Britain, and the \"1\" indicates the first issuing body). The document's own embedded metadata says issuer: GB1.\n\nWhere does \"0135\" come from? Possibly it's an extraction from somewhere in the PDF — perhaps a page number, a certificate serial, or some OCR artifact. The document context shown doesn't contain \"0135\" anywhere visible. The document text contains the metadata comments which say issuer: GB1. So \"0135\" as issuer_code is likely an extraction artifact or OCR noise — maybe from a footer number or a serial number misattributed to issuer_code.\n\nThe certificate number format for OIML certificates: R076/2006-GB1-2016.05 where GB1 = issuing country/body, 2016 = year, 05 = serial number. So \"05\" is the certificate serial, \"2016\" the year. \"0135\" doesn't match the format.\n\nGiven:\n1. The document's own text explicitly includes \"issuer: GB1\" in the metadata.\n2. The certificate number includes GB1.\n3. The certificate body shows the UK authority (NWML / National Measurement and Regulation Office), consistent with GB1.\n4. \"0135\" appears nowhere in the document context and is likely OCR noise or an extraction artifact (perhaps a page number or form code).\n\nVerdict: document-noise, best_value = \"GB1\" (from register).\n\nActually, could \"0135\" be a different entity? GB1 is a country/body code; \"0135\" looks like a numeric sequence — could it be a body number? Some OIML issuing bodies have numeric IDs internally. But the rules say extraction artifacts/OCR noise = document-noise with best_value from register. The register's GB1 aligns with the document's own metadata (\"issuer: GB1\") and the certificate number. So the fused record should carry GB1.\n\nVerdict: document-noise, best_value \"GB1\".\n\nWhy: The certificate's own metadata and number embed GB1 (UK issuing body); \"0135\" appears nowhere in the document text and is likely OCR/extraction noise, so the register's canonical form stands.\n\nOutput one JSON object.",
+      "signature": "f1dec32ba33843cfb2319ea8"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"issuer_code\", \"verdict\": \"document-noise\", \"best_value\": \"GB1\", \"why\": \"The certificate's own embedded metadata states issuer: GB1 and the certificate number R076/2006-GB1-2016.05 encodes GB1 as the UK issuing body, while '0135' appears nowhere in the document text and is evidently an OCR/extraction artifact, so the register's canonical form should be kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 408,
+    "output_tokens": 739,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

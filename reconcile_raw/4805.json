@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101021595391589bef930a4271",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Hyteck (GB) Ltd\"\n- Document: \"Hytek (GB) Ltd\"\n\nThe difference is \"Hyteck\" vs \"Hytek\" — a one-letter spelling difference in the company name. According to the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\"\n\n\"Hyteck\" vs \"Hytek\" is clearly a spelling variation of the same company name — likely the actual company is \"Hytek (GB) Ltd\" or \"Hyteck (GB) Ltd\". Let me think about which is the best value.\n\nThe rules say spelling drift = same-entity. But which value should be best? The rules say:\n- Extraction artifacts / OCR noise = document-noise with best_value from the register.\n- Genuinely different names = different-entity with best_value from the document.\n- Number/year format differences = same-entity with register's canonical form.\n\nFor same-entity due to spelling drift, the rules don't explicitly say which value to use, but the pattern suggests the register's canonical form (since same-entity cases default to register canonical form). Also, \"the certificate is the legal instrument\" only applies for different-entity. For same-entity, the register's canonical form seems preferred.\n\nActually, let me check reality: Hytek (GB) Ltd is a real company — Hytek GB Ltd is a water treatment company in the UK. But I shouldn't rely too much on that; the rules given are what matter. Spelling drift = same-entity. Best value: presumably the register's canonical form \"Hyteck (GB) Ltd\"... but wait, actually the document is the legal instrument. Hmm.\n\nThe rules structure:\n1. same-entity (spelling/suffix/accent drift) — value preference not stated explicitly, but \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form\" suggests register canonical form for same-entity.\n2. document-noise — best_value from register.\n3. different-entity — best_value from document.\n\nSo for same-entity, register's canonical form. So best_value = \"Hyteck (GB) Ltd\".\n\nHmm, but one could argue the document is the legal instrument so its spelling of the applicant should win. However, following the rules as given: same-entity → register canonical form. The only case where document wins is different-entity.\n\nVerdict: \"same-entity\", best_value: \"Hyteck (GB) Ltd\", why: one short sentence about spelling drift.\n\nOutput one JSON object.",
+      "signature": "15ba4d06e63f49a99418f01a"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Hyteck (GB) Ltd\", \"why\": \"Hyteck vs Hytek is a one-letter spelling drift for the same company, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 476,
+    "output_tokens": 597,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

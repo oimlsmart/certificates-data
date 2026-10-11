@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011090534b09ba74947bc4a42",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the two conflicts:\n\n**Axis num:**\n- Register: \"R060/2000-NL1-2013.17\"\n- Document: \"R60/2000-NL1-13-17\"\n\nThese are clearly the same certificate number, just formatted differently. \"R060/2000\" vs \"R60/2000\" — the OIML recommendation is R60, and \"R060\" is a zero-padded variant. \"NL1-2013.17\" vs \"NL1-13-17\" — 2013 vs 13, same year, and .17 vs -17 same sequence. This is a number/year format difference that clearly denotes the same certificate. Per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nSo verdict: same-entity, best_value: \"R060/2000-NL1-2013.17\" (register canonical form).\n\n**Axis applicant:**\n- Register: \"Mettler-Toledo Engineering Labs GmbH\"\n- Document: \"Mettler Toledo\"\n\nHmm. The document says \"Mettler Toledo\" and register says \"Mettler-Toledo Engineering Labs GmbH\". Is this the same entity with abbreviation/legal-suffix drift? The document omits \"Engineering Labs GmbH\" — that's more than legal-suffix drift; it's an abbreviated form of the company name. But is it \"genuinely different company\"? No — Mettler Toledo is clearly the same company as Mettler-Toledo Engineering Labs GmbH. It's a shortened form, missing hyphen and the \"Engineering Labs GmbH\" part. The rule says \"spelling drift, legal-suffix drift, accent differences = same-entity.\" \"Mettler Toledo\" vs \"Mettler-Toledo Engineering Labs GmbH\" — the document version is a truncated/abbreviated form. This is common in extraction — the extractor may have only captured part of the name. But is this \"document-noise\"? Document-noise is for \"address fragments glued into a name, obvious OCR noise.\" Here nothing is glued in; rather something is missing. It's an abbreviation of the same company.\n\nBest value: which is better for a fused record? The register's full legal name \"Mettler-Toledo Engineering Labs GmbH\" is more complete and canonical. The rule for same-entity doesn't explicitly say best_value = register, but for different-entity it says best = document. For same-entity, the register's canonical form seems appropriate, especially when document is a degraded/abbreviated version. The register value is the full legal name; the document's is an abbreviation. I'd say same-entity with best_value = register's \"Mettler-Toledo Engineering Labs GmbH\".\n\nAlternatively, one could argue the document is the legal instrument so its value should win, but \"Mettler Toledo\" is clearly an abbreviated extraction, not the legal name on the certificate. Actually the certificate document likely reads \"Mettler-Toledo ...\" somewhere, but extraction captured \"Mettler Toledo\" only. Given the fusion context, the register's fuller form is the canonical value. The rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form\" — by analogy, same-entity → register's canonical form.\n\nAlso note the document text extraction has artifacts (HTML comments with extraction_method glm-5.3-flash), so the document values may be extraction-derived, not literal. The \"Mettler Toledo\" could be from the certificate body. Either way, same entity.\n\nOutput JSON:\n\n```json\n{\"axes\": [\n  {\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R060/2000-NL1-2013.17\", \"why\": \"R60/2000-NL1-13-17 is the same certificate with zero-padding and 2-digit year; keep the register's canonical form.\"},\n  {\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo Engineering Labs GmbH\", \"why\": \"'Mettler Toledo' is an abbreviated form of the same company; keep the register's full legal name.\"}\n]}\n```\n\nKeep it clean.",
+      "signature": "91dc7a6a0e79497f9b0bbb7e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R060/2000-NL1-2013.17\",\n      \"why\": \"R60/2000-NL1-13-17 is the same certificate with zero-padding and a two-digit year, so keep the register's canonical form.\"\n    },\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mettler-Toledo Engineering Labs GmbH\",\n      \"why\": \"'Mettler Toledo' is an abbreviated/hyphen-drifted form of the same company, so keep the register's full legal name.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 1049,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

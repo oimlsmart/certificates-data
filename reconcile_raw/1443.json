@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101021421534be4710a094451b",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"CHROTECH GmbH\"\nDocument: \"CHROTEC GmbH\"\n\nThis is a spelling difference: \"CHROTECH\" vs \"CHROTEC\" — one character difference (\"H\" missing at end in document version, or the document lacks \"H\"). This is spelling drift of the same company name. Per rules, spelling drift = same-entity, best_value should be... hmm. For same-entity with spelling drift, which value? The rules say spelling drift = same-entity. For number/year format differences, register canonical form is used. For document-noise, register value. For different-entity, document value. For same-entity spelling drift, presumably the register's canonical form is best (the register is the OIML-CS database canonical row, and the document may have a typo or abbreviation). Actually let me think: the certificate is the legal instrument, but for spelling drift same-entity, the fused record should carry the canonical form — the register. The rules explicitly say for number/year format differences that denote same certificate, use register canonical form. For spelling drift same-entity, the natural pick is register's canonical form as well, since the register is the authoritative canonical database. Also \"CHROTECH GmbH\" appears in the document's own embedded metadata (cert_id comments show applicant: CHROTECH GmbH), which supports register. The visible text shows \"CHROTEC GmbH\" possibly truncated. Actually wait — the document context includes comments: \"<!-- applicant: CHROTECH GmbH -->\" which matches the register. The visible header text got truncated at \"<t\" so we don't see the applicant line fully. The document field says \"CHROTEC GmbH\" per the conflict listing.\n\nVerdict: same-entity. Best value: register's \"CHROTECH GmbH\". Why: single-character spelling drift denotes same applicant; register form is canonical (and matches the document's own embedded metadata).",
+      "signature": "1d2ac4effb00452eb60d5e63"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"CHROTECH GmbH\", \"why\": \"A one-character spelling drift (CHROTECH vs CHROTEC) denotes the same applicant, so the fused record keeps the register's canonical form, which is also corroborated by the document's own embedded metadata field.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 485,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

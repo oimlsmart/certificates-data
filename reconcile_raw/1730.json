@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102223480d982c78dc5d4574",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo Cargoscan AS\"\n- Document: \"Mettler-Toledo Cargoscan AS, Norway\"\n\nThe document value is the register value plus \", Norway\" (the country appended). This looks like a location/country qualifier appended to the company name — a common artifact when a certificate header shows \"Member State: Norway\" and the extraction glues it into the applicant name, or the document legitimately lists the applicant with country designation. Under the rules: \"Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register.\"\n\n\"Mettler-Toledo Cargoscan AS, Norway\" — appending the country name is arguably not a different company; it's the same entity. The \", Norway\" is a location qualifier that's redundant (the certificate itself shows Member State Norway). So this is document-noise with best_value from register, or same-entity with best_value being... hmm.\n\nThe rules say: same-entity applies to spelling drift, legal-suffix drift, accent differences. Here it's not spelling drift; it's an address/location fragment glued into the name. That matches \"address fragments glued into a name\" → document-noise with best_value from the register.\n\nSo verdict: document-noise, best_value: \"Mettler-Toledo Cargoscan AS\", why: the \", Norway\" is a country/location qualifier glued onto the name (Member State annotation), same company, register form is canonical.\n\nCould it be same-entity? The rule for same-entity covers format drift of identifiers like certificate numbers (explicitly stated for numbers/years). For names, spelling/suffix/accent. Appending a country is more like a glued address fragment. Document-noise fits best.\n\nReturn the JSON.",
+      "signature": "f9a0f9f8a47c4baca1f8379c"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"Mettler-Toledo Cargoscan AS\",\n      \"why\": \"The document value is the identical company name with the country qualifier ', Norway' glued on (echoing the Member State field), so the register's clean legal name is canonical.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 472,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

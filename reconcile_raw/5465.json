@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102145162b5302cdfb0446c8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Hyteck (GB) Ltd\"\nDocument: \"Hytek (GB) Ltd\"\n\nThese are two spellings of what appears to be the same company name: \"Hyteck\" vs \"Hytek\". The difference is \"eck\" vs \"ek\" — this is spelling drift. The rules say spelling drift, legal-suffix drift, accent differences = same-entity.\n\nWhich best_value? The rules say for same-entity, we need to pick \"the value the fused record should carry\". Hmm, the rules don't explicitly state which value to use for same-entity in the name case. Let's think:\n\n- For \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" — that specifies register's canonical form for number/year.\n- For document-noise: best_value from the register.\n- For different-entity: best_value = document's.\n\nFor same-entity spelling drift, no explicit rule. But the general principle: the register is a database row; the certificate is the legal instrument. Hmm, but the different-entity rule says the document is the legal instrument. For same-entity spelling drift, arguably the register's canonical form should be used for consistency, similar to number/year. Or the document's since it's the legal instrument?\n\nActually, for a fused record, when it's the same entity with spelling drift, the register's canonical form is typically preferred because it's the database of record, and spelling variants normalize. But one could argue the certificate (legal instrument) spelling should prevail.\n\nLet me think about typical data fusion practice: the register is the OIML-CS database, the authoritative registry. The certificate document text was extracted (extraction_method: glm-5.3-flash — an LLM extraction, prone to drift). The document context shows this is extracted text via LLM, so the document spelling could be an extraction artifact. But the rules distinguish document-noise (address fragments, OCR noise) vs spelling drift (same-entity).\n\nFor same-entity, the question is which value. The rules only specify register's canonical form for number/year. For spelling drift, I'd argue the register's form is the canonical database entry — \"Hyteck (GB) Ltd\". Actually wait — let me reconsider. The certificate is the legal instrument. If the actual PDF says \"Hytek\", then... but we can't verify the actual PDF; we only have extracted text. The extraction_method note suggests machine extraction, so the document spelling may itself be a drift introduced by extraction.\n\nStandard practice in record fusion for same-entity with minor spelling differences: prefer the more authoritative source's canonical form. The register (OIML-CS database) is authoritative for the registry. So best_value = \"Hyteck (GB) Ltd\".\n\nHmm, but the different-entity rule explicitly prefers the document \"since the certificate is the legal instrument\". That implies the document is considered more authoritative in entity identity matters. For same-entity spelling drift, though... The rule for number/year explicitly says register's canonical form. By analogy, for spelling drift within same entity, using the register's canonical form makes sense for linkage consistency — you'd want the fused record to match the register for dedup/joins.\n\nI'll go with same-entity, best_value = register's \"Hyteck (GB) Ltd\", reason: \"eck\"/\"ek\" is trivial spelling drift of the same company; keep the register's canonical spelling.\n\nActually, let me double-check: could this be genuinely different companies? \"Hyteck (GB) Ltd\" vs \"Hytek (GB) Ltd\" — extremely unlikely; same applicant, same certificate id, same issuer context. One-letter difference. Same-entity, no question.\n\nVerdict: same-entity. Best value: \"Hyteck (GB) Ltd\" (register canonical). Why: one-letter spelling drift (\"Hytek\" vs \"Hyteck\") denotes the same company; retain the register's canonical form for consistency (the doc spelling likely arose in extraction).\n\nOutput format: single JSON object.",
+      "signature": "2a486a7754e1488fbab721fe"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Hyteck (GB) Ltd\",\n      \"why\": \"One-letter spelling drift ('Hytek' vs 'Hyteck') for the same company on the same certificate, and since the document text is LLM-extracted, the register's canonical spelling should be retained.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 929,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

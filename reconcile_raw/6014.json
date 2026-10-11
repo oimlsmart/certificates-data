@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111140243c3b0b2cd4d94ae2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The question: axis issuer_code, register says \"CZ1\", document says \"CMI\". The certificate ID is R76/2006-A-CZ1-23.07 — CZ1 is embedded in the certificate number. CZ1 is the OIML issuing authority code for Czech Metrology Institute (CMI). Actually, CMI is the Czech Metrology Institute, and its OIML-CS issuer code is \"CZ1\". So \"CMI\" is the organization name and \"CZ1\" is the code. In the certificate HTML table, \"CMI\" appears as the issuing authority name (Czech Metrology Institute), and \"ESA V 3112\" is... hmm. So the document's \"CMI\" is the name of the issuer, register's \"CZ1\" is the code. Same entity, but the axis is issuer_code — a code should be the code form \"CZ1\", which matches the register and the certificate number pattern R76/2006-A-CZ1-23.07. So verdict: same-entity, best_value \"CZ1\", why: CMI is the Czech Metrology Institute whose OIML issuer code is CZ1; code field should carry the register's canonical code consistent with the certificate number.\n\nNote the \"document\" value came from the table cell where CMI is the institution name, not the code — arguably document-noise? The rules: document-noise with best_value from register applies to extraction artifacts. Here CMI is a legit name of the same entity, so same-entity is right; best value: since axis is issuer_code, the canonical code form is CZ1 (register). The rule \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form\" — analogous. I'll pick same-entity, best_value CZ1.",
+      "signature": "8c0c6f7ae02d436397aa4d6d"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"issuer_code\", \"verdict\": \"same-entity\", \"best_value\": \"CZ1\", \"why\": \"CMI (Czech Metrology Institute) is the same issuing body as code CZ1, and the certificate number itself embeds CZ1, so the code axis should carry the register's canonical code.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 438,
+    "output_tokens": 463,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

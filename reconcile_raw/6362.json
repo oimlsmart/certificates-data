@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010220919a8b4d42e207e41f2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The axis is applicant. Register says \"Total Control Systems\". Document says \"Total Control Systems, A Division of Murray Equipment, Inc.\"\n\nIs \"A Division of Murray Equipment, Inc.\" a genuine part of the legal name, or noise? On OIML certificates, the applicant is often written as \"Total Control Systems, A Division of Murray Equipment, Inc.\" — that's actually the full legal entity name of the company (TCS is a division of Murray Equipment Inc., Fort Wayne, Indiana). This is not an extraction artifact or OCR noise; it's the full legal name as printed on the certificate. The register has a truncated/shortened form.\n\nRules given:\n- spelling drift, legal-suffix drift, accent differences = same-entity\n- extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise, best_value from register\n- genuinely different company/person names = different-entity, best_value = document's\n- number/year format differences = same-entity, register's canonical form\n\n\"Total Control Systems, A Division of Murray Equipment, Inc.\" vs \"Total Control Systems\" — this is the same company, just the document carries the full legal name including the parent/division relationship. It's not a genuinely different company (Murray Equipment is the parent, not a different applicant). It's not extraction noise (it's clean text, not OCR garbage). So it's same-entity, but what's the best value?\n\nThe rule says same-entity with the register's canonical form for number/year differences. But for names, same-entity doesn't specify best value explicitly except in noise/different-entity cases. For a fused record, the document is the legal instrument — the certificate is authoritative. The document's fuller name \"Total Control Systems, A Division of Murray Equipment, Inc.\" is the more complete legal designation. Since it's the same entity and the document (legal instrument) provides the fuller legal name, best_value should arguably be the document's value, because it's richer and legally precise.\n\nHmm, but does same-entity imply register canonical? The rule about register's canonical form is specific to number/year format differences. For applicant name, same-entity — the best value for a fused record: the certificate is the legal instrument, so the document's fuller legal name is preferable. \"A Division of Murray Equipment, Inc.\" is not a suffix drift exactly; it's part of the legal entity descriptor. It's a legitimate expansion.\n\nVerdict: same-entity. best_value: \"Total Control Systems, A Division of Murray Equipment, Inc.\" — the document's fuller legal name, since the certificate is the legal instrument and the extra clause is a real legal designation, not noise.\n\nAlternatively, one could argue document-noise: \"A Division of Murray Equipment, Inc.\" glued? No — it's not an address fragment or OCR noise; it's deliberate text on the certificate. The rule for document-noise is extraction artifacts. This is clearly not an extraction artifact.\n\nCould it be different-entity? No — the applicant is the same company; the document just states the division relationship.\n\nSo: same-entity, best_value = document's full form.\n\nOne short sentence why: Same applicant; the certificate supplies the fuller legal designation (division of parent company), which the fused record should keep since the certificate is the legal instrument.",
+      "signature": "dbf3f1c79c9f4034b22ff4da"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Total Control Systems, A Division of Murray Equipment, Inc.\",\n      \"why\": \"The register carries a shortened form of the same company, while the certificate — the legal instrument — supplies the complete legal designation including the division/parent relationship, so the fused record should keep the fuller document form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 518,
+    "output_tokens": 777,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

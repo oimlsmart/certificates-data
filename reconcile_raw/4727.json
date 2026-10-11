@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011073638c3992a73afe14a93",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: num\n- Register: \"R49/2013-CZ1-17.03 Annex. 1\"\n- Document: \"R49/2013-CZ1 7.03\"\n\nThe certificate ID is R49/2013-CZ1-17.03, and this is Annex 1 of it. The document value \"R49/2013-CZ1 7.03\" appears to have lost the \"1\" from \"17.03\" (likely OCR/extraction artifact where \"-1\" became a space or the \"1\" was dropped), rendering \"17.03\" as \"7.03\". Also missing \"Annex. 1\".\n\nThe register value appears to be the canonical form: \"R49/2013-CZ1-17.03 Annex. 1\". The document context shows cert_id: 4727 and num: R49/2013-CZ1-17.03 Annex. 1 — wait, interesting. The document's own embedded metadata comment says num: \"R49/2013-CZ1-17.03 Annex. 1\". But the conflict says document: \"R49/2013-CZ1 7.03\". This suggests the visible text extraction produced \"R49/2013-CZ1 7.03\" as an artifact (OCR dropped the \"1\" from \"17.03\", turning it into \" 7.03\" with a space).\n\nThis is a number format/extraction artifact clearly denoting the same certificate. Per rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" Also extraction artifacts = document-noise with best_value from the register.\n\nWhich verdict fits better? \"document-noise\" is for extraction artifacts like OCR noise. \"R49/2013-CZ1 7.03\" is clearly the same certificate number with OCR dropping \"1\" from \"17.03\" and the \"Annex. 1\" suffix. That's an extraction artifact → document-noise, best_value = register value.\n\nAlternatively, \"same-entity\" applies for number format differences clearly denoting the same certificate — e.g., \"17.03\" vs \"17.03 Annex. 1\". Here the \"7.03\" is a corrupted form. Hmm. Both rules could apply. The corruption (missing \"1\") is OCR noise rather than mere format difference. I'd go with \"document-noise\" since the document value is a corrupted extraction (\"17.03\" → \" 7.03\", dropped digit + spacing), and the best value is the register's canonical form. Actually, one could also argue same-entity since it clearly denotes the same certificate. But the dropped digit is an extraction artifact, so document-noise seems most precise. Either way best_value = \"R49/2013-CZ1-17.03 Annex. 1\".\n\nThe rules say document-noise is \"extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register\". Dropped character in the certificate number is obvious OCR noise. So verdict: document-noise, best_value: register's value.\n\nOutput one JSON object.",
+      "signature": "b789f96276874e5b98eec19e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"R49/2013-CZ1-17.03 Annex. 1\",\n      \"why\": \"The document string is an OCR artifact of the same number ('17.03' mangled to ' 7.03' with a dropped digit, plus the lost 'Annex. 1' suffix), so the register's canonical form should be kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 791,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

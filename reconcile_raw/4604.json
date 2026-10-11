@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101108102103f3ec9bd6764b72",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\"\n- Document: \"Mettler Toledo (ChangZhou) Precision Instrument Ltd.\"\n\nDifferences:\n1. \"Mettler-Toledo\" vs \"Mettler Toledo\" — hyphen drift (spelling drift)\n2. \"Changzhou\" vs \"ChangZhou\" — capitalization drift (spelling drift)\n3. \"Instruments\" vs \"Instrument\" — plural/legal-suffix-ish drift (minor singular/plural variation)\n4. \"Ltd.\" vs \"Ltd.\" — same\n\nThese are clearly the same entity. The document also has the Chinese name 梅特勒-托利多（常州）精密仪器有限公司 which is the Chinese name of Mettler-Toledo (Changzhou) Precision Instruments Ltd. So this confirms it's the same entity.\n\nVerdict: same-entity. Best value: register's canonical form, since the register likely carries the canonical official English name (\"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\") which matches the actual legal English name of the company.\n\nWhy: Hyphen, capitalization, and singular/plural drift denote the same legal entity; register form is canonical.",
+      "signature": "9ead8304d45243148815d2e3"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\", \"why\": \"The two strings differ only by a hyphen, casing of 'ChangZhou', and singular/plural 'Instrument(s)' — classic spelling/legal-name drift for the same company (confirmed by the document's Chinese name 梅特勒-托利多（常州）精密仪器有限公司), so the register's canonical form is kept.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 372,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

@@ -1,0 +1,455 @@
+_meta:
+  cert_id: 6940
+  num: R117/2019-A-NL1-21.06 Rev. 4
+  applicant: Gilbarco Veeder Root
+  issuing_year: '2026'
+  status: Valid
+  issuer: NL1
+  recommendation: R117
+  edition_year: 2019
+  extraction_method: glm-extract
+  source_pdf: certificates/R117/2019/r117-2019-nl1-2021-06-rev4.pdf
+certificate:
+  number: R117/2019-A-NL1-21.06
+  scheme: A
+  project_number: '4133304'
+  page_total: 6
+  member_state: The Netherlands
+  date_issued: '2026-07-09'
+  oiml_issuer_id: NL1
+issuing_authority:
+  name: NMi Certin B.V.
+  address_lines:
+  - Thijsseweg 11
+  - 2629 JA Delft
+  - The Netherlands
+  person_responsible: M.Ph.D. Schmidt
+  phone: "+31 88 636 2332"
+  email: certin@nmi.nl
+  website: www.nmi.nl
+  oiml_issuer_id: NL1
+applicants:
+- name: Gilbarco Veeder Root
+  address_lines:
+  - Burnt Mills Road, Basildon
+  - Essex SS13 1DT
+  - United Kingdom
+manufacturers:
+- name: Gilbarco Inc.
+  address_lines:
+  - 7300 W. Friendly Ave.
+  - Greensboro, NC27420
+  - United States of America
+certified_type:
+  category: Fuel dispenser
+  type_designations:
+  - ENCORE
+  module_designation: Not applicable
+  description: >-
+    Fuel dispenser in which each measuring system consists at least of a combined pump and gas eliminator
+    device (gas separator), one or more meter sensors, and a calculating/indicating device (calculator).
+    The same housing can comprise one or more measuring systems sharing a common calculating/indicating
+    device; multi-product dispensers can deliver only one product at a time per dispenser side.
+characteristics:
+  type_level:
+    minimum_measured_quantity:
+      value:
+      - 2
+      - 5
+      - 10
+      unit_symbol: L
+      unit_id:
+    maximum_pressure:
+      value: 3.5
+      unit_symbol: bar(g)
+      unit_id:
+    accuracy_class:
+      value: 0.5
+      unit_symbol:
+      unit_id:
+    environmental_classes:
+      value: M1 / E1
+    ambient_temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -10
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    intended_measurement:
+      value: Hydrocarbon oils
+  config_level:
+  - attribute: flow_rate_range
+    axis: product_viscosity_range
+    values:
+    - condition: 0.4 - 1.0 mPa·s
+      value:
+        min: 1.6
+        max: 40
+      unit_symbol: L/min
+    - condition: 1.1 - 8.0 mPa·s
+      value:
+        min: 2.0
+        max: 80
+      unit_symbol: L/min
+  - attribute: maximum_flow_rate
+    axis: number_of_operating_meter_sensors
+    values:
+    - condition: both meter sensors operating (2-sensor configuration)
+      value: 40
+      unit_symbol: L/min
+recommendation:
+  id: R117
+  edition: 2019
+  scheme: A
+  accuracy_classes:
+  - 0.5
+test_reports:
+- id: NMi-2537261-02
+  date: '2021-04-21'
+  pages: 59
+  role: type_evaluation_report
+- id: NMi-2537261-02-1
+  role: documentation_file
+- id: CVN-10119469
+  date: '2001-03-02'
+  pages: 56
+  role: test_report
+- id: CVN-202211
+  date: '2003-05-16'
+  pages: 49
+  role: test_report
+- id: TR:1327
+  date: '2015-04-15'
+  pages: 12
+  role: test_report
+- id: TR:748
+  date: '2017-05-10'
+  pages: 10
+  role: test_report
+- id: TR:0561
+  date: '2009-10-22'
+  pages: 14
+  role: test_report
+- id: TR:0587
+  date: '2010-09-29'
+  pages: 14
+  role: test_report
+- id: NMi-2537261-01
+  date: '2021-04-12'
+  pages: 80
+  role: test_report
+- id: NMi-3639811-01
+  date: '2023-08-15'
+  pages: 45
+  role: test_report
+- id: NMi-3970363-01
+  date: '2025-09-16'
+  pages: 15
+  role: test_report
+- id: TR:740
+  date: '2017-02-24'
+  pages: 11
+  role: test_report
+- id: R117/1995-NL1-04.04
+  date: '2005-01-24'
+  pages: 50
+  role: test_report
+revision_history:
+- revision: '0'
+  date: '2021-04-21'
+  changes: "-"
+- revision: '1'
+  date: '2023-08-15'
+  changes: Update of the Sandpiper-III hardware
+- revision: '2'
+  date: '2025-09-16'
+  changes: Update of the Sandpiper-III hardware
+- revision: '3'
+  date: '2025-09-18'
+  changes: Correction typo in software version
+- revision: '4'
+  date: '2026-07-09'
+  changes: Update of software of the Sandpiper-III
+components:
+- role: Meter sensor
+  type_designations:
+  - C+
+  alternatives: OR
+  characteristics:
+    producer:
+      value: Gilbarco Veeder Root
+    documentation_folder:
+      value: TC7144-3
+    flow_rate_range_low_viscosity:
+      value:
+        min: 1.6
+        max: 40
+      unit_symbol: L/min
+      unit_id:
+    viscosity_range_low:
+      value:
+        min: 0.4
+        max: 1.0
+      unit_symbol: mPa·s
+      unit_id:
+    flow_rate_range_high_viscosity:
+      value:
+        min: 2.0
+        max: 80
+      unit_symbol: L/min
+      unit_id:
+    viscosity_range_high:
+      value:
+        min: 1.1
+        max: 8.0
+      unit_symbol: mPa·s
+      unit_id:
+    minimum_measured_quantity:
+      value: 1
+      unit_symbol: L
+      unit_id:
+    maximum_pressure:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+    environmental_classes:
+      value: M1 / E1
+    ambient_temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -10
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    intended_measurement:
+      value: Hydrocarbon oils
+- role: Meter sensor
+  type_designations:
+  - V
+  - V+
+  alternatives: OR
+  characteristics:
+    producer:
+      value: Gilbarco Veeder Root
+    documentation_folder:
+      value: TC7144-3
+    flow_rate_range_low_viscosity:
+      value:
+        min: 1.6
+        max: 40
+      unit_symbol: L/min
+      unit_id:
+    viscosity_range_low:
+      value:
+        min: 0.4
+        max: 1.0
+      unit_symbol: mPa·s
+      unit_id:
+    flow_rate_range_high_viscosity:
+      value:
+        min: 2.0
+        max: 80
+      unit_symbol: L/min
+      unit_id:
+    viscosity_range_high:
+      value:
+        min: 1.1
+        max: 8.0
+      unit_symbol: mPa·s
+      unit_id:
+    minimum_measured_quantity:
+      value: 2
+      unit_symbol: L
+      unit_id:
+    maximum_pressure:
+      value: 3.5
+      unit_symbol: bar
+      unit_id:
+    environmental_classes:
+      value: M1 / E1
+    ambient_temperature_range:
+      value:
+        min: -10
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -10
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    intended_measurement:
+      value: Hydrocarbon oils
+- role: Calculating/indicating device
+  type_designations:
+  - Sandpiper-III
+  characteristics:
+    producer:
+      value: Gilbarco USA
+    documentation_folder:
+      value: NMi-2537261-01-3
+    maximum_volume_indication:
+      value: 7 digits (9999999; floating decimal)
+    maximum_unit_price:
+      value: 6 digits (999999; floating decimal)
+    maximum_price_to_pay:
+      value: 7 digits (9999999; floating decimal)
+    environmental_classes:
+      value: M1 / E1
+    ambient_temperature_range:
+      value:
+        min: -25
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    impulse_encoder_or_pulser:
+      value: TE CA - 1174
+    software_display:
+      value: >-
+        Software version is displayed during the power up sequence or through command code 1; the checksum
+        can be displayed through command code 2.
+- role: Gas elimination device (gas separator)
+  type_designations:
+  - GPU90
+  characteristics:
+    producer:
+      value: Gilbarco Veeder Root
+    documentation_folder:
+      value: TC7146-4
+    maximum_flow_rate:
+      value: 90
+      unit_symbol: L/min
+      unit_id:
+    minimum_pressure:
+      value: 1.4
+      unit_symbol: bar
+      unit_id:
+    maximum_pressure:
+      value: 3.0
+      unit_symbol: bar
+      unit_id:
+    environmental_classes:
+      value: M1
+    ambient_temperature_range:
+      value:
+        min: -40
+        max: 55
+      unit_symbol: "°C"
+      unit_id:
+    product_temperature_range:
+      value:
+        min: -40
+        max: 50
+      unit_symbol: "°C"
+      unit_id:
+    intended_measurement:
+      value: Low-viscosity mineral oils
+    viscosity_range:
+      value:
+        min: 0.4
+        max: 8.0
+      unit_symbol: mPa·s
+      unit_id:
+footnotes:
+- marker: "*"
+  text: >-
+    If no gas separator is used on the measurement system, provision shall be taken to prevent gas passing
+    through the meter sensor.
+matrix_tables:
+- name: Flow characteristics of the configurations
+  columns:
+  - configuration
+  - min_flow_rate
+  - max_flow_rate
+  - viscosity_range
+  - remarks
+  column_units:
+  -
+  - L/min
+  - L/min
+  - mPa·s
+  -
+  description: >-
+    The maximum flow rate once installed may be limited but shall be greater than 10 times the minimum
+    flow rate. Each configuration consists of 1 x gas separator plus one or two meter sensors type C+,
+    V or V+.
+  rows:
+  - configuration: 1 x gas separator; 1 x meter sensor type C+, V or V+
+    min_flow_rate: 1.6
+    max_flow_rate: 40
+    viscosity_range:
+      min: 0.4
+      max: 1.0
+    remarks: Intended for the measurement of hydrocarbon oils with viscosity range 0.4 - 1.0 mPa·s.
+  - configuration: 1 x gas separator; 1 x meter sensor type C+, V or V+
+    min_flow_rate: 2.0
+    max_flow_rate: 80
+    viscosity_range:
+      min: 1.1
+      max: 8.0
+    remarks: >-
+      Intended for the measurement of hydrocarbon oils with viscosity range 1.1 - 8.0 mPa·s. Optionally
+      a feature to allow Qmax to be limited to 40 L/min.
+  - configuration: 1 x gas separator; 2 x meter sensors type C+, V or V+, one per dispenser side
+    min_flow_rate: 1.6
+    max_flow_rate: 40
+    viscosity_range:
+      min: 0.4
+      max: 1.0
+    remarks: >-
+      The gas separator is suitable for use with two meter sensors; each meter sensor is considered part
+      of an individual measuring system. Flow rate reduces to 40 L/min with both meter sensors operating.
+      Optionally a feature to allow Qmax to be limited to 40 L/min with a single meter sensor operating.
+  - configuration: 1 x gas separator; 2 x meter sensors type C+, V or V+, one per dispenser side
+    min_flow_rate: 2.0
+    max_flow_rate: 80
+    viscosity_range:
+      min: 1.1
+      max: 8.0
+    remarks: >-
+      The gas separator is suitable for use with two meter sensors; each meter sensor is considered part
+      of an individual measuring system. Flow rate reduces to 40 L/min with both meter sensors operating.
+  footnotes:
+  - >-
+    * If no gas separator is used on the measurement system, provision shall be taken to prevent gas passing
+    through the meter sensor.
+- name: Software versions and CRC checksum of the calculating/indicating device type Sandpiper-III
+  columns:
+  - software_version
+  - displayed_as
+  - crc_checksum
+  column_units:
+  -
+  -
+  -
+  description: >-
+    Software version is displayed during the power up sequence or through command code 1; the checksum
+    can be displayed through command code 2.
+  rows:
+  - software_version: 04.0.66P
+    displayed_as: P04066
+    crc_checksum: DF5C
+  - software_version: 04.1.27P
+    displayed_as: P04127
+    crc_checksum: 7E5A
+  - software_version: 05.0.16P
+    displayed_as: P05016
+    crc_checksum: 0BB5
+  - software_version: 06.0.37P
+    displayed_as: P06037
+    crc_checksum: '4370'
+  - software_version: 06.0.62P
+    displayed_as: P06062
+    crc_checksum: 0CE0

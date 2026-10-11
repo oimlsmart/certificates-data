@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110807089f78241c377b4af7",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The conflict: register has \"Qingdao Tongle Electronic Technology C.o. Ltd\" vs document \"Qingdao Tongle Electronic Technology Co., Ltd\".\n\n\"C.o. Ltd\" is a weird artifact — likely a formatting/punctuation glitch (\"Co., Ltd\" mangled as \"C.o. Ltd\"). This is legal-suffix drift / punctuation drift — same-entity. Best value: the document's form \"Qingdao Tongle Electronic Technology Co., Ltd\" since it's the correct standard form; the register's \"C.o. Ltd\" is the drift. Rules say same-entity, and for same-entity, best value... The rules specify best_value for different-entity (document's) and document-noise (register's) and same-entity number/year (register's canonical form). For same-entity name drift, best value should be the cleaner/correct one. The document's \"Co., Ltd\" is the standard legal suffix form; the register's \"C.o. Ltd\" appears to be a typo. So best_value = document's value.\n\nVerdict: same-entity. Why: identical company name with only punctuation/suffix formatting drift (\"C.o. Ltd\" vs \"Co., Ltd\").",
+      "signature": "1ce88b68bef145a9b69ccfb0"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Qingdao Tongle Electronic Technology Co., Ltd\",\n      \"why\": \"Both forms identify the same company; 'C.o. Ltd' is merely punctuation/suffix drift of 'Co., Ltd', and the document's rendering is the standard legal form so it should be carried into the fused record.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 453,
+    "output_tokens": 345,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

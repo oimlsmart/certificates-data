@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010214639c0c93737c24e4eca",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"Tatsuno Corporation Yokohama plant\"\n- Document: \"TATSUNO CORPORATION\"\n\nThe register value includes a plant designation \"Yokohama plant\". The document just says \"TATSUNO CORPORATION\" (in caps, which is typical formatting). Is \"Yokohama plant\" an extraction artifact or genuinely part of the registered applicant name?\n\nThe rules say:\n- spelling drift, legal-suffix drift, accent differences = same-entity\n- Extraction artifacts (address fragments glued into a name, obvious OCR noise) = document-noise with best_value from the register\n- Genuinely different company or person names = different-entity\n\nHere, \"Tatsuno Corporation Yokohama plant\" vs \"TATSUNO CORPORATION\" — these refer to the same company. The \"Yokohama plant\" is a facility qualifier, not a different entity. The case difference is just formatting drift. So same-entity.\n\nWhich is best? The register has more specificity — \"Tatsuno Corporation Yokohama plant\" identifies the specific establishment. The document says \"TATSUNO CORPORATION\". For a fused record, the register value is more precise. The document's uppercase is just stylistic.\n\nWait — but is \"Yokohama plant\" possibly an address fragment glued into a name in the register? The rule says extraction artifacts with address fragments = document-noise with best_value from the register. But here the artifact would be in the register, not the document. The document-noise verdict applies to document noise. The register says \"Tatsuno Corporation Yokohama plant\" — could that be an artifact? The comment metadata in the document actually says \"applicant: Tatsuno Corporation Yokohama plant\" — so the extraction from the document captured \"Tatsuno Corporation Yokohama plant\" too. But the visible document text says \"TATSUNO CORPORATION\".\n\nHmm, interesting: the embedded metadata comment says applicant: \"Tatsuno Corporation Yokohama plant\", matching the register. But the actual document text says \"TATSUNO CORPORATION\". The conflict presented is register vs document.\n\nVerdict options: same-entity seems right. Both denote the same corporate applicant; \"Yokohama plant\" is a plant/facility qualifier adding specificity, not a different company. Best value: which? The rules say for same-entity, the verdict is same-entity; best_value isn't explicitly dictated except in \"different-entity\" (document's) and \"document-noise\" (register's). For same-entity, we should pick the best. The register's canonical form \"Tatsuno Corporation Yokohama plant\" is more precise and matches the extracted metadata; it identifies the specific establishment that holds the certificate. I'd go with the register value.\n\nActually, let me reconsider: the certificate document is the legal instrument; the legal instrument says \"TATSUNO CORPORATION\". But the register's value appears to be the more detailed/canonical registry entry. Since they're the same entity, the fused record should carry the most complete correct form. \"Tatsuno Corporation Yokohama plant\" includes the specific plant, which is often how OIML certificates distinguish applicants (multiple plants). I'll choose the register value.\n\nOne sentence why: Both refer to the same corporate applicant; the register adds the specific plant qualifier and normalized casing, so it's the canonical, more precise form.\n\nOutput JSON:\n{\"axes\":[{\"axis\":\"applicant\",\"verdict\":\"same-entity\",\"best_value\":\"Tatsuno Corporation Yokohama plant\",\"why\":\"...\"}]}",
+      "signature": "48a4654b49034ad6896980d0"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Tatsuno Corporation Yokohama plant\",\n      \"why\": \"Both denote the same corporate applicant (case difference is pure formatting); the register's form adds the specific plant qualifier and normalized casing, making it the more precise canonical value.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 454,
+    "output_tokens": 829,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

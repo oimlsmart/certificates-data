@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011094837efb0d5abe6c441a8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the conflict.\n\nAxis: applicant\n- Register: \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\"\n- Document: \"Mettler-Toledo (Changzhou) Precision Instruments Ltd.\"\n\nThe difference is \"Instrument\" vs \"Instruments\" — a singular/plural difference. This is a trivial spelling/word-form drift of the same company name. The actual legal entity is \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" — let me think. Mettler-Toledo (Changzhou) Precision Instrument Ltd. is the actual Chinese subsidiary. Hmm, actually the company is commonly written as \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" The document says \"Instruments\". This is spelling drift / word-form drift = same-entity per the rules.\n\nBest value: which one? The rules say same-entity with drift — but which value does the fused record carry? The rules specify for document-noise: best_value from register. For different-entity: document's. For same-entity number/year: register's canonical form. For same-entity spelling drift, presumably prefer the register's canonical form too, or the document since certificate is legal instrument? The rules say \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\" For same-entity spelling drift, no explicit rule on best_value. The safest: use register's canonical form since it's the database canonical form and same entity. Actually, one could argue the certificate document is the legal instrument, so its value is authoritative. But spelling drift on same entity — the register likely holds canonical normalized form. Hmm.\n\nGiven the guidance pattern: extraction artifacts → register; genuinely different → document; number format same → register canonical. Spelling drift same-entity — I'd pick the document's value since the certificate is the legal instrument and the drift is trivial; but the register form \"Instrument\" matches the actual legal name of Mettler-Toledo (Changzhou) Precision Instrument Ltd. Let me check: The Chinese company is \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" I believe OIML certificates list \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" Actually many OIML R60 certificates list the manufacturer as \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\" Hmm, some show \"Instruments\". The actual registered name: 梅特勒-托利多（常州）精密仪器有限公司 translates to \"Precision Instrument\" (精密仪器 = precision instruments). 仪器 is singular/plural-neutral in Chinese; English rendering could be either.\n\nFor a fused record, I'd go with the register's value as canonical since it's same-entity drift and the register is the curated database row. The rules explicitly give register's canonical form for same-entity number formats; extending that, register canonical form for same-entity drift seems consistent. I'll choose register value.\n\nVerdict: same-entity.\n\nWhy: singular/plural drift (\"Instrument\" vs \"Instruments\") denotes the same legal entity; keep register's canonical form.",
+      "signature": "da071ca728b34e90883623a9"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Mettler-Toledo (Changzhou) Precision Instrument Ltd.\",\n      \"why\": \"The only difference is the singular/plural 'Instrument(s)' word-form drift naming the same legal entity, so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 480,
+    "output_tokens": 733,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

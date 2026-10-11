@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610111047278814c7ec5d884e17",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nAxis: applicant\n- Register: \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\"\n- Document: \"ESiT Elektronik Sistemler Imalat ve Ticaret Ltd. Sti.\"\n\nDifferences:\n- \"ESIT\" vs \"ESiT\" — casing difference (spelling drift, brand name capitalization). Turkish company names often have this. Same entity.\n- \"Limited Sirketi\" vs \"Ltd. Sti.\" — legal suffix abbreviation drift. Same entity.\n- Missing accents: proper Turkish would be \"Sistemler İmalat ve Ticaret Limited Şirketi\" — both forms lack accents (Sirketi vs Sti.). No accent differences between the two here beyond that.\n\nSo verdict: same-entity. Best value: which one? The rules say \"spelling drift, legal-suffix drift, accent differences = same-entity\" but don't explicitly say which value to pick. For \"different-entity\" they say document is the legal instrument. For \"document-noise\" register's value. For \"same-entity\" with number/year, register's canonical form.\n\nFor same-entity applicant, what's best? The register is the canonical database form; the document is the legal instrument. Hmm. The rule for number/year says register's canonical form. For same-entity generally, I'd argue the document is the authoritative legal text — the certificate itself says \"ESiT ... Ltd. Sti.\" That's how the company styled itself on the legal instrument. However, the register's form is fully spelled out (\"Limited Sirketi\" vs abbreviated \"Ltd. Sti.\"), which is often preferable for normalization. But \"ESiT\" casing matches the actual brand styling (ESiT), and the document is the legal instrument.\n\nThe rules pattern: best_value from register for document-noise; document for different-entity. For same-entity, the number/year case says register canonical. By analogy, register canonical form seems intended for same-entity. But arguably the document, being the legal instrument, is authoritative for names.\n\nHmm. Let me think. The register value \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\" is the expanded legal name (unabbreviated suffix). The document's \"ESiT ... Ltd. Sti.\" is the abbreviate. The register appears to be a normalized form (also note the embedded comments in document context match the register exactly — \"applicant: ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\" — so the document's own metadata comments carry the register form).\n\nGiven the register provides the canonical expanded form and the fused record benefits from canonical normalization, and the rules only explicitly override with document value for different-entity, I'll pick the register's canonical form for same-entity. Actually wait — should I pick document value because certificate is legal instrument? The rule says \"Genuinely different company or person names = different-entity (best_value = the document's, since the certificate is the legal instrument).\" This rationale is tied to different-entity. For same-entity, no explicit rule, but consistency with the number/year same-entity case (register canonical) suggests register.\n\nI'll go: same-entity, best_value = register's \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\", why: casing and legal-suffix abbreviation drift denote the same Turkish applicant; keep the register's fully spelled canonical name.\n\nActually, one could argue best_value should be document's since it's the styled brand form. But fused record canonicalization favors the expanded register form. I'll go with register.\n\nOne short sentence for \"why\".",
+      "signature": "45bba6ca0dc844b1be63efb1"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"ESIT Elektronik Sistemler Imalat ve Ticaret Limited Sirketi\",\n      \"why\": \"The variants differ only by casing ('ESIT'/'ESiT') and legal-suffix abbreviation ('Limited Sirketi' vs 'Ltd. Sti.'), which is same-company drift; keep the register's fully spelled-out canonical name.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 496,
+    "output_tokens": 867,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

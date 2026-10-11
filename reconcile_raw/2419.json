@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101108461300f89480bf384c3f",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Vishay Precision or Tedea-Huntleigh\"\nDocument: \"Tedea-Huntleigh or Vishay Tr...\" — the document text is truncated: \"Applicant Name: Tedea-Huntleigh or Vishay Tr\"\n\nSo the document context shows \"Tedea-Huntleigh or Vishay Tr\" — which appears truncated (\"Vishay Tr...\" likely \"Vishay Transducers\" or similar). The extracted metadata field says document: \"Tedea-Huntleigh\" but the raw document text says \"Tedea-Huntleigh or Vishay Tr[uncated]\".\n\nThe register says \"Vishay Precision or Tedea-Huntleigh\". Tedea-Huntleigh is a brand of Vishay Precision Group. So \"Vishay Precision or Tedea-Huntleigh\" and \"Tedea-Huntleigh or Vishay ...\" refer to the same entities, just with the order of the \"or\" list flipped, and possibly slight truncation in the document extraction (\"Vishay Tr\").\n\nThe conflict axis: applicant.\n- Register: \"Vishay Precision or Tedea-Huntleigh\"\n- Document: \"Tedea-Huntleigh\"\n\nThe document value appears truncated — it's missing \"or Vishay Transducers\" (the raw text shows \"Tedea-Huntleigh or Vishay Tr\"). So the document value itself is an extraction artifact (truncation). The register's value \"Vishay Precision or Tedea-Huntleigh\" is more complete. Both refer to the same applicant(s): Tedea-Huntleigh (a Vishay brand). So verdict: same-entity, best_value = register's canonical/complete form \"Vishay Precision or Tedea-Huntleigh\".\n\nActually, wait — should best_value be the document's since the certificate is the legal instrument? Rule: \"Genuinely different company or person names = different-entity (best_value = the document's...)\". But here they're the same entity, just truncated in document extraction. For same-entity, the rules say spelling drift etc = same-entity, and for number/year format differences use register's canonical form. For same-entity generally, the register form is canonical. Given the document value is truncated (extraction artifact), the register's fuller value is better.\n\nSo: verdict \"same-entity\", best_value \"Vishay Precision or Tedea-Huntleigh\", why: the document's applicant is truncated mid-name (\"Vishay Tr…\") but clearly refers to the same Tedea-Huntleigh/Vishay applicant; register form is the complete canonical version.\n\nNote also the document field \"document: Tedea-Huntleigh\" vs raw text \"Tedea-Huntleigh or Vishay Tr\" — the structured document value dropped the second part, another sign of truncation artifact.\n\nOutput one JSON object as specified.",
+      "signature": "5da45680a2514c208096cb4e"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Vishay Precision or Tedea-Huntleigh\",\n      \"why\": \"Both name the same applicant (Tedea-Huntleigh, a Vishay Precision Group brand); the document value is visibly truncated ('Tedea-Huntleigh or Vishay Tr…' in the raw text), so the register's complete form is the better canonical value.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 472,
+    "output_tokens": 692,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

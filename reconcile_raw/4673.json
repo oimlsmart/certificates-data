@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610102152167ced2e32f5bb4d0b",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze the two axes.\n\nAxis 1: num\n- register: \"R117/1995-RU1-03.01 Rev. 4 Annex. 01\"\n- document: \"R 117/1995-RU1-03.01\"\n\nThe document says \"R 117/1995-RU1-03.01\" while the register says \"R117/1995-RU1-03.01 Rev. 4 Annex. 01\". The document's num is the base certificate number without the revision/annex suffix. The register's form includes \"Rev. 4 Annex. 01\" which is more precise/canonical (the register id is 4673, and the doc context comment cert_id: 4673 matches, num field in the document comment actually says \"R117/1995-RU1-03.01 Rev. 4 Annex. 01\" — the embedded comment matches the register). The document table text shows \"R 117/1995-RU1-03.01\" which is the base number with a space after R. Per the rules: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\" The space difference \"R 117\" vs \"R117\" is formatting drift; the missing \"Rev. 4 Annex. 01\" suffix — the register's form is more complete/canonical. Clearly the same certificate (R117/1995-RU1-03.01). So verdict: same-entity, best_value = register form \"R117/1995-RU1-03.01 Rev. 4 Annex. 01\".\n\nAxis 2: applicant\n- register: \"Gilbarco Veeder-Root India Private Limited\"\n- document: \"GILBARCO VEEDER-ROOT INDIA PVT. LTD.\"\n\nLegal-suffix drift: \"Private Limited\" vs \"PVT. LTD.\" — same entity, case differences. Same-entity, best_value = register's canonical form \"Gilbarco Veeder-Root India Private Limited\".\n\nReturn JSON object with axes array.",
+      "signature": "94009379c1564ed0ac2ea914"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"num\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"R117/1995-RU1-03.01 Rev. 4 Annex. 01\",\n      \"why\": \"The document's 'R 117/1995-RU1-03.01' is the same certificate in a less complete format (spacing and missing revision/annex suffix), so the register's canonical form with Rev. 4 Annex. 01 is retained.\"\n    },\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Gilbarco Veeder-Root India Private Limited\",\n      \"why\": \"The differences are only casing and legal-suffix abbreviation ('PVT. LTD.' vs 'Private Limited'), so the register's fully spelled-out canonical name is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 504,
+    "output_tokens": 640,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

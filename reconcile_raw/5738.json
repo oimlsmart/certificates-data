@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261010221007f5df123047b5461f",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"Dover Fueling Solutions UK Limited (Filial)\"\nDocument: \"Dover Fueling Solutions UK Limited Filial (DFS)\"\n\nThe register says \"Dover Fueling Solutions UK Limited (Filial)\" and the document says \"Dover Fueling Solutions UK Limited Filial (DFS)\".\n\nThese refer to the same entity - \"Dover Fueling Solutions UK Limited Filial\" with \"(DFS)\" being an abbreviation/typo artifact of the same word \"Filial\". Actually looking closely: register has \"(Filial)\" in parentheses, document has \"Filial\" unparenthesized plus \"(DFS)\" which is likely an acronym for Dover Fueling Solutions. So it's essentially the same company name with parenthesization/formatting drift and added acronym.\n\nThe applicant in the certificate's own text comment says: \"<!-- applicant: Dover Fueling Solutions UK Limited (Filial) -->\" — which matches the register exactly. The document body text \"Dover Fueling Solutions UK Limited Filial (DFS)\" is likely from the extracted content within the certificate (probably from the OCR of the body).\n\nVerdict: same-entity. Best value: The rules say \"spelling drift, legal-suffix drift, accent differences = same-entity.\" For same-entity, which best value? The rules don't explicitly say for same-entity applicant, but the document is the legal instrument, and the certificate body says \"Dover Fueling Solutions UK Limited Filial (DFS)\". Hmm, but the extraction comment matches the register. Typically for same-entity, prefer the canonical/cleaner form. The register form \"Dover Fueling Solutions UK Limited (Filial)\" is cleaner; \"(DFS)\" is an acronym annotation, and the missing parentheses around \"Filial\" is formatting drift. The fused record should carry the register's canonical form since it's cleaner and matches the extraction metadata. However, per the general principle \"the certificate is the legal instrument\" — but that applies for different-entity. For same-entity with formatting drift, the register's canonical form seems best.\n\nI'd say verdict: same-entity, best_value: \"Dover Fueling Solutions UK Limited (Filial)\", why: both denote the same company; the document just adds the DFS acronym and drops parentheses, so use the register's canonical form.",
+      "signature": "633f963bdcd34dc0b4d9cb82"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Dover Fueling Solutions UK Limited (Filial)\", \"why\": \"Both denote the same applicant; the document merely drops the parentheses around 'Filial' and appends the DFS acronym, so the register's canonical form is kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 486,
+    "output_tokens": 550,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

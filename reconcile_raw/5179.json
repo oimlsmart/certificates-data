@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011110647dc7a460066be4c48",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The axis is \"applicant\". Register says \"Zebra Technologies\", document says \"Zebra Technologies Corporation\". This is legal-suffix drift — \"Corporation\" is a legal suffix. Per the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity\". So verdict = same-entity.\n\nBest value: which one should the fused record carry? The rules for same-entity don't explicitly say which value to use, except for numbers/years where register canonical form is used. For same-entity name variants, the more complete legal name from the document (the certificate is the legal instrument) would be best — \"Zebra Technologies Corporation\" is the full legal name. Actually, Zebra Technologies Corporation is indeed the full legal name of the company. The certificate is the legal instrument, so document value seems appropriate. Alternatively register canonical form could be chosen. But for same-entity, the document being the legal instrument suggests document's fuller form. Hmm.\n\nThe rules say: document-noise → best_value from register; different-entity → best_value = document's. For same-entity, only number/year differences specify register canonical form. For name same-entity (suffix drift), the most defensible is the document's fuller legal name, since the certificate is the legal instrument. I'll pick \"Zebra Technologies Corporation\" with reasoning that it's the full legal name and document is authoritative instrument; suffix drift doesn't change entity.\n\nReturn JSON only.",
+      "signature": "a7c9ce7564514ba8adffaadb"
+    },
+    {
+      "type": "text",
+      "text": "{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Zebra Technologies Corporation\", \"why\": \"The document merely adds the legal suffix 'Corporation' to the same company named in the register, and the certificate as the legal instrument should carry the fuller legal name.\"}]}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 459,
+    "output_tokens": 363,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

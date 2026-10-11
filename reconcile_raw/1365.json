@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011081719995a654d6c5343c8",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze this conflict.\n\nRegister: \"P.M. On Board Ltd.\"\nDocument: \"PM Onboard Ltd\"\n\nAre these the same entity? \"P.M. On Board Ltd.\" vs \"PM Onboard Ltd\". This is a formatting difference — \"P.M.\" vs \"PM\" and \"On Board\" vs \"Onboard\". This looks like the same company name with stylistic/formatting drift. \"On Board\" vs \"Onboard\" is a spacing variation, \"P.M.\" vs \"PM\" is punctuation variation. These are the same company.\n\nPer the rules: \"spelling drift, legal-suffix drift, accent differences = same-entity.\" The legal suffix \"Ltd.\" vs \"Ltd\" is also drift. So verdict: same-entity.\n\nBest value: For same-entity, the rule doesn't explicitly say which to use — but for number/year format it says register's canonical form. For names, the register value is the canonical row; typically best value for same-entity would be the register's canonical form (since document differs only cosmetically). Actually, wait — the rules say for different-entity, best_value = document's (certificate is legal instrument). For same-entity, it doesn't state explicitly, but \"document-noise\" best_value = register. \"Number/year format differences... = same-entity with the register's canonical form\" — that suggests same-entity → register's canonical form as best value. I'll use the register's canonical form \"P.M. On Board Ltd.\" Hmm, but one could argue the document, being the legal instrument, carries the authoritative name spelling even in same-entity cases. However, the rules pattern: same-entity example given is number/year format with register canonical. To be consistent, I'll pick the register's canonical form.\n\nActually, let me reconsider. The document is the legal instrument. The document says \"PM Onboard Ltd\". Hmm, but which is truly the certificate's text? The embedded comment says applicant: \"P.M. On Board Ltd.\" while the visible text... actually the visible text is cut off (\"Issuing authority Name: **National Weig\"). The document context extraction says \"PM Onboard Ltd\" as document value. The HTML comment in the document itself says \"P.M. On Board Ltd.\" — interesting, but the conflict as posed: register = \"P.M. On Board Ltd.\", document = \"PM Onboard Ltd\".\n\nPunctuation/spacing drift → same-entity. Best value: register's canonical form. I'll go with \"P.M. On Board Ltd.\" and explain that it's the same company with punctuation/spacing drift.",
+      "signature": "3a88b611491a4a54a7065017"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"P.M. On Board Ltd.\",\n      \"why\": \"Both strings denote the same applicant company, differing only in punctuation ('P.M.' vs 'PM'), spacing ('On Board' vs 'Onboard'), and suffix styling ('Ltd.' vs 'Ltd'), so the register's canonical form is kept.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 453,
+    "output_tokens": 635,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

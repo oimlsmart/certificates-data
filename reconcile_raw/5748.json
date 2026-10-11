@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101109460544526ed1954b4caf",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "We need to analyze the conflict for axis \"num\":\n\n- Register: \"R60/2017-A-NL1-22.31 Rev. 0\"\n- Document: \"R60/2017-A-NL1-22-31\"\n\nThe document's own metadata comment shows \"num: R60/2017-A-NL1-22.31 Rev. 0\" but the human-readable certificate text shows \"Number R60/2017-A-NL1-22-31 revision 0\".\n\nThe rule says: \"Number/year format differences that clearly denote the same certificate = same-entity with the register's canonical form.\"\n\nHere, \"22.31\" vs \"22-31\" — separator difference (dot vs hyphen) is a format difference. Both clearly denote the same certificate (R60/2017-A-NL1-22.31, revision 0 vs revision 0, project number separate). So verdict = \"same-entity\", best_value = register's canonical form \"R60/2017-A-NL1-22.31 Rev. 0\".\n\nWhy: separator/format difference between the dot and hyphen notation, same certificate number and revision; register's form is canonical.\n\nReturn one JSON object.",
+      "signature": "e2fbcd1852f2467eb4681492"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"num\", \"verdict\": \"same-entity\", \"best_value\": \"R60/2017-A-NL1-22.31 Rev. 0\", \"why\": \"The document's 'R60/2017-A-NL1-22-31 revision 0' is the same certificate number with only a separator difference (hyphen vs. dot) and rev spelled out, so the register's canonical form should be kept.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 461,
+    "output_tokens": 358,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

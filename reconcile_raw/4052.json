@@ -1,0 +1,28 @@
+{
+  "id": "msg_202610110642191bd14ea6b754415c",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The axis is issuer_code. Register says \"CZ1\", document says \"CMI\".\n\nCZ1 is the OIML issuing authority code for the Czech Metrology Institute (CMI) — Czech Republic is an OIML issuing authority with code \"CZ1\" (actually the Czech Metrology Institute is designated as issuing authority; its code is CZ1). So \"CMI\" is the name of the body, \"CZ1\" is its OIML-issued authority code. Same entity, different representation forms. But the axis is issuer_code — a code field. The register carries the canonical code \"CZ1\"; the document extraction picked up the institute name \"CMI\" (logo/attribution). The document value \"CMI\" is arguably not a code at all but the institute abbreviation appearing in the document header. Per rules: the register's canonical form should be used for codes. Verdict: same-entity (CZ1 is the OIML code for CMI), best_value = \"CZ1\".\n\nCould it be document-noise? The \"CMI\" appears from the logo/attribution line, which could be extraction artifact. But the rule for same-entity covers this: same entity, different forms. The verdict should be \"same-entity\" with best_value \"CZ1\" since the register is the canonical code. Alternatively \"document-noise\" since \"CMI\" is a name, not a code, extracted from a logo caption. Hmm.\n\nThe rules: \"Extraction artifacts ... = document-noise with best_value from the register.\" The document text shows \"[Logo: CMI — Czech Metrology Institute emblem]\" — the \"CMI\" is from a logo caption, an extraction artifact. But it genuinely identifies the same entity. The same-entity rule covers \"spelling drift, legal-suffix drift, accent differences\" — CMI vs CZ1 is neither spelling drift nor abbreviation drift exactly; CZ1 is a code, CMI an acronym. I'd say same-entity because both denote the Czech Metrology Institute, which is the issuing authority coded CZ1. Best value: CZ1 (canonical register code form for the code axis).\n\nI'll go with same-entity, best_value \"CZ1\", why: both refer to the Czech Metrology Institute, the OIML issuing authority designated by code CZ1, and the code axis should carry the register's canonical code.",
+      "signature": "17a90fb280744d0382c1baa0"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"CZ1\",\n      \"why\": \"CMI is the Czech Metrology Institute, whose OIML issuing-authority code is CZ1, so both denote the same issuer; the code axis should carry the register's canonical code form.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 419,
+    "output_tokens": 587,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

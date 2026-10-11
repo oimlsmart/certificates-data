@@ -1,0 +1,28 @@
+{
+  "id": "msg_20261011111228341a4e73193845f2",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "The task: axis \"applicant\", register says \"Precisa Gravimetrics A.G.\", document says \"Precisa Gravimetrics AG\". This is legal-suffix drift (A.G. vs AG) — same-entity. Best value: register's canonical form? The rules say spelling drift, legal-suffix drift, accent differences = same-entity. But best_value — what should the fused record carry? For same-entity with format differences (numbers/years), register's canonical form. For same-entity with spelling drift... the rules don't explicitly say. Hmm. For number/year format differences = same-entity with register's canonical form. For document-noise = register. For different-entity = document. For same-entity spelling drift — arguably either; but the document is the legal instrument, so document's value is the legally correct one? However the register is canonical database. The rule explicitly only assigns register's canonical form for number/year and document-noise cases, and document for different-entity. For same-entity spelling drift, no explicit rule; I'd say the register's canonical form is safest for consistency, but the certificate is the legal instrument... Actually the register likely lists \"Precisa Gravimetrics A.G.\" — hmm, actually the correct legal name is \"Precisa Gravimetrics AG\" (Swiss AG without periods typically). The document is the legal instrument. I'd pick the document's value since the certificate is authoritative for the applicant name. But the rules pattern: same-entity number/year → register. Different-entity → document because legal instrument. For same-entity spelling drift, the values are equivalent; either is fine. I'll choose the register's canonical form for database consistency? Or document's because legal instrument?\n\nGiven ambiguity, I think the best answer: same-entity, best_value = \"Precisa Gravimetrics AG\" (document), because the certificate is the legal instrument and it's the actual legal name form. Hmm, but the register is the canonical DB. The rule for number/year says register canonical form explicitly — implying that for other same-entity cases the default may differ. The rationale for register canonical form is normalization of identifiers. For company names, the legal document is authoritative. I'll go with document value \"Precisa Gravimetrics AG\" and explain it's the legal instrument's form; suffix drift only.\n\nActually, let me reconsider: many fusion pipelines treat register as canonical for same-entity matches. The rules explicitly state register's canonical form only for number/year and noise. Since the axis here is a name, and the general principle stated is \"the certificate is the legal instrument\" (used to justify document for different-entity), extending that to same-entity name drift is reasonable. I'll go with document.\n\nOne short sentence for why.",
+      "signature": "999a5e0807b84a149287c820"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\"axes\": [{\"axis\": \"applicant\", \"verdict\": \"same-entity\", \"best_value\": \"Precisa Gravimetrics AG\", \"why\": \"Only legal-suffix punctuation drift (A.G. vs AG), clearly the same Swiss company, and the certificate's unpunctuated form matches the actual legal name.\"}]}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 469,
+    "output_tokens": 637,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}

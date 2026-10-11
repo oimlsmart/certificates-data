@@ -1,0 +1,28 @@
+{
+  "id": "msg_2026101107441578a4c1a99ee04461",
+  "type": "message",
+  "role": "assistant",
+  "model": "glm-5.3-flash",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "Let me analyze each conflict axis.\n\nAxis 1: applicant\n- Register: \"Genus Power Infrastructure Ltd.\"\n- Document: \"GENUS POWER INFRASTRUCTURES LIMITED\"\n\nDifferences: capitalization (irrelevant), \"Infrastructure\" vs \"Infrastructures\" (plural drift), \"Ltd.\" vs \"LIMITED\" (legal-suffix drift — Ltd. is abbreviation of Limited). These are spelling drift and legal-suffix drift → same-entity. Best value: which one? The rules say same-entity but don't explicitly say which value for applicant. For number/year format differences, register's canonical form. For applicant same-entity, presumably a normalized form — the register value seems the canonical fused value. The document's version is the legal instrument, but the rules only specify document's value for different-entity. For same-entity, default to register's canonical form seems reasonable. Best value: \"Genus Power Infrastructure Ltd.\" — though one could argue the document's fuller legal name is better. The rules pattern: same-entity → register canonical (as in the number/year rule). I'll pick the register value.\n\nAxis 2: issuer_code\n- Register: \"CZ1\"\n- Document: \"V 3112\"\n\n\"CZ1\" is the OIML issuing authority code (Czech Metrological Institute, CMI). \"V 3112\" is... looking at the certificate context, \"V 3112\" appears next to a triangular emblem — likely an approval/accreditation mark number (e.g., a Czech accreditation or notified body number), not the issuer code. The certificate's actual issuer is CMI / CZ1. \"V 3112\" is an ornamental/emblem artifact from the page furniture — document-noise. Best value from register: \"CZ1\".\n\nActually, could \"V 3112\" be a different entity? It's a mark number, not a company/person name. It's extraction noise from the page (logo/emblem text captured). So verdict: document-noise, best_value \"CZ1\".\n\nReturn JSON.",
+      "signature": "e5fcd1b6ad16413f948cb1ff"
+    },
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"axes\": [\n    {\n      \"axis\": \"applicant\",\n      \"verdict\": \"same-entity\",\n      \"best_value\": \"Genus Power Infrastructure Ltd.\",\n      \"why\": \"Plural drift ('Infrastructure' vs 'Infrastructures') plus legal-suffix variation ('Ltd.' vs 'Limited') and casing denote the same company, so the register's canonical form is kept.\"\n    },\n    {\n      \"axis\": \"issuer_code\",\n      \"verdict\": \"document-noise\",\n      \"best_value\": \"CZ1\",\n      \"why\": \"'V 3112' is a mark number captured from the page's logo/emblem furniture, not the issuing-authority code, which the register correctly records as CZ1.\"\n    }\n  ]\n}\n```"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+    "input_tokens": 506,
+    "output_tokens": 594,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0
+    },
+    "service_tier": "standard"
+  }
+}
