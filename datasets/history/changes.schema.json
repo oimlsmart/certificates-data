@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oimlsmart.org/schemas/history/changes-v1.json",
+  "title": "Register change records",
+  "type": "object",
+  "required": ["cert_id", "num", "field", "change", "observed_at", "snapshot_pair", "register_view"],
+  "additionalProperties": false,
+  "properties": {
+    "cert_id": { "type": "integer" },
+    "num": { "type": ["string", "null"] },
+    "field": { "type": "string" },
+    "change": { "type": "string", "enum": ["row_added", "row_removed", "field_changed"] },
+    "from": { "type": ["string", "integer", "null"] },
+    "to": { "type": ["string", "integer", "null"] },
+    "observed_at": { "type": "string", "pattern": "^\\d{8}$" },
+    "snapshot_pair": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "string", "pattern": "^\\d{8}$" } },
+    "register_view": { "type": "string", "pattern": "^https://www\\.oiml\\.org/" }
+  }
+}
