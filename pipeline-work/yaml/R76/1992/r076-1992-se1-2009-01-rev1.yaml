@@ -73,19 +73,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage_ranges:
       value: 100-120 or 200-240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -97,7 +97,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     maximum_tare_effect:
       value: Max1
@@ -121,6 +121,7 @@ characteristics:
       value: 30
     - model: 30 kg single-interval
       value: 30
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -132,6 +133,7 @@ characteristics:
       value: 100
     - model: 30 kg single-interval
       value: 200
+    unit_id: u:gram
   - attribute: scale_interval_e1
     unit_symbol: g
     values:
@@ -143,6 +145,7 @@ characteristics:
       value: 5
     - model: 30 kg single-interval
       value: 10
+    unit_id: u:gram
   - attribute: scale_interval_e1_range
     unit_symbol: kg
     values:
@@ -154,6 +157,7 @@ characteristics:
       value:
         min: 0
         max: 15
+    unit_id: u:kilogram
   - attribute: scale_interval_e2
     unit_symbol: g
     values:
@@ -161,6 +165,7 @@ characteristics:
       value: 5
     - model: 30 kg multi-interval
       value: 10
+    unit_id: u:gram
   - attribute: scale_interval_e2_range
     unit_symbol: kg
     values:
@@ -172,6 +177,7 @@ characteristics:
       value:
         min: 15
         max: 30
+    unit_id: u:kilogram
   config_level: []
 recommendation:
   id: R76
@@ -228,9 +234,11 @@ components:
     - type: CLC-25L
       value: 25
       unit_symbol: kg
+      unit_id: u:kilogram
     - type: CLC-50L
       value: 50
       unit_symbol: kg
+      unit_id: u:kilogram
     n_max:
     - type: CLC-25L
       value: 3000
@@ -251,9 +259,11 @@ components:
     - type: CLC-25N
       value: 25
       unit_symbol: kg
+      unit_id: u:kilogram
     - type: CLC-50N
       value: 50
       unit_symbol: kg
+      unit_id: u:kilogram
     n_max:
     - type: CLC-25N
       value: 3000

@@ -64,14 +64,14 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     gas_temperature_range:
       value:
         min: -20
         max: 100
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     designed_for:
       value: Condensing humidity
@@ -98,7 +98,7 @@ characteristics:
     power_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: DC
@@ -306,24 +306,29 @@ characteristics:
     - condition: without flow conditioner
       value: 10
       unit_symbol: D
+      unit_id: u:debye
     - condition: with Krohne flow conditioner
       value: 2
       unit_symbol: D
+      unit_id: u:debye
   - attribute: minimum_outlet_piping_length
     axis: installation
     values:
     - condition: with temperature sensor at least 2D downstream
       value: 3
       unit_symbol: D
+      unit_id: u:debye
   - attribute: minimum_temperature_sensor_distance
     axis: temperature sensor position
     values:
     - condition: downstream of meter (single-direction use)
       value: 2
       unit_symbol: D
+      unit_id: u:debye
     - condition: upstream of meter (bi-directional use)
       value: 4
       unit_symbol: D
+      unit_id: u:debye
 recommendation:
   id: R137-1
   edition: 2012

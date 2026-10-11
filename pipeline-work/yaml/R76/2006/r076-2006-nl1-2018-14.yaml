@@ -63,14 +63,14 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     weighing_ranges:
       value: Single interval or Multi-interval
@@ -101,7 +101,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_type:
       value: AC mains or DC battery
@@ -160,10 +160,13 @@ characteristics:
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: DC battery
       value: 12
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
+    unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_source
     unit_symbol: Hz
@@ -174,6 +177,8 @@ characteristics:
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
+    unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006

@@ -75,11 +75,11 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
     input_impedance_rlc:
       value: 400 ± 20 or 1150 ± 100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     temperature_rating:
       value:
         min: -10
@@ -108,11 +108,13 @@ characteristics:
         min: 300
         max: 4000
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: capacity 4000 to 10000 kg
       value:
         min: 4000
         max: 10000
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: ratio_y_emax_over_vmin
     axis: capacity_range
     values:
@@ -139,11 +141,13 @@ characteristics:
         min:
         max: 5
       unit_symbol: m
+      unit_id: u:meter
     - condition: capacity 4000 to 10000 kg
       value:
         min:
         max: 12
       unit_symbol: m
+      unit_id: u:meter
 recommendation:
   id: R60
   edition: 2000

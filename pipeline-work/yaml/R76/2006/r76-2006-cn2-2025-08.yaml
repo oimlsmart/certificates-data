@@ -60,7 +60,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -72,14 +72,14 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     software_identification:
       value: V1.00
@@ -96,6 +96,7 @@ characteristics:
     - model: T30
       value: 100
       footnote_markers: []
+    unit_id: u:gram
   - attribute: tare_weighing_range
     unit_symbol: kg
     values:
@@ -105,6 +106,7 @@ characteristics:
     - model: T30
       value: -14.995
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_capacity
     axis: multi-interval partial range (per verification scale interval)
@@ -112,45 +114,57 @@ characteristics:
     - condition: T15, partial range 1 (e = 2 g)
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: T15, partial range 2 (e = 5 g)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: T30, partial range 1 (e = 5 g)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: T30, partial range 2 (e = 10 g)
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     axis: multi-interval partial range
     values:
     - condition: T15, partial range 1
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: T15, partial range 2
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: T30, partial range 1
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: T30, partial range 2
       value: 10
       unit_symbol: g
+      unit_id: u:gram
   - attribute: actual_scale_interval_d
     axis: multi-interval partial range
     values:
     - condition: T15, partial range 1
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: T15, partial range 2
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: T30, partial range 1
       value: 5
       unit_symbol: g
+      unit_id: u:gram
     - condition: T30, partial range 2
       value: 10
       unit_symbol: g
+      unit_id: u:gram
   - attribute: number_of_verification_scale_intervals_n
     axis: multi-interval partial range
     values:

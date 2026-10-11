@@ -54,11 +54,11 @@ characteristics:
         min: 10000
         max: 50000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_dead_load:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     accuracy_class:
       value: C
       unit_symbol:
@@ -78,17 +78,17 @@ characteristics:
     input_impedance_tolerance:
       value: 50
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     output_impedance_tolerance:
       value: 3
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     apportionment_factor_plc:
       value: 0.7
       unit_symbol:
@@ -108,7 +108,7 @@ characteristics:
     recommended_excitation_voltage:
       value: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     recommended_excitation_type:
       value: AC/DC
       unit_symbol:
@@ -116,7 +116,7 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     maximum_excitation_type:
       value: AC/DC
       unit_symbol:
@@ -146,6 +146,7 @@ characteristics:
       value: 750
     - model: InputImpedance=1150Ω
       value: 1150
+    unit_id: u:ohm
   - attribute: output_impedance
     unit_symbol: Ω
     values:
@@ -153,6 +154,7 @@ characteristics:
       value: 700
     - model: OutputImpedance=1000Ω
       value: 1000
+    unit_id: u:ohm
 recommendation:
   id: R60
   edition: 2000

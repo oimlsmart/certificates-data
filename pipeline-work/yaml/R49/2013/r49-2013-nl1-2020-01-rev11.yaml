@@ -136,29 +136,29 @@ characteristics:
         min: 95
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value:
         min: 6
         max: 32
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_voltage:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_operating_voltage_range:
       value:
         min: 2.9
         max: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     q2_q1_ratio:
       value: 1.6
       unit_symbol:
@@ -430,279 +430,359 @@ characteristics:
     - condition: reduced bore, DN40 and DN50
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
     - condition: reduced bore, sizes larger than DN50
       value: 0.63
       unit_symbol: bar
+      unit_id: u:bar
     - condition: virtual or full bore, DN40 and DN50
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
     - condition: virtual or full bore, DN65 to DN200
       value: 0.16
       unit_symbol: bar
+      unit_id: u:bar
     - condition: virtual or full bore, DN250 and larger
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: indicating_range_maximum_value
     axis: meter_size (reduced bore, AC mains powered)
     values:
     - condition: DN40, DN50, DN65
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN100, DN125, DN150, DN200
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN300, DN350, DN400, DN450, DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_minimum_value
     axis: meter_size (reduced bore, AC mains powered)
     values:
     - condition: DN40, DN50, DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN100, DN125, DN150, DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN300, DN350, DN400, DN450, DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum_value
     axis: meter_size (reduced bore, AC mains powered)
     values:
     - condition: DN40, DN50, DN65
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN100, DN125, DN150, DN200
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN300, DN350, DN400, DN450, DN500, DN600
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_maximum_value
     axis: meter_size (reduced bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250, DN300, DN350, DN400, DN450
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_minimum_value
     axis: meter_size (reduced bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250, DN300, DN350, DN400, DN450
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum_value
     axis: meter_size (reduced bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN250, DN300, DN350, DN400, DN450
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN500, DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_maximum_value
     axis: meter_size (full bore, AC mains powered)
     values:
     - condition: DN40, DN50
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN350, DN400, DN450, DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800, DN900, DN1000, DN1050, DN1100, DN1200
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1350, DN1400, DN1500, DN1600, DN1650, DN1800
       value: 999999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_minimum_value
     axis: meter_size (full bore, AC mains powered)
     values:
     - condition: DN40, DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN350, DN400, DN450, DN500, DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800, DN900, DN1000, DN1050, DN1100, DN1200
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1350, DN1400, DN1500, DN1600, DN1650, DN1800
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum_value
     axis: meter_size (full bore, AC mains powered)
     values:
     - condition: DN40, DN50
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN80, DN100, DN125, DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN350, DN400, DN450, DN500, DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800, DN900, DN1000, DN1050, DN1100, DN1200
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN1350, DN1400, DN1500, DN1600, DN1650, DN1800
       value: 1
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_maximum_value
     axis: meter_size (full bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65, DN80, DN100, DN125
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300, DN350, DN400, DN450, DN500
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN600
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN900, DN1000, DN1050, DN1100, DN1200, DN1350, DN1400, DN1500, DN1600, DN1650
       value: 999999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_range_minimum_value
     axis: meter_size (full bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65, DN80, DN100, DN125
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300, DN350, DN400, DN450, DN500
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN900, DN1000, DN1050, DN1100, DN1200, DN1350, DN1400, DN1500, DN1600, DN1650
       value: 99999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum_value
     axis: meter_size (full bore, battery / renewable energy powered)
     values:
     - condition: DN40, DN50
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65, DN80, DN100, DN125
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200, DN250, DN300, DN350, DN400, DN450, DN500
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN700, DN750, DN800
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN900, DN1000, DN1050, DN1100, DN1200, DN1350, DN1400, DN1500, DN1600, DN1650
       value: 1
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49
   edition: 2013

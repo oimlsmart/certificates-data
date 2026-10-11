@@ -58,7 +58,7 @@ characteristics:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     weighing_ranges:
       value: Single interval / Multi-interval
     maximum_number_of_partial_weighing_ranges:
@@ -77,19 +77,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 120
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
     application:
@@ -104,11 +104,13 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: weighing module ScalePad USB
       value:
         min:
         max: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: weighing module ADC-Box USB
       value: calculated using the compatibility of modules form, contained in EN 45501:2015 clause F.4
       unit_symbol:
@@ -117,6 +119,7 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: maximum_number_of_scale_intervals
     axis: weighing_range_configuration
     values:
@@ -224,7 +227,7 @@ components:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: weighing module
   type_designations:
   - ScalePad USB
@@ -234,7 +237,7 @@ components:
         min:
         max: 15
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: weighing module (A/D converter)
   type_designations:
   - ADC-Box USB
@@ -252,7 +255,7 @@ components:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: terminal (Scale OEM Module)
   type_designations:
   - Scale OEM Module

@@ -82,7 +82,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     measuring_range_minimum_voltage:
       value: 0
@@ -97,7 +97,7 @@ characteristics:
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_tare:
       value: -100
@@ -174,9 +174,12 @@ characteristics:
     - condition: Standard build or when fitted with 10V EXC analogue load cell interface option card(s)
       value: 10
       unit_symbol: V DC
+      unit_id: u:volt
     - condition: When fitted with 5V EXC analogue load cell interface option card(s)
       value: 5
       unit_symbol: V DC
+      unit_id: u:volt
+    unit_id: u:volt
   - attribute: minimum_input_voltage_per_scale_interval
     axis: load cell input variant
     unit_symbol: µV
@@ -196,14 +199,18 @@ characteristics:
         card(s)
       value: 10.94
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: >-
         ZM505, ZM510 - standard build or when fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 14.58
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: When fitted with 5V EXC analogue load cell interface option card(s)
       value: 58.33
       unit_symbol: Ω
+      unit_id: u:ohm
+    unit_id: u:ohm
   - attribute: load_cell_cable_maximum_length_6_wire
     axis: load cell input variant
     unit_symbol: m/mm²
@@ -240,11 +247,14 @@ characteristics:
         min: 12
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC variant - ZM505-SD3, ZM510-SD4, ZM605-SD4, ZM615-SD5
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
+    unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power supply variant
     unit_symbol: Hz
@@ -254,6 +264,8 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
+    unit_id: u:hertz
   - attribute: power_supply_type
     axis: power supply variant
     values:
@@ -384,7 +396,7 @@ components:
         min: 12
         max: 36
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_source:
       value: Supplied by digital indicating device via RS485 interface cable
@@ -394,17 +406,17 @@ components:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 350
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.8
@@ -431,7 +443,7 @@ components:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     software_identification:
       value: AWT30-500235
@@ -460,15 +472,20 @@ components:
       - condition: 4-wire, 350 Ω load cell connection
         value: 15
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 700 Ω load cell connection
         value: 30
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 1000 Ω load cell connection
         value: 42
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 1100 Ω load cell connection
         value: 47
         unit_symbol: m
+        unit_id: u:meter
+      unit_id: u:meter
     note:
       value: All load cell cables to an individual ZB210 must be of equal length
       unit_symbol:
@@ -482,7 +499,7 @@ components:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     purpose:
       value: Allows the connection of a second platform
@@ -502,7 +519,7 @@ components:
     load_cell_excitation_voltage:
       value: 10
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     purpose:
       value: Allows the connection of a second platform

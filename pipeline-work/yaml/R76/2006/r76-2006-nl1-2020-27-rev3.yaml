@@ -73,17 +73,17 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     application:
       value: Intended to be used for direct sales to the public
       unit_symbol:
@@ -121,9 +121,11 @@ characteristics:
     - condition: analog load cells
       value: 10
       unit_symbol: V
+      unit_id: u:volt
     - condition: analog load cells with ISB
       value: 2.5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage
     axis: load cell configuration
     values:
@@ -132,6 +134,7 @@ characteristics:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load cell configuration
     values:
@@ -147,18 +150,22 @@ characteristics:
     - condition: analog load cells
       value: 29
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog load cells with ISB
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load cell configuration
     values:
     - condition: analog load cells
       value: 1236
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog load cells with ISB
       value: 3150
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load cell configuration
     values:
@@ -192,16 +199,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: analog load cells with ISB
       value:
         min: 5
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: digital load cells or weighing modules
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76
   edition: 2006

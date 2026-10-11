@@ -61,13 +61,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
     power_supply_frequency:
@@ -75,7 +75,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     application:
       value: Intended to be used for direct sales to the public
   config_level:
@@ -118,9 +118,11 @@ characteristics:
     - condition: analog_load_cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: analog_load_cells
       value: 10
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load_cell_configuration
     values:
@@ -136,15 +138,18 @@ characteristics:
     - condition: battery_version
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: ac_mains_version
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_configuration
     values:
     - condition: analog_load_cells
       value: 1200
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load_cell_configuration
     values:
@@ -170,9 +175,11 @@ characteristics:
     - condition: NiMH battery
       value: 7.2
       unit_symbol: V
+      unit_id: u:volt
     - condition: Li-Ion battery pack
       value: 10.8
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R76
   edition: 2006

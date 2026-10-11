@@ -55,7 +55,7 @@ characteristics:
     minimum_capacity:
       value: 40
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     interval_type:
       value: single or multi-interval (any combination of the stated capacity/scale-interval variants)
       unit_symbol:
@@ -73,7 +73,7 @@ characteristics:
         min: 0
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity_environment:
       value: non-condensing (closed)
       unit_symbol:
@@ -85,19 +85,19 @@ characteristics:
     load_cell_excitation_voltage:
       value: 14
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage:
       value:
         min: 220
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -148,6 +148,7 @@ characteristics:
       value:
         min:
         max: 6
+    unit_id: u:kilogram
   - attribute: minimum_scale_interval
     unit_symbol: g
     values:
@@ -163,6 +164,7 @@ characteristics:
       value:
         min: 2
         max:
+    unit_id: u:gram
   config_level:
   - attribute: operating_speed
     axis: weighing range (weight in motion)
@@ -172,21 +174,25 @@ characteristics:
         min: 0.3
         max: 1.33
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: 250 g to 1000 g
       value:
         min: 0.3
         max: 1.1
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: 1000 g to 3000 g
       value:
         min: 0.3
         max: 1.0
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: 3000 g to 6000 g
       value:
         min: 0.3
         max: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
   - attribute: minimum_voltage_input_per_scale_interval
     axis: capacity range
     values:
@@ -237,7 +243,7 @@ components:
     maximum_capacity:
       value: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     location: below the centre of the weigh conveyor
     dynamically_tested_reference: Tedea 1040 C3 (capacity 15 kg)
     replacement_conditions: >-

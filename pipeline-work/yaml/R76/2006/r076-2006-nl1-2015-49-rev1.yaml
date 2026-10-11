@@ -57,6 +57,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: AC
     power_supply_frequency:
@@ -64,9 +65,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     battery_supply_voltage:
       value: 7.2
       unit_symbol: V
+      unit_id: u:volt
     battery_type:
       value: NiMH
     temperature_range:
@@ -74,6 +77,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     maximum_number_of_load_platforms:
       value: 1
     application:
@@ -99,9 +103,11 @@ characteristics:
     - condition: option 1
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: option 2
       value: 10
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: analog load cell excitation
     values:
@@ -117,15 +123,18 @@ characteristics:
     - condition: battery version
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: AC mains version
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_interface
     values:
     - condition: analog load cell(s)
       value: 1200
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: >-
       maximum_cable_length_per_cross_wire_section_for_connection_between_indicator_and_junction_box_or_load_cells
     axis: load_cell_wiring

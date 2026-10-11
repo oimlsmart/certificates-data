@@ -58,6 +58,7 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
     maximum_conveyer_speed:
       value: 20
       unit_symbol: m/min
@@ -66,6 +67,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     weighing_principle:
       value: Semi-automatic (static) or non-automatic (static)
   model_level:
@@ -80,6 +82,7 @@ characteristics:
       value: 120
     - model: Max=600kg
       value: 600
+    unit_id: u:kilogram
 recommendation:
   id: R51
   edition: 1996
@@ -102,21 +105,25 @@ model_family:
       maximum_capacity:
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: Max=60kg
     attributes:
       maximum_capacity:
         value: 60
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: Max=120kg
     attributes:
       maximum_capacity:
         value: 120
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: Max=600kg
     attributes:
       maximum_capacity:
         value: 600
         unit_symbol: kg
+        unit_id: u:kilogram
 components:
 - role: connected analogue load cell
   type_designations:
@@ -131,5 +138,5 @@ components:
     maximum_capacity:
       value: 50, 100, 200, 400 or 1000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []

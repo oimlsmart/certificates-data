@@ -60,7 +60,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     temperature_class:
       value: T50
       unit_symbol:
@@ -72,11 +72,11 @@ characteristics:
     maximum_admissible_pressure_map:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     maximum_pressure_loss:
       value: 0.4
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     pressure_loss_class:
       value: Δp 40
       unit_symbol:
@@ -94,7 +94,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     electromagnetic_environmental_class:
       value: E1/E2
       unit_symbol:
@@ -114,7 +114,7 @@ characteristics:
     battery_maximum_voltage:
       value: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_lifetime:
       value: 18
       unit_symbol: years
@@ -346,18 +346,22 @@ characteristics:
     - condition: normal mode
       value: 999999.999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: testing mode
       value: 999.999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: scale_interval
     axis: resolution mode
     values:
     - condition: normal resolution
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: high resolution
       value: 1.0e-06
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49
   edition: 2024

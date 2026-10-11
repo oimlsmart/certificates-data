@@ -68,7 +68,7 @@ characteristics:
         min: 10
         max: 30
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
   config_level:
   - attribute: accuracy_class
@@ -88,20 +88,24 @@ characteristics:
         min: 110
         max: 1510
       unit_symbol: ct
+      unit_id: u:carat
     - condition: unit = g
       value:
         min: 22
         max: 302
       unit_symbol: g
+      unit_id: u:gram
   - attribute: verification_scale_interval
     axis: weighing_unit
     values:
     - condition: unit = ct
       value: 0.01
       unit_symbol: ct
+      unit_id: u:carat
     - condition: unit = g
       value: 0.01
       unit_symbol: g
+      unit_id: u:gram
   - attribute: scale_interval
     axis: weighing_unit
     values:
@@ -110,11 +114,13 @@ characteristics:
         min: 0.001
         max: 0.01
       unit_symbol: ct
+      unit_id: u:carat
     - condition: unit = g
       value:
         min: 0.001
         max: 0.01
       unit_symbol: g
+      unit_id: u:gram
   - attribute: number_of_verification_scale_intervals
     axis: weighing_unit
     values:

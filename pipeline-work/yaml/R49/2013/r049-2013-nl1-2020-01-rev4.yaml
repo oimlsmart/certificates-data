@@ -89,7 +89,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -99,7 +99,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -125,19 +125,19 @@ characteristics:
         min: 85
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_voltage_dc:
       value:
         min: 6
         max: 32
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_configuration:
       value: 2 x 3.6 V
       unit_symbol:
@@ -147,7 +147,7 @@ characteristics:
         min: 2.9
         max: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
   config_level:
   - attribute: flow_profile_sensitivity_class
     axis: bore_type_and_meter_size
@@ -182,18 +182,23 @@ characteristics:
     - condition: reduced bore, DN40 and DN50
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
     - condition: reduced bore, larger than DN50
       value: 0.63
       unit_symbol: bar
+      unit_id: u:bar
     - condition: "(virtual) full bore, DN40 and DN50"
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
     - condition: "(virtual) full bore, DN65 to DN200"
       value: 0.16
       unit_symbol: bar
+      unit_id: u:bar
     - condition: "(virtual) full bore, DN250 and larger"
       value: 0.1
       unit_symbol: bar
+      unit_id: u:bar
 recommendation:
   id: R49-1
   edition: 2013

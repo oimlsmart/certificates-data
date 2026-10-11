@@ -70,12 +70,12 @@ characteristics:
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: t
-      unit_id:
+      unit_id: u:metric_ton
       footnote_markers: []
     apportionment_factor_plc:
       value: 0.8
@@ -92,7 +92,7 @@ characteristics:
         min: 6
         max: 8
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     excitation_voltage_type:
       value: DC
@@ -102,14 +102,14 @@ characteristics:
     cable_length_maximum:
       value: 15
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
     temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
   model_level:
   - attribute: maximum_capacity_emax
@@ -133,6 +133,7 @@ characteristics:
     - model: CC1-H-50T
       value: 50
       footnote_markers: []
+    unit_id: u:metric_ton
   config_level:
   - attribute: max_load_cell_verification_intervals_nmax
     axis: nmax_alternative
@@ -160,18 +161,22 @@ characteristics:
       value: 1000*Emax/15000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: nmax=5000
       value: 1000*Emax/12500
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: nmax=4000
       value: 1000*Emax/10000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: nmax=3000
       value: 1000*Emax/8000
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: ratio_y_emax_over_vmin
     axis: nmax_alternative
     values:
@@ -212,7 +217,7 @@ model_family:
       maximum_capacity_emax:
         value: 10
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []
   - model_id: CC1-H-20T
     label: CC1-H-20T (Emax = 20 t)
@@ -220,7 +225,7 @@ model_family:
       maximum_capacity_emax:
         value: 20
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []
   - model_id: CC1-H-25T
     label: CC1-H-25T (Emax = 25 t)
@@ -228,7 +233,7 @@ model_family:
       maximum_capacity_emax:
         value: 25
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []
   - model_id: CC1-H-30T
     label: CC1-H-30T (Emax = 30 t)
@@ -236,7 +241,7 @@ model_family:
       maximum_capacity_emax:
         value: 30
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []
   - model_id: CC1-H-40T
     label: CC1-H-40T (Emax = 40 t)
@@ -244,7 +249,7 @@ model_family:
       maximum_capacity_emax:
         value: 40
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []
   - model_id: CC1-H-50T
     label: CC1-H-50T (Emax = 50 t)
@@ -252,5 +257,5 @@ model_family:
       maximum_capacity_emax:
         value: 50
         unit_symbol: t
-        unit_id:
+        unit_id: u:metric_ton
         footnote_markers: []

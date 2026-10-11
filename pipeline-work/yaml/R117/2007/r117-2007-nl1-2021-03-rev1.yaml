@@ -74,7 +74,7 @@ characteristics:
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     environmental_classes:
       value: M3 / E2 / H3
@@ -86,7 +86,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     intended_media:
       value: >-
@@ -273,6 +273,7 @@ characteristics:
     - model: F400y
       value: 100
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: maximum_pressure
     unit_symbol: bar(g)
     values:
@@ -398,21 +399,25 @@ characteristics:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '0.5'
       value:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '1.0'
       value:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '1.5'
       value:
         min: -200
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: liquid_temperature_range_density_volume_measurement
     axis: accuracy_class
     values:
@@ -421,16 +426,19 @@ characteristics:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '0.5'
       value:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '1.0'
       value:
         min: -10
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: '1.5'
       value: NA
       unit_symbol:
@@ -634,10 +642,12 @@ components:
           max: 55
         unit_symbol: "°C"
         note: condensing humidity
+        unit_id: u:degree_Celsius
       power_supply_options:
       - power_supply_voltage:
           value: 24
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: DC
       - power_supply_voltage:
@@ -645,6 +655,7 @@ components:
             min: 18
             max: 30
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: DC
       - power_supply_voltage:
@@ -652,6 +663,7 @@ components:
             min: 18
             max: 100
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: DC
       - power_supply_voltage:
@@ -659,6 +671,7 @@ components:
             min: 85
             max: 265
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: AC
         power_supply_frequency:
@@ -666,6 +679,7 @@ components:
             min: 50
             max: 60
           unit_symbol: Hz
+          unit_id: u:hertz
     5700 electronics:
       documentation_file:
         value: TC8519-4
@@ -677,17 +691,20 @@ components:
           min: -25
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       - condition: approved external display is used as primary indication
         value:
           min: -40
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       power_supply_options:
       - power_supply_voltage:
           value:
             min: 21
             max: 90
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: DC
       - power_supply_voltage:
@@ -695,6 +712,7 @@ components:
             min: 100
             max: 240
           unit_symbol: V
+          unit_id: u:volt
         power_supply_type:
           value: AC
         power_supply_frequency:
@@ -702,6 +720,7 @@ components:
             min: 50
             max: 60
           unit_symbol: Hz
+          unit_id: u:hertz
 footnotes:
 - marker: '1'
   text: With xxx denoting the size of the measurement sensor.

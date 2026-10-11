@@ -45,7 +45,7 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -57,21 +57,21 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     temperature_range:
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_load:
       value:
         min:
         max: 60000
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
   config_level:
   - attribute: belt_speed
@@ -82,14 +82,14 @@ characteristics:
         min:
         max: 1.5
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
       footnote_markers: []
     - condition: Y(a)
       value:
         min:
         max: 1
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
       footnote_markers: []
   - attribute: minimum_load
     axis: accuracy_class
@@ -99,7 +99,7 @@ characteristics:
         min: 5
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     - condition: Y(a)
       value: 20e
@@ -136,14 +136,14 @@ characteristics:
         min: 0.1
         max: 2
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     - condition: n ≤ 6000
       value:
         min: 5
         max: 10
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
 recommendation:
   id: R51-1
@@ -213,14 +213,17 @@ matrix_tables:
         min:
         max: 1.5
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     power_supply_type:
       value: AC
     temperature_range:
@@ -228,6 +231,7 @@ matrix_tables:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     number_of_verification_scale_intervals:
     - condition: 0.1 g ≤ e ≤ 2 g
       value:
@@ -243,21 +247,25 @@ matrix_tables:
         min: 0.1
         max: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: n ≤ 6000
       value:
         min: 5
         max: 10
       unit_symbol: g
+      unit_id: u:gram
     maximum_load:
       value:
         min:
         max: 60000
       unit_symbol: g
+      unit_id: u:gram
     minimum_load:
       value:
         min: 5
         max:
       unit_symbol: g
+      unit_id: u:gram
     force_compensation_load_cell:
       value: WZ XX,XX M OR WZGP-XX-S
   - accuracy_class: Y(a)
@@ -266,14 +274,17 @@ matrix_tables:
         min:
         max: 1
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     power_supply_type:
       value: AC
     temperature_range:
@@ -281,6 +292,7 @@ matrix_tables:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     number_of_verification_scale_intervals:
     - condition: 0.1 g ≤ e ≤ 2 g
       value:
@@ -296,16 +308,19 @@ matrix_tables:
         min: 0.1
         max: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: n ≤ 6000
       value:
         min: 5
         max: 10
       unit_symbol: g
+      unit_id: u:gram
     maximum_load:
       value:
         min:
         max: 60000
       unit_symbol: g
+      unit_id: u:gram
     minimum_load:
     - condition: default
       value: 20e

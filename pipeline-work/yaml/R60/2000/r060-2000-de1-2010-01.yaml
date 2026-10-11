@@ -69,7 +69,7 @@ characteristics:
     input_impedance:
       value: 1180
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   model_level:
   - attribute: maximum_capacity
     unit_symbol: kg
@@ -88,6 +88,7 @@ characteristics:
       value: 150
     - model: Emax=375kg
       value: 375
+    unit_id: u:kilogram
   config_level:
   - attribute: minimum_load_cell_verification_interval_vmin
     unit_symbol: "%Emax"
@@ -175,6 +176,7 @@ matrix_tables:
     symbol: Emax
     unit_symbol: kg
     value: 3.75 / 7.5 / 15 / 37.5 / 75 / 150
+    unit_id: u:kilogram
   - range: Range 1
     attribute: minimum_load_cell_verification_interval_vmin
     symbol: vmin = (Emax/Y)
@@ -185,6 +187,7 @@ matrix_tables:
     symbol: Emax
     unit_symbol: kg
     value: 375
+    unit_id: u:kilogram
   - range: Range 2
     attribute: minimum_load_cell_verification_interval_vmin
     symbol: vmin = (Emax/Y)

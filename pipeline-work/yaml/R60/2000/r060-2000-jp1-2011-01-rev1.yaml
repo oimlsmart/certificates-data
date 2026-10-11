@@ -58,17 +58,21 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
+      unit_id: u:kilogram
     max_number_of_load_cell_verification_intervals_nmax:
       value: 6000, 5000, 4000, 3000
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: kg
+      unit_id: u:kilogram
     minimum_verification_interval_vmin:
       value: Emax/12000
       unit_symbol: kg
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.7
     ratio_y_emax_over_vmin:
@@ -76,11 +80,13 @@ characteristics:
     maximum_excitation_voltage:
       value: 15
       unit_symbol: V
+      unit_id: u:volt
     cable_length:
       value:
         min:
         max: 20
       unit_symbol: m
+      unit_id: u:meter
     cable_configuration:
       value: 4-wire
   model_level:
@@ -93,6 +99,7 @@ characteristics:
       value: 24000
     - model: DCC1-36T
       value: 36000
+    unit_id: u:kilogram
   config_level:
   - attribute: ratio_z_emax_over_2dr
     axis: max_number_of_load_cell_verification_intervals_nmax

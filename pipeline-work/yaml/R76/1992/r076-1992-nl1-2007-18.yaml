@@ -54,7 +54,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   config_level:
   - attribute: maximum_capacity
     axis: load_cell_type
@@ -62,11 +62,13 @@ characteristics:
     - condition: load cell type 72198183
       value: 300
       unit_symbol: g
+      unit_id: u:gram
     - condition: load cell type 72193366
       value:
         min: 3
         max: 6
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: load_cell_type
     values:
@@ -75,11 +77,13 @@ characteristics:
         min: 0.2
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: load cell type 72193366
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: number_of_verification_scale_intervals
     axis: load_cell_type
     values:
@@ -117,13 +121,13 @@ components:
       maximum_capacity:
         value: 300
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
       verification_scale_interval:
         value:
           min: 0.2
           max:
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
       number_of_verification_scale_intervals:
         value:
           min:
@@ -141,13 +145,13 @@ components:
           min: 3
           max: 6
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       verification_scale_interval:
         value:
           min: 1
           max:
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
       number_of_verification_scale_intervals:
         value:
           min:

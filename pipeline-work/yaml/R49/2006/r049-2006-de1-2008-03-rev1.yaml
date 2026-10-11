@@ -63,7 +63,7 @@ characteristics:
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 5.2
       unit_symbol: MPa
@@ -229,16 +229,19 @@ characteristics:
         min: 85
         max: 260
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC, low range
       value:
         min: 20
         max: 55
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value:
         min: 16
         max: 62
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -247,11 +250,13 @@ characteristics:
         min: 45
         max: 65
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: AC, low range
       value:
         min: 45
         max: 65
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: assembly
     axis: version
     values:

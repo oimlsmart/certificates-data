@@ -77,7 +77,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity_environment:
       value: Non-condensing (closed)
       unit_symbol:
@@ -85,7 +85,7 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -93,7 +93,7 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     accuracy_class:
       value: XIII(1)
       unit_symbol:
@@ -112,6 +112,7 @@ characteristics:
       value: 3200
     - model: 10D3
       value: 8000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -121,6 +122,7 @@ characteristics:
       value: 200
     - model: 10D3
       value: 500
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -130,6 +132,7 @@ characteristics:
       value: 2
     - model: 10D3
       value: 5
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -139,6 +142,7 @@ characteristics:
       value: 10
     - model: 10D3
       value: 10
+    unit_id: u:kilogram
   config_level: []
 recommendation:
   id: R51
@@ -202,7 +206,7 @@ components:
     tested_emax:
       value: 5
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     substitution_conditions: >-
       Any compatible load cell(s) may be used provided: a respective OIML R60 Certificate of Conformity
       exists containing the load cell type and necessary data for the manufacturer's declaration of compatibility

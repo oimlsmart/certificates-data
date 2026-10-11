@@ -50,12 +50,15 @@ characteristics:
     maximum_capacity:
       value: 30000
       unit_symbol: kg
+      unit_id: u:kilogram
     minimum_operation_speed:
       value: 1
       unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
     maximum_transit_speed:
       value: 30
       unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
     maximum_number_of_axles:
       value:
         min:
@@ -72,6 +75,7 @@ characteristics:
     power_supply_voltage:
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -83,6 +87,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   config_level:
   - attribute: minimum_capacity
     axis: accuracy_class
@@ -101,18 +106,22 @@ characteristics:
         min: 10
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: '2'
       value: 50
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: maximum_operation_speed
     axis: accuracy_class
     values:
     - condition: '1'
       value: 3
       unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
     - condition: '2'
       value: 5
       unit_symbol: km/h
+      unit_id: u:kilometer_per_hour
 recommendation:
   id: R134
   edition: 2003

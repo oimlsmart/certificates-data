@@ -100,6 +100,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     initial_zero_setting_device:
       value:
         min:
@@ -148,6 +149,7 @@ characteristics:
         max: 30
     - model: Max=30kg
       value: 30
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -167,6 +169,7 @@ characteristics:
       value: 100
     - model: Max=30kg
       value: 200
+    unit_id: u:gram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -194,6 +197,7 @@ characteristics:
         max: 10
     - model: Max=30kg
       value: 10
+    unit_id: u:gram
   - attribute: load_cell_maximum_capacity
     unit_symbol: kg
     values:
@@ -213,6 +217,7 @@ characteristics:
       value: 30
     - model: Max=30kg
       value: 30
+    unit_id: u:kilogram
   config_level:
   - attribute: power_supply_voltage
     axis: power_supply_option
@@ -222,12 +227,15 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: integrated Pb battery
       value: 4
       unit_symbol: V
+      unit_id: u:volt
     - condition: 3 x 1.5 V dry battery (D type)
       value: 1.5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -236,6 +244,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

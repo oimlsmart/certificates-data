@@ -75,11 +75,11 @@ characteristics:
         min: 10
         max: 30
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC (supplied by AC/DC power supply)
       unit_symbol:
@@ -97,11 +97,13 @@ characteristics:
         min: 62
         max: 320
       unit_symbol: g
+      unit_id: u:gram
     - condition: capacity expressed in carats (ct)
       value:
         min: 600
         max: 1600
       unit_symbol: ct
+      unit_id: u:carat
   - attribute: verification_scale_interval
     axis: capacity_unit
     values:
@@ -115,6 +117,7 @@ characteristics:
         min: 0.01
         max:
       unit_symbol: ct
+      unit_id: u:carat
 recommendation:
   id: R76
   edition: 2006

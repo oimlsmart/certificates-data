@@ -72,7 +72,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T30
     water_temperature_range:
@@ -80,7 +80,7 @@ characteristics:
         min: 0.1
         max: 30
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -88,7 +88,7 @@ characteristics:
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     orientation:
       value: All positions (horizontal, vertical or diagonal)
     flow_profile_sensitivity_class:
@@ -100,7 +100,7 @@ characteristics:
     maximum_pressure_loss:
       value: 0.63
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
   model_level:
   - attribute: revs_per_liter
     unit_symbol: rev/l
@@ -175,62 +175,78 @@ characteristics:
     - condition: V100 / 4x4 Register
       value: 9999.99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 99999.9999
       unit_symbol: m³
       footnote_markers:
       - 1)
+      unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 9999.99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 99999.9999
       unit_symbol: m³
       footnote_markers:
       - 1)
+      unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 99999.99998
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 999999.99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 99999.99998
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 999999.99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: meter_model / register_variant
     values:
     - condition: V100 / 4x4 Register
       value: 1.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 0.0001
       unit_symbol: m³
       footnote_markers:
       - 1)
+      unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 1.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 0.0001
       unit_symbol: m³
       footnote_markers:
       - 1)
+      unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 2.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 1.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 2.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 1.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: environmental_class
     axis: register_variant
     values:
@@ -254,6 +270,7 @@ characteristics:
         min: 2.5
         max: 3.75
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R49
   edition: 2006

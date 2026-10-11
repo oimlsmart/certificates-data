@@ -62,19 +62,19 @@ characteristics:
         min:
         max: 1.47
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
     maximum_capacity:
       value:
         min:
         max: 60
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     verification_scale_interval:
       value:
         min: 0.1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     number_of_verification_scale_intervals:
       value:
         min:
@@ -84,7 +84,7 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -94,7 +94,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     accuracy_category:
       value: XIII(1); XIIIH(x ≥ 2)
       unit_symbol:
@@ -120,7 +120,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: accuracy_category
     values:
@@ -179,6 +179,7 @@ characteristics:
       value:
         min:
         max: 0.83
+    unit_id: u:meter_per_second
   - attribute: number_of_verification_scale_intervals
     values:
     - model: WS10CW
@@ -304,6 +305,7 @@ characteristics:
       value:
         min: 0.1
         max:
+    unit_id: u:gram
   - attribute: maximum_load
     unit_symbol: kg
     values:
@@ -347,6 +349,7 @@ characteristics:
       value:
         min:
         max: 3.75
+    unit_id: u:kilogram
   - attribute: minimum_load
     unit_symbol: kg
     values:
@@ -410,6 +413,7 @@ characteristics:
         max:
       footnote_markers:
       - 5)
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_belt_speed
     axis: load
@@ -419,71 +423,85 @@ characteristics:
         min:
         max: 1.25
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS20VB, 1 < L ≤ 6 kg
       value:
         min:
         max: 1.15
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS20VB, 6 kg < L ≤ 10 kg
       value:
         min:
         max: 0.79
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS20VB, 10 kg < L ≤ 15 kg
       value:
         min:
         max: 0.93
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10H, 0 < L < 3 kg
       value:
         min:
         max: 0.67
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10H, 3 kg ≤ L ≤ 60 kg
       value:
         min:
         max: 1.0
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10VK1, WS10VK2, WS10VK5, WS20VK, 0 < L < 0.05 kg
       value:
         min:
         max: 1.47
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10VK1, WS10VK2, WS10VK5, WS20VK, 0.05 < L < 0.5 kg
       value:
         min:
         max: 0.25
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10VK1, WS10VK2, WS10VK5, WS20VK, 0.5 < L < 2 kg
       value:
         min:
         max: 0.92
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10VK1, WS10VK2, WS10VK5, WS20VK, 2 < L < 6 kg
       value:
         min:
         max: 0.67
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: WS10VK1, WS10VK2, WS10VK5, WS20VK, 6 kg ≤ L ≤ 15 kg
       value:
         min:
         max: 0.5
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: EM ..., 0 g < L ≤ 10 g
       value:
         min:
         max: 0.83
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: EM ..., 10 g < L ≤ 200 g
       value:
         min:
         max: 0.67
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: EM ..., 200 g < L ≤ 3750 g
       value:
         min:
         max: 0.5
       unit_symbol: m/s
+      unit_id: u:meter_per_second
 recommendation:
   id: R51-1
   edition: 2006

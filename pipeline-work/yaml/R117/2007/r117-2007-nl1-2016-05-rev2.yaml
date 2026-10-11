@@ -52,7 +52,7 @@ characteristics:
     maximum_pressure:
       value: 100
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     density_range:
       value:
@@ -71,7 +71,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     environment_class:
       value: M3/E2/H3
@@ -81,21 +81,21 @@ characteristics:
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage_ac:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: DC and AC
@@ -136,6 +136,7 @@ characteristics:
       value: 100
     - model: DN100
       value: 200
+    unit_id: u:kilogram
   config_level:
   - attribute: product_temperature_range
     axis: measurement_mode
@@ -145,11 +146,13 @@ characteristics:
         min: -10
         max: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: mass measurement
       value:
         min: -200
         max: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: software_crc_modbus
     axis: software_version
     values:

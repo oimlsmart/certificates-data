@@ -88,6 +88,7 @@ characteristics:
       value:
         min: 6
         max: 15
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -109,6 +110,7 @@ characteristics:
       value: 20
     - model: WM-MICRO (Max 6/15 kg)
       value: 40
+    unit_id: u:gram
   - attribute: verification_scale_interval_e
     unit_symbol: g
     values:
@@ -148,6 +150,7 @@ characteristics:
       value:
         min: 2
         max: 5
+    unit_id: u:gram
   - attribute: number_of_verification_scale_intervals
     unit_symbol:
     values:
@@ -214,6 +217,7 @@ characteristics:
       value:
         min: 0
         max: 40
+    unit_id: u:degree_Celsius
   - attribute: tare
     unit_symbol: kg
     values:
@@ -235,6 +239,7 @@ characteristics:
       value: -2.999
     - model: WM-MICRO (Max 6/15 kg)
       value: -5.998
+    unit_id: u:kilogram
   config_level:
   - attribute: temperature_range
     axis: WM-MICRO temperature option
@@ -244,21 +249,25 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: WM-MICRO (Max 3/6 kg), option 2
       value:
         min: 5
         max: 35
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: WM-MICRO (Max 6/15 kg), option 1
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: WM-MICRO (Max 6/15 kg), option 2
       value:
         min: 5
         max: 35
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76-1
   edition: 2006

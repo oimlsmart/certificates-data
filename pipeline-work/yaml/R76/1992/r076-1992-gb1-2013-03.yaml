@@ -71,7 +71,7 @@ characteristics:
         min: 5
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     initial_zero_setting_range:
       value:
@@ -95,7 +95,7 @@ characteristics:
     internal_battery_voltage:
       value: 1.5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: internal batteries or mains adaptor
@@ -105,7 +105,7 @@ characteristics:
     mains_adapter_output_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adapter_output_current:
       value: 300
@@ -115,12 +115,12 @@ characteristics:
     battery_low_warning_threshold:
       value: 2.1
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     mains_adapter_low_voltage_threshold:
       value: 4.4
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     display_type:
       value: LCD
@@ -157,6 +157,7 @@ characteristics:
     - model: M300 (Max 15 kg)
       value: 15
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: kg
     values:
@@ -166,6 +167,7 @@ characteristics:
     - model: M300 (Max 15 kg)
       value: 0.04
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: number_of_scale_intervals
     unit_symbol:
     values:
@@ -183,14 +185,17 @@ characteristics:
       value: 2
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: 'M300 (Max 15 kg): 0 to 6 kg'
       value: 2
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: 'M300 (Max 15 kg): 6 to 15 kg'
       value: 5
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
 recommendation:
   id: R76
   edition: 1992
@@ -212,15 +217,15 @@ model_family:
       maximum_capacity:
         value: 6
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       minimum_capacity:
         value: 0.04
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       verification_scale_interval:
         value: 2
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
       number_of_scale_intervals:
         value: 3000
         unit_symbol:
@@ -231,11 +236,11 @@ model_family:
       maximum_capacity:
         value: 15
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       minimum_capacity:
         value: 0.04
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       number_of_scale_intervals:
         value: 3000
         unit_symbol:
@@ -251,7 +256,7 @@ components:
     maximum_capacity:
       value: 7.5
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 footnotes: []
 matrix_tables:
 - name: Metrological characteristics

@@ -111,7 +111,7 @@ characteristics:
         min: -5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     climatic_environment:
       value: Non-condensing (closed)
       unit_symbol:
@@ -123,7 +123,7 @@ characteristics:
     power_supply_voltage:
       value: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -131,7 +131,7 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     interfaces:
       value: Ethernet; USB (for extraction of stored data only)
       unit_symbol:
@@ -150,6 +150,7 @@ characteristics:
       value: 3000
     - model: DACS-G-S060-Range2
       value: 6000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -163,6 +164,7 @@ characteristics:
       value: 125
     - model: DACS-G-S060-Range2
       value: 350
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -176,6 +178,7 @@ characteristics:
       value: 1
     - model: DACS-G-S060-Range2
       value: 2
+    unit_id: u:gram
   - attribute: max_scale_intervals
     unit_symbol:
     values:
@@ -217,9 +220,11 @@ characteristics:
     - condition: Range 1
       value: 26
       unit_symbol: min
+      unit_id: u:minute
     - condition: Range 2
       value: 65
       unit_symbol: min
+      unit_id: u:minute
 recommendation:
   id: R51
   edition: 2006
@@ -295,14 +300,14 @@ components:
       maximum_capacity:
         value: 12
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
     QLC-60L:
       series:
         value: DACS-G-S060
       maximum_capacity:
         value: 60
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
     replacement_conditions:
       value: >-
         Alternatively, any compatible load cell may be used provided: it has an OIML R60 Certificate of

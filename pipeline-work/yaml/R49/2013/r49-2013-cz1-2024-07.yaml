@@ -93,7 +93,7 @@ characteristics:
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_pressure_class:
       value: MAP16
       unit_symbol:
@@ -119,7 +119,7 @@ characteristics:
         min: -25
         max: 70
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     electromagnetic_environment:
       value: E1/E2
       unit_symbol:
@@ -159,11 +159,11 @@ characteristics:
     battery_voltage_max:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_voltage_min:
       value: 1.9
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     minimum_battery_life:
       value: 12
       unit_symbol: years
@@ -237,18 +237,22 @@ characteristics:
     - condition: testing mode
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: user mode
       value: 99999.999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device
     axis: mode
     values:
     - condition: testing mode
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: user mode
       value: 1.0e-06
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49
   edition: 2013

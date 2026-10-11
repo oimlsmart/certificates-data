@@ -63,11 +63,11 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -172,6 +172,7 @@ characteristics:
     - model: DN600
       value: 10
       footnote_markers: []
+    unit_id: u:cubic_meter
   - attribute: minimum_reynolds_number
     unit_symbol:
     values:
@@ -248,24 +249,28 @@ characteristics:
         max: 120
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-LT-Ex
       value:
         min: -200
         max: 120
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HT-Ex
       value:
         min: -40
         max: 250
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HV-Ex
       value:
         min: -40
         max: 120
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
   - attribute: maximum_pressure
     axis: transducer_version
     values:
@@ -292,18 +297,22 @@ characteristics:
       value: 150
       unit_symbol: cSt
       footnote_markers: []
+      unit_id: u:centistokes
     - condition: UFS 5-R-LT-Ex
       value: 150
       unit_symbol: cSt
       footnote_markers: []
+      unit_id: u:centistokes
     - condition: UFS 5-R-HT-Ex
       value: 150
       unit_symbol: cSt
       footnote_markers: []
+      unit_id: u:centistokes
     - condition: UFS 5-R-HV-Ex
       value: 1500
       unit_symbol: cSt
       footnote_markers: []
+      unit_id: u:centistokes
 recommendation:
   id: R117-1
   edition: 2007
@@ -359,7 +368,7 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_for_measurement_of:
       value: liquid petroleum and related products, liquids food and chemical products in liquid state
       unit_symbol:
@@ -406,7 +415,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     output_interfaces:
       value: Frequency output; KROHNE serial protocol using MODBUS over RS485 or TCP/IP
       unit_symbol:

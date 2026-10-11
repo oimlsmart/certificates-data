@@ -72,7 +72,7 @@ characteristics:
         min:
         max: 6
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     number_of_verification_scale_intervals:
       value:
@@ -84,19 +84,19 @@ characteristics:
     minimum_capacity:
       value: 40
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     temperature_range:
       value:
         min: 0
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_time_between_automatic_zero_settings:
       value: 15
       unit_symbol: min
-      unit_id:
+      unit_id: u:minute
       footnote_markers: []
     electromagnetic_class:
       value: E2
@@ -111,21 +111,21 @@ characteristics:
     load_cell_excitation_voltage:
       value: 14
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage:
       value:
         min: 220
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -172,14 +172,17 @@ characteristics:
       value: 6
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: speed 1000 mm/s
       value: 3
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
     - condition: speed 1330 mm/s
       value: 1
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: weighing_speed
     axis: weighing_range
     values:
@@ -189,24 +192,28 @@ characteristics:
         max: 1.33
       unit_symbol: m/s
       footnote_markers: []
+      unit_id: u:meter_per_second
     - condition: 250 g to 1000 g
       value:
         min: 0.3
         max: 1.2
       unit_symbol: m/s
       footnote_markers: []
+      unit_id: u:meter_per_second
     - condition: 1000 g to 3000 g
       value:
         min: 0.3
         max: 1.0
       unit_symbol: m/s
       footnote_markers: []
+      unit_id: u:meter_per_second
     - condition: 3000 g to 6000 g
       value:
         min: 0.3
         max: 0.8
       unit_symbol: m/s
       footnote_markers: []
+      unit_id: u:meter_per_second
   - attribute: verification_scale_interval
     axis: maximum_capacity
     values:
@@ -216,12 +223,14 @@ characteristics:
         max:
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: Max > 1 kg
       value:
         min: 1
         max:
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
   - attribute: maximum_preset_tare
     axis: weighing_range
     values:
@@ -298,7 +307,7 @@ components:
     maximum_capacity:
       value: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     accuracy_class:
       value: C3

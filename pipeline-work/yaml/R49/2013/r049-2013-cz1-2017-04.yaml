@@ -84,11 +84,11 @@ characteristics:
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     environmental_class:
       value: C
       unit_symbol:
@@ -100,11 +100,11 @@ characteristics:
     resolution_of_indicating_device:
       value: 0.01
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     indicating_range:
       value: 999999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     software_version:
       value: '4913'
       unit_symbol:
@@ -132,11 +132,11 @@ characteristics:
     battery_voltage:
       value: 3.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_rating:
       value: 2.4
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -198,6 +198,7 @@ characteristics:
       value: 0.4
     - model: DN25
       value: 0.25
+    unit_id: u:bar
   - attribute: length
     unit_symbol: mm
     values:
@@ -245,9 +246,11 @@ characteristics:
     - condition: normal mode
       value: 0.01
       unit_symbol: L
+      unit_id: u:lambert
     - condition: calibration mode (high resolution)
       value: 1.0e-06
       unit_symbol: L
+      unit_id: u:lambert
 recommendation:
   id: R49
   edition: 2013

@@ -127,19 +127,19 @@ characteristics:
         min: 90
         max: 250
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_voltage_dc:
       value:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     low_flow_cutoff:
       value: 1
@@ -282,6 +282,7 @@ characteristics:
       value: 9999999
     - model: MAGX2 DN300
       value: 9999999
+    unit_id: u:cubic_meter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone
     axis: water_temperature
@@ -298,9 +299,11 @@ characteristics:
     - condition: normal mode
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: calibration mode
       value: 1.0e-06
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: q3_q1_ratio
     axis: nominal_ratio_selection
     values:
@@ -328,6 +331,7 @@ characteristics:
     - condition: remote version
       value: 6
       unit_symbol: m
+      unit_id: u:meter
   - attribute: minimum_flowrate_q1
     axis: q3_q1_ratio
     values:

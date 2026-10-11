@@ -114,17 +114,20 @@ characteristics:
     - condition: B=2
       value: 10
       unit_symbol: m
+      unit_id: u:meter
     - condition: B=3
       value: 20
       unit_symbol: m
+      unit_id: u:meter
     - condition: B=4
       value: 30
       unit_symbol: m
+      unit_id: u:meter
   type_level:
     power_supply_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -148,6 +151,7 @@ characteristics:
       value: 7500
     - model: PMA-HD
       value: 2200
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -155,6 +159,7 @@ characteristics:
       value: 5
     - model: PMA-HD
       value: 20
+    unit_id: u:gram
   - attribute: scale_interval_e
     unit_symbol: g
     values:
@@ -162,6 +167,7 @@ characteristics:
       value: 1
     - model: PMA-HD
       value: 1
+    unit_id: u:gram
   - attribute: scale_interval_d
     unit_symbol: g
     values:
@@ -169,6 +175,7 @@ characteristics:
       value: 0.1
     - model: PMA-HD
       value: 1
+    unit_id: u:gram
   - attribute: temperature_range
     unit_symbol: "°C"
     values:
@@ -180,6 +187,7 @@ characteristics:
       value:
         min: 10
         max: 40
+    unit_id: u:degree_Celsius
   - attribute: load_cell
     unit_symbol:
     values:
@@ -194,6 +202,7 @@ characteristics:
       value: 8
     - model: PMA-HD
       value: 3
+    unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006
@@ -509,11 +518,11 @@ components:
       PMA-EV:
         value: 8
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
       PMA-HD:
         value: 3
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
 - role: display
   type_designations:
   - EVO1*

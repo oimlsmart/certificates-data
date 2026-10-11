@@ -67,7 +67,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity:
       value: Non-condensing
       unit_symbol:
@@ -85,17 +85,17 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC or DC
       unit_symbol:
@@ -128,15 +128,18 @@ characteristics:
     - condition: Analog load cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage
     axis: load cell configuration
     values:
     - condition: Digital load cells or weighing module, DC provided by IND590
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: Digital load cells or weighing module, DC by external power supply
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: load cell configuration
     values:
@@ -155,12 +158,14 @@ characteristics:
     - condition: Analog load cells
       value: 43.75
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load cell configuration
     values:
     - condition: Analog load cells
       value: 3300
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load cell configuration
     values:

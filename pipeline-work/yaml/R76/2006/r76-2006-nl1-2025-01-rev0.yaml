@@ -70,6 +70,7 @@ characteristics:
         max:
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     weighing_ranges:
       value: Multi-interval
       unit_symbol:
@@ -94,18 +95,21 @@ characteristics:
         max: 40
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -131,15 +135,18 @@ characteristics:
     - condition: 100-240 V AC 50/60 Hz to 12 V DC by A/C adapter
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: 100-240 V AC 50/60 Hz to 9 V DC by A/C adapter
       value: 9
       unit_symbol: V
+      unit_id: u:volt
   - attribute: internal_battery_voltage_dc
     axis: power_supply_option
     values:
     - condition: internal rechargeable battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R76-1
   edition: 2006

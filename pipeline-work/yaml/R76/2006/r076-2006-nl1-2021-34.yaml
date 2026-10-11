@@ -62,14 +62,14 @@ characteristics:
         min: 0.62
         max: 300
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 0.01
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     weighing_ranges:
       value: Single interval
@@ -93,7 +93,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     software_checksum_display_unit:
       value: 7EEE
@@ -107,15 +107,19 @@ characteristics:
     - condition: option_1
       value: 10
       unit_symbol: d
+      unit_id: u:day
     - condition: option_2
       value: 5
       unit_symbol: d
+      unit_id: u:day
     - condition: option_3
       value: 2
       unit_symbol: d
+      unit_id: u:day
     - condition: option_4
       value: 1
       unit_symbol: d
+      unit_id: u:day
   - attribute: power_supply_voltage
     axis: power_source
     values:
@@ -124,12 +128,15 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
     - condition: ac_dc_adapter
       value: 6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_current_type
     axis: power_source
     values:
@@ -147,6 +154,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: software_checksum_load_platform
     axis: weighing_cell_configuration
     values:

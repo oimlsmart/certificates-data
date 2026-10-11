@@ -71,13 +71,13 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     operating_temperature_range:
       value:
         min: 0
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity_condition:
       value: Non-condensing (closed)
       unit_symbol:
@@ -93,7 +93,7 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -103,11 +103,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     display_size:
       value: 15
       unit_symbol: in
-      unit_id:
+      unit_id: u:inch
     display_keyboard_location:
       value: Control and display unit (pole-mounted, or alternatively in a remote pod)
       unit_symbol:
@@ -135,11 +135,11 @@ characteristics:
         min:
         max: 3
       unit_symbol: h
-      unit_id:
+      unit_id: u:hour
     high_resolution_mode_testing_purposes:
       value: 0.1
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     firmware_boot_code_software_version:
       value: 1.13.0
       unit_symbol:
@@ -206,6 +206,7 @@ characteristics:
       value: 27500
     - model: Heavy 40 kg
       value: 40000
+    unit_id: u:gram
   - attribute: maximum_capacity_interval_2
     unit_symbol: g
     values:
@@ -219,11 +220,13 @@ characteristics:
       value: 10000
     - model: Heavy 10/40 kg
       value: 40000
+    unit_id: u:gram
   - attribute: maximum_capacity_interval_3
     unit_symbol: g
     values:
     - model: Heavy 5/10/40 kg
       value: 40000
+    unit_id: u:gram
   - attribute: verification_scale_interval_1
     unit_symbol: g
     values:
@@ -251,6 +254,7 @@ characteristics:
       value: 10
     - model: Heavy 40 kg
       value: 20
+    unit_id: u:gram
   - attribute: verification_scale_interval_2
     unit_symbol: g
     values:
@@ -264,11 +268,13 @@ characteristics:
       value: 10
     - model: Heavy 10/40 kg
       value: 20
+    unit_id: u:gram
   - attribute: verification_scale_interval_3
     unit_symbol: g
     values:
     - model: Heavy 5/10/40 kg
       value: 20
+    unit_id: u:gram
   - attribute: load_cell_type
     values:
     - model: Entry/Mid 1500/3000 g
@@ -322,6 +328,7 @@ characteristics:
       value: 50 or 75
     - model: Heavy 40 kg
       value: 50 or 75
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_operating_speed
     axis: weighing range (in scale intervals) and interval configuration
@@ -329,30 +336,38 @@ characteristics:
     - condition: single interval, 0e-1500e
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: single interval, 1501e-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 0e2-1500e2
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 1501e2-Max
       value: 0.6
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: single interval, 100e-1000e (Alternative 15)
       value: 1.0
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: multi-interval, 100e2-1000e2 (Alternative 15)
       value: 1.0
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     - condition: rotary label applicator fitted (Alternative 5)
       value: 0.8
       unit_symbol: m/s
+      unit_id: u:meter_per_second
   - attribute: tare
     axis: interval configuration
     values:
     - condition: single interval
       value: -450
       unit_symbol: e
+      unit_id: u:atomic_unit_of_charge
     - condition: multi interval
       value: -450
       unit_symbol: e1

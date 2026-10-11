@@ -61,13 +61,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -75,7 +75,7 @@ characteristics:
     battery_supply_voltage:
       value: 7.2
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_type:
       value: NiMH
       unit_symbol:
@@ -85,7 +85,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     max_number_of_load_platforms:
       value: 1
       unit_symbol:
@@ -123,7 +123,7 @@ characteristics:
     - condition: analog load cell(s)
       value: 5 or 10
       unit_symbol: V DC
-      unit_id:
+      unit_id: u:volt
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load_cell_excitation_voltage
     values:
@@ -141,18 +141,18 @@ characteristics:
     - condition: analog load cell(s), battery version
       value: 87
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     - condition: analog load cell(s), AC mains version
       value: 43
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_type
     values:
     - condition: analog load cell(s)
       value: 1200
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   - attribute: maximum_cable_length_per_cross_wire_section
     axis: cable_connection (analog load cell connection)
     values:

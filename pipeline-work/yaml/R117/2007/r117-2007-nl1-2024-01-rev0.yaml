@@ -59,6 +59,7 @@ characteristics:
     minimum_measured_quantity:
       value: 2, 5 or 10
       unit_symbol: L
+      unit_id: u:lambert
     maximum_pressure:
       value: 3.5
       unit_symbol: bar(g)
@@ -69,6 +70,7 @@ characteristics:
         min: -40
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     measured_product:
       value: Hydrocarbon oils
     viscosity_range:
@@ -98,11 +100,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: with heater
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: minimum_measured_quantity
     axis: max_flow_rate
     values:
@@ -111,6 +115,7 @@ characteristics:
         min:
         max: 5
       unit_symbol: L
+      unit_id: u:lambert
 recommendation:
   id: R117-1
   edition: 2007
@@ -203,19 +208,23 @@ components:
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
+      unit_id: u:lambert
     maximum_pressure:
       value: 3.5
       unit_symbol: bar
+      unit_id: u:bar
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     viscosity_range:
       value:
         min: 0.4
@@ -263,14 +272,17 @@ components:
           min: -25
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       - condition: with heater
         value:
           min: -40
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: AC
     power_supply_frequency:
@@ -278,6 +290,7 @@ components:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     impulse_encoder_or_pulser:
       value: SIP-II and SIP-III Pulser
 matrix_tables:

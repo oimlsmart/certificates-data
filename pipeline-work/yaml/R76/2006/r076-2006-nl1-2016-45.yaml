@@ -56,13 +56,13 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     weighing_ranges:
       value: single interval or multi-interval
       unit_symbol:
@@ -88,7 +88,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     application:
       value: Intended to be used for direct sales to the public
       unit_symbol:
@@ -115,10 +115,12 @@ characteristics:
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: DC battery
       value: 14.8
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -128,6 +130,7 @@ characteristics:
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
   - attribute: maximum_tare
     axis: weighing_range_configuration
     values:

@@ -66,7 +66,7 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
       footnote_markers: []
     tare:
       value:
@@ -80,21 +80,21 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -111,7 +111,7 @@ characteristics:
         min: 4
         max: 6
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     accuracy_class:
       value: III
@@ -140,17 +140,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 3.3
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 43
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.88
@@ -175,7 +175,7 @@ characteristics:
     load_cell_cable_maximum_length:
       value: 1.5
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
       footnote_markers: []
   model_level:
   - attribute: maximum_capacity
@@ -190,6 +190,7 @@ characteristics:
     - model: LI-700E (Max=10kg)
       value: 10
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -202,6 +203,7 @@ characteristics:
     - model: LI-700E (Max=10kg)
       value: 5
       footnote_markers: []
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -214,6 +216,7 @@ characteristics:
     - model: LI-700E (Max=10kg)
       value: 20
       footnote_markers: []
+    unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006
@@ -242,17 +245,17 @@ model_family:
       maximum_capacity:
         value: 3
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       scale_interval:
         value: 2
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
       load_cell_emax:
         value: 15
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
   - model_id: LI-700E (Max=6kg)
     label: LI-700E, Max = 6 kg, e = 2 g
@@ -260,17 +263,17 @@ model_family:
       maximum_capacity:
         value: 6
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       scale_interval:
         value: 2
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
       load_cell_emax:
         value: 20
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
   - model_id: LI-700E (Max=10kg)
     label: LI-700E, Max = 10 kg, e = 5 g
@@ -278,17 +281,17 @@ model_family:
       maximum_capacity:
         value: 10
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       scale_interval:
         value: 5
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
       load_cell_emax:
         value: 20
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
   - model_id: HC5600
     label: HC5600 (identical to LI-700E, Tesco Counter application software)
@@ -296,17 +299,17 @@ model_family:
       maximum_capacity:
         value: 3000
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
       minimum_capacity:
         value: 40
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
       scale_interval:
         value: 2
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
 components:
 - role: combined PC and LCD display (indicating and computing device)

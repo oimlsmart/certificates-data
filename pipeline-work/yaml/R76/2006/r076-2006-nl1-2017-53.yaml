@@ -61,7 +61,7 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -73,11 +73,11 @@ characteristics:
     minimum_load_cell_resistance:
       value: 300
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     maximum_load_cell_resistance:
       value: 900
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     fraction_of_maximum_permitted_error:
       value: 0.5
       unit_symbol:
@@ -128,11 +128,13 @@ characteristics:
         min: 110
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: external DC power supply
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: internal battery
       value: internal battery
       unit_symbol:
@@ -144,6 +146,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

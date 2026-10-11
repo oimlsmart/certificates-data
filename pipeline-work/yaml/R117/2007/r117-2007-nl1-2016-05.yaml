@@ -53,7 +53,7 @@ characteristics:
     maximum_pressure:
       value: 100
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     density_range:
       value:
@@ -72,7 +72,7 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     environment_class:
       value: M3/E2
@@ -113,6 +113,7 @@ characteristics:
       value: 100
     - model: DN100
       value: 200
+    unit_id: u:kilogram
   config_level:
   - attribute: product_temperature_range
     axis: measurement_mode
@@ -123,12 +124,14 @@ characteristics:
         max: 90
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     - condition: mass measurement
       value:
         min: -200
         max: 90
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
   - attribute: power_supply_voltage
     axis: supply_type
     values:
@@ -136,12 +139,14 @@ characteristics:
       value: 24
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     - condition: AC
       value:
         min: 100
         max: 240
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: supply_type
     values:
@@ -151,6 +156,7 @@ characteristics:
         max: 60
       unit_symbol: Hz
       footnote_markers: []
+      unit_id: u:hertz
 recommendation:
   id: R117
   edition: 2007
@@ -214,7 +220,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     software_version:
       value: 01.00.02

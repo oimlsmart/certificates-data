@@ -56,14 +56,14 @@ characteristics:
     maximum_admissible_pressure:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     admissible_temperature:
       value:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     orientation:
       value: All positions
@@ -362,6 +362,7 @@ characteristics:
       value: 99999999
     - model: DN1200
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -418,6 +419,7 @@ characteristics:
       value: 0.01
     - model: DN1200
       value: 0.01
+    unit_id: u:cubic_meter
   config_level:
   - attribute: power_supply_voltage
     axis: power_supply_type
@@ -427,16 +429,19 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: AC/DC
       value:
         min: 24
         max: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -445,11 +450,13 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: AC/DC
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R49
   edition: 2006

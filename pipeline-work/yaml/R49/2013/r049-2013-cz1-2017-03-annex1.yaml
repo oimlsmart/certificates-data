@@ -84,11 +84,11 @@ characteristics:
     reed_switch_max_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     reed_switch_max_current:
       value: 0.01
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -306,24 +306,30 @@ characteristics:
     - condition: DN15–DN25, resolution 0.00001 m³
       value: 9999.9999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN15–DN25, resolution 0.0001 m³
       value: 99999.999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN32–DN40, resolution 0.0001 m³
       value: 99999.999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: indicating_device_resolution
     axis: indicating_device_variant
     values:
     - condition: DN15–DN25, indicating range 9999.9999 m³
       value: 1.0e-05
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN15–DN25, indicating range 99999.999 m³
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN32–DN40
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: reed_switch_k_factor
     axis: pulse_output_option
     values:

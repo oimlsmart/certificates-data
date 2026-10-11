@@ -70,7 +70,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -80,7 +80,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -104,7 +104,7 @@ characteristics:
     maximum_pressure_loss:
       value: 0.1
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     power_supply_type:
       value: Replaceable battery
       unit_symbol:
@@ -114,7 +114,7 @@ characteristics:
         min: 2.9
         max: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
   model_level:
   - attribute: minimum_flow_q1
     unit_symbol: m³/h
@@ -418,44 +418,56 @@ characteristics:
     - condition: DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65, DN80, DN100, DN125
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200-DN350
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN400-DN500
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN600
       value: 99999999
       unit_symbol: m³
       footnote_markers:
       - "*"
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: meter_size
     values:
     - condition: DN50
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN65, DN80, DN100, DN125
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN150
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN200-DN350
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN400-DN500
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
 recommendation:
   id: R49-1
   edition: 2013

@@ -62,19 +62,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -119,12 +119,14 @@ characteristics:
     - condition: analog_load_cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage
     axis: load_cell_configuration
     values:
     - condition: digital_load_cells_or_weighing_module
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: load_cell_configuration
     values:
@@ -143,12 +145,14 @@ characteristics:
     - condition: analog_load_cells
       value: 43.75
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_configuration
     values:
     - condition: analog_load_cells
       value: 3000
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permisible_error
     axis: load_cell_configuration
     values:

@@ -106,6 +106,7 @@ characteristics:
     - condition: Analog load cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_excitation_voltage_type
     axis: load_cell_configuration
     values:
@@ -117,6 +118,7 @@ characteristics:
     - condition: Digital load cells or weighing module
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage_type
     axis: load_cell_configuration
     values:
@@ -140,12 +142,14 @@ characteristics:
     - condition: Analog load cells
       value: 43.75
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_configuration
     values:
     - condition: Analog load cells
       value: 3000
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load_cell_configuration
     values:
@@ -176,16 +180,19 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: External DC power supply
       value:
         min: 12
         max: 30
       unit_symbol: V
+      unit_id: u:volt
     - condition: Internal battery
       value: 7.2
       unit_symbol: V
       footnote_markers:
       - 1)
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply
     values:
@@ -194,6 +201,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply
     values:

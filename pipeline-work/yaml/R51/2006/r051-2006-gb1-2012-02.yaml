@@ -117,14 +117,14 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -166,6 +166,7 @@ characteristics:
       value: 2
     - model: Max=4kg
       value: 4
+    unit_id: u:kilogram
   - attribute: minimum_capacity_class_y_a
     unit_symbol: kg
     values:
@@ -173,6 +174,7 @@ characteristics:
       value: 0.02
     - model: Max=4kg
       value: 0.04
+    unit_id: u:kilogram
   - attribute: minimum_capacity_class_xiii_1
     unit_symbol: kg
     values:
@@ -180,6 +182,7 @@ characteristics:
       value: 0.125
     - model: Max=4kg
       value: 0.25
+    unit_id: u:kilogram
   - attribute: scale_interval
     unit_symbol: kg
     values:
@@ -187,6 +190,7 @@ characteristics:
       value: 0.001
     - model: Max=4kg
       value: 0.002
+    unit_id: u:kilogram
   - attribute: preset_tare_max
     unit_symbol: kg
     values:
@@ -194,6 +198,7 @@ characteristics:
       value: -1.999
     - model: Max=4kg
       value: -3.998
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_belt_speed
     axis: accuracy class and maximum capacity (sub-columns of the technical data table)
@@ -224,11 +229,13 @@ characteristics:
         min: -5
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Y(a)
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R51
   edition: 2006
@@ -262,7 +269,7 @@ components:
     maximum_capacity:
       value: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
 matrix_tables:
 - name: Technical data by maximum capacity and accuracy class

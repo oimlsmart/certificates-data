@@ -167,6 +167,7 @@ characteristics:
       value: 6.81
     - model: DM (S)
       value: 5.75
+    unit_id: u:lambert
   - attribute: mmq
     unit_symbol: L
     values:
@@ -186,6 +187,7 @@ characteristics:
       value: 500
     - model: DM (S)
       value: 200
+    unit_id: u:lambert
   - attribute: flange_size
     unit_symbol:
     values:
@@ -344,6 +346,7 @@ characteristics:
       value: 1000
     - model: CMFHC4
       value: 1000
+    unit_id: u:kilogram
   - attribute: maximum_pressure
     unit_symbol: bar(g)
     values:
@@ -455,11 +458,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: measurement results can be read and/or recorded with an approved instrument
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_pressure
     axis: filter type
     values:
@@ -1000,13 +1005,13 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -5
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_measurement:
       value: Hydrocarbon based oils and fuels with maximum viscosity of 20 mPa·s at 20 °C
       unit_symbol:
@@ -1026,7 +1031,7 @@ components:
     maximum_pressure:
       value: 413
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     accuracy_class:
       value: 0.3 and 0.5
       unit_symbol:
@@ -1040,13 +1045,13 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 250
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_measurement:
       value: Oil and oil product up to 1242 mPa·s
       unit_symbol:
@@ -1075,7 +1080,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
 - role: core processor
   type_designations:
   - '700'
@@ -1159,6 +1164,7 @@ components:
           min: -25
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       documentation_folder:
         value: TC7311-7
 - role: Calculating/indicating device

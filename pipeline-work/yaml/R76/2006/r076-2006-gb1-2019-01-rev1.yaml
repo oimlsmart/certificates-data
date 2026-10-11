@@ -103,6 +103,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     load_cell_connection:
       value: 4 or 6-core with braided outer screen, flexible PVC overall jacket
     software_designation:
@@ -118,11 +119,13 @@ characteristics:
         min: 12
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: ZM505-SD3 / ZM510-SD4 / ZM605-SD4 / ZM615-SD5 (AC)
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_configuration
     values:
@@ -131,6 +134,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_configuration
     values:
@@ -161,36 +165,45 @@ characteristics:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 10
       unit_symbol: V
+      unit_id: u:volt
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 10
       unit_symbol: V
+      unit_id: u:volt
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     axis: load_cell_interface_variant
     values:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 10.94
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 14.58
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 58.33
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_impedance
     axis: load_cell_interface_variant
     values:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     axis: load_cell_interface_variant
     values:
@@ -340,17 +353,21 @@ components:
           min: 12
           max: 36
         unit_symbol: V
+        unit_id: u:volt
       power_supply_source:
         value: supplied by digital indicating device via RS485 interface cable
       load_cell_excitation_voltage:
         value: 5
         unit_symbol: V
+        unit_id: u:volt
       minimum_load_cell_impedance_per_channel:
         value: 350
         unit_symbol: Ω
+        unit_id: u:ohm
       maximum_load_cell_impedance_per_channel:
         value: 1100
         unit_symbol: Ω
+        unit_id: u:ohm
       minimum_input_voltage_per_verification_scale_interval:
         value: 0.8
         unit_symbol: µV
@@ -367,6 +384,7 @@ components:
           min: -10
           max: 40
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       software_designation:
         value: AWT30-500235, Version 1.x.x.x (x.x.x reflecting non-legally relevant changes)
       load_cell_cable_note:
@@ -385,12 +403,16 @@ components:
       - condition: 4-wire, 350 Ω load cell connection
         value: 15
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 700 Ω load cell connection
         value: 30
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 1000 Ω load cell connection
         value: 42
         unit_symbol: m
+        unit_id: u:meter
       - condition: 4-wire, 1100 Ω load cell connection
         value: 47
         unit_symbol: m
+        unit_id: u:meter

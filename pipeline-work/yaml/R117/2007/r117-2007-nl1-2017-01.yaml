@@ -64,7 +64,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: minimum_flow_rate
     unit_symbol: m³/h
@@ -135,6 +135,7 @@ characteristics:
       value: 5
     - model: DN600
       value: 10
+    unit_id: u:cubic_meter
   - attribute: minimum_reynolds_number
     unit_symbol:
     values:
@@ -242,13 +243,13 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -200
         max: 250
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_for_measurement_of:
       value: liquid petroleum and related products, liquids food and chemical products in liquid state
       unit_symbol:
@@ -293,6 +294,7 @@ components:
         value: -40
       - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
         value: -40
+      unit_id: u:degree_Celsius
     - attribute: maximum_product_temperature
       unit_symbol: "°C"
       axis: transducer_version
@@ -305,6 +307,7 @@ components:
         value: 250
       - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
         value: 120
+      unit_id: u:degree_Celsius
     - attribute: maximum_pressure
       unit_symbol: bar(g)
       axis: transducer_version
@@ -329,6 +332,7 @@ components:
         value: 150
       - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
         value: 1500
+      unit_id: u:centistokes
 - role: Measurement transducer (flow converter)
   type_designations:
   - UFC 5
@@ -347,11 +351,11 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:

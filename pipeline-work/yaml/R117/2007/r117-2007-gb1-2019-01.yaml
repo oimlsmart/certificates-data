@@ -83,17 +83,20 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     intended_media:
       value: Petroleum, ethanol blends, methanol blends, diesel, heating oil, biodiesel and biodiesel
         blends
     power_supply_voltage:
       value: 230
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: AC
     power_supply_frequency:
@@ -101,9 +104,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     optional_motor_supply_voltage:
       value: 400
       unit_symbol: V
+      unit_id: u:volt
     software_version:
       value: A31.1.01 (displayed as A31101)
     software_checksum:
@@ -117,12 +122,15 @@ characteristics:
     - condition: Qmax <= 40 L/min
       value: 1, 2 or 5
       unit_symbol: L
+      unit_id: u:lambert
     - condition: 40 < Qmax <= 60 L/min
       value: 2 or 5
       unit_symbol: L
+      unit_id: u:lambert
     - condition: Qmax > 60 L/min
       value: 2, 5 or 10
       unit_symbol: L
+      unit_id: u:lambert
   - attribute: hydraulic_modules
     axis: chassis_size
     values:
@@ -185,11 +193,13 @@ components:
           min: -10
           max: 40
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       product_temperature_range:
         value:
           min: -10
           max: 40
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       viscosity_range:
         value:
           min: 0.4
@@ -198,6 +208,7 @@ components:
       cyclic_volume:
         value: 0.47
         unit_symbol: L
+        unit_id: u:lambert
       quantity_per_hydraulic_module:
         value:
           min: 1
@@ -217,11 +228,13 @@ components:
           min: -10
           max: 40
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       product_temperature_range:
         value:
           min: -10
           max: 40
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       viscosity_range:
         value:
           min: 0.4
@@ -236,18 +249,22 @@ components:
       - condition: diesel/gasoil/biodiesel blends
         value: 2.5
         unit_symbol: bar
+        unit_id: u:bar
       - condition: petrol/ethanol blends
         value: 1.9
         unit_symbol: bar
+        unit_id: u:bar
     - attribute: pmin
       axis: product
       values:
       - condition: diesel/gasoil/biodiesel blends
         value: 1.9
         unit_symbol: bar
+        unit_id: u:bar
       - condition: petrol/ethanol blends
         value: 1.4
         unit_symbol: bar
+        unit_id: u:bar
 - role: Calculator
   type_designations:
   - Apollo-2
@@ -260,6 +277,7 @@ components:
           min: -25
           max: 55
         unit_symbol: "°C"
+        unit_id: u:degree_Celsius
       maximum_volume_indication_digits:
         value: 7
       maximum_price_to_pay_indication_digits:

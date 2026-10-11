@@ -83,7 +83,7 @@ characteristics:
         min: 5
         max: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -93,13 +93,13 @@ characteristics:
         min: 685
         max: 715
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     temperature_rating:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     safe_load_limit_relative_elim_over_emax:
       value: 150
       unit_symbol: "%"
@@ -113,7 +113,7 @@ characteristics:
         min:
         max: 20
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     additional_characteristics:
       value: 6 wire
       unit_symbol:
@@ -131,7 +131,7 @@ characteristics:
         min: 830
         max: 850
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   model_level:
   - attribute: maximum_capacity
     unit_symbol: t
@@ -144,6 +144,7 @@ characteristics:
       value: 50
     - model: Emax=100t
       value: 100
+    unit_id: u:metric_ton
   - attribute: minimum_load_cell_verification_interval_vmin
     unit_symbol: kg
     values:
@@ -155,6 +156,7 @@ characteristics:
       value: 6.25
     - model: Emax=100t
       value: 12.5
+    unit_id: u:kilogram
 recommendation:
   id: R60
   edition: 2000

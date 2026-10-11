@@ -66,13 +66,13 @@ characteristics:
     excitation_voltage_uexc:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_impedance:
       value:
         min: 87
         max: 1200
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     load_cell_connection:
       value: 4-wire or 6-wire, shielded
       unit_symbol:
@@ -94,7 +94,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     weighing_software_id:
       value: '1.10'
       unit_symbol:
@@ -117,12 +117,15 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC via external AC/DC adapter
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: optional internal battery
       value: 7.2
       unit_symbol: V
+      unit_id: u:volt
   - attribute: number_of_intervals_max_over_e
     axis: accuracy_class_and_range_configuration
     values:

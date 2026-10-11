@@ -59,15 +59,18 @@ characteristics:
     load_cell_excitation_voltage:
       value: 10
       unit_symbol: V
+      unit_id: u:volt
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.0
       unit_symbol: µV
     minimum_load_cell_resistance:
       value: 23
       unit_symbol: Ω
+      unit_id: u:ohm
     maximum_load_cell_resistance:
       value: 1050
       unit_symbol: Ω
+      unit_id: u:ohm
     fraction_of_maximum_permitted_error:
       value: 0.5
     load_cell_connection:
@@ -82,6 +85,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     software_identification:
       value: V1.xx
   config_level:
@@ -111,11 +115,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC version
       value:
         min: 9
         max: 30
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_version
     values:
@@ -124,6 +130,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_version
     values:

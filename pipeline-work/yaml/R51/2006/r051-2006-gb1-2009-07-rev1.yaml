@@ -60,13 +60,13 @@ characteristics:
     tare:
       value: -2000
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     operating_temperature_range:
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment:
       value: Closed, non-condensing
       unit_symbol:
@@ -74,7 +74,7 @@ characteristics:
     power_supply_voltage:
       value: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -82,7 +82,7 @@ characteristics:
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     automatic_zero_setting:
       value: active during automatic operation
       unit_symbol:
@@ -92,7 +92,7 @@ characteristics:
         min:
         max: 17
       unit_symbol: min
-      unit_id:
+      unit_id: u:minute
     semi_automatic_zero_setting_max:
       value:
         min:
@@ -178,6 +178,7 @@ characteristics:
       value: 40
     - model: Venus 300 "30"
       value: 30
+    unit_id: u:kilogram
   - attribute: minimum_capacity_category_y
     unit_symbol: g
     values:
@@ -195,6 +196,7 @@ characteristics:
       value: 200
     - model: Venus 300 "30"
       value: 200
+    unit_id: u:gram
   - attribute: minimum_capacity_category_x
     unit_symbol: g
     values:
@@ -212,6 +214,7 @@ characteristics:
       value: 500
     - model: Venus 300 "30"
       value: 500
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -229,6 +232,7 @@ characteristics:
       value: 10
     - model: Venus 300 "30"
       value: 10
+    unit_id: u:gram
   - attribute: max_number_of_scale_intervals
     unit_symbol:
     values:
@@ -261,6 +265,7 @@ characteristics:
     values:
     - model: Venus 300 "30"
       value: 50
+    unit_id: u:kilogram
   - attribute: load_cell_count
     unit_symbol:
     values:
@@ -283,6 +288,7 @@ characteristics:
       value:
         min:
         max: 6
+    unit_id: u:minute
   config_level:
   - attribute: conveyor_belt_speed
     axis: load
@@ -391,7 +397,7 @@ components:
     emax:
       value: 50
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 footnotes:
 - marker: "*"
   text: one mode of operation may be disabled at initial verification

@@ -79,7 +79,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     water_temperature_class:
       value: T50
@@ -91,7 +91,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_admissible_pressure:
       value: 1.6
@@ -121,7 +121,7 @@ characteristics:
     pressure_loss_maximum:
       value: 0.1
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     ratio_q3_q1:
       value: 250
@@ -137,11 +137,13 @@ characteristics:
         min: 85
         max: 265
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC version (grounding mandatory)
       value:
         min: 9
         max: 36
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_version
     values:
@@ -150,6 +152,7 @@ characteristics:
         min: 45
         max: 65
       unit_symbol: Hz
+      unit_id: u:hertz
     - condition: DC version (grounding mandatory)
       value:
       unit_symbol:
@@ -352,6 +355,7 @@ characteristics:
       value: 9999999
     - model: DN800
       value: 99999999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval_maximum_value
     unit_symbol: m³
     values:
@@ -385,6 +389,7 @@ characteristics:
       value: 0.01
     - model: DN800
       value: 0.1
+    unit_id: u:cubic_meter
   - attribute: totalizer_resolution
     unit_symbol: m³
     values:
@@ -418,6 +423,7 @@ characteristics:
       value: 0.01
     - model: DN800
       value: 0.1
+    unit_id: u:cubic_meter
   - attribute: dial_type_setting
     unit_symbol: dial
     values:

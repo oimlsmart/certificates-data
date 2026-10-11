@@ -53,6 +53,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     weighing_range_types:
       value: Single interval; Multi-interval; Multiple range
     max_partial_weighing_ranges_multi_interval:
@@ -94,19 +95,23 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: external AC/DC adapter
       value:
         min: 9
         max: 28
       unit_symbol: V
+      unit_id: u:volt
     - condition: built-in battery
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: ICS466x and ICS426x, 6 separate excitations
       value:
         min: 5.3
         max: 12.6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -115,6 +120,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

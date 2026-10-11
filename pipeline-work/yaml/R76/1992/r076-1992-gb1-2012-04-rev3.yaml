@@ -71,7 +71,7 @@ characteristics:
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     measuring_range_minimum_voltage:
       value: 0
@@ -93,7 +93,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     load_cell_connection:
       value: 4-core or 6-core cable with braided outer screen, flexible PVC overall jacket
@@ -180,6 +180,7 @@ characteristics:
     - model: ZM305
       value: 10
       footnote_markers: []
+    unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     unit_symbol: Ω
     values:
@@ -195,6 +196,7 @@ characteristics:
     - model: ZM305
       value: 21.87
       footnote_markers: []
+    unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     unit_symbol: µV
     values:
@@ -237,6 +239,7 @@ characteristics:
     - model: ZQ375
       value: 30
       footnote_markers: []
+    unit_id: u:meter
   - attribute: required_software_version
     unit_symbol:
     values:
@@ -278,6 +281,7 @@ characteristics:
       unit_symbol: V
       footnote_markers:
       - "*"
+      unit_id: u:volt
     - condition: ZM301-SDz, ZM303-SDz, ZM305-SD1, ZM305-SG1, ZQ375-SD1
       value:
         min: 110
@@ -285,6 +289,7 @@ characteristics:
       unit_symbol: V
       footnote_markers:
       - "*"
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: model variant power supply option
     values:
@@ -308,6 +313,7 @@ characteristics:
       unit_symbol: Hz
       footnote_markers:
       - "*"
+      unit_id: u:hertz
   - attribute: power_supply_source
     axis: model variant power supply option
     values:
@@ -363,7 +369,7 @@ components:
         min: 0
         max: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     current_output:
       value:

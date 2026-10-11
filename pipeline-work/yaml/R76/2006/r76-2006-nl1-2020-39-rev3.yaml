@@ -64,13 +64,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -80,7 +80,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     application:
       value: Integrated POS software; intended to be used for direct sales to the public
       unit_symbol:
@@ -94,21 +94,25 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: PS type
       value:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: M type
       value:
         min: 30
         max: 600
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: L6E3
       value:
         min: 30
         max: 600
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: load_cell_type
     values:
@@ -117,21 +121,25 @@ characteristics:
         min: 0.5
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: PS type
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: M type
       value:
         min: 10
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: L6E3
       value:
         min: 5
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: maximum_number_of_scale_intervals
     axis: load_cell_type x weighing range
     values:

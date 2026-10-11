@@ -69,19 +69,19 @@ characteristics:
         min: 3
         max: 3000
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     mains_supply_voltage:
       value:
         min: 230
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     mains_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     mains_supply_type:
       value: AC
       unit_symbol:
@@ -103,35 +103,44 @@ characteristics:
         min: 6
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: external DC source
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: maximum_capacity
     axis: approved load cell combination
     values:
     - condition: HBM SP4C3MR, Emax 20 kg
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: TEDEA 1042C3, Emax 20 kg
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: TEDEA 1042C3 or 1042C6, Emax 50 kg
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: HBM SP4C3MR, Emax 50 kg
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: HBM SP4C6MR, Emax 36 kg
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: HBM PW2C6MR, Emax 36 kg
       value: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: TRANSDUTEC TPF1-6D, Emax 35 kg
       value: 35
       unit_symbol: kg
+      unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006

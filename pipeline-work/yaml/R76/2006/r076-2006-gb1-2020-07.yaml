@@ -82,7 +82,7 @@ characteristics:
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
@@ -124,7 +124,7 @@ characteristics:
     load_cell_cable_maximum_length_limit:
       value: 30
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     load_cell_excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -172,6 +172,7 @@ characteristics:
       value: 5
     - model: ZM305
       value: 10
+    unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     unit_symbol: Ω
     values:
@@ -183,6 +184,7 @@ characteristics:
       value: 58.33
     - model: ZM305
       value: 21.87
+    unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     unit_symbol: μV
     values:
@@ -216,11 +218,13 @@ characteristics:
         min: 12
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     - condition: ZM301-SDz, ZM303-SDz, ZM305-SD1, ZM305-SG1, ZQ375-SD1 (AC mains)
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power supply variant (model suffix)
     values:
@@ -236,6 +240,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76
   edition: 2006
@@ -290,7 +295,7 @@ components:
         min: 0
         max: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     output_current:
       value:
         min: 4

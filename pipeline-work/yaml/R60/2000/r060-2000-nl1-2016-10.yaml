@@ -54,7 +54,7 @@ characteristics:
     minimum_dead_load:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
       footnote_markers: []
     accuracy_class:
       value: C
@@ -71,21 +71,21 @@ characteristics:
         min: 395
         max: 425
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     output_impedance:
       value:
         min: 345
         max: 355
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     temperature_range:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     apportionment_factor_plc:
       value: 0.7
@@ -112,7 +112,7 @@ characteristics:
         min: 5
         max: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     recommended_excitation_type:
       value: AC/DC
@@ -122,7 +122,7 @@ characteristics:
     excitation_maximum_voltage:
       value: 15
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     transducer_material:
       value: Aluminium
@@ -153,6 +153,7 @@ characteristics:
         min: 200
         max: 1500
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: max_load_cell_intervals_n
     unit_symbol:
     values:
@@ -241,26 +242,32 @@ matrix_tables:
         min: 3
         max: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     Emax 20-100 kg:
       value:
         min: 20
         max: 100
       unit_symbol: kg
+      unit_id: u:kilogram
     Emax 200-1500 kg:
       value:
         min: 200
         max: 1500
       unit_symbol: kg
+      unit_id: u:kilogram
   - characteristic: minimum_dead_load
     Emax 3-15 kg:
       value: 0
       unit_symbol: kg
+      unit_id: u:kilogram
     Emax 20-100 kg:
       value: 0
       unit_symbol: kg
+      unit_id: u:kilogram
     Emax 200-1500 kg:
       value: 0
       unit_symbol: kg
+      unit_id: u:kilogram
   - characteristic: accuracy_class
     Emax 3-15 kg: C
     Emax 20-100 kg: C
@@ -293,32 +300,38 @@ matrix_tables:
         min: 395
         max: 425
       unit_symbol: Ω
+      unit_id: u:ohm
     Emax 20-100 kg:
       value:
         min: 395
         max: 425
       unit_symbol: Ω
+      unit_id: u:ohm
     Emax 200-1500 kg:
       value:
         min: 395
         max: 425
       unit_symbol: Ω
+      unit_id: u:ohm
   - characteristic: temperature_range
     Emax 3-15 kg:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     Emax 20-100 kg:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     Emax 200-1500 kg:
       value:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - characteristic: apportionment_factor_plc
     Emax 3-15 kg: 0.7
     Emax 20-100 kg: 0.7
@@ -343,42 +356,51 @@ matrix_tables:
         min: 345
         max: 355
       unit_symbol: Ω
+      unit_id: u:ohm
     Emax 20-100 kg:
       value:
         min: 345
         max: 355
       unit_symbol: Ω
+      unit_id: u:ohm
     Emax 200-1500 kg:
       value:
         min: 345
         max: 355
       unit_symbol: Ω
+      unit_id: u:ohm
   - characteristic: recommended_excitation
     Emax 3-15 kg:
       value:
         min: 5
         max: 12
       unit_symbol: V
+      unit_id: u:volt
     Emax 20-100 kg:
       value:
         min: 5
         max: 12
       unit_symbol: V
+      unit_id: u:volt
     Emax 200-1500 kg:
       value:
         min: 5
         max: 12
       unit_symbol: V
+      unit_id: u:volt
   - characteristic: excitation_maximum
     Emax 3-15 kg:
       value: 15
       unit_symbol: V
+      unit_id: u:volt
     Emax 20-100 kg:
       value: 15
       unit_symbol: V
+      unit_id: u:volt
     Emax 200-1500 kg:
       value: 15
       unit_symbol: V
+      unit_id: u:volt
   - characteristic: transducer_material
     Emax 3-15 kg: Aluminium
     Emax 20-100 kg: Aluminium

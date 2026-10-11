@@ -67,11 +67,11 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     maximum_load_cell_resistance:
       value: 1200
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     fraction_of_maximum_permitted_error:
       value: 0.5
       unit_symbol:
@@ -130,11 +130,11 @@ characteristics:
     - condition: without tilt compensation
       value: 87
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     - condition: with tilt compensation
       value: 175
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
   - attribute: load_cell_connection
     axis: tilt_compensation
     values:
@@ -164,21 +164,21 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     - condition: internal rechargeable battery
       value: 7.2
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     - condition: battery
       value: 9
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     - condition: DC input (only for IND236)
       value:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -187,7 +187,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

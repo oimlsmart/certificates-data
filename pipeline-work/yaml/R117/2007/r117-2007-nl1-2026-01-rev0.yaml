@@ -69,7 +69,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     ambient_humidity:
       value: condensing humidity
@@ -81,7 +81,7 @@ characteristics:
         min: -5
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     measured_products:
       value: Liquid food and chemical products in liquid state
@@ -243,6 +243,7 @@ characteristics:
       value: 50
     - model: DN500
       value: 100
+    unit_id: u:cubic_meter
   - attribute: accuracy_class
     unit_symbol:
     values:
@@ -291,14 +292,17 @@ characteristics:
         min: 100
         max: 230
       unit_symbol: V
+      unit_id: u:volt
     - condition: 'Option 2: 12...24 VDC, grounding mandatory (CG code position a = 8)'
       value:
         min: 12
         max: 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: 'Option 3: 24 V AC/DC, grounding mandatory (CG code position a = G)'
       value: 24
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_type
     axis: power_supply_option
     values:
@@ -319,6 +323,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: display_language
     axis: CG code position b (approved display languages)
     values:

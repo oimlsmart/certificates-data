@@ -72,7 +72,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environmental_class:
       value: C
       unit_symbol:
@@ -84,7 +84,7 @@ characteristics:
     maximum_admissible_temperature:
       value: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -92,11 +92,11 @@ characteristics:
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     pressure_loss_class:
       value: 0.25
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     connection_type:
       value: Flange
       unit_symbol:
@@ -142,21 +142,21 @@ characteristics:
         min: 85
         max: 265
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_nominal_voltage_ac:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_nominal_voltage_dc:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
   model_level:
   - attribute: q4
     unit_symbol: m³/h
@@ -455,24 +455,30 @@ characteristics:
     - condition: Mains 85-265V AC
       value: 265
       unit_symbol: V
+      unit_id: u:volt
     - condition: 24V AC
       value: 26.4
       unit_symbol: V
+      unit_id: u:volt
     - condition: 24V DC
       value: 31.2
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_supply_voltage_umin
     axis: power_supply_option
     values:
     - condition: Mains 85-265V AC
       value: 85
       unit_symbol: V
+      unit_id: u:volt
     - condition: 24V AC
       value: 18.46
       unit_symbol: V
+      unit_id: u:volt
     - condition: 24V DC
       value: 18.46
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R49
   edition: 2006

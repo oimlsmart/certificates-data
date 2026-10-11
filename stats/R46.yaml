@@ -1,16 +1,16 @@
 recommendation: R46
-sample_size: 98
+sample_size: 104
 summary:
-  certs_with_model_family: 17
+  certs_with_model_family: 23
   certs_with_components: 0
   certs_with_matrix_tables: 3
   certs_with_footnotes: 6
-  total_model_variants: 70
+  total_model_variants: 91
   total_matrix_tables: 3
 type_level_characteristics:
   accuracy_class:
-    fill_rate: 0.439
-    present_count: 43
+    fill_rate: 0.471
+    present_count: 49
     unit_symbol:
     top_values:
     - value: B
@@ -19,6 +19,10 @@ type_level_characteristics:
       count: 12
     - value: C
       count: 7
+    - value: Class B (Class 1)
+      count: 5
+    - value: C (0.5S)
+      count: 1
     - value: N/A
       count: 1
   alternative_connection_mode:
@@ -29,7 +33,7 @@ type_level_characteristics:
     - value: none
       count: 1
   ambient_temperature_range:
-    fill_rate: 0.551
+    fill_rate: 0.519
     present_count: 54
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
@@ -48,8 +52,23 @@ type_level_characteristics:
       count: 3
     - range: min=-25, max=55
       count: 1
+  base_current:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 5
+      count: 1
+  clock_frequency:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: kHz
+    top_values:
+    - value: 32.768
+      count: 1
   communication_interface:
-    fill_rate: 0.102
+    fill_rate: 0.096
     present_count: 10
     unit_symbol:
     top_values:
@@ -67,9 +86,16 @@ type_level_characteristics:
         Basic: 1 Optical port, 1 Bluetooth; Extended: 1 4G Module, 1 G3-Hybrid Module, 1 G3 PLC Module,
         1 HPLC+HRF Module
       count: 1
+  communication_interfaces:
+    fill_rate: 0.019
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 1 optical port, 1 RS485 port
+      count: 2
   connection_mode:
-    fill_rate: 0.337
-    present_count: 33
+    fill_rate: 0.365
+    present_count: 38
     by_unit:
       e:
         count: 30
@@ -80,14 +106,22 @@ type_level_characteristics:
           count: 2
         unit_id: u:atomic_unit_of_charge
       'null':
-        count: 3
+        count: 8
         top_values:
         - value: direct-connected
           count: 2
+        - value: Direct-connected
+          count: 2
+        - value: Direct-connected, single phase two wires, one element
+          count: 1
+        - value: Current and voltage transformers
+          count: 1
+        - value: Direct-connected, three phases four wires, three elements
+          count: 1
         - value: 3p,4w,3e3p,3w,2e
           count: 1
   connection_mode_details:
-    fill_rate: 0.602
+    fill_rate: 0.567
     present_count: 59
     unit_symbol:
     top_values:
@@ -119,7 +153,7 @@ type_level_characteristics:
     - value: single-phase, two-wire, 1 element
       count: 1
   direction_of_energy_flow:
-    fill_rate: 0.602
+    fill_rate: 0.567
     present_count: 59
     unit_symbol:
     top_values:
@@ -128,8 +162,8 @@ type_level_characteristics:
     - value: Two-registers, bi-directional.
       count: 1
   direction_of_energy_flow_registers:
-    fill_rate: 0.347
-    present_count: 34
+    fill_rate: 0.365
+    present_count: 38
     unit_symbol:
     top_values:
     - value: Two-registers,bi-directional
@@ -138,16 +172,27 @@ type_level_characteristics:
       count: 6
     - value: Two-registers,bi-directional.
       count: 5
+    - value: Two-register, bi-directional
+      count: 3
     - value: Two-registers, bi-directional
       count: 3
     - value: Two-registers, bi-directional.
       count: 2
+    - value: Single-register, bi-directional
+      count: 1
   energy_flow_direction:
     fill_rate: 0.01
     present_count: 1
     unit_symbol:
     top_values:
     - value: bi-directional
+      count: 1
+  energy_flow_direction_registers:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Single-register, bi-directional
       count: 1
   energy_flow_registers:
     fill_rate: 0.01
@@ -157,7 +202,7 @@ type_level_characteristics:
     - value: Two-registers,bi-directional
       count: 1
   environmental_use:
-    fill_rate: 0.245
+    fill_rate: 0.231
     present_count: 24
     unit_symbol:
     top_values:
@@ -168,8 +213,8 @@ type_level_characteristics:
     - value: Indoor
       count: 1
   hardware_version:
-    fill_rate: 0.837
-    present_count: 82
+    fill_rate: 0.808
+    present_count: 84
     unit_symbol:
     top_values:
     - value: 7.825003429
@@ -192,15 +237,24 @@ type_level_characteristics:
       count: 4
     - value: 7.825.003355V3
       count: 3
+  hardware_versions:
+    fill_rate: 0.019
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: hv10102_C4V2-HT5023-TR4W
+      count: 1
+    - value: hv10223_B6-HT6033_7136B
+      count: 1
   humidity_class:
-    fill_rate: 0.939
-    present_count: 92
+    fill_rate: 0.942
+    present_count: 98
     unit_symbol:
     top_values:
     - value: H1
       count: 62
     - value: H2
-      count: 22
+      count: 28
     - value: H3
       count: 8
   ib_reference:
@@ -212,7 +266,7 @@ type_level_characteristics:
     - value: 20
       count: 1
   impulse_voltage:
-    fill_rate: 0.082
+    fill_rate: 0.077
     present_count: 8
     unit_symbol: kV
     unit_id: u:volt
@@ -220,12 +274,14 @@ type_level_characteristics:
     - value: 8
       count: 8
   indoor_outdoor:
-    fill_rate: 0.102
-    present_count: 10
+    fill_rate: 0.154
+    present_count: 16
     unit_symbol:
     top_values:
     - value: indoor
       count: 9
+    - value: Indoor
+      count: 6
     - value: outdoor
       count: 1
   indoor_outdoor_type:
@@ -236,29 +292,29 @@ type_level_characteristics:
     - value: indoor
       count: 1
   insulation_protection_class:
-    fill_rate: 0.592
-    present_count: 58
+    fill_rate: 0.615
+    present_count: 64
     unit_symbol:
     top_values:
     - value: Category 2
       count: 48
     - value: II
-      count: 10
+      count: 16
   ip_rating:
-    fill_rate: 0.612
-    present_count: 60
+    fill_rate: 0.635
+    present_count: 66
     unit_symbol:
     top_values:
     - value: IP54
-      count: 54
+      count: 56
     - value: IP51
-      count: 4
+      count: 8
     - value: IP54/indoor
       count: 1
     - value: IP51/indoor
       count: 1
   ip_rating_environmental_use:
-    fill_rate: 0.347
+    fill_rate: 0.327
     present_count: 34
     unit_symbol:
     top_values:
@@ -277,30 +333,38 @@ type_level_characteristics:
     - value: IP54(indoor)
       count: 1
   lower_specified_temperature:
-    fill_rate: 0.01
-    present_count: 1
+    fill_rate: 0.067
+    present_count: 7
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
     top_values:
     - value: -25
+      count: 7
+  marked_current:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 3×0.5-10(160)
       count: 1
   maximum_current:
-    fill_rate: 0.765
-    present_count: 75
+    fill_rate: 0.75
+    present_count: 78
     by_unit:
       A:
-        count: 70
+        count: 73
         top_values:
         - value: 100
-          count: 37
+          count: 38
         - value: 160
-          count: 14
+          count: 15
         - value: 6
           count: 13
         - value: 60
           count: 4
         - value: 10
-          count: 1
+          count: 2
         - value: 80
           count: 1
         unit_id: u:ampere
@@ -318,18 +382,20 @@ type_level_characteristics:
             $I_{\mathrm{n}}=1\text{A}-I_{\mathrm{max}}1.2\text{A},1.5\text{A}\text{or}10\text{A}I_{\mathrm{n}}=5\text{A}-I_{\mathrm{max}}6\text{A},7.5\text{A}\text{or}10\text{A}
           count: 1
   meter_constant:
-    fill_rate: 0.786
-    present_count: 77
+    fill_rate: 0.798
+    present_count: 83
     by_unit:
       imp/kWh:
-        count: 57
+        count: 63
         top_values:
         - value: 1000
           count: 41
         - value: 10000
-          count: 10
+          count: 11
         - value: 3200
-          count: 4
+          count: 7
+        - value: 4800
+          count: 2
         - value: 5
           count: 1
         - value: >-
@@ -363,31 +429,31 @@ type_level_characteristics:
         - value: 10
           count: 1
   meter_type:
-    fill_rate: 0.939
-    present_count: 92
+    fill_rate: 0.942
+    present_count: 98
     unit_symbol:
     top_values:
     - value: static
-      count: 84
+      count: 86
     - value: Static
-      count: 8
+      count: 12
   minimum_current:
-    fill_rate: 0.755
-    present_count: 74
+    fill_rate: 0.76
+    present_count: 79
     by_unit:
       A:
-        count: 70
+        count: 75
         top_values:
         - value: 0.5
-          count: 31
+          count: 32
+        - value: 0.25
+          count: 15
         - value: 0.015
           count: 13
-        - value: 0.25
-          count: 12
         - value: 1
           count: 11
         - value: 0.01
-          count: 2
+          count: 3
         - value: 0.15
           count: 1
         unit_id: u:ampere
@@ -400,14 +466,37 @@ type_level_characteristics:
           count: 1
         - value: 0.003A(In=0.3A),0.01A(In=1A),0.05A(In=5A)
           count: 1
+  minimum_current_imin:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 0.25
+      count: 1
+  mounting_position:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Any position is allowed
+      count: 1
+  nominal_current:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 5
+      count: 1
   nominal_frequency:
-    fill_rate: 0.571
-    present_count: 56
+    fill_rate: 0.558
+    present_count: 58
     unit_symbol: Hz
     unit_id: u:hertz
     top_values:
     - value: 60
-      count: 48
+      count: 50
     - value: 50
       count: 3
     - value: 50Hz; 60Hz
@@ -415,7 +504,7 @@ type_level_characteristics:
     - value: 50Hz or 60Hz
       count: 2
   nominal_voltage:
-    fill_rate: 0.52
+    fill_rate: 0.49
     present_count: 51
     unit_symbol: V
     unit_id: u:volt
@@ -440,8 +529,36 @@ type_level_characteristics:
       count: 1
     - value: 3×133V/230V and 3×230V/400V
       count: 1
+  number_of_measuring_elements:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 3
+      count: 1
+  number_of_metering_elements:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 3
+      count: 1
+  number_of_phases:
+    fill_rate: 0.019
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 3
+      count: 2
+  number_of_wires:
+    fill_rate: 0.019
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: 4
+      count: 2
   power_supply_frequency:
-    fill_rate: 0.367
+    fill_rate: 0.346
     present_count: 36
     by_unit:
       Hz:
@@ -464,7 +581,7 @@ type_level_characteristics:
         - value: 50Hzor60Hz
           count: 1
   power_supply_voltage:
-    fill_rate: 0.204
+    fill_rate: 0.192
     present_count: 20
     by_unit:
       V:
@@ -496,7 +613,7 @@ type_level_characteristics:
             Nominal voltageUn(3-phase,4-wire)3x58/100to69/120V3x110/190to133/230VNominal voltageUn(3-phase,3-wire)3x100to120V3x190to230V
           count: 1
   protective_class:
-    fill_rate: 0.378
+    fill_rate: 0.356
     present_count: 37
     unit_symbol:
     top_values:
@@ -511,15 +628,15 @@ type_level_characteristics:
     - value: Category1
       count: 3
   reference_current:
-    fill_rate: 0.02
-    present_count: 2
+    fill_rate: 0.029
+    present_count: 3
     unit_symbol: A
     unit_id: u:ampere
     top_values:
     - value: 5
-      count: 2
+      count: 3
   register:
-    fill_rate: 0.51
+    fill_rate: 0.481
     present_count: 50
     unit_symbol:
     top_values:
@@ -533,15 +650,22 @@ type_level_characteristics:
       count: 2
     - value: single-register
       count: 1
+  register_configuration:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: Two-register, bi-directional
+      count: 1
   register_multiplier:
-    fill_rate: 0.082
-    present_count: 8
+    fill_rate: 0.135
+    present_count: 14
     unit_symbol:
     top_values:
     - value: 1
-      count: 8
+      count: 14
   software_identification:
-    fill_rate: 0.694
+    fill_rate: 0.654
     present_count: 68
     unit_symbol:
     top_values:
@@ -565,8 +689,24 @@ type_level_characteristics:
       count: 4
     - value: 'P42812020-08-24; Checksum: F9EA'
       count: 3
+  software_version:
+    fill_rate: 0.019
+    present_count: 2
+    unit_symbol:
+    top_values:
+    - value: V1.9.036
+      count: 1
+    - value: V1008102
+      count: 1
+  software_versions:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol:
+    top_values:
+    - value: 'V1.9.035 (Checksum: D1FED97A); V1.9.036 (Checksum: 07EA2CE5); V1.9.036 (Checksum: 88D29608)'
+      count: 1
   specified_clock_frequencies:
-    fill_rate: 0.102
+    fill_rate: 0.096
     present_count: 10
     by_unit:
       kHz:
@@ -584,23 +724,30 @@ type_level_characteristics:
           count: 1
         - value: 'Energy measuring chip: 6 MHz; MCU: 32.768 kHz'
           count: 1
+  specified_clock_frequency:
+    fill_rate: 0.048
+    present_count: 5
+    unit_symbol: kHz
+    top_values:
+    - value: 32.768
+      count: 5
   starting_current:
-    fill_rate: 0.745
-    present_count: 73
+    fill_rate: 0.75
+    present_count: 78
     by_unit:
       A:
-        count: 69
+        count: 74
         top_values:
         - value: 0.04
-          count: 34
+          count: 35
         - value: 0.0015
           count: 13
         - value: 0.08
           count: 12
         - value: 0.02
-          count: 8
+          count: 11
         - value: 0.001
-          count: 2
+          count: 3
         unit_id: u:ampere
       'null':
         count: 4
@@ -611,6 +758,14 @@ type_level_characteristics:
           count: 1
         - value: 0.0003A(In=0.3A),0.001A(In=1A),0.005A(In=5A)
           count: 1
+  starting_current_ist:
+    fill_rate: 0.01
+    present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 0.02
+      count: 1
   temperature_limit:
     fill_rate: 0.01
     present_count: 1
@@ -620,7 +775,7 @@ type_level_characteristics:
     - range: min=-40, max=70
       count: 1
   temperature_range:
-    fill_rate: 0.224
+    fill_rate: 0.212
     present_count: 22
     by_unit:
       "°C":
@@ -643,14 +798,14 @@ type_level_characteristics:
         - range: min=-10, max=75
           count: 1
   terminal_arrangement:
-    fill_rate: 0.959
-    present_count: 94
+    fill_rate: 0.962
+    present_count: 100
     unit_symbol:
     top_values:
     - value: DIN
-      count: 64
+      count: 68
     - value: BS
-      count: 18
+      count: 20
     - value: Direct plug-in Essailec connectors
       count: 8
     - value: BS(L-NN-L)
@@ -660,31 +815,33 @@ type_level_characteristics:
     - value: DIN43857
       count: 1
   tilt_mounting_position:
-    fill_rate: 0.102
-    present_count: 10
+    fill_rate: 0.144
+    present_count: 15
     unit_symbol:
     top_values:
     - value: any position is allowed
       count: 10
+    - value: Any position is allowed
+      count: 5
   transitional_current:
-    fill_rate: 0.724
-    present_count: 71
+    fill_rate: 0.731
+    present_count: 76
     by_unit:
       A:
-        count: 66
+        count: 71
         top_values:
         - value: 1
-          count: 33
+          count: 34
         - value: 2
           count: 11
+        - value: 0.5
+          count: 10
         - value: 0.075
           count: 10
-        - value: 0.5
-          count: 7
+        - value: 0.05
+          count: 3
         - value: 0.15
           count: 3
-        - value: 0.05
-          count: 2
         unit_id: u:ampere
       'null':
         count: 5
@@ -697,43 +854,62 @@ type_level_characteristics:
           count: 1
         - value: 0.015A(In=0.3A),0.05A(In=1A),0.25A(In=5A)
           count: 1
-  upper_specified_temperature:
+  transitional_current_itr:
     fill_rate: 0.01
     present_count: 1
+    unit_symbol: A
+    unit_id: u:ampere
+    top_values:
+    - value: 0.5
+      count: 1
+  upper_specified_temperature:
+    fill_rate: 0.067
+    present_count: 7
     unit_symbol: "°C"
     unit_id: u:degree_Celsius
     top_values:
     - value: 70
-      count: 1
+      count: 7
 model_level_attributes:
   transitional_current: 23
   minimum_current: 22
   starting_current: 22
+  maximum_current: 21
   meter_constant: 20
-  maximum_current: 19
   temperature_range: 16
   power_supply_voltage: 14
   software_identification: 11
+  nominal_voltage: 11
   module_version: 8
-  nominal_voltage: 7
-  hardware_version: 5
+  hardware_version: 7
+  software_checksum: 5
+  nominal_frequency: 5
   humidity_class: 4
   connection_mode_details: 4
-  basic_current: 3
   power_supply_frequency: 3
-  nominal_frequency: 2
-  accuracy_class: 2
-  power_supply_board_ps: 2
+  nominal_voltage_phase_to_neutral: 3
+  nominal_voltage_phase_to_phase: 3
+  basic_current: 3
+  communication_interfaces: 3
+  software_version: 3
+  connection_mode: 3
   meter_type: 2
-  connection_mode: 2
+  power_supply_board_ps: 2
+  accuracy_class: 2
   direction_of_energy_flow_registers: 2
+  number_of_elements: 2
   terminal_arrangement: 2
   protective_class: 2
   ip_rating_environmental_use: 2
-  transitional_current_reference: 1
   tested_upper_temperature: 1
+  transitional_current_reference: 1
   impulse_voltage: 1
+  number_of_wires: 1
+  wiring: 1
+  nominal_voltage_unom: 1
   ambient_temperature_range: 1
+  nominal_frequency_fnom: 1
+  maximum_current_imax: 1
 config_level_attributes:
   transitional_current: 2
   temperature_range: 1

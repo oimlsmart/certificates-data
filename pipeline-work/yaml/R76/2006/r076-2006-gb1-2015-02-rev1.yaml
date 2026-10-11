@@ -66,11 +66,13 @@ characteristics:
         min: 6
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     minimum_capacity:
       value: 20e
       unit_symbol:
@@ -82,19 +84,23 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     dc_supply_voltage:
       value: 24
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: 24 VDC via mains adaptor, any CE-marked adaptor may be used
       unit_symbol:
@@ -120,6 +126,7 @@ characteristics:
         max: 15
     - model: XS 500 (Max 15 kg)
       value: 15
+    unit_id: u:kilogram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -129,6 +136,7 @@ characteristics:
       value: 19
     - model: XS (Max 30 kg)
       value: 36
+    unit_id: u:kilogram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -138,6 +146,7 @@ characteristics:
         max: 5
     - model: XS 500 (Max 15 kg)
       value: 5
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -147,6 +156,7 @@ characteristics:
         max: 100
     - model: XS 500 (Max 15 kg)
       value: 100
+    unit_id: u:gram
   config_level:
   - attribute: maximum_number_of_scale_intervals
     axis: weighing range configuration
@@ -191,18 +201,21 @@ model_family:
       maximum_capacity:
         value: 6
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: XS (Max 15 kg)
     label: XS with Max = 15 kg
     attributes:
       maximum_capacity:
         value: 15
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: XS (Max 30 kg)
     label: XS with Max = 30 kg
     attributes:
       maximum_capacity:
         value: 30
         unit_symbol: kg
+        unit_id: u:kilogram
   - model_id: XS 500 (Max 6/15 kg)
     label: XS 500 hanging scale, dual interval
     attributes:
@@ -211,28 +224,34 @@ model_family:
           min: 6
           max: 15
         unit_symbol: kg
+        unit_id: u:kilogram
       minimum_capacity:
         value:
           min: 40
           max: 100
         unit_symbol: g
+        unit_id: u:gram
       scale_interval:
         value:
           min: 2
           max: 5
         unit_symbol: g
+        unit_id: u:gram
   - model_id: XS 500 (Max 15 kg)
     label: XS 500 hanging scale, single interval
     attributes:
       maximum_capacity:
         value: 15
         unit_symbol: kg
+        unit_id: u:kilogram
       minimum_capacity:
         value: 100
         unit_symbol: g
+        unit_id: u:gram
       scale_interval:
         value: 5
         unit_symbol: g
+        unit_id: u:gram
 components:
 - role: load cell
   type_designations:

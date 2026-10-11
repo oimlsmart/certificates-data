@@ -90,7 +90,7 @@ characteristics:
     maximum_excitation_voltage:
       value: 20
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     excitation_voltage_type:
       value: AC or DC
@@ -100,7 +100,7 @@ characteristics:
     input_impedance_rlc:
       value: 383
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     input_impedance_tolerance_percent:
       value: 10
@@ -112,7 +112,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     safe_overload_elim_over_emax:
       value: 150
@@ -137,6 +137,7 @@ characteristics:
     - model: Emax=4000kg
       value: 4000
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: minimum_verification_interval_vmin
     unit_symbol: kg
     values:
@@ -149,6 +150,7 @@ characteristics:
     - model: Emax=4000kg
       value: 0.25
       footnote_markers: []
+    unit_id: u:kilogram
   config_level:
   - attribute: cable_length
     axis: cable length option
@@ -156,9 +158,11 @@ characteristics:
     - condition: option 1
       value: 3
       unit_symbol: m
+      unit_id: u:meter
     - condition: option 2
       value: 7.5
       unit_symbol: m
+      unit_id: u:meter
 recommendation:
   id: R60
   edition: 2000

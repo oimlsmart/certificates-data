@@ -86,7 +86,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     initial_zero_setting_device_limit:
       value:
         min:
@@ -116,17 +116,17 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_dc_voltage:
       value: 9
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     software_version:
       value: V4.xx
       unit_symbol:
@@ -151,6 +151,7 @@ characteristics:
       value: 15/30
     - model: Max=30 kg
       value: 30
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -170,6 +171,7 @@ characteristics:
       value: 100
     - model: Max=30 kg
       value: 200
+    unit_id: u:gram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -189,6 +191,7 @@ characteristics:
       value: 5/10
     - model: Max=30 kg
       value: 10
+    unit_id: u:gram
   - attribute: t_le
     unit_symbol:
     values:
@@ -215,9 +218,11 @@ characteristics:
     - condition: integrated Pb battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
     - condition: 4 x 1.5 V dry battery (D type)
       value: 1.5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: battery_capacity
     axis: battery_option
     values:
@@ -313,6 +318,7 @@ components:
         value: 30
         footnote_markers:
         - Note
+      unit_id: u:kilogram
 footnotes:
 - marker: Note
   text: >-

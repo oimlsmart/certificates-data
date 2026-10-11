@@ -71,6 +71,7 @@ characteristics:
         max: 40
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     software_identification:
       value: Version number 1.x.x (x = 0-9)
       unit_symbol:
@@ -85,21 +86,25 @@ characteristics:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: L6D
       value:
         min: 3
         max: 30
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: P, PS, K
       value:
         min: 3
         max: 37.5
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: only P and PS
       value:
         min: 3
         max: 37.5
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: verification_scale_interval
     axis: load_cell_used
     values:
@@ -108,21 +113,25 @@ characteristics:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: L6D
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: P, PS, K
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: only P and PS
       value:
         min: 5
         max:
       unit_symbol: g
+      unit_id: u:gram
   - attribute: weighing_ranges
     axis: load_cell_used
     values:
@@ -191,20 +200,24 @@ characteristics:
       value: 12
       unit_symbol: V
       constraint: DC
+      unit_id: u:volt
     - condition: L6C / L6D / P, PS, K — type AD2000 via USB
       value: 5
       unit_symbol: V
       constraint: DC
+      unit_id: u:volt
     - condition: L6C / L6D / P, PS, K — other types (RM-5800LL B, RM-5800NLL)
       value:
         min: 100
         max: 240
       unit_symbol: V
       constraint: AC
+      unit_id: u:volt
     - condition: only P and PS — type AD2000 via USB
       value: 5
       unit_symbol: V
       constraint: DC
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: load_cell_used and instrument type
     values:
@@ -213,6 +226,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: instrument type
     values:

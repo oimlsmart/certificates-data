@@ -65,11 +65,11 @@ characteristics:
     minimum_dead_load_emin:
       value: 0
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     safe_load_limit_elim:
       value: 1.5*Emax
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     apportionment_factor_plc:
       value: 0.8
       unit_symbol:
@@ -83,7 +83,7 @@ characteristics:
         min: 6
         max: 8
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     excitation_voltage_type:
       value: DC
       unit_symbol:
@@ -93,7 +93,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
   model_level:
   - attribute: maximum_capacity
     unit_symbol: kg
@@ -116,6 +116,7 @@ characteristics:
       value: 4000
     - model: LB-XD-5T-EXM
       value: 5000
+    unit_id: u:kilogram
   - attribute: cable_length_maximum
     unit_symbol: m
     values:
@@ -137,6 +138,7 @@ characteristics:
       value: 9
     - model: LB-XD-5T-EXM
       value: 9
+    unit_id: u:meter
   config_level:
   - attribute: max_load_cell_intervals_nmax
     axis: rating_option
@@ -161,6 +163,7 @@ characteristics:
       value: Emax/10000
     - condition: rating option 4
       value: Emax/8000
+    unit_id: u:kilogram
   - attribute: ratio_y_emax_over_vmin
     axis: rating_option
     values:

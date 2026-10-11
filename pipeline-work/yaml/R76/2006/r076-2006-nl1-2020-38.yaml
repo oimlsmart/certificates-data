@@ -57,14 +57,14 @@ characteristics:
         min:
         max: 62000
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
       footnote_markers: []
     weighing_range:
       value: Single interval
@@ -88,21 +88,21 @@ characteristics:
         min: 5
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     power_supply_voltage_ac:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC or DC
@@ -131,9 +131,11 @@ characteristics:
     - condition: AC/DC plug-in power supply
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: internal battery
       value: 6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: verification_scale_interval
     axis: capacity_unit_representation
     values:
@@ -142,16 +144,19 @@ characteristics:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: capacity in kg
       value:
         min: 0.001
         max:
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: capacity in ct
       value:
         min: 5
         max:
       unit_symbol: ct
+      unit_id: u:carat
 recommendation:
   id: R76
   edition: 2006

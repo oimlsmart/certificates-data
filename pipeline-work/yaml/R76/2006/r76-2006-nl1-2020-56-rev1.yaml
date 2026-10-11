@@ -68,7 +68,7 @@ characteristics:
     power_supply_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: DC (supplied by AC/DC plug-in power adapter)
@@ -99,6 +99,7 @@ characteristics:
         min:
         max: 12000
       footnote_markers: []
+    unit_id: u:gram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -117,6 +118,7 @@ characteristics:
         min: 1
         max:
       footnote_markers: []
+    unit_id: u:gram
   - attribute: maximum_number_of_scale_intervals
     unit_symbol: divisions
     values:
@@ -138,11 +140,13 @@ characteristics:
         min: 10
         max: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: only for type AX…5… (class (I))
       value:
         min: 15
         max: 25
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76-1
   edition: 2006

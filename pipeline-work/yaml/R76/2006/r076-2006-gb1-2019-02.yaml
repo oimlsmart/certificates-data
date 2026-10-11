@@ -77,14 +77,14 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_voltage_dc:
       value:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_options:
       value: 110-240 VAC (via PSU), or 12-36 VDC, or external battery pack
@@ -150,6 +150,7 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 5
+    unit_id: u:volt
   - attribute: minimum_load_cell_impedance
     axis: load_cell_input_variant
     unit_symbol: Ω
@@ -158,6 +159,7 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 58.33
+    unit_id: u:ohm
   - attribute: maximum_load_cell_impedance
     axis: load_cell_input_variant
     unit_symbol: Ω
@@ -166,6 +168,7 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 1100
+    unit_id: u:ohm
   - attribute: minimum_input_voltage_per_scale_interval
     axis: load_cell_input_variant
     unit_symbol: μV
@@ -216,6 +219,7 @@ characteristics:
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 30
+    unit_id: u:meter
 recommendation:
   id: R76
   edition: 2006
@@ -247,7 +251,7 @@ components:
         min: 12
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_source:
       value: Supplied by digital indicating device via RS485 interface cable
@@ -264,17 +268,17 @@ components:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance_per_channel:
       value: 350
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance_per_channel:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.8
@@ -315,6 +319,7 @@ components:
         value: 42
       - condition: 1100 Ω load cell connection
         value: 47
+      unit_id: u:meter
     load_cell_cabling_requirement:
       value: All load cell cables to an individual ZB210 must be of equal length.
       unit_symbol:

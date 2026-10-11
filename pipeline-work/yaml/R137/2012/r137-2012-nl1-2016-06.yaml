@@ -69,13 +69,13 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     gas_temperature_range:
       value:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     designed_for:
       value: Condensing humidity
       unit_symbol:
@@ -87,11 +87,11 @@ characteristics:
     indicating_range:
       value: 99999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     verification_scale_interval:
       value: 0.0002
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
   model_level:
   - attribute: minimum_flow_rate_qmin
     unit_symbol: m³/h
@@ -153,9 +153,11 @@ characteristics:
     - condition: default
       value: 0.5
       unit_symbol: bar
+      unit_id: u:bar
     - condition: RS / 2001 AL
       value: 1.6
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: power_supply
     axis: type_designation
     values:

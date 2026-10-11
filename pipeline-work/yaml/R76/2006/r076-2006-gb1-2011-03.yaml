@@ -65,7 +65,7 @@ characteristics:
         min: 110
         max: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -75,11 +75,11 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     load_cell_excitation_voltage:
       value: 14
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_excitation_type:
       value: DC
       unit_symbol:
@@ -87,11 +87,11 @@ characteristics:
     minimum_load_cell_impedance:
       value: 350
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.87
       unit_symbol: µV
@@ -113,7 +113,7 @@ characteristics:
         min: 0
         max: 35
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     interface_ethernet:
       value: labeller and communication
       unit_symbol:
@@ -142,59 +142,72 @@ characteristics:
     - condition: 6-wire
       value: 2
       unit_symbol: m
+      unit_id: u:meter
   - attribute: maximum_capacity
     axis: load_cell_configuration
     values:
     - condition: Max 6 kg (Flintec PC30)
       value: 6
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 1.5/4.5 kg (Flintec PC30)
       value:
         min: 1.5
         max: 4.5
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 60 kg (Tedea Huntleigh 1510)
       value: 60
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 30/60 kg (Tedea Huntleigh 1510)
       value:
         min: 30
         max: 60
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: minimum_capacity
     axis: load_cell_configuration
     values:
     - condition: Max 6 kg (Flintec PC30)
       value: 40
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 1.5/4.5 kg (Flintec PC30)
       value: 20
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 60 kg (Tedea Huntleigh 1510)
       value: 400
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 30/60 kg (Tedea Huntleigh 1510)
       value: 200
       unit_symbol: g
+      unit_id: u:gram
   - attribute: verification_scale_interval_e
     axis: load_cell_configuration
     values:
     - condition: Max 6 kg (Flintec PC30)
       value: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 1.5/4.5 kg (Flintec PC30)
       value:
         min: 1
         max: 2
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 60 kg (Tedea Huntleigh 1510)
       value: 20
       unit_symbol: g
+      unit_id: u:gram
     - condition: Max 30/60 kg (Tedea Huntleigh 1510)
       value:
         min: 10
         max: 20
       unit_symbol: g
+      unit_id: u:gram
   - attribute: load_cell_type
     axis: load_cell_configuration
     values:
@@ -216,15 +229,19 @@ characteristics:
     - condition: Max 6 kg (Flintec PC30)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 1.5/4.5 kg (Flintec PC30)
       value: 15
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 60 kg (Tedea Huntleigh 1510)
       value: 100
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: Max 30/60 kg (Tedea Huntleigh 1510)
       value: 100
       unit_symbol: kg
+      unit_id: u:kilogram
 recommendation:
   id: R76
   edition: 2006
@@ -251,7 +268,7 @@ components:
     maximum_capacity_emax:
       value: 15
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 - role: load cell
   type_designations:
   - Tedea Huntleigh 1510
@@ -260,7 +277,7 @@ components:
     maximum_capacity_emax:
       value: 100
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
 footnotes: []
 matrix_tables:
 - name: Load cell configurations

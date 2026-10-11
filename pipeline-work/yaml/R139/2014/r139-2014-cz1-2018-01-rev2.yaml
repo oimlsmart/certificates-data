@@ -76,11 +76,11 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     scale_interval_mass_display:
       value: 0.01 or 0.001
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     max_storage_pressure_pst:
       value: 30.0
       unit_symbol: MPa
@@ -100,7 +100,7 @@ characteristics:
     filling_pressure_reference_temperature:
       value: 15
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     max_fast_fill_pressure_pvmax:
       value: 26.5
       unit_symbol: MPa
@@ -108,7 +108,7 @@ characteristics:
     delivery_hose_max_length:
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     max_number_of_measurement_systems:
       value: 4
       unit_symbol:
@@ -126,11 +126,11 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     type_of_gas:
       value: natural gas (methane)
       unit_symbol:
@@ -166,6 +166,7 @@ characteristics:
     - condition: B
       value: 5
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: min_flowrate_qmin
     axis: measurement_transducer
     unit_symbol: kg/min
@@ -190,6 +191,7 @@ characteristics:
         min: -50
         max: 80
       footnote_markers: []
+    unit_id: u:degree_Celsius
 recommendation:
   id: R139
   edition: 2014
@@ -297,19 +299,19 @@ components:
     maximum_pressure:
       value: 345
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes:
       value: M2 / E3
     sw_versions:
@@ -327,11 +329,11 @@ components:
     flow_damping:
       value: 0
       unit_symbol: s
-      unit_id:
+      unit_id: u:sidereal_second
     update_rate:
       value: 100
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
 - role: measurement transducer (Endress + Hauser)
   type_designations:
   - Endress + Hauser CNGmass
@@ -350,19 +352,19 @@ components:
     maximum_pressure:
       value: 350
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes:
       value: M2 / E2
     sw_version:
@@ -374,7 +376,7 @@ components:
     flow_damping:
       value: 0
       unit_symbol: s
-      unit_id:
+      unit_id: u:sidereal_second
 - role: electronic calculator
   type_designations:
   - TBELTM
@@ -384,17 +386,17 @@ components:
     scale_interval:
       value: 0.01 or 0.001
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_measured_quantity:
       value: 2
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes:
       value: M2 / E1
     sw_versions:
@@ -410,7 +412,7 @@ components:
     maximum_length:
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     note:
       value: or other corresponding type with maximum length 6 m
 - role: delivery nozzle

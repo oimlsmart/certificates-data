@@ -105,11 +105,11 @@ characteristics:
     indicating_range:
       value: 99999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     resolution_of_indicating_device:
       value: 5.0e-05
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
@@ -133,7 +133,7 @@ characteristics:
     reed_switch_max_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     reed_switch_supply_type:
       value: DC
       unit_symbol:
@@ -141,7 +141,7 @@ characteristics:
     reed_switch_max_supply_current:
       value: 0.01
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -402,12 +402,15 @@ characteristics:
     - condition: T30
       value: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T50
       value: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T90
       value: 90
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: reed_switch_k_factor
     axis: k_factor_option
     values:
@@ -609,7 +612,7 @@ components:
     max_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     supply_type:
       value: DC
       unit_symbol:
@@ -617,7 +620,7 @@ components:
     max_supply_current:
       value: 0.01
       unit_symbol: A
-      unit_id:
+      unit_id: u:ampere
 matrix_tables:
 - name: CD97TAR technical characteristics by nominal diameter
   columns:

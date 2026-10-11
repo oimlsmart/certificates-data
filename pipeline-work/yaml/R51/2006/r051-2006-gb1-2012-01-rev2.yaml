@@ -68,7 +68,7 @@ characteristics:
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     maximum_subtractive_tare:
       value: 50
       unit_symbol: "%"
@@ -92,7 +92,7 @@ characteristics:
         min:
         max: 107
       unit_symbol: min
-      unit_id:
+      unit_id: u:minute
     maximum_operating_rate:
       value:
         min:
@@ -110,7 +110,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     climatic_classification:
       value: non-condensing (closed)
     electromagnetic_environment:
@@ -120,13 +120,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC, single phase
     label_applicator_pneumatic_pressure:
@@ -134,7 +134,7 @@ characteristics:
         min: 4
         max: 6
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     accuracy_class:
       value: Y(a) and XIII(1)
     interfaces:
@@ -146,17 +146,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 3.3
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_excitation_type:
       value: DC
     minimum_load_cell_impedance:
       value: 43
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.88
       unit_symbol: μV
@@ -176,7 +176,7 @@ characteristics:
     load_cell_cable_maximum_length:
       value: 1.5
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
   model_level:
   - attribute: maximum_capacity
     unit_symbol: kg
@@ -187,6 +187,7 @@ characteristics:
       value: 6
     - model: Max=10kg
       value: 10
+    unit_id: u:kilogram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -196,6 +197,7 @@ characteristics:
       value: 2
     - model: Max=10kg
       value: 5
+    unit_id: u:gram
   - attribute: load_cell_emax
     unit_symbol: kg
     values:
@@ -205,6 +207,7 @@ characteristics:
       value: 15
     - model: Max=10kg
       value: 20
+    unit_id: u:kilogram
   config_level:
   - attribute: type_designation
     axis: operating mode

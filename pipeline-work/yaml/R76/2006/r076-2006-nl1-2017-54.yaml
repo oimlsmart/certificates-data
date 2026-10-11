@@ -57,13 +57,13 @@ characteristics:
         min: 0.01
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     verification_scale_interval_carat:
       value:
         min: 0.1
         max:
       unit_symbol: ct
-      unit_id:
+      unit_id: u:carat
     scale_interval_relation:
       value: e = d or e = 10 d
       unit_symbol:
@@ -77,19 +77,19 @@ characteristics:
         min: 10
         max: 30
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC/DC adapter
       unit_symbol:
@@ -97,11 +97,11 @@ characteristics:
     adapter_output_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_voltage:
       value: 6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_type:
       value: rechargeable internal
       unit_symbol:
@@ -119,11 +119,13 @@ characteristics:
         min: 500
         max: 6200
       unit_symbol: g
+      unit_id: u:gram
     - condition: II
       value:
         min: 50
         max: 12
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: maximum_capacity
     axis: accuracy_class
     values:
@@ -132,11 +134,13 @@ characteristics:
         min: 2500
         max: 31000
       unit_symbol: ct
+      unit_id: u:carat
     - condition: II
       value:
         min: 250
         max: 60000
       unit_symbol: ct
+      unit_id: u:carat
   - attribute: maximum_number_of_scale_intervals
     axis: accuracy_class
     values:

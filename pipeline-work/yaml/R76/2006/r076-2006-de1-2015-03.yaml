@@ -54,7 +54,7 @@ characteristics:
         min: 10
         max: 30
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     relative_humidity:
       value:
@@ -66,7 +66,7 @@ characteristics:
     humidity_reference_temperature:
       value: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     humidity_condition:
       value: not condensing
@@ -112,12 +112,14 @@ characteristics:
         max: 6100
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: BG SI
       value:
         min: 5
         max: 35
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     axis: weighing_module
     values:
@@ -127,12 +129,14 @@ characteristics:
         max: 1
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: BG SI
       value:
         min: 1
         max: 5
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
   - attribute: scale_interval_d
     axis: weighing_module
     values:
@@ -142,12 +146,14 @@ characteristics:
         max: 1
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: BG SI
       value:
         min: 0.1
         max: 5
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
   - attribute: number_of_verification_scale_intervals_n
     axis: weighing_module
     values:
@@ -170,10 +176,12 @@ characteristics:
       value: 7320
       unit_symbol: g
       footnote_markers: []
+      unit_id: u:gram
     - condition: BG SI
       value: 41
       unit_symbol: kg
       footnote_markers: []
+      unit_id: u:kilogram
   - attribute: initial_zero_setting_plus_dead_load
     axis: weighing_module
     values:
@@ -184,6 +192,7 @@ characteristics:
       unit_symbol: g
       footnote_markers:
       - 1)
+      unit_id: u:gram
     - condition: BG SI
       value:
         min:
@@ -191,6 +200,7 @@ characteristics:
       unit_symbol: kg
       footnote_markers:
       - 1)
+      unit_id: u:kilogram
 recommendation:
   id: R76-1
   edition: 2006
@@ -276,16 +286,19 @@ matrix_tables:
         min: 500
         max: 6100
       unit_symbol: g
+      unit_id: u:gram
     verification_scale_interval_e:
       value:
         min: 0.1
         max: 1
       unit_symbol: g
+      unit_id: u:gram
     scale_interval_d:
       value:
         min: 0.01
         max: 1
       unit_symbol: g
+      unit_id: u:gram
     number_of_verification_scale_intervals_n:
       value:
         min:
@@ -306,9 +319,11 @@ matrix_tables:
         min: 10
         max: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     nominal_capacity_of_load_receptor:
       value: 7320
       unit_symbol: g
+      unit_id: u:gram
     initial_zero_setting_plus_dead_load:
       value:
         min:
@@ -316,6 +331,7 @@ matrix_tables:
       unit_symbol: g
       footnote_markers:
       - 1)
+      unit_id: u:gram
     fraction_of_error_limit_pi: 1.0
   - module_type: BG SI
     accuracy_class: II
@@ -324,16 +340,19 @@ matrix_tables:
         min: 5
         max: 35
       unit_symbol: kg
+      unit_id: u:kilogram
     verification_scale_interval_e:
       value:
         min: 1
         max: 5
       unit_symbol: g
+      unit_id: u:gram
     scale_interval_d:
       value:
         min: 0.1
         max: 5
       unit_symbol: g
+      unit_id: u:gram
     number_of_verification_scale_intervals_n:
       value:
         min:
@@ -354,9 +373,11 @@ matrix_tables:
         min: 10
         max: 30
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     nominal_capacity_of_load_receptor:
       value: 41
       unit_symbol: kg
+      unit_id: u:kilogram
     initial_zero_setting_plus_dead_load:
       value:
         min:
@@ -364,6 +385,7 @@ matrix_tables:
       unit_symbol: kg
       footnote_markers:
       - 1)
+      unit_id: u:kilogram
     fraction_of_error_limit_pi: 1.0
   description: >-
     Characteristics of the two weighing modules of the instrument; tare-balancing range, initial tare

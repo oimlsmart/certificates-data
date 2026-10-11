@@ -93,7 +93,7 @@ characteristics:
         min: 5
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     number_of_verification_scale_intervals_n:
       value: 3000
       unit_symbol:
@@ -105,7 +105,7 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -115,7 +115,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     semi_automatic_zero_setting_limit:
       value:
         min:
@@ -139,7 +139,7 @@ characteristics:
         min:
         max: 30
       unit_symbol: min
-      unit_id:
+      unit_id: u:minute
   model_level:
   - attribute: maximum_capacity
     unit_symbol: g
@@ -150,6 +150,7 @@ characteristics:
       value: 6000
     - model: Max=15000g
       value: 15000
+    unit_id: u:gram
   - attribute: minimum_capacity
     unit_symbol: g
     values:
@@ -159,6 +160,7 @@ characteristics:
       value: 100
     - model: Max=15000g
       value: 250
+    unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -168,6 +170,7 @@ characteristics:
       value: 2
     - model: Max=15000g
       value: 5
+    unit_id: u:gram
   config_level:
   - attribute: preset_tare
     axis: model / pack weight range
@@ -181,7 +184,7 @@ characteristics:
         min:
         max: -130
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     - condition: Max=6000g, 100-1000 g
       value: no tare
       unit_symbol:
@@ -191,7 +194,7 @@ characteristics:
         min:
         max: -260
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     - condition: Max=15000g, 250-2500 g
       value: no tare
       unit_symbol:
@@ -201,7 +204,7 @@ characteristics:
         min:
         max: -650
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
   - attribute: maximum_belt_speed
     axis: pack weight range
     values:
@@ -244,7 +247,7 @@ components:
     maximum_capacity:
       value: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     manufacturer:
       value: HBM
       unit_symbol:

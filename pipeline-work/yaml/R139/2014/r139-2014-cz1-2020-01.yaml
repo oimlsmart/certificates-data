@@ -76,11 +76,11 @@ characteristics:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     scale_interval_mass_display:
       value: 0.01
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     number_of_sequential_fillings:
       value:
         min: 1
@@ -94,7 +94,7 @@ characteristics:
     delivery_hose_maximum_length:
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
   model_level:
   - attribute: min_flowrate_qmin
     unit_symbol: kg/min
@@ -114,6 +114,7 @@ characteristics:
       value:
         min: -50
         max: 80
+    unit_id: u:degree_Celsius
   config_level:
   - attribute: max_flowrate_qmax
     axis: dispenser configuration (not specified in certificate)
@@ -130,9 +131,11 @@ characteristics:
     - condition: configuration 1 (first listed value)
       value: 2
       unit_symbol: kg
+      unit_id: u:kilogram
     - condition: configuration 2 (second listed value)
       value: 5
       unit_symbol: kg
+      unit_id: u:kilogram
   - attribute: max_filling_pressure_pv
     axis: filling condition
     values:
@@ -331,19 +334,19 @@ components:
     maximum_pressure:
       value: 345
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes: M3 / E3
     sw_versions: See actual Evaluation certificate TC7057
 - role: measurement_transducer
@@ -366,19 +369,19 @@ components:
     maximum_pressure:
       value: 350
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
     gas_temperature_range:
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     ambient_temperature_range:
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes: M2 / E2
     sw_version: 01.01.00 / CRC 0X13BD2D46
 - role: electronic_calculator
@@ -390,17 +393,17 @@ components:
     scale_interval:
       value: 0.01
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_measured_quantity:
       value: 2
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     ambient_temperature_range:
       value:
         min: -40
         max: 70
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     environment_classes: M2 / E2
     communication_protocol: MODBUS
     sw_versions:
@@ -415,7 +418,7 @@ components:
     maximum_length:
       value: 6
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
 - role: delivery_nozzle
   type_designations:
   - STÄUBLI GMV 06 (NGV1)

@@ -57,7 +57,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity:
       value: non-condensing
     intended_location:
@@ -67,7 +67,7 @@ characteristics:
     power_supply_voltage:
       value: 5.6, 8.2 or 12.6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC via AC/DC power supply
   model_level: []
@@ -96,15 +96,18 @@ characteristics:
     - condition: Analog load cells
       value: 4.8
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage
     axis: load_cell_type
     values:
     - condition: Digital load cells
       value: 8.2
       unit_symbol: V
+      unit_id: u:volt
     - condition: Digital load cells
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: load_cell_type
     values:
@@ -123,12 +126,14 @@ characteristics:
     - condition: Analog load cells
       value: 80
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_type
     values:
     - condition: Analog load cells
       value: 3000
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permitted_error
     axis: load_cell_type
     values:

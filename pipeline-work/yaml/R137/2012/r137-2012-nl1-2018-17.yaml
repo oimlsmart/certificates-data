@@ -78,7 +78,7 @@ characteristics:
         min: -40
         max: 70
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     designed_for:
       value: condensing humidity
       unit_symbol:
@@ -92,7 +92,7 @@ characteristics:
         min: 10
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -100,11 +100,11 @@ characteristics:
     minimum_velocity_vmin:
       value: 0.5
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
     transition_velocity_vt:
       value: vmax/10
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
     minimum_measuring_range_ratio:
       value: '1:20'
       unit_symbol:
@@ -139,6 +139,7 @@ characteristics:
       value: 36
     - model: 42 in / DN1050
       value: 42
+    unit_id: u:inch
   - attribute: nominal_diameter_dn
     unit_symbol: mm
     values:
@@ -252,6 +253,7 @@ characteristics:
       value: 23
     - model: 42 in / DN1050
       value: 21
+    unit_id: u:meter_per_second
   config_level:
   - attribute: operating_pressure_range
     axis: mount_type
@@ -288,31 +290,37 @@ characteristics:
         min: -20
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T12
       value:
         min: -20
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T21
       value:
         min: -20
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T22
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T32
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T41
       value:
         min: -50
         max: 100
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: inlet_piping_configuration
     axis: meter_type
     values:

@@ -64,7 +64,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -74,7 +74,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
@@ -98,7 +98,7 @@ characteristics:
     indicating_range_minimum_value:
       value: 9999999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
   model_level:
   - attribute: accuracy_class
     unit_symbol:
@@ -408,6 +408,7 @@ characteristics:
       value: 0.01
     - model: MUT2300 DN300
       value: 0.01
+    unit_id: u:cubic_meter
   config_level:
   - attribute: electromagnetic_environment
     axis: converter_version_and_configuration
@@ -433,11 +434,13 @@ characteristics:
         min: 2.9
         max: 3.7
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC mains, only for converter MC406AM
       value:
         min: 10
         max: 28
       unit_symbol: V
+      unit_id: u:volt
   - attribute: pressure_loss_class
     axis: sensor_type_and_documentation
     values:

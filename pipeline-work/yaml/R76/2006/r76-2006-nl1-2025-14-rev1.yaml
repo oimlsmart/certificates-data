@@ -91,12 +91,14 @@ characteristics:
     - condition: Analog load cells
       value: 6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_voltage_dc
     axis: load_cell_type
     values:
     - condition: Digital load cells
       value: 18
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: load_cell_type
     values:
@@ -115,12 +117,14 @@ characteristics:
     - condition: Analog load cells
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_type
     values:
     - condition: Analog load cells
       value: 2000
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permissible_error
     axis: load_cell_type
     values:
@@ -149,9 +153,11 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 18
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -160,6 +166,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
 recommendation:
   id: R76-1
   edition: 2006

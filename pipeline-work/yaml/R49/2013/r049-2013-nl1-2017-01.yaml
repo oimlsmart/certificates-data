@@ -74,7 +74,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     water_temperature_class:
       value: T50
@@ -86,7 +86,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_admissible_pressure:
       value: 1.6
@@ -113,7 +113,7 @@ characteristics:
         min: 3.35
         max: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
   model_level:
   - attribute: inlet_outlet_diameter
@@ -207,6 +207,7 @@ characteristics:
       value: 9999
     - model: DN25 (Q3=6.3)
       value: 9999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -220,6 +221,7 @@ characteristics:
       value: 0.0001
     - model: DN25 (Q3=6.3)
       value: 0.0001
+    unit_id: u:cubic_meter
   config_level:
   - attribute: flow_profile_sensitivity_class
     axis: meter_size
@@ -251,12 +253,15 @@ characteristics:
     - condition: DN15
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
     - condition: DN20
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
     - condition: DN25
       value: 0.25
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: software_version
     axis: meter_size
     values:

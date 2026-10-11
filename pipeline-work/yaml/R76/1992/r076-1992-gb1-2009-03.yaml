@@ -66,14 +66,14 @@ characteristics:
     power_supply_voltage:
       value: 230
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     power_supply_type:
       value: AC
@@ -83,7 +83,7 @@ characteristics:
     battery_voltage:
       value: 6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     battery_type:
       value: rechargeable battery
@@ -93,17 +93,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 87
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1120
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.5
@@ -155,6 +155,7 @@ characteristics:
     - model: GFK 300M
       value: 300
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: minimum_capacity
     unit_symbol: kg
     values:
@@ -167,6 +168,7 @@ characteristics:
     - model: GFK 300M
       value: 2
       footnote_markers: []
+    unit_id: u:kilogram
   - attribute: verification_scale_interval
     unit_symbol: g
     values:
@@ -179,6 +181,7 @@ characteristics:
     - model: GFK 300M
       value: 100
       footnote_markers: []
+    unit_id: u:gram
   config_level: []
 recommendation:
   id: R76
@@ -201,17 +204,17 @@ model_family:
       maximum_capacity:
         value: 60
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       minimum_capacity:
         value: 0.4
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       verification_scale_interval:
         value: 20
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
   - model_id: GFK 150M
     label: GFK 150M
@@ -219,17 +222,17 @@ model_family:
       maximum_capacity:
         value: 150
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       minimum_capacity:
         value: 1
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       verification_scale_interval:
         value: 50
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
   - model_id: GFK 300M
     label: GFK 300M
@@ -237,17 +240,17 @@ model_family:
       maximum_capacity:
         value: 300
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       minimum_capacity:
         value: 2
         unit_symbol: kg
-        unit_id:
+        unit_id: u:kilogram
         footnote_markers: []
       verification_scale_interval:
         value: 100
         unit_symbol: g
-        unit_id:
+        unit_id: u:gram
         footnote_markers: []
 components:
 - role: Digital indicating device (indicator)

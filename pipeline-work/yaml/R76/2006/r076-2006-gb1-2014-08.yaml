@@ -88,29 +88,29 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
     dc_supply_voltage_via_mains_adaptor:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 29
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_scale_interval:
       value: 0.5
@@ -134,7 +134,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_tare:
       value: Max
@@ -191,11 +191,13 @@ characteristics:
     - condition: analogue load cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: digital load cells
       value:
         min: 10
         max: 18
       unit_symbol: V
+      unit_id: u:volt
   - attribute: fraction_of_maximum_permitted_error_p_ind
     axis: load cell configuration
     values:

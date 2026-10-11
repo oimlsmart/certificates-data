@@ -52,7 +52,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     suitable_for_road_vehicle_power_supply:
       value: false
@@ -112,6 +112,7 @@ characteristics:
     - condition: Analog load cells
       value: 5
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_excitation_supply_type
     axis: connected_weighing_element
     values:
@@ -129,9 +130,11 @@ characteristics:
     - condition: Digital load cells (POWERCELL)
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: Weighing modules (Precision)
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_type
     axis: connected_weighing_element
     values:
@@ -151,12 +154,14 @@ characteristics:
     - condition: Analog load cells
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: max_load_cell_resistance
     axis: connected_weighing_element
     values:
     - condition: Analog load cells
       value: 1050
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: fraction_of_maximum_permissible_error
     axis: connected_weighing_element
     values:
@@ -188,11 +193,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC supply
       value:
         min: 20
         max: 28
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -201,6 +208,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_type
     axis: power_supply_option
     values:

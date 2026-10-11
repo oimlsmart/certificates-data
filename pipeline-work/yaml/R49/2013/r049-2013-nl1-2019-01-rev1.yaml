@@ -81,7 +81,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     water_temperature_class:
       value: T50
@@ -93,7 +93,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
       footnote_markers: []
     maximum_admissible_pressure:
       value: 1.6
@@ -103,7 +103,7 @@ characteristics:
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     orientation:
       value: All positions (horizontal, vertical or diagonal)
@@ -128,7 +128,7 @@ characteristics:
     indicating_range_minimum_value:
       value: 9999999
       unit_symbol: m³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
     documentation_folder:
       value: T10713-6
@@ -437,6 +437,7 @@ characteristics:
       value: 0.01
     - model: MUT2300 DN300
       value: 0.01
+    unit_id: u:cubic_meter
   config_level:
   - attribute: pressure_loss_class_mut2300
     axis: documentation_and_meter_size
@@ -473,11 +474,13 @@ characteristics:
         min: 2.9
         max: 3.7
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC mains, MC406AM only
       value:
         min: 10
         max: 28
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R49-1
   edition: 2013

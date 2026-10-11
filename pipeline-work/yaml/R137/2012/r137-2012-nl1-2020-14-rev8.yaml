@@ -79,6 +79,7 @@ characteristics:
         min: 10
         max: 36
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: DC
     minimum_measuring_range:
@@ -86,6 +87,7 @@ characteristics:
     minimum_velocity_vmin:
       value: 0.5
       unit_symbol: m/s
+      unit_id: u:meter_per_second
     minimum_transition_velocity_vt:
       value: 1/10 vmax
   model_level:
@@ -118,6 +120,7 @@ characteristics:
       value: 23
     - model: 42 in / DN1050
       value: 21
+    unit_id: u:meter_per_second
   config_level:
   - attribute: operating_pressure_range
     axis: mount_and_transducer_configuration
@@ -142,6 +145,7 @@ characteristics:
         min: 0
         max: 259
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: qmax_reduction_factor
     axis: transducer_type_and_minimum_operating_pressure
     values:
@@ -157,21 +161,25 @@ characteristics:
         min: -20
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T22 / T32
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T41
       value:
         min: -50
         max: 100
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T200
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: inlet_piping_installation
     axis: meter_type_and_disturbance_severity
     values:

@@ -66,6 +66,7 @@ characteristics:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     climatic_environment:
       value: Non-condensing (closed)
     electromagnetic_environment:
@@ -75,11 +76,13 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_type:
       value: AC
     power_supply_frequency:
       value: 50
       unit_symbol: Hz
+      unit_id: u:hertz
     accuracy_class:
       value: XIII
       footnote_markers:
@@ -87,6 +90,7 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5.5
       unit_symbol: V
+      unit_id: u:volt
     interfaces:
       value: RS 232, USB, Ethernet
     software_version:
@@ -102,49 +106,61 @@ characteristics:
     - model: Ultra Light Weight
       value: 400
       unit_symbol: g
+      unit_id: u:gram
     - model: Lightweight
       value:
         min:
         max: 1500
       unit_symbol: g
+      unit_id: u:gram
     - model: Mid-Range
       value:
         min:
         max: 6000
       unit_symbol: g
+      unit_id: u:gram
     - model: Heavy Range
       value: 12
       unit_symbol: kg
+      unit_id: u:kilogram
     - model: Super Heavy Range
       value: 10/20/50
       unit_symbol: kg
+      unit_id: u:kilogram
     - model: CW3s Range
       value: 3000
       unit_symbol: g
+      unit_id: u:gram
   - attribute: minimum_capacity
     values:
     - model: Ultra Light Weight
       value: 15
       unit_symbol: g
+      unit_id: u:gram
     - model: Lightweight
       value:
         min: 50
         max:
       unit_symbol: g
+      unit_id: u:gram
     - model: Mid-Range
       value:
         min: 50
         max:
       unit_symbol: g
+      unit_id: u:gram
     - model: Heavy Range
       value: 500
       unit_symbol: g
+      unit_id: u:gram
     - model: Super Heavy Range
       value: 3
       unit_symbol: kg
+      unit_id: u:kilogram
     - model: CW3s Range
       value: 200
       unit_symbol: g
+      unit_id: u:gram
   - attribute: scale_interval
     unit_symbol: g
     values:
@@ -160,6 +176,7 @@ characteristics:
       value: 5/10/20
     - model: CW3s Range
       value: 1
+    unit_id: u:gram
   - attribute: number_of_scale_intervals
     values:
     - model: Ultra Light Weight
@@ -223,6 +240,7 @@ characteristics:
       value: 150
     - model: CW3s Range
       value: 20
+    unit_id: u:kilogram
   config_level:
   - attribute: maximum_operating_speed
     axis: instrument variant and pack weight range
@@ -265,11 +283,13 @@ characteristics:
         min: 0.5
         max:
       unit_symbol: g
+      unit_id: u:gram
     - condition: Lightweight or Mid-Range, 200 g to Max
       value:
         min: 1
         max:
       unit_symbol: g
+      unit_id: u:gram
 recommendation:
   id: R51
   edition: 2006

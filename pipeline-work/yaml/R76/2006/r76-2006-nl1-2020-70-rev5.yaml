@@ -58,6 +58,7 @@ characteristics:
         max: 40
       unit_symbol: "°C"
       footnote_markers: []
+      unit_id: u:degree_Celsius
     humidity:
       value: non-condensing
       unit_symbol:
@@ -74,6 +75,7 @@ characteristics:
       value: 12
       unit_symbol: V
       footnote_markers: []
+      unit_id: u:volt
     load_cell_power_supply_type:
       value: DC
       unit_symbol:
@@ -174,15 +176,19 @@ characteristics:
     - condition: Analog load cells without ISB (5 V excitation)
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: Analog load cells with ISB (1.5 V excitation)
       value: 1.5
       unit_symbol: V
+      unit_id: u:volt
     - condition: Analog load cells with ISB (2.3 V excitation)
       value: 2.3
       unit_symbol: V
+      unit_id: u:volt
     - condition: Analog load cells with ISB (3.9 V excitation)
       value: 3.9
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_signal_input_voltage
     axis: analog load cell connection
     values:
@@ -204,24 +210,30 @@ characteristics:
     - condition: Analog load cells without ISB (5 V excitation)
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: Analog load cells with ISB (1.5 V excitation)
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: Analog load cells with ISB (2.3 V excitation)
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: Analog load cells with ISB (3.9 V excitation)
       value: 350
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: 12-wire connection (ISB shall not be used)
       value: 86
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: analog load cell connection
     values:
     - condition: Analog load cells (all configurations)
       value: 1245
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: load_cell_interface
     axis: analog load cell connection
     values:
@@ -250,6 +262,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: instrument version
     values:
@@ -258,6 +271,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: power_supply_voltage_dc
     axis: instrument version
     values:
@@ -266,6 +280,7 @@ characteristics:
         min: 20
         max: 28
       unit_symbol: V
+      unit_id: u:volt
 recommendation:
   id: R76-1
   edition: 2006

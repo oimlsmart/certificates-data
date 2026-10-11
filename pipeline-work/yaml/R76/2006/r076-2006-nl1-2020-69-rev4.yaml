@@ -58,7 +58,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     humidity:
       value: non-condensing
       unit_symbol:
@@ -80,7 +80,7 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_ac_applicability:
       value: only for Harsh version
       unit_symbol:
@@ -90,7 +90,7 @@ characteristics:
         min: 20
         max: 28
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_voltage_dc_applicability:
       value: for all versions
       unit_symbol:
@@ -100,7 +100,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     power_supply_type:
       value: AC / DC
       unit_symbol:
@@ -229,9 +229,11 @@ characteristics:
     - condition: digital_CANbus
       value: 12
       unit_symbol: V
+      unit_id: u:volt
     - condition: digital_SICSPro
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: load_cell_power_supply_type
     axis: load_cell_connection
     values:
@@ -298,45 +300,57 @@ characteristics:
     - condition: analog
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     - condition: analog_ISB_1.5V
       value: 1.5
       unit_symbol: V
+      unit_id: u:volt
     - condition: analog_ISB_2.3V
       value: 2.3
       unit_symbol: V
+      unit_id: u:volt
     - condition: analog_ISB_3.9V
       value: 3.9
       unit_symbol: V
+      unit_id: u:volt
   - attribute: minimum_load_cell_resistance
     axis: load_cell_connection
     values:
     - condition: analog
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_1.5V
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_2.3V
       value: 87
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_3.9V
       value: 350
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: maximum_load_cell_resistance
     axis: load_cell_connection
     values:
     - condition: analog
       value: 1245
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_1.5V
       value: 1245
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_2.3V
       value: 1245
       unit_symbol: Ω
+      unit_id: u:ohm
     - condition: analog_ISB_3.9V
       value: 1245
       unit_symbol: Ω
+      unit_id: u:ohm
   - attribute: load_cell_connection
     axis: load_cell_connection
     values:

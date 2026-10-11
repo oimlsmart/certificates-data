@@ -87,7 +87,7 @@ characteristics:
         min: -40
         max: 70
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     designed_for:
       value: condensing humidity
       unit_symbol:
@@ -101,7 +101,7 @@ characteristics:
         min: 10
         max: 36
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -113,7 +113,7 @@ characteristics:
     minimum_velocity_vmin:
       value: 0.5
       unit_symbol: m/s
-      unit_id:
+      unit_id: u:meter_per_second
     minimum_measuring_range:
       value: '1:20'
       unit_symbol:
@@ -127,21 +127,25 @@ characteristics:
         min: -20
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T22, T32
       value:
         min: -40
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T41
       value:
         min: -50
         max: 100
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: T200
       value:
         min: -50
         max: 125
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: operating_pressure_range
     axis: mount type / transducer type / meter size
     values:
@@ -165,6 +169,7 @@ characteristics:
         min: 0
         max: 259
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: qmax_reduction
     axis: minimum operating pressure / transducer type
     values:
@@ -204,6 +209,7 @@ characteristics:
       value: 23
     - condition: 42 inch (DN1050), types 3414/3415/3416/3417/3418
       value: 21
+    unit_id: u:meter_per_second
   - attribute: inlet_piping_and_flow_straightener
     axis: meter type / disturbance condition
     values:

@@ -70,7 +70,7 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     water_temperature_class:
       value: T50
       unit_symbol:
@@ -80,7 +80,7 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure_map:
       value: 1.6
       unit_symbol: MPa
@@ -110,7 +110,7 @@ characteristics:
         min: 2.7
         max: 3.7
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     flow_sensor_tube_material:
       value: polymer or stainless steel
       unit_symbol:
@@ -249,6 +249,7 @@ characteristics:
       value: 999999.999
     - model: DN50 (2″)
       value: 999999.999
+    unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -266,6 +267,7 @@ characteristics:
       value: 1.0e-05
     - model: DN50 (2″)
       value: 1.0e-05
+    unit_id: u:cubic_meter
   config_level:
   - attribute: pressure_loss_class
     axis: meter_size
@@ -280,9 +282,11 @@ characteristics:
     - condition: DN15
       value: 0.63
       unit_symbol: bar
+      unit_id: u:bar
     - condition: DN20 and larger
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
 recommendation:
   id: R49-1
   edition: 2013

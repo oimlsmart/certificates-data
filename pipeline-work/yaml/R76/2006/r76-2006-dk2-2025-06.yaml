@@ -84,6 +84,7 @@ characteristics:
     excitation_voltage:
       value: 5
       unit_symbol: V
+      unit_id: u:volt
     excitation_supply_type:
       value: DC
       unit_symbol:
@@ -93,9 +94,11 @@ characteristics:
     minimum_input_impedance:
       value: 43
       unit_symbol: Ω
+      unit_id: u:ohm
     maximum_input_impedance:
       value: 1100
       unit_symbol: Ω
+      unit_id: u:ohm
     maximum_cable_length_between_indicator_and_junction_box:
       value: 734
       unit_symbol: m/mm²
@@ -104,16 +107,19 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     power_supply_frequency:
       value:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
     power_supply_type:
       value: AC
       unit_symbol:
@@ -174,6 +180,7 @@ characteristics:
       value:
         min: 5
         max: 80
+    unit_id: u:kilogram
   - attribute: bsq_verification_scale_interval_min
     unit_symbol: g
     values:
@@ -197,6 +204,7 @@ characteristics:
       value:
         min: 2
         max:
+    unit_id: u:gram
   - attribute: bsq_load_cell_emax
     unit_symbol: kg
     values:
@@ -210,6 +218,7 @@ characteristics:
       value: 38
     - model: BSQ-1214-080
       value: 110
+    unit_id: u:kilogram
   - attribute: bsq_temperature_range
     unit_symbol: "°C"
     values:
@@ -233,6 +242,7 @@ characteristics:
       value:
         min: -10
         max: 40
+    unit_id: u:degree_Celsius
   config_level:
   - attribute: permissible_instrument_configuration
     axis: connected_load_receptors

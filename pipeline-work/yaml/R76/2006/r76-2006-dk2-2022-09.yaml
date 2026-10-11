@@ -76,17 +76,17 @@ characteristics:
         min: 6
         max: 30
       unit_symbol: kg
-      unit_id:
+      unit_id: u:kilogram
     minimum_capacity:
       value: 20
       unit_symbol: e
-      unit_id:
+      unit_id: u:atomic_unit_of_charge
     verification_scale_interval:
       value:
         min: 1
         max:
       unit_symbol: g
-      unit_id:
+      unit_id: u:gram
     maximum_tare_effect:
       value: "≤ -Max for single-interval and multi-range; ≤ -Max1 for multi-interval"
       unit_symbol:
@@ -114,13 +114,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value:
         min: 100
         max: 240
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: AC
       unit_symbol:
@@ -130,7 +130,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
-      unit_id:
+      unit_id: u:hertz
     software_version:
       value: 0.2.05
       unit_symbol:
@@ -187,6 +187,7 @@ characteristics:
       value: 15
     - model: QP50-PC
       value: 13
+    unit_id: u:inch
   - attribute: separate_customer_display_size
     unit_symbol: in
     values:
@@ -210,6 +211,7 @@ characteristics:
       value: 15
     - model: QP50-PC
       value: 13
+    unit_id: u:inch
   - attribute: built_in_barcode_scanner
     unit_symbol:
     values:
@@ -251,12 +253,15 @@ characteristics:
         min: 100
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC input via external AC/DC adapter for 100-240 VAC, 50/60 Hz (Lxx & Q50 models)
       value: 12 or 24
       unit_symbol: V
+      unit_id: u:volt
     - condition: Optional Li battery
       value: 7.4
       unit_symbol: V
+      unit_id: u:volt
   - attribute: battery_capacity
     axis: power_source
     values:

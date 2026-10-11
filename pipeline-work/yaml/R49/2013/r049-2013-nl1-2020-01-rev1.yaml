@@ -82,12 +82,14 @@ characteristics:
         min: 0.1
         max: 50
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
+      unit_id: u:bar
     orientation:
       value: All positions (horizontal, vertical, or diagonal)
       unit_symbol:
@@ -109,6 +111,7 @@ characteristics:
     indicating_range_max:
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   model_level:
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
@@ -185,14 +188,17 @@ characteristics:
         min: 85
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC powered (renewable energy)
       value:
         min: 6
         max: 32
       unit_symbol: V
+      unit_id: u:volt
     - condition: replaceable battery
       value: 3.6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_option
     values:
@@ -201,6 +207,7 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: battery_operating_voltage_range
     axis: power_supply_option
     values:
@@ -209,6 +216,7 @@ characteristics:
         min: 2.9
         max: 3.6
       unit_symbol: V
+      unit_id: u:volt
   - attribute: pressure_loss_class
     axis: meter_size
     values:
@@ -222,9 +230,11 @@ characteristics:
     - condition: DN40 and DN50
       value: 0.4
       unit_symbol: bar
+      unit_id: u:bar
     - condition: larger than DN50
       value: 0.63
       unit_symbol: bar
+      unit_id: u:bar
   - attribute: minimum_flow_rate_q1
     axis: power_supply_option / meter_size / accuracy_class
     values:
@@ -640,72 +650,94 @@ characteristics:
     - condition: AC mains, DN40/DN50/DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN80
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN100/DN125/DN150/DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN250
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN300/DN350/DN400/DN450/DN500/DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN40/DN50
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN65
       value: 99999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN80/DN100/DN125/DN150
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN200
       value: 999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN250/DN300/DN350/DN400/DN450
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN500/DN600
       value: 9999999
       unit_symbol: m³
+      unit_id: u:cubic_meter
   - attribute: verification_scale_interval_max
     axis: power_supply_option / meter_size
     values:
     - condition: AC mains, DN40/DN50/DN65
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN80
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN100/DN125/DN150/DN200
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN250
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: AC mains, DN300/DN350/DN400/DN450/DN500/DN600
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN40/DN50
       value: 0.0001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN65
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN80/DN100/DN125/DN150
       value: 0.001
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN200
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN250/DN300/DN350/DN400/DN450
       value: 0.01
       unit_symbol: m³
+      unit_id: u:cubic_meter
     - condition: Battery/renewable, DN500/DN600
       value: 0.1
       unit_symbol: m³
+      unit_id: u:cubic_meter
 model_family:
   family_name: AquaMaster4
   models:
@@ -858,6 +890,7 @@ components:
         min: 5
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 - role: flow sensor
   type_designations:
   - FET4*
@@ -871,6 +904,7 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 matrix_tables:
 - name: Table 2 - General characteristics of the family of instruments (reduce bore, AC mains powered)
   columns:

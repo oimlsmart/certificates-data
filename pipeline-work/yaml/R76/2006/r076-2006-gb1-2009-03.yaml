@@ -53,11 +53,11 @@ characteristics:
     minimum_load_cell_impedance:
       value: 29
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     maximum_load_cell_impedance:
       value: 5000
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.6
       unit_symbol: μV
@@ -75,7 +75,7 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     load_cell_cable_type:
       value: 6-wire shielded
     maximum_load_cell_cable_length:
@@ -103,7 +103,7 @@ characteristics:
         min: 0
         max: 10
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     analog_output_current:
       value:
         min: 0
@@ -137,9 +137,11 @@ characteristics:
         min: 110
         max: 240
       unit_symbol: V
+      unit_id: u:volt
     - condition: DC
       value: 12
       unit_symbol: V
+      unit_id: u:volt
   - attribute: power_supply_frequency
     axis: power_supply_type
     values:
@@ -148,17 +150,20 @@ characteristics:
         min: 50
         max: 60
       unit_symbol: Hz
+      unit_id: u:hertz
   - attribute: load_cell_excitation_voltage
     axis: load_cell_type
     values:
     - condition: analog load cells
       value: 10
       unit_symbol: V
+      unit_id: u:volt
     - condition: digital load cells
       value:
         min: 10
         max: 18
       unit_symbol: V
+      unit_id: u:volt
   - attribute: apportionment_factor_pind
     axis: load_cell_type
     values:

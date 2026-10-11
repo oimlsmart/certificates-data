@@ -62,11 +62,11 @@ characteristics:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 24
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -151,6 +151,7 @@ characteristics:
       value: 5
     - model: DN600
       value: 10
+    unit_id: u:cubic_meter
   - attribute: minimum_reynolds_number
     unit_symbol:
     values:
@@ -206,41 +207,51 @@ characteristics:
         min: -200
         max: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: Carbon steel housing
       value:
         min: -40
         max: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: minimum_product_temperature
     axis: transducer_version
     values:
     - condition: UFS 5-R-EX (Standard, STD)
       value: -40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-LT-Ex (Low Temperature, LT)
       value: -200
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HT-Ex (High Temperature, HT)
       value: -40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
       value: -40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_product_temperature
     axis: transducer_version
     values:
     - condition: UFS 5-R-EX (Standard, STD)
       value: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-LT-Ex (Low Temperature, LT)
       value: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HT-Ex (High Temperature, HT)
       value: 250
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
       value: 120
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
   - attribute: maximum_pressure
     axis: transducer_version
     values:
@@ -270,15 +281,19 @@ characteristics:
     - condition: UFS 5-R-EX (Standard, STD)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-LT-Ex (Low Temperature, LT)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-HT-Ex (High Temperature, HT)
       value: 230
       unit_symbol: cSt
+      unit_id: u:centistokes
     - condition: UFS 5-R-HV-Ex (High Viscosity, HV)
       value: 1500
       unit_symbol: cSt
+      unit_id: u:centistokes
 recommendation:
   id: R117-1
   edition: 2007
@@ -352,7 +367,7 @@ components:
         min: -25
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     intended_products:
       value: liquid petroleum and related products, liquids food and chemical products in liquid state
       unit_symbol:
@@ -401,7 +416,7 @@ components:
         min: -40
         max: 55
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     output_signals:
       value: Frequency output; KROHNE serial protocol using MODBUS over RS485 or TCP/IP
       unit_symbol:

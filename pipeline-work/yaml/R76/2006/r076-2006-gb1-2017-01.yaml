@@ -61,7 +61,7 @@ characteristics:
     power_supply_voltage:
       value: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     power_supply_type:
       value: DC via mains adapter
@@ -71,17 +71,17 @@ characteristics:
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
     minimum_load_cell_impedance:
       value: 87.5
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
       footnote_markers: []
     minimum_input_voltage_per_verification_scale_interval:
       value: 2
@@ -256,6 +256,7 @@ characteristics:
       value: 1000
     - model: CI-2001x/2BFS1212
       value: 2000
+    unit_id: u:kilogram
   - attribute: verification_scale_interval_e
     unit_symbol: kg
     values:
@@ -337,6 +338,7 @@ characteristics:
       value: 0.5
     - model: CI-2001x/2BFS1212
       value: 1
+    unit_id: u:kilogram
   - attribute: dead_load_of_load_receptor
     unit_symbol: kg
     values:
@@ -418,6 +420,7 @@ characteristics:
       value: 28
     - model: CI-2001x/2BFS1212
       value: 28
+    unit_id: u:kilogram
   - attribute: load_cell_type_cas
     unit_symbol:
     values:
@@ -580,6 +583,7 @@ characteristics:
       value: 500
     - model: CI-2001x/2BFS1212
       value: 1000
+    unit_id: u:kilogram
   - attribute: number_of_load_cells
     unit_symbol:
     values:
@@ -685,11 +689,13 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
     - condition: column 2
       value:
         min: 0
         max: 40
       unit_symbol: "°C"
+      unit_id: u:degree_Celsius
 recommendation:
   id: R76
   edition: 2006
