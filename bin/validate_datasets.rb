@@ -72,6 +72,9 @@ h = validate_jsonl("#{REPO}/datasets/history/timelines.jsonl",
 o = validate_jsonl("#{REPO}/datasets/organizations/organizations.jsonl",
                    "#{REPO}/datasets/organizations/organizations.schema.json", "organizations", errors)
 
+
+r = validate_jsonl("#{REPO}/datasets/certificates/records.jsonl",
+                   "#{REPO}/datasets/certificates/records.schema.json", "fused-records", errors)
 # join integrity: every manifest row appears in the history dataset exactly once
 manifest_ids = File.readlines("#{REPO}/manifest.jsonl").map { |l| JSON.parse(l)["id"] }.sort
 history_ids = File.readlines("#{REPO}/datasets/history/timelines.jsonl").map { |l| JSON.parse(l)["cert_id"] }.sort
@@ -83,7 +86,7 @@ require "set"
 nums = Set.new(File.readlines("#{REPO}/manifest.jsonl").map { |l| JSON.parse(l)["num"] })
 
 if errors.empty?
-  puts "VALIDATION OK: #{h} history rows, #{o} organization records, joins intact"
+  puts "VALIDATION OK: #{h} history rows, #{o} organization records, #{r} fused records, joins intact"
 else
   puts "VALIDATION FAILED: #{errors.size} error(s)"
   errors.first(20).each { |e| puts "  #{e}" }
