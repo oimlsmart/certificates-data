@@ -1,97 +1,72 @@
-# OIML-CS Certificates
+# certificates-data
 
-A Python pipeline for downloading OIML-CS (OIML Certification System)
-certificates, OCR'ing them with GLM-OCR, parsing into structured YAML,
-and synthesizing per-Recommendation schemas.
+The OIML-CS domain's data home: the complete certificate corpus of the
+OIML Certification System — the register, every published document, the
+digitalized tiers, and the validated datasets derived from them. The
+certificates site (oimlsmart/certificates), the retrieval service
+(oimlsmart/ai, serving [ommisa.org](https://www.ommisa.org)), and the
+signed-certificate stack (oimlsmart/cnml) are all consumers; none of them
+owns a fact. Every fact here traces to a committed raw file, and nothing
+on disk ever needs a model call again.
 
-## What this project does
+## The tiers
 
-1. **Downloads** all OIML-CS certificates (~6,500 PDFs, ~3 GB) from
-   `oiml.org` via an undocumented JSON API.
-2. **Organizes** them on disk by Recommendation (R-number) and edition
-   year, mirroring the OIML Recommendation structure.
-3. **OCRs** a stratified sample of up to 100 certificates per
-   Recommendation's latest edition using GLM-OCR (z.ai layout_parsing API).
-4. **Parses** the OCR markdown into structured per-cert YAML files.
-5. **Synthesizes** a per-Recommendation YAML schema from the parsed data.
+| Tier | Location | What it holds |
+| --- | --- | --- |
+| Register | `manifest.jsonl` | one row per certificate as the OIML-CS database states it (6,556 rows) |
+| Raw PDFs | `certificates/RXXX/YYYY/` | every published document (5,163 files, ~2.9 GB) |
+| Vision raws | `ocr_raw/` | the **verbatim** glm-5.3-flash vision response per PDF — model, usage, full transcription (never re-run; this is source) |
+| Digitalized | `ocr_md/` | the markdown tier (headers + body), incl. text-layer and Workers-AI recoveries |
+| Structured records | `pipeline-work/yaml/` | the layered per-certificate record (5,166 records — every document-bearing certificate) |
+| Extraction raws | `extract_raw/`, `reconcile_raw/` | verbatim responses of the structured and adjudication stages |
 
-## Project layout
+## The datasets (CI-validated on every change)
 
-```
-oiml-cs-certificates/
-├── oiml_cs/                # Library: domain-driven, OOP, generic
-│   ├── domain/             # Value objects: RNumber, EditionYear, Issuer, Certificate
-│   ├── infrastructure/     # ManifestRepository (single source of truth)
-│   ├── ocr/                # OcrSource ABC + GlmOcrSource + PymupdfOcrSource
-│   ├── parsing/            # Markdown → ParsedCertificate (table-driven, R-agnostic)
-│   ├── sampling/           # StratifiedSampler
-│   ├── serialization/      # CertificateYamlSerializer
-│   ├── schema/             # SchemaSynthesizer + SchemaRenderer
-│   └── use_cases/          # ProcessRecommendation (orchestrator)
-├── scripts/                # CLI entry points
-│   ├── process_all.py      # all R-numbers
-│   ├── process_one.py      # single R-number
-│   ├── ocr_with_glm.rb     # standalone Ruby GLM-OCR driver (legacy)
-│   └── download_certs.py   # (planned) wrap download_oiml_certs.py
-├── spec/                   # pytest specs (no doubles, real fixtures)
-├── certificates/           # Downloaded PDFs, organized as R<NN>/<edition>/<file>.pdf
-├── ocr_md/                 # GLM-OCR markdown, mirrored layout
-├── yaml/                   # Parsed per-cert YAML, mirrored layout
-├── schema/                 # Per-R schema YAML + JSON stats
-├── manifest.jsonl          # Authoritative index (6,476 rows)
-├── TODO.refactor/          # Architectural plan and status (11 docs)
-└── _archive/               # Superseded scripts (kept for history)
-```
+- `datasets/certificates/records.jsonl` — **the fused record**: the
+  register's own fields + the document's structured content + the
+  reconciliation of the two, disagreements adjudicated with committed
+  evidence. The agent-facing contract for this dataset:
+  `oimlsmart/ai`'s `docs/certificates-dataset-prompt.md`.
+- `datasets/history/timelines.jsonl` + `changes.jsonl` — per-certificate
+  timelines (register observation + document-stated dates, revision
+  tables, supersession) and the change log between snapshots, each record
+  citing the register's own certificate page.
+- `datasets/organizations/` — issuing authorities and holders resolved by
+  stated normalization rules; variants and open questions carry evidence.
+- `datasets/reconciliation.jsonl` + `adjudications.jsonl` — the two-surface
+  comparison and its model-adjudicated verdicts.
+- `datasets/DENOMINATORS.md`, `datasets/QUALITY.md` — generated ledgers:
+  coverage and quality, computed from the tiers, never hand-typed.
+- `stats/R*.yaml` — per-Recommendation extraction statistics.
+- `snapshots/YYYYMMDD/` — the register snapshot lineage (the weekly scrape
+  appends; `bin/diff_manifests.rb` turns consecutive snapshots into change
+  records).
 
-## Quick start
+## The cycle
 
-```sh
-# One-time: download all PDFs (~3 GB)
-python3 download_oiml_certs.py
+The weekly scrape (`.github/workflows/scrape.yml`, Mondays 03:17 UTC)
+snapshots the current register, re-reads the OIML-CS database, downloads
+new documents, and commits. New certificates flow through the extraction
+pipeline (`bin/`), the datasets regenerate deterministically, and CI
+(`.github/workflows/validate.yml`) validates everything against the
+schemas before it merges. History accumulates; nothing is overwritten.
 
-# OCR + parse + schema for all R-numbers' latest edition
-python3 scripts/process_all.py
+## The laws
 
-# Or just one R
-python3 scripts/process_one.py --r R60
-```
+- Never delete a source file. Extraction adds; provenance files
+  (`.broken`, `.attempt`, `.stale`, `.preunblock`) preserve every prior
+  state beside its successor.
+- The raw tiers are the permanent source: a committed raw response is
+  never re-run through a model; everything downstream derives from it.
+- Absence is stated honestly (register-only rows, quarantined register
+  defects) — never improvised.
+- Model calls use glm-5.3-flash via z.ai's Anthropic-compatible endpoint
+  (the GLM Coding Plan covers only that path); the estate's Cloudflare
+  Workers AI serves as the second vision provider when the first filters.
 
-Re-running is safe and idempotent: cached OCR responses in `_glm_ocr_cache/`
-are reused, already-OCR'd certs are skipped.
+New-code law: **Ruby only** in `bin/` and new tooling; the Python under
+`oiml_cs/` and `pipeline-work/` is the frozen record of how the corpus was
+built and stays untouched.
 
-## Architecture principles
-
-- **Model-driven.** Domain value objects (`RNumber`, `EditionYear`,
-  `Certificate`) drive everything. Callers consume domain objects, never
-  raw JSON rows.
-- **Open/Closed.** New R-number = just run the pipeline on it; no code
-  changes. The parser is generic — it captures tables as label→value
-  without knowing R-specific fields.
-- **MECE.** Each concern lives in exactly one place: parsing in
-  `oiml_cs/parsing/`, OCR in `oiml_cs/ocr/`, sampling in `oiml_cs/sampling/`,
-  etc.
-- **DRY.** The HTML table extractor is shared by all section parsers.
-  The `_FILE_NAME_RE` regex lives once in `domain/certificate.py`.
-- **No hand-rolled serialization.** Per CLAUDE.md: PyYAML is the framework.
-  Models are plain dataclasses; the serializer reads their fields.
-- **Specs without doubles.** `spec/` uses real manifest data and real
-  GLM-OCR markdown fixtures.
-
-## API keys
-
-GLM-OCR is called via `https://api.z.ai/api/paas/v4/layout_parsing`. The
-key is read from `~/.zai-api-key` (or `Z_AI_API_KEY` env var).
-
-## Cache
-
-`_glm_ocr_cache/<sha>.json` — keyed by SHA256 of (pdf_path, start_page,
-end_page). Cache files written by either the Python `GlmOcrSource` or the
-Ruby `GlmOcr` library are interchangeable.
-
-## Specs
-
-```sh
-python3 -m pytest
-```
-
-54 specs across domain, manifest repo, parser, schema, sampler, serializer.
+See `TODO.planes/` for the programme papers (audit, plans) and `bin/`
+for the pipeline index.
