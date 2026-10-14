@@ -76,6 +76,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_classes:
       value: T30, T50
       unit_symbol:
@@ -126,6 +127,7 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
+    unit_id: u:millimeter
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -153,6 +155,7 @@ characteristics:
       value:
         min: 0.125
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -180,6 +183,7 @@ characteristics:
       value:
         min: 0.2
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -219,6 +223,7 @@ characteristics:
         max: 25.0
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -246,6 +251,7 @@ characteristics:
       value:
         min:
         max: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -298,6 +304,7 @@ characteristics:
       value:
         min: 280
         max: 300
+    unit_id: u:millimeter
   - attribute: connection_screw_thread_size
     unit_symbol:
     values:
@@ -322,11 +329,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

@@ -64,7 +64,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T30, T50, T30/90, T90
       unit_symbol:
@@ -119,6 +119,7 @@ characteristics:
       value: 32
     - model: DN40
       value: 40
+    unit_id: u:millimeter
   - attribute: resolution_of_device_for_rapid_testing
     unit_symbol: pulse/L
     values:
@@ -160,6 +161,7 @@ characteristics:
       value: 160
     - model: DN40
       value: 200
+    unit_id: u:millimeter
   - attribute: connection_type_screw_thread_size
     unit_symbol:
     values:
@@ -201,13 +203,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
   - attribute: minimum_flowrate_q1
     axis: nominal_diameter_and_installation_position
     values:
@@ -216,43 +218,43 @@ characteristics:
         min: 0.0313
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN15, V
       value:
         min: 0.05
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, H
       value:
         min: 0.05
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, V
       value:
         min: 0.08
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN25, H
       value:
         min: 0.0788
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN32, H
       value:
         min: 0.125
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN40, H
       value:
         min: 0.2
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: nominal_diameter_and_installation_position
     values:
@@ -261,43 +263,43 @@ characteristics:
         min: 0.05
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN15, V
       value:
         min: 0.08
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, H
       value:
         min: 0.08
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, V
       value:
         min: 0.128
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN25, H
       value:
         min: 0.126
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN32, H
       value:
         min: 0.2
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN40, H
       value:
         min: 0.32
         max:
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     axis: nominal_diameter_and_installation_position
     values:
@@ -306,7 +308,7 @@ characteristics:
         min:
         max: 2.5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN15, V
@@ -314,7 +316,7 @@ characteristics:
         min:
         max: 2.5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN20, H
@@ -322,7 +324,7 @@ characteristics:
         min:
         max: 4.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN20, V
@@ -330,7 +332,7 @@ characteristics:
         min:
         max: 4.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN25, H
@@ -338,7 +340,7 @@ characteristics:
         min:
         max: 6.3
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN32, H
@@ -346,7 +348,7 @@ characteristics:
         min:
         max: 10.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
     - condition: DN40, H
@@ -354,7 +356,7 @@ characteristics:
         min:
         max: 16.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 1)
   - attribute: overload_flowrate_q4
@@ -365,43 +367,43 @@ characteristics:
         min:
         max: 3.13
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN15, V
       value:
         min:
         max: 3.13
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, H
       value:
         min:
         max: 5.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN20, V
       value:
         min:
         max: 5.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN25, H
       value:
         min:
         max: 7.88
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN32, H
       value:
         min:
         max: 12.5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: DN40, H
       value:
         min:
         max: 20.0
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2006

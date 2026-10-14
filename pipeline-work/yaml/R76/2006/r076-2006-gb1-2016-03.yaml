@@ -84,7 +84,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
@@ -94,13 +94,15 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     fraction_of_maximum_permissible_error_p_ind:
       value: 0.5
       unit_symbol:
@@ -184,20 +186,22 @@ characteristics:
     - condition: ZM510-SD4 standard indicator and 10V EXC analogue load cell interface option card
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     - condition: 5V EXC analogue load cell interface option card
       value: 0.8
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
   - attribute: maximum_preset_tare
     axis: range_configuration
     values:
     - condition: single interval
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     - condition: multi-interval/multi-range
       value: "-Max1"
@@ -210,12 +214,12 @@ characteristics:
     - condition: 6-wire
       value: 143
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
     - condition: 6-wire, limited to 30 m
       value: 196
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
 recommendation:
   id: R76
@@ -249,7 +253,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers: []
 - role: optional_current_loop_card
   type_designations:
@@ -261,7 +265,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers: []
     interfaces:
       value: RS485 / RS422

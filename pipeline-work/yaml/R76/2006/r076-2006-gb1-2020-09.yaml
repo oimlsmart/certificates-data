@@ -101,7 +101,7 @@ characteristics:
     battery_capacity:
       value: 4.0
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
       footnote_markers: []
     battery_chargeable_during_operation:
       value: true
@@ -118,18 +118,21 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 19.5
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     fraction_of_maximum_permitted_error:
       value: 0.5
       unit_symbol:
@@ -138,7 +141,7 @@ characteristics:
     load_cell_cable_maximum_length:
       value: 0.45
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
     load_cell_cable_configuration:
       value: 4-wire
@@ -147,14 +150,14 @@ characteristics:
         min:
         max: 20
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     zero_tracking_range:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     software_identification_number:
       value: V02.xx
@@ -174,6 +177,7 @@ characteristics:
       value:
         min:
         max: 4
+    unit_id: u:percent
   config_level:
   - attribute: maximum_tare_value
     axis: interval configuration

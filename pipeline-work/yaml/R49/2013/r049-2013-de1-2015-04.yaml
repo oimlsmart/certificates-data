@@ -62,7 +62,7 @@ characteristics:
     minimum_straight_length_inlet_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     environmental_class:
       value: B
       unit_symbol:
@@ -99,6 +99,7 @@ characteristics:
       value: 4
     - model: Q3=4_G1_L190
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -116,6 +117,7 @@ characteristics:
       value: 0.01
     - model: Q3=4_G1_L190
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -133,6 +135,7 @@ characteristics:
       value: 0.016
     - model: Q3=4_G1_L190
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -150,6 +153,7 @@ characteristics:
       value: 5
     - model: Q3=4_G1_L190
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_type
     unit_symbol:
     values:
@@ -184,6 +188,7 @@ characteristics:
       value: 130
     - model: Q3=4_G1_L190
       value: 190
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error
     axis: flow_zone_and_water_temperature
@@ -193,16 +198,19 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q < Q2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_admissible_pressure
     axis: pressure_rating
     values:

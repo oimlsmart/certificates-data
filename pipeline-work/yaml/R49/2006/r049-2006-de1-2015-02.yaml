@@ -79,11 +79,12 @@ characteristics:
         min: 110
         max:
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     nominal_diameter:
       value: 15
       unit_symbol: DN
       unit_id:
+      _unit_kind: custom_count
     connection_type:
       value: "≥ G ¾ B"
       unit_symbol:
@@ -109,11 +110,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     climatic_environment:
       value:
         min: 5
@@ -137,18 +138,24 @@ characteristics:
     - model: Q3=1.6 m³/h
       value: 1.6
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - model: Q3=2.5 m³/h
       value: 2.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
     - model: Q3=1.6 m³/h
       value: 2.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - model: Q3=2.5 m³/h
       value: 3.12
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss_class
     unit_symbol:
     values:
@@ -165,156 +172,203 @@ characteristics:
     - condition: Q2 ≤ Q ≤ Q4, water temperature ≤ 30°C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, water temperature > 30°C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q ≤ Q2
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: minimum_flow_rate_q1
     axis: orientation H × model × flow ratio R (Q3/Q1)
     values:
     - condition: Q3=1.6 m³/h, R=40
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=50
       value: 32
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=63
       value: 25
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=80
       value: 20
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=100
       value: 16
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=125
       value: 12.8
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=40
       value: 62
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=50
       value: 50
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=63
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=80
       value: 31
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=100
       value: 25
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=125
       value: 20
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=160
       value: 16
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=200
       value: 12.5
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
   - attribute: transitional_flow_rate_q2
     axis: orientation H × model × flow ratio R (Q3/Q1)
     values:
     - condition: Q3=1.6 m³/h, R=40
       value: 64
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=50
       value: 51
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=63
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=80
       value: 32
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=100
       value: 25.6
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=125
       value: 20.4
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=40
       value: 100
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=50
       value: 80
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=63
       value: 64
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=80
       value: 50
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=100
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=125
       value: 32
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=160
       value: 25.6
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=200
       value: 20
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
   - attribute: minimum_flow_rate_q1
     axis: orientation V × model × flow ratio R (Q3/Q1)
     values:
     - condition: Q3=1.6 m³/h, R=25
       value: 64
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=31.5
       value: 50
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=40
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=25
       value: 100
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=31.5
       value: 80
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=40
       value: 62
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=50
       value: 50
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=63
       value: 40
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
   - attribute: transitional_flow_rate_q2
     axis: orientation V × model × flow ratio R (Q3/Q1)
     values:
     - condition: Q3=1.6 m³/h, R=25
       value: 102
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=31.5
       value: 81
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=1.6 m³/h, R=40
       value: 64
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=25
       value: 160
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=31.5
       value: 127
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=40
       value: 100
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=50
       value: 80
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
     - condition: Q3=2.5 m³/h, R=63
       value: 63
       unit_symbol: l/h
+      unit_id: u:liter_per_hour
 recommendation:
   id: R49
   edition: 2006

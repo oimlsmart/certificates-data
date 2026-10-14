@@ -77,7 +77,8 @@ characteristics:
     maximum_product_viscosity:
       value: 20
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"
@@ -118,6 +119,7 @@ characteristics:
       value: 150
     - model: M(S)120-DN200
       value: 200
+    _unit_kind: custom_count
   - attribute: cyclic_volume
     unit_symbol: L
     values:
@@ -153,6 +155,7 @@ characteristics:
       value: 3785
     - model: M(S)120-DN200
       value: 4545
+    unit_id: u:liter_per_minute
   - attribute: minimum_measurable_quantity_mmq
     unit_symbol: L
     values:
@@ -233,54 +236,54 @@ characteristics:
     - condition: M(S)7
       value: 50
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)15
       value: 100
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)40-DN80
       value: 170
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)40-DN100
       value: 170
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)75-DN100, accuracy class 0.3 (H)
       value: 540
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)75-DN100, accuracy class 0.5 (L)
       value: 340
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)120-DN150
       value: 760
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: M(S)120-DN200
       value: 455
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
   - attribute: maximum_pressure_pmax
     axis: pressure containing sphere variant
     values:
     - condition: MS
       value: 1896
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
     - condition: MSAA
       value: 1965
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
     - condition: MSB
       value: 5102
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
     - condition: MSC
       value: 10204
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
 recommendation:
   id: R117-1
   edition: 2007

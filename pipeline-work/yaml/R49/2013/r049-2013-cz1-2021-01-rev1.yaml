@@ -70,7 +70,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     q2_q1_ratio:
       value: 1.6
       unit_symbol:
@@ -102,7 +102,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     installation_orientation:
       value: arbitrary orientation
       unit_symbol:
@@ -114,7 +114,7 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     inlet_straight_length_class:
       value: U0
       unit_symbol:
@@ -122,7 +122,7 @@ characteristics:
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     outlet_straight_length_class:
       value: D0
       unit_symbol:
@@ -200,6 +200,7 @@ characteristics:
     - model: DN300
       value: 300
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -297,11 +298,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

@@ -94,6 +94,7 @@ characteristics:
     mpe_lower_flowrates_zone_q1_to_q2:
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     battery_type:
       value: non-replaceable lithium battery
     battery_voltage:
@@ -153,6 +154,7 @@ characteristics:
       value: 50
     - model: DN50-R400
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -192,6 +194,7 @@ characteristics:
       value: 25
     - model: DN50-R400
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -231,6 +234,7 @@ characteristics:
       value: 0.0794
     - model: DN50-R400
       value: 0.0625
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -270,6 +274,7 @@ characteristics:
       value: 0.127
     - model: DN50-R400
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -309,6 +314,7 @@ characteristics:
       value: 31.25
     - model: DN50-R400
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol: R
     values:
@@ -427,6 +433,7 @@ characteristics:
       value: 294/300
     - model: DN50-R400
       value: 294/300
+    unit_id: u:millimeter
   - attribute: calculator_capacity
     unit_symbol: m³
     values:
@@ -525,9 +532,11 @@ characteristics:
     - condition: T ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: T > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: reverse_flow_measurement
     axis: software_version
     values:

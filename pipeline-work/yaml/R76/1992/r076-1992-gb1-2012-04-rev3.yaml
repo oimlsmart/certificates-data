@@ -61,12 +61,12 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_preset_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_load_cell_impedance:
       value: 1100
@@ -76,13 +76,15 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     fraction_of_maximum_permitted_error_pind:
       value: 0.5
       unit_symbol:
@@ -212,6 +214,8 @@ characteristics:
     - model: ZM305
       value: 0.5
       footnote_markers: []
+    unit_id: u:volt
+    prefix: p:micro
   - attribute: load_cell_cable_maximum_length_6_wire
     unit_symbol: m/mm²
     values:
@@ -227,6 +231,7 @@ characteristics:
     - model: ZM305
       value: 211
       footnote_markers: []
+    unit_id: u:meter_per_square_millimeter
   - attribute: load_cell_cable_maximum_length_6_wire_limit
     unit_symbol: m
     values:
@@ -376,7 +381,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers: []
 - role: optional current loop card
   type_designations:
@@ -388,7 +393,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers: []
     serial_interfaces:
       value: RS485 / RS422

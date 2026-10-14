@@ -98,6 +98,7 @@ characteristics:
       value: 4
     - model: Q3=4 any Q1=0.0127
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -113,6 +114,7 @@ characteristics:
       value: 5
     - model: Q3=4 any Q1=0.0127
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: installation_orientation
     unit_symbol:
     values:
@@ -143,6 +145,7 @@ characteristics:
       value: 0.1
     - model: Q3=4 any Q1=0.0127
       value: 0.0127
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
     values:
@@ -158,6 +161,7 @@ characteristics:
       value: 0.16
     - model: Q3=4 any Q1=0.0127
       value: 0.2
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -188,6 +192,7 @@ characteristics:
       value: 165 or 190
     - model: Q3=4 any Q1=0.0127
       value: 165 or 190
+    unit_id: u:millimeter
   - attribute: nominal_diameter
     unit_symbol: DN
     values:
@@ -203,6 +208,7 @@ characteristics:
       value: 20
     - model: Q3=4 any Q1=0.0127
       value: 20
+    _unit_kind: custom_count
   - attribute: connection_type
     unit_symbol:
     values:
@@ -226,14 +232,17 @@ characteristics:
       value: 2
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, water temperature > 30°C
       value: 3
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: Q1 ≤ Q ≤ Q2
       value: 5
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2006

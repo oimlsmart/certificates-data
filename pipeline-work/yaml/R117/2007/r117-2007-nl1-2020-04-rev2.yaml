@@ -83,7 +83,8 @@ characteristics:
         min: 0.1
         max: 1500
       unit_symbol: mm²/s
-      unit_id:
+      unit_id: u:meter_squared_per_second
+      prefix: p:milli
   model_level:
   - attribute: minimum_flow_rate
     unit_symbol: m³/h
@@ -108,6 +109,7 @@ characteristics:
       value: 150
     - model: DN600
       value: 150
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flow_rate
     unit_symbol: m³/h
     values:
@@ -131,6 +133,7 @@ characteristics:
       value: 7000
     - model: DN600
       value: 10000
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_measured_quantity
     unit_symbol: m³
     values:
@@ -201,6 +204,7 @@ characteristics:
       value: 500
     - model: DN600
       value: 600
+    unit_id: u:millimeter
   config_level:
   - attribute: product_temperature_range
     axis: housing_material
@@ -250,15 +254,19 @@ characteristics:
     - condition: UFS 5-R-EX (STD)
       value: 160
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: UFS 5-R-LT-Ex (LT)
       value: 160
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: UFS 5-R-HT-Ex (HT)
       value: 135
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: UFS 5-R-HV-Ex (HV)
       value: 160
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: maximum_viscosity
     axis: transducer_version
     values:
@@ -371,7 +379,8 @@ components:
         min: 0.1
         max: 1500
       unit_symbol: mm²/s
-      unit_id:
+      unit_id: u:meter_squared_per_second
+      prefix: p:milli
     number_of_sound_paths:
       value: 8
       unit_symbol:
@@ -379,13 +388,14 @@ components:
     sound_frequency:
       value: 1; 2
       unit_symbol: MHz
-      unit_id:
+      unit_id: u:hertz
+      prefix: p:mega
     path_angle:
       value:
         min: 35
         max: 55
       unit_symbol: "°"
-      unit_id:
+      unit_id: u:degree
 - role: Ultrasonic transmitter/receiver (transducer of the measurement sensor)
   type_designations:
   - UFS 5-R-EX

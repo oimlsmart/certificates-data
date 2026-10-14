@@ -98,7 +98,7 @@ characteristics:
     battery_capacity:
       value: 3.6
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
     max_number_of_scale_intervals:
       value: 6000
       unit_symbol:
@@ -124,15 +124,18 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.5
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 19.5
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permitted_errors_pi:
       value: 0.5
       unit_symbol:
@@ -142,7 +145,7 @@ characteristics:
         min:
         max: 20
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     initial_zero_setting_range_reference:
       value: Max
       unit_symbol:
@@ -152,7 +155,7 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     semi_automatic_zero_setting_range_reference:
       value: Max
       unit_symbol:
@@ -162,7 +165,7 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     zero_tracking_range_reference:
       value: Max
       unit_symbol:
@@ -349,6 +352,7 @@ characteristics:
     - condition: 4-wire (indicator to load cell junction box)
       value: 0.45
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: maximum_capacity
     axis: capacity_configuration (ZEMIC L6D fitted)
     values:

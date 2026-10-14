@@ -56,11 +56,11 @@ characteristics:
     permanent_flowrate_q3:
       value: 4
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     overload_flowrate_q4:
       value: 5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     ratio_q2_q1:
       value: 1.6
       unit_symbol:
@@ -72,15 +72,15 @@ characteristics:
     construction_length:
       value: 190
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     overall_width:
       value: 102
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     overall_height:
       value: 147
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     installation_orientation:
       value: H/V
       unit_symbol:
@@ -114,7 +114,7 @@ characteristics:
     maximum_permissible_error_lower_flowrates:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_range:
       value: 1.0e-06
       unit_symbol: m³
@@ -199,6 +199,7 @@ characteristics:
       value: 0.0126
     - model: R400
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -224,6 +225,7 @@ characteristics:
       value: 0.005
     - model: R400
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -256,9 +258,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

@@ -86,16 +86,19 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     semi_automatic_zero_setting:
       value:
         min:
         max: 4
       unit_symbol: "%"
+      unit_id: u:percent
     zero_tracking:
       value:
         min:
         max: 4
       unit_symbol: "%"
+      unit_id: u:percent
     fraction_of_maximum_permitted_error_pind:
       value: 0.5
     operating_temperature_range:
@@ -148,6 +151,7 @@ characteristics:
     - condition: single interval
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: multi-interval/range
       value: "-Max1"
   - attribute: maximum_number_of_scale_intervals
@@ -210,49 +214,70 @@ characteristics:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 0.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 0.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 0.8
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: measuring_range_minimum_voltage
     axis: load_cell_interface_variant
     values:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: measuring_range_maximum_voltage
     axis: load_cell_interface_variant
     values:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615)
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: load_cell_cable_maximum_length_6_wire
     axis: load_cell_interface_variant
     values:
     - condition: ZM605/ZM615, standard build or with 10V EXC analogue load cell interface option card
       value: 212
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: ZM505/ZM510, standard build or with 10V EXC analogue load cell interface option card
       value: 143
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: with 5V EXC analogue load cell interface option card (ZM505/ZM510/ZM605/ZM615), limited
         to 30 m
       value: 196
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
 recommendation:
   id: R76
   edition: 2006
@@ -371,12 +396,18 @@ components:
       minimum_input_voltage_per_verification_scale_interval:
         value: 0.8
         unit_symbol: µV
+        unit_id: u:volt
+        prefix: p:micro
       measuring_range_minimum_voltage:
         value: 0
         unit_symbol: mV
+        unit_id: u:volt
+        prefix: p:milli
       measuring_range_maximum_voltage:
         value: 25
         unit_symbol: mV
+        unit_id: u:volt
+        prefix: p:milli
       fraction_of_maximum_permitted_error_pt:
         value: 0.5
       operating_temperature_range:

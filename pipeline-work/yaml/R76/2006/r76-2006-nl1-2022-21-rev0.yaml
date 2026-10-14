@@ -67,8 +67,9 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.66
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 85
       unit_symbol: Ω
@@ -92,7 +93,7 @@ characteristics:
     maximum_cable_length_per_cross_wire_section:
       value: 141
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
     weighing_range_types:
       value: Single interval, Multi-interval
@@ -159,11 +160,13 @@ characteristics:
         min:
         max: 7500
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: multi_interval (per partial weighing range)
       value:
         min:
         max: 3000
       unit_symbol: divisions
+      _unit_kind: custom_count
 recommendation:
   id: R76
   edition: 2006

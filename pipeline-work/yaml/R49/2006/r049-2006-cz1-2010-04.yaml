@@ -69,7 +69,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T30 and T50
       unit_symbol:
@@ -132,6 +132,7 @@ characteristics:
       value: 400
     - model: DN 500
       value: 500
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -187,6 +188,7 @@ characteristics:
       value:
         min:
         max: 3125
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -268,6 +270,7 @@ characteristics:
         max: 2500
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -323,6 +326,7 @@ characteristics:
       value:
         min: 50.0
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -378,6 +382,7 @@ characteristics:
       value:
         min: 31.3
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -546,6 +551,7 @@ characteristics:
       value: 500
     - model: DN 500
       value: 500
+    unit_id: u:millimeter
   - attribute: maximum_length
     unit_symbol: mm
     values:
@@ -575,6 +581,7 @@ characteristics:
       value: 600
     - model: DN 500
       value: 800
+    unit_id: u:millimeter
   config_level:
   - attribute: mpe_upper_flowrate_zone
     axis: water_temperature
@@ -584,13 +591,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
   - attribute: reed_switch_k_factor
     axis: nominal_diameter_range
     values:

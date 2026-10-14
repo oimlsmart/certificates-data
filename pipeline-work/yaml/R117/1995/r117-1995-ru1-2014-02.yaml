@@ -69,7 +69,7 @@ characteristics:
     minimum_flowrate:
       value: 5.0
       unit_symbol: l/min
-      unit_id:
+      unit_id: u:liter_per_minute
       footnote_markers: []
     minimum_measured_quantity:
       value: 5.0
@@ -93,22 +93,22 @@ characteristics:
     maximum_ethanol_content:
       value: 15
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_mtbe_content:
       value: 15
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_methanol_content:
       value: 15
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_oil_mix_content:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
   model_level:
   - attribute: product_count
@@ -246,6 +246,7 @@ characteristics:
       value: 70
     - model: JTA500GB
       value: 70
+    unit_id: u:liter_per_minute
   config_level:
   - attribute: maximum_flowrate
     axis: flow_configuration
@@ -253,11 +254,11 @@ characteristics:
     - condition: standard flow
       value: 50
       unit_symbol: l/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: Hi-flow
       value: 70
       unit_symbol: l/min
-      unit_id:
+      unit_id: u:liter_per_minute
   - attribute: maximum_unit_price
     axis: display_configuration
     values:

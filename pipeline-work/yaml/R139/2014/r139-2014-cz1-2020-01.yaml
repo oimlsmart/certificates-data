@@ -62,15 +62,15 @@ characteristics:
     max_gas_storage_pressure_pst:
       value: 30.0
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     max_gas_pressure_pmax:
       value: 30.0
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     min_gas_pressure_pmin:
       value: 2.0
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     ambient_temperature_range:
       value:
         min: -40
@@ -103,6 +103,7 @@ characteristics:
       value: 1.2
     - model: CNGmass
       value: 0.8
+    unit_id: u:kilogram_per_minute
   - attribute: gas_temperature_range
     unit_symbol: "°C"
     values:
@@ -122,9 +123,11 @@ characteristics:
     - condition: configuration 1 (first listed value)
       value: 30
       unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
     - condition: configuration 2 (second listed value)
       value: 70
       unit_symbol: kg/min
+      unit_id: u:kilogram_per_minute
   - attribute: min_measured_quantity_mmq
     axis: dispenser configuration (not specified in certificate)
     values:
@@ -142,9 +145,11 @@ characteristics:
     - condition: at 15 °C
       value: 20.0
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: not specified in certificate
       value: 26.5
       unit_symbol: MPa
+      unit_id: u:megapascal
 recommendation:
   id: R139
   edition: 2014
@@ -324,13 +329,13 @@ components:
     diameter:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_rate:
       value:
         min: 1.2
         max: 77.0
       unit_symbol: kg/min
-      unit_id:
+      unit_id: u:kilogram_per_minute
     maximum_pressure:
       value: 345
       unit_symbol: bar
@@ -359,13 +364,13 @@ components:
     diameter:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_rate:
       value:
         min: 0.8
         max: 80.0
       unit_symbol: kg/min
-      unit_id:
+      unit_id: u:kilogram_per_minute
     maximum_pressure:
       value: 350
       unit_symbol: bar

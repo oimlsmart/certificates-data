@@ -135,11 +135,13 @@ characteristics:
         min:
         max: 6000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: multi-interval (per partial weighing range)
       value:
         min:
         max: 3000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: initial_zero_setting_range
     axis: model_maximum_capacity
     values:
@@ -148,9 +150,11 @@ characteristics:
         min: -2
         max: 25
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: all other models
       value: 20
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R76
   edition: 2006

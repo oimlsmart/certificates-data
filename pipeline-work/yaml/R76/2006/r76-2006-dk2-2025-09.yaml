@@ -52,11 +52,13 @@ characteristics:
     minimum_input_voltage_per_vsi:
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     minimum_signal_voltage_for_dead_load:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     excitation_voltage:
       value: 10
       unit_symbol: V
@@ -139,7 +141,7 @@ components:
         min: -2
         max: 2
       unit_symbol: "% of Max"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
 - role: Automatic zero-tracking device
   characteristics:
     range:
@@ -147,7 +149,7 @@ components:
         min: -2
         max: 2
       unit_symbol: "% of Max"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
 - role: Initial zero-setting device
   characteristics:
     range:
@@ -155,7 +157,7 @@ components:
         min: -10
         max: 10
       unit_symbol: "% of Max"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
 - role: Semi-automatic subtractive tare device
 - role: Counting device
 - role: Printing

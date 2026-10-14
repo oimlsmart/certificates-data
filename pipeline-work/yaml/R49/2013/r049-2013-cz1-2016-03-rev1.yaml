@@ -73,7 +73,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T50
       unit_symbol:
@@ -113,7 +113,7 @@ characteristics:
     low_flow_cutoff:
       value: 1
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     low_flow_cutoff_reference:
       value: nominal flowrate
       unit_symbol:
@@ -202,6 +202,7 @@ characteristics:
       value: 2000
     - model: DN300 R50
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -277,6 +278,7 @@ characteristics:
       value: 1600
     - model: DN300 R50
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio
     unit_symbol:
     values:
@@ -427,6 +429,7 @@ characteristics:
       value: 10.08
     - model: DN300 R50
       value: 20.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -502,6 +505,7 @@ characteristics:
       value: 6.3
     - model: DN300 R50
       value: 12.6
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -653,6 +657,7 @@ characteristics:
       value: 500
     - model: DN300 R50
       value: 500
+    unit_id: u:millimeter
   - attribute: software_version
     unit_symbol:
     values:
@@ -748,13 +753,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
   - attribute: indicating_device_resolution
     axis: display_mode
     values:

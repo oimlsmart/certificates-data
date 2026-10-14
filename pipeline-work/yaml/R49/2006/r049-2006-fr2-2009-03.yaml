@@ -59,7 +59,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 2
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
       footnote_markers: []
     temperature_class:
       value: T50
@@ -74,13 +74,15 @@ characteristics:
     verification_scale_interval:
       value: 0.1
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
+      prefix: p:deci
     cycle_volume:
       value: NA
       unit_symbol: cm³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
+      prefix: p:centi
     accuracy_class:
       value: 2
       unit_symbol:
@@ -112,6 +114,7 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -137,6 +140,7 @@ characteristics:
       value: 6.3
     - model: DN50
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -162,6 +166,7 @@ characteristics:
       value: 7.88
     - model: DN50
       value: 20
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: q3_over_q1
     axis: nominal_diameter
@@ -212,6 +217,7 @@ characteristics:
       value: 250
     - condition: DN50
       value: 270
+    unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2006

@@ -83,7 +83,8 @@ characteristics:
     maximum_viscosity:
       value: 20
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"
@@ -248,6 +249,7 @@ characteristics:
       value: 150
     - model: DM(S)
       value: 100
+    _unit_kind: custom_count
   - attribute: cyclic_volume
     unit_symbol: L
     values:
@@ -347,6 +349,7 @@ characteristics:
       value: 200
     - model: DM(S)
       value: 200
+    unit_id: u:liter_per_minute
   - attribute: qmax
     unit_symbol: L/min
     values:
@@ -396,6 +399,7 @@ characteristics:
       value: 4250
     - model: DM(S)
       value: 2500
+    unit_id: u:liter_per_minute
   - attribute: mmq
     unit_symbol: L
     values:
@@ -525,6 +529,7 @@ characteristics:
       value: 1034
     - model: DM(S)
       value: 1034
+    unit_id: u:kilopascal
   config_level:
   - attribute: maximum_pressure
     axis: pressure containing sphere designation variant (note (1) to table 1)
@@ -534,18 +539,23 @@ characteristics:
         min: 1034
         max: 1965
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MS
       value: 1896
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSAA
       value: 1965
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSB
       value: 5102
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSC
       value: 10204
       unit_symbol: kPa
+      unit_id: u:kilopascal
   - attribute: chamber_configuration
     axis: letter in brackets in type designation
     values:

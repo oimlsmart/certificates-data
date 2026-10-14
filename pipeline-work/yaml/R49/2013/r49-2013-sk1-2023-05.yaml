@@ -93,7 +93,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     capacity_of_calculator:
       value: 99999.999
       unit_symbol: m³
@@ -166,6 +166,7 @@ characteristics:
       value: 32
     - model: DN40
       value: 40
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -179,6 +180,7 @@ characteristics:
       value: 10
     - model: DN40
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -192,6 +194,7 @@ characteristics:
       value: 0.025
     - model: DN40
       value: 0.04
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -205,6 +208,7 @@ characteristics:
       value: 0.04
     - model: DN40
       value: 0.064
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -218,6 +222,7 @@ characteristics:
       value: 12.5
     - model: DN40
       value: 20
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -244,6 +249,7 @@ characteristics:
       value: 260
     - model: DN40
       value: 300
+    unit_id: u:millimeter
   - attribute: software_checksum
     unit_symbol:
     values:
@@ -266,11 +272,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water_temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

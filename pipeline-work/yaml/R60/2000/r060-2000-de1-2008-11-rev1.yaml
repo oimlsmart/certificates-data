@@ -63,7 +63,7 @@ characteristics:
     dead_load:
       value: 0
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
   model_level:
   - attribute: maximum_capacity
@@ -101,6 +101,7 @@ characteristics:
       value: 125
     - model: Emax=75t
       value: 100
+    unit_id: u:percent
   config_level:
   - attribute: max_load_cell_intervals_nlc
     axis: accuracy_class
@@ -123,42 +124,55 @@ characteristics:
     - condition: C3, Emax=12.5/20/30 t
       value: 1
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C3, Emax=25/50 t
       value: 2
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C3, Emax=60 t
       value: 2.4
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C3, Emax=75 t
       value: 3
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C4, Emax=12.5/20/30 t
       value: 1
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C4, Emax=25/50 t
       value: 2
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C4, Emax=60/75 t
       value: 1.5
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C5, Emax=20/30 t
       value: 1
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C5, Emax=25 t
       value: 2
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C5, Emax=50/60/75 t
       value: 1.5
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C6, Emax=20/30 t
       value: 1
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C6, Emax=25 t
       value: 2
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
     - condition: C6, Emax=50/60/75 t
       value: 1.5
       unit_symbol: mV/V
+      unit_id: u:millivolt_per_volt
   - attribute: minimum_load_cell_verification_interval_vmin
     axis: accuracy_class (and maximum_capacity for C4)
     values:

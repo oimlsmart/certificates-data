@@ -68,7 +68,7 @@ characteristics:
     maximum_permitted_error_lower_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     accuracy_class:
       value: 2
@@ -127,7 +127,7 @@ characteristics:
     test_mode_display_resolution_flow_rate:
       value: 1.0e-06
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers: []
     test_mode_display_resolution_water_temperature:
       value: 0.1
@@ -159,9 +159,11 @@ characteristics:
     - condition: Q2 ≤ Q ≤ Q4 and Θ ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4 and Θ > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: calculator_capacity
     axis: resolution
     values:
@@ -200,6 +202,7 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
+    unit_id: u:millimeter
   - attribute: overall_length
     unit_symbol: mm
     values:
@@ -225,6 +228,7 @@ characteristics:
       value:
         min: 200
         max: 300
+    unit_id: u:millimeter
   - attribute: width
     unit_symbol: mm
     values:
@@ -240,6 +244,7 @@ characteristics:
       value: 87
     - model: DN50
       value: 87
+    unit_id: u:millimeter
   - attribute: height
     unit_symbol: mm
     values:
@@ -255,6 +260,7 @@ characteristics:
       value: 135
     - model: DN50
       value: 148
+    unit_id: u:millimeter
   - attribute: connection_thread
     values:
     - model: DN15

@@ -42,7 +42,7 @@ characteristics:
         min: 9
         max: 12
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     power_supply_type:
       value: DC
       unit_symbol:
@@ -50,45 +50,48 @@ characteristics:
     mains_adaptor_output_voltage:
       value: 9
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     mains_adaptor_output_current:
       value: 500
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
     battery_voltage:
       value: 6
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     battery_capacity:
       value: 4
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
-      unit_id:
+      unit_id: u:volt
     load_cell_impedance:
       value:
         min: 85
         max: 1100
       unit_symbol: Ω
-      unit_id:
+      unit_id: u:ohm
     min_input_voltage_per_scale_interval:
       value: 1
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     signal_voltage_measuring_range:
       value:
         min: -9.7
         max: 19.5
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     dead_load_signal_voltage:
       value:
         min: 0
         max: 10
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     indicator_fraction_of_max_permissible_error:
       value: 0.5
       unit_symbol:
@@ -98,11 +101,11 @@ characteristics:
         min: -10
         max: 40
       unit_symbol: "°C"
-      unit_id:
+      unit_id: u:degree_Celsius
     max_load_cell_cable_length_6_wire:
       value: 30
       unit_symbol: m
-      unit_id:
+      unit_id: u:meter
     maximum_tare:
       value: "-1/3 Max"
       unit_symbol:
@@ -185,6 +188,7 @@ characteristics:
       value: 2.0
     - model: VPS
       value: 1.0
+    unit_id: u:inch
   - attribute: load_cell_connection_wiring
     unit_symbol:
     values:

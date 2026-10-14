@@ -81,26 +81,31 @@ characteristics:
         min: 0
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: MR 1:30 (Table 1, page 3)
       value:
         min: 4
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: MR 1:50 (Table 1, page 3)
       value:
         min: 8
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: MR 1:30 (Table 2, page 4)
       value:
         min: 0
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: MR 1:50 (Table 2, page 4)
       value:
         min: 4
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: applicable_pressure_range
     axis: bearing_type
     values:
@@ -109,23 +114,28 @@ characteristics:
         min: 0
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: optional bearings
       value:
         min: 4
         max: 101
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: minimum_straight_inlet_pipe_length
     axis: flow_straightener
     values:
     - condition: EMT-L with large flow straightener
       value: 1
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: EMT-L with small flow straightener
       value: 5
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: EMT-S (large flow straightener only)
       value: 1
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: EMT-Lx
       value: no requirement concerning straight inlet tubing
     - condition: EMT-Dc

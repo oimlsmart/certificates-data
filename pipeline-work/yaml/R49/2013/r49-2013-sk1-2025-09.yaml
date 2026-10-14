@@ -99,7 +99,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 0.001
@@ -207,6 +207,7 @@ characteristics:
       value: 32
     - model: DN40
       value: 40
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -220,6 +221,7 @@ characteristics:
       value: 10
     - model: DN40
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -233,6 +235,7 @@ characteristics:
       value: 0.02
     - model: DN40
       value: 0.031
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -246,6 +249,7 @@ characteristics:
       value: 0.032
     - model: DN40
       value: 0.0512
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -259,6 +263,7 @@ characteristics:
       value: 12.5
     - model: DN40
       value: 20
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -298,6 +303,7 @@ characteristics:
       value: 85
     - model: DN40
       value: 85
+    unit_id: u:millimeter
   - attribute: height_h1
     unit_symbol: mm
     values:
@@ -311,6 +317,7 @@ characteristics:
       value: 27
     - model: DN40
       value: 33
+    unit_id: u:millimeter
   - attribute: height_h2
     unit_symbol: mm
     values:
@@ -324,6 +331,7 @@ characteristics:
       value: 103
     - model: DN40
       value: 112
+    unit_id: u:millimeter
   - attribute: height_h3
     unit_symbol: mm
     values:
@@ -337,6 +345,7 @@ characteristics:
       value: 132
     - model: DN40
       value: 141
+    unit_id: u:millimeter
   - attribute: width_a
     unit_symbol: mm
     values:
@@ -350,6 +359,7 @@ characteristics:
       value: 121
     - model: DN40
       value: 121
+    unit_id: u:millimeter
   - attribute: width_b
     unit_symbol: mm
     values:
@@ -363,6 +373,7 @@ characteristics:
       value: 82
     - model: DN40
       value: 82
+    unit_id: u:millimeter
   config_level:
   - attribute: construction_length
     axis: nominal_diameter and body_material
@@ -372,31 +383,37 @@ characteristics:
         min: 110
         max: 190
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN20, brass body
       value:
         min: 130
         max: 220
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN20, composite body
       value:
         min: 190
         max: 220
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN25
       value:
         min: 260
         max: 300
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN32
       value:
         min: 260
         max: 300
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN40
       value:
         min: 300
         max: 350
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: body_material
     axis: nominal_diameter
     values:
@@ -423,11 +440,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: radio_communication_version
     axis: communication_version
     values:

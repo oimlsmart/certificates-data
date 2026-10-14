@@ -80,7 +80,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone:
       value: "±5"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     temperature_class:
       value: T30 and T50
@@ -160,6 +160,7 @@ characteristics:
     - model: DN25
       value: 25
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -172,6 +173,7 @@ characteristics:
     - model: DN25
       value: 5.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -184,6 +186,7 @@ characteristics:
     - model: DN25
       value: 4.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -196,6 +199,7 @@ characteristics:
     - model: DN25
       value: 0.026
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -208,6 +212,7 @@ characteristics:
     - model: DN25
       value: 0.016
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss_class
     unit_symbol:
     values:
@@ -232,6 +237,7 @@ characteristics:
     - model: DN25
       value: 260
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: connection_type_screw_thread_size
     unit_symbol:
     values:
@@ -265,10 +271,12 @@ characteristics:
       value: "±2"
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: water temperature > 30°C
       value: "±3"
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013
@@ -307,21 +315,21 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: DN20
     label: DN20 size
     attributes:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: DN25
     label: DN25 size
     attributes:
       nominal_diameter:
         value: 25
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
 footnotes: []
 matrix_tables:
 - name: Basic technical data of water meters type 280W-... DN15 to DN25

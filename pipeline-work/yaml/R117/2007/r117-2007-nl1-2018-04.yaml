@@ -95,6 +95,7 @@ characteristics:
       value: 150
     - model: DN600
       value: 150
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flow_rate
     unit_symbol: m³/h
     values:
@@ -118,6 +119,7 @@ characteristics:
       value: 7000
     - model: DN600
       value: 10000
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_measured_quantity
     unit_symbol: m³
     values:
@@ -188,6 +190,7 @@ characteristics:
       value: 500
     - model: DN600
       value: 600
+    unit_id: u:millimeter
 recommendation:
   id: R117-1
   edition: 2007
@@ -262,7 +265,8 @@ components:
         min: 0.1
         max: 1500
       unit_symbol: mm²/s
-      unit_id:
+      unit_id: u:meter_squared_per_second
+      prefix: p:milli
     number_of_sound_paths:
       value: 8
       unit_symbol:
@@ -280,7 +284,7 @@ components:
         min: 35
         max: 55
       unit_symbol: "°"
-      unit_id:
+      unit_id: u:degree
     measurement_principle:
       value: Ultrasonic transit time difference between upstream and downstream sound signals
       unit_symbol:

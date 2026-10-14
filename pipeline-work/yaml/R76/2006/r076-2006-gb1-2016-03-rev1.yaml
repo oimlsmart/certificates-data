@@ -75,6 +75,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
@@ -82,9 +83,13 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permissible_error_pind:
       value: 0.5
       unit_symbol:
@@ -103,9 +108,11 @@ characteristics:
     semi_automatic_zero_setting_max:
       value: 4
       unit_symbol: "%"
+      unit_id: u:percent
     zero_tracking_max:
       value: 4
       unit_symbol: "%"
+      unit_id: u:percent
     number_of_soft_keys:
       value: 5
       unit_symbol:
@@ -206,13 +213,19 @@ characteristics:
         card(s)
       value: 0.5
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: ZM505, ZM510 - standard build or fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 0.5
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: fitted with 5V EXC analogue load cell interface option card(s)
       value: 0.8
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: max_load_cell_cable_length_6_wire
     axis: load_cell_input_variant
     values:
@@ -220,13 +233,16 @@ characteristics:
         card(s)
       value: 212
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: ZM505, ZM510 - standard build or fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 143
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: fitted with 5V EXC analogue load cell interface option card(s)
       value: 196
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: max_load_cell_cable_length_6_wire_absolute_limit
     axis: load_cell_input_variant
     values:
@@ -279,6 +295,7 @@ characteristics:
     - condition: single interval
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: multi-interval/range
       value: "-Max1"
       unit_symbol:

@@ -108,7 +108,7 @@ characteristics:
     overload_flow_rate:
       value: 1.2 × Qmax
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers:
       - 2)
     working_pressure_range:
@@ -116,7 +116,7 @@ characteristics:
         min: 0
         max: 20
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers:
       - 3)
   model_level:
@@ -171,6 +171,8 @@ characteristics:
       value: 5.97
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter
+    prefix: p:deci
   - attribute: qmax
     unit_symbol: m³/h
     values:
@@ -214,6 +216,7 @@ characteristics:
       value: 650
     - model: G650S (Vc=5.97 dm³)
       value: 1000
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -257,6 +260,7 @@ characteristics:
       value: 32.5
     - model: G650S (Vc=5.97 dm³)
       value: 50
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin
     unit_symbol: m³/h
     values:
@@ -300,6 +304,7 @@ characteristics:
       value: 5
     - model: G650S (Vc=5.97 dm³)
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: nominal_diameter
     unit_symbol: mm
     values:
@@ -343,6 +348,7 @@ characteristics:
       value: '150'
     - model: G650S (Vc=5.97 dm³)
       value: '150'
+    unit_id: u:millimeter
   config_level:
   - attribute: verification_scale_interval
     axis: meter type range

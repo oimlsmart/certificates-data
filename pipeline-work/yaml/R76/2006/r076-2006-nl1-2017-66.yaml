@@ -57,15 +57,18 @@ characteristics:
     max_number_of_scale_intervals_single_range:
       value: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     max_number_of_scale_intervals_multi_interval:
       value: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     max_number_of_partial_weighing_ranges:
       value: 3
       unit_symbol:
     max_number_of_scale_intervals_multiple_range:
       value: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     max_number_of_weighing_ranges:
       value: 3
       unit_symbol:
@@ -76,6 +79,8 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.225
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 40
       unit_symbol: Ω
@@ -151,6 +156,7 @@ characteristics:
     - condition: 6-wire (remote sensing) between indicator and junction box or load cells
       value: 339
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: 4-wire, load cells connected directly without junction box
       value: not applicable
 recommendation:

@@ -104,7 +104,7 @@ characteristics:
     field_current:
       value: 16
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
   model_level:
   - attribute: accuracy_class
     unit_symbol:
@@ -184,7 +184,7 @@ characteristics:
       value: 1 or 2
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25-C2-Q3=10
       value: 0.025
@@ -260,7 +260,7 @@ characteristics:
       value: 63
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25-C2-Q3=10
       value: 0.04
@@ -336,7 +336,7 @@ characteristics:
       value: 100.8
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25-C2-Q3=10
       value: 10
@@ -412,7 +412,7 @@ characteristics:
       value: 6300
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25-C2-Q3=10
       value: 12.5
@@ -569,9 +569,11 @@ characteristics:
     - condition: DN200 and smaller
       value: 16
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: DN250 and larger
       value: 10
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: verification_scale_interval
     axis: meter_size_group
     values:

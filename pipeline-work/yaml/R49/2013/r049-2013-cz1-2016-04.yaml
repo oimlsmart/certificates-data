@@ -70,7 +70,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T50
       unit_symbol:
@@ -124,7 +124,7 @@ characteristics:
     low_flow_cut_off:
       value: 1
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     low_flow_cut_off_reference:
       value: nominal flowrate
       unit_symbol:
@@ -136,7 +136,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN25
       value: 25
@@ -164,7 +164,7 @@ characteristics:
       value: 300
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25
       value: 16.0
@@ -192,7 +192,7 @@ characteristics:
       value: 1600.0
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN25
       value: 20.0
@@ -220,7 +220,7 @@ characteristics:
       value: 2000.0
   - attribute: length_of_horizontal_water_meter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN25
       value: 200
@@ -283,11 +283,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: resolution_of_indicating_device
     axis: display_mode
     values:

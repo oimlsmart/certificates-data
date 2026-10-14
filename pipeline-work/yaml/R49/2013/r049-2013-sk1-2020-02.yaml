@@ -84,7 +84,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 1.0e-05
@@ -172,6 +172,7 @@ characteristics:
       value: 20
     - model: DN20-Q3=4-R400
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -207,6 +208,7 @@ characteristics:
       value: 4
     - model: DN20-Q3=4-R400
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -242,6 +244,7 @@ characteristics:
       value: 0.0127
     - model: DN20-Q3=4-R400
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -277,6 +280,7 @@ characteristics:
       value: 0.02032
     - model: DN20-Q3=4-R400
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -312,6 +316,7 @@ characteristics:
       value: 5
     - model: DN20-Q3=4-R400
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -417,6 +422,7 @@ characteristics:
       value: 110/130/165/190
     - model: DN20-Q3=4-R400
       value: 110/130/165/190
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error_upper_flow_range
     axis: water_temperature
@@ -426,11 +432,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

@@ -97,6 +97,7 @@ characteristics:
       value: 2.5
     - model: DN20
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -104,6 +105,7 @@ characteristics:
       value: 3.125
     - model: DN20
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: nominal_diameter
     unit_symbol: DN
     values:
@@ -111,6 +113,7 @@ characteristics:
       value: 15
     - model: DN20
       value: 20
+    _unit_kind: custom_count
   - attribute: overall_length
     unit_symbol: mm
     values:
@@ -126,6 +129,7 @@ characteristics:
         max:
       footnote_markers:
       - "*"
+    unit_id: u:millimeter
   - attribute: threaded_connector_of_body
     unit_symbol:
     values:
@@ -154,9 +158,11 @@ characteristics:
     - condition: Q2 ≤ Q ≤ Q4
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q ≤ Q2
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: q1_minimum_flowrate
     axis: model and measuring range Q3/Q1 (horizontal / vertical mounting)
     values:

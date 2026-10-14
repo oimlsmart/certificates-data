@@ -82,7 +82,7 @@ characteristics:
     maximum_permissible_error_lower_flowrates_range_q1_le_q_lt_q2:
       value: "±5"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     capacity_of_calculator:
       value: 999999.999
       unit_symbol: m³
@@ -147,6 +147,7 @@ characteristics:
       value: 15
     - model: U-WR2-20 (R800)
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -160,6 +161,7 @@ characteristics:
       value: 2.5
     - model: U-WR2-20 (R800)
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -173,6 +175,7 @@ characteristics:
       value: 0.003125
     - model: U-WR2-20 (R800)
       value: 0.005
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -186,6 +189,7 @@ characteristics:
       value: 0.005
     - model: U-WR2-20 (R800)
       value: 0.008
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -199,6 +203,7 @@ characteristics:
       value: 3.125
     - model: U-WR2-20 (R800)
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol: R
     values:
@@ -239,6 +244,7 @@ characteristics:
       value: 110/115/130/165/170
     - model: U-WR2-20 (R800)
       value: 110/115/130/190/195
+    unit_id: u:millimeter
   - attribute: installation_orientation
     unit_symbol:
     values:
@@ -286,9 +292,11 @@ characteristics:
     - condition: t ≤ 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: t > 30 °C
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

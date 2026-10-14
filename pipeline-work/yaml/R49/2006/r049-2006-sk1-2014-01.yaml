@@ -47,15 +47,15 @@ characteristics:
     nominal_diameter_dn:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     permanent_flowrate_q3:
       value: 2.5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     overload_flowrate_q4:
       value: 3.125
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     ratio_q2_q1:
       value: 1.6
       unit_symbol:
@@ -67,7 +67,7 @@ characteristics:
     construction_length:
       value: 165
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     installation_orientation:
       value: H
       unit_symbol:
@@ -91,7 +91,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_interval:
       value: 5.0e-05
       unit_symbol: m³
@@ -131,6 +131,7 @@ characteristics:
       value: 0.025
     - model: MD-B R80
       value: 0.03125
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -142,6 +143,7 @@ characteristics:
       value: 0.04
     - model: MD-B R80
       value: 0.05
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: maximum_permissible_error_upper_flow_rates_zone
     axis: water_temperature
@@ -151,11 +153,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2006

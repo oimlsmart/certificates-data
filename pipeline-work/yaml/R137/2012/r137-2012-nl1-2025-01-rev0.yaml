@@ -126,7 +126,7 @@ characteristics:
         min: 0
         max: 20
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers:
       - '4.'
   model_level:
@@ -173,6 +173,8 @@ characteristics:
       value: 5.97
     - model: G650 SYNC MPV (5.97 dm³)
       value: 5.97
+    unit_id: u:cubic_meter
+    prefix: p:deci
   - attribute: qmax
     unit_symbol: m³/h
     values:
@@ -216,6 +218,7 @@ characteristics:
       value: 650
     - model: G650 SYNC MPV (5.97 dm³)
       value: 1000
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -259,6 +262,7 @@ characteristics:
       value: 32.5
     - model: G650 SYNC MPV (5.97 dm³)
       value: 50
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin
     unit_symbol: m³/h
     values:
@@ -302,6 +306,7 @@ characteristics:
       value: 5
     - model: G650 SYNC MPV (5.97 dm³)
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: nominal_diameter
     unit_symbol: mm
     values:
@@ -345,6 +350,7 @@ characteristics:
       value: '150'
     - model: G650 SYNC MPV (5.97 dm³)
       value: '150'
+    unit_id: u:millimeter
 recommendation:
   id: R137-1
   edition: 2012
@@ -384,7 +390,8 @@ model_family:
       cyclic_volume:
         value: 0.26
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: "-"
         unit_symbol:
@@ -392,26 +399,27 @@ model_family:
       qmax:
         value: 25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G25 (0.26 dm³)
     label: G25 (0.26 dm³)
     attributes:
       cyclic_volume:
         value: 0.26
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: "-"
         unit_symbol:
@@ -419,26 +427,27 @@ model_family:
       qmax:
         value: 40
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 2
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G10 MPV (0.69 dm³)
     label: G10 MPV (0.69 dm³)
     attributes:
       cyclic_volume:
         value: 0.69
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -446,26 +455,27 @@ model_family:
       qmax:
         value: 16
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40 / 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G16 MPV (0.69 dm³)
     label: G16 MPV (0.69 dm³)
     attributes:
       cyclic_volume:
         value: 0.69
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -473,26 +483,27 @@ model_family:
       qmax:
         value: 25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40 / 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G25 MPV (0.69 dm³)
     label: G25 MPV (0.69 dm³)
     attributes:
       cyclic_volume:
         value: 0.69
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -500,26 +511,27 @@ model_family:
       qmax:
         value: 40
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 2
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40 / 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G40 MPV (0.69 dm³)
     label: G40 MPV (0.69 dm³)
     attributes:
       cyclic_volume:
         value: 0.69
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -527,26 +539,27 @@ model_family:
       qmax:
         value: 65
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 3.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40 / 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G65 MPV (0.69 dm³)
     label: G65 MPV (0.69 dm³)
     attributes:
       cyclic_volume:
         value: 0.69
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -554,26 +567,27 @@ model_family:
       qmax:
         value: 100
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 40 / 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G40 MPV (1.11 dm³)
     label: G40 MPV (1.11 dm³)
     attributes:
       cyclic_volume:
         value: 1.11
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -581,26 +595,27 @@ model_family:
       qmax:
         value: 65
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 3.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.8
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 50 / 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G65 MPV (1.11 dm³)
     label: G65 MPV (1.11 dm³)
     attributes:
       cyclic_volume:
         value: 1.11
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -608,26 +623,27 @@ model_family:
       qmax:
         value: 100
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.8
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 50 / 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G100 MPV (1.11 dm³)
     label: G100 MPV (1.11 dm³)
     attributes:
       cyclic_volume:
         value: 1.11
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -635,26 +651,27 @@ model_family:
       qmax:
         value: 160
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 8
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 0.8
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 50 / 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G65 MPV (2.31 dm³)
     label: G65 MPV (2.31 dm³)
     attributes:
       cyclic_volume:
         value: 2.31
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -662,26 +679,27 @@ model_family:
       qmax:
         value: 100
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 10
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G100 MPV (2.31 dm³)
     label: G100 MPV (2.31 dm³)
     attributes:
       cyclic_volume:
         value: 2.31
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -689,26 +707,27 @@ model_family:
       qmax:
         value: 160
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 12.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G160 MPV (2.31 dm³)
     label: G160 MPV (2.31 dm³)
     attributes:
       cyclic_volume:
         value: 2.31
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -716,26 +735,27 @@ model_family:
       qmax:
         value: 250
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 12.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 1.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G100 MPV (2.98 dm³)
     label: G100 MPV (2.98 dm³)
     attributes:
       cyclic_volume:
         value: 2.98
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -743,26 +763,27 @@ model_family:
       qmax:
         value: 160
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 8
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 2
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80 / 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G160 MPV (2.98 dm³)
     label: G160 MPV (2.98 dm³)
     attributes:
       cyclic_volume:
         value: 2.98
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -770,26 +791,27 @@ model_family:
       qmax:
         value: 250
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 12.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 2
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80 / 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G250 MPV (2.98 dm³)
     label: G250 MPV (2.98 dm³)
     attributes:
       cyclic_volume:
         value: 2.98
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: MPV
         unit_symbol:
@@ -797,26 +819,27 @@ model_family:
       qmax:
         value: 400
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 20
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 2
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 80 / 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G250 SYNC MPV (3.88 dm³)
     label: G250 SYNC MPV (3.88 dm³)
     attributes:
       cyclic_volume:
         value: 3.88
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: SYNC MPV
         unit_symbol:
@@ -824,26 +847,27 @@ model_family:
       qmax:
         value: 400
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 20
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 3.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 100 / 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G400 SYNC MPV (3.88 dm³)
     label: G400 SYNC MPV (3.88 dm³)
     attributes:
       cyclic_volume:
         value: 3.88
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: SYNC MPV
         unit_symbol:
@@ -851,26 +875,27 @@ model_family:
       qmax:
         value: 650
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 32.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 3.25
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 100 / 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G400 SYNC MPV (5.97 dm³)
     label: G400 SYNC MPV (5.97 dm³)
     attributes:
       cyclic_volume:
         value: 5.97
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: SYNC MPV
         unit_symbol:
@@ -878,26 +903,27 @@ model_family:
       qmax:
         value: 650
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 32.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G650 SYNC MPV (5.97 dm³)
     label: G650 SYNC MPV (5.97 dm³)
     attributes:
       cyclic_volume:
         value: 5.97
         unit_symbol: dm³
-        unit_id:
+        unit_id: u:cubic_meter
+        prefix: p:deci
       version:
         value: SYNC MPV
         unit_symbol:
@@ -905,19 +931,19 @@ model_family:
       qmax:
         value: 1000
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qt:
         value: 50
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       qmin:
         value: 5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       nominal_diameter:
         value: 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
 footnotes:
 - marker: "*"
   text: MPV, see table 2 for further specification.

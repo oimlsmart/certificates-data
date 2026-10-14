@@ -100,7 +100,7 @@ characteristics:
     mpe_lower_flow_zone_q1_le_q_lt_q2:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     calculator_capacity:
       value: 9999999.99
@@ -210,6 +210,7 @@ characteristics:
       value: 200
     - model: DN250
       value: 250
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -225,6 +226,7 @@ characteristics:
       value: 250
     - model: DN250
       value: 400
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -240,6 +242,7 @@ characteristics:
       value: 1
     - model: DN250
       value: 1.6
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -255,6 +258,7 @@ characteristics:
       value: 1.6
     - model: DN250
       value: 2.56
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -270,6 +274,7 @@ characteristics:
       value: 312.5
     - model: DN250
       value: 500
+    unit_id: u:cubic_meter_per_hour
   - attribute: construction_length
     unit_symbol: mm
     values:
@@ -285,6 +290,7 @@ characteristics:
       value: 350
     - model: DN250
       value: 450
+    unit_id: u:millimeter
   - attribute: overall_width_w
     unit_symbol: mm
     values:
@@ -300,6 +306,7 @@ characteristics:
       value: 340
     - model: DN250
       value: 405
+    unit_id: u:millimeter
   - attribute: height_h1
     unit_symbol: mm
     values:
@@ -315,6 +322,7 @@ characteristics:
       value: 274
     - model: DN250
       value: 300
+    unit_id: u:millimeter
   - attribute: height_h
     unit_symbol: mm
     values:
@@ -330,6 +338,7 @@ characteristics:
       value: 438
     - model: DN250
       value: 480
+    unit_id: u:millimeter
   config_level:
   - attribute: mpe_upper_flow_zone_q2_le_q_lt_q4
     axis: water_temperature
@@ -337,9 +346,11 @@ characteristics:
     - condition: θ ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: θ > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

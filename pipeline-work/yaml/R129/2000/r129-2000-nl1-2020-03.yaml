@@ -73,7 +73,7 @@ characteristics:
         min: 30
         max: 180
       unit_symbol: m/min
-      unit_id:
+      unit_id: u:meter_per_minute
     speed_range_si:
       value:
         min: 0.5
@@ -127,13 +127,13 @@ characteristics:
         min: 50
         max:
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_height:
       value:
         min: 20
         max:
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: maximum_length
     unit_symbol: mm
@@ -146,6 +146,7 @@ characteristics:
       value:
         min:
         max: 1600
+    unit_id: u:millimeter
   - attribute: minimum_length
     unit_symbol: mm
     values:
@@ -157,6 +158,7 @@ characteristics:
       value:
         min: 50
         max:
+    unit_id: u:millimeter
   - attribute: scale_interval_length
     unit_symbol: mm
     values:
@@ -168,6 +170,7 @@ characteristics:
       value:
         min: 5
         max:
+    unit_id: u:millimeter
   - attribute: minimum_width
     unit_symbol: mm
     values:
@@ -179,6 +182,7 @@ characteristics:
       value:
         min: 50
         max:
+    unit_id: u:millimeter
   - attribute: scale_interval_width
     unit_symbol: mm
     values:
@@ -190,6 +194,7 @@ characteristics:
       value:
         min: 5
         max:
+    unit_id: u:millimeter
   config_level:
   - attribute: mechanical_environment_class
     axis: module mounting
@@ -208,16 +213,19 @@ characteristics:
         min:
         max: 1000
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: Crossbelt sorter (VIPAC D CCVS), 1 sensor head
       value:
         min:
         max: 1200
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: Crossbelt sorter (VIPAC D CCVS), 2 sensor heads
       value:
         min:
         max: 1500
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: maximum_dimension_height
     axis: height measurement sub-column (source table Height header spans two sub-columns)
     values:
@@ -226,21 +234,25 @@ characteristics:
         min:
         max: 50
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: sub-column 2 (VIPAC D BCVS)
       value:
         min: 50
         max: 1000
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: sub-column 1 (VIPAC D CCVS)
       value:
         min:
         max: 50
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: sub-column 2 (VIPAC D CCVS)
       value:
         min: 50
         max: 800
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: scale_interval_height
     axis: height measurement sub-column
     values:
@@ -249,11 +261,13 @@ characteristics:
         min: 2
         max:
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: sub-column 2
       value:
         min: 5
         max:
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R129
   edition: 2000

@@ -66,7 +66,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_interval:
       value: 5.0e-05
       unit_symbol: m³
@@ -96,18 +96,22 @@ characteristics:
     - condition: DN 15
       value: 2.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN 20
       value: 4
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     axis: nominal diameter DN
     values:
     - condition: DN 15
       value: 3.125
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN 20
       value: 5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     axis: nominal diameter DN / installation orientation / ratio Q3/Q1
     unit_symbol: m³/h
@@ -132,6 +136,7 @@ characteristics:
       value: 0.0625
     - condition: DN 20 / V / R 40
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: nominal diameter DN / installation orientation / ratio Q3/Q1
     unit_symbol: m³/h
@@ -156,6 +161,7 @@ characteristics:
       value: 0.1
     - condition: DN 20 / V / R 40
       value: 0.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     axis: nominal diameter DN / installation orientation
     unit_symbol: R
@@ -184,6 +190,7 @@ characteristics:
       value: 110, 115, 130, 165
     - condition: DN 20
       value: 130, 165, 190
+    unit_id: u:millimeter
   - attribute: installation_orientation
     axis: installation orientation
     values:
@@ -205,6 +212,7 @@ characteristics:
       value:
         min: -3
         max: 3
+    unit_id: u:percent
 recommendation:
   id: R49-1
   edition: 2013

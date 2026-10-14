@@ -77,11 +77,13 @@ characteristics:
     minimum_input_voltage_per_vsi:
       value: 0.5
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     minimum_signal_voltage_for_dead_load:
       value: 1
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     excitation_voltage:
       value: 11.5
       unit_symbol: V
@@ -91,7 +93,8 @@ characteristics:
         min: 1
         max: 40
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     remote_sense_circuit:
       value: Active
       unit_symbol:
@@ -99,7 +102,7 @@ characteristics:
     remote_sense_cable_length_per_cross_section:
       value: 182
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
     minimum_input_impedance:
       value: 44
       unit_symbol: Ω
@@ -139,19 +142,19 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     automatic_zero_tracking_range:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     initial_zero_setting_range:
       value:
         min:
         max: 10
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     analogue_output_voltage:
       value:
         min: 0
@@ -163,7 +166,7 @@ characteristics:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
   config_level:
   - attribute: maximum_number_of_verification_scale_intervals
     axis: accuracy_class

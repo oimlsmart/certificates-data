@@ -104,9 +104,10 @@ characteristics:
         min: 0.3
         max: 1242
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
       footnote_markers:
       - "*"
+      prefix: p:milli
     environmental_classes:
       value: M3 / E3 / H3
   model_level:
@@ -129,6 +130,7 @@ characteristics:
       value: 200
     - model: DM (S)
       value: 200
+    unit_id: u:liter_per_minute
   - attribute: qmax
     unit_symbol: L/min
     values:
@@ -148,6 +150,7 @@ characteristics:
       value: 4250
     - model: DM (S)
       value: 2500
+    unit_id: u:liter_per_minute
   - attribute: cyclic_volume
     unit_symbol: L
     values:
@@ -292,6 +295,7 @@ characteristics:
       value: 3400
     - model: CMFHC4 (0.5)
       value: 1700
+    unit_id: u:kilogram_per_minute
   - attribute: qmax
     unit_symbol: kg/min
     values:
@@ -319,6 +323,7 @@ characteristics:
       value: 22000
     - model: CMFHC4
       value: 30000
+    unit_id: u:kilogram_per_minute
   - attribute: mmq
     unit_symbol: kg
     values:
@@ -449,6 +454,7 @@ characteristics:
       value: 206
       footnote_markers:
       - 5)
+    unit_id: u:bar
   config_level:
   - attribute: ambient_temperature_range
     axis: approved_instrument_used_for_reading_or_recording_of_measurement_results
@@ -471,14 +477,17 @@ characteristics:
     - condition: with F and FD filters
       value: 10; 25
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: with FMP filters
       value: 20; 51
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: otherwise
       value: >-
         Equal to the maximum P(e) max. of the measuring system in which the Special Gas Extractor is used
         and not above 51
       unit_symbol: bar(g)
+      unit_id: u:bar
 recommendation:
   id: R117
   edition: 2007
@@ -995,7 +1004,7 @@ components:
     maximum_pressure:
       value: 1034
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
     environmental_class:
       value: M3
       unit_symbol:
@@ -1196,7 +1205,7 @@ components:
     minimum_pressure:
       value: 0.1
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
     environmental_class:
       value: M3 / E3
       unit_symbol:
@@ -1220,7 +1229,8 @@ components:
     maximum_viscosity:
       value: 20
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"

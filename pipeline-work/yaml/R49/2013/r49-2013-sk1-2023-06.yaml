@@ -67,7 +67,7 @@ characteristics:
     construction_length:
       value: 200
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     installation_orientation:
       value: H
@@ -106,7 +106,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     capacity_of_calculator:
       value: 99999.9999
@@ -173,7 +173,7 @@ characteristics:
     battery_capacity_flow_rate:
       value: 76
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
       footnote_markers: []
     battery_count_data_collector:
       value: 2
@@ -183,7 +183,7 @@ characteristics:
     battery_capacity_data_collector:
       value: 38
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
       footnote_markers: []
     software_version:
       value: 2.14u
@@ -211,6 +211,7 @@ characteristics:
       value: 50
     - model: DN50-R250
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -226,6 +227,7 @@ characteristics:
       value: 40
     - model: DN50-R250
       value: 40
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -241,6 +243,7 @@ characteristics:
       value: 0.25
     - model: DN50-R250
       value: 0.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -256,6 +259,7 @@ characteristics:
       value: 0.4
     - model: DN50-R250
       value: 0.256
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -271,6 +275,7 @@ characteristics:
       value: 50
     - model: DN50-R250
       value: 50
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol: R
     values:
@@ -296,11 +301,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

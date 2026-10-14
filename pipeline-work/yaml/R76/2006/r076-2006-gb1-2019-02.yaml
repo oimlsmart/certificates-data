@@ -94,7 +94,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     max_partial_ranges:
       value: 3
@@ -106,14 +106,14 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     zero_tracking:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     software_designation:
       value: AWT30-500208
@@ -142,6 +142,7 @@ characteristics:
     - condition: multi_interval_or_multi_range
       value: "-Max1"
       unit_symbol:
+    unit_id: u:percent
   - attribute: load_cell_excitation_voltage
     axis: load_cell_input_variant
     unit_symbol: V
@@ -177,6 +178,8 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 0.8
+    unit_id: u:volt
+    prefix: p:micro
   - attribute: measuring_range_minimum_voltage
     axis: load_cell_input_variant
     unit_symbol: mV
@@ -185,6 +188,8 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 0
+    unit_id: u:volt
+    prefix: p:milli
   - attribute: measuring_range_maximum_voltage
     axis: load_cell_input_variant
     unit_symbol: mV
@@ -193,6 +198,8 @@ characteristics:
       value: n/a
     - condition: 5V EXC analogue load cell interface option card
       value: 15
+    unit_id: u:volt
+    prefix: p:milli
   - attribute: fraction_of_maximum_permitted_error
     axis: load_cell_input_variant
     values:
@@ -213,6 +220,7 @@ characteristics:
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 196
+    unit_id: u:meter_per_square_millimeter
   - attribute: load_cell_cable_max_length_6_wire
     axis: load_cell_input_variant
     unit_symbol: m
@@ -283,18 +291,21 @@ components:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.8
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 25
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     fraction_of_maximum_permitted_error:
       value: 0.5
       unit_symbol:

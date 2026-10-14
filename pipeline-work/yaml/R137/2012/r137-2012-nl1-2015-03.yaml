@@ -113,13 +113,13 @@ characteristics:
     overload_flow_rate:
       value: 1.2 * Qmax
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     working_pressure_range:
       value:
         min: 0
         max: 16
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -150,6 +150,7 @@ characteristics:
       value: 150
     - model: G1000
       value: 200
+    unit_id: u:millimeter
   - attribute: qmax
     unit_symbol: m³/h
     values:
@@ -179,6 +180,7 @@ characteristics:
       value: 1000
     - model: G1000
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -208,6 +210,7 @@ characteristics:
       value: 50.0
     - model: G1000
       value: 80.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin
     unit_symbol: m³/h
     values:
@@ -237,6 +240,7 @@ characteristics:
       value: 10.0
     - model: G1000
       value: 16.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: cyclic_volume
     unit_symbol: dm³
     values:
@@ -266,6 +270,8 @@ characteristics:
       value: 15.7
     - model: G1000
       value: 19.7
+    unit_id: u:cubic_meter
+    prefix: p:deci
   - attribute: verification_scale_interval
     unit_symbol: m³
     values:
@@ -318,91 +324,91 @@ model_family:
       nominal_diameter:
         value: 25
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G16
     label: G16 (DN 50)
     attributes:
       nominal_diameter:
         value: 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G25
     label: G25 (DN 50)
     attributes:
       nominal_diameter:
         value: 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G40
     label: G40 (DN 50)
     attributes:
       nominal_diameter:
         value: 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G65
     label: G65 (DN 50)
     attributes:
       nominal_diameter:
         value: 50
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G100
     label: G100 (DN 80)
     attributes:
       nominal_diameter:
         value: 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G160-3"
     label: G160-3" (DN 80)
     attributes:
       nominal_diameter:
         value: 80
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G160-4"
     label: G160-4" (DN 100)
     attributes:
       nominal_diameter:
         value: 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G250
     label: G250 (DN 100)
     attributes:
       nominal_diameter:
         value: 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G400-4"
     label: G400-4" (DN 100)
     attributes:
       nominal_diameter:
         value: 100
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G400-6"
     label: G400-6" (DN 150)
     attributes:
       nominal_diameter:
         value: 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G650
     label: G650 (DN 150)
     attributes:
       nominal_diameter:
         value: 150
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
   - model_id: G1000
     label: G1000 (DN 200)
     attributes:
       nominal_diameter:
         value: 200
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
 footnotes:
 - marker: '1'
   text: The overload flow rate (Qr) for all rotary meters is equal to 1.2 · Qmax.

@@ -62,7 +62,7 @@ characteristics:
     maximum_pressure:
       value: 3.5
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
     accuracy_class:
       value: 0.5
       unit_symbol:
@@ -92,17 +92,20 @@ characteristics:
         min: 1.6
         max: 40
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: 1.1 - 8.0 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: maximum_flow_rate
     axis: number_of_operating_meter_sensors
     values:
     - condition: both meter sensors operating (2-sensor configuration)
       value: 40
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
 recommendation:
   id: R117
   edition: 2019
@@ -191,25 +194,27 @@ components:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     viscosity_range_low:
       value:
         min: 0.4
         max: 1.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     flow_rate_range_high_viscosity:
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     viscosity_range_high:
       value:
         min: 1.1
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     minimum_measured_quantity:
       value: 1
       unit_symbol: L
@@ -249,25 +254,27 @@ components:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     viscosity_range_low:
       value:
         min: 0.4
         max: 1.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     flow_rate_range_high_viscosity:
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     viscosity_range_high:
       value:
         min: 1.1
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
@@ -331,7 +338,7 @@ components:
     maximum_flow_rate:
       value: 90
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_pressure:
       value: 1.4
       unit_symbol: bar
@@ -361,7 +368,8 @@ components:
         min: 0.4
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
 footnotes:
 - marker: "*"
   text: >-

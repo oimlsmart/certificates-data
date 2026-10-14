@@ -80,7 +80,7 @@ characteristics:
     maximum_weighing_speed:
       value: 330
       unit_symbol: packages/min
-      unit_id:
+      unit_id: u:package_per_minute
       footnote_markers: []
     temperature_range:
       value:
@@ -146,10 +146,12 @@ characteristics:
       value: 62
       unit_symbol: m/min
       footnote_markers: []
+      unit_id: u:meter_per_minute
     - condition: configuration 2
       value: 80
       unit_symbol: m/min
       footnote_markers: []
+      unit_id: u:meter_per_minute
   - attribute: maximum_number_of_scale_intervals
     axis: partial weighing range (multi-interval instruments)
     values:
@@ -157,10 +159,12 @@ characteristics:
       value: 7500
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: second partial weighing range
       value: 4400
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
 recommendation:
   id: R51
   edition: 2006

@@ -103,7 +103,7 @@ characteristics:
     minimum_straight_length_inlet_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     flow_conditioner:
       value: none
@@ -130,6 +130,7 @@ characteristics:
     - model: RNK-PR-N
       value: 4
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -139,6 +140,7 @@ characteristics:
     - model: RNK-PR-N
       value: 5
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: length
     unit_symbol: mm
     values:
@@ -152,6 +154,7 @@ characteristics:
         min: 165
         max:
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: nominal_diameter
     unit_symbol: DN
     values:
@@ -161,6 +164,7 @@ characteristics:
     - model: RNK-PR-N
       value: 20
       footnote_markers: []
+    _unit_kind: custom_count
   - attribute: thread
     unit_symbol:
     values:
@@ -201,22 +205,27 @@ characteristics:
       value: 0.0313
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-RP, Q3/Q1=160
       value: 0.0156
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=80
       value: 0.05
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=160
       value: 0.025
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: q3_over_q1_ratio
     values:
@@ -224,22 +233,27 @@ characteristics:
       value: 0.05
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-RP, Q3/Q1=160
       value: 0.025
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=80
       value: 0.08
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=160
       value: 0.04
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
     - condition: RNK-PR-N, Q3/Q1=200
       value: 0.032
       unit_symbol: m³/h
       footnote_markers: []
+      unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2006

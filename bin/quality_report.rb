@@ -32,7 +32,7 @@ report = <<~REPORT
 
   Reconciliation: #{recon_counts['reconciled']} reconciled · #{recon_counts['variant']} variant · #{recon_counts['conflict']} conflict (adjudicated with committed evidence; 2 verdicts unparseable and flagged).
 
-  Unit coverage: #{unit_filled} of #{unit_slots} unit-bearing values carry a unitsdb unit_id (#{(unit_filled * 100.0 / [unit_slots, 1].max).round(1)}%); the remainder are compound or prefixed forms outside the schema's closed enum (m³/h, L/min, mV, bar(g)) — enum growth is a schema decision, documented.
+  Unit coverage: #{unit_filled} of #{unit_slots} unit-bearing values carry a unitsdb unit_id (#{(unit_filled * 100.0 / [unit_slots, 1].max).round(1)}%); the remainder are compound or prefixed forms outside the schema closed enum — the live residual list is datasets/units-unresolved.json, and enum growth is a schema decision, documented.
 
   Provider-filter blocks: #{blocked} pages (was 13; text layers recovered 11, the estate's Workers AI recovered the final 2 — zero remain).
 

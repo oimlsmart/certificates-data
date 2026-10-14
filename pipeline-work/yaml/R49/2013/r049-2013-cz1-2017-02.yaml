@@ -58,13 +58,13 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     mpe_upper_flowrate_zone:
       value:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     mpe_upper_flowrate_zone_applicability:
       value: water temperature ≤ 30 °C
       unit_symbol:
@@ -117,6 +117,7 @@ characteristics:
       value: 15
     - condition: DN20
       value: 20
+    unit_id: u:millimeter
   - attribute: q1
     axis: nominal_diameter × Q3/Q1 ratio
     unit_symbol: m³/h
@@ -141,6 +142,7 @@ characteristics:
       value: 0.04
     - condition: DN20, Q3/Q1=80
       value: 0.05
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: nominal_diameter × Q3/Q1 ratio
     unit_symbol: m³/h
@@ -165,6 +167,7 @@ characteristics:
       value: 0.064
     - condition: DN20, Q3/Q1=80
       value: 0.08
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3
     axis: nominal_diameter
     unit_symbol: m³/h
@@ -173,6 +176,7 @@ characteristics:
       value: 2.5
     - condition: DN20
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     axis: nominal_diameter
     unit_symbol: m³/h
@@ -181,6 +185,7 @@ characteristics:
       value: 3.13
     - condition: DN20
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_type
     axis: nominal_diameter
     unit_symbol:
@@ -201,6 +206,7 @@ characteristics:
       value: 165, 190
     - condition: DN20, composite body
       value: '165'
+    unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2013

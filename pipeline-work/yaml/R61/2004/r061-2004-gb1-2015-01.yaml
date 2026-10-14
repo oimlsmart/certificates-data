@@ -105,15 +105,18 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 1.0
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: -39
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 39
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permitted_error_pi:
       value: 0.5
     operating_temperature_range_controller:
@@ -131,7 +134,7 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     software_identification_number:
       value: V4.xx
   model_level:
@@ -154,6 +157,7 @@ characteristics:
     - condition: 6-wire configuration
       value: 1790
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: minimum_fill_minfill
     axis: scale_interval_d_and_accuracy_class
     values:

@@ -76,6 +76,7 @@ characteristics:
     belt_speed:
       value: 20
       unit_symbol: m/min
+      unit_id: u:meter_per_minute
     warmup_time:
       value: None
       unit_symbol:
@@ -125,24 +126,28 @@ characteristics:
     - condition: dynamic
       value: 4
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: semiautomatic_zero_setting_device_max
     axis: weighing_mode
     values:
     - condition: static
       value: 4
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: zero_tracking_device_max
     axis: weighing_mode
     values:
     - condition: static
       value: 4
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: initial_zero_setting_device_max
     axis: weighing_mode
     values:
     - condition: static and dynamic
       value: 20
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R51
   edition: 2006

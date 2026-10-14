@@ -48,7 +48,7 @@ characteristics:
     nominal_diameter_dn:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     ratio_q2_q1:
       value: 1.6
@@ -63,7 +63,7 @@ characteristics:
     construction_length_l:
       value: 110/115/130/165/170/190
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     installation_orientation:
       value: any positions
@@ -83,12 +83,12 @@ characteristics:
     pressure_loss_class_delta_p:
       value: 63
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
       footnote_markers: []
     maximum_permissible_error_lower_flowrates_range:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 2.0e-05
@@ -153,6 +153,7 @@ characteristics:
       value: 2.5
     - model: PD-C1 Q3=2.5 R200
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -188,6 +189,7 @@ characteristics:
       value: 0.01
     - model: PD-C1 Q3=2.5 R200
       value: 0.0125
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -223,6 +225,7 @@ characteristics:
       value: 0.016
     - model: PD-C1 Q3=2.5 R200
       value: 0.02
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -258,6 +261,7 @@ characteristics:
       value: 3.125
     - model: PD-C1 Q3=2.5 R200
       value: 3.125
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -370,9 +374,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

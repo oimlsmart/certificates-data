@@ -105,11 +105,11 @@ characteristics:
     control_element:
       value: 0.2
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     blade_angle:
       value: 45
       unit_symbol: "°"
-      unit_id:
+      unit_id: u:degree
     blade_quantity:
       value: 24
       unit_symbol:
@@ -117,7 +117,7 @@ characteristics:
   model_level:
   - attribute: qmax
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50/80-G100
       value: 160
@@ -193,7 +193,7 @@ characteristics:
       value: 2500
   - attribute: qt
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50/80-G100
       value: 32
@@ -269,7 +269,7 @@ characteristics:
       value: 500
   - attribute: qmin_meter_ratio_1_20
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50/80-G100
       value: 8
@@ -345,7 +345,7 @@ characteristics:
       value: 125
   - attribute: qmin_meter_ratio_1_30
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50/80-G100
       value: 5
@@ -421,7 +421,7 @@ characteristics:
       value: 80
   - attribute: qmin_meter_ratio_1_50
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50/80-G100
       value: 3
@@ -582,6 +582,7 @@ characteristics:
       value: 16000
     - model: G16000-DN600/600
       value: 25000
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -669,6 +670,7 @@ characteristics:
       value: 3200
     - model: G16000-DN600/600
       value: 5000
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin_mr1_30_0_to_101_bar_g
     unit_symbol: m³/h
     values:
@@ -756,6 +758,7 @@ characteristics:
       value: 533
     - model: G16000-DN600/600
       value: 800
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin_mr1_50_4_to_101_bar_g
     unit_symbol: m³/h
     values:
@@ -843,6 +846,7 @@ characteristics:
       value: 320
     - model: G16000-DN600/600
       value: 400
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: qmin_validity_pressure_range
     axis: meter_ratio
@@ -852,21 +856,21 @@ characteristics:
         min: 0
         max: 101
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     - condition: MR 1:30
       value:
         min: 4
         max: 101
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     - condition: MR 1:50
       value:
         min: 8
         max: 101
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
   - attribute: applicable_pressure_range
     axis: bearing_type
@@ -876,14 +880,14 @@ characteristics:
         min: 0
         max: 101
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     - condition: optional bearings
       value:
         min: 4
         max: 101
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
   - attribute: minimum_straight_inlet_pipe_length
     axis: meter_model_and_flow_straightener
@@ -891,12 +895,15 @@ characteristics:
     - condition: FMT-L with large flow straightener
       value: 1
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: FMT-L with small flow straightener
       value: 5
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: FMT-S with large flow straightener (only straightener permitted)
       value: 1
       unit_symbol: DN
+      _unit_kind: custom_count
     - condition: FMT-Lx, no flow straightener requirement
       value: not required
     - condition: FMT-Dc, same conditions as FMT-Lx

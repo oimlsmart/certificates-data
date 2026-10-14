@@ -105,11 +105,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner:
       value: none
       unit_symbol:
@@ -121,7 +121,7 @@ characteristics:
   model_level:
   - attribute: q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Q3=6.3 DN25 (bearing a)
       value: 6.3
@@ -151,7 +151,7 @@ characteristics:
       value: 16
   - attribute: q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Q3=6.3 DN25 (bearing a)
       value: 7.875
@@ -182,6 +182,7 @@ characteristics:
   - attribute: nominal_diameter
     unit_symbol: DN
     unit_id:
+    _unit_kind: custom_count
 model_family:
   family_name: MTK
   models:

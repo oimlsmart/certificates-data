@@ -124,7 +124,7 @@ characteristics:
     maximum_permissible_error_lower_flowrates_range_q1_le_q_lt_q2:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_range_normal_precision:
       value: 0.0001
       unit_symbol: m³
@@ -188,6 +188,7 @@ characteristics:
       value: 6.3
     - model: U550-32K/Q400V
       value: 10
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -199,6 +200,7 @@ characteristics:
       value: 7.875
     - model: U550-32K/Q400V
       value: 12.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -221,6 +223,7 @@ characteristics:
       value: 260
     - model: U550-32K/Q400V
       value: 260
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates_range_q2_le_q_le_q4
     axis: water_temperature
@@ -229,9 +232,12 @@ characteristics:
     - condition: water temperature <= 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
+    unit_id: u:percent
   - attribute: minimum_flowrate_q1
     axis: model and ratio_q3_q1
     unit_symbol: m³/h
@@ -239,51 +245,68 @@ characteristics:
     - condition: U550-15K/Q400V, Q3/Q1=400
       value: 0.00625
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=315
       value: 0.00794
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=250
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=200
       value: 0.0125
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=400
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=315
       value: 0.0127
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=250
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=400
       value: 0.01575
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=315
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=250
       value: 0.0252
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=200
       value: 0.0315
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=400
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=315
       value: 0.03175
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=250
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=200
       value: 0.05
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: model and ratio_q3_q1
     unit_symbol: m³/h
@@ -291,51 +314,68 @@ characteristics:
     - condition: U550-15K/Q400V, Q3/Q1=400
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=315
       value: 0.0127
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=250
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-15K/Q400V, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=400
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=315
       value: 0.0203
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=250
       value: 0.0256
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-20K/Q400V, Q3/Q1=200
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=400
       value: 0.0252
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=315
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=250
       value: 0.04032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-25K/Q400V, Q3/Q1=200
       value: 0.0504
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=400
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=315
       value: 0.05079
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=250
       value: 0.064
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: U550-32K/Q400V, Q3/Q1=200
       value: 0.08
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
+    unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2013

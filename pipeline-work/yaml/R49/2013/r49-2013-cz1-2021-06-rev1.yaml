@@ -75,7 +75,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T50
       unit_symbol:
@@ -95,7 +95,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: Any
       unit_symbol:
@@ -123,11 +123,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner_required:
       value: 'No'
       unit_symbol:
@@ -176,6 +176,7 @@ characteristics:
       value: 0.032
     - model: DN50
       value: 0.05
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -191,6 +192,7 @@ characteristics:
       value: 0.051
     - model: DN50
       value: 0.08
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -206,6 +208,7 @@ characteristics:
       value: 16.0
     - model: DN50
       value: 25.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -221,6 +224,7 @@ characteristics:
       value: 20.0
     - model: DN50
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss_class
     unit_symbol:
     values:
@@ -266,6 +270,7 @@ characteristics:
       value: '300'
     - model: DN50
       value: 270; 300
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone
     axis: water_temperature
@@ -273,9 +278,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

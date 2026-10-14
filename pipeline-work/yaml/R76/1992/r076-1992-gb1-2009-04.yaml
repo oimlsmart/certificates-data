@@ -78,7 +78,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     maximum_number_of_scale_intervals:
       value: 6000
       unit_symbol:
@@ -102,15 +102,18 @@ characteristics:
     minimum_input_voltage_per_scale_interval:
       value: 0.83
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 200
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permitted_error_p_ind:
       value: 0.5
       unit_symbol:
@@ -197,6 +200,7 @@ characteristics:
     - condition: current output
       value: 0/4-20
       unit_symbol: mA
+      unit_id: u:milliampere
     - condition: voltage output
       value:
         min: 0

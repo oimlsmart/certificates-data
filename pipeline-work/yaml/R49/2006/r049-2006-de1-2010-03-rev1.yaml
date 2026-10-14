@@ -78,11 +78,11 @@ characteristics:
     pressure_loss_class:
       value: 0.063
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation:
       value: All orientations except upside down (no overhead installation with register up side down)
       unit_symbol:
@@ -115,6 +115,7 @@ characteristics:
       value: 63
     - model: DN 100
       value: 100
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -126,6 +127,7 @@ characteristics:
       value: 78.75
     - model: DN 100
       value: 125
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx1
     unit_symbol: m³/h
     values:
@@ -145,6 +147,7 @@ characteristics:
       value:
         min: 1.1
         max: 1.6
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx2
     unit_symbol: m³/h
     values:
@@ -164,6 +167,7 @@ characteristics:
       value:
         min: 2.2
         max: 2.6
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: minimum_straight_length_of_inlet_pipe
     axis: nominal_diameter
@@ -171,9 +175,11 @@ characteristics:
     - condition: DN 50
       value: 150
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 80 and DN 100
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: minimum_straight_length_of_inlet_pipe_dn_factor
     axis: nominal_diameter
     values:
@@ -189,6 +195,7 @@ characteristics:
     - condition: DN 50, DN 80 and DN 100
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: minimum_straight_length_of_outlet_pipe_dn_factor
     axis: nominal_diameter
     values:
@@ -201,12 +208,15 @@ characteristics:
     - condition: DN 50
       value: 270
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 80
       value: 300
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 100
       value: 350
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: verification_scale_interval
     axis: large_meter_dry_register_variant
     values:
@@ -262,7 +272,7 @@ components:
     q3:
       value: 4
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
 - role: change_over_valve
 - role: dry_register_large_meter
   type_designations:

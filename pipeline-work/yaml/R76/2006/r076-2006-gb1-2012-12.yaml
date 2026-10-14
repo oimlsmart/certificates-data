@@ -75,15 +75,17 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.5
       unit_symbol: μV/div
-      unit_id:
+      unit_id: u:microvolt_per_division
     measuring_range_minimum_voltage:
       value: 0.001
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 25
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permitted_error:
       value: 0.5
       unit_symbol:
@@ -103,7 +105,7 @@ characteristics:
         min:
         max: 20
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     initial_zero_setting_reference:
       value: Max
       unit_symbol:
@@ -113,7 +115,7 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     zero_tracking_reference:
       value: Max
       unit_symbol:
@@ -123,7 +125,7 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     semi_automatic_zero_setting_reference:
       value: Max
       unit_symbol:
@@ -169,6 +171,7 @@ characteristics:
       value: 378
     - model: nmax=10000
       value: 227
+    unit_id: u:meter_per_square_millimeter
 recommendation:
   id: R76
   edition: 2006

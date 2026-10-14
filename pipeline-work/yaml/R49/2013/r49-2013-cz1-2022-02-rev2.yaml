@@ -67,6 +67,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     pressure_loss_class:
       value: Δp40
     reverse_flow:
@@ -90,9 +91,11 @@ characteristics:
     minimum_straight_inlet_pipe_length:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     minimum_straight_outlet_pipe_length:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     flow_profile_sensitivity_class:
       value: U0D0
     flow_conditioner_required:
@@ -104,6 +107,7 @@ characteristics:
     cut_off:
       value: 0.2
       unit_symbol: "%"
+      unit_id: u:percent
     empty_pipe_detection:
       value: 'on'
     display_volume_resolution:
@@ -166,6 +170,7 @@ characteristics:
       value: 6.4
     - model: DN350 (Q3/Q1=400)
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -221,6 +226,7 @@ characteristics:
       value: 10.2
     - model: DN350 (Q3/Q1=400)
       value: 6.4
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -276,6 +282,7 @@ characteristics:
       value: 1600
     - model: DN350 (Q3/Q1=400)
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -331,6 +338,7 @@ characteristics:
       value: 2000
     - model: DN350 (Q3/Q1=400)
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -498,6 +506,7 @@ characteristics:
       value: 550
     - model: DN350 (Q3/Q1=400)
       value: 550
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error_lower_zone
     axis: accuracy_class
@@ -507,11 +516,13 @@ characteristics:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permitted_error_upper_zone
     axis: water_temperature_and_accuracy_class
     values:
@@ -520,21 +531,25 @@ characteristics:
         min: -1
         max: 1
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 2, water temperature <= 30 °C
       value:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 1, water temperature > 30 °C
       value:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 2, water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: temperature_class
     axis: liner_material
     values:

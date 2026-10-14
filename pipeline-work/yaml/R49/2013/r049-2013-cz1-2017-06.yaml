@@ -65,6 +65,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30 and T50
     maximum_admissible_temperature:
@@ -112,6 +113,7 @@ characteristics:
     minimum_battery_life_time:
       value: 15
       unit_symbol: mm
+      unit_id: u:millimeter
     battery_chemistry:
       value: Li
     battery_voltage:
@@ -138,6 +140,7 @@ characteristics:
       value: 200
     - model: DN250
       value: 250
+    unit_id: u:millimeter
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -153,6 +156,7 @@ characteristics:
       value: 312.5
     - model: DN250
       value: 500
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
     values:
@@ -180,6 +184,7 @@ characteristics:
       value: 400
       footnote_markers:
       - '1'
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
     values:
@@ -195,6 +200,7 @@ characteristics:
       value: 0.8
     - model: DN250
       value: 1.28
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
     values:
@@ -210,6 +216,7 @@ characteristics:
       value: 0.5
     - model: DN250
       value: 0.8
+    unit_id: u:cubic_meter_per_hour
   - attribute: length
     unit_symbol: mm
     values:
@@ -225,6 +232,7 @@ characteristics:
       value: 351
     - model: DN250
       value: 450
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_zone
     axis: water_temperature
@@ -234,11 +242,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: display_volume_resolution
     axis: display_mode
     values:

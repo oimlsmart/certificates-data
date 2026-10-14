@@ -104,6 +104,7 @@ characteristics:
       value: 114
     - model: B28x
       value: 166
+    unit_id: u:liter_per_minute
   - attribute: qmin_class_0_3_l_per_min
     unit_symbol: L/min
     values:
@@ -111,6 +112,7 @@ characteristics:
       value: 215
     - model: B28x
       value: 166
+    unit_id: u:liter_per_minute
   - attribute: qmin_m3_per_h
     unit_symbol: m³/h
     values:
@@ -132,6 +134,7 @@ characteristics:
       value: 125
     - model: B38x
       value: 200
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmax_l_per_min
     unit_symbol: L/min
     values:
@@ -141,6 +144,7 @@ characteristics:
       value: 2081
     - model: B28x
       value: 3406
+    unit_id: u:liter_per_minute
   - attribute: qmax_m3_per_h
     unit_symbol: m³/h
     values:
@@ -162,6 +166,7 @@ characteristics:
       value: 1250
     - model: B38x
       value: 2100
+    unit_id: u:cubic_meter_per_hour
   - attribute: mmq
     unit_symbol: L
     values:
@@ -231,6 +236,7 @@ characteristics:
       - C)
     - model: B38x
       value: 400
+    unit_id: u:millimeter
   - attribute: diameter_in_outlet_nominal
     unit_symbol: in
     values:
@@ -427,6 +433,7 @@ characteristics:
       value: 102
       footnote_markers:
       - E)
+    unit_id: u:bar
   - attribute: viscosity_range
     unit_symbol: mPa·s
     values:
@@ -478,6 +485,8 @@ characteristics:
       value:
         min: 0.4
         max: 1000
+    unit_id: u:pascal_second
+    prefix: p:milli
   - attribute: housing_construction
     unit_symbol:
     values:
@@ -539,31 +548,38 @@ characteristics:
     - condition: SB25x, viscosity 0.4-0.8 mPa·s
       value: 30
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: SB25x, viscosity 0.8-2 mPa·s, serial number up to 1207-XXXXU-X-X
       value: 20
       unit_symbol: L/min
       footnote_markers:
       - A)
+      unit_id: u:liter_per_minute
     - condition: SB25x, viscosity 0.8-2 mPa·s, serial number 1208-XXXXU-X-X or higher
       value: 30
       unit_symbol: L/min
       footnote_markers:
       - B)
+      unit_id: u:liter_per_minute
     - condition: SB25x, viscosity 2-5 mPa·s
       value: 57
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: qmin_class_0_3_l_per_min
     axis: viscosity range (mPa·s), SB25x
     values:
     - condition: SB25x, viscosity 0.4-0.8 mPa·s
       value: not applicable
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: SB25x, viscosity 0.8-2 mPa·s
       value: 57
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: SB25x, viscosity 2-5 mPa·s
       value: 57
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
 recommendation:
   id: R117-1
   edition: 2007

@@ -81,7 +81,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     pressure_loss_class:
       value: Δp40
       unit_symbol:
@@ -115,11 +115,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_profile_sensitivity_class:
       value: U0D0
       unit_symbol:
@@ -143,7 +143,7 @@ characteristics:
     cut_off:
       value: 0.2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     empty_pipe_detection:
       value: 'on'
       unit_symbol:
@@ -178,6 +178,7 @@ characteristics:
       value: 1600
     - model: DN350
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -207,6 +208,7 @@ characteristics:
       value: 2000
     - model: DN350
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -296,6 +298,7 @@ characteristics:
       value: 500
     - model: DN350
       value: 550
+    unit_id: u:millimeter
   config_level:
   - attribute: ratio_q3_over_q1
     axis: accuracy_class
@@ -310,24 +313,30 @@ characteristics:
     - condition: class 1
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2
       value: "±5"
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permissible_error_upper_zone
     axis: accuracy_class_and_water_temperature
     values:
     - condition: class 1, water temperature ≤ 30 °C
       value: "±1"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2, water temperature ≤ 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 1, water temperature > 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2, water temperature > 30 °C
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: minimum_flowrate_q1
 model_family:
   family_name:

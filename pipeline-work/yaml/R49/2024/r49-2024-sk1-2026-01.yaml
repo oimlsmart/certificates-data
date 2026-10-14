@@ -153,6 +153,7 @@ characteristics:
       value: DN20
     - model: MA408 (DN25)
       value: DN25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -162,6 +163,7 @@ characteristics:
       value: 4
     - model: MA408 (DN25)
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -171,6 +173,7 @@ characteristics:
       value: 5
     - model: MA408 (DN25)
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -189,6 +192,7 @@ characteristics:
       value: 130 / 165 / 190 / 195 / 220
     - model: MA408 (DN25)
       value: 175 / 200 / 225 / 260
+    unit_id: u:millimeter
   - attribute: dimension_a
     unit_symbol: mm
     values:
@@ -211,6 +215,7 @@ characteristics:
       - 200
       - 225
       - 260
+    unit_id: u:millimeter
   - attribute: dimension_b
     unit_symbol: mm
     values:
@@ -220,6 +225,7 @@ characteristics:
       value: 90.9
     - model: DN25
       value: 90.9
+    unit_id: u:millimeter
   - attribute: dimension_c
     unit_symbol: mm
     values:
@@ -229,6 +235,7 @@ characteristics:
       value: 123
     - model: DN25
       value: 123
+    unit_id: u:millimeter
   - attribute: dimension_d_connection
     unit_symbol:
     values:
@@ -245,78 +252,102 @@ characteristics:
     - condition: MA408 (DN15), R160
       value: 0.015625
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R250
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R400
       value: 0.00625
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R500
       value: 0.005
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R250
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R400
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R500
       value: 0.008
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R160
       value: 0.039375
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R250
       value: 0.0252
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R400
       value: 0.01575
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R500
       value: 0.0126
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: nominal diameter × meter ratio R (Q3/Q1)
     values:
     - condition: MA408 (DN15), R160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R250
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R400
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN15), R500
       value: 0.008
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R160
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R250
       value: 0.0256
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R400
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN20), R500
       value: 0.0128
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R160
       value: 0.063
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R250
       value: 0.04032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R400
       value: 0.0252
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MA408 (DN25), R500
       value: 0.02016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     axis: available meter ratio
     values:
@@ -334,12 +365,15 @@ characteristics:
     - condition: lower flowrates (Q1 ≤ Q < Q2)
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: upper flowrates (Q2 ≤ Q ≤ Q4), water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: upper flowrates (Q2 ≤ Q ≤ Q4), water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: calculator_capacity
     axis: display mode
     values:

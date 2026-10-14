@@ -93,7 +93,7 @@ characteristics:
     maximum_permitted_error_lower_flow_rates:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_interval:
       value: 0.001
       unit_symbol: m³
@@ -157,7 +157,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     battery_lifetime:
       value: 16
       unit_symbol: years
@@ -250,6 +250,7 @@ characteristics:
       value: 20
     - model: DN20-Q3=4-R800
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -291,6 +292,7 @@ characteristics:
       value: 4
     - model: DN20-Q3=4-R800
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -332,6 +334,7 @@ characteristics:
       value: 0.01
     - model: DN20-Q3=4-R800
       value: 0.005
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -373,6 +376,7 @@ characteristics:
       value: 0.016
     - model: DN20-Q3=4-R800
       value: 0.008
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -414,6 +418,7 @@ characteristics:
       value: 5
     - model: DN20-Q3=4-R800
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -552,6 +557,7 @@ characteristics:
       value: 40
     - model: DN40-Q3=25-R400
       value: 40
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -607,6 +613,7 @@ characteristics:
       value: 25
     - model: DN40-Q3=25-R400
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -662,6 +669,7 @@ characteristics:
       value: 0.1
     - model: DN40-Q3=25-R400
       value: 0.0625
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -717,6 +725,7 @@ characteristics:
       value: 0.16
     - model: DN40-Q3=25-R400
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -772,6 +781,7 @@ characteristics:
       value: 31.25
     - model: DN40-Q3=25-R400
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -993,6 +1003,7 @@ characteristics:
       value: 300
     - model: DN40-Q3=25-R400
       value: 300
+    unit_id: u:millimeter
   config_level:
   - attribute: design_availability
     axis: design
@@ -1016,9 +1027,11 @@ characteristics:
     - condition: DN15
       value: 80, 105, 110, 115, 165, 170
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN20
       value: 105, 110, 130, 165, 190
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: water_temperature_range
     axis: meter_temperature_class
     values:
@@ -1052,9 +1065,11 @@ characteristics:
     - condition: "≤ 30 °C"
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: "> 30 °C"
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permitted_error_upper_zone
     axis: water_temperature
     values:
@@ -1063,11 +1078,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

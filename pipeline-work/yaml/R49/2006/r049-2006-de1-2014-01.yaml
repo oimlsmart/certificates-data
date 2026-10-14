@@ -52,7 +52,7 @@ characteristics:
     nominal_size_dn:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     q2_over_q1_ratio:
       value: 1.6
@@ -74,12 +74,12 @@ characteristics:
     maximum_permitted_error_q2_to_q4:
       value: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_permitted_error_q1_to_q2:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     q2_over_q1:
       value: 1.6
@@ -89,7 +89,7 @@ characteristics:
     maximum_permissible_error_low_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     minimum_pressure:
       value: 0.3
@@ -102,11 +102,11 @@ characteristics:
     minimum_straight_length_inlet:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   config_level:
   - attribute: orientation
     axis: type group, Q3 and Q3/Q1 class range
@@ -162,13 +162,15 @@ characteristics:
     - condition: Q2 ≤ Q ≤ Q4
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q < Q2
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
   model_level:
   - attribute: q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: ET1+ET2+ET3+ET4_DN20_Q3-2.5_H
       value: 2.5
@@ -190,7 +192,7 @@ characteristics:
       value: 1.6
   - attribute: q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: ET1+ET2+ET3+ET4_DN20_Q3-2.5_H
       value: 3.13
@@ -252,7 +254,7 @@ characteristics:
         max: 90
   - attribute: maximum_permissible_error_high_zone
     unit_symbol: "%"
-    unit_id:
+    unit_id: u:percent
     values:
     - model: ET1+ET2+ET3+ET4_DN20_Q3-2.5_H
       value: 2
@@ -289,6 +291,7 @@ characteristics:
       value: 20
     - model: ET1-ET4 DN20 Q3=4.0 V
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
     values:
@@ -306,6 +309,7 @@ characteristics:
       value: 4.0
     - model: ET1-ET4 DN20 Q3=4.0 V
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -323,6 +327,7 @@ characteristics:
       value: 5.0
     - model: ET1-ET4 DN20 Q3=4.0 V
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: orientation
     unit_symbol:
     values:
@@ -398,11 +403,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 0.1
@@ -412,11 +417,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 2
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: H
         unit_symbol:
@@ -437,11 +442,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 0.1
@@ -451,11 +456,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 2
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: rising pipe and falling pipe / V 90° / V 45°
         unit_symbol:
@@ -475,11 +480,11 @@ model_family:
       q3:
         value: 4.0
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 5.0
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 0.1
@@ -489,11 +494,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 2
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: H
         unit_symbol:
@@ -514,11 +519,11 @@ model_family:
       q3:
         value: 4.0
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 5.0
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 0.1
@@ -528,11 +533,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 2
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: rising pipe and falling pipe / V 90° / V 45°
         unit_symbol:
@@ -551,11 +556,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 30
@@ -565,11 +570,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 3
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: H
         unit_symbol:
@@ -588,11 +593,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 30
@@ -602,11 +607,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 3
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: rising pipe and falling pipe / V 90° / V 45°
         unit_symbol:
@@ -623,11 +628,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 30
@@ -637,11 +642,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 3
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: H
         unit_symbol:
@@ -658,11 +663,11 @@ model_family:
       q3:
         value: 2.5
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 3.13
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 30
@@ -672,11 +677,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 3
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: rising pipe and falling pipe / V 90° / V 45°
         unit_symbol:
@@ -695,11 +700,11 @@ model_family:
       q3:
         value: 1.6
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       q4:
         value: 2.0
         unit_symbol: m³/h
-        unit_id:
+        unit_id: u:cubic_meter_per_hour
       water_temperature_range:
         value:
           min: 30
@@ -709,11 +714,11 @@ model_family:
       maximum_permissible_error_high_zone:
         value: 3
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       maximum_permissible_error_low_zone:
         value: 5
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       orientation:
         value: H
         unit_symbol:

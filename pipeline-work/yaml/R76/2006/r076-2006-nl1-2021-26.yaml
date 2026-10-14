@@ -56,6 +56,7 @@ characteristics:
         max: 3000
       unit_symbol: divisions
       unit_id:
+      _unit_kind: custom_count
     maximum_number_of_scale_intervals_per_partial_weighing_range:
       value:
         min:
@@ -83,7 +84,7 @@ characteristics:
     additive_tare_limit_percent_of_max:
       value: 250
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     load_cell_excitation_voltage:
       value: 4.85
       unit_symbol: V
@@ -95,11 +96,13 @@ characteristics:
     minimum_signal_input_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 40
       unit_symbol: Ω
@@ -115,7 +118,7 @@ characteristics:
     maximum_cable_length_per_cross_section:
       value: 666
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
     temperature_range:
       value:
         min: -10

@@ -207,11 +207,13 @@ components:
       minimum_signal_input_voltage:
         value: 0
         unit_symbol: mV
-        unit_id:
+        unit_id: u:volt
+        prefix: p:milli
       minimum_input_voltage_per_verification_scale_interval:
         value: 0.5
         unit_symbol: µV
-        unit_id:
+        unit_id: u:volt
+        prefix: p:micro
       minimum_load_cell_resistance:
         value: 87
         unit_symbol: Ω
@@ -309,7 +311,7 @@ components:
       safe_overload:
         value: 150
         unit_symbol: "%"
-        unit_id:
+        unit_id: u:percent
       safe_overload_reference:
         value: Emax
         unit_symbol:
@@ -348,3 +350,4 @@ components:
         value: 2
       - model: rated output 3 mV/V
         value: 3
+      unit_id: u:millivolt_per_volt

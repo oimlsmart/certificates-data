@@ -52,12 +52,14 @@ characteristics:
       value: 20
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     length:
       value:
         min: 130
         max: 190
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     body:
       value: Metallic
       unit_symbol:
@@ -75,6 +77,8 @@ characteristics:
       value: 55
       unit_symbol: cm³
       footnote_markers: []
+      unit_id: u:cubic_meter
+      prefix: p:centi
     q2_over_q1_ratio:
       value: 1.6
       unit_symbol:
@@ -130,6 +134,7 @@ characteristics:
     - model: Q3=4 m³/h
       value: 4
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
     unit_symbol: m³/h
     values:
@@ -139,6 +144,7 @@ characteristics:
     - model: Q3=4 m³/h
       value: 5
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1_ratio
     unit_symbol:
     values:
@@ -193,9 +199,13 @@ characteristics:
     - condition: option 1
       value: 0.05
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: option 2
       value: 0.02
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
 recommendation:
   id: R49
   edition: 2013

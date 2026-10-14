@@ -76,7 +76,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     q3_q1_ratio:
       value:
         min: 40
@@ -122,11 +122,11 @@ characteristics:
     minimum_inlet_straight_length:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_outlet_straight_length:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_profile_sensitivity_class:
       value: U0D0
       unit_symbol:
@@ -175,6 +175,7 @@ characteristics:
       value: 20
     - model: LXC DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -184,6 +185,7 @@ characteristics:
       value: 4.0
     - model: LXC DN25
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -193,6 +195,7 @@ characteristics:
       value: 5.0
     - model: LXC DN25
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_type
     unit_symbol:
     values:
@@ -211,6 +214,7 @@ characteristics:
       value: 195
     - model: LXC DN25
       value: 160
+    unit_id: u:millimeter
   config_level:
   - attribute: q1
     axis: q3_q1_ratio
@@ -282,6 +286,7 @@ characteristics:
       value: 0.02
     - condition: DN25 R400
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: q3_q1_ratio
     unit_symbol: m³/h
@@ -352,6 +357,7 @@ characteristics:
       value: 0.032
     - condition: DN25 R400
       value: 0.025
+    unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2013

@@ -96,7 +96,7 @@ characteristics:
     maximum_permissible_error_lower_flow_range_q1_to_q2:
       value: "±5"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 0.001
@@ -170,7 +170,7 @@ characteristics:
     width:
       value: 96.3
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     measurement_principle:
       value: ultrasonic bidirectional transit-time
@@ -187,6 +187,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -196,6 +197,7 @@ characteristics:
       value: 4
     - model: DN25
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -205,6 +207,7 @@ characteristics:
       value: 0.01
     - model: DN25
       value: 0.01575
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -214,6 +217,7 @@ characteristics:
       value: 0.016
     - model: DN25
       value: 0.0252
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -223,6 +227,7 @@ characteristics:
       value: 5
     - model: DN25
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -241,6 +246,7 @@ characteristics:
       value: 130
     - model: DN25
       value: 150
+    unit_id: u:millimeter
   - attribute: pressure_loss
     unit_symbol: bar
     values:
@@ -269,6 +275,7 @@ characteristics:
       value: 82
     - model: DN25
       value: 88.5
+    unit_id: u:millimeter
   - attribute: height_h1
     unit_symbol: mm
     values:
@@ -278,6 +285,7 @@ characteristics:
       value: 65
     - model: DN25
       value: 67.5
+    unit_id: u:millimeter
   - attribute: software_version
     unit_symbol:
     values:
@@ -303,9 +311,11 @@ characteristics:
     - condition: Θ ≤ 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

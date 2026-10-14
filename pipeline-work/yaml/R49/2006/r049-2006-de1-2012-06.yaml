@@ -81,13 +81,14 @@ characteristics:
         min: 165
         max:
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     nominal_diameter_dn:
       value: 15
       unit_symbol: DN
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     connection_type:
       value: "≥G 3/4 B"
       unit_symbol:
@@ -125,12 +126,12 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     environmental_class:
       value: B, C
@@ -147,6 +148,7 @@ characteristics:
     - model: MTK-S1 Q3-2.5 165
       value: 2.5
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -156,6 +158,7 @@ characteristics:
     - model: MTK-S1 Q3-2.5 165
       value: 3.125
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss_class
     unit_symbol: bar
     values:
@@ -174,18 +177,22 @@ characteristics:
       value: 2
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: T ≤ 30 °C, Q1 ≤ Q < Q2
       value: 5
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: T > 30 °C, Q2 ≤ Q ≤ Q4
       value: 3
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: T > 30 °C, Q1 ≤ Q < Q2
       value: 5
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
   - attribute: q1
     axis: orientation_H_by_model_and_q3_q1_ratio
     values:
@@ -193,66 +200,82 @@ characteristics:
       value: 64
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 31.5
       value: 50.8
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 40
       value: 40
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 50
       value: 32
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 63
       value: 25.4
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 80
       value: 20
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 100
       value: 16
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 25
       value: 100
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 31.5
       value: 79.4
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 40
       value: 62.5
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 50
       value: 50
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 63
       value: 39.7
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 80
       value: 31.2
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 100
       value: 25
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 125
       value: 20
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 160
       value: 15.6
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
   - attribute: q2
     axis: orientation_H_by_model_and_q3_q1_ratio
     values:
@@ -260,66 +283,82 @@ characteristics:
       value: 102.4
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 31.5
       value: 81.3
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 40
       value: 64
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 50
       value: 51.2
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 63
       value: 40.6
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 80
       value: 32
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 100
       value: 25.6
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 25
       value: 160
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 31.5
       value: 127
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 40
       value: 100
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 50
       value: 80
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 63
       value: 63.5
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 80
       value: 50
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 100
       value: 40
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 125
       value: 32
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 160
       value: 25
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
   - attribute: q1
     axis: orientation_V_by_model_and_q3_q1_ratio
     values:
@@ -327,22 +366,27 @@ characteristics:
       value: 80
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 25
       value: 64
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 25
       value: 100
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 31.5
       value: 79.4
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 40
       value: 62.5
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
   - attribute: q2
     axis: orientation_V_by_model_and_q3_q1_ratio
     values:
@@ -350,22 +394,27 @@ characteristics:
       value: 128
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 1.6 m³/h, Q3/Q1 = 25
       value: 102.4
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 25
       value: 160
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 31.5
       value: 127
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
     - condition: Q3 = 2.5 m³/h, Q3/Q1 = 40
       value: 100
       unit_symbol: ℓ/h
       footnote_markers: []
+      unit_id: u:liter_per_hour
 recommendation:
   id: R49
   edition: 2006

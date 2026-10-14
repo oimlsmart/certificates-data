@@ -84,9 +84,11 @@ characteristics:
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     flow_conditioner:
       value: none
     orientation_limitations:
@@ -103,6 +105,7 @@ characteristics:
       value: 4.0
     - model: SM700
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -114,6 +117,7 @@ characteristics:
       value: 5.0
     - model: SM700
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2_over_q1
     values:
     - model: Q200 Q3=1.6
@@ -135,6 +139,7 @@ characteristics:
       value: 190
     - model: SM700
       value: 190
+    unit_id: u:millimeter
   - attribute: thread
     values:
     - model: Q200 Q3=1.6
@@ -175,66 +180,86 @@ characteristics:
     - condition: Q200 Q3=1.6, Q3/Q1=160
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=1.6, Q3/Q1=200
       value: 0.008
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=1.6, Q3/Q1=250
       value: 0.0064
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=160
       value: 0.0156
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=200
       value: 0.0125
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=250
       value: 0.01
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM250, Q3/Q1=160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM250, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM700, Q3/Q1=160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM700, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: Q3/Q1 ratio
     values:
     - condition: Q200 Q3=1.6, Q3/Q1=160
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=1.6, Q3/Q1=200
       value: 0.0128
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=1.6, Q3/Q1=250
       value: 0.01024
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=200
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: Q200 Q3=2.5, Q3/Q1=250
       value: 0.016
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM250, Q3/Q1=160
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM250, Q3/Q1=200
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM700, Q3/Q1=160
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: SM700, Q3/Q1=200
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2006

@@ -65,11 +65,12 @@ characteristics:
         min: 400
         max: 1400
       unit_symbol: kg/m³
-      unit_id:
+      unit_id: u:kilogram_per_cubic_meter
     maximum_viscosity:
       value: 1000
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     accuracy_class:
       value: 0.3 / 0.5 / 1.0 / 1.5
       unit_symbol:
@@ -119,6 +120,7 @@ characteristics:
       value: 1000
     - model: Promass O DN80
       value: 3000
+    unit_id: u:kilogram_per_minute
   - attribute: maximum_flow_rate
     unit_symbol: t/h
     values:
@@ -159,6 +161,7 @@ characteristics:
       value: 58.3
     - model: Promass O DN80
       value: 150
+    unit_id: u:kilogram_per_minute
   - attribute: minimum_flow_rate
     unit_symbol: t/h
     values:
@@ -195,6 +198,7 @@ characteristics:
       value: 150
       footnote_markers:
       - 2)
+    unit_id: u:kilogram_per_minute
   - attribute: minimum_flow_rate_accuracy_class_0_3_0_5
     unit_symbol: t/h
     values:
@@ -257,6 +261,7 @@ characteristics:
       value: 75
       footnote_markers:
       - 3)
+    unit_id: u:kilogram_per_minute
   - attribute: minimum_flow_rate_accuracy_class_1_0_1_5
     unit_symbol: t/h
     values:
@@ -349,15 +354,19 @@ characteristics:
     - condition: Promass F
       value: 100
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: Promass X
       value: 100
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: Promass O
       value: 258
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: Promass Q
       value: 100
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: temperature_range_liquid_for_mass_measurement
     axis: sensor_family_and_accuracy_class
     values:

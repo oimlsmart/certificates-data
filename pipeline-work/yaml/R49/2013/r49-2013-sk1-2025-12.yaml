@@ -97,7 +97,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     calculator_capacity:
       value: 99999.9999
       unit_symbol: m³
@@ -167,7 +167,7 @@ characteristics:
     overall_width:
       value: 80
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: nominal_diameter_dn
     unit_symbol: mm
@@ -178,6 +178,7 @@ characteristics:
       value: 20
     - model: LXC25
       value: 25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -187,6 +188,7 @@ characteristics:
       value: 4
     - model: LXC25
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -196,6 +198,7 @@ characteristics:
       value: 5
     - model: LXC25
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -214,6 +217,7 @@ characteristics:
       value: 130/190/195
     - model: LXC25
       value: 160/225/260
+    unit_id: u:millimeter
   - attribute: overall_height
     unit_symbol: mm
     values:
@@ -223,6 +227,7 @@ characteristics:
       value: 113
     - model: LXC25
       value: 114
+    unit_id: u:millimeter
   config_level:
   - attribute: minimum_flowrate_q1
     axis: model and ratio_q3_q1
@@ -230,102 +235,102 @@ characteristics:
     - condition: LXC15, R=500
       value: 0.005
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=400
       value: 0.00625
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=250
       value: 0.01
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=160
       value: 0.015625
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=500
       value: 0.008
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=400
       value: 0.01
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=250
       value: 0.016
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=160
       value: 0.025
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=500
       value: 0.0126
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=400
       value: 0.01575
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=250
       value: 0.0252
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=160
       value: 0.039375
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: model and ratio_q3_q1
     values:
     - condition: LXC15, R=500
       value: 0.008
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=400
       value: 0.01
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=250
       value: 0.016
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC15, R=160
       value: 0.025
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=500
       value: 0.0128
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=400
       value: 0.016
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=250
       value: 0.0256
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC20, R=160
       value: 0.04
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=500
       value: 0.02016
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=400
       value: 0.0252
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=250
       value: 0.04032
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     - condition: LXC25, R=160
       value: 0.063
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
   - attribute: maximum_permitted_error_upper_flowrates_range
     axis: water_temperature
     values:
@@ -334,13 +339,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

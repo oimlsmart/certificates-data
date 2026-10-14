@@ -53,17 +53,17 @@ characteristics:
     rated_output:
       value: 0.9
       unit_symbol: mV/V
-      unit_id:
+      unit_id: u:millivolt_per_volt
     dead_load:
       value: 0
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     dead_load_reference:
       value: Emax
     safe_overload:
       value: 300
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     safe_overload_reference:
       value: Emax
     input_impedance:
@@ -97,9 +97,12 @@ characteristics:
     - condition: Range 1
       value: Emax/7500
       unit_symbol: "%Emax"
+      unit_id: u:percent_of_maximum_capacity
     - condition: Range 2
       value: Emax/6500
       unit_symbol: "%Emax"
+      unit_id: u:percent_of_maximum_capacity
+    unit_id: u:percent_of_maximum_capacity
 recommendation:
   id: R60
   edition: 2000
@@ -171,6 +174,7 @@ matrix_tables:
     symbol:
     unit_symbol: mV/V
     value: 0.9
+    unit_id: u:millivolt_per_volt
   - range: Range 1
     attribute: maximum_capacity
     symbol: Emax
@@ -182,6 +186,7 @@ matrix_tables:
     symbol: vmin = (Emax/Y)
     unit_symbol: "%Emax"
     value: Emax/7500
+    unit_id: u:percent_of_maximum_capacity
   - range: Range 2
     attribute: maximum_capacity
     symbol: Emax
@@ -193,5 +198,6 @@ matrix_tables:
     symbol: vmin = (Emax/Y)
     unit_symbol: "%Emax"
     value: Emax/6500
+    unit_id: u:percent_of_maximum_capacity
   description: Metrological characteristics for application in approved weighing instruments.
   footnotes: []

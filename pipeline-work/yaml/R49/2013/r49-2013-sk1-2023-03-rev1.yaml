@@ -178,6 +178,7 @@ characteristics:
       value: 50
     - model: IW2-DN50-C2-Q3=25
       value: 50
+    unit_id: u:millimeter
   - attribute: accuracy_class
     unit_symbol:
     values:
@@ -240,6 +241,7 @@ characteristics:
       value: 16
     - model: IW2-DN50-C2-Q3=25
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -271,6 +273,7 @@ characteristics:
       value: 0.0254
     - model: IW2-DN50-C2-Q3=25
       value: 0.025
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -302,6 +305,7 @@ characteristics:
       value: 0.04064
     - model: IW2-DN50-C2-Q3=25
       value: 0.04
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -333,6 +337,7 @@ characteristics:
       value: 20
     - model: IW2-DN50-C2-Q3=25
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -454,6 +459,7 @@ characteristics:
       value:
         min: 200
         max: 311
+    unit_id: u:millimeter
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -492,24 +498,30 @@ characteristics:
     - condition: accuracy class 2, water temperature <= 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 2, water temperature > 30 °C
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 1, water temperature <= 30 °C
       value: "±1"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 1, water temperature > 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permissible_error_lower_flowrates_q1_le_q_lt_q2
     axis: accuracy_class
     values:
     - condition: accuracy class 2
       value: "±5"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: accuracy class 1
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: reverse_flow_measurement
     axis: nominal_diameter_and_accuracy_class
     values:

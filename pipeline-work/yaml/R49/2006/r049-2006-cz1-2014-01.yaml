@@ -80,7 +80,7 @@ characteristics:
     mpe_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     temperature_class:
       value: T30 and T50
@@ -144,6 +144,7 @@ characteristics:
       value: 15
     - model: MULTI DN 20
       value: 20
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -155,6 +156,7 @@ characteristics:
       value:
         min:
         max: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -170,6 +172,7 @@ characteristics:
         max: 4.0
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -181,6 +184,7 @@ characteristics:
       value:
         min: 0.0512
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -192,6 +196,7 @@ characteristics:
       value:
         min: 0.032
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: rapid_test_device_resolution
     unit_symbol: pulse/L
     values:
@@ -208,6 +213,7 @@ characteristics:
         max: 190
     - model: MULTI DN 20
       value: 190
+    unit_id: u:millimeter
   - attribute: connection_thread_size
     unit_symbol:
     values:
@@ -222,9 +228,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: indicating_device_roller_pointer_combination
     axis: variant
     values:

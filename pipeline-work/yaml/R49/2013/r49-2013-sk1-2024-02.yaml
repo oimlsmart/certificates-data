@@ -94,7 +94,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     mechanical_calculator_capacity:
       value: 99999.9999
       unit_symbol: m³
@@ -135,6 +135,7 @@ characteristics:
       value: 20
     - model: LXSZ-25
       value: 25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -144,6 +145,7 @@ characteristics:
       value: 4
     - model: LXSZ-25
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -153,6 +155,7 @@ characteristics:
       value: 0.025
     - model: LXSZ-25
       value: 0.025
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -162,6 +165,7 @@ characteristics:
       value: 0.04
     - model: LXSZ-25
       value: 0.04
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -171,6 +175,7 @@ characteristics:
       value: 5
     - model: LXSZ-25
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -189,6 +194,7 @@ characteristics:
       value: 195
     - model: LXSZ-25
       value: 225
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates_zone_q2_to_q4
     axis: water_temperature
@@ -198,11 +204,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

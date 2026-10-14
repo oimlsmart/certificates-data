@@ -77,7 +77,7 @@ characteristics:
     maximum_permitted_error_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T30 or T50
       unit_symbol:
@@ -97,7 +97,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: horizontal with the indicating device at the top
       unit_symbol:
@@ -125,11 +125,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner_required:
       value: 'No'
       unit_symbol:
@@ -145,7 +145,7 @@ characteristics:
     length:
       value: 165 or 190
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -170,6 +170,7 @@ characteristics:
       value: 20
     - model: DN20-R40
       value: 20
+    unit_id: u:millimeter
   - attribute: q1
     unit_symbol: m³/h
     values:
@@ -193,6 +194,7 @@ characteristics:
       value: 0.08
     - model: DN20-R40
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -216,6 +218,7 @@ characteristics:
       value: 0.128
     - model: DN20-R40
       value: 0.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -239,6 +242,7 @@ characteristics:
       value: 4.0
     - model: DN20-R40
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -262,6 +266,7 @@ characteristics:
       value: 5.0
     - model: DN20-R40
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio
     unit_symbol:
     values:
@@ -315,9 +320,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

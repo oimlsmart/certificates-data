@@ -69,6 +69,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30 or T50
     water_pressure_class:
@@ -94,6 +95,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     orientation_limitation:
       value: any
     eut_testing_category:
@@ -103,9 +105,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     flow_conditioner:
       value: 'No'
     mounting:
@@ -125,6 +129,7 @@ characteristics:
       unit_symbol: mA
       footnote_markers:
       - 2)
+      unit_id: u:milliampere
     inductive_sensor_max_supply_voltage:
       value: 24
       unit_symbol: V
@@ -138,6 +143,7 @@ characteristics:
       unit_symbol: mA
       footnote_markers:
       - 2)
+      unit_id: u:milliampere
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -158,6 +164,7 @@ characteristics:
       value: 32
     - model: GKMV40 DN40
       value: 40
+    unit_id: u:millimeter
   - attribute: q1_minimum_flowrate
     unit_symbol: m³/h
     values:
@@ -177,6 +184,7 @@ characteristics:
       value: 0.025
     - model: GKMV40 DN40
       value: 0.04
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2_transitional_flowrate
     unit_symbol: m³/h
     values:
@@ -196,6 +204,7 @@ characteristics:
       value: 0.04
     - model: GKMV40 DN40
       value: 0.064
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_permanent_flowrate
     unit_symbol: m³/h
     values:
@@ -215,6 +224,7 @@ characteristics:
       value: 10.0
     - model: GKMV40 DN40
       value: 16.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
     unit_symbol: m³/h
     values:
@@ -234,6 +244,7 @@ characteristics:
       value: 12.5
     - model: GKMV40 DN40
       value: 20.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -293,6 +304,8 @@ characteristics:
       value: 31.05
     - model: GKMV40 DN40
       value: 15.066
+    unit_id: u:cubic_meter
+    prefix: p:deci
   - attribute: body_material
     unit_symbol:
     values:
@@ -321,11 +334,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013
@@ -424,6 +439,7 @@ components:
     reed_sensor_max_supply_current:
       value: 50
       unit_symbol: mA
+      unit_id: u:milliampere
     inductive_sensor_max_supply_voltage:
       value: 24
       unit_symbol: V
@@ -433,6 +449,7 @@ components:
     inductive_sensor_max_supply_current:
       value: 20
       unit_symbol: mA
+      unit_id: u:milliampere
     test_status: not tested (see footnote 2)
 footnotes:
 - marker: 1)
