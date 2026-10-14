@@ -15,6 +15,15 @@ require "set"
 
 REPO = File.expand_path("..", __dir__)
 
+# Sign-variant folding: visually identical code points that Unicode keeps
+# distinct (OHM SIGN vs GREEK OMEGA, MICRO SIGN vs GREEK MU, SCRIPT l vs l)
+# plus NFC for the micro-sign pair. Applied to every symbol on both sides.
+def fold_signs(s)
+  s.unicode_normalize(:nfc).tr("\u2126\u00B5\u2113", "\u03A9\u03BCl")
+end
+
+anchor_marker = nil
+
 symbol_map = {}
 File.read("#{REPO}/oiml_cs/units/units_db.py").scan(/"([^"]+)":\s*"(u:[^"]+)"/) { |s, id| symbol_map[s] = id }
 
@@ -23,19 +32,20 @@ base_map = {}
 (unitsdb["units"] || []).each do |u|
   uid = u["identifiers"].to_a.find { |x| x["id"].to_s.start_with?("u:") }&.dig("id")
   Array(u["symbols"]).each do |sym|
-    %w[unicode ascii].each { |k| base_map[sym[k]] = uid if sym[k].is_a?(String) && uid }
+    %w[unicode ascii].each { |k| base_map[fold_signs(sym[k])] = uid if sym[k].is_a?(String) && uid }
   end
 end
 
-prefix_by_symbol = {
-  "da" => "p:deka", "h" => "p:hecto", "k" => "p:kilo", "M" => "p:mega",
-  "G" => "p:giga", "T" => "p:tera", "P" => "p:peta", "E" => "p:exa",
-  "Z" => "p:zetta", "Y" => "p:yotta", "R" => "p:ronna", "Q" => "p:quetta",
-  "d" => "p:deci", "c" => "p:centi", "m" => "p:milli",
-  "µ" => "p:micro", "μ" => "p:micro", "n" => "p:nano", "p" => "p:pico",
-  "f" => "p:femto", "a" => "p:atto", "z" => "p:zepto", "y" => "p:yocto",
-  "q" => "p:quecto",
-}
+# prefix symbols come from unitsdb itself — not hand-typed
+unitsdb_prefixes = YAML.safe_load(File.read(File.expand_path("~/src/unitsml/unitsdb/prefixes.yaml")), aliases: true)
+prefix_by_symbol = {}
+(unitsdb_prefixes["prefixes"] || []).each do |p|
+  pid = p["identifiers"].to_a.find { |x| x["type"] == "unitsml" }&.dig("id")
+  Array(p["symbols"]).each do |sym|
+    %w[unicode ascii].each { |k| prefix_by_symbol[sym[k]] = pid if sym[k].is_a?(String) && pid }
+  end
+end
+
 PREFIX_ORDER = prefix_by_symbol.sort_by { |k, _| -k.length }.to_h
 
 local = YAML.safe_load(File.read("#{REPO}/schema/_units_local.yaml"))
@@ -75,7 +85,7 @@ COUNT_CONVENTIONS = %w[divisions digits DN].freeze
 COUNT_IDS = counts.keys.to_set
 
 def resolve(symbol, base_map, prefix_order, allowed)
-  s = symbol.strip
+  s = fold_signs(symbol.strip)
   return { unit_id: base_map[s], prefix: nil } if base_map.key?(s)
   stripped = s.sub(/\((g|a|abs|gauge|absolute)\)\z/i, "")
   return { unit_id: base_map[stripped], prefix: nil } if base_map.key?(stripped)
@@ -99,7 +109,7 @@ Dir.glob("#{REPO}/pipeline-work/yaml/R*/**/*.yaml").sort.each do |f|
     case node
     when Hash
       if node["unit_symbol"].is_a?(String) && node["unit_id"].nil? && !node["unit_symbol"].empty?
-        sym = node["unit_symbol"]
+        sym = fold_signs(node["unit_symbol"])
         if COUNT_CONVENTIONS.any? { |c| sym.casecmp(c).zero? }
           node["_unit_kind"] = "custom_count"
           counted += 1
