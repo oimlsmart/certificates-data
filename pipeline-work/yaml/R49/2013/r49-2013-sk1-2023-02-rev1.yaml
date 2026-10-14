@@ -68,6 +68,7 @@ characteristics:
       value: 9
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     display_upper_line_max_indicated_volume:
       value: 999999.999
       unit_symbol: m³
@@ -76,10 +77,11 @@ characteristics:
       value: 5
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     display_lower_line_quantity:
       value: current flow rate
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     battery_life:
       value: 16
       unit_symbol: years
@@ -109,14 +111,14 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_permissible_error_lower_flowrates:
       value:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 0.001
@@ -180,7 +182,7 @@ characteristics:
     maximum_permissible_error_lower_flowrates_q1_to_q2:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     calculator_capacity:
       value: 999999.999
       unit_symbol: m³
@@ -220,6 +222,7 @@ characteristics:
       value: 20
     - model: DN20-Q3=4
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -231,6 +234,7 @@ characteristics:
       value: 2.5
     - model: DN20-Q3=4
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -242,6 +246,7 @@ characteristics:
       value: 3.125
     - model: DN20-Q3=4
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss
     unit_symbol: bar
     values:
@@ -276,6 +281,7 @@ characteristics:
       value: 105, 110, 130, 165, 190
     - model: DN20-Q3=4
       value: 105, 110, 130, 165, 190
+    unit_id: u:millimeter
   - attribute: nominal_diameter
     unit_symbol: mm
     values:
@@ -331,6 +337,7 @@ characteristics:
       value: 40
     - model: DN40-Q3=25-R400
       value: 40
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -386,6 +393,7 @@ characteristics:
       value: 25
     - model: DN40-Q3=25-R400
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -441,6 +449,7 @@ characteristics:
       value: 0.1
     - model: DN40-Q3=25-R400
       value: 0.0625
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -496,6 +505,7 @@ characteristics:
       value: 0.16
     - model: DN40-Q3=25-R400
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -551,6 +561,7 @@ characteristics:
       value: 31.25
     - model: DN40-Q3=25-R400
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -772,6 +783,7 @@ characteristics:
       value: 300
     - model: DN40-Q3=25-R400
       value: 300
+    unit_id: u:millimeter
   config_level:
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
@@ -815,6 +827,7 @@ characteristics:
       value: 0.01
     - condition: DN20-Q3=4, ratio Q3/Q1 = 800
       value: 0.005
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     axis: model × ratio_q3_over_q1
@@ -857,6 +870,7 @@ characteristics:
       value: 0.016
     - condition: DN20-Q3=4, ratio Q3/Q1 = 800
       value: 0.008
+    unit_id: u:cubic_meter_per_hour
   - attribute: water_temperature_range
     unit_symbol: "°C"
     axis: meter_temperature_class
@@ -890,6 +904,7 @@ characteristics:
       value:
         min: -3
         max: 3
+    unit_id: u:percent
   - attribute: water_temperature_range
     axis: meter_temperature_class
     unit_symbol: "°C"
@@ -919,6 +934,7 @@ characteristics:
       value: 2
     - condition: Θ > 30°C
       value: 3
+    unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

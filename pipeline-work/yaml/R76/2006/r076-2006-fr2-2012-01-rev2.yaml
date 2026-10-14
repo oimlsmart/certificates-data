@@ -150,24 +150,31 @@ characteristics:
         min: -20
         max: 30
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: minimum_input_voltage_per_scale_interval_dumin
     axis: channel_type
     values:
     - condition: analog
       value: 0.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: measuring_range_minimum_voltage
     axis: channel_type
     values:
     - condition: analog
       value: 0.01
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: measuring_range_maximum_voltage
     axis: channel_type
     values:
     - condition: analog
       value: 20
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_load_cell_impedance_rlmin
     axis: channel_type
     values:
@@ -235,11 +242,15 @@ characteristics:
     - condition: analog
       value: 0.34
       unit_symbol: mm²
+      unit_id: u:square_meter
+      prefix: p:milli
     - condition: digital
       value:
         min: 0.34
         max:
       unit_symbol: mm²
+      unit_id: u:square_meter
+      prefix: p:milli
 recommendation:
   id: R76
   edition: 2006

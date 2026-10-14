@@ -80,12 +80,12 @@ characteristics:
     pressure_loss_class:
       value: 0.063
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
       footnote_markers: []
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
       footnote_markers: []
     orientation:
       value: All orientations except upside down (no overhead installation with register up side down)
@@ -123,6 +123,7 @@ characteristics:
     - model: DN 100
       value: 100
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -138,6 +139,7 @@ characteristics:
     - model: DN 100
       value: 125
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx1
     unit_symbol: m³/h
     values:
@@ -161,6 +163,7 @@ characteristics:
         min: 1.1
         max: 2.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx2
     unit_symbol: m³/h
     values:
@@ -184,6 +187,7 @@ characteristics:
         min: 2.1
         max: 3.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1
     unit_symbol:
     values:
@@ -222,14 +226,17 @@ characteristics:
       value: 150
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 80
       value: 0
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 100
       value: 0
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
   - attribute: minimum_straight_length_of_inlet_pipe_in_dn_multiples
     axis: nominal_diameter
     values:
@@ -252,14 +259,17 @@ characteristics:
       value: 0
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 80
       value: 0
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 100
       value: 0
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
   - attribute: minimum_straight_length_of_outlet_pipe_in_dn_multiples
     axis: nominal_diameter
     values:
@@ -282,14 +292,17 @@ characteristics:
       value: 270
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 80
       value: 300
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
     - condition: DN 100
       value: 350
       unit_symbol: mm
       footnote_markers: []
+      unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2006
@@ -344,7 +357,7 @@ components:
     q3:
       value: 4
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
       footnote_markers: []
 - role: retrofittable_inductive_pulse_generator_for_large_meter_dry_register
   type_designations:

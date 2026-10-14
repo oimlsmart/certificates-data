@@ -80,7 +80,7 @@ characteristics:
     length:
       value: 260
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     indicating_device_range:
       value: 99999
@@ -90,8 +90,9 @@ characteristics:
     verification_scale_interval:
       value: 0.05
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
+      prefix: p:deci
     reverse_flow_measurement:
       value: 'no'
       unit_symbol:
@@ -106,6 +107,7 @@ characteristics:
       value: 25
     - model: DN32
       value: 32
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -113,6 +115,7 @@ characteristics:
       value: 6.3
     - model: DN32
       value: 10
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -120,6 +123,7 @@ characteristics:
       value: 7.875
     - model: DN32
       value: 12.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connections
     unit_symbol:
     values:
@@ -134,6 +138,8 @@ characteristics:
       value: 0.0839
     - model: DN32
       value: 0.12
+    unit_id: u:cubic_meter
+    prefix: p:deci
   config_level:
   - attribute: q3_over_q1_ratio
     axis: selected flow ratio (per nominal diameter)

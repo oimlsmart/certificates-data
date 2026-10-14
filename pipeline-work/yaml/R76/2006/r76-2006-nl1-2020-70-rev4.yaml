@@ -203,6 +203,7 @@ characteristics:
       unit_symbol: divisions
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: Digital - LiNet interface
       value:
         min:
@@ -210,6 +211,7 @@ characteristics:
       unit_symbol: divisions
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: Digital - SICSPro interface
       value:
         min:
@@ -217,6 +219,7 @@ characteristics:
       unit_symbol: divisions
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: Analog load cells
       value:
         min:
@@ -224,6 +227,7 @@ characteristics:
       unit_symbol: divisions
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: Analog load cells with ISB (any excitation variant)
       value:
         min:
@@ -231,6 +235,7 @@ characteristics:
       unit_symbol: divisions
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
   - attribute: max_scale_intervals_multi_interval_or_multiple_range
     axis: load_cell_interface
     values:
@@ -242,6 +247,7 @@ characteristics:
       unit_id:
       footnote_markers: []
       note: per (partial) weighing range
+      _unit_kind: custom_count
     - condition: Digital - SICSPro interface
       value:
         min:
@@ -250,6 +256,7 @@ characteristics:
       unit_id:
       footnote_markers: []
       note: per (partial) weighing range
+      _unit_kind: custom_count
   - attribute: max_number_of_weighing_ranges
     axis: load_cell_interface
     values:
@@ -347,28 +354,32 @@ characteristics:
     - condition: Analog load cells
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
       note: Umin
+      prefix: p:milli
     - condition: Analog load cells with ISB (any excitation variant)
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
       note: Umin
+      prefix: p:milli
   - attribute: min_input_voltage_per_verification_scale_interval
     axis: load_cell_interface
     values:
     - condition: Analog load cells
       value: 0.3
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     - condition: Analog load cells with ISB (any excitation variant)
       value: 0.25
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
   - attribute: min_load_cell_resistance
     axis: load_cell_interface
     values:
@@ -424,7 +435,7 @@ characteristics:
     - condition: Analog load cells
       value: 1571
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
       note: >-
         Between indicator and junction box or load cells; if sense technology is not used the load cells
@@ -432,7 +443,7 @@ characteristics:
     - condition: Analog load cells with ISB (any excitation variant)
       value: 1571
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
       note: >-
         Between indicator and junction box or load cells; if sense technology is not used the load cells

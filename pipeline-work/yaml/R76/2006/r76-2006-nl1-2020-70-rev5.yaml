@@ -121,16 +121,19 @@ characteristics:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: LiNet interface
       value:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: SICSPro interface
       value:
         min:
         max: 1000000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: max_scale_intervals_multi_interval_or_multiple_range
     axis: connected digital device interface
     values:
@@ -139,11 +142,13 @@ characteristics:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: SICSPro interface, per (partial) weighing range
       value:
         min:
         max: 100000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: max_number_of_weighing_ranges
     axis: connected digital device interface
     values:
@@ -195,15 +200,21 @@ characteristics:
     - condition: Analog load cells (all configurations)
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: analog load cell connection
     values:
     - condition: Analog load cells without ISB
       value: 0.3
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: Analog load cells with ISB (1.5 V, 2.3 V or 3.9 V excitation)
       value: 0.25
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: analog load cell connection
     values:
@@ -251,9 +262,11 @@ characteristics:
         the load cells are connected directly without junction box or extension cable)
       value: 1571
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: 12-wire connection, indicator to junction box
       value: 433
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: power_supply_voltage_ac
     axis: instrument version
     values:

@@ -85,15 +85,15 @@ characteristics:
     accuracy_class_q2_to_q4_water_temp_le_30c:
       value: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     accuracy_class_q2_to_q4_water_temp_gt_30c:
       value: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     accuracy_class_q1_to_q2:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     pressure_range:
       value:
         min: 0.3
@@ -107,11 +107,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     climatic_environment:
       value:
         min: 5
@@ -133,7 +133,7 @@ characteristics:
   model_level:
   - attribute: q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: WPD DN50 (Q3=25)
       value: 25
@@ -151,7 +151,7 @@ characteristics:
       value: 250
   - attribute: q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: WPD DN50 (Q3=25)
       value: 31.2
@@ -185,9 +185,10 @@ characteristics:
       value: 125
     - model: WPD DN150 (Q3=250)
       value: 150
+    _unit_kind: custom_count
   - attribute: minimum_body_length
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: WPD DN50 (Q3=25)
       value:
@@ -287,90 +288,118 @@ characteristics:
     - condition: WPD DN50 (Q3=25) horizontal (H)
       value: 0.62 / 0.50 / 0.39 / 0.31 / 0.25 / 0.20
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=40) horizontal (H)
       value: 1.00 / 0.80 / 0.63 / 0.50 / 0.40 / 0.32 / 0.25 / 0.20
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN65 (Q3=40) horizontal (H)
       value: 1.00 / 0.80 / 0.63 / 0.50 / 0.40 / 0.32 / 0.25 / 0.20
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN80 (Q3=63) horizontal (H)
       value: 1.57 / 1.26 / 1.00 / 0.78 / 0.63 / 0.50 / 0.39 / 0.31
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN100 (Q3=100) horizontal (H)
       value: 2.50 / 2.00 / 1.50 / 1.25 / 1.00 / 0.80 / 0.62 / 0.50 / 0.40 / 0.317
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN125 (Q3=100) horizontal (H)
       value: 2.50 / 2.00 / 1.50 / 1.25 / 1.00 / 0.80 / 0.62 / 0.50 / 0.40 / 0.317
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN150 (Q3=250) horizontal (H)
       value: 6.25 / 5.0 / 3.689 / 3.125 / 2.5 / 2.0 / 1.563 / 1.25 / 1.0 / 0.794
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=25) vertical (V)
       value: 0.625 / 0.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=40) vertical (V)
       value: 1.0 / 0.8 / 0.635 / 0.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN65 (Q3=40) vertical (V)
       value: 1.0 / 0.8 / 0.635 / 0.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN80 (Q3=63) vertical (V)
       value: 1.57 / 1.26 / 1.0 / 0.788
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN100 (Q3=100) vertical (V)
       value: 2.5 / 2.0 / 1.587 / 1.25 / 1.0 / 0.8 / 0.625 / 0.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN125 (Q3=100) vertical (V)
       value: 2.5 / 2.0 / 1.587 / 1.25 / 1.0 / 0.8 / 0.625 / 0.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN150 (Q3=250) vertical (V)
       value: 6.25 / 5.0 / 3.968 / 3.125 / 2.5 / 2.0 / 1.563 / 1.25
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: orientation
     values:
     - condition: WPD DN50 (Q3=25) horizontal (H)
       value: 1.00 / 0.80 / 0.63 / 0.50 / 0.40 / 0.32
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=40) horizontal (H)
       value: 1.60 / 1.28 / 1.00 / 0.80 / 0.64 / 0.51 / 0.40 / 0.32
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN65 (Q3=40) horizontal (H)
       value: 1.60 / 1.28 / 1.00 / 0.80 / 0.64 / 0.51 / 0.40 / 0.32
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN80 (Q3=63) horizontal (H)
       value: 2.52 / 2.00 / 1.60 / 1.26 / 1.00 / 0.80 / 0.63 / 0.50
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN100 (Q3=100) horizontal (H)
       value: 4.00 / 3.20 / 2.54 / 2.00 / 1.60 / 1.20 / 1.00 / 0.80
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN125 (Q3=100) horizontal (H)
       value: 4.00 / 3.20 / 2.54 / 2.00 / 1.60 / 1.20 / 1.00 / 0.80
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN150 (Q3=250) horizontal (H)
       value: 10.0 / 8.0 / 6.349 / 5.0 / 4.0 / 3.2 / 2.5 / 2.0 / 1.6 / 1.27
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=25) vertical (V)
       value: 1.0 / 0.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN50 (Q3=40) vertical (V)
       value: 1.6 / 1.28 / 1.016 / 0.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN65 (Q3=40) vertical (V)
       value: 1.6 / 1.28 / 1.016 / 0.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN80 (Q3=63) vertical (V)
       value: 2.52 / 2.016 / 1.6 / 1.26
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN100 (Q3=100) vertical (V)
       value: 4.0 / 3.2 / 2.54 / 2.0 / 1.6 / 1.28 / 1.0 / 0.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN125 (Q3=100) vertical (V)
       value: 4.0 / 3.2 / 2.54 / 2.0 / 1.6 / 1.28 / 1.0 / 0.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: WPD DN150 (Q3=250) vertical (V)
       value: 10.0 / 8.0 / 6.349 / 5.0 / 4.0 / 3.2 / 2.5 / 2.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2013

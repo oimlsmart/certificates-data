@@ -58,7 +58,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone_mpe1:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T50
       unit_symbol:
@@ -134,7 +134,7 @@ characteristics:
     low_flow_cut_off:
       value: 1
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     low_flow_cut_off_basis:
       value: nominal flowrate (Q3)
       unit_symbol:
@@ -197,6 +197,7 @@ characteristics:
       value: 150
     - model: MAGB1-DN150-R50
       value: 150
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -254,6 +255,7 @@ characteristics:
       value: 788
     - model: MAGB1-DN150-R50
       value: 788
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -311,6 +313,7 @@ characteristics:
       value: 630
     - model: MAGB1-DN150-R50
       value: 630
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -368,6 +371,7 @@ characteristics:
       value: 10.08
     - model: MAGB1-DN150-R50
       value: 20.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -425,6 +429,7 @@ characteristics:
       value: 6.3
     - model: MAGB1-DN150-R50
       value: 12.6
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -597,6 +602,7 @@ characteristics:
       value: 300
     - model: MAGB1-DN150-R50
       value: 300
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone_mpeu
     axis: water_temperature
@@ -604,9 +610,11 @@ characteristics:
     - condition: "≤ 30 °C"
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: "> 30 °C"
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: resolution_of_indicating_device
     axis: display_mode
     values:

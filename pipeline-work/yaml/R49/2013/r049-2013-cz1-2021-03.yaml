@@ -53,6 +53,7 @@ characteristics:
     nominal_diameter:
       value: 15
       unit_symbol: mm
+      unit_id: u:millimeter
     measuring_principle:
       value: multi jet, dry dial
     accuracy_class:
@@ -60,6 +61,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30, T50
     water_pressure_class:
@@ -73,6 +75,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     orientation_limitation:
       value: H↑ (horizontal position with the indicating device at the top)
     indicating_range:
@@ -100,9 +103,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     sensitivity_classes:
       value: U0D0
     flow_conditioner_required:
@@ -139,6 +144,7 @@ characteristics:
       value: 2.5
     - model: Q3=2.5, Q3/Q1=40
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: q1
     unit_symbol: m³/h
     values:
@@ -166,6 +172,7 @@ characteristics:
       value: 0.05
     - model: Q3=2.5, Q3/Q1=40
       value: 0.063
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -193,6 +200,7 @@ characteristics:
       value: 0.08
     - model: Q3=2.5, Q3/Q1=40
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -220,6 +228,7 @@ characteristics:
       value: 3.13
     - model: Q3=2.5, Q3/Q1=40
       value: 3.13
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1
     unit_symbol:
     values:
@@ -254,9 +263,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: pressure_loss_class
     axis: q3
     values:
@@ -270,12 +281,15 @@ characteristics:
     - condition: option 1
       value: 165
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: option 2
       value: 170
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: option 3
       value: 190
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2013

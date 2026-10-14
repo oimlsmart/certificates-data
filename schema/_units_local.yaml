@@ -271,6 +271,66 @@ compounds:
 
 # OIML-specific COUNT units — dimensionless counters used in metrology.
 # These represent counted things, not measured quantities.
+  u:liter_per_hour:
+    names:
+    - { value: "liter per hour", lang: en }
+    - { value: "litre per hour", lang: en }
+    short: liter_per_hour
+    symbols:
+    - { unicode: "L/h", ascii: "L/h", id: "L_per_h" }
+    - { unicode: "l/h", ascii: "l/h", id: "l_per_h" }
+    - { unicode: "ℓ/h", ascii: "l/h", id: "l_ell_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:liter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+    quantity_references:
+    - { type: unitsml, id: q:volume_flow_rate }
+
+  u:kilogram_per_minute:
+    names:
+    - { value: "kilogram per minute", lang: en }
+    short: kilogram_per_minute
+    symbols:
+    - { unicode: "kg/min", ascii: "kg/min", id: "kg_per_min" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:kilogram } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:minute } }
+    quantity_references:
+    - { type: unitsml, id: q:mass_flow_rate }
+
+  u:kilogram_per_cubic_meter:
+    names:
+    - { value: "kilogram per cubic meter", lang: en }
+    short: kilogram_per_cubic_meter
+    symbols:
+    - { unicode: "kg/m³", ascii: "kg/m3", id: "kg_per_m3" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:kilogram } }
+    - { power: -3, unit_reference: { type: unitsml, id: u:meter } }
+    quantity_references:
+    - { type: unitsml, id: q:mass_density }
+
+  u:impulse_per_liter:
+    names:
+    - { value: "impulse per liter", lang: en }
+    short: impulse_per_liter
+    symbols:
+    - { unicode: "imp/L", ascii: "imp/L", id: "imp_per_L" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:one } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:liter } }
+    notes: "OIML flow-meter pulse counts per volume unit; u:one per u:liter."
+
+  u:ampere_hour:
+    names:
+    - { value: "ampere hour", lang: en }
+    short: ampere_hour
+    symbols:
+    - { unicode: "Ah", ascii: "Ah", id: "Ah" }
+    root_units:
+    - { power: 1, unit_reference: { type: unitsml, id: u:ampere } }
+    - { power: 1, unit_reference: { type: unitsml, id: u:second } }
+    notes: "Battery capacity unit; the hour factor carries the 3600 scale in usage."
 counts:
 
   u:division:
@@ -350,3 +410,4 @@ counts:
     short: customary_unit_per_kilometer
     symbols:
     - { unicode: "CU/km", ascii: "CU/km", id: "CU_per_km" }
+

@@ -69,7 +69,7 @@ characteristics:
     minimum_dead_load_relative:
       value: 0
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     ratio_y_emax_over_vmin:
       value: 10000
@@ -147,7 +147,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     reference_excitation_voltage:
       value: 10
@@ -157,8 +157,9 @@ characteristics:
     cable_cross_section:
       value: 0.5
       unit_symbol: mm²
-      unit_id:
+      unit_id: u:square_meter
       footnote_markers: []
+      prefix: p:milli
   model_level:
   - attribute: maximum_capacity
     unit_symbol: kg
@@ -189,6 +190,7 @@ characteristics:
     - model: Emax=12000kg
       value: 2.0
       footnote_markers: []
+    unit_id: u:millivolt_per_volt
 recommendation:
   id: R60
   edition: 2000

@@ -69,7 +69,7 @@ characteristics:
         min: 1
         max: 20
       unit_symbol: bar(a)
-      unit_id:
+      unit_id: u:bar
       footnote_markers: []
     ambient_temperature_range:
       value:
@@ -108,23 +108,26 @@ characteristics:
     path_angle:
       value: 60
       unit_symbol: "°"
-      unit_id:
+      unit_id: u:degree
       footnote_markers: []
     inlet_piping_length:
       value: 0
       unit_symbol: DN
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     outlet_piping_length:
       value: 0
       unit_symbol: DN
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     minimum_outlet_pipe_length:
       value: 3
       unit_symbol: DN
       unit_id:
       footnote_markers: []
+      _unit_kind: custom_count
     power_supply_voltage_external:
       value:
         min: 14
@@ -165,6 +168,7 @@ characteristics:
     - model: DN150
       value: 105
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: minimum_flow_velocity_vmin
     unit_symbol: m/s
     values:
@@ -239,7 +243,7 @@ model_family:
       internal_flow_channel_bore_diameter:
         value: 43
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
   - model_id: DN80
     label: 3" DN80
@@ -247,7 +251,7 @@ model_family:
       internal_flow_channel_bore_diameter:
         value: 66
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
   - model_id: DN100
     label: 4" DN100
@@ -255,7 +259,7 @@ model_family:
       internal_flow_channel_bore_diameter:
         value: 84
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
   - model_id: DN150
     label: 6" DN150
@@ -263,7 +267,7 @@ model_family:
       internal_flow_channel_bore_diameter:
         value: 105
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
 components:
 - role: Transducer
@@ -278,8 +282,9 @@ components:
     frequency:
       value: 250
       unit_symbol: kHz
-      unit_id:
+      unit_id: u:hertz
       footnote_markers: []
+      prefix: p:kilo
 matrix_tables:
 - name: Flow characteristics of the gas meter
   columns:

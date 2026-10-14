@@ -76,7 +76,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T30 or T50
       unit_symbol:
@@ -114,7 +114,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: any
       unit_symbol:
@@ -134,11 +134,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner_required:
       value: 'No'
       unit_symbol:
@@ -170,7 +170,7 @@ characteristics:
         min:
         max: 50
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers:
       - 2)
     inductive_sensor_max_supply_voltage:
@@ -192,13 +192,13 @@ characteristics:
         min:
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
       footnote_markers:
       - 2)
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN15
       value: 15
@@ -208,7 +208,7 @@ characteristics:
       value: 25
   - attribute: q1
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN15
       value: 0.0063
@@ -218,7 +218,7 @@ characteristics:
       value: 0.0158
   - attribute: q2
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN15
       value: 0.01
@@ -228,7 +228,7 @@ characteristics:
       value: 0.0252
   - attribute: q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN15
       value: 2.5
@@ -238,7 +238,7 @@ characteristics:
       value: 6.3
   - attribute: q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN15
       value: 3.13
@@ -268,7 +268,7 @@ characteristics:
       value: 2.0e-05
   - attribute: rapid_testing_device_resolution
     unit_symbol: dm³
-    unit_id:
+    unit_id: u:cubic_meter
     values:
     - model: DN15
       value: 156.6
@@ -276,6 +276,7 @@ characteristics:
       value: 89.7
     - model: DN25
       value: 47.49
+    prefix: p:deci
   - attribute: connection_type_screw_thread
     unit_symbol:
     unit_id:
@@ -288,7 +289,7 @@ characteristics:
       value: G1 ¼”B
   - attribute: length
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN15
       value: 115
@@ -305,11 +306,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013
@@ -374,6 +377,7 @@ components:
     max_supply_current:
       value: 50
       unit_symbol: mA
+      unit_id: u:milliampere
     note: ancillary device not tested (certificate footnote 2)
 - role: inductive sensor (ancillary device, inductive pulser)
   type_designations: []
@@ -387,6 +391,7 @@ components:
     max_supply_current:
       value: 20
       unit_symbol: mA
+      unit_id: u:milliampere
     note: ancillary device not tested (certificate footnote 2)
 footnotes:
 - marker: 1)

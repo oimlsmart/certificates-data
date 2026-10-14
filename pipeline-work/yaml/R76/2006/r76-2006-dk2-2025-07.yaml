@@ -70,7 +70,7 @@ characteristics:
         min: -10
         max: 10
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     initial_zero_setting_range_reference:
       value: Max
@@ -80,7 +80,7 @@ characteristics:
     maximum_tare_effect:
       value: 100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     fractional_factor_pi:
       value: 0.5
@@ -139,42 +139,42 @@ characteristics:
     maximum_cable_length_between_tlm8_and_junction_box:
       value: 1926
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
       footnote_markers: []
     initial_zero_setting_device_range:
       value:
         min:
         max: 20
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     semi_automatic_zero_setting_range:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     zero_tracking_range:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     semi_automatic_tare_range:
       value:
         min:
         max: 100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     preset_tare_range:
       value:
         min:
         max: 100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     other_devices:
       value: >-
@@ -232,13 +232,15 @@ characteristics:
     - condition: without inclinometer
       value: 0.2
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     - condition: with inclinometer
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
   - attribute: minimum_input_impedance_per_channel
     axis: channels_in_use
     values:

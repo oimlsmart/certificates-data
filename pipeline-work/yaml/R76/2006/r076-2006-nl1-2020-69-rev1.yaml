@@ -87,16 +87,19 @@ characteristics:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: Digital load cells or weighing modules - CANbus interface
       value:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: Digital load cells or weighing modules - SICSPro interface
       value:
         min:
         max: 1000000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: maximum_number_of_scale_intervals_multi_interval_or_multiple_range
     axis: load_cell_type_and_interface
     values:
@@ -105,6 +108,7 @@ characteristics:
         min:
         max: 100000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: maximum_number_of_weighing_ranges
     axis: load_cell_type_and_interface
     values:
@@ -132,6 +136,8 @@ characteristics:
     - condition: Analog load cells
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: load_cell_power_supply_voltage
     axis: load_cell_type_and_interface
     values:
@@ -156,6 +162,8 @@ characteristics:
     - condition: Analog load cells
       value: 0.3
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: load_cell_type_and_interface
     values:
@@ -190,6 +198,7 @@ characteristics:
     - condition: Analog load cells
       value: 1571
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: power_supply_voltage
     axis: power_supply_version
     values:

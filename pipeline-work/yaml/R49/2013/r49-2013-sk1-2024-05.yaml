@@ -63,7 +63,7 @@ characteristics:
     maximum_admissible_pressure_map:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     pressure_loss_class:
       value: 40
       unit_symbol:
@@ -73,7 +73,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     indicating_range:
       value: 999999.9999
       unit_symbol: m³
@@ -158,6 +158,7 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -173,6 +174,7 @@ characteristics:
       value: 16
     - model: DN50
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -188,6 +190,7 @@ characteristics:
       value: 20
     - model: DN50
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1_available_options
     unit_symbol: R
     values:
@@ -246,6 +249,7 @@ characteristics:
       value:
         min: 300
         max: 350
+    unit_id: u:millimeter
   config_level:
   - attribute: minimum_flowrate_q1
     axis: ratio_q3_q1
@@ -253,90 +257,118 @@ characteristics:
     - condition: DN15; R=800
       value: 3.125
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN15; R=500
       value: 5
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN15; R=250
       value: 10
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=800
       value: 5
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=500
       value: 8
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=250
       value: 16
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN25; R=500
       value: 12.6
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN25; R=250
       value: 25.2
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN32; R=500
       value: 20
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN32; R=250
       value: 40
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN40; R=500
       value: 32
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN40; R=250
       value: 64
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN50; R=500
       value: 50
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN50; R=250
       value: 100
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
   - attribute: transitional_flowrate_q2
     axis: ratio_q3_q1
     values:
     - condition: DN15; R=800
       value: 5
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN15; R=500
       value: 8
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN15; R=250
       value: 16
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=800
       value: 8
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=500
       value: 12.8
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN20; R=250
       value: 25.6
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN25; R=500
       value: 20.16
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN25; R=250
       value: 40.32
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN32; R=500
       value: 32
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN32; R=250
       value: 64
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN40; R=500
       value: 51.2
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN40; R=250
       value: 102.4
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN50; R=500
       value: 80
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
     - condition: DN50; R=250
       value: 160
       unit_symbol: L/h
+      unit_id: u:liter_per_hour
   - attribute: maximum_permissible_error_upper_flowrates
     axis: water_temperature
     values:
@@ -345,11 +377,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4; water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

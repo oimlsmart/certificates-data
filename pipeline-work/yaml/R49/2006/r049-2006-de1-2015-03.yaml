@@ -100,6 +100,7 @@ characteristics:
       value: 10
     - model: DN40
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -113,6 +114,7 @@ characteristics:
       value: 0.013
     - model: DN40
       value: 0.02
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -126,6 +128,7 @@ characteristics:
       value: 0.02
     - model: DN40
       value: 0.032
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -139,6 +142,7 @@ characteristics:
       value: 12.5
     - model: DN40
       value: 20
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_size
     unit_symbol:
     values:
@@ -190,6 +194,7 @@ characteristics:
       value:
         min: 300
         max:
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error
     axis: flow_rate_range_and_water_temperature
@@ -197,12 +202,15 @@ characteristics:
     - condition: Q2 ≤ Q ≤ Q4, water temperature ≤ 30 °C
       value: "±2"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, water temperature > 30 °C
       value: "±3"
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q < Q2
       value: "±5"
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2006

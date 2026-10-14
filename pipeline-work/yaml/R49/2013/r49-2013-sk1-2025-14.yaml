@@ -83,7 +83,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     calculator_capacity:
       value: 9999.9998
@@ -133,6 +133,7 @@ characteristics:
       value: 15
     - model: MT-20P
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -140,6 +141,7 @@ characteristics:
       value: 2.5
     - model: MT-20P
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -147,6 +149,7 @@ characteristics:
       value: 3.125
     - model: MT-20P
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -161,6 +164,7 @@ characteristics:
       value: 115
     - model: MT-20P
       value: 130
+    unit_id: u:millimeter
   - attribute: width
     unit_symbol: mm
     values:
@@ -168,6 +172,7 @@ characteristics:
       value: 100
     - model: MT-20P
       value: 96
+    unit_id: u:millimeter
   - attribute: height
     unit_symbol: mm
     values:
@@ -175,6 +180,7 @@ characteristics:
       value: 100
     - model: MT-20P
       value: 96
+    unit_id: u:millimeter
   - attribute: weight
     unit_symbol: kg
     values:
@@ -190,42 +196,54 @@ characteristics:
     - condition: MT-15P, R=100
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-15P, R=125
       value: 0.02
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-15P, R=160
       value: 0.01563
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=100
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=125
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: water meter type × ratio Q3/Q1
     values:
     - condition: MT-15P, R=100
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-15P, R=125
       value: 0.032
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-15P, R=160
       value: 0.025
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=100
       value: 0.064
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=125
       value: 0.0512
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: MT-20P, R=160
       value: 0.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: maximum_permissible_error_upper_flowrates_range
     axis: water temperature
     values:
@@ -234,11 +252,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

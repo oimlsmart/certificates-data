@@ -110,7 +110,7 @@ characteristics:
     battery_nominal_capacity:
       value: 19
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
     battery_lifetime:
       value: 10
       unit_symbol: years
@@ -141,6 +141,7 @@ characteristics:
       value: 4.0
     - model: DN25
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -150,6 +151,7 @@ characteristics:
       value: 0.01
     - model: DN25
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -159,6 +161,7 @@ characteristics:
       value: 0.016
     - model: DN25
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -168,6 +171,7 @@ characteristics:
       value: 5.0
     - model: DN25
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -188,6 +192,7 @@ characteristics:
         max: 195
     - model: DN25
       value: 225
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error_upper_zone
     axis: water_temperature
@@ -197,11 +202,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

@@ -70,7 +70,7 @@ characteristics:
     mpe_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     temperature_class:
       value: T30, T50
@@ -135,6 +135,7 @@ characteristics:
     - model: DN25
       value: 25
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -147,6 +148,7 @@ characteristics:
     - model: DN25
       value: 5.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -159,6 +161,7 @@ characteristics:
     - model: DN25
       value: 4.0
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -171,6 +174,7 @@ characteristics:
     - model: DN25
       value: 0.026
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -183,6 +187,7 @@ characteristics:
     - model: DN25
       value: 0.016
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: length_of_horizontal_water_meter
     unit_symbol: mm
     values:
@@ -195,6 +200,7 @@ characteristics:
     - model: DN25
       value: 260
       footnote_markers: []
+    unit_id: u:millimeter
   - attribute: connection_thread_size
     unit_symbol:
     values:
@@ -226,9 +232,11 @@ characteristics:
     - condition: "≤ 30 °C"
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: "> 30 °C"
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: resolution_of_indicating_device
     axis: indication_mode
     values:
@@ -293,21 +301,21 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
   - model_id: DN20
     attributes:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
   - model_id: DN25
     attributes:
       nominal_diameter:
         value: 25
         unit_symbol: mm
-        unit_id:
+        unit_id: u:millimeter
         footnote_markers: []
 footnotes: []
 matrix_tables:

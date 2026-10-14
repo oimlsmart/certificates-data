@@ -136,16 +136,19 @@ characteristics:
         min:
         max: 6000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: K-type, per partial weighing range (multi-interval)
       value:
         min:
         max: 3000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: M-type, per partial weighing range (multi-interval)
       value:
         min:
         max: 3000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: tare_limit
     axis: weighing_range_configuration
     values:
@@ -154,6 +157,7 @@ characteristics:
         min:
         max: -50
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: multi-interval instrument
       value: T <= -Max1
       unit_symbol:

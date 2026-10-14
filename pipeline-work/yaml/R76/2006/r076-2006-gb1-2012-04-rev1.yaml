@@ -73,23 +73,23 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     maximum_preset_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     semi_automatic_zero_setting:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     zero_tracking:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     load_cell_excitation_voltage:
       value: 5
       unit_symbol: V
@@ -105,15 +105,18 @@ characteristics:
     minimum_input_voltage_per_scale_interval:
       value: 0.8
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permitted_error_pind:
       value: 0.5
       unit_symbol:
@@ -131,7 +134,8 @@ characteristics:
     load_cell_cable_cross_section:
       value: 0.5
       unit_symbol: mm²
-      unit_id:
+      unit_id: u:square_meter
+      prefix: p:milli
     load_cell_cable_maximum_length_6_wire:
       value: 30
       unit_symbol: m
@@ -139,7 +143,7 @@ characteristics:
     load_cell_cable_length_per_cross_section:
       value: 60
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
     logic_level_inputs:
       value: 3
       unit_symbol:
@@ -341,7 +345,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
 - role: optional_current_loop_card
   type_designations:
   - Current loop card
@@ -352,7 +356,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
     interfaces:
       value: RS485/RS422
       unit_symbol:

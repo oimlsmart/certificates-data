@@ -91,7 +91,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     calculator_capacity_normal_mode:
       value: 99999999.999
       unit_symbol: m³
@@ -169,7 +169,7 @@ characteristics:
     dimension_b:
       value: 95.5
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -184,6 +184,7 @@ characteristics:
       value: 32
     - model: DN40
       value: 40
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -197,6 +198,7 @@ characteristics:
       value: 10
     - model: DN40
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -210,6 +212,7 @@ characteristics:
       value: 0.025
     - model: DN40
       value: 0.04
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -223,6 +226,7 @@ characteristics:
       value: 0.04
     - model: DN40
       value: 0.064
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -236,6 +240,7 @@ characteristics:
       value: 12.5
     - model: DN40
       value: 20
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -262,6 +267,7 @@ characteristics:
       value: 260
     - model: DN40
       value: 260/300
+    unit_id: u:millimeter
   - attribute: dimension_c
     unit_symbol: mm
     values:
@@ -275,6 +281,7 @@ characteristics:
       value: 115
     - model: DN40
       value: 125.5
+    unit_id: u:millimeter
   - attribute: dimension_e_height
     unit_symbol: mm
     values:
@@ -288,6 +295,7 @@ characteristics:
       value: 197
     - model: DN40
       value: 207.4
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates_q2_to_q4
     axis: water_temperature
@@ -297,13 +305,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

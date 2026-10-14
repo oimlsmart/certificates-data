@@ -86,19 +86,19 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     semi_automatic_zero_setting:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     zero_tracking:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     maximum_partial_ranges_multi_range:
       value: 3
       unit_symbol:
@@ -160,18 +160,24 @@ characteristics:
     - condition: 5V EXC analogue load cell interface option card
       value: 0.8
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: measuring_range_minimum_voltage
     axis: load_cell_input_variant
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: measuring_range_maximum_voltage
     axis: load_cell_input_variant
     values:
     - condition: 5V EXC analogue load cell interface option card
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: fraction_of_maximum_permitted_error_p_ind
     axis: load_cell_input_variant
     values:
@@ -193,6 +199,7 @@ characteristics:
     - condition: 5V EXC analogue load cell interface option card
       value: 196
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: maximum_6_wire_cable_length
     axis: load_cell_input_variant
     values:
@@ -206,6 +213,7 @@ characteristics:
     - condition: single interval
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: multi-interval/range
       value: "-Max1"
       unit_symbol:

@@ -75,8 +75,9 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.8
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 43
       unit_symbol: Ω
@@ -123,10 +124,12 @@ characteristics:
       value: 10000
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: class IIII
       value: 1000
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
   - attribute: maximum_cable_length_per_cross_section_between_indicator_and_junction_box_or_load_cells
     axis: main_board_version
     values:
@@ -134,10 +137,12 @@ characteristics:
       value: 5695.3
       unit_symbol: m/mm²
       footnote_markers: []
+      unit_id: u:meter_per_square_millimeter
     - condition: new main board
       value: 1230
       unit_symbol: m/mm²
       footnote_markers: []
+      unit_id: u:meter_per_square_millimeter
     - condition: 4-wire connection used
       value: load cells connected directly without junction box
       unit_symbol:

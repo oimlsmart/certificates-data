@@ -81,7 +81,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
@@ -142,6 +142,7 @@ characteristics:
       value: 250
     - model: FLC-2200EL DN300
       value: 300
+    unit_id: u:millimeter
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
     values:
@@ -181,6 +182,7 @@ characteristics:
       value: 8
     - model: FLC-2200EL DN300
       value: 10
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
     values:
@@ -220,6 +222,7 @@ characteristics:
       value: 12.8
     - model: FLC-2200EL DN300
       value: 16
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
     values:
@@ -259,6 +262,7 @@ characteristics:
       value: 1600
     - model: FLC-2200EL DN300
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -298,6 +302,7 @@ characteristics:
       value: 2000
     - model: FLC-2200EL DN300
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio
     unit_symbol:
     values:
@@ -439,29 +444,29 @@ characteristics:
     - condition: FLC-2200EL, all sizes
       value: 0.01
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
   - attribute: maximum_pressure_loss
     axis: documentation 11690/0-06, meter type and size
     values:
     - condition: FLC-2300, size < DN80
       value: 0.01
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     - condition: FLC-2300, size >= DN80
       value: 0.04
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
   - attribute: maximum_pressure_loss
     axis: documentation 11690/0-05, meter type and size
     values:
     - condition: FLC-2300, size < DN80
       value: 0.025
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     - condition: FLC-2300, size >= DN80
       value: 0.04
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
   - attribute: power_supply_voltage
     axis: power supply option
     values:

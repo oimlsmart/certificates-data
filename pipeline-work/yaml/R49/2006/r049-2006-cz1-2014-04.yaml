@@ -67,6 +67,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30, T50, T30/90 and T90
       unit_symbol:
@@ -118,6 +119,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: rapid_testing_device_resolution
     unit_symbol: pulse/L
     values:
@@ -138,6 +140,7 @@ characteristics:
       value: 130
     - model: DN25
       value: 160
+    unit_id: u:millimeter
   - attribute: screw_thread_size
     unit_symbol:
     values:
@@ -162,6 +165,7 @@ characteristics:
       value:
         min: 0.0315
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -177,6 +181,7 @@ characteristics:
       value:
         min: 0.0504
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -198,6 +203,7 @@ characteristics:
         max: 6.3
       footnote_markers:
       - 2)
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -213,6 +219,7 @@ characteristics:
       value:
         min:
         max: 7.88
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone
     axis: water_temperature
@@ -220,9 +227,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2006

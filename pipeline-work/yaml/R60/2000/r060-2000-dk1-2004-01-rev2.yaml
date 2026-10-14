@@ -59,7 +59,7 @@ characteristics:
     rated_output_sensitivity:
       value: 2
       unit_symbol: mV/V
-      unit_id:
+      unit_id: u:millivolt_per_volt
       footnote_markers: []
     excitation_voltage:
       value:
@@ -76,12 +76,12 @@ characteristics:
     minimum_dead_load_relative_emin_over_emax:
       value: 0
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     safe_overload_limit:
       value: 150
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     safe_overload_reference:
       value: Emax
@@ -134,10 +134,12 @@ characteristics:
       value: 0.0148
       unit_symbol: "%Emax"
       footnote_markers: []
+      unit_id: u:percent_of_maximum_capacity
     - condition: nLC = 4000
       value: 0.005
       unit_symbol: "%Emax"
       footnote_markers: []
+      unit_id: u:percent_of_maximum_capacity
   - attribute: ratio_y_emax_over_vmin
     axis: nLC rating
     values:
@@ -156,10 +158,12 @@ characteristics:
       value: 0.0039
       unit_symbol: "%Emax"
       footnote_markers: []
+      unit_id: u:percent_of_maximum_capacity
     - condition: nLC = 4000
       value: 0.003
       unit_symbol: "%Emax"
       footnote_markers: []
+      unit_id: u:percent_of_maximum_capacity
   - attribute: relative_dr_z
     axis: nLC rating
     values:

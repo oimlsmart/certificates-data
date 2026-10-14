@@ -68,7 +68,7 @@ characteristics:
     maximum_pressure:
       value: 3.5
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
     environmental_classes:
       value: M1 / E1
       unit_symbol:
@@ -88,7 +88,8 @@ characteristics:
         min: 0.4
         max: 4.5
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
   config_level:
   - attribute: flow_rate_range
     axis: viscosity_range
@@ -98,11 +99,13 @@ characteristics:
         min: 1.6
         max: 40
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: 1.1 - 4.5 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: ambient_temperature_range
     axis: heater_configuration
     values:
@@ -184,13 +187,13 @@ components:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: viscosity range 1.1 - 4.5 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     mmq:
       value: 2
       unit_symbol: L
@@ -216,7 +219,8 @@ components:
         min: 0.4
         max: 4.5
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     impulse_encoder_or_pulser:
       value: SIP-II and SIP-III Pulser
       unit_symbol:

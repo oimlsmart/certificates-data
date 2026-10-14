@@ -80,13 +80,13 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     nominal_diameter_range:
       value:
         min: 25
         max: 2000
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     orientation_limitation:
       value: any
       unit_symbol:
@@ -120,11 +120,11 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner:
       value: 'No'
       unit_symbol:
@@ -144,7 +144,7 @@ characteristics:
     cut_off:
       value: 0.2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     cut_off_reference:
       value: Q3
       unit_symbol:
@@ -208,24 +208,24 @@ characteristics:
         min: -3
         max: 3
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: class 2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
   - attribute: maximum_permissible_error_upper_flowrate_zone
     axis: accuracy_class
     values:
     - condition: class 1
       value: "±1 / ±2"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     - condition: class 2
       value: "±2 / ±3"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
   - attribute: temperature_class
     axis: liner_material
     values:
@@ -308,15 +308,15 @@ characteristics:
     - condition: DN 25–80
       value: 200
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     - condition: DN 100–150
       value: 250/250/300
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     - condition: DN 200–350
       value: 350/450/500/550
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   - attribute: power_supply_voltage
     axis: power_supply_variant
     values:
@@ -509,6 +509,7 @@ characteristics:
       value: 16000
     - model: DN 2000
       value: 16000
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -568,6 +569,7 @@ characteristics:
       value: 20000
     - model: DN 2000
       value: 20000
+    unit_id: u:cubic_meter_per_hour
   - attribute: flow_ratio_r_class_1
     unit_symbol:
     values:
@@ -642,6 +644,7 @@ characteristics:
       value: 25
     - model: DN 600
       value: 40
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2_class_1
     unit_symbol: m³/h
     values:
@@ -679,6 +682,7 @@ characteristics:
       value: 40
     - model: DN 600
       value: 64
+    unit_id: u:cubic_meter_per_hour
   - attribute: flow_ratio_r_class_2
     unit_symbol:
     values:
@@ -797,6 +801,7 @@ characteristics:
       value: 400
     - model: DN 2000
       value: 400
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2_class_2
     unit_symbol: m³/h
     values:
@@ -856,6 +861,7 @@ characteristics:
       value: 640
     - model: DN 2000
       value: 640
+    unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2013

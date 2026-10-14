@@ -76,6 +76,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     maximum_admissible_pressure_equivalent:
       value: 16
       unit_symbol: bar
@@ -130,6 +131,7 @@ characteristics:
       value: 250
     - model: MUT2300 DN300
       value: 300
+    unit_id: u:millimeter
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
     values:
@@ -173,6 +175,7 @@ characteristics:
       value: 5
     - model: MUT2300 DN300
       value: 8
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
     values:
@@ -216,6 +219,7 @@ characteristics:
       value: 8
     - model: MUT2300 DN300
       value: 12.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
     values:
@@ -259,6 +263,7 @@ characteristics:
       value: 1000
     - model: MUT2300 DN300
       value: 1000
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -302,6 +307,7 @@ characteristics:
       value: 1250
     - model: MUT2300 DN300
       value: 1250
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -464,18 +470,23 @@ characteristics:
     - condition: MUT1000EL or MUT2200EL (full bore), all sizes
       value: 0.01
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: MUT2300 (reduced bore), sizes < DN80, documentation 10713/4-03
       value: 0.01
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: MUT2300 (reduced bore), sizes ≥ DN80, documentation 10713/4-03
       value: 0.016
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: MUT2300 (reduced bore), sizes < DN80, documentation 10713/1-01
       value: 0.025
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: MUT2300 (reduced bore), sizes ≥ DN80, documentation 10713/1-01
       value: 0.04
       unit_symbol: MPa
+      unit_id: u:megapascal
   - attribute: power_supply_voltage
     axis: power source
     values:

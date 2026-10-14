@@ -82,7 +82,7 @@ characteristics:
     mpe_lower_flowrates_range_q1_le_q_lt_q2:
       value: "±5"
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     accuracy_class:
       value: 2
@@ -177,6 +177,7 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -192,6 +193,7 @@ characteristics:
       value: 16
     - model: DN50
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -207,6 +209,7 @@ characteristics:
       value: 20
     - model: DN50
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -237,6 +240,7 @@ characteristics:
       value: 200/245/300
     - model: DN50
       value: 294/300
+    unit_id: u:millimeter
   config_level:
   - attribute: pressure_loss
     axis: pressure_loss_class
@@ -258,10 +262,12 @@ characteristics:
       value: "±2"
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     - condition: ϑ > 30 °C
       value: "±3"
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
   - attribute: capacity_of_calculator
     axis: indicating_device_variant
     values:
@@ -351,7 +357,7 @@ components:
     reflection_sheet_angle:
       value: 45
       unit_symbol: "°"
-      unit_id:
+      unit_id: u:degree
       footnote_markers: []
     ultrasonic_transducer_count:
       value: 2

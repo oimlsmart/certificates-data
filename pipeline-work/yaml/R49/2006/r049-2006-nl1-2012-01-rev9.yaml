@@ -273,6 +273,7 @@ characteristics:
       value: 39.375
     - model: DN600 class 1 or 2 Q1=63 Q3=6300
       value: 63
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_q2
     unit_symbol: m³/h
     values:
@@ -348,6 +349,7 @@ characteristics:
       value: 63
     - model: DN600 class 1 or 2 Q1=63 Q3=6300
       value: 100.8
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_q3
     unit_symbol: m³/h
     values:
@@ -423,6 +425,7 @@ characteristics:
       value: 6300
     - model: DN600 class 1 or 2 Q1=63 Q3=6300
       value: 6300
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_q4
     unit_symbol: m³/h
     values:
@@ -498,6 +501,7 @@ characteristics:
       value: 7875
     - model: DN600 class 1 or 2 Q1=63 Q3=6300
       value: 7875
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -656,20 +660,24 @@ characteristics:
     - condition: meter sizes DN200 and smaller
       value: 16
       unit_symbol: bar(g)
+      unit_id: u:bar
     - condition: meter sizes DN250 and larger
       value: 10
       unit_symbol: bar(g)
+      unit_id: u:bar
   - attribute: field_current
     axis: software_version
     values:
     - condition: software version 4.3.1_ or lower (field current can only be set to this value)
       value: 16
       unit_symbol: mA
+      unit_id: u:milliampere
     - condition: >-
         software version 5.0.1_ or higher (different field currents can be selected and shall be set to
         this value)
       value: 16
       unit_symbol: mA
+      unit_id: u:milliampere
 recommendation:
   id: R49
   edition: 2006

@@ -74,11 +74,11 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     maximum_preset_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
@@ -86,11 +86,13 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     apportionment_factor_pind:
       value: 0.5
       unit_symbol:
@@ -106,13 +108,13 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     zero_tracking_range:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     load_cell_connection:
       value: 4 or 6-core with braided outer screen, flexible PVC overall jacket
       unit_symbol:
@@ -120,7 +122,7 @@ characteristics:
     load_cell_cable_maximum_length_six_wire:
       value: 196
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
     load_cell_cable_maximum_length_limit:
       value: 30
       unit_symbol: m
@@ -196,6 +198,8 @@ characteristics:
       value: 0.8
     - model: ZM305
       value: 0.5
+    unit_id: u:volt
+    prefix: p:micro
   - attribute: number_of_operational_keys
     unit_symbol:
     values:
@@ -301,7 +305,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
 - role: optional_interface_card
   type_designations:
   - Current loop card
@@ -312,7 +316,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
-      unit_id:
+      unit_id: u:milliampere
     serial_interfaces:
       value: RS485 / RS422
       unit_symbol:

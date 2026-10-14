@@ -54,15 +54,15 @@ characteristics:
     nominal_diameter:
       value: 20
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     q3:
       value: 4
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     q4:
       value: 5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     q2_over_q1:
       value: 1.6
       unit_symbol:
@@ -82,7 +82,7 @@ characteristics:
     maximum_permissible_error_lower_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T50
       unit_symbol:
@@ -106,7 +106,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: H - horizontal position with the indicating device positioned at the top
       unit_symbol:
@@ -126,11 +126,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 200
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 100
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner_required:
       value: 'no'
       unit_symbol:
@@ -142,7 +142,7 @@ characteristics:
     length:
       value: 190
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: q1
     unit_symbol: m³/h
@@ -159,6 +159,7 @@ characteristics:
       value: 0.08
     - model: Q3/Q1=40
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -174,6 +175,7 @@ characteristics:
       value: 0.128
     - model: Q3/Q1=40
       value: 0.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1
     unit_symbol:
     values:
@@ -196,9 +198,11 @@ characteristics:
     - condition: "≤ 30 °C"
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: "> 30 °C"
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013
@@ -228,54 +232,66 @@ model_family:
       q1:
         value: 0.032
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.051
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
   - model_id: Q3/Q1=100
     label: LXSG-20, Q3 = 4 m³/h, Q3/Q1 = 100
     attributes:
       q1:
         value: 0.04
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.064
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
   - model_id: Q3/Q1=80
     label: LXSG-20, Q3 = 4 m³/h, Q3/Q1 = 80
     attributes:
       q1:
         value: 0.05
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.08
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
   - model_id: Q3/Q1=63
     label: LXSG-20, Q3 = 4 m³/h, Q3/Q1 = 63
     attributes:
       q1:
         value: 0.064
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.102
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
   - model_id: Q3/Q1=50
     label: LXSG-20, Q3 = 4 m³/h, Q3/Q1 = 50
     attributes:
       q1:
         value: 0.08
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.128
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
   - model_id: Q3/Q1=40
     label: LXSG-20, Q3 = 4 m³/h, Q3/Q1 = 40
     attributes:
       q1:
         value: 0.1
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
       q2:
         value: 0.16
         unit_symbol: m³/h
+        unit_id: u:cubic_meter_per_hour
 matrix_tables:
 - name: Type details (flowrates by Q3/Q1 ratio)
   columns:

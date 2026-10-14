@@ -62,12 +62,12 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     minimum_working_pressure:
       value: 0.3
@@ -149,6 +149,7 @@ characteristics:
       value: 1
     - model: DN 65 R 80 (H and tilted sideways)
       value: 0.79
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -172,6 +173,7 @@ characteristics:
       value: 1.6
     - model: DN 65 R 80 (H and tilted sideways)
       value: 1.26
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -195,6 +197,7 @@ characteristics:
       value: 63
     - model: DN 65 R 80 (H and tilted sideways)
       value: 63
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -218,6 +221,7 @@ characteristics:
       value: 78.75
     - model: DN 65 R 80 (H and tilted sideways)
       value: 78.75
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1
     unit_symbol:
     values:
@@ -250,21 +254,25 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature ≤ 30 °C; Q1 ≤ Q ≤ Q2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C; Q2 ≤ Q ≤ Q4
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C; Q1 ≤ Q ≤ Q2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: pressure_loss_class
     axis: nominal diameter
     values:

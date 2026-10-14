@@ -67,7 +67,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     ratio_q3_over_q1:
       value:
         min:
@@ -103,7 +103,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN 15
       value: 15
@@ -119,7 +119,7 @@ characteristics:
       value: 50
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN 15
       value:
@@ -147,7 +147,7 @@ characteristics:
         max: 31.3
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN 15
       value:
@@ -187,7 +187,7 @@ characteristics:
       - 1)
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN 15
       value:
@@ -215,7 +215,7 @@ characteristics:
         max:
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN 15
       value:
@@ -291,7 +291,7 @@ characteristics:
       value: 0.0005 or 0.00005
   - attribute: length_horizontal_water_meter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN 15
       value:
@@ -319,7 +319,7 @@ characteristics:
         max: 300
   - attribute: length_vertical_water_meter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN 15
       value:
@@ -374,11 +374,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2006

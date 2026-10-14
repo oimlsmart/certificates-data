@@ -76,8 +76,9 @@ characteristics:
     minimum_signal_input_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     maximum_load_cell_resistance:
       value: 1200
       unit_symbol: Ω
@@ -159,9 +160,13 @@ characteristics:
     - condition: without tilt compensation
       value: 0.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: with tilt compensation
       value: 2.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: tilt_compensation
     values:
@@ -188,9 +193,11 @@ characteristics:
     - condition: without tilt compensation
       value: 3911.9
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: with tilt compensation
       value: 17.3
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: cable_connection_restriction
     axis: tilt_compensation
     values:

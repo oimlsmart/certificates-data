@@ -52,13 +52,13 @@ characteristics:
     nominal_diameter:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     length:
       value:
         min: 115
         max: 170
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     connections:
       value: Threads 3/4 - G1
     position:
@@ -76,11 +76,13 @@ characteristics:
     verification_scale_interval:
       value: 0.02
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
+      prefix: p:deci
     cyclical_volume:
       value: 33
       unit_symbol: cm³
-      unit_id:
+      unit_id: u:cubic_meter
+      prefix: p:centi
     accuracy_class:
       value: '2'
     climatic_environment:
@@ -107,6 +109,7 @@ characteristics:
       value: 1.6
     - model: Q3=2.5 m³/h
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
     values:
@@ -114,6 +117,7 @@ characteristics:
       value: 2
     - model: Q3=2.5 m³/h
       value: 3.125
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_over_q1_ratio
     unit_symbol:
     values:

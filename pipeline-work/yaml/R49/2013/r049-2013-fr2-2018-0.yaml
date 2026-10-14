@@ -48,6 +48,7 @@ characteristics:
     nominal_diameter_dn:
       value: DN 15 / DN 20
       unit_symbol: mm
+      unit_id: u:millimeter
     version:
       value: Linear / Manifold
     length:
@@ -55,6 +56,7 @@ characteristics:
         min: 105
         max: 190
       unit_symbol: mm
+      unit_id: u:millimeter
     body:
       value: Metallic or composite
     connections:
@@ -66,6 +68,8 @@ characteristics:
     cyclical_volume:
       value: 33.33
       unit_symbol: cm³
+      unit_id: u:cubic_meter
+      prefix: p:centi
     q2_q1_ratio:
       value: 1.6
     position:
@@ -102,6 +106,7 @@ characteristics:
       value: 1.6
     - model: P1HR-Q3=2.5
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
     unit_symbol: m³/h
     values:
@@ -111,6 +116,7 @@ characteristics:
       value: 2.0
     - model: P1HR-Q3=2.5
       value: 3.125
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio_tsn_tvm
     unit_symbol:
     footnote_markers:
@@ -171,15 +177,23 @@ characteristics:
     - condition: TSN / TVM 5+3
       value: 0.02
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: CC4
       value: 0.05
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: WTR
       value: 0.1
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: TVM 4+4
       value: 0.002
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
   - attribute: water_temperature_class
     axis: indicating device
     values:

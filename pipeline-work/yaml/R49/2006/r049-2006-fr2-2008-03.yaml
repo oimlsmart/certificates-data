@@ -52,7 +52,7 @@ characteristics:
     nominal_diameter:
       value: 20
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     connection_type:
       value: Thread
       unit_symbol:
@@ -64,11 +64,11 @@ characteristics:
     permanent_flowrate_q3:
       value: 4
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     overload_flowrate_q4:
       value: 5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     q2_over_q1_ratio:
       value: 1.6
       unit_symbol:
@@ -92,7 +92,8 @@ characteristics:
     verification_scale_interval:
       value: 0.001
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
+      prefix: p:deci
     cycle_volume:
       value: 28.57
       unit_symbol: mL
@@ -137,12 +138,15 @@ characteristics:
     - condition: option 1
       value: 105
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: option 2
       value: 130
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: option 3
       value: 190
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: meter_temperature_class
     axis: temperature class option
     values:

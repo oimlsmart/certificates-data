@@ -77,7 +77,7 @@ characteristics:
     minimum_inlet_outlet_pipe_length:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     accuracy_class:
       value: 2
@@ -123,6 +123,7 @@ characteristics:
       value: 1.6
     - model: B1-DN20-brass-Q3=4
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
     unit_symbol: m³/h
     values:
@@ -134,6 +135,7 @@ characteristics:
       value: 2.0
     - model: B1-DN20-brass-Q3=4
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: nominal_diameter_dn
     unit_symbol: mm
     values:
@@ -145,6 +147,7 @@ characteristics:
       value: 15
     - model: B1-DN20-brass-Q3=4
       value: 20
+    unit_id: u:millimeter
   - attribute: body_material
     unit_symbol:
     values:
@@ -178,6 +181,7 @@ characteristics:
       value: 105; 110; 114; 115
     - model: B1-DN20-brass-Q3=4
       value: 115; 130
+    unit_id: u:millimeter
   - attribute: q3_q1_ratio_horizontal_position
     unit_symbol:
     values:
@@ -211,6 +215,8 @@ characteristics:
       value: 16
     - model: B1-DN20-brass-Q3=4
       value: 40
+    unit_id: u:cubic_meter
+    prefix: p:centi
   - attribute: verification_scale_interval
     unit_symbol: dm³
     values:
@@ -222,6 +228,8 @@ characteristics:
       value: '0.050'
     - model: B1-DN20-brass-Q3=4
       value: 0.020 or 0.050
+    unit_id: u:cubic_meter
+    prefix: p:deci
   config_level:
   - attribute: water_temperature_range
     axis: r49_temperature_class

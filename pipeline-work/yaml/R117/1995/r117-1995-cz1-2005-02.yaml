@@ -112,6 +112,8 @@ characteristics:
       value: 5
     - model: config-3
       value: 10
+    unit_id: u:cubic_meter
+    prefix: p:deci
   config_level:
   - attribute: pumping_units
     axis: subsystem
@@ -199,6 +201,7 @@ components:
         value: 150
       - model: M403.32EP
         value: 150
+      unit_id: u:liter_per_minute
     - attribute: adjustment_device_type
       values:
       - model: M403.25P
@@ -229,6 +232,7 @@ components:
         value: 80
       - model: P641.100
         value: 80
+      unit_id: u:liter_per_minute
 - role: Electronic calculator with adjustment device
   type_designations:
   - ADP1/T
@@ -283,7 +287,7 @@ components:
       required_for_maximum_flowrate_above:
         value: 60
         unit_symbol: L/min
-        unit_id:
+        unit_id: u:liter_per_minute
         footnote_markers: []
 - role: Electromagnetic valve
   type_designations: []

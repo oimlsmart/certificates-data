@@ -71,8 +71,9 @@ characteristics:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.6
       unit_symbol: μV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 87
       unit_symbol: Ω
@@ -127,18 +128,21 @@ characteristics:
         max: 6000
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: multi-interval (per partial weighing range)
       value:
         min:
         max: 6000
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
     - condition: multiple range (per weighing range)
       value:
         min:
         max: 6000
       unit_symbol: divisions
       footnote_markers: []
+      _unit_kind: custom_count
   - attribute: maximum_number_of_weighing_ranges
     axis: weighing_range_configuration
     values:

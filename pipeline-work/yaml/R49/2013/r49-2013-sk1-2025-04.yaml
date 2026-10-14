@@ -80,6 +80,7 @@ characteristics:
     mpe_lower_flow_rates_q1_to_q2:
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     ratio_q2_q1:
       value: 1.6
     capacity_of_calculator_max_indication_range:
@@ -141,6 +142,7 @@ characteristics:
       value: 20
     - model: SCL-61HFY-100 DN20 R400
       value: 20
+    unit_id: u:millimeter
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -171,6 +173,7 @@ characteristics:
       value: 4
     - model: SCL-61HFY-100 DN20 R400
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -186,6 +189,7 @@ characteristics:
       value: 0.0127
     - model: SCL-61HFY-100 DN20 R400
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -201,6 +205,7 @@ characteristics:
       value: 0.0203
     - model: SCL-61HFY-100 DN20 R400
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -216,6 +221,7 @@ characteristics:
       value: 5
     - model: SCL-61HFY-100 DN20 R400
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -246,6 +252,7 @@ characteristics:
       value: 130
     - model: SCL-61HFY-100 DN20 R400
       value: 130
+    unit_id: u:millimeter
   config_level:
   - attribute: mpe_upper_flow_rates_q2_to_q4
     axis: water_temperature
@@ -253,9 +260,11 @@ characteristics:
     - condition: θ ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: θ > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013
@@ -283,6 +292,7 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 250
   - model_id: SCL-61HFY-100 DN15 R315
@@ -290,6 +300,7 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 315
   - model_id: SCL-61HFY-100 DN15 R400
@@ -297,6 +308,7 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 400
   - model_id: SCL-61HFY-100 DN20 R250
@@ -304,6 +316,7 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 250
   - model_id: SCL-61HFY-100 DN20 R315
@@ -311,6 +324,7 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 315
   - model_id: SCL-61HFY-100 DN20 R400
@@ -318,6 +332,7 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
+        unit_id: u:millimeter
       ratio_q3_q1:
         value: 400
 components:
@@ -332,6 +347,7 @@ components:
     reflection_sheets_angle:
       value: 45
       unit_symbol: "°"
+      unit_id: u:degree
     transducers:
       value: two ultrasonic transducers at upstream and downstream of the measurement channel
 - role: Calculator and indication device

@@ -62,7 +62,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     water_pressure_class:
       value: MAP10 or MAP16
       unit_symbol:
@@ -78,7 +78,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: horizontal with the indicating device at the top
       unit_symbol:
@@ -106,11 +106,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_conditioner_required:
       value: false
       unit_symbol:
@@ -155,6 +155,7 @@ characteristics:
       value: 6.3
     - model: LXSG-25E5/S/RLN1
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -178,6 +179,7 @@ characteristics:
       value: 7.875
     - model: LXSG-25E5/S/RLN1
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_type_screw_thread
     values:
     - model: LXSG-15E5/RLN1
@@ -223,6 +225,7 @@ characteristics:
       value: 260
     - model: LXSG-25E5/S/RLN1
       value: 260
+    unit_id: u:millimeter
   config_level:
   - attribute: q1
     axis: nominal_diameter_and_ratio_q3_over_q1
@@ -324,17 +327,21 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: resolution_of_device_for_rapid_testing
     axis: indicating_device_type
     values:
     - condition: RLN1
       value: 66.6666
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
 recommendation:
   id: R49
   edition: 2013

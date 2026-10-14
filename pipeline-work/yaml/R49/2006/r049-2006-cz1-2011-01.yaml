@@ -216,6 +216,7 @@ characteristics:
       value:
         min:
         max: 12500
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -387,6 +388,7 @@ characteristics:
         max: 10000
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -502,6 +504,7 @@ characteristics:
       value:
         min: 320.0
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -617,6 +620,7 @@ characteristics:
       value:
         min: 200.0
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -906,6 +910,7 @@ characteristics:
       value: 1200
     - model: 8705-DN900
       value: 1200
+    unit_id: u:millimeter
   - attribute: indicating_device_resolution
     unit_symbol: L
     values:
@@ -1118,11 +1123,13 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 1
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permitted_error_upper_zone
     axis: accuracy_class and water_temperature
     values:
@@ -1131,21 +1138,25 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2, water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 1, water temperature ≤ 30 °C
       value:
         min: -1
         max: 1
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 1, water temperature > 30 °C
       value:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
 model_family:
   family_name:
   models:

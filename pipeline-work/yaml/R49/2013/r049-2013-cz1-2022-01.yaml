@@ -74,7 +74,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
       footnote_markers: []
     pressure_loss_class:
       value: Δp40
@@ -126,12 +126,12 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     flow_conditioner:
       value: 'No'
@@ -161,7 +161,7 @@ characteristics:
     cut_off:
       value: 0.2
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     empty_pipe_detection:
       value: 'on'
@@ -224,6 +224,7 @@ characteristics:
       value: 6.4
     - model: DN350 (Q3/Q1=400)
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -279,6 +280,7 @@ characteristics:
       value: 10.2
     - model: DN350 (Q3/Q1=400)
       value: 6.4
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -334,6 +336,7 @@ characteristics:
       value: 1600
     - model: DN350 (Q3/Q1=400)
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -389,6 +392,7 @@ characteristics:
       value: 2000
     - model: DN350 (Q3/Q1=400)
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -556,6 +560,7 @@ characteristics:
       value: 550
     - model: DN350 (Q3/Q1=400)
       value: 550
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error_lower_zone
     axis: accuracy_class
@@ -563,24 +568,30 @@ characteristics:
     - condition: class 1
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: maximum_permitted_error_upper_zone
     axis: accuracy_class_and_water_temperature
     values:
     - condition: class 1, water temperature <= 30 °C
       value: 1
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 1, water temperature > 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2, water temperature <= 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: class 2, water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: temperature_class
     axis: liner
     values:
@@ -686,9 +697,13 @@ characteristics:
     - condition: MS2500 / MV110 HV
       value: 5200
       unit_symbol: mAh
+      unit_id: u:ampere_hour
+      prefix: p:milli
     - condition: MS2500 / MV110 LV
       value: 5200
       unit_symbol: mAh
+      unit_id: u:ampere_hour
+      prefix: p:milli
     - condition: MS2500 / MV110 LLV
       value:
       unit_symbol:

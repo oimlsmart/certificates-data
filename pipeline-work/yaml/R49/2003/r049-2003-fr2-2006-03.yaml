@@ -98,12 +98,12 @@ characteristics:
     minimum_upstream_straight_pipe_length:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     minimum_downstream_straight_pipe_length:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
       footnote_markers: []
     maximum_admissible_pressure:
       value: 16
@@ -118,8 +118,9 @@ characteristics:
     verification_scale_interval:
       value: 0.05
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
+      prefix: p:deci
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -128,6 +129,7 @@ characteristics:
       value: 15
     - model: DN20
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -135,6 +137,7 @@ characteristics:
       value: 2.5
     - model: DN20
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -142,6 +145,7 @@ characteristics:
       value: 3.125
     - model: DN20
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: length
     unit_symbol: mm
     values:
@@ -153,6 +157,7 @@ characteristics:
       value:
         min: 190
         max: 198
+    unit_id: u:millimeter
   - attribute: cycle_volume
     unit_symbol: cm³
     values:
@@ -160,6 +165,8 @@ characteristics:
       value: 23
     - model: DN20
       value: 37
+    unit_id: u:cubic_meter
+    prefix: p:centi
   config_level: []
 recommendation:
   id: R49

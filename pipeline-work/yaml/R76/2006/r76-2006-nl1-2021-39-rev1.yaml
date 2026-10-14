@@ -95,9 +95,11 @@ characteristics:
     - condition: Analog load cells
       value: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: Digital load cells
       value: 100000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: load_cell_excitation_voltage
     axis: load_cell_type
     values:
@@ -120,6 +122,8 @@ characteristics:
     - condition: Analog load cells
       value: 0.3
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: min_load_cell_resistance
     axis: load_cell_type
     values:
@@ -152,6 +156,7 @@ characteristics:
     - condition: Analog load cells
       value: 4487
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
 recommendation:
   id: R76-1
   edition: 2006

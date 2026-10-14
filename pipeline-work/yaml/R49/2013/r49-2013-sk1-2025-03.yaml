@@ -91,7 +91,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     calculator_capacity:
       value: 19999.99999
       unit_symbol: m³
@@ -156,6 +156,7 @@ characteristics:
       value: 15
     - model: DN20
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -163,6 +164,7 @@ characteristics:
       value: 2.5
     - model: DN20
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -170,6 +172,7 @@ characteristics:
       value: 3.125
     - model: DN20
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -184,6 +187,7 @@ characteristics:
       value: 110/165
     - model: DN20
       value: 190/195
+    unit_id: u:millimeter
   config_level:
   - attribute: minimum_flowrate_q1
     axis: model_and_ratio_q3_over_q1
@@ -201,6 +205,7 @@ characteristics:
       value: 0.0127
     - condition: DN20, R=400
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: model_and_ratio_q3_over_q1
     unit_symbol: m³/h
@@ -217,6 +222,7 @@ characteristics:
       value: 0.0203
     - condition: DN20, R=400
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_over_q1
     axis: ratio_option
     unit_symbol:
@@ -239,6 +245,7 @@ characteristics:
       value:
         min: -3
         max: 3
+    unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

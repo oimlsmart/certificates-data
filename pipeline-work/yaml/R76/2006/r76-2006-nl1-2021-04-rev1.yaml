@@ -173,15 +173,21 @@ characteristics:
     - condition: analog load cells
       value: 0.05
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: A/D board version
     values:
     - condition: A/D board version 1
       value: 0.3
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: A/D board version 2
       value: 0.54
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: load cell configuration
     values:
@@ -217,9 +223,11 @@ characteristics:
     - condition: A/D board version 1
       value: 753.8
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: A/D board version 2
       value: 286.2
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: maximum_number_of_load_platforms
     axis: load cell configuration
     values:

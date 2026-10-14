@@ -54,15 +54,15 @@ characteristics:
     nominal_diameter:
       value: 15
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     permanent_flow_rate_q3:
       value: 2.5
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     overload_flow_rate_q4:
       value: 3.13
       unit_symbol: m³/h
-      unit_id:
+      unit_id: u:cubic_meter_per_hour
     ratio_q2_q1:
       value: 1.6
       unit_symbol:
@@ -80,7 +80,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     temperature_class:
       value: T30 or T50
       unit_symbol:
@@ -104,7 +104,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     indicating_range:
       value: 99999
       unit_symbol: m³
@@ -136,11 +136,11 @@ characteristics:
     minimum_inlet_straight_length:
       value: 75
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_outlet_straight_length:
       value: 45
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     flow_profile_sensitivity_class:
       value: U5D3
       unit_symbol:
@@ -160,7 +160,7 @@ characteristics:
     length:
       value: 165
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
@@ -186,6 +186,7 @@ characteristics:
     - model: Q3/Q1=40
       value: 0.063
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
     values:
@@ -210,6 +211,7 @@ characteristics:
     - model: Q3/Q1=40
       value: 0.1
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -243,11 +245,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

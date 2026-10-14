@@ -115,7 +115,7 @@ characteristics:
     maximum_permissible_error_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
   model_level:
   - attribute: overload_flowrate_q4
@@ -145,6 +145,7 @@ characteristics:
       value: 31.3
     - model: DN50_R50
       value: 20.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -172,6 +173,7 @@ characteristics:
       value: 25.0
     - model: DN50_R50
       value: 16.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -199,6 +201,7 @@ characteristics:
       value: 0.5
     - model: DN50_R50
       value: 0.51
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -226,6 +229,7 @@ characteristics:
       value: 0.313
     - model: DN50_R50
       value: 0.32
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -304,6 +308,7 @@ characteristics:
       value:
         min: 270
         max: 300
+    unit_id: u:millimeter
   - attribute: length_of_vertical_water_meter
     unit_symbol: mm
     values:
@@ -331,6 +336,7 @@ characteristics:
       value:
         min: 100
         max: 150
+    unit_id: u:millimeter
   - attribute: connection_type_screw_thread_size
     unit_symbol:
     values:
@@ -501,9 +507,11 @@ characteristics:
     - condition: water temperature ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

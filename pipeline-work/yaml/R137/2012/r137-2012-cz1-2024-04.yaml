@@ -51,12 +51,16 @@ characteristics:
     cyclic_volume:
       value: 0.9
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     minimum_pressure_pmin:
       value: 0
       unit_symbol: bar(g)
+      unit_id: u:bar
     maximum_pressure_pmax:
       value: 0.5
       unit_symbol: bar(g)
+      unit_id: u:bar
     ambient_temperature_range:
       value:
         min: -25
@@ -76,9 +80,11 @@ characteristics:
     overall_height:
       value: 217
       unit_symbol: mm
+      unit_id: u:millimeter
     overall_width:
       value: 146
       unit_symbol: mm
+      unit_id: u:millimeter
     male_thread_options:
       value: M30x2, G7/8", G3/4"
   model_level:
@@ -96,6 +102,7 @@ characteristics:
       value: 2.5
     - model: ARJ2.5-SA
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -103,6 +110,7 @@ characteristics:
       value: 0.25
     - model: ARJ2.5-SA
       value: 0.4
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin
     unit_symbol: m³/h
     values:
@@ -110,6 +118,7 @@ characteristics:
       value: 0.016
     - model: ARJ2.5-SA
       value: 0.025
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: distance_between_connections
     axis: connection spacing production option
@@ -117,12 +126,15 @@ characteristics:
     - condition: 130 mm
       value: 130
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: 110 mm
       value: 110
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: 90 mm
       value: 90
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R137
   edition: 2012

@@ -67,6 +67,8 @@ characteristics:
         max: 5
       unit_symbol: mPa·s
       footnote_markers: []
+      unit_id: u:pascal_second
+      prefix: p:milli
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"
@@ -81,6 +83,7 @@ characteristics:
       value: 5100
       unit_symbol: kPa
       footnote_markers: []
+      unit_id: u:kilopascal
   model_level:
   - attribute: filter_type
     unit_symbol:
@@ -122,30 +125,38 @@ characteristics:
     - condition: 2 LCS and 500 mm inlet pipe, mounted on M7 meter
       value: 500
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: 1 LCS and 500 mm inlet pipe, mounted on M15 meter
       value: 800
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: 2 LCS and 500 mm inlet pipe, mounted on M30 meter
       value: 1500
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: 2 LCS, mounted on MS75 meter
       value: 3300
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: maximum_pe_max_pressure
     axis: filter type
     values:
     - condition: F and FD filters
       value: 1024
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: F and FD filters
       value: 2413
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: FMP filters
       value: 1930
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: FMP filters
       value: 5100
       unit_symbol: kPa
+      unit_id: u:kilopascal
 recommendation:
   id: R117-1
   edition: 2007

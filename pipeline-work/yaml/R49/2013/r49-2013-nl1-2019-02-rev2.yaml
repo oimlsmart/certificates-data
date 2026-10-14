@@ -89,7 +89,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
@@ -127,7 +127,7 @@ characteristics:
   model_level:
   - attribute: inlet_outlet_diameter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: Full bore DN32
       value: 32
@@ -171,7 +171,7 @@ characteristics:
       value: 300
   - attribute: minimum_flow_rate_q1
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Full bore DN32
       value: 0.125
@@ -215,7 +215,7 @@ characteristics:
       value: 8
   - attribute: transitional_flow_rate_q2
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Full bore DN32
       value: 0.2
@@ -259,7 +259,7 @@ characteristics:
       value: 12.5
   - attribute: permanent_flow_rate_q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Full bore DN32
       value: 25
@@ -303,7 +303,7 @@ characteristics:
       value: 1000
   - attribute: overload_flow_rate_q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: Full bore DN32
       value: 31.25
@@ -458,18 +458,23 @@ characteristics:
     - condition: FLC-2200EL, all sizes
       value: 0.01
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: FLC-2300 (documentation 11690/0-06), sizes < DN80
       value: 0.01
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: FLC-2300 (documentation 11690/0-06), sizes ≥ DN80
       value: 0.016
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: FLC-2300 (documentation 11690/0-05), sizes < DN80
       value: 0.025
       unit_symbol: MPa
+      unit_id: u:megapascal
     - condition: FLC-2300 (documentation 11690/0-05), sizes ≥ DN80
       value: 0.04
       unit_symbol: MPa
+      unit_id: u:megapascal
   - attribute: electromagnetic_environment
     axis: converter type and version
     values:

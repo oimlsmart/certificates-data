@@ -54,7 +54,7 @@ characteristics:
     minimum_dead_load_output_return_dr:
       value: 0.00429
       unit_symbol: "%Emax"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
     relative_dr_z:
       value: 11655
       unit_symbol:
@@ -62,7 +62,7 @@ characteristics:
     rated_output_sensitivity_c:
       value: 2
       unit_symbol: mV/V
-      unit_id:
+      unit_id: u:millivolt_per_volt
     excitation_voltage_uexc:
       value:
         min: 5
@@ -76,11 +76,11 @@ characteristics:
     minimum_dead_load_relative_emin_over_emax:
       value: 0
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     safe_overload_limit_lim:
       value: 150
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     safe_overload_reference:
       value: Emax
       unit_symbol:
@@ -132,12 +132,16 @@ characteristics:
     - condition: C3
       value: 0.01
       unit_symbol: "%Emax"
+      unit_id: u:percent_of_maximum_capacity
     - condition: C4
       value: 0.00833
       unit_symbol: "%Emax"
+      unit_id: u:percent_of_maximum_capacity
     - condition: C6
       value: 0.00723
       unit_symbol: "%Emax"
+      unit_id: u:percent_of_maximum_capacity
+    unit_id: u:percent_of_maximum_capacity
   - attribute: ratio_y_emax_over_vmin
     axis: accuracy_class
     values:

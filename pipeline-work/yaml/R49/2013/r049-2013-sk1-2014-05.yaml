@@ -71,7 +71,7 @@ characteristics:
     maximum_permissible_error_lower_flow_rates_range:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     scale_interval:
       value: 2.0e-05
@@ -145,6 +145,7 @@ characteristics:
     - model: DN20 R160
       value: 4
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -184,6 +185,7 @@ characteristics:
     - model: DN20 R160
       value: 5
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -223,6 +225,7 @@ characteristics:
     - model: DN20 R160
       value: 0.025
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -262,6 +265,7 @@ characteristics:
     - model: DN20 R160
       value: 0.04
       footnote_markers: []
+    unit_id: u:cubic_meter_per_hour
   config_level:
   - attribute: maximum_permissible_error_upper_flow_rates_range
     axis: water_temperature
@@ -269,9 +273,11 @@ characteristics:
     - condition: Θ ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: connection_thread
     axis: nominal_diameter
     values:
@@ -285,15 +291,19 @@ characteristics:
     - condition: DN 15, option 1
       value: 165
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 15, option 2
       value: 190
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 20, option 1
       value: 130
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 20, option 2
       value: 190
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2013

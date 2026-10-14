@@ -64,6 +64,7 @@ characteristics:
         min: 105
         max: 190
       unit_symbol: mm
+      unit_id: u:millimeter
     connections:
       value: Threads
     q2_q1_ratio:
@@ -71,6 +72,8 @@ characteristics:
     cyclical_volume:
       value: 33
       unit_symbol: cm³
+      unit_id: u:cubic_meter
+      prefix: p:centi
     pressure_class:
       value: MAP16
     flow_profile_sensitivity_class:
@@ -119,6 +122,7 @@ characteristics:
       value: 2.5
     - model: Q3=2.5, Q3/Q1=400
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -148,6 +152,7 @@ characteristics:
       value: 3.125
     - model: Q3=2.5, Q3/Q1=400
       value: 3.125
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio
     unit_symbol:
     values:
@@ -228,9 +233,11 @@ characteristics:
     - condition: DN15
       value: 15
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN20
       value: 20
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: temperature_class
     axis: register / version
     values:
@@ -263,18 +270,28 @@ characteristics:
     - condition: TSN / TVM, Q3/Q1 < 400
       value: 0.05 or 0.02
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: TSN / TVM, Q3/Q1 = 250
       value: 0.02
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: TSN / TVM, Q3/Q1 = 400
       value: 0.02
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: CC4
       value: 0.05
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: WTR
       value: 0.1
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
 recommendation:
   id: R49
   edition: 2006

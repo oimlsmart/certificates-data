@@ -70,7 +70,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_interval:
       value: 5.0e-05
       unit_symbol: m³
@@ -145,6 +145,7 @@ characteristics:
       value: 50
     - model: DN50-R160
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -196,6 +197,7 @@ characteristics:
       value: 25
     - model: DN50-R160
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -247,6 +249,7 @@ characteristics:
       value: 0.2
     - model: DN50-R160
       value: 0.15625
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -298,6 +301,7 @@ characteristics:
       value: 0.32
     - model: DN50-R160
       value: 0.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -349,6 +353,7 @@ characteristics:
       value: 31.25
     - model: DN50-R160
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -502,6 +507,7 @@ characteristics:
       value: 280/300
     - model: DN50-R160
       value: 280/300
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flow_rates_range
     axis: water_temperature
@@ -511,11 +517,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, Θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: register_indication_digits
     axis: nominal_diameter
     values:

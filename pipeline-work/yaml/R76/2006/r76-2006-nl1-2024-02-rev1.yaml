@@ -95,11 +95,13 @@ characteristics:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: digital_load_cells_or_weighing_module
       value:
         min:
         max: 100000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: maximum_number_of_scale_intervals_multi_interval_or_multiple_range_per_partial_weighing_range
     axis: load_cell_configuration
     values:
@@ -108,11 +110,13 @@ characteristics:
         min:
         max: 10000
       unit_symbol: divisions
+      _unit_kind: custom_count
     - condition: digital_load_cells_or_weighing_module
       value:
         min:
         max: 100000
       unit_symbol: divisions
+      _unit_kind: custom_count
   - attribute: load_cell_excitation_voltage
     axis: load_cell_configuration
     values:
@@ -133,12 +137,16 @@ characteristics:
     - condition: analog_load_cells
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load_cell_configuration
     values:
     - condition: analog_load_cells
       value: 0.3
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: load_cell_configuration
     values:
@@ -173,6 +181,7 @@ characteristics:
     - condition: analog_load_cells
       value: 706.3
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
 recommendation:
   id: R76-1
   edition: 2006

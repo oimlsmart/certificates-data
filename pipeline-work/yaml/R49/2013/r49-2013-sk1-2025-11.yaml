@@ -91,6 +91,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     capacity_of_calculator_normal_resolution:
       value: 9999999.999
       unit_symbol: m³
@@ -156,6 +157,7 @@ characteristics:
       value: 40
     - model: UWM 2401-50
       value: 50
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -171,6 +173,7 @@ characteristics:
       value: 16
     - model: UWM 2401-50
       value: 25
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -186,6 +189,7 @@ characteristics:
       value: 0.04
     - model: UWM 2401-50
       value: 0.0625
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -201,6 +205,7 @@ characteristics:
       value: 0.064
     - model: UWM 2401-50
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -216,6 +221,7 @@ characteristics:
       value: 20
     - model: UWM 2401-50
       value: 31.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -246,6 +252,7 @@ characteristics:
       value: 300
     - model: UWM 2401-50
       value: 300
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates_q2_to_q4
     axis: water_temperature
@@ -255,11 +262,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: T > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

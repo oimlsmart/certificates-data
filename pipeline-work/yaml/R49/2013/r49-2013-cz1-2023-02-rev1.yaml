@@ -68,6 +68,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30; T50
     water_pressure_class:
@@ -93,6 +94,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     eut_testing_category:
       value: B
     eut_testing_case:
@@ -102,9 +104,11 @@ characteristics:
     minimum_straight_length_of_inlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     minimum_straight_length_of_outlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     flow_profile_sensitivity_class:
       value: U0D0
     flow_conditioner:
@@ -172,6 +176,7 @@ characteristics:
       value: 250
     - model: MAGB2-DN300
       value: 300
+    unit_id: u:millimeter
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -199,6 +204,7 @@ characteristics:
       value: 1000
     - model: MAGB2-DN300
       value: 1600
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -226,6 +232,7 @@ characteristics:
       value: 1250
     - model: MAGB2-DN300
       value: 2000
+    unit_id: u:cubic_meter_per_hour
   - attribute: indicating_range
     unit_symbol: m³
     values:
@@ -291,11 +298,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: q3_over_q1
     axis: installation_orientation
     values:
@@ -449,9 +458,11 @@ components:
     straight_inlet_length:
       value: 0
       unit_symbol: DN
+      _unit_kind: custom_count
     straight_outlet_length:
       value: 0
       unit_symbol: DN
+      _unit_kind: custom_count
     flow_conditioner:
       value: 'No'
     reverse_flow:

@@ -69,7 +69,8 @@ characteristics:
         min: 0.4
         max: 8
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     minimum_ratio_qmax_over_qmin:
       value: 10
       unit_symbol:
@@ -102,27 +103,33 @@ characteristics:
     - condition: "-5 °C / +35 °C"
       value: 2.5
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: "-40 °C / +50 °C"
       value: 4
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: maximum_flow_rate_qmax
     axis: liquid_temperature_range
     values:
     - condition: "-5 °C / +35 °C"
       value: 130
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: "-40 °C / +50 °C"
       value: 80
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: maximum_flow_rate_qmax
     axis: measuring systems with parallel measurement transducers or gas separators
     values:
     - condition: liquid temperature range -40 °C / +50 °C
       value: 160
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
     - condition: viscosity range 1.1 to 8.0 mPa·s
       value: 200
       unit_symbol: L/min
+      unit_id: u:liter_per_minute
   - attribute: minimum_measured_quantity_mmq
     axis: maximum_flow_rate_of_measuring_system
     values:
@@ -279,7 +286,7 @@ components:
       maximum_flow_rate:
         value: 130
         unit_symbol: L/min
-        unit_id:
+        unit_id: u:liter_per_minute
       measured_liquid:
         value: Low-viscosity mineral oils with a viscosity of 0.4 mPa·s – 8 mPa·s
       minimum_pressure:

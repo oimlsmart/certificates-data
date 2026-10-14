@@ -75,7 +75,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 16
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
     orientation_limitation:
       value: H
       unit_symbol:
@@ -151,7 +151,7 @@ characteristics:
       value: 150
   - attribute: q1
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
       value: 0.025
@@ -199,7 +199,7 @@ characteristics:
       value: 0.05
   - attribute: q2
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
       value: 0.04
@@ -247,7 +247,7 @@ characteristics:
       value: 0.08
   - attribute: q3
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
       value: 40.0
@@ -295,7 +295,7 @@ characteristics:
       value: 400.0
   - attribute: q4
     unit_symbol: m³/h
-    unit_id:
+    unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
       value: 50.0
@@ -391,7 +391,7 @@ characteristics:
       value: 8000
   - attribute: length_secondary_meter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN50-TU1M20-1600
       value: 190
@@ -439,7 +439,7 @@ characteristics:
       value: 300
   - attribute: length_combination_meter
     unit_symbol: mm
-    unit_id:
+    unit_id: u:millimeter
     values:
     - model: DN50-TU1M20-1600
       value: 300
@@ -496,6 +496,7 @@ characteristics:
       value: 1.8
     - condition: DN150
       value: 4.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx2
     axis: nominal_diameter
     unit_symbol: m³/h
@@ -506,6 +507,7 @@ characteristics:
       value: 4.2
     - condition: DN150
       value: 12
+    unit_id: u:cubic_meter_per_hour
   - attribute: pressure_loss_class
     axis: nominal_diameter
     unit_symbol:
@@ -569,6 +571,8 @@ characteristics:
     - condition: DN50 to DN100
       value: 0.2 or 2
     - condition: DN
+    unit_id: u:cubic_meter
+    prefix: p:deci
 model_family:
   family_name: ISOFLO
   models:

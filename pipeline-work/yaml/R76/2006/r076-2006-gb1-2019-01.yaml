@@ -87,13 +87,15 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
@@ -102,7 +104,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     load_cell_connection:
       value: 4 or 6-core with braided outer screen, flexible PVC overall jacket
@@ -114,14 +116,14 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     zero_tracking_limit:
       value:
         min:
         max: 4
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
       footnote_markers: []
     maximum_partial_ranges:
       value: 3
@@ -187,9 +189,15 @@ characteristics:
     - condition: Standard build or when fitted with 10V EXC analogue load cell interface option card(s)
       value: 0.5
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: When fitted with 5V EXC analogue load cell interface option card(s)
       value: 0.8
       unit_symbol: µV
+      unit_id: u:volt
+      prefix: p:micro
+    unit_id: u:volt
+    prefix: p:micro
   - attribute: minimum_load_cell_impedance
     axis: load cell input variant
     unit_symbol: Ω
@@ -220,20 +228,25 @@ characteristics:
         card(s)
       value: 212
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: >-
         ZM505, ZM510 - standard build or when fitted with 10V EXC analogue load cell interface option
         card(s)
       value: 143
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: When fitted with 5V EXC analogue load cell interface option card(s) (limited to 30 m)
       value: 196
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
+    unit_id: u:meter_per_square_millimeter
   - attribute: maximum_preset_tare
     axis: range configuration
     values:
     - condition: Single interval
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Multi-interval/multi-range
       value: "-Max1"
       unit_symbol:
@@ -421,18 +434,21 @@ components:
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.8
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:micro
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 25
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
       footnote_markers: []
+      prefix: p:milli
     fraction_of_maximum_permitted_error_pi:
       value: 0.5
       unit_symbol:

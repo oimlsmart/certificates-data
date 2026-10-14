@@ -110,8 +110,9 @@ characteristics:
     verification_scale_interval:
       value: 0.05
       unit_symbol: dm³
-      unit_id:
+      unit_id: u:cubic_meter
       footnote_markers: []
+      prefix: p:deci
   model_level:
   - attribute: nominal_diameter_dn
     unit_symbol: mm
@@ -120,6 +121,7 @@ characteristics:
       value: 15/20
     - model: DN 20
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -127,6 +129,7 @@ characteristics:
       value: 2.5
     - model: DN 20
       value: 4.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -134,6 +137,7 @@ characteristics:
       value: 3.125
     - model: DN 20
       value: 5.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: length
     unit_symbol: mm
     values:
@@ -141,6 +145,7 @@ characteristics:
       value: 165/170/190
     - model: DN 20
       value: 190
+    unit_id: u:millimeter
   - attribute: cycle_volume
     unit_symbol: cm³
     values:
@@ -148,6 +153,8 @@ characteristics:
       value: 43
     - model: DN 20
       value: 55
+    unit_id: u:cubic_meter
+    prefix: p:centi
   config_level:
   - attribute: minimum_straight_pipe_length
     axis: pipe_position
@@ -155,9 +162,11 @@ characteristics:
     - condition: upstream
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: downstream
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2003

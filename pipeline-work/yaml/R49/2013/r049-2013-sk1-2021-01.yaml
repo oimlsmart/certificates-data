@@ -87,6 +87,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
     indication_range:
       value: 99999.999
       unit_symbol: m³
@@ -141,6 +142,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -150,6 +152,7 @@ characteristics:
       value: 4.0
     - model: DN25
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -159,6 +162,7 @@ characteristics:
       value: 0.01
     - model: DN25
       value: 0.01575
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -168,6 +172,7 @@ characteristics:
       value: 0.016
     - model: DN25
       value: 0.0252
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -177,6 +182,7 @@ characteristics:
       value: 5.0
     - model: DN25
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol: inch
     values:
@@ -195,6 +201,7 @@ characteristics:
       value: 195
     - model: DN25
       value: 225
+    unit_id: u:millimeter
   - attribute: counter_length
     unit_symbol: mm
     values:
@@ -204,6 +211,7 @@ characteristics:
       value: 116
     - model: DN25
       value: 134
+    unit_id: u:millimeter
   - attribute: counter_width
     unit_symbol: mm
     values:
@@ -213,6 +221,7 @@ characteristics:
       value: 90
     - model: DN25
       value: 92
+    unit_id: u:millimeter
   - attribute: overall_height_h
     unit_symbol: mm
     values:
@@ -222,6 +231,7 @@ characteristics:
       value: 97
     - model: DN25
       value: 114
+    unit_id: u:millimeter
   - attribute: overall_height_h1
     unit_symbol: mm
     values:
@@ -231,6 +241,7 @@ characteristics:
       value: 77
     - model: DN25
       value: 82
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates
     axis: water_temperature
@@ -240,11 +251,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C (flow range Q2 ≤ Q ≤ Q4)
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

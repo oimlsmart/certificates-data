@@ -63,6 +63,7 @@ characteristics:
     mpe_lower_flowrate_zone:
       value: 5
       unit_symbol: "%"
+      unit_id: u:percent
     temperature_class:
       value: T30 and T50
       unit_symbol:
@@ -107,6 +108,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -122,6 +124,7 @@ characteristics:
       value:
         min:
         max: 7.88
+    unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -143,6 +146,7 @@ characteristics:
         max: 6.3
       footnote_markers:
       - 1)
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -158,6 +162,7 @@ characteristics:
       value:
         min: 0.0252
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -173,6 +178,7 @@ characteristics:
       value:
         min: 0.0158
         max:
+    unit_id: u:cubic_meter_per_hour
   - attribute: rapid_testing_device_resolution
     unit_symbol: pulse/L
     values:
@@ -197,6 +203,7 @@ characteristics:
       value:
         min: 168
         max: 260
+    unit_id: u:millimeter
   - attribute: connection_thread_size
     unit_symbol:
     values:
@@ -213,9 +220,11 @@ characteristics:
     - condition: "≤30 °C"
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: ">30 °C"
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: construction
     axis: type variant
     values:

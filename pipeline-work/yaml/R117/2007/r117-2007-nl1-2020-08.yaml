@@ -65,7 +65,7 @@ characteristics:
     maximum_pressure:
       value: 3.5
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
     environmental_classes:
       value: M1 / E1
       unit_symbol:
@@ -95,13 +95,13 @@ characteristics:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: viscosity 1.1-8.0 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
   - attribute: flow_rate_range
     axis: system_configuration
     values:
@@ -110,7 +110,7 @@ characteristics:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: >-
         1 x gas separator*, 1 x meter sensor (C+, V or V+), viscosity 1.1-8.0 mPa·s; optionally Qmax limited
         to 40 L/min
@@ -118,7 +118,7 @@ characteristics:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: >-
         1 x gas separator*, 2 x meter sensors (one per dispenser side), viscosity 0.4-1.0 mPa·s; flowrate
         reduces to 40 L/min with both meter sensors operating
@@ -126,7 +126,7 @@ characteristics:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: >-
         1 x gas separator*, 2 x meter sensors (one per dispenser side), viscosity 1.1-8.0 mPa·s; flowrate
         reduces to 40 L/min with both meter sensors operating
@@ -134,7 +134,7 @@ characteristics:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: >-
         2 x gas separators*, 2 x meter sensors (C+, V or V+) in parallel, viscosity 1.1-8.0 mPa·s; optionally
         Qmax limited to 80 L/min
@@ -142,7 +142,7 @@ characteristics:
         min: 2.0
         max: 130
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
 recommendation:
   id: R117-1
   edition: 2007
@@ -207,13 +207,13 @@ components:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: hydrocarbon oils, viscosity 1.1-8.0 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_measured_quantity:
       value: 1
       unit_symbol: L
@@ -251,13 +251,13 @@ components:
         min: 1.6
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: hydrocarbon oils, viscosity 1.1-8.0 mPa·s
       value:
         min: 2.0
         max: 80
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
@@ -292,14 +292,17 @@ components:
       value: 7
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     maximum_unit_price:
       value: 6
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     maximum_price_to_pay:
       value: 7
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     environmental_classes:
       value: M1 / E1
       unit_symbol:
@@ -330,7 +333,7 @@ components:
     maximum_flow_rate:
       value: 90
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_pressure:
       value: 1.4
       unit_symbol: bar
@@ -364,7 +367,8 @@ components:
         min: 0.4
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
 footnotes:
 - marker: "*"
   text: >-

@@ -83,7 +83,7 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.0
       unit_symbol: MPa
-      unit_id:
+      unit_id: u:megapascal
       footnote_markers: []
     orientation_limitation:
       value: horizontal with the indicating device at the top
@@ -209,6 +209,7 @@ characteristics:
       value: 200
     - model: DN200-Q3Q1-40
       value: 200
+    unit_id: u:millimeter
   - attribute: q3_over_q1
     unit_symbol:
     values:
@@ -355,6 +356,7 @@ characteristics:
       value: 12.6
     - model: DN200-Q3Q1-40
       value: 15.75
+    unit_id: u:cubic_meter_per_hour
   - attribute: q2
     unit_symbol: m³/h
     values:
@@ -428,6 +430,7 @@ characteristics:
       value: 20.16
     - model: DN200-Q3Q1-40
       value: 25.2
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3
     unit_symbol: m³/h
     values:
@@ -501,6 +504,7 @@ characteristics:
       value: 630
     - model: DN200-Q3Q1-40
       value: 630
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -574,6 +578,7 @@ characteristics:
       value: 787.5
     - model: DN200-Q3Q1-40
       value: 787.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: length
     unit_symbol: mm
     values:
@@ -647,6 +652,7 @@ characteristics:
       value: 350
     - model: DN200-Q3Q1-40
       value: 350
+    unit_id: u:millimeter
   config_level:
   - attribute: indicating_range
     axis: indicating_device_variant
@@ -665,9 +671,13 @@ characteristics:
     - condition: variant 1
       value: 0.5
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
     - condition: variant 2
       value: 5
       unit_symbol: dm³
+      unit_id: u:cubic_meter
+      prefix: p:deci
 recommendation:
   id: R49
   edition: 2013

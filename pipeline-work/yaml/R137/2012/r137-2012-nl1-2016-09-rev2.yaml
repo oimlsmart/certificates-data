@@ -85,13 +85,13 @@ characteristics:
         min: 110
         max: 130
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     working_pressure_range:
       value:
         min: 0
         max: 0.5
       unit_symbol: bar(g)
-      unit_id:
+      unit_id: u:bar
   model_level:
   - attribute: cyclic_volume
     unit_symbol: dm³
@@ -100,6 +100,8 @@ characteristics:
       value: 0.9
     - model: JK/G1.6
       value: 0.9
+    unit_id: u:cubic_meter
+    prefix: p:deci
   - attribute: qmax
     unit_symbol: m³/h
     values:
@@ -107,6 +109,7 @@ characteristics:
       value: 4
     - model: JK/G1.6
       value: 2.5
+    unit_id: u:cubic_meter_per_hour
   - attribute: qt
     unit_symbol: m³/h
     values:
@@ -114,6 +117,7 @@ characteristics:
       value: 0.4
     - model: JK/G1.6
       value: 0.25
+    unit_id: u:cubic_meter_per_hour
   - attribute: qmin
     unit_symbol: m³/h
     values:
@@ -121,6 +125,7 @@ characteristics:
       value: 0.025
     - model: JK/G1.6
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: number_of_drums_before_comma
     unit_symbol:
     values:

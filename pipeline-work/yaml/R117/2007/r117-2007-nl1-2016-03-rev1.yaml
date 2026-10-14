@@ -126,13 +126,13 @@ characteristics:
         min: 4
         max: 70
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: 1 x gas separator, 1 x meter (blending product)
       value:
         min: 4
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: >-
         1 x gas separator, 1 x meter, gas separator suitable for use with two measurement transducers
         (gasoline/gasoil)
@@ -140,25 +140,25 @@ characteristics:
         min: 4
         max: 40
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: 1 x gas separator, 2 x meter (gasoil)
       value:
         min: 4
         max: 90
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: 2 x gas separator, 2 x meter (gasoil)
       value:
         min: 13
         max: 130
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     - condition: 3 x gas separator, 4 x meter (gasoil)
       value:
         min: 13
         max: 130
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
 recommendation:
   id: R117-1
   edition: 2007
@@ -201,7 +201,7 @@ components:
         min: 3
         max: 70
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
@@ -235,7 +235,8 @@ components:
         min: 0.4
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
 - role: Calculating/indicating device (calculator)
   type_designations:
   - iGEM
@@ -248,18 +249,21 @@ components:
       value: 6
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     maximum_unit_price_indication:
       value:
         min: 4
         max: 5
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     maximum_price_to_pay:
       value:
         min: 6
         max: 7
       unit_symbol: digits
       unit_id:
+      _unit_kind: custom_count
     environmental_classes:
       value: M1 / E1
       unit_symbol:
@@ -285,7 +289,7 @@ components:
     maximum_flow_rate:
       value: 90
       unit_symbol: L/min
-      unit_id:
+      unit_id: u:liter_per_minute
     minimum_pressure:
       value: 1.2
       unit_symbol: bar
@@ -319,7 +323,8 @@ components:
         min: 0.4
         max: 8.0
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
 - role: Impulse encoder or pulser
   type_designations:
   - WIP (WM001682-0001)

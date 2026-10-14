@@ -87,7 +87,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     calculator_capacity_normal_mode:
       value: 999999.999
       unit_symbol: m³
@@ -141,7 +141,7 @@ characteristics:
     battery_capacity:
       value: 9
       unit_symbol: Ah
-      unit_id:
+      unit_id: u:ampere_hour
     battery_lifetime:
       value: 10
       unit_symbol: years
@@ -169,7 +169,7 @@ characteristics:
     dimension_b:
       value: 95.5
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: nominal_diameter_dn
     unit_symbol: mm
@@ -180,6 +180,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -189,6 +190,7 @@ characteristics:
       value: 4
     - model: DN25
       value: 6.3
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -198,6 +200,7 @@ characteristics:
       value: 0.01
     - model: DN25
       value: 0.01575
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -207,6 +210,7 @@ characteristics:
       value: 0.016
     - model: DN25
       value: 0.0252
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -216,6 +220,7 @@ characteristics:
       value: 5
     - model: DN25
       value: 7.875
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -234,6 +239,7 @@ characteristics:
       value: 190/195/165
     - model: DN25
       value: 260
+    unit_id: u:millimeter
   - attribute: dimension_c
     unit_symbol: mm
     values:
@@ -243,6 +249,7 @@ characteristics:
       value: 107.1
     - model: DN25
       value: 109.9
+    unit_id: u:millimeter
   - attribute: dimension_e
     unit_symbol: mm
     values:
@@ -252,6 +259,7 @@ characteristics:
       value: 189.1
     - model: DN25
       value: 191.9
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates_range_q2_le_q_le_q4
     axis: water_temperature
@@ -261,11 +269,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

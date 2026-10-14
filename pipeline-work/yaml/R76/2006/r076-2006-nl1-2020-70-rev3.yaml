@@ -167,12 +167,14 @@ characteristics:
         max: 10000
       unit_symbol: divisions
       unit_id:
+      _unit_kind: custom_count
     - condition: SICSPro interface
       value:
         min:
         max: 1000000
       unit_symbol: divisions
       unit_id:
+      _unit_kind: custom_count
   - attribute: max_number_of_scale_intervals_multi_interval_or_multiple_range
     axis: interface (digital load cells or weighing modules)
     values:
@@ -186,6 +188,7 @@ characteristics:
         max: 100000
       unit_symbol: divisions
       unit_id:
+      _unit_kind: custom_count
   - attribute: max_number_of_weighing_ranges
     axis: interface (digital load cells or weighing modules)
     values:
@@ -256,24 +259,28 @@ characteristics:
         max: 10000
       unit_symbol: divisions
       unit_id:
+      _unit_kind: custom_count
   - attribute: minimum_signal_input_voltage_umin
     axis: load_cell_connection (analog)
     values:
     - condition: Analog load cells (with or without ISB)
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: load_cell_connection (analog)
     values:
     - condition: Analog load cells
       value: 0.3
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     - condition: Analog load cells with ISB
       value: 0.25
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: load_cell_excitation_voltage
     axis: load_cell_connection (analog)
     values:
@@ -339,7 +346,7 @@ characteristics:
     - condition: Analog load cells (with or without ISB), between indicator and junction box or load cells
       value: 1571
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
 recommendation:
   id: R76
   edition: 2006

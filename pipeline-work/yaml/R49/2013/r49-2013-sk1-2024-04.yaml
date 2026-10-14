@@ -74,7 +74,7 @@ characteristics:
         min: -5
         max: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     capacity_of_calculator:
       value: 999999.999
       unit_symbol: m³
@@ -150,11 +150,11 @@ characteristics:
     overall_width:
       value: 95
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     overall_height:
       value: 103
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
   model_level:
   - attribute: nominal_diameter_dn
     unit_symbol: mm
@@ -163,6 +163,7 @@ characteristics:
       value: 15
     - model: LXC-20
       value: 20
+    unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
     unit_symbol: m³/h
     values:
@@ -170,6 +171,7 @@ characteristics:
       value: 2.5
     - model: LXC-20
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -177,6 +179,7 @@ characteristics:
       value: 0.00625
     - model: LXC-20
       value: 0.01
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -184,6 +187,7 @@ characteristics:
       value: 0.01
     - model: LXC-20
       value: 0.016
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -191,6 +195,7 @@ characteristics:
       value: 3.125
     - model: LXC-20
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: connection_thread
     unit_symbol:
     values:
@@ -205,6 +210,7 @@ characteristics:
       value: 165
     - model: LXC-20
       value: 190
+    unit_id: u:millimeter
   config_level:
   - attribute: maximum_permitted_error_upper_zone
     axis: water_temperature
@@ -214,11 +220,13 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: water temperature > 30 °C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

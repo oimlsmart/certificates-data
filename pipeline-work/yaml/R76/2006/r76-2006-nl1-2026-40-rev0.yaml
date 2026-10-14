@@ -66,11 +66,13 @@ characteristics:
     minimum_signal_input_voltage_umin:
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     minimum_input_voltage_per_verification_scale_interval:
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     minimum_load_cell_resistance:
       value: 58
       unit_symbol: Ω
@@ -88,7 +90,7 @@ characteristics:
     maximum_cable_length_per_cross_wire_section:
       value: 1606.9
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
     temperature_range:
       value:
         min: -10
@@ -114,6 +116,7 @@ characteristics:
     - condition: sense technology used (6-wire)
       value: 1606.9
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: sense technology not used (4-wire)
       value: load cells connected directly without junction box or extension cable
       unit_symbol:

@@ -63,10 +63,12 @@ characteristics:
       value: -100
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     maximum_preset_tare:
       value: -100
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
@@ -76,10 +78,14 @@ characteristics:
       value: 0
       unit_symbol: mV
       footnote_markers: []
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
       footnote_markers: []
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_maximum_permissible_error:
       value: 0.5
       unit_symbol:
@@ -97,12 +103,14 @@ characteristics:
         max: 4
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     zero_tracking:
       value:
         min:
         max: 4
       unit_symbol: "%"
       footnote_markers: []
+      unit_id: u:percent
     load_cell_cable:
       value: 4 or 6-core with braided outer screen, flexible PVC overall jacket, 0.5 mm² per core
     interfaces:
@@ -168,6 +176,8 @@ characteristics:
       value: 0.8
     - model: ZM305
       value: 0.5
+    unit_id: u:volt
+    prefix: p:micro
   - attribute: load_cell_connection_maximum_length_6_wire
     unit_symbol: m
     values:
@@ -191,6 +201,7 @@ characteristics:
       value: 60
     - model: ZM305
       value: 400
+    unit_id: u:meter_per_square_millimeter
   - attribute: operational_keys
     unit_symbol:
     values:
@@ -317,6 +328,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
+      unit_id: u:milliampere
 - role: optional_current_loop_card
   type_designations: []
   alternatives:
@@ -326,6 +338,7 @@ components:
         min: 4
         max: 20
       unit_symbol: mA
+      unit_id: u:milliampere
     interfaces:
       value: RS485 / RS422
 - role: optional_internal_wireless_lan_card

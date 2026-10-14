@@ -94,7 +94,8 @@ characteristics:
     maximum_product_viscosity:
       value: 20
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     viscosity_reference_temperature:
       value: 20
       unit_symbol: "°C"
@@ -262,6 +263,7 @@ characteristics:
       value: 150
     - model: DM(S)
       value: 100
+    _unit_kind: custom_count
   - attribute: cyclic_volume
     unit_symbol: L
     unit_id: u:lambert
@@ -314,7 +316,7 @@ characteristics:
       value: 5.75
   - attribute: qmin
     unit_symbol: L/min
-    unit_id:
+    unit_id: u:liter_per_minute
     values:
     - model: M5
       value: 28
@@ -364,7 +366,7 @@ characteristics:
       value: 200
   - attribute: qmax
     unit_symbol: L/min
-    unit_id:
+    unit_id: u:liter_per_minute
     values:
     - model: M5
       value: 275
@@ -464,7 +466,7 @@ characteristics:
       value: 200
   - attribute: maximum_pressure
     unit_symbol: kPa
-    unit_id:
+    unit_id: u:kilopascal
     values:
     - model: BM250(S)
       value: 1034
@@ -489,21 +491,27 @@ characteristics:
     - condition: M (no sphere)
       value: 1034
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: M (no sphere, second option)
       value: 1965
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MS (sphere S)
       value: 1896
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSAA (sphere SAA)
       value: 1965
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSB (sphere SB)
       value: 5102
       unit_symbol: kPa
+      unit_id: u:kilopascal
     - condition: MSC (sphere SC)
       value: 10204
       unit_symbol: kPa
+      unit_id: u:kilopascal
 recommendation:
   id: R117-1
   edition: 2007

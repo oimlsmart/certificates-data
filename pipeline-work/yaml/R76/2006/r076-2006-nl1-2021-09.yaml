@@ -108,22 +108,26 @@ characteristics:
     - condition: without tilt compensation
       value: 0
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
     - condition: with tilt compensation
       value: 1
       unit_symbol: mV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:milli
   - attribute: minimum_input_voltage_per_verification_scale_interval
     axis: tilt_compensation
     values:
     - condition: without tilt compensation
       value: 0.5
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
     - condition: with tilt compensation
       value: 3.33
       unit_symbol: µV
-      unit_id:
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: minimum_load_cell_resistance
     axis: tilt_compensation
     values:
@@ -150,7 +154,7 @@ characteristics:
     - condition: with tilt compensation
       value: 17.3
       unit_symbol: m/mm²
-      unit_id:
+      unit_id: u:meter_per_square_millimeter
   - attribute: application
     axis: tilt_compensation
     values:

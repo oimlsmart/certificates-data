@@ -103,11 +103,11 @@ characteristics:
     minimum_straight_length_inlet:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     minimum_straight_length_outlet:
       value: 0
       unit_symbol: mm
-      unit_id:
+      unit_id: u:millimeter
     climatic_environment:
       value:
         min: 5
@@ -128,6 +128,7 @@ characteristics:
       value: 630
     - model: DN300
       value: 1000
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -137,6 +138,7 @@ characteristics:
       value: 787.5
     - model: DN300
       value: 1250
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_body_length
     unit_symbol: mm
     values:
@@ -152,6 +154,7 @@ characteristics:
       value:
         min: 500
         max:
+    unit_id: u:millimeter
   - attribute: nominal_diameter
     unit_symbol: DN
     values:
@@ -161,6 +164,7 @@ characteristics:
       value: 250
     - model: DN300
       value: 300
+    _unit_kind: custom_count
   - attribute: pressure_loss_class
     unit_symbol:
     values:
@@ -179,256 +183,337 @@ characteristics:
         min: -2
         max: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q2 ≤ Q ≤ Q4, water temperature > 30°C
       value:
         min: -3
         max: 3
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Q1 ≤ Q ≤ Q2
       value:
         min: -5
         max: 5
       unit_symbol: "%"
+      unit_id: u:percent
   - attribute: q1
     axis: nominal diameter, mounting orientation, and meter ratio Q3/Q1
     values:
     - condition: DN200, orientation H, Q3/Q1 = 40
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 50
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 63
       value: 6.349
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 80
       value: 5.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 100
       value: 4.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 125
       value: 3.2
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 160
       value: 2.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 40
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 50
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 63
       value: 6.349
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 80
       value: 5.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 100
       value: 4.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 125
       value: 3.2
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 40
       value: 15.75
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 50
       value: 12.6
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 63
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 80
       value: 7.875
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 100
       value: 6.3
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 125
       value: 5.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 160
       value: 3.938
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 40
       value: 15.75
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 50
       value: 12.6
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 63
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 80
       value: 7.875
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 100
       value: 6.3
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 125
       value: 5.04
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 40
       value: 25.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 50
       value: 20.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 63
       value: 15.873
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 80
       value: 12.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 100
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 125
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 160
       value: 6.25
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 40
       value: 25.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 50
       value: 20.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 63
       value: 15.873
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 80
       value: 12.5
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 100
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 125
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
   - attribute: q2
     axis: nominal diameter, mounting orientation, and meter ratio Q3/Q1
     values:
     - condition: DN200, orientation H, Q3/Q1 = 40
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 50
       value: 12.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 63
       value: 10.159
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 80
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 100
       value: 6.4
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 125
       value: 5.12
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation H, Q3/Q1 = 160
       value: 4.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 40
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 50
       value: 12.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 63
       value: 10.159
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 80
       value: 8.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 100
       value: 6.4
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN200, orientation V, Q3/Q1 = 125
       value: 5.12
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 40
       value: 25.2
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 50
       value: 20.16
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 63
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 80
       value: 12.6
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 100
       value: 10.08
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 125
       value: 8.064
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation H, Q3/Q1 = 160
       value: 6.3
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 40
       value: 25.2
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 50
       value: 20.16
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 63
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 80
       value: 12.6
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 100
       value: 10.08
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN250, orientation V, Q3/Q1 = 125
       value: 8.064
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 40
       value: 40.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 50
       value: 32.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 63
       value: 25.397
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 80
       value: 20.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 100
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 125
       value: 12.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation H, Q3/Q1 = 160
       value: 10.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 40
       value: 40.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 50
       value: 32.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 63
       value: 25.397
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 80
       value: 20.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 100
       value: 16.0
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
     - condition: DN300, orientation V, Q3/Q1 = 125
       value: 12.8
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
 recommendation:
   id: R49
   edition: 2013

@@ -75,9 +75,11 @@ characteristics:
     pressure_loss_class:
       value: 0.063
       unit_symbol: MPa
+      unit_id: u:megapascal
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
+      unit_id: u:megapascal
     q2_q1_ratio:
       value: 1.6
       unit_symbol:
@@ -90,6 +92,7 @@ characteristics:
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     flow_conditioner:
       value: n/a
       unit_symbol:
@@ -108,6 +111,7 @@ characteristics:
       value: 63
     - model: DN 100
       value: 100
+    unit_id: u:cubic_meter_per_hour
   - attribute: q4
     unit_symbol: m³/h
     values:
@@ -119,6 +123,7 @@ characteristics:
       value: 78.75
     - model: DN 100
       value: 125
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx1
     unit_symbol: m³/h
     values:
@@ -138,6 +143,7 @@ characteristics:
       value:
         min: 1.1
         max: 2.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: qx2
     unit_symbol: m³/h
     values:
@@ -157,6 +163,7 @@ characteristics:
       value:
         min: 2.1
         max: 3.0
+    unit_id: u:cubic_meter_per_hour
   - attribute: q3_q1_ratio
     unit_symbol:
     values:
@@ -175,24 +182,30 @@ characteristics:
     - condition: DN 50
       value: 150
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 80
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 100
       value: 0
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: minimal_body_length
     axis: nominal diameter
     values:
     - condition: DN 50
       value: 270
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 80
       value: 300
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN 100
       value: 350
       unit_symbol: mm
+      unit_id: u:millimeter
 recommendation:
   id: R49
   edition: 2006
@@ -236,6 +249,7 @@ components:
     q3:
       value: 4
       unit_symbol: m³/h
+      unit_id: u:cubic_meter_per_hour
 - role: change over valve
   type_designations: []
   alternatives:

@@ -67,7 +67,7 @@ characteristics:
     maximum_permissible_error_lower_flowrates_range:
       value: 5
       unit_symbol: "%"
-      unit_id:
+      unit_id: u:percent
     scale_interval:
       value: 5.0e-05
       unit_symbol: m³
@@ -138,6 +138,7 @@ characteristics:
       value: 2.5
     - model: DN20-V-Q3=4-R40
       value: 4
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
     unit_symbol: m³/h
     values:
@@ -181,6 +182,7 @@ characteristics:
       value: 0.0625
     - model: DN20-V-Q3=4-R40
       value: 0.1
+    unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     unit_symbol: m³/h
     values:
@@ -224,6 +226,7 @@ characteristics:
       value: 0.1
     - model: DN20-V-Q3=4-R40
       value: 0.16
+    unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
     unit_symbol: m³/h
     values:
@@ -267,6 +270,7 @@ characteristics:
       value: 3.125
     - model: DN20-V-Q3=4-R40
       value: 5
+    unit_id: u:cubic_meter_per_hour
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -326,9 +330,11 @@ characteristics:
     - condition: DN15
       value: 110 / 115 / 130 / 165
       unit_symbol: mm
+      unit_id: u:millimeter
     - condition: DN20
       value: 130 / 165 / 190
       unit_symbol: mm
+      unit_id: u:millimeter
   - attribute: water_temperature_range
     axis: meter_type
     values:
@@ -359,9 +365,11 @@ characteristics:
     - condition: Θ ≤ 30 °C
       value: 2
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: Θ > 30 °C
       value: 3
       unit_symbol: "%"
+      unit_id: u:percent
 recommendation:
   id: R49
   edition: 2013

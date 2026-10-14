@@ -101,6 +101,7 @@ characteristics:
       value: 150
     - model: DN600
       value: 150
+    unit_id: u:cubic_meter_per_hour
   - attribute: maximum_flow_rate
     unit_symbol: m³/h
     values:
@@ -124,6 +125,7 @@ characteristics:
       value: 7000
     - model: DN600
       value: 10000
+    unit_id: u:cubic_meter_per_hour
   - attribute: minimum_measured_quantity
     unit_symbol: m³
     values:
@@ -194,6 +196,7 @@ characteristics:
       value: 500
     - model: DN600
       value: 600
+    unit_id: u:millimeter
   config_level:
   - attribute: product_temperature_range
     axis: housing_material
@@ -279,6 +282,8 @@ components:
         min: 0.1
         max: 1500
       unit_symbol: mm²/s
+      unit_id: u:meter_squared_per_second
+      prefix: p:milli
     number_of_sound_paths:
       value: 8
       unit_symbol:
@@ -288,9 +293,12 @@ components:
     sound_frequency:
       value: 1; 2
       unit_symbol: MHz
+      unit_id: u:hertz
+      prefix: p:mega
     path_angle:
       value: 45 ± 10
       unit_symbol: "°"
+      unit_id: u:degree
 - role: Ultrasonic transmitters/receivers (transducers) of the measurement sensor
   type_designations:
   - UFS 5-R-EX

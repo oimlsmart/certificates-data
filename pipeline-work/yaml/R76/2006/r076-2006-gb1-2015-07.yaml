@@ -64,6 +64,7 @@ characteristics:
     maximum_tare:
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     maximum_load_cell_impedance:
       value: 1100
       unit_symbol: Ω
@@ -71,9 +72,13 @@ characteristics:
     measuring_range_minimum_voltage:
       value: 0
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     measuring_range_maximum_voltage:
       value: 15
       unit_symbol: mV
+      unit_id: u:volt
+      prefix: p:milli
     fraction_of_max_permitted_error_p_ind:
       value: 0.5
       unit_symbol:
@@ -97,11 +102,13 @@ characteristics:
         min:
         max: 4
       unit_symbol: "%"
+      unit_id: u:percent
     zero_tracking_limit:
       value:
         min:
         max: 4
       unit_symbol: "%"
+      unit_id: u:percent
     interfaces:
       value: >-
         Load cell 4-wire or 6-wire shielded connection; 3 x logic level inputs; 3 x open collector outputs;
@@ -198,18 +205,24 @@ characteristics:
     - condition: 10 V EXC option card
       value: 0.5
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
     - condition: 5 V EXC option card
       value: 0.8
       unit_symbol: μV
+      unit_id: u:volt
+      prefix: p:micro
   - attribute: six_wire_connection_maximum_length
     axis: load_cell_input_variant
     values:
     - condition: 10 V EXC option card
       value: 211
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
     - condition: 5 V EXC option card
       value: 196
       unit_symbol: m/mm²
+      unit_id: u:meter_per_square_millimeter
   - attribute: six_wire_connection_absolute_length_limit
     axis: load_cell_input_variant
     values:
@@ -223,6 +236,7 @@ characteristics:
     - condition: single interval
       value: -100
       unit_symbol: "%"
+      unit_id: u:percent
     - condition: multi-interval/range
       value: "-Max1"
       unit_symbol:

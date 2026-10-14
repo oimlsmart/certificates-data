@@ -66,13 +66,14 @@ characteristics:
         min: 300
         max: 2000
       unit_symbol: kg/m³
-      unit_id:
+      unit_id: u:kilogram_per_cubic_meter
     viscosity:
       value:
         min:
         max: 10000
       unit_symbol: mPa·s
-      unit_id:
+      unit_id: u:pascal_second
+      prefix: p:milli
     temperature_range_liquid:
       value:
         min: -200
@@ -88,7 +89,7 @@ characteristics:
     maximum_pressure:
       value: Flange rating dependent
       unit_symbol: kPa
-      unit_id:
+      unit_id: u:kilopascal
     communication_interfaces:
       value: ModBus, ProfiBus, Foundation FieldBus, Hart
       unit_symbol:
@@ -119,6 +120,7 @@ characteristics:
       value: 200
     - model: CC250
       value: 200
+    unit_id: u:millimeter
   - attribute: qmin_class_0_3
     unit_symbol: kg/min
     values:
@@ -144,6 +146,7 @@ characteristics:
       value: 1167
     - model: CC250
       value: 1167
+    unit_id: u:kilogram_per_minute
   - attribute: qmin_class_0_5
     unit_symbol: kg/min
     values:
@@ -169,6 +172,7 @@ characteristics:
       value: 583
     - model: CC250
       value: 583
+    unit_id: u:kilogram_per_minute
   - attribute: qmax
     unit_symbol: kg/min
     values:
@@ -194,6 +198,7 @@ characteristics:
       value: 46667
     - model: CC250
       value: 46667
+    unit_id: u:kilogram_per_minute
   - attribute: mmq
     unit_symbol: m³
     values:
