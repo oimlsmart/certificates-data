@@ -97,7 +97,7 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     water_temperature_class:
       value: T30
@@ -105,7 +105,7 @@ characteristics:
       value:
         min: 0.1
         max: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
@@ -130,6 +130,7 @@ characteristics:
     revs_per_liter:
       value: 16.5
       unit_symbol: rev/l
+      unit_id: u:revolution_per_liter
   model_level:
   - attribute: revs_per_liter
     unit_symbol: rev/l
@@ -142,8 +143,9 @@ characteristics:
       value: 16.5
     - model: V210
       value: 16.5
+    unit_id: u:revolution_per_liter
   - attribute: q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 0.01
@@ -155,7 +157,7 @@ characteristics:
       value: 0.01
     unit_id: u:cubic_meter_per_hour
   - attribute: q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 0.016
@@ -167,7 +169,7 @@ characteristics:
       value: 0.016
     unit_id: u:cubic_meter_per_hour
   - attribute: q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 4
@@ -179,7 +181,7 @@ characteristics:
       value: 4
     unit_id: u:cubic_meter_per_hour
   - attribute: q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 5
@@ -207,78 +209,78 @@ characteristics:
     values:
     - condition: V100 / 4x4 Register
       value: 9999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 99999.9999
-      unit_symbol: m³
+      unit_symbol: m^3
       footnote_markers:
       - '1'
       unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 9999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 99999.9999
-      unit_symbol: m³
+      unit_symbol: m^3
       footnote_markers:
       - '1'
       unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 99999.99998
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 999999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 99999.99998
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 999999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: meter_model / register_variant
     values:
     - condition: V100 / 4x4 Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       footnote_markers:
       - '1'
       unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       footnote_markers:
       - '1'
       unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 2.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 2.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: environmental_class
     axis: register_variant

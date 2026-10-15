@@ -83,7 +83,7 @@ type_level_characteristics:
   climatic_temperature_range:
     fill_rate: 0.222
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -122,7 +122,7 @@ type_level_characteristics:
     fill_rate: 0.333
     present_count: 3
     by_unit:
-      "°C":
+      degC:
         count: 2
         top_values:
         - value: H1
@@ -168,6 +168,7 @@ type_level_characteristics:
         top_values:
         - value: 10
           count: 1
+        unit_id: u:volt
   load_cells_excitation_voltage:
     fill_rate: 0.222
     present_count: 2
@@ -226,10 +227,11 @@ type_level_characteristics:
         top_values:
         - range: min=20000, max=100000
           count: 1
+        unit_id: u:kilogram_per_hour
   maximum_load_cell_impedance:
     fill_rate: 0.556
     present_count: 5
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 1100
@@ -274,7 +276,7 @@ type_level_characteristics:
     fill_rate: 0.222
     present_count: 2
     by_unit:
-      μV:
+      uV:
         count: 1
         top_values:
         - value: 0.62
@@ -321,27 +323,19 @@ type_level_characteristics:
   minimum_input_voltage_per_verification_scale_interval:
     fill_rate: 0.556
     present_count: 5
-    by_unit:
-      μV:
-        count: 4
-        top_values:
-        - value: 2
-          count: 2
-        - value: 3.13
-          count: 1
-        - value: 2.5
-          count: 1
-        unit_id: u:volt
-      µV:
-        count: 1
-        top_values:
-        - value: 2
-          count: 1
-        unit_id: u:volt
+    unit_symbol: uV
+    unit_id: u:volt
+    top_values:
+    - value: 2
+      count: 3
+    - value: 3.13
+      count: 1
+    - value: 2.5
+      count: 1
   minimum_load_cell_impedance:
     fill_rate: 0.556
     present_count: 5
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 28
@@ -500,7 +494,7 @@ type_level_characteristics:
   temperature_range:
     fill_rate: 0.444
     present_count: 4
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -508,7 +502,7 @@ type_level_characteristics:
   temperature_range_indicator:
     fill_rate: 0.111
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40

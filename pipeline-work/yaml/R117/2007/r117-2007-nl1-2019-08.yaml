@@ -108,8 +108,9 @@ characteristics:
     minimum_measured_quantity:
       value: 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
       footnote_markers: []
+      prefix:
     maximum_pressure:
       value: 4
       unit_symbol: bar(g)
@@ -129,7 +130,7 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     humidity_condition:
@@ -141,7 +142,7 @@ characteristics:
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     intended_fluid:
@@ -222,8 +223,9 @@ components:
     minimum_measured_quantity_mmq:
       value: 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
       footnote_markers: []
+      prefix:
     maximum_pressure:
       value: 4
       unit_symbol: bar(g)
@@ -238,14 +240,14 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     product_temperature_range:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     intended_fluid:
@@ -256,12 +258,13 @@ components:
     cyclic_volume:
       value: 0.5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
       footnote_markers: []
+      prefix:
     rotation_value_outgoing_shaft:
       value: 0.5
       unit_symbol: L/rev
-      unit_id:
+      unit_id: u:liter_per_revolution
       footnote_markers: []
     number_of_pulser_channels:
       value: 2
@@ -271,7 +274,7 @@ components:
     pulse_value:
       value: 100
       unit_symbol: pulses/litre
-      unit_id:
+      unit_id: u:impulse_per_liter
       footnote_markers: []
     pulse_channel_phase:
       value: the pulse channels are shifted in phase
@@ -298,7 +301,7 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
 - role: electronic calculating/indicating device
@@ -318,7 +321,7 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
 - role: impulse encoder

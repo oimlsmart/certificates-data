@@ -59,7 +59,8 @@ characteristics:
     minimum_measured_quantity:
       value: 2, 5 or 10
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     maximum_pressure:
       value: 3.5
       unit_symbol: bar(g)
@@ -70,7 +71,7 @@ characteristics:
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     measured_product:
       value: Hydrocarbon oils
@@ -78,7 +79,7 @@ characteristics:
       value:
         min: 0.4
         max: 4.5
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
   config_level:
@@ -104,13 +105,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: with heater
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: minimum_measured_quantity
     axis: max_flow_rate
@@ -120,7 +121,8 @@ characteristics:
         min:
         max: 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
 recommendation:
   id: R117-1
   edition: 2007
@@ -215,7 +217,8 @@ components:
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     maximum_pressure:
       value: 3.5
       unit_symbol: bar
@@ -224,19 +227,19 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     viscosity_range:
       value:
         min: 0.4
         max: 4.5
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     impulse_encoder_or_pulser:
@@ -283,13 +286,13 @@ components:
         value:
           min: -25
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       - condition: with heater
         value:
           min: -40
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
     power_supply_voltage:
       value: 230

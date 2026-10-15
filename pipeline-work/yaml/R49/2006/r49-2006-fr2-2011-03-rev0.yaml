@@ -81,16 +81,16 @@ characteristics:
       unit_id: u:millimeter
     cyclical_volume:
       value: 65
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     reverse_flow_measurement:
       value: 'No'
       footnote_markers:
       - "**"
   model_level:
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=2.5 m³/h
       value: 2.5
@@ -98,7 +98,7 @@ characteristics:
       value: 4
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=2.5 m³/h
       value: 3.125
@@ -134,25 +134,25 @@ characteristics:
     values:
     - condition: option 1
       value: 99999.99995
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: option 2
       value: 99999.99998
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: verification_scale
     axis: register option
     values:
     - condition: option 1
       value: 0.02
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: option 2
       value: 0.05
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
 recommendation:
   id: R49
   edition: 2006
@@ -177,22 +177,22 @@ model_family:
     attributes:
       permanent_flowrate_q3:
         value: 2.5
-        unit_symbol: m³/h
+        unit_symbol: m^3/h
         unit_id: u:cubic_meter_per_hour
       overload_flowrate_q4:
         value: 3.125
-        unit_symbol: m³/h
+        unit_symbol: m^3/h
         unit_id: u:cubic_meter_per_hour
   - model_id: Q3=4 m³/h
     label: TU1M20, Q3 = 4 m³/h
     attributes:
       permanent_flowrate_q3:
         value: 4
-        unit_symbol: m³/h
+        unit_symbol: m^3/h
         unit_id: u:cubic_meter_per_hour
       overload_flowrate_q4:
         value: 5
-        unit_symbol: m³/h
+        unit_symbol: m^3/h
         unit_id: u:cubic_meter_per_hour
 footnotes:
 - marker: "*"

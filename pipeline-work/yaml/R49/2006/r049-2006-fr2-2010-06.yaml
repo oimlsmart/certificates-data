@@ -71,7 +71,7 @@ characteristics:
       footnote_markers: []
     indicator_range:
       value: 9999 / 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
     minimum_inlet_outlet_pipe_length:
@@ -88,7 +88,7 @@ characteristics:
       value:
         min: 5
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     mechanical_environment_class:
@@ -113,7 +113,7 @@ characteristics:
       footnote_markers: []
   model_level:
   - attribute: q3_permanent_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: B1-DN15-composite-Q3=2.5
       value: 2.5
@@ -125,7 +125,7 @@ characteristics:
       value: 4
     unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: B1-DN15-composite-Q3=2.5
       value: 3.125
@@ -205,7 +205,7 @@ characteristics:
     - model: B1-DN20-brass-Q3=4
       value: 40; 50; 63
   - attribute: cycle_volume
-    unit_symbol: cm³
+    unit_symbol: cm^3
     values:
     - model: B1-DN15-composite-Q3=2.5
       value: 29
@@ -218,7 +218,7 @@ characteristics:
     unit_id: u:cubic_meter
     prefix: p:centi
   - attribute: verification_scale_interval
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: B1-DN15-composite-Q3=2.5
       value: 0.020 or 0.050
@@ -228,8 +228,8 @@ characteristics:
       value: '0.050'
     - model: B1-DN20-brass-Q3=4
       value: 0.020 or 0.050
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
   config_level:
   - attribute: water_temperature_range
     axis: r49_temperature_class
@@ -238,25 +238,25 @@ characteristics:
       value:
         min: 0.1
         max: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T50
       value:
         min: 0.1
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T30/90
       value:
         min: 30
         max: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T90
       value:
         min: 0.1
         max: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 recommendation:
   id: R49

@@ -83,7 +83,7 @@ characteristics:
       unit_id: u:bar
     flow_rate_formula:
       value: Q = v · 1/4 · π · D² · 3600
-      unit_symbol: m³/h
+      unit_symbol: m^3/h
       unit_id: u:cubic_meter_per_hour
     software_type:
       value: P
@@ -104,7 +104,8 @@ characteristics:
     minimum_straight_pipe_downstream:
       value: 3
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     pipe_diameter_match_tolerance:
       value:
         min:
@@ -150,29 +151,35 @@ characteristics:
     - condition: LEFM 34xCi - configuration no. 1 (without flow conditioner, mild disturbances)
       value: 10
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: LEFM 34xCi - configuration no. 2 (inclusive of flow conditioner, severe disturbances)
       value: 15
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: LEFM 38xCi - configuration no. 1 (without flow conditioner, mild disturbances excluding
         expanders)
       value: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: LEFM 38xCi - configuration no. 2 (without flow conditioner, mild disturbances including
         expanders)
       value: 10
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: LEFM 38xCi - configuration no. 3 (without flow conditioner, severe disturbances)
       value: 15
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: LEFM 38xCi - configuration no. 4 (inclusive of flow conditioner, severe disturbances)
       value: 15
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
   - attribute: thermowell_distance_from_downstream_flange
     axis: flow_direction
     values:
@@ -181,13 +188,15 @@ characteristics:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: bidirectional
       value:
         min: 3
         max: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
 recommendation:
   id: R137-1
   edition: 2012

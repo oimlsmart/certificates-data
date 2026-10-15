@@ -57,10 +57,10 @@ characteristics:
       footnote_markers: []
     cyclic_volume:
       value: 1.0
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
+      unit_symbol: L
+      unit_id: u:liter
       footnote_markers: []
-      prefix: p:deci
+      prefix:
     minimum_pressure_pmin:
       value: 0
       unit_symbol: bar(g)
@@ -70,14 +70,14 @@ characteristics:
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     gas_temperature_range:
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     base_pressure:
@@ -107,12 +107,12 @@ characteristics:
       footnote_markers: []
     pulse_value_per_impulse:
       value: 0.01
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
   model_level:
   - attribute: qmax
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6A
       value: 2.5
@@ -120,7 +120,7 @@ characteristics:
       value: 2.5
     unit_id: u:cubic_meter_per_hour
   - attribute: qt
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6A
       value: 0.25
@@ -128,7 +128,7 @@ characteristics:
       value: 0.25
     unit_id: u:cubic_meter_per_hour
   - attribute: qmin
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6A
       value: 0.016
@@ -136,14 +136,14 @@ characteristics:
       value: 0.016
     unit_id: u:cubic_meter_per_hour
   - attribute: cyclic_volume
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: G1.6A
       value: 1.0
     - model: G1.6S
       value: 1.0
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
   - attribute: maximum_permissible_pressure_loss_at_qmax
     unit_symbol: Pa
     values:

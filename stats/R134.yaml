@@ -180,7 +180,7 @@ type_level_characteristics:
   indicator_temperature_range:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -379,7 +379,7 @@ type_level_characteristics:
   maximum_load_cell_impedance:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 1100
@@ -563,7 +563,7 @@ type_level_characteristics:
           count: 2
         - range: min=10, max=None
           count: 1
-        unit_id: u:day
+        unit_id: u:division
       t:
         count: 1
         top_values:
@@ -601,7 +601,7 @@ type_level_characteristics:
         top_values:
         - range: min=10, max=N/A
           count: 1
-        unit_id: u:darcy
+        unit_id: u:division
   minimum_capacity_gvw:
     fill_rate: 0.075
     present_count: 3
@@ -665,7 +665,7 @@ type_level_characteristics:
   minimum_input_voltage_per_verification_scale_interval:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: μV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - value: 1
@@ -673,7 +673,7 @@ type_level_characteristics:
   minimum_load_cell_impedance:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 29
@@ -883,31 +883,25 @@ type_level_characteristics:
   scale_interval_for_stationary_load:
     fill_rate: 0.225
     present_count: 9
-    by_unit:
-      μV:
-        count: 8
-        top_values:
-        - value: 0.8
-          count: 2
-        - value: 1.25
-          count: 2
-        - value: 0.5
-          count: 2
-        - value: 0.25
-          count: 1
-        - range: min=1.25, max=N/A
-          count: 1
-        unit_id: u:volt
-      µV:
-        count: 1
-        top_values:
-        - range: min=0.8, max=None
-          count: 1
-        unit_id: u:volt
+    unit_symbol: uV
+    unit_id: u:volt
+    top_values:
+    - value: 0.8
+      count: 2
+    - value: 1.25
+      count: 2
+    - value: 0.5
+      count: 2
+    - value: 0.25
+      count: 1
+    - range: min=0.8, max=None
+      count: 1
+    - range: min=1.25, max=N/A
+      count: 1
   scale_interval_stationary_load:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: μV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - range: min=0.8, max=None
@@ -996,7 +990,7 @@ type_level_characteristics:
     fill_rate: 0.6
     present_count: 24
     by_unit:
-      "°C":
+      degC:
         count: 23
         top_values:
         - range: min=-10, max=40
@@ -1021,7 +1015,7 @@ type_level_characteristics:
   temperature_range_cabinet_equipment:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=70
@@ -1029,7 +1023,7 @@ type_level_characteristics:
   temperature_range_electronic:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=5, max=40
@@ -1037,7 +1031,7 @@ type_level_characteristics:
   temperature_range_for_indicator:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -1045,7 +1039,7 @@ type_level_characteristics:
   temperature_range_inside_cabinet:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-20, max=70
@@ -1053,7 +1047,7 @@ type_level_characteristics:
   temperature_range_load_receptors:
     fill_rate: 0.025
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-30, max=70
@@ -1061,7 +1055,7 @@ type_level_characteristics:
   temperature_range_sensor:
     fill_rate: 0.05
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=60

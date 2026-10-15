@@ -270,7 +270,7 @@ type_level_characteristics:
   climatic_temperature_range:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -426,7 +426,7 @@ type_level_characteristics:
   indicator_temperature_range:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -442,14 +442,14 @@ type_level_characteristics:
   input_voltage:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: µV/d
+    unit_symbol: uV/d
     top_values:
     - range: min=1.0, max=None
       count: 1
   input_voltage_per_division:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: µV/d
+    unit_symbol: uV/d
     top_values:
     - range: min=0.33, max=None
       count: 1
@@ -539,7 +539,7 @@ type_level_characteristics:
   load_cell_impedance:
     fill_rate: 0.037
     present_count: 2
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - range: min=35, max=None
@@ -549,7 +549,7 @@ type_level_characteristics:
   load_cell_impedance_max:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 1100
@@ -557,7 +557,7 @@ type_level_characteristics:
   load_cell_impedance_min:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 43
@@ -615,7 +615,7 @@ type_level_characteristics:
   max_cable_length_to_junction_box:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: m/mm²
+    unit_symbol: m/mm^2
     unit_id: u:meter_per_square_millimeter
     top_values:
     - value: 4824
@@ -669,7 +669,7 @@ type_level_characteristics:
     fill_rate: 0.056
     present_count: 3
     by_unit:
-      m/mm2:
+      m/mm^2:
         count: 2
         top_values:
         - value: 1533
@@ -732,7 +732,7 @@ type_level_characteristics:
         top_values:
         - range: min=None, max=4000
           count: 2
-        unit_id: u:day
+        unit_id: u:division
   maximum_capacity_main_station:
     fill_rate: 0.019
     present_count: 1
@@ -848,7 +848,7 @@ type_level_characteristics:
   maximum_load_cell_impedance:
     fill_rate: 0.074
     present_count: 4
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 2000
@@ -1068,7 +1068,7 @@ type_level_characteristics:
         top_values:
         - range: min=100, max=None
           count: 1
-        unit_id: u:day
+        unit_id: u:division
       'null':
         count: 1
         top_values:
@@ -1121,23 +1121,15 @@ type_level_characteristics:
   minimum_input_voltage_per_scale_interval:
     fill_rate: 0.037
     present_count: 2
-    by_unit:
-      μV:
-        count: 1
-        top_values:
-        - value: 1
-          count: 1
-        unit_id: u:volt
-      µV:
-        count: 1
-        top_values:
-        - value: 1
-          count: 1
-        unit_id: u:volt
+    unit_symbol: uV
+    unit_id: u:volt
+    top_values:
+    - value: 1
+      count: 2
   minimum_input_voltage_per_verification_scale_interval:
     fill_rate: 0.037
     present_count: 2
-    unit_symbol: µV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - value: 1.0
@@ -1147,7 +1139,7 @@ type_level_characteristics:
   minimum_input_voltage_per_vsi:
     fill_rate: 0.056
     present_count: 3
-    unit_symbol: μV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - value: 0.2
@@ -1155,7 +1147,7 @@ type_level_characteristics:
   minimum_input_voltage_per_vsi_ei:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: μV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - value: 0.3
@@ -1171,7 +1163,7 @@ type_level_characteristics:
   minimum_load_cell_impedance:
     fill_rate: 0.074
     present_count: 4
-    unit_symbol: Ω
+    unit_symbol: Ohm
     unit_id: u:ohm
     top_values:
     - value: 21.875
@@ -1298,7 +1290,7 @@ type_level_characteristics:
   operating_temperature_range:
     fill_rate: 0.13
     present_count: 7
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40
@@ -1308,7 +1300,7 @@ type_level_characteristics:
   operating_temperature_range_controller:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=50
@@ -1325,7 +1317,7 @@ type_level_characteristics:
   operational_temperature:
     fill_rate: 0.056
     present_count: 3
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-15, max=55
@@ -1705,7 +1697,7 @@ type_level_characteristics:
     fill_rate: 0.407
     present_count: 22
     by_unit:
-      "°C":
+      degC:
         count: 20
         top_values:
         - range: min=-10, max=40
@@ -1753,7 +1745,7 @@ type_level_characteristics:
   verification_scale_interval_min_signal:
     fill_rate: 0.019
     present_count: 1
-    unit_symbol: µV
+    unit_symbol: uV
     unit_id: u:volt
     top_values:
     - range: min=0.4, max=None

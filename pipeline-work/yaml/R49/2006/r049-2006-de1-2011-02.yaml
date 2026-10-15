@@ -65,11 +65,11 @@ characteristics:
       value:
         min: 5
         max: 70
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_admissible_temperature:
       value: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     pressure_loss_class:
       value: 0.063
@@ -86,7 +86,8 @@ characteristics:
     verification_scale_interval:
       value: 0.01
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
@@ -111,7 +112,7 @@ characteristics:
       unit_id:
   model_level:
   - attribute: q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=2.5
       value: 2.5
@@ -127,7 +128,7 @@ characteristics:
       value: 25
     unit_id: u:cubic_meter_per_hour
   - attribute: q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=2.5
       value: 3.125
@@ -253,7 +254,8 @@ components:
     verification_scale_interval:
       value: 0.01
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
 - role: communication_interface
   type_designations:
   - optical infrared interface

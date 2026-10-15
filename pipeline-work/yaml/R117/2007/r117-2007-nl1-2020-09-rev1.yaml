@@ -68,7 +68,7 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     ambient_humidity:
       value: condensing
@@ -78,7 +78,7 @@ characteristics:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_pressure_drop:
       value: 1.37
@@ -114,7 +114,7 @@ characteristics:
       value: 166
     unit_id: u:liter_per_minute
   - attribute: qmin_m3_per_h
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: B29x
       value: 10
@@ -146,7 +146,7 @@ characteristics:
       value: 3406
     unit_id: u:liter_per_minute
   - attribute: qmax_m3_per_h
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: B29x
       value: 256
@@ -194,7 +194,8 @@ characteristics:
       value: 2000
     - model: B38x
       value: 5000
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: diameter_in_outlet
     unit_symbol: mm
     values:
@@ -279,6 +280,7 @@ characteristics:
     - model: B38x
       value: 16
     unit_id: u:inch
+    prefix:
   - attribute: cyclic_volume
     unit_symbol: L
     values:
@@ -330,7 +332,8 @@ characteristics:
       value: 68.9
       footnote_markers:
       - D)
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: k_factor
     unit_symbol: pulses/L
     values:
@@ -382,6 +385,7 @@ characteristics:
       value: 2.157
       footnote_markers:
       - D)
+    unit_id: u:impulse_per_liter
   - attribute: maximum_pressure
     unit_symbol: bar(g)
     values:
@@ -435,7 +439,7 @@ characteristics:
       - E)
     unit_id: u:bar
   - attribute: viscosity_range
-    unit_symbol: mPa·s
+    unit_symbol: mPa*s
     values:
     - model: SB25x
       value:

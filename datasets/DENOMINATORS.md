@@ -1,5 +1,5 @@
 # The denominators report
-# generated: 2026-10-12T11:08:28Z
+# generated: 2026-10-14T10:40:25Z
 
 The register (manifest.jsonl)                       6556 rows
 Document-backed rows (local_path)                   5187

@@ -1,4 +1,3 @@
----
 _meta:
   cert_id: 4330
   num: R137/2012-NL1-2017.02
@@ -61,13 +60,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     gas_temperature_range:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     orientation:
       value: Horizontal/Vertical up/Vertical down(all orientations)
@@ -75,7 +74,7 @@ characteristics:
       value: Uni-directional(indicated with arrow)
   model_level:
   - attribute: volume
-    unit_symbol: dm3
+    unit_symbol: L
     values:
     - model: V=0.25dm3_G6
       value: 0.25
@@ -249,7 +248,7 @@ characteristics:
     - model: V=6.34dm3_650
       value: '650'
   - attribute: maximum_flow_rate
-    unit_symbol: m3/h
+    unit_symbol: m^3/h
     values:
     - model: V=0.25dm3_G6
       value: 10
@@ -337,7 +336,7 @@ characteristics:
       value: 1000
     unit_id: u:cubic_meter_per_hour
   - attribute: minimum_qmin
-    unit_symbol: m3/h
+    unit_symbol: m^3/h
     values:
     - model: V=0.25dm3_G6
       value: 0.25
@@ -425,7 +424,7 @@ characteristics:
       value: 6.5
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate
-    unit_symbol: m3/h
+    unit_symbol: m^3/h
     values:
     - model: V=0.25dm3_G6
       value: 0.5
@@ -919,7 +918,7 @@ matrix_tables:
       value: 3
     control_element:
       value: 0.0002
-      unit_symbol: m3
+      unit_symbol: m^3
       unit_id: u:cubic_metre
   - meter_size:
       value: G10- G65
@@ -929,7 +928,7 @@ matrix_tables:
       value: 2
     control_element:
       value: 0.002
-      unit_symbol: m3
+      unit_symbol: m^3
       unit_id: u:cubic_metre
   - meter_size:
       value: G100- G650
@@ -939,17 +938,19 @@ matrix_tables:
       value: 1
     control_element:
       value: 0.02
-      unit_symbol: m3
+      unit_symbol: m^3
       unit_id: u:cubic_metre
   footnotes: []
 footnotes:
 - marker: "*"
   text: >-
-    On the name plate of the rotary meter the cyclic volume can be given in two possible formats: 1. with two digits behind
-    the comma as stated in table 2 and 3, or 2. with a number containing 6 significant digits. In this case a HF pulse value
-    can be accurately derived from the spinning rotors with an optical sensor.
+    On the name plate of the rotary meter the cyclic volume can be given in two possible formats: 1. with
+    two digits behind the comma as stated in table 2 and 3, or 2. with a number containing 6 significant
+    digits. In this case a HF pulse value can be accurately derived from the spinning rotors with an optical
+    sensor.
 - marker: "**"
-  text: The EMR-Dual can be delivered as a low pressure (Pmax=21bar) or a high pressure (Pmax=101bar) variant.
+  text: >-
+    The EMR-Dual can be delivered as a low pressure (Pmax=21bar) or a high pressure (Pmax=101bar) variant.
 _traceability:
   raw_labels:
     gas_temperature_range: gas_temperature_range

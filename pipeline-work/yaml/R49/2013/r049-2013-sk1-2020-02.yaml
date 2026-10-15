@@ -61,7 +61,7 @@ characteristics:
       value:
         min: 0.1
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     water_temperature_class:
@@ -88,12 +88,12 @@ characteristics:
       footnote_markers: []
     scale_interval:
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
     calculator_capacity:
       value: 99999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
     display_digits:
@@ -174,7 +174,7 @@ characteristics:
       value: 20
     unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15-Q3=1.6-R125
       value: 1.6
@@ -210,7 +210,7 @@ characteristics:
       value: 4
     unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15-Q3=1.6-R125
       value: 0.0128
@@ -246,7 +246,7 @@ characteristics:
       value: 0.01
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15-Q3=1.6-R125
       value: 0.02048
@@ -282,7 +282,7 @@ characteristics:
       value: 0.016
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15-Q3=1.6-R125
       value: 2
@@ -498,12 +498,13 @@ components:
       value: 10
     indication_range:
       value: 99999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     display_duration_of_volume:
       value: 10
       unit_symbol: s
-      unit_id: u:sidereal_second
+      unit_id: u:second_time
+      prefix:
     battery:
       value: non-replaceable lithium battery
 - role: optional_non_return_valve

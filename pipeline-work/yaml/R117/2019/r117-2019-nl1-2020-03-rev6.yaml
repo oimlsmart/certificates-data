@@ -1,4 +1,3 @@
----
 _meta:
   cert_id: 6234
   num: R117/2019-A-NL1-20.03 Rev. 6
@@ -78,8 +77,9 @@ characteristics:
         min: -10.0
         max: 50.0
     intended_for_the_measurement_of:
-      value: Hydrocarbon oils(Gasoline,Gasoline up to 86% ethanol or MTBE,Gasoline up to 5% methanol,Diesel or Biodiesel up
-        to 100%)
+      value: >-
+        Hydrocarbon oils(Gasoline,Gasoline up to 86% ethanol or MTBE,Gasoline up to 5% methanol,Diesel
+        or Biodiesel up to 100%)
   model_level:
   - attribute: flow_rate_range
     unit_symbol: L/min
@@ -211,7 +211,8 @@ revision_history:
   changes: "-"
 - revision: '1'
   date: '2021-03-01'
-  changes: Addition of Tulip calculator and update of the Apollo-II calculator with new electronics and software.
+  changes: >-
+    Addition of Tulip calculator and update of the Apollo-II calculator with new electronics and software.
 - revision: '2'
   date: '2022-02-08'
   changes: Addition of new software versions.
@@ -263,13 +264,13 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_for_measurement:
       value: low-viscosity mineral oils with a viscosity of 0.4mPa·s-8.0mPa·s
@@ -304,13 +305,13 @@ components:
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: measurement sensor
   type_designations:
@@ -344,13 +345,13 @@ components:
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: calculating/indicating device
   type_designations:
@@ -368,7 +369,7 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     software_identification:
       value: See table below
@@ -390,7 +391,7 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     software_identification:
       value: See below table
@@ -415,37 +416,38 @@ matrix_tables:
       value: 2,0-80L/min
     remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.Optionally a feature to allowQmax
-        to be limited to40L/min
+        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.Optionally a
+        feature to allowQmax to be limited to40L/min
   - configuration:
       value: 1x gas separator*2x meter sensors,type C+,V or V+,one per dispenser side.
     flow_rate_range:
       value: 1,6-40L/min
     remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range0,4-1,0mPa.s.The gas separator of this measuring
-        system is suitable for use with two-meter sensors.Each meter sensor is considered as part of an individual measuring
-        system.Flowrate reduces to40L/min with both meter sensors operatingOptionally a feature to allowQmax to be limited
-        to40L/min with a single meter sensor operating.
+        Intended for the measurement of hydrocarbon oils with viscosity range0,4-1,0mPa.s.The gas separator
+        of this measuring system is suitable for use with two-meter sensors.Each meter sensor is considered
+        as part of an individual measuring system.Flowrate reduces to40L/min with both meter sensors operatingOptionally
+        a feature to allowQmax to be limited to40L/min with a single meter sensor operating.
   - configuration:
       value: 1x gas separator*2x meter sensors,type C+,V or V+,one per dispenser side
     flow_rate_range:
       value: 2,0-80L/min
     remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.The gas separator of this measuring
-        system is suitable for use with two-meter sensors.Each meter sensor is considered as part of an individual measuring
-        system.Flowrate reduces to40L/min with both meter sensors operating.
+        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.The gas separator
+        of this measuring system is suitable for use with two-meter sensors.Each meter sensor is considered
+        as part of an individual measuring system.Flowrate reduces to40L/min with both meter sensors operating.
   - configuration:
       value: 2x gas separators*2x meter sensors,type C+,V or V+.
     flow_rate_range:
       value: 2,0-130L/min
     remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.AQmax of130L/min is reached by connecting
-        two gas separators and two-meter sensors in parallel with delivery through a single transfer pointOptionally a feature
-        to allowQmax to be limited to80L/minOptionally a feature to allow one of the gas separators and one of the meter sensors
-        to operate as the configuration described above.
+        Intended for the measurement of hydrocarbon oils with viscosity range1,1-8,0mPa.s.AQmax of130L/min
+        is reached by connecting two gas separators and two-meter sensors in parallel with delivery through
+        a single transfer pointOptionally a feature to allowQmax to be limited to80L/minOptionally a feature
+        to allow one of the gas separators and one of the meter sensors to operate as the configuration
+        described above.
   description: Overview of flow characteristics of the configurations of the family of instruments
   footnotes: []
 - name: General characteristics of the measurement sensor type C+

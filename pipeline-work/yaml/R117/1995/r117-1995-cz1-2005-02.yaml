@@ -80,7 +80,7 @@ characteristics:
       footnote_markers: []
   model_level:
   - attribute: maximum_flowrate
-    unit_symbol: dm³/min
+    unit_symbol: L/min
     values:
     - model: config-1
       value:
@@ -94,8 +94,9 @@ characteristics:
       value:
         min: 100
         max: 150
+    unit_id: u:liter_per_minute
   - attribute: minimum_flowrate
-    unit_symbol: dm³/min
+    unit_symbol: L/min
     values:
     - model: config-1
       value: 4
@@ -103,8 +104,9 @@ characteristics:
       value: 5
     - model: config-3
       value: 10
+    unit_id: u:liter_per_minute
   - attribute: minimum_measured_quantity
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: config-1
       value: 2
@@ -112,8 +114,8 @@ characteristics:
       value: 5
     - model: config-3
       value: 10
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
   config_level:
   - attribute: pumping_units
     axis: subsystem
@@ -252,7 +254,7 @@ components:
     type_level:
       atc_reference_temperature:
         value: 15
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
         footnote_markers: []
       required_temperature_transducer:

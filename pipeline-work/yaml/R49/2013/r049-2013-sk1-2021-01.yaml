@@ -69,7 +69,7 @@ characteristics:
       value:
         min: 0.1
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     temperature_class:
       value: T50
@@ -90,12 +90,13 @@ characteristics:
       unit_id: u:percent
     indication_range:
       value: 99999.999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     verification_scale_interval:
       value: 0.001
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     accuracy_class:
       value: 2
       unit_symbol:
@@ -144,7 +145,7 @@ characteristics:
       value: 25
     unit_id: u:millimeter
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 2.5
@@ -154,7 +155,7 @@ characteristics:
       value: 6.3
     unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 0.00625
@@ -164,7 +165,7 @@ characteristics:
       value: 0.01575
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 0.01
@@ -174,7 +175,7 @@ characteristics:
       value: 0.0252
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 3.125
@@ -192,6 +193,7 @@ characteristics:
       value: G1B
     - model: DN25
       value: G1-1/4B
+    unit_id: u:inch
   - attribute: construction_length_l
     unit_symbol: mm
     values:
@@ -309,7 +311,7 @@ components:
       unit_symbol:
     indication_range:
       value: 99999.999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     user_interface:
       value: finger optical infrared sensor for scrolling of the LCD menu

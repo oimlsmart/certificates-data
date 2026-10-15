@@ -94,7 +94,9 @@ definitions:
     description: |
       Structured unit reference. The unit_id is the canonical unitsml identifier
       (closed enum from _units.yaml). Prefix, current_type, and reference
-      qualify the unit when applicable (e.g. kV AC, bar(g)).
+      qualify the unit when applicable (e.g. kV AC, bar(g)). Currency carries
+      the ISO 4217 code for monetary values (e.g. price per litre display
+      ranges: unit_id u:liter, currency EUR).
     type: object
     properties:
       unit_id:    { type: string, pattern: "^u:" }
@@ -107,6 +109,10 @@ definitions:
         type: [string, "null"]
         enum: [gauge, absolute, differential, null]
         description: Pressure reference qualifier (R117/R139/R137).
+      currency:
+        type: [string, "null"]
+        pattern: "^[A-Z]{3}$"
+        description: "ISO 4217 alpha-3 code for monetary values (e.g. EUR)."
     additionalProperties: false
 
   # ─── Structured characteristic value ─────────────────────────────────
@@ -147,6 +153,10 @@ definitions:
         description: "Electrical current qualifier extracted from unit_symbol (e.g. V AC square wave yields current_type=AC)."
         type: string
         enum: [AC, DC, AC_DC]
+      currency:
+        description: "ISO 4217 alpha-3 currency code extracted from unit_symbol (e.g. EURO/L yields currency=EUR, unit_id u:liter)."
+        type: [string, "null"]
+        pattern: "^[A-Z]{3}$"
     additionalProperties: false
 
   # ─── Document-level types ────────────────────────────────────────────

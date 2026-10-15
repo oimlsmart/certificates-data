@@ -71,20 +71,20 @@ characteristics:
       value: T30
     indicating_range:
       value: 999999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     verification_scale_interval:
       value: 0.5
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     accuracy_class:
       value: '2'
     climatic_influence_class:
       value:
         min: 5
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     environmental_class:
       value: B/C
@@ -108,7 +108,7 @@ characteristics:
     - model: WSM/WSR100
       value: Flanges DN 100
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: WSM/WSR50
       value: 25
@@ -116,7 +116,7 @@ characteristics:
       value: 100
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: WSM/WSR50
       value: 31.25
@@ -138,14 +138,14 @@ characteristics:
       value: 'WSM: 400; WSR: 350 (ISO), 360 (DIN)'
     unit_id: u:millimeter
   - attribute: cycle_volume
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: WSM/WSR50
       value: 0.4514
     - model: WSM/WSR100
       value: 1.954
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
   config_level: []
 recommendation:
   id: R49

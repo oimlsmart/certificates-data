@@ -62,13 +62,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -5
         max: 35
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_measurement:
       value: Hydrocarbon based oils (fuels)
@@ -76,12 +76,12 @@ characteristics:
       unit_id:
     maximum_product_viscosity:
       value: 20
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     viscosity_reference_temperature:
       value: 20
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   model_level:
   - attribute: flange_size
@@ -102,6 +102,7 @@ characteristics:
     - model: M(S)120-DN200
       value: 8
     unit_id: u:inch
+    prefix:
   - attribute: nominal_diameter
     unit_symbol: DN
     values:
@@ -137,7 +138,8 @@ characteristics:
       value: 23.81
     - model: M(S)120-DN200
       value: 23.81
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: maximum_flow_rate_qmax
     unit_symbol: L/min
     values:
@@ -173,7 +175,8 @@ characteristics:
       value: 1000
     - model: M(S)120-DN200
       value: 1000
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   config_level:
   - attribute: accuracy_class
     axis: model and viscosity grade

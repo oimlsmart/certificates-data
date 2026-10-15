@@ -138,7 +138,7 @@ characteristics:
     - model: PD97TRP-DN40-R100
       value: 100
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: PD97TRP-DN15-R160
       value: 3.125
@@ -162,7 +162,7 @@ characteristics:
       value: 12.5
     unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: PD97TRP-DN15-R160
       value: 2.5
@@ -186,7 +186,7 @@ characteristics:
       value: 10.0
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: PD97TRP-DN15-R160
       value: 0.025
@@ -210,7 +210,7 @@ characteristics:
       value: 0.16
     unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flowrate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: PD97TRP-DN15-R160
       value: 0.0156
@@ -313,30 +313,30 @@ characteristics:
     values:
     - condition: DN15–DN25, resolution 0.00001 m³
       value: 9999.9999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN15–DN25, resolution 0.0001 m³
       value: 99999.999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN32–DN40, resolution 0.0001 m³
       value: 99999.999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: indicating_device_resolution
     axis: indicating_device_variant
     values:
     - condition: DN15–DN25, indicating range 9999.9999 m³
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN15–DN25, indicating range 99999.999 m³
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN32–DN40
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: reed_switch_k_factor
     axis: pulse_output_option
@@ -344,12 +344,15 @@ characteristics:
     - condition: DN15–DN25, option 1
       value: 1
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN15–DN25, option 2
       value: 0.1
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN32–DN40
       value: 0.1
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
 recommendation:
   id: R49
   scheme: A

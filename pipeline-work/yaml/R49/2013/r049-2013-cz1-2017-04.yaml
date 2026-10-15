@@ -83,7 +83,7 @@ characteristics:
       unit_id:
     maximum_admissible_temperature:
       value: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 16
@@ -99,11 +99,11 @@ characteristics:
       unit_id:
     resolution_of_indicating_device:
       value: 0.01
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     indicating_range:
       value: 999999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     software_version:
       value: '4913'
@@ -149,7 +149,7 @@ characteristics:
       value: 25
     unit_id: u:millimeter
   - attribute: overload_flow_rate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 3.13
@@ -159,7 +159,7 @@ characteristics:
       value: 5.0
     unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_rate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 2.5
@@ -175,7 +175,7 @@ characteristics:
       - 1)
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 0.016
@@ -185,7 +185,7 @@ characteristics:
       value: 0.026
     unit_id: u:cubic_meter_per_hour
   - attribute: minimum_flow_rate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN15
       value: 0.01
@@ -254,11 +254,13 @@ characteristics:
     - condition: normal mode
       value: 0.01
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     - condition: calibration mode (high resolution)
       value: 1.0e-06
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
 recommendation:
   id: R49
   edition: 2013

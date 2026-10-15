@@ -84,13 +84,13 @@ characteristics:
       value:
         min: -10
         max: 40
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -10
         max: 40
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_media:
       value: Petroleum, ethanol blends, methanol blends, diesel, heating oil, biodiesel and biodiesel
@@ -124,15 +124,18 @@ characteristics:
     - condition: Qmax <= 40 L/min
       value: 1, 2 or 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     - condition: 40 < Qmax <= 60 L/min
       value: 2 or 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     - condition: Qmax > 60 L/min
       value: 2, 5 or 10
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
   - attribute: hydraulic_modules
     axis: chassis_size
     values:
@@ -196,23 +199,26 @@ components:
         value:
           min: -10
           max: 40
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       product_temperature_range:
         value:
           min: -10
           max: 40
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       viscosity_range:
         value:
           min: 0.4
           max: 17
-        unit_symbol: mPa.s
+        unit_symbol: mPa*s
+        unit_id: u:pascal_second
+        prefix: p:milli
       cyclic_volume:
         value: 0.47
         unit_symbol: L
-        unit_id: u:lambert
+        unit_id: u:liter
+        prefix:
       quantity_per_hydraulic_module:
         value:
           min: 1
@@ -232,19 +238,21 @@ components:
         value:
           min: -10
           max: 40
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       product_temperature_range:
         value:
           min: -10
           max: 40
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       viscosity_range:
         value:
           min: 0.4
           max: 17
-        unit_symbol: mPa.s
+        unit_symbol: mPa*s
+        unit_id: u:pascal_second
+        prefix: p:milli
       quantity_per_hydraulic_module:
         value: 1
     config_level:
@@ -281,7 +289,7 @@ components:
         value:
           min: -25
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       maximum_volume_indication_digits:
         value: 7

@@ -87,11 +87,11 @@ characteristics:
       unit_id:
     indicating_range:
       value: 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     resolution_of_indicating_device:
       value: 5.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     flow_profile_sensitivity_classes:
       value: U0 D0
@@ -112,7 +112,7 @@ characteristics:
     reed_switch_k_factor:
       value: 0.001, 0.01, 0.1, 1
       unit_symbol: impulse/L
-      unit_id:
+      unit_id: u:impulse_per_liter
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
@@ -129,6 +129,7 @@ characteristics:
       value: 90.0938
     - model: DN 20
       value: 60.0
+    unit_id: u:impulse_per_liter
   - attribute: length
     unit_symbol: mm
     values:
@@ -149,7 +150,7 @@ characteristics:
     - model: DN 20
       value: G1B
   - attribute: minimum_flowrate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN 15
       value:
@@ -161,7 +162,7 @@ characteristics:
         max:
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN 15
       value:
@@ -173,7 +174,7 @@ characteristics:
         max:
     unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN 15
       value:
@@ -189,7 +190,7 @@ characteristics:
       - 1)
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN 15
       value:
@@ -250,7 +251,7 @@ components:
     k_factor_options:
       value: 0.001, 0.01, 0.1, 1
       unit_symbol: impulse/L
-      unit_id:
+      unit_id: u:impulse_per_liter
 footnotes:
 - marker: 1)
   text: >-

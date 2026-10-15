@@ -70,7 +70,7 @@ characteristics:
       unit_id:
     maximum_admissible_temperature:
       value: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 16
@@ -150,7 +150,7 @@ characteristics:
     - model: DN150-P290plus-8000
       value: 150
   - attribute: q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
@@ -198,7 +198,7 @@ characteristics:
     - model: DN150-P290plus-8000
       value: 0.05
   - attribute: q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
@@ -246,7 +246,7 @@ characteristics:
     - model: DN150-P290plus-8000
       value: 0.08
   - attribute: q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
@@ -294,7 +294,7 @@ characteristics:
     - model: DN150-P290plus-8000
       value: 400.0
   - attribute: q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: DN50-TU1M20-1600
@@ -488,7 +488,7 @@ characteristics:
   config_level:
   - attribute: qx1
     axis: nominal_diameter
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - condition: DN50, DN65, DN80
       value: 0.75
@@ -499,7 +499,7 @@ characteristics:
     unit_id: u:cubic_meter_per_hour
   - attribute: qx2
     axis: nominal_diameter
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - condition: DN50, DN65, DN80
       value: 3
@@ -546,7 +546,7 @@ characteristics:
       value: U5S D0
   - attribute: indicating_range_primary
     axis: nominal_diameter
-    unit_symbol: m³
+    unit_symbol: m^3
     values:
     - condition: DN50 to DN100
       value: 999999 or 9999999
@@ -555,7 +555,7 @@ characteristics:
     unit_id: u:cubic_meter
   - attribute: indicating_range_secondary
     axis: nominal_diameter and secondary meter
-    unit_symbol: m³
+    unit_symbol: m^3
     values:
     - condition: DN50 to DN100
       value: 99999
@@ -566,13 +566,13 @@ characteristics:
     unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device_primary
     axis: nominal_diameter
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - condition: DN50 to DN100
       value: 0.2 or 2
     - condition: DN
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
 model_family:
   family_name: ISOFLO
   models:

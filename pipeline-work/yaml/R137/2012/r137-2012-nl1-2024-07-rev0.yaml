@@ -71,7 +71,7 @@ characteristics:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     ambient_humidity:
@@ -83,7 +83,7 @@ characteristics:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     orientation:
@@ -121,7 +121,7 @@ characteristics:
       value:
         min: 3.8
         max:
-      unit_symbol: kg/m³
+      unit_symbol: kg/m^3
       unit_id: u:kilogram_per_cubic_meter
       footnote_markers: []
     minimum_qmax_to_qmin_ratio:
@@ -141,11 +141,11 @@ characteristics:
     maximum_mass_flow_rate_formula:
       value: Qmax = M × 2 × S × SOS_gas × ρ_act × 3600 (Formula 1)
       unit_symbol: kg/h
-      unit_id:
+      unit_id: u:kilogram_per_hour
       footnote_markers: []
     tube_cross_section_area_formula:
       value: S = (π/4) × d²
-      unit_symbol: m²
+      unit_symbol: m^2
       unit_id: u:square_meter
       footnote_markers: []
     core_processor_software_version:
@@ -174,11 +174,13 @@ characteristics:
     values:
     - model: HPC020
       value: Qmax/5
+    unit_id: u:kilogram_per_hour
   - attribute: minimum_qmin
     unit_symbol: kg/h
     values:
     - model: HPC020
       value: 6
+    unit_id: u:kilogram_per_hour
   - attribute: internal_diameter_of_tubes
     unit_symbol: m
     values:
@@ -197,6 +199,7 @@ characteristics:
     values:
     - model: HPC020
       value: M × 2 × S × SOS_gas × ρ_act × 3600 (Formula 1)
+    unit_id: u:kilogram_per_hour
 recommendation:
   id: R137
   edition: 2012

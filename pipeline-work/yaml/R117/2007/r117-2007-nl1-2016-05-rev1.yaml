@@ -59,18 +59,18 @@ characteristics:
       value:
         min: 400
         max: 1400
-      unit_symbol: kg/m³
+      unit_symbol: kg/m^3
       unit_id: u:kilogram_per_cubic_meter
     maximum_viscosity:
       value: 517
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     temperature_range_ambient:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     environment_class:
       value: M3/E2/H3
@@ -92,6 +92,7 @@ characteristics:
       value: 200
     - model: DN100
       value: 400
+    unit_id: u:metric_ton_per_hour
   - attribute: minimum_flow_rate
     unit_symbol: t/h
     values:
@@ -103,6 +104,7 @@ characteristics:
       value: 6
     - model: DN100
       value: 14
+    unit_id: u:metric_ton_per_hour
   - attribute: minimum_measured_quantity
     unit_symbol: kg
     values:
@@ -123,13 +125,13 @@ characteristics:
       value:
         min: -10
         max: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: mass measurement
       value:
         min: -200
         max: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 recommendation:
   id: R117-1
@@ -205,7 +207,7 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     humidity:
       value: condensing

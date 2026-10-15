@@ -63,14 +63,14 @@ characteristics:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     gas_temperature_range:
       value:
         min: -20
         max: 100
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     designed_for:
@@ -92,7 +92,7 @@ characteristics:
       value:
         min: 60
         max: 80
-      unit_symbol: "°"
+      unit_symbol: deg
       unit_id: u:degree
       footnote_markers: []
     power_supply_voltage:
@@ -133,7 +133,7 @@ characteristics:
       - Table 2 note
   model_level:
   - attribute: qmin_tgas_le_50c
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN80
       value: 8
@@ -165,7 +165,7 @@ characteristics:
       value: 400
     unit_id: u:cubic_meter_per_hour
   - attribute: qmin_tgas_le_100c
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN80
       value: 12
@@ -197,7 +197,7 @@ characteristics:
       value: 800
     unit_id: u:cubic_meter_per_hour
   - attribute: qt
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN80
       value: 124
@@ -229,7 +229,7 @@ characteristics:
       value: 5420
     unit_id: u:cubic_meter_per_hour
   - attribute: qmax
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN80
       value: 620
@@ -311,29 +311,34 @@ characteristics:
     - condition: without flow conditioner
       value: 10
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: with Krohne flow conditioner
       value: 2
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
   - attribute: minimum_outlet_piping_length
     axis: installation
     values:
     - condition: with temperature sensor at least 2D downstream
       value: 3
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
   - attribute: minimum_temperature_sensor_distance
     axis: temperature sensor position
     values:
     - condition: downstream of meter (single-direction use)
       value: 2
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: upstream of meter (bi-directional use)
       value: 4
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
 recommendation:
   id: R137-1
   edition: 2012
