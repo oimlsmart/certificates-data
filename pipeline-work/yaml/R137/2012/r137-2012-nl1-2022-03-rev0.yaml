@@ -68,13 +68,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     gas_temperature_range:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     designed_for:
       value: Condensing humidity
@@ -114,7 +114,7 @@ characteristics:
       - 4)
   model_level:
   - attribute: cyclic_volume
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: G16-0.26
       value: 0.26
@@ -156,8 +156,8 @@ characteristics:
       value: 5.97
     - model: G650-5.97
       value: 5.97
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
   - attribute: version
     unit_symbol:
     values:
@@ -242,7 +242,7 @@ characteristics:
       - 1)
       - 2)
   - attribute: qmax
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G16-0.26
       value: 25
@@ -286,7 +286,7 @@ characteristics:
       value: 1000
     unit_id: u:cubic_meter_per_hour
   - attribute: qt
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G16-0.26
       value: 1.25
@@ -330,7 +330,7 @@ characteristics:
       value: 50
     unit_id: u:cubic_meter_per_hour
   - attribute: qmin
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G16-0.26
       value: 0.5
@@ -441,11 +441,11 @@ characteristics:
     values:
     - condition: G10 - G100, cyclic volume ≤ 1.11 dm³
       value: 0.002
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: G100 - G650, cyclic volume ≤ 2.31 dm³
       value: 0.02
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
 recommendation:
   id: R137

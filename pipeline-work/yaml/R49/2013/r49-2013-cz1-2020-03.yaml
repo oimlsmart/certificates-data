@@ -144,7 +144,7 @@ characteristics:
       footnote_markers: []
   model_level:
   - attribute: q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN40-R50
       value: 0.5
@@ -198,7 +198,7 @@ characteristics:
       value: 31.3
     unit_id: u:cubic_meter_per_hour
   - attribute: q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN40-R50
       value: 0.8
@@ -252,7 +252,7 @@ characteristics:
       value: 50
     unit_id: u:cubic_meter_per_hour
   - attribute: q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN40-R50
       value: 25
@@ -306,7 +306,7 @@ characteristics:
       value: 2500
     unit_id: u:cubic_meter_per_hour
   - attribute: q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: DN40-R50
       value: 31.25
@@ -474,42 +474,55 @@ characteristics:
     - condition: DN40
       value: 1.0309
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN50
       value: 1.0309
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN65
       value: 1.0309
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN80
       value: 0.7778
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN100
       value: 0.3325
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN125
       value: 0.2565
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN150
       value: 0.09425
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN200
       value: 0.04
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN250
       value: 0.02565
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN300
       value: 0.01765
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN350
       value: 0.008836
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN400
       value: 0.007389
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN500
       value: 0.003771
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
   - attribute: minimum_straight_length_inlet_pipe
     axis: nominal_diameter
     values:
@@ -680,30 +693,30 @@ characteristics:
     values:
     - condition: DN40-DN125
       value: 999999 or 9999999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN150-DN300
       value: 9999999 or 99999999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN350-DN500
       value: 99999999 or 999999999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: resolution_of_indicating_device
     axis: nominal_diameter_group
     values:
     - condition: DN40-DN125
       value: 0.001 or 0.0005
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN150-DN300
       value: 0.01 or 0.005
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: DN350-DN500
       value: 0.1 or 0.05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: reed_switch_k_factor
     axis: nominal_diameter_group
@@ -711,12 +724,15 @@ characteristics:
     - condition: DN40-DN125
       value: 0.01 and 0.001
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN150-DN300
       value: 0.001 and 0.0001
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: DN350-DN500
       value: 0.0001 and 0.00001
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
   - attribute: maximum_permissible_error_upper_zone
     axis: water_temperature
     values:
@@ -733,15 +749,15 @@ characteristics:
     values:
     - condition: T30
       value: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T50
       value: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T90
       value: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 recommendation:
   id: R49

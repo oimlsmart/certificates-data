@@ -69,7 +69,7 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     ambient_humidity:
       value: condensing humidity
@@ -79,7 +79,7 @@ characteristics:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_pressure_drop:
       value: 1.37
@@ -118,7 +118,7 @@ characteristics:
     - model: B28x
       value: 166
   - attribute: qmin_accuracy_class_0_5
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: B29x
@@ -140,7 +140,7 @@ characteristics:
     - model: B28x
       value: 166
   - attribute: qmin_accuracy_class_0_3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: B29x
@@ -164,7 +164,7 @@ characteristics:
     - model: B28x
       value: 3406
   - attribute: qmax
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     values:
     - model: B29x
@@ -175,7 +175,7 @@ characteristics:
       value: 2100
   - attribute: minimum_measured_quantity
     unit_symbol: L
-    unit_id: u:lambert
+    unit_id: u:liter
     values:
     - model: SB25x-1
       value: 10
@@ -193,6 +193,7 @@ characteristics:
       value: 500
     - model: B38x
       value: 5000
+    prefix:
   - attribute: diameter_in_and_outlet
     unit_symbol: mm
     unit_id: u:millimeter
@@ -233,9 +234,10 @@ characteristics:
       value: 8
     - model: B38x
       value: 16
+    prefix:
   - attribute: cyclic_volume
     unit_symbol: L
-    unit_id: u:lambert
+    unit_id: u:liter
     values:
     - model: SB25x-1
       value: 0.129
@@ -269,9 +271,10 @@ characteristics:
       value: 68.9
       footnote_markers:
       - D)
+    prefix:
   - attribute: k_factor
     unit_symbol: pulses/L
-    unit_id:
+    unit_id: u:impulse_per_liter
     values:
     - model: SB25x-1
       value: 252
@@ -342,7 +345,7 @@ characteristics:
       footnote_markers:
       - E)
   - attribute: viscosity_range
-    unit_symbol: mPa·s
+    unit_symbol: mPa*s
     unit_id: u:pascal_second
     values:
     - model: SB25x-1

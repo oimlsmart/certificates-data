@@ -103,7 +103,7 @@ characteristics:
       value:
         min: 0.3
         max: 1242
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       footnote_markers:
       - "*"
@@ -170,7 +170,8 @@ characteristics:
       value: 6.81
     - model: DM (S)
       value: 5.75
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: mmq
     unit_symbol: L
     values:
@@ -190,7 +191,8 @@ characteristics:
       value: 500
     - model: DM (S)
       value: 200
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: flange_size
     unit_symbol:
     values:
@@ -463,13 +465,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: measurement results can be read and/or recorded with an approved instrument
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: maximum_pressure
     axis: filter type
@@ -1013,13 +1015,13 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -5
         max: 35
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_measurement:
       value: Hydrocarbon based oils and fuels with maximum viscosity of 20 mPa·s at 20 °C
@@ -1053,13 +1055,13 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 250
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_measurement:
       value: Oil and oil product up to 1242 mPa·s
@@ -1088,7 +1090,7 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: core processor
   type_designations:
@@ -1172,7 +1174,7 @@ components:
         value:
           min: -25
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       documentation_folder:
         value: TC7311-7
@@ -1194,7 +1196,7 @@ components:
       value:
         min: -40
         max: 70
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: Gas elimination device
   type_designations:
@@ -1214,13 +1216,13 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_products:
       value: Hydrocarbon based oils and fuels
@@ -1228,12 +1230,12 @@ components:
       unit_id:
     maximum_viscosity:
       value: 20
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     viscosity_reference_temperature:
       value: 20
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 footnotes:
 - marker: "*"

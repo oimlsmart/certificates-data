@@ -71,7 +71,7 @@ characteristics:
       value: 1.6
     cyclical_volume:
       value: 33
-      unit_symbol: cm³
+      unit_symbol: cm^3
       unit_id: u:cubic_meter
       prefix: p:centi
     pressure_class:
@@ -82,7 +82,7 @@ characteristics:
       value:
         min: 5
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     mechanical_environment_class:
       value: N/A
@@ -94,7 +94,7 @@ characteristics:
       - 3)
   model_level:
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=1.6, Q3/Q1=80
       value: 1.6
@@ -124,7 +124,7 @@ characteristics:
       value: 2.5
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: Q3=1.6, Q3/Q1=80
       value: 2
@@ -245,53 +245,53 @@ characteristics:
       value:
         min: 0.1
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: CC4 / WTR
       value:
         min: 0.1
         max: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: indicating_range
     axis: register
     values:
     - condition: TSN / TVM / CC4
       value: 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: WTR
       value: 9999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: register / Q3-Q1 ratio
     values:
     - condition: TSN / TVM, Q3/Q1 < 400
       value: 0.05 or 0.02
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: TSN / TVM, Q3/Q1 = 250
       value: 0.02
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: TSN / TVM, Q3/Q1 = 400
       value: 0.02
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: CC4
       value: 0.05
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: WTR
       value: 0.1
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
 recommendation:
   id: R49
   edition: 2006

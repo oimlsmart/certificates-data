@@ -89,12 +89,12 @@ characteristics:
       footnote_markers: []
     indicating_range:
       value: 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
     resolution_of_indicating_device:
       value: 0.00002 or 0.00005
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
       footnote_markers: []
   model_level:
@@ -114,7 +114,7 @@ characteristics:
     - model: LXSG-20D3n/RLN1
       value: 20
   - attribute: permanent_flowrate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: LXSG-15D3e
       value: 2.5
@@ -130,7 +130,7 @@ characteristics:
       value: 4.0
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flowrate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: LXSG-15D3e
       value: 3.13
@@ -207,7 +207,7 @@ characteristics:
     - model: LXSG-20D3n/RLN1
       value: MAP10 or MAP16
   - attribute: rapid_testing_device_resolution
-    unit_symbol: impulse/dm³
+    unit_symbol: impulse/L
     values:
     - model: LXSG-13D3e/RLN1
       value: 129.16666
@@ -217,6 +217,7 @@ characteristics:
       value: 69.218
     - model: LXSG-20D3n/RLN1
       value: 69.218
+    unit_id: u:impulse_per_liter
   - attribute: indicating_device_configuration
     unit_symbol:
     values:
@@ -235,7 +236,7 @@ characteristics:
   config_level:
   - attribute: minimum_flowrate_q1
     axis: q3_over_q1_ratio
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - condition: DN15 (Q3=2.5 m³/h), Q3/Q1=40
       value: 0.063
@@ -268,7 +269,7 @@ characteristics:
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flowrate_q2
     axis: q3_over_q1_ratio
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - condition: DN15 (Q3=2.5 m³/h), Q3/Q1=40
       value: 0.1

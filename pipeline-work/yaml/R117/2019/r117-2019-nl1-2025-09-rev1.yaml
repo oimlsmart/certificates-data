@@ -68,7 +68,7 @@ characteristics:
       value:
         min: 0.4
         max: 8
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     minimum_ratio_qmax_over_qmin:
@@ -136,11 +136,13 @@ characteristics:
     - condition: Qmax of the measuring system is 60 L/min or more
       value: 2
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
     - condition: Qmax of the measuring system is less than 60 L/min (MMQ shall not exceed 5 litres)
       value: 5
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
+      prefix:
   - attribute: ambient_temperature_range
     axis: display_configuration
     values:
@@ -148,13 +150,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: multimedia display board
       value:
         min: -10
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 recommendation:
   id: R117-1
@@ -265,13 +267,13 @@ components:
         value:
           min: -25
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
       - condition: multimedia display board
         value:
           min: -10
           max: 55
-        unit_symbol: "°C"
+        unit_symbol: degC
         unit_id: u:degree_Celsius
 - role: Gas separator / gas elimination device (optional)
   type_designations:

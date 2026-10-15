@@ -71,7 +71,7 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     water_temperature_class:
       value: T30
@@ -81,7 +81,7 @@ characteristics:
       value:
         min: 0.1
         max: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     maximum_admissible_pressure:
       value: 1.6
@@ -119,8 +119,9 @@ characteristics:
       value: 5.5
     - model: V200
       value: 5.5
+    unit_id: u:revolution_per_liter
   - attribute: minimum_flow_rate_q1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 0.04
@@ -128,7 +129,7 @@ characteristics:
       value: 0.04
     unit_id: u:cubic_meter_per_hour
   - attribute: transitional_flow_rate_q2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 0.064
@@ -136,7 +137,7 @@ characteristics:
       value: 0.064
     unit_id: u:cubic_meter_per_hour
   - attribute: permanent_flow_rate_q3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 10
@@ -144,7 +145,7 @@ characteristics:
       value: 10
     unit_id: u:cubic_meter_per_hour
   - attribute: overload_flow_rate_q4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: V100
       value: 12.5
@@ -164,70 +165,70 @@ characteristics:
     values:
     - condition: V100 / 4x4 Register
       value: 9999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 99999.9999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 9999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 99999.9999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 99999.99998
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 999999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 99999.99998
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 999999.99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: verification_scale_interval_minimum_resolution
     axis: meter model and register variant
     values:
     - condition: V100 / 4x4 Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V100 / 5x3 Register
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 4x4 Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V110 / 5x3 Register
       value: 0.0001
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Mechanical
       value: 2.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V200 / Hybrid III, IV or V Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Mechanical
       value: 2.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: V210 / Hybrid III, IV or V Register
       value: 1.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
 recommendation:
   id: R49-1

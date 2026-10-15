@@ -63,7 +63,7 @@ characteristics:
       value: MHz
     path_angle:
       value: 50
-      unit_symbol: "°"
+      unit_symbol: deg
       unit_id: u:degree
     working_pressure_principle:
       value: >-
@@ -91,8 +91,9 @@ characteristics:
         min: 3
         max:
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
       footnote_markers: []
+      prefix:
     inlet_pipe_nominal_diameter_max_tolerance:
       value: 3
       unit_symbol: "%"
@@ -103,8 +104,9 @@ characteristics:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
       footnote_markers: []
+      prefix:
   model_level:
   - attribute: accuracy_class
     values:
@@ -626,13 +628,13 @@ characteristics:
       value:
         min: -40
         max: 70
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: gas meter with EVCD
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: gas_temperature_range
     axis: EVCD configuration
@@ -641,13 +643,13 @@ characteristics:
       value:
         min: -40
         max: 100
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: gas meter with EVCD
       value:
         min: -30
         max: 80
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: minimum_upstream_straight_pipe_length
     axis: flow disturbance type × meter family
@@ -657,7 +659,8 @@ characteristics:
         min: 5
         max:
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: mild disturbances — Q.Sonic max6
       value: "≥3D + FC + 5D or ≥6D"
       unit_symbol:

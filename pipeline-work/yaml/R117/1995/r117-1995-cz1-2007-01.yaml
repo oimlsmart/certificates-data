@@ -70,7 +70,7 @@ characteristics:
       value:
         min: -10
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     environmental_class:
@@ -112,7 +112,7 @@ characteristics:
       value: Diesel
       footnote_markers: []
   - attribute: qmax
-    unit_symbol: dm³/min
+    unit_symbol: L/min
     values:
     - model: Standard Duty
       value: 50
@@ -120,8 +120,9 @@ characteristics:
     - model: Heavy Duty
       value: 90
       footnote_markers: []
+    unit_id: u:liter_per_minute
   - attribute: qmin
-    unit_symbol: dm³/min
+    unit_symbol: L/min
     values:
     - model: Standard Duty
       value: 5
@@ -129,8 +130,9 @@ characteristics:
     - model: Heavy Duty
       value: 9
       footnote_markers: []
+    unit_id: u:liter_per_minute
   - attribute: vmin
-    unit_symbol: dm³
+    unit_symbol: L
     values:
     - model: Standard Duty
       value: 2
@@ -138,8 +140,8 @@ characteristics:
     - model: Heavy Duty
       value: 5
       footnote_markers: []
-    unit_id: u:cubic_meter
-    prefix: p:deci
+    unit_id: u:liter
+    prefix:
 recommendation:
 - id: R117
   edition: 1995

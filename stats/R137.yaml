@@ -55,7 +55,7 @@ type_level_characteristics:
     fill_rate: 0.532
     present_count: 126
     by_unit:
-      "°C":
+      degC:
         count: 125
         top_values:
         - range: min=-25, max=55
@@ -81,7 +81,7 @@ type_level_characteristics:
   ambient_temperature_range_evcd:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=55
@@ -89,7 +89,7 @@ type_level_characteristics:
   ambient_temperature_range_with_evcd:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=55
@@ -172,7 +172,7 @@ type_level_characteristics:
         top_values:
         - value: Not applicable
           count: 7
-      "°C":
+      degC:
         count: 1
         top_values:
         - value: 15
@@ -205,7 +205,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 1
@@ -220,7 +220,7 @@ type_level_characteristics:
     fill_rate: 0.021
     present_count: 5
     by_unit:
-      "°":
+      deg:
         count: 4
         top_values:
         - value: 45
@@ -321,13 +321,13 @@ type_level_characteristics:
     fill_rate: 0.008
     present_count: 2
     by_unit:
-      m³/h:
+      m^3/h:
         count: 1
         top_values:
         - value: 0.2
           count: 1
         unit_id: u:cubic_meter_per_hour
-      m³/lh:
+      m^3/lh:
         count: 1
         top_values:
         - value: 0.2
@@ -349,7 +349,7 @@ type_level_characteristics:
   counting_scale:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: dm³
+    unit_symbol: L
     unit_id: u:liter
     top_values:
     - value: 1
@@ -357,7 +357,7 @@ type_level_characteristics:
   cyclic_volume:
     fill_rate: 0.08
     present_count: 19
-    unit_symbol: dm³
+    unit_symbol: L
     unit_id: u:liter
     top_values:
     - value: 1.2
@@ -373,21 +373,13 @@ type_level_characteristics:
   density_range:
     fill_rate: 0.013
     present_count: 3
-    by_unit:
-      kg/m³:
-        count: 2
-        top_values:
-        - range: min=1.4, max=450
-          count: 1
-        - range: min=3.8, max=None
-          count: 1
-        unit_id: u:kilogram_per_cubic_meter
-      kg/m3:
-        count: 1
-        top_values:
-        - range: min=1.4, max=450
-          count: 1
-        unit_id: u:kilogram_per_cubic_meter
+    unit_symbol: kg/m^3
+    unit_id: u:kilogram_per_cubic_meter
+    top_values:
+    - range: min=1.4, max=450
+      count: 2
+    - range: min=3.8, max=None
+      count: 1
   designed_for:
     fill_rate: 0.574
     present_count: 136
@@ -779,7 +771,7 @@ type_level_characteristics:
             Q = 3600 · 1/4 · π · D² · v = 900 · π · D² · v, where Q = flow rate [m³/h], v = velocity [m/s],
             D = nominal bore size diameter [m]
           count: 1
-      m³/h:
+      m^3/h:
         count: 2
         top_values:
         - value: Q = v · 1/4 · π · D² · 3600
@@ -833,7 +825,7 @@ type_level_characteristics:
   gas_ambient_and_transducer_temperature_range:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=55
@@ -841,7 +833,7 @@ type_level_characteristics:
   gas_density_range_at_actual_conditions:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: kg/m³
+    unit_symbol: kg/m^3
     unit_id: u:kilogram_per_cubic_meter
     top_values:
     - range: min=0.5, max=None
@@ -856,7 +848,7 @@ type_level_characteristics:
   gas_temperature_range:
     fill_rate: 0.797
     present_count: 189
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-25, max=55
@@ -882,7 +874,7 @@ type_level_characteristics:
   gas_temperature_range_evcd:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-30, max=80
@@ -890,7 +882,7 @@ type_level_characteristics:
   gas_temperature_range_with_evcd:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-30, max=80
@@ -912,7 +904,7 @@ type_level_characteristics:
   gross_wobbe_index:
     fill_rate: 0.013
     present_count: 3
-    unit_symbol: MJ/m³
+    unit_symbol: MJ/m^3
     unit_id: u:joule_per_cubic_meter
     top_values:
     - range: min=39.1, max=54.7
@@ -920,7 +912,7 @@ type_level_characteristics:
   gross_wobbe_index_range:
     fill_rate: 0.013
     present_count: 3
-    unit_symbol: MJ/m³
+    unit_symbol: MJ/m^3
     unit_id: u:joule_per_cubic_meter
     top_values:
     - range: min=39.1, max=54.7
@@ -943,7 +935,7 @@ type_level_characteristics:
   gross_wobbe_index_reference_temperature:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - value: 15
@@ -1030,7 +1022,7 @@ type_level_characteristics:
   indicating_range:
     fill_rate: 0.093
     present_count: 22
-    unit_symbol: m³
+    unit_symbol: m^3
     unit_id: u:cubic_meter
     top_values:
     - value: 99999
@@ -1073,7 +1065,7 @@ type_level_characteristics:
     fill_rate: 0.008
     present_count: 2
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - value: 20
       count: 2
@@ -1432,7 +1424,7 @@ type_level_characteristics:
     fill_rate: 0.021
     present_count: 5
     by_unit:
-      m³/h:
+      m^3/h:
         count: 4
         top_values:
         - value: 2.5
@@ -1454,7 +1446,7 @@ type_level_characteristics:
     fill_rate: 0.013
     present_count: 3
     by_unit:
-      m³/h:
+      m^3/h:
         count: 2
         top_values:
         - value: 10
@@ -1467,6 +1459,7 @@ type_level_characteristics:
         top_values:
         - value: Qmax = S * M * SOS_gas * rho_gas (Formula 1)
           count: 1
+        unit_id: u:kilogram_per_hour
   maximum_hydrogen_concentration:
     fill_rate: 0.008
     present_count: 2
@@ -1478,6 +1471,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: kg/h
+    unit_id: u:kilogram_per_hour
     top_values:
     - value: Qmax = M × 2 × S × SOS_gas × ρ_act × 3600 (Formula 1)
       count: 1
@@ -1685,7 +1679,7 @@ type_level_characteristics:
   maximum_qmax:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 6
@@ -1903,7 +1897,7 @@ type_level_characteristics:
   minimum_flow_rate:
     fill_rate: 0.017
     present_count: 4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.016
@@ -1917,7 +1911,7 @@ type_level_characteristics:
   minimum_flow_rate_qmin:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.04
@@ -1974,7 +1968,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=3, max=None
       count: 1
@@ -2033,7 +2027,7 @@ type_level_characteristics:
   minimum_qmin:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.016
@@ -2041,7 +2035,7 @@ type_level_characteristics:
   minimum_qt:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.2
@@ -2071,7 +2065,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - value: 3
       count: 1
@@ -2172,7 +2166,7 @@ type_level_characteristics:
   oil_density:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: kg/m³
+    unit_symbol: kg/m^3
     unit_id: u:kilogram_per_cubic_meter
     top_values:
     - value: 818
@@ -2182,7 +2176,7 @@ type_level_characteristics:
   oil_kinematic_viscosity_at_40_deg_c:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: mm²/s
+    unit_symbol: mm^2/s
     unit_id: u:meter_squared_per_second
     top_values:
     - value: 2.5
@@ -2190,7 +2184,7 @@ type_level_characteristics:
   oil_kinematic_viscosity_at_minus_40_deg_c:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: mm²/s
+    unit_symbol: mm^2/s
     unit_id: u:meter_squared_per_second
     top_values:
     - value: 58.48
@@ -2198,7 +2192,7 @@ type_level_characteristics:
   oil_pour_point:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - value: -80
@@ -2325,7 +2319,7 @@ type_level_characteristics:
         top_values:
         - value: 5
           count: 1
-        unit_id: u:darcy
+        unit_id: u:diameter
   outlet_pipe_length:
     fill_rate: 0.013
     present_count: 3
@@ -2335,7 +2329,7 @@ type_level_characteristics:
         top_values:
         - value: 5
           count: 2
-        unit_id: u:debye
+        unit_id: u:diameter
       'null':
         count: 1
         top_values:
@@ -2352,7 +2346,7 @@ type_level_characteristics:
     fill_rate: 0.008
     present_count: 2
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - value: 3
       count: 1
@@ -2377,7 +2371,7 @@ type_level_characteristics:
   overload_flow_qr:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 7.2
@@ -2386,7 +2380,7 @@ type_level_characteristics:
     fill_rate: 0.025
     present_count: 6
     by_unit:
-      m³/h:
+      m^3/h:
         count: 3
         top_values:
         - value: 3
@@ -2406,7 +2400,7 @@ type_level_characteristics:
   overload_flow_rate_qr:
     fill_rate: 0.017
     present_count: 4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 30
@@ -2419,7 +2413,7 @@ type_level_characteristics:
     fill_rate: 0.055
     present_count: 13
     by_unit:
-      "°":
+      deg:
         count: 10
         top_values:
         - value: 62.5
@@ -2682,7 +2676,7 @@ type_level_characteristics:
   product_temperature_range:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-40, max=70
@@ -2691,13 +2685,13 @@ type_level_characteristics:
     fill_rate: 0.008
     present_count: 2
     by_unit:
-      m³/imp:
+      m^3/imp:
         count: 1
         top_values:
         - value: 0.01
           count: 1
         unit_id: u:cubic_meter_per_impulse
-      m³:
+      m^3:
         count: 1
         top_values:
         - value: 0.01
@@ -2706,7 +2700,7 @@ type_level_characteristics:
   pulse_value_per_impulse:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m³
+    unit_symbol: m^3
     unit_id: u:cubic_meter
     top_values:
     - value: 0.01
@@ -2714,7 +2708,7 @@ type_level_characteristics:
   pulse_weight:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: dm³
+    unit_symbol: L
     unit_id: u:liter
     top_values:
     - value: 10
@@ -2722,7 +2716,7 @@ type_level_characteristics:
   qmax:
     fill_rate: 0.013
     present_count: 3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 6
@@ -2734,7 +2728,7 @@ type_level_characteristics:
   qmin:
     fill_rate: 0.013
     present_count: 3
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.016
@@ -2744,7 +2738,7 @@ type_level_characteristics:
   qr:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 3
@@ -2755,7 +2749,7 @@ type_level_characteristics:
     fill_rate: 0.017
     present_count: 4
     by_unit:
-      m³/h:
+      m^3/h:
         count: 3
         top_values:
         - value: 0.2
@@ -2770,6 +2764,7 @@ type_level_characteristics:
         top_values:
         - value: "≤ Qmax/5"
           count: 1
+        unit_id: u:kilogram_per_hour
   ratio_qmax_qmin:
     fill_rate: 0.004
     present_count: 1
@@ -2787,7 +2782,7 @@ type_level_characteristics:
   reduced_bore_chamfer_angle:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: "°"
+    unit_symbol: deg
     unit_id: u:degree
     top_values:
     - value: 7
@@ -2802,7 +2797,7 @@ type_level_characteristics:
   resolution:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: dm³
+    unit_symbol: L
     unit_id: u:liter
     top_values:
     - value: 0.2
@@ -2810,7 +2805,7 @@ type_level_characteristics:
   scale_interval:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: m³
+    unit_symbol: m^3
     unit_id: u:cubic_meter
     top_values:
     - value: 0.00025
@@ -3040,7 +3035,7 @@ type_level_characteristics:
   storage_temperature:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-30, max=70
@@ -3061,7 +3056,7 @@ type_level_characteristics:
         top_values:
         - value: Not applicable
           count: 4
-      "°C":
+      degC:
         count: 1
         top_values:
         - value: 15
@@ -3071,7 +3066,7 @@ type_level_characteristics:
     fill_rate: 0.342
     present_count: 81
     by_unit:
-      "°C":
+      degC:
         count: 80
         top_values:
         - range: min=-25, max=55
@@ -3100,7 +3095,7 @@ type_level_characteristics:
     fill_rate: 0.021
     present_count: 5
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 5
@@ -3117,7 +3112,7 @@ type_level_characteristics:
     fill_rate: 0.008
     present_count: 2
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 1
@@ -3127,7 +3122,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 1
@@ -3142,7 +3137,7 @@ type_level_characteristics:
     fill_rate: 0.013
     present_count: 3
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 3
@@ -3150,7 +3145,7 @@ type_level_characteristics:
     fill_rate: 0.004
     present_count: 1
     unit_symbol: D
-    unit_id: u:debye
+    unit_id: u:diameter
     top_values:
     - range: min=2, max=5
       count: 1
@@ -3226,7 +3221,7 @@ type_level_characteristics:
   transitional_flow_rate:
     fill_rate: 0.017
     present_count: 4
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.6
@@ -3238,7 +3233,7 @@ type_level_characteristics:
   transitional_flow_rate_qt:
     fill_rate: 0.008
     present_count: 2
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
     top_values:
     - value: 0.6
@@ -3262,7 +3257,7 @@ type_level_characteristics:
   tube_cross_section_area_formula:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: m²
+    unit_symbol: m^2
     unit_id: u:square_meter
     top_values:
     - value: S = (π/4) × d²
@@ -3291,7 +3286,7 @@ type_level_characteristics:
   verification_scale_interval:
     fill_rate: 0.114
     present_count: 27
-    unit_symbol: m³
+    unit_symbol: m^3
     unit_id: u:cubic_meter
     top_values:
     - value: 0.0002
@@ -3481,7 +3476,7 @@ type_level_characteristics:
   working_temperature_range_tw:
     fill_rate: 0.004
     present_count: 1
-    unit_symbol: "°C"
+    unit_symbol: degC
     unit_id: u:degree_Celsius
     top_values:
     - range: min=-10, max=40

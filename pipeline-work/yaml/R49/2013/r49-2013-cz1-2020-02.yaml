@@ -104,11 +104,11 @@ characteristics:
       unit_id:
     indicating_range:
       value: 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     resolution_of_indicating_device:
       value: 5.0e-05
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     minimum_straight_length_inlet_pipe:
       value: 0
@@ -172,7 +172,7 @@ characteristics:
       value: 32
     unit_id: u:millimeter
   - attribute: q1_minimum_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: CD97TAR-DN15
       value: 0.05
@@ -200,7 +200,7 @@ characteristics:
       value: 0.125
     unit_id: u:cubic_meter_per_hour
   - attribute: q2_transition_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: CD97TAR-DN15
       value: 0.08
@@ -228,7 +228,7 @@ characteristics:
       value: 0.2
     unit_id: u:cubic_meter_per_hour
   - attribute: q3_permanent_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: CD97TAR-DN15
       value: 2.5
@@ -256,7 +256,7 @@ characteristics:
       value: 10.0
     unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: CD97TAR-DN15
       value: 3.125
@@ -392,6 +392,7 @@ characteristics:
       value: '40.1053'
     - model: CD96TAR-DN32-R80
       value: '40.1053'
+    unit_id: u:impulse_per_liter
   config_level:
   - attribute: maximum_permitted_error_upper_flowrate_zone
     axis: water_temperature
@@ -409,15 +410,15 @@ characteristics:
     values:
     - condition: T30
       value: 30
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T50
       value: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: T90
       value: 90
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: reed_switch_k_factor
     axis: k_factor_option
@@ -425,15 +426,19 @@ characteristics:
     - condition: option 1
       value: 0.001
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: option 2
       value: 0.01
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: option 3
       value: 0.1
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
     - condition: option 4
       value: 1
       unit_symbol: impulse/L
+      unit_id: u:impulse_per_liter
 recommendation:
   id: R49
   edition: 2013

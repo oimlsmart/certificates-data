@@ -67,7 +67,7 @@ characteristics:
       value: Plastic (TSN, CC4 or WTR) / Glass & metal (TVM)
     cyclical_volume:
       value: 33.33
-      unit_symbol: cm³
+      unit_symbol: cm^3
       unit_id: u:cubic_meter
       prefix: p:centi
     q2_q1_ratio:
@@ -86,7 +86,7 @@ characteristics:
       value:
         min: -10
         max: 70
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     environmental_class:
       value: B/O
@@ -98,7 +98,7 @@ characteristics:
       - "**"
   model_level:
   - attribute: q3_permanent_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: P1HR-Q3=1.0
       value: 1.0
@@ -108,7 +108,7 @@ characteristics:
       value: 2.5
     unit_id: u:cubic_meter_per_hour
   - attribute: q4_overload_flowrate
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: P1HR-Q3=1.0
       value: 1.25
@@ -165,35 +165,35 @@ characteristics:
     values:
     - condition: "(5+3) digits / CC4"
       value: 99999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
     - condition: WTR / TVM (4+4)
       value: 9999
-      unit_symbol: m³
+      unit_symbol: m^3
       unit_id: u:cubic_meter
   - attribute: verification_scale_interval
     axis: register / indicating device
     values:
     - condition: TSN / TVM 5+3
       value: 0.02
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: CC4
       value: 0.05
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: WTR
       value: 0.1
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
     - condition: TVM 4+4
       value: 0.002
-      unit_symbol: dm³
-      unit_id: u:cubic_meter
-      prefix: p:deci
+      unit_symbol: L
+      unit_id: u:liter
+      prefix:
   - attribute: water_temperature_class
     axis: indicating device
     values:

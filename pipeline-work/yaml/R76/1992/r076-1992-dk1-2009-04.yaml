@@ -76,7 +76,7 @@ characteristics:
       value:
         min: 58
         max: 1200
-      unit_symbol: Ω
+      unit_symbol: Ohm
       unit_id: u:ohm
     load_cell_connecting_system:
       value: 6 wire system, screened
@@ -90,7 +90,7 @@ characteristics:
       value:
         min: -10
         max: 40
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   model_level: []
   config_level:
@@ -99,10 +99,12 @@ characteristics:
     values:
     - condition: version 01.xx
       value: 0.5
-      unit_symbol: µV/VSI
+      unit_symbol: uV/VSI
+      unit_id: u:microvolt_per_verification_interval
     - condition: version 02.xx
       value: 0.4
-      unit_symbol: µV/VSI
+      unit_symbol: uV/VSI
+      unit_id: u:microvolt_per_verification_interval
   - attribute: max_number_of_intervals
     axis: certified variant (unnamed columns in characteristics table)
     values:

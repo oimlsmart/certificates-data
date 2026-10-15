@@ -78,14 +78,14 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     gas_temperature_range:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     humidity_conditions:
@@ -120,15 +120,17 @@ characteristics:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
       footnote_markers: []
+      prefix:
     bidirectional_additional_temperature_sensor_position_upstream:
       value:
         min: 2
         max: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
       footnote_markers: []
+      prefix:
     maximum_welding_diameter_step:
       value: 3
       unit_symbol: "%"
@@ -238,33 +240,39 @@ characteristics:
     - condition: NOVA 50E flow conditioner
       value: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: PTB flow conditioner
       value: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
   - attribute: min_upstream_straight_pipe_after_flow_conditioner
     axis: flow_conditioner_type
     values:
     - condition: NOVA 50E flow conditioner
       value: 10
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: PTB flow conditioner
       value: 5
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
   - attribute: min_downstream_straight_pipe
     axis: flow_conditioner_type
     values:
     - condition: NOVA 50E flow conditioner
       value: 4
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
     - condition: PTB flow conditioner
       value: 3
       unit_symbol: D
-      unit_id: u:debye
+      unit_id: u:diameter
+      prefix:
 recommendation:
   id: R137-1
   edition: 2012

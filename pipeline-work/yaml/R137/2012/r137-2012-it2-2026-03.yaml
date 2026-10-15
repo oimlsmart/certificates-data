@@ -62,13 +62,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     gas_temperature_range:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     orientation:
       value: Connection Ports Vertical
@@ -102,7 +102,7 @@ characteristics:
       value: H, L, E
   model_level:
   - attribute: qmax
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6
       value: 2.5
@@ -112,7 +112,7 @@ characteristics:
       value: 6
     unit_id: u:cubic_meter_per_hour
   - attribute: qt
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6
       value: 0.25
@@ -122,7 +122,7 @@ characteristics:
       value: 0.6
     unit_id: u:cubic_meter_per_hour
   - attribute: qmin
-    unit_symbol: m³/h
+    unit_symbol: m^3/h
     values:
     - model: G1.6
       value: 0.016
@@ -144,14 +144,14 @@ characteristics:
     values:
     - condition: with PT conversion
       value: 20
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: tsp
     axis: pt_conversion
     values:
     - condition: with PT conversion
       value: 20
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: volume_indication
     axis: pt_conversion
@@ -166,9 +166,11 @@ characteristics:
     - condition: qt < q < qmax
       value: 5
       unit_symbol: L/pul
+      unit_id: u:liter_per_pulse
     - condition: qmin < q < qt
       value: 1
       unit_symbol: L/pul
+      unit_id: u:liter_per_pulse
 recommendation:
   id: R137
   edition: 2012

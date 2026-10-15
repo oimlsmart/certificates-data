@@ -1,4 +1,3 @@
----
 _meta:
   cert_id: 6568
   num: R117/2019-A-NL1-21.02 Rev. 5
@@ -130,7 +129,7 @@ characteristics:
     - model: Adblue dispenser - 1x measurement sensor BATCHFLUX 3200C - 2-40L/min
       value: M1/E1
   - attribute: temperature_range
-    unit_symbol: "°C"
+    unit_symbol: degC
     values:
     - model: Fuel dispenser - 1x gas separator*1x meter sensor C+,V or V+ - 1.6-40L/min
       value:
@@ -158,7 +157,7 @@ characteristics:
         max: 55
     unit_id: u:degree_Celsius
   - attribute: product_temperature_range
-    unit_symbol: "°C"
+    unit_symbol: degC
     values:
     - model: Fuel dispenser - 1x gas separator*1x meter sensor C+,V or V+ - 1.6-40L/min
       value:
@@ -189,24 +188,24 @@ characteristics:
     values:
     - model: Fuel dispenser - 1x gas separator*1x meter sensor C+,V or V+ - 1.6-40L/min
       value: >-
-        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel or Biodiesel up
-        to 100%)
+        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel
+        or Biodiesel up to 100%)
     - model: Fuel dispenser - 1x gas separator*1x meter sensor C+,V or V+ - 2.0-80L/min
       value: >-
-        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel or Biodiesel up
-        to 100%)
+        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel
+        or Biodiesel up to 100%)
     - model: Fuel dispenser - 1x gas separator*2x meter sensors C+,V or V+ - 1.6-40L/min
       value: >-
-        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel or Biodiesel up
-        to 100%)
+        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel
+        or Biodiesel up to 100%)
     - model: Fuel dispenser - 1x gas separator*2x meter sensors C+,V or V+ - 2.0-80L/min
       value: >-
-        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel or Biodiesel up
-        to 100%)
+        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel
+        or Biodiesel up to 100%)
     - model: Fuel dispenser - 2x gas separators*2x meter sensors C+,V or V+ - 2.0-130L/min
       value: >-
-        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel or Biodiesel up
-        to 100%)
+        Hydrocarbon oils (Gasoline, Gasoline up to 86% ethanol or MTBE, Gasoline up to 5% methanol, Diesel
+        or Biodiesel up to 100%)
     - model: Adblue dispenser - 1x measurement sensor BATCHFLUX 3200C - 2-40L/min
       value: Adblue (Diesel Exhaust Fluid)
   config_level: []
@@ -344,11 +343,13 @@ revision_history:
 - revision: '1'
   date: '2022-03-10'
   changes: >-
-    The Tulip calculating and indicating device can be connected with the Krohne BATCHFLUX 3200C meter via a secured protocol
-    converter device.
+    The Tulip calculating and indicating device can be connected with the Krohne BATCHFLUX 3200C meter
+    via a secured protocol converter device.
 - revision: '2'
   date: '2023-11-16'
-  changes: Tulip calculating and indicating device addition of new processor, PCB, new software and improved magnetic pulser
+  changes: >-
+    Tulip calculating and indicating device addition of new processor, PCB, new software and improved
+    magnetic pulser
 - revision: '3'
   date: '2024-05-15'
   changes: Name and address change
@@ -357,7 +358,9 @@ revision_history:
   changes: Addition of new electronics, new software and pulser and Apollo-Astra calculator
 - revision: '5'
   date: '2025-06-27'
-  changes: Addition of new hardware (Electromechanical totalizer and Keypad assembly) and software for Apollo-II calculator
+  changes: >-
+    Addition of new hardware (Electromechanical totalizer and Keypad assembly) and software for Apollo-II
+    calculator
 model_family:
   family_name:
   models:
@@ -402,13 +405,13 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_for_measurement:
       value: low-viscosity mineral oils with a viscosity of 0.4mPa·s-8.0mPa·s
@@ -443,13 +446,13 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: meter sensor
   type_designations:
@@ -483,13 +486,13 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -25
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
 - role: measurement sensor
   type_designations:
@@ -519,13 +522,13 @@ components:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     software_identification:
       value: ER1.0.0_/ER1.0.1_
@@ -549,7 +552,7 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     impulse_encoder_or_pulser:
       value: ST73662 and Evole 2.1
@@ -571,7 +574,7 @@ components:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     impulse_encoder_or_pulser:
       value: SIP;SIP-II,Evole2.1andAstraExd pulser
@@ -631,8 +634,9 @@ matrix_tables:
   - Characteristic:
       value: Intended for the measurement of
     Fuel dispenser:
-      value: Hydrocarbon oils(Gasoline,Gasoline up to 86% ethanol orMTBE,Gasoline up to 5% methanol,Diesel or Biodiesel up
-        to 100%)
+      value: >-
+        Hydrocarbon oils(Gasoline,Gasoline up to 86% ethanol orMTBE,Gasoline up to 5% methanol,Diesel
+        or Biodiesel up to 100%)
     Adblue/DEF dispenser:
       value: Adblue(Diesel Exhaust Fluid)
   description: General characteristics of the fuel dispenser and Adblue/DEF dispenser
@@ -655,27 +659,29 @@ matrix_tables:
       value: 2,0-80L/min
     Remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range 1,1-8,0mPa.s.Optionally a feature to allow Qmax
-        to be limited to 40L/min.
+        Intended for the measurement of hydrocarbon oils with viscosity range 1,1-8,0mPa.s.Optionally
+        a feature to allow Qmax to be limited to 40L/min.
   - Configuration fuel dispenser:
       value: 1x gas separator*2x meter sensors,type C+,V or V+,one per dispenser side
     Flow rate range:
       value: 1,6-40L/min
     Remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range 0,4-1,0mPa.s.The gas separator of this measuring
-        system is suitable for use with two meter sensors.Each meter sensor is considered as part of an individual measuring
-        system.Flowrate reduces to 40L/min with both meter sensors operating.Optionally a feature to allow Qmax to be limited
-        to 40L/min with a single meter sensor operating.
+        Intended for the measurement of hydrocarbon oils with viscosity range 0,4-1,0mPa.s.The gas separator
+        of this measuring system is suitable for use with two meter sensors.Each meter sensor is considered
+        as part of an individual measuring system.Flowrate reduces to 40L/min with both meter sensors
+        operating.Optionally a feature to allow Qmax to be limited to 40L/min with a single meter sensor
+        operating.
   - Configuration fuel dispenser:
       value: 1x gas separator*2x meter sensors,type C+,V or V+,one per dispenser side
     Flow rate range:
       value: 2,0-80L/min
     Remarks:
       value: >-
-        Intended for the measurement of hydrocarbon oils with viscosity range 1,1-8,0mPa.s.The gas separator of this measuring
-        system is suitable for use with two meter sensors.Each meter sensor is considered as part of an individual measuring
-        system.Flowrate reduces to 40L/min with both meter sensors operating.
+        Intended for the measurement of hydrocarbon oils with viscosity range 1,1-8,0mPa.s.The gas separator
+        of this measuring system is suitable for use with two meter sensors.Each meter sensor is considered
+        as part of an individual measuring system.Flowrate reduces to 40L/min with both meter sensors
+        operating.
   description: Flow characteristics of the fuel dispenser configurations
   footnotes: []
 - name: Table 3 General characteristics of the measurement sensor type C+
@@ -980,7 +986,8 @@ matrix_tables:
       value: WELMEC Guide 7.2(Issue 2019)
   description: Software version and Checksum of the calculating/indicating device type Tulip
   footnotes: []
-- name: Table 7 General characteristics of the calculating/indicating device type Apollo-II and/or Apollo-Astra
+- name: >-
+    Table 7 General characteristics of the calculating/indicating device type Apollo-II and/or Apollo-Astra
   columns:
   - Maximum volume indication
   - 7 digits(9999999; floating decimal)

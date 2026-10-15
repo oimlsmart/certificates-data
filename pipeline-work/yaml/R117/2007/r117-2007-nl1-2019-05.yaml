@@ -64,7 +64,7 @@ characteristics:
       value:
         min: -40
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     ambient_conditions:
@@ -83,7 +83,7 @@ characteristics:
       value:
         min: 1
         max: 740
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       footnote_markers: []
       prefix: p:milli
@@ -105,20 +105,21 @@ characteristics:
     minimum_measured_quantity:
       value: 10
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
       footnote_markers: []
+      prefix:
   config_level:
   - attribute: maximum_viscosity
     axis: accuracy_class
     values:
     - condition: accuracy class 0.3
       value: 5
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     - condition: accuracy class 0.5
       value: 740
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
   - attribute: liquid_temperature_range
@@ -128,19 +129,19 @@ characteristics:
       value:
         min: -5
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: accuracy class 0.5, liquid temperature -40/+50 °C configuration
       value:
         min: -40
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     - condition: accuracy class 0.5, liquid temperature -5/+50 °C configuration
       value:
         min: -5
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   - attribute: minimum_flow_rate
     axis: accuracy_class_and_liquid_temperature

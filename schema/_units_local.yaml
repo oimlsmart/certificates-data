@@ -173,7 +173,7 @@ compounds:
     - { unicode: "imp/m³", ascii: "imp/m3", id: "imp_per_m3" }
     - { unicode: "P/m³", ascii: "P/m3", id: "P_per_m3" }
     root_units:
-    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: 1,  unit_reference: { type: unitsml, id: u:pulse } }
     - { power: -1, unit_reference: { type: unitsml, id: u:cubic_meter } }
     notes: "OIML-specific: gas meter pulse constant."
 
@@ -184,7 +184,7 @@ compounds:
     symbols:
     - { unicode: "imp/km", ascii: "imp/km", id: "imp_per_km" }
     root_units:
-    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: 1,  unit_reference: { type: unitsml, id: u:pulse } }
     - { power: -1, prefix_reference: { type: unitsml, id: p:kilo }, unit_reference: { type: unitsml, id: u:meter } }
     notes: "OIML-specific: taximeter distance constant."
 
@@ -196,7 +196,7 @@ compounds:
     - { unicode: "imp/kWh", ascii: "imp/kWh", id: "imp_per_kWh" }
     - { unicode: "imp./kWh", ascii: "imp./kWh", id: "imp_dot_per_kWh" }
     root_units:
-    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: 1,  unit_reference: { type: unitsml, id: u:pulse } }
     - { power: -1, unit_reference: { type: unitsml, id: u:kilowatt_hour } }
     notes: "OIML-specific: electricity meter constant."
 
@@ -208,7 +208,7 @@ compounds:
     - { unicode: "m³/imp", ascii: "m3/imp", id: "m3_per_imp" }
     root_units:
     - { power: 1,  unit_reference: { type: unitsml, id: u:cubic_meter } }
-    - { power: -1, unit_reference: { type: unitsml, id: u:count } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:pulse } }
 
   u:microvolt_per_verification_interval:
     names:
@@ -216,6 +216,7 @@ compounds:
     short: microvolt_per_verification_interval
     symbols:
     - { unicode: "μV/e", ascii: "uV/e", id: "uV_per_e" }
+    - { unicode: "μV/VSI", ascii: "uV/VSI", id: "uV_per_VSI" }
     root_units:
     - { power: 1, prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:volt } }
     notes: "R76-specific: minimum input voltage per verification scale interval e."
@@ -245,7 +246,8 @@ compounds:
     symbols:
     - { unicode: "pulse/revolution", ascii: "pulse/rev", id: "pulse_per_rev" }
     root_units:
-    - { power: 1,  unit_reference: { type: unitsml, id: u:count } }
+    - { power: 1,  unit_reference: { type: unitsml, id: u:pulse } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:revolution } }
 
   u:relative_humidity_percent:
     names:
@@ -316,8 +318,12 @@ compounds:
     short: impulse_per_liter
     symbols:
     - { unicode: "imp/L", ascii: "imp/L", id: "imp_per_L" }
+    - { unicode: "impulse/L", ascii: "impulse/L", id: "impulse_per_L" }
+    - { unicode: "pulse/L", ascii: "pulse/L", id: "pulse_per_L" }
+    - { unicode: "pulses/L", ascii: "pulses/L", id: "pulses_per_L" }
+    - { unicode: "pulses/litre", ascii: "pulses/litre", id: "pulses_per_litre" }
     root_units:
-    - { power: 1,  unit_reference: { type: unitsml, id: u:one } }
+    - { power: 1,  unit_reference: { type: unitsml, id: u:pulse } }
     - { power: -1, unit_reference: { type: unitsml, id: u:liter } }
     notes: "OIML flow-meter pulse counts per volume unit; u:one per u:liter."
 
@@ -365,6 +371,7 @@ counts:
     - { unicode: "packages per minute", ascii: "packages per minute", id: "packages_per_minute" }
     - { unicode: "packages/min", ascii: "packages/min", id: "packages_per_min" }
     - { unicode: "packs/min", ascii: "packs/min", id: "packs_per_min" }
+    - { unicode: "packages/minute", ascii: "packages/minute", id: "packages_per_minute_word" }
     notes: "R61 AGFI package throughput rate."
 
   u:piece_per_minute:
@@ -373,6 +380,10 @@ counts:
     short: piece_per_minute
     symbols:
     - { unicode: "pieces/min", ascii: "pieces/min", id: "pieces_per_min" }
+    - { unicode: "pcs/min", ascii: "pcs/min", id: "pcs_per_min" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:piece } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:minute } }
 
   u:load_per_minute:
     names:
@@ -411,3 +422,140 @@ counts:
     symbols:
     - { unicode: "CU/km", ascii: "CU/km", id: "CU_per_km" }
 
+
+  u:revolution:
+    names:
+    - { value: "revolution", lang: en }
+    short: revolution
+    symbols:
+    - { unicode: "rev", ascii: "rev", id: "rev" }
+    - { unicode: "revs", ascii: "revs", id: "revs" }
+    notes: "Count of full turns (flow-meter driving units)."
+
+  u:pulse:
+    names:
+    - { value: "pulse", lang: en }
+    short: pulse
+    symbols:
+    - { unicode: "pulse", ascii: "pulse", id: "pulse" }
+    - { unicode: "pulses", ascii: "pulses", id: "pulses" }
+    - { unicode: "impulse", ascii: "impulse", id: "impulse" }
+    - { unicode: "imp", ascii: "imp", id: "imp" }
+    - { unicode: "pul", ascii: "pul", id: "pul" }
+    notes: "Flow-meter impulse count; the count noun behind imp/pulse symbols."
+
+  u:piece:
+    names:
+    - { value: "piece", lang: en }
+    short: piece
+    symbols:
+    - { unicode: "pcs", ascii: "pcs", id: "pcs" }
+    - { unicode: "pieces", ascii: "pieces", id: "pieces" }
+
+  u:diameter:
+    names:
+    - { value: "diameter", lang: en }
+    short: diameter
+    symbols:
+    - { unicode: "D", ascii: "D", id: "D" }
+    notes: "Pipe-diameter multiple in installation straight-length requirements (R49/R117/R137: '3D' = three pipe diameters)."
+
+  u:metric_ton_per_hour:
+    names:
+    - { value: "metric ton per hour", lang: en }
+    short: metric_ton_per_hour
+    symbols:
+    - { unicode: "t/h", ascii: "t/h", id: "t_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:metric_ton } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+
+  u:kilogram_per_hour:
+    names:
+    - { value: "kilogram per hour", lang: en }
+    short: kilogram_per_hour
+    symbols:
+    - { unicode: "kg/h", ascii: "kg/h", id: "kg_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:kilogram } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+
+  u:revolution_per_liter:
+    names:
+    - { value: "revolution per liter", lang: en }
+    short: revolution_per_liter
+    symbols:
+    - { unicode: "rev/l", ascii: "rev/l", id: "rev_per_l" }
+    - { unicode: "rev/L", ascii: "rev/L", id: "rev_per_L" }
+    - { unicode: "rev/liter", ascii: "rev/liter", id: "rev_per_liter" }
+    - { unicode: "rev/litre", ascii: "rev/litre", id: "rev_per_litre" }
+    - { unicode: "revs/litre", ascii: "revs/litre", id: "revs_per_litre" }
+    - { unicode: "revs/liter", ascii: "revs/liter", id: "revs_per_liter" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:revolution } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:liter } }
+
+  u:liter_per_pulse:
+    names:
+    - { value: "liter per pulse", lang: en }
+    short: liter_per_pulse
+    symbols:
+    - { unicode: "L/pulse", ascii: "L/pulse", id: "L_per_pulse" }
+    - { unicode: "L/pul", ascii: "L/pul", id: "L_per_pul" }
+    - { unicode: "dm³/pulse", ascii: "dm3/pulse", id: "dm3_per_pulse" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:liter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:pulse } }
+
+  u:liter_per_revolution:
+    names:
+    - { value: "liter per revolution", lang: en }
+    short: liter_per_revolution
+    symbols:
+    - { unicode: "L/rev", ascii: "L/rev", id: "L_per_rev" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:liter } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:revolution } }
+
+# Word-form and spelling aliases to canonical unitsml ids. These are not
+# new units — they map the corpus's prose spellings onto unitsdb units so
+# compound atoms resolve (revs/litre -> u:revolution + u:liter).
+aliases:
+  u:liter: [litre, liter]
+  u:minute: [minute]
+  u:hour: [hour]
+  u:second: [second]
+  u:us_gallon: ["US gal"]
+  u:inch: [inch]
+  u:lux: [lux]
+
+# Symbol meanings only the recommendation can decide. A bare symbol whose
+# unitsdb claimants collide (d = scale division / day / darcy; D = diameter
+# / debye / darcy) resolves ONLY through a matching row here — same
+# recommendation family and symbol — and stays honestly unresolved
+# otherwise. Global symbol disambiguation is forbidden by evidence: the
+# same glyph carries different meanings across recommendations and
+# renderings, and OCR errors make pattern-guessing unsound.
+disambiguation:
+- symbol: d
+  r: [R61, R76, R134]
+  unit_id: u:division
+  notes: "Weighing instruments: actual scale interval (d), sibling of the verification interval e."
+- symbol: D
+  r: [R49, R117, R137]
+  unit_id: u:diameter
+  notes: "Fluid-meter installation: straight lengths in pipe diameters."
+- symbol: in
+  r: [R76, R51, R49, R117, R137]
+  unit_id: u:inch
+  notes: "Display sizes and threaded connections: ordinary inch, not the US survey inch."
+- symbol: lb
+  r: [R76, R60]
+  unit_id: u:av_pound
+  notes: "Imperial capacity columns: avoirdupois pound, not troy."
+
+# Currency symbol spellings to ISO 4217 alpha-3 codes. Currency is not a
+# unit of measurement — the resolver emits it on the record's own currency
+# field (price per litre: currency EUR + unit_id u:liter), never as a u: id.
+currencies:
+  EUR: ["€", "EURO", "EUR"]

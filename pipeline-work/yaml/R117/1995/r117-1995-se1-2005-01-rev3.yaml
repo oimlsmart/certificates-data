@@ -61,12 +61,13 @@ characteristics:
     minimum_measured_quantity:
       value: 2
       unit_symbol: L
-      unit_id: u:lambert
+      unit_id: u:liter
       footnote_markers: []
+      prefix:
     minimum_measured_quantity_us_gallon:
       value: 0.5
       unit_symbol: US gal
-      unit_id:
+      unit_id: u:us_gallon
       footnote_markers: []
     liquids:
       value: petrol, kerosene, diesel
@@ -77,19 +78,19 @@ characteristics:
       value:
         min: -25
         max: 50
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     ambient_temperature_range:
       value:
         min: -25
         max: 60
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
     ambient_temperature_max_with_xwip_ii_pulse_generator:
       value: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
       footnote_markers: []
   model_level:
@@ -220,24 +221,29 @@ characteristics:
         min: 0.3
         max:
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Single, Xflo
       value:
         min: 0.8
         max:
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 50/50% to 17/83%
       value:
         min: 0.3
         max:
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 16/84% to 5/95%
       value:
         min: 1.0
         max:
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 4/96% to 2/98%
       value: 2.5
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
   - attribute: maximum_flow_rate_qmax
     axis: volume_sensor_quality_and_blending_range
     values:
@@ -277,24 +283,29 @@ characteristics:
         min:
         max: 18.5
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Single, Xflo
       value:
         min:
         max: 21.1
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 50/50% to 17/83%
       value:
         min:
         max: 12.5
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 16/84% to 5/95%
       value:
         min:
         max: 12.5
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
     - condition: Blend, iMeter, 4/96% to 2/98%
       value: 12.5
       unit_symbol: US gal/min
+      unit_id: u:gallon_per_minute
   - attribute: qmax_over_qmin
     axis: volume_sensor_quality_and_blending_range
     values:

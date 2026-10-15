@@ -69,13 +69,13 @@ characteristics:
       value:
         min: -25
         max: 55
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     product_temperature_range:
       value:
         min: -5
         max: 35
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
     intended_medium:
       value: Hydrocarbon based oils (fuels)
@@ -83,12 +83,12 @@ characteristics:
       unit_id:
     maximum_viscosity:
       value: 20
-      unit_symbol: mPa·s
+      unit_symbol: mPa*s
       unit_id: u:pascal_second
       prefix: p:milli
     viscosity_reference_temperature:
       value: 20
-      unit_symbol: "°C"
+      unit_symbol: degC
       unit_id: u:degree_Celsius
   model_level:
   - attribute: accuracy_class
@@ -169,6 +169,7 @@ characteristics:
       value: 8
     - model: M(S)120 DN200 class 0.5
       value: 8
+    unit_id: u:inch
   - attribute: nominal_diameter_dn
     unit_symbol:
     values:
@@ -235,7 +236,8 @@ characteristics:
       value: 23.81
     - model: M(S)120 DN200 class 0.5
       value: 23.81
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   - attribute: qmin
     unit_symbol: L/min
     values:
@@ -337,7 +339,8 @@ characteristics:
       value: 1000
     - model: M(S)120 DN200 class 0.5
       value: 1000
-    unit_id: u:lambert
+    unit_id: u:liter
+    prefix:
   config_level:
   - attribute: maximum_pressure
     axis: pressure-containing sphere variant (type suffix)
