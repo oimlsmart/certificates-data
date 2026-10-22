@@ -102,7 +102,7 @@ characteristics:
     minimum_battery_life_time:
       value: 5
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
     measuring_principle:
       value: electromagnetic (inductive)
       unit_symbol:
@@ -118,11 +118,11 @@ characteristics:
     inlet_straight_length:
       value: 5
       unit_symbol: "*DN"
-      unit_id:
+      unit_id: u:DN_multiple
     outlet_straight_length:
       value: 3
       unit_symbol: "*DN"
-      unit_id:
+      unit_id: u:DN_multiple
     ratio_q2_q1:
       value: 1.6
       unit_symbol:
@@ -197,7 +197,8 @@ characteristics:
       value: 150
     - model: MAGB1-DN150-R50
       value: 150
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: overload_flowrate_q4
     unit_symbol: m^3/h
     values:
@@ -602,7 +603,8 @@ characteristics:
       value: 300
     - model: MAGB1-DN150-R50
       value: 300
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone_mpeu
     axis: water_temperature

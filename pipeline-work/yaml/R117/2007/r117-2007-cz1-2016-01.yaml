@@ -83,11 +83,13 @@ characteristics:
     maximum_pressure:
       value: 0.3
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     minimum_pressure:
       value: 0.1
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     environmental_classes:
       value: M1, E1, H3
       unit_symbol:
@@ -118,7 +120,7 @@ characteristics:
     minimum_pump_running_time_before_delivery:
       value: 3
       unit_symbol: s
-      unit_id: u:second_time
+      unit_id: u:second
       prefix:
     minimum_pipeline_slope:
       value: 1
@@ -168,7 +170,8 @@ components:
         min: 0.1
         max: 0.3
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     cyclic_volume:
       value: 0.5
       unit_symbol: L
@@ -200,6 +203,7 @@ components:
     pulses_per_revolution:
       value: 2 x 100
       unit_symbol: pulses/revolution
+      unit_id: u:impulse_per_revolution
 - role: electronic_calculator
   type_designations:
   - LT-C
@@ -274,7 +278,8 @@ components:
     inner_diameter:
       value: 19
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     maximum_pressure:
       value: 16
       unit_symbol: bar

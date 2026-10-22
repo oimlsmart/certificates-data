@@ -75,7 +75,8 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     orientation:
       value: All positions (horizontal, vertical or diagonal)
     flow_profile_sensitivity_class:
@@ -130,7 +131,8 @@ characteristics:
       value: 250
     - model: MUT2200EL-DN300
       value: 300
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: minimum_flow_rate_q1
     unit_symbol: m^3/h
     values:
@@ -433,15 +435,18 @@ characteristics:
     - condition: MUT2200EL, all sizes
       value: 0.01
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: MUT2300, sizes < DN80
       value: 0.025
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: MUT2300, sizes ≥ DN80
       value: 0.04
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
 recommendation:
   id: R49
   edition: 2013

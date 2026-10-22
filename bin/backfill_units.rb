@@ -111,6 +111,34 @@ currency_forms = {}
 (local["currencies"] || {}).each do |code, forms|
   Array(forms).each { |form| currency_forms[form.to_s] = code }
 end
+# Non-unit values that ride unit_symbol: stamped _unit_kind: descriptor,
+# never minted into units.
+DESCRIPTORS = Set.new(Array(local["descriptors"]))
+
+# Canonical forms per the unitsml standard's own parser: a prefixed
+# quantity carries base + prefix (Unitsml.parse("mg") yields u:gram +
+# p:milli), never an invented prefixed id. The frozen pipeline's alias
+# table names ids unitsdb does not define; each resolves to its
+# (base, prefix) by decomposing its own symbol against the unitsdb bases.
+# Real units unitsdb lacks are declared in _units_local and need none.
+DB_UNIT_IDS = Set.new
+db.units.each { |u| (uid = unitsml_id(u, "u:")) && DB_UNIT_IDS.add(uid) }
+CANONICAL = {}
+symbol_map.each do |sym, id|
+  next if DB_UNIT_IDS.include?(id)
+  next if local["compounds"]&.key?(id) || local["counts"]&.key?(id)
+  next if CANONICAL.key?(id)
+  PREFIX_ORDER.each do |psym, pid|
+    next unless sym.length > psym.length && sym.start_with?(psym)
+    base = fold_signs(sym[psym.length..])
+    if DB_UNIT_IDS.include?(base_map[base])
+      CANONICAL[id] = [base_map[base], pid]
+      break
+    end
+  end
+end
+CANONICAL["u:second_time"] = ["u:second", nil]
+CANONICAL["u:degree"] = ["u:arc_degree", nil]
 # Context disambiguation: collision-class symbols resolve only through a
 # (recommendation, symbol) row here. The record's R family is the key the
 # extraction pipeline cannot silently change, so issuer wording and OCR
@@ -230,6 +258,15 @@ end
     end.flatten(1)
     next if sig.empty? || sig.any? { |e| e[0].nil? }
     COMPOUND_INDEX[signature(sig)] ||= id
+    # face-value key: a parse that stays at the named factor (mg above a
+    # milligram lacking mapped roots) must meet the declaration too — the
+    # two signatures denote the same unit
+    face = ru.filter_map do |r|
+      u2 = r.dig("unit_reference", "id")
+      [u2, r.dig("prefix_reference", "id"), r["power"].to_i] if u2
+    end
+    fk = signature(face)
+    COMPOUND_INDEX[fk] ||= id unless face.empty? || fk == signature(sig)
   end
 end
 
@@ -259,18 +296,28 @@ def normalize_unit_symbol(s)
   s
 end
 
+def canonical_unit_id(id)
+  CANONICAL[id]
+end
+
+def direct_hit(uid, canonical, prefix = nil)
+  if prefix.nil? && (c = canonical_unit_id(uid))
+    { unit_id: c[0], prefix: c[1], canonical: canonical }
+  else
+    { unit_id: uid, prefix: prefix, canonical: canonical }
+  end
+end
+
 def resolve_raw(s, base_map, prefix_order, allowed)
   return nil if AMBIGUOUS.(s)
-  return { unit_id: base_map[s], prefix: nil, canonical: s } if base_map.key?(s)
+  return direct_hit(base_map[s], s) if base_map.key?(s)
   stripped = s.sub(/\((g|a|abs|gauge|absolute)\)\z/i, "")
-  if base_map.key?(stripped)
-    return { unit_id: base_map[stripped], prefix: nil, canonical: stripped }
-  end
+  return direct_hit(base_map[stripped], stripped) if base_map.key?(stripped)
   prefix_order.each do |psym, pid|
     next unless s.start_with?(psym) && s.length > psym.length
     rest = s[psym.length..]
     if base_map.key?(rest) && allowed.include?(base_map[rest])
-      return { unit_id: base_map[rest], prefix: pid, canonical: s }
+      return direct_hit(base_map[rest], s, pid)
     end
   end
   nil
@@ -283,7 +330,7 @@ end
 # Parse "kg/h", "m^3*kg^-1/s" style chains into atoms with powers, resolve
 # each atom, expand through root_units, and look the composed signature up
 # in the compound index. Returns a unitsml unit id or nil.
-def resolve_compound(symbol, base_map, prefix_order, allowed, index)
+def resolve_compound(symbol, base_map, prefix_order, allowed, index, family = nil)
   parts = symbol.split("/")
   return nil if parts.length < 2 || parts.length > 3
   entries = []
@@ -298,8 +345,23 @@ def resolve_compound(symbol, base_map, prefix_order, allowed, index)
         atom = m.pre_match
       end
       hit = resolve_raw(atom, base_map, prefix_order, allowed)
-      return nil unless hit && hit[:unit_id]
-      entries.concat(EXPAND_FACTOR.call(hit[:unit_id], hit[:prefix], sign * power))
+      unless hit && hit[:unit_id]
+        # an ambiguous glyph inside a compound takes its meaning from the
+        # recommendation, exactly as a bare symbol would (uV/d: the d is
+        # the R76 scale division, not the day)
+        cid = family && AMBIGUOUS.(atom) ? CONTEXTUAL_UNIT_ID.(atom, family) : nil
+        return nil unless cid
+        entries.concat(EXPAND_FACTOR.call(cid, nil, sign * power))
+        next
+      end
+      uid, pfx = hit[:unit_id], hit[:prefix]
+      # invented prefixed ids canonicalize to the standard's form inside
+      # compounds too (mg -> (u:gram, p:milli)), so signatures meet
+      # declarations written over real units
+      if pfx.nil? && (c = canonical_unit_id(uid))
+        uid, pfx = c[0], c[1]
+      end
+      entries.concat(EXPAND_FACTOR.call(uid, pfx, sign * power))
     end
   end
   return nil if entries.empty? || entries.any? { |e| e[0].nil? }
@@ -329,7 +391,7 @@ def resolve_currency(symbol, currency_forms, base_map, prefix_order, allowed, in
   code = currency_forms[parts[0]]
   return nil unless code
   hit = resolve(parts[1], base_map, prefix_order, allowed)&.dig(:unit_id)
-  hit ||= resolve_compound(parts[1], base_map, prefix_order, allowed, index)
+  hit ||= resolve_compound(parts[1], base_map, prefix_order, allowed, index, nil)
   hit ? [code, hit] : nil
 end
 
@@ -360,7 +422,9 @@ Dir.glob("#{REPO}/pipeline-work/yaml/R*/**/*.yaml").sort.each do |f|
         if node["unit_id"].is_a?(String)
           cands = candidates[canon]
           pref = nil
-          if AMBIGUOUS.(canon)
+          if (can = canonical_unit_id(node["unit_id"]))
+            pref = { unit_id: can[0], prefix: can[1] }
+          elsif AMBIGUOUS.(canon)
             if cands.include?(node["unit_id"])
               cid = CONTEXTUAL_UNIT_ID.(canon, family)
               pref = { unit_id: cid, prefix: nil }
@@ -385,6 +449,10 @@ Dir.glob("#{REPO}/pipeline-work/yaml/R*/**/*.yaml").sort.each do |f|
             node["_unit_kind"] = "custom_count"
             counted += 1
             changed = true
+          elsif DESCRIPTORS.include?(sym)
+            node["_unit_kind"] = "descriptor"
+            counted += 1
+            changed = true
           elsif AMBIGUOUS.(sym)
             if (cid = CONTEXTUAL_UNIT_ID.(sym, family))
               node["unit_id"] = cid
@@ -401,7 +469,7 @@ Dir.glob("#{REPO}/pipeline-work/yaml/R*/**/*.yaml").sort.each do |f|
               node["prefix"] = hit[:prefix] if hit[:prefix]
               fixed += 1
               changed = true
-            elsif (cid = resolve_compound(sym, base_map, PREFIX_ORDER, allowed, COMPOUND_INDEX))
+            elsif (cid = resolve_compound(sym, base_map, PREFIX_ORDER, allowed, COMPOUND_INDEX, family))
               node["unit_id"] = cid
               fixed += 1
               changed = true
@@ -414,7 +482,7 @@ Dir.glob("#{REPO}/pipeline-work/yaml/R*/**/*.yaml").sort.each do |f|
               base, mode = q
               bhit = resolve(base, base_map, PREFIX_ORDER, allowed)
               bid = bhit && bhit[:unit_id]
-              bid ||= resolve_compound(base, base_map, PREFIX_ORDER, allowed, COMPOUND_INDEX)
+              bid ||= resolve_compound(base, base_map, PREFIX_ORDER, allowed, COMPOUND_INDEX, family)
               if bid
                 node["unit_id"] = bid
                 node["current_type"] = mode

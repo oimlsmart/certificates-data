@@ -162,7 +162,7 @@ characteristics:
     battery_maximum_lifetime:
       value: 13
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
       footnote_markers: []
     software_version:
       value: '000.002'
@@ -208,7 +208,8 @@ characteristics:
       value: 32
     - model: DN40
       value: 40
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: permanent_flowrate_q3
     unit_symbol: m^3/h
     values:
@@ -304,7 +305,8 @@ characteristics:
       value: 85
     - model: DN40
       value: 85
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: height_h1
     unit_symbol: mm
     values:
@@ -318,7 +320,8 @@ characteristics:
       value: 27
     - model: DN40
       value: 33
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: height_h2
     unit_symbol: mm
     values:
@@ -332,7 +335,8 @@ characteristics:
       value: 103
     - model: DN40
       value: 112
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: height_h3
     unit_symbol: mm
     values:
@@ -346,7 +350,8 @@ characteristics:
       value: 132
     - model: DN40
       value: 141
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: width_a
     unit_symbol: mm
     values:
@@ -360,7 +365,8 @@ characteristics:
       value: 121
     - model: DN40
       value: 121
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: width_b
     unit_symbol: mm
     values:
@@ -374,7 +380,8 @@ characteristics:
       value: 82
     - model: DN40
       value: 82
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: construction_length
     axis: nominal_diameter and body_material
@@ -384,37 +391,43 @@ characteristics:
         min: 110
         max: 190
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN20, brass body
       value:
         min: 130
         max: 220
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN20, composite body
       value:
         min: 190
         max: 220
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN25
       value:
         min: 260
         max: 300
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN32
       value:
         min: 260
         max: 300
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN40
       value:
         min: 300
         max: 350
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
   - attribute: body_material
     axis: nominal_diameter
     values:
@@ -586,7 +599,7 @@ components:
     battery_maximum_lifetime:
       value: 13
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
       footnote_markers: []
 matrix_tables:
 - name: Technical and metrological data by nominal diameter

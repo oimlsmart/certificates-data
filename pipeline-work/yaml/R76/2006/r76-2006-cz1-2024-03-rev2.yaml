@@ -92,14 +92,14 @@ characteristics:
         min:
         max: 20
       unit_symbol: "% Max"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
       footnote_markers: []
     zero_tracking_device:
       value:
         min:
         max: 4
       unit_symbol: "% Max"
-      unit_id:
+      unit_id: u:percent_of_maximum_capacity
       footnote_markers: []
     interfaces:
       value: 2x RS232, 2x USB, Ethernet
@@ -198,7 +198,8 @@ characteristics:
         min: 100
         max:
       footnote_markers: []
-    unit_id: u:milligram
+    unit_id: u:gram
+    prefix: p:milli
   - attribute: scale_interval_d
     unit_symbol:
     values:
@@ -229,7 +230,8 @@ characteristics:
     - model: PS xxx.X7.M.yyy
       value: 195 x 195
       footnote_markers: []
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: embedded_software_version
     axis: hardware_version

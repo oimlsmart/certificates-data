@@ -114,6 +114,8 @@ compounds:
     short: meter_per_square_millimeter
     symbols:
     - { unicode: "m/mm²", ascii: "m/mm2", id: "m_per_mm2" }
+    - { unicode: "m*mm^-2", ascii: "m*mm^-2", id: "m_per_mm2_prod" }
+    - { unicode: "m*mm^2", ascii: "m*mm^2", id: "m_per_mm2_flat" }
     root_units:
     - { power: 1,  unit_reference: { type: unitsml, id: u:meter } }
     - { power: -2, prefix_reference: { type: unitsml, id: p:milli }, unit_reference: { type: unitsml, id: u:meter } }
@@ -227,6 +229,9 @@ compounds:
     short: microvolt_per_division
     symbols:
     - { unicode: "μV/div", ascii: "uV/div", id: "uV_per_div" }
+    - { unicode: "μV/Div", ascii: "uV/Div", id: "uV_per_Div" }
+    - { unicode: "μV/d", ascii: "uV/d", id: "uV_per_d" }
+    - { unicode: "μV/division", ascii: "uV/division", id: "uV_per_division" }
     root_units:
     - { power: 1, prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:volt } }
 
@@ -255,6 +260,7 @@ compounds:
     short: relative_humidity_percent
     symbols:
     - { unicode: "%RH", ascii: "%RH", id: "pct_RH" }
+    - { unicode: "% RH", ascii: "% RH", id: "pct_RH_spaced" }
 
   u:percent_of_maximum_capacity:
     names:
@@ -262,14 +268,9 @@ compounds:
     short: percent_of_maximum_capacity
     symbols:
     - { unicode: "%Max", ascii: "%Max", id: "pct_Max" }
+    - { unicode: "% Max", ascii: "% Max", id: "pct_Max_spaced" }
+    - { unicode: "%*Emax", ascii: "%*Emax", id: "pct_Emax_star" }
     notes: "Used in R51 catchweighing tare specification."
-
-  u:per_degree_Celsius_2:
-    names:
-    - { value: "per degree Celsius", lang: en }
-    short: per_degree_Celsius
-    symbols:
-    - { unicode: "/degC", ascii: "/degC", id: "/degC" }
 
 # OIML-specific COUNT units — dimensionless counters used in metrology.
 # These represent counted things, not measured quantities.
@@ -337,7 +338,122 @@ compounds:
     - { power: 1, unit_reference: { type: unitsml, id: u:ampere } }
     - { power: 1, unit_reference: { type: unitsml, id: u:second } }
     notes: "Battery capacity unit; the hour factor carries the 3600 scale in usage."
+  u:percent_of_full_scale:
+    names:
+    - { value: "percent of full scale", lang: en }
+    short: percent_of_full_scale
+    symbols:
+    - { unicode: "% F.S", ascii: "% F.S", id: "pct_FS_spaced" }
+    - { unicode: "%FS", ascii: "%FS", id: "pct_FS" }
+    - { unicode: "%F.S", ascii: "%F.S", id: "pct_FS_dot" }
+    notes: "Accuracy class against full scale; the F.S period is abbreviation, guarded verbatim."
+
+  u:division_per_second:
+    names:
+    - { value: "division per second", lang: en }
+    short: division_per_second
+    symbols:
+    - { unicode: "d/s", ascii: "d/s", id: "d_per_s" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:division } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:second } }
+    notes: "Weighing drift rate (R76); the atom d resolves through the (R76, d) disambiguation row."
+
+  u:ohm_per_kilometer:
+    names:
+    - { value: "ohm per kilometer", lang: en }
+    short: ohm_per_kilometer
+    symbols:
+    - { unicode: "Ω/km", ascii: "Ohm/km", id: "Ohm_per_km" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:ohm } }
+    - { power: -1, prefix_reference: { type: unitsml, id: p:kilo }, unit_reference: { type: unitsml, id: u:meter } }
+    notes: "Load-cell cable resistance per length."
+
+  u:microsiemens_per_centimeter:
+    names:
+    - { value: "microsiemens per centimeter", lang: en }
+    short: microsiemens_per_centimeter
+    symbols:
+    - { unicode: "μS/cm", ascii: "uS/cm", id: "uS_per_cm" }
+    root_units:
+    - { power: 1,  prefix_reference: { type: unitsml, id: p:micro }, unit_reference: { type: unitsml, id: u:siemens } }
+    - { power: -1, prefix_reference: { type: unitsml, id: p:centi }, unit_reference: { type: unitsml, id: u:meter } }
+    notes: "Conductivity (R50/R117 water analysis)."
+
+  u:DN_multiple:
+    names:
+    - { value: "nominal diameter multiple", lang: en }
+    short: DN_multiple
+    symbols:
+    - { unicode: "×DN", ascii: "*DN", id: "times_DN" }
+    - { unicode: "xDN", ascii: "xDN", id: "x_DN" }
+    - { unicode: "× DN", ascii: "* DN", id: "times_DN_spaced" }
+    root_units:
+    - { power: 1, unit_reference: { type: unitsml, id: u:diameter } }
+    notes: "Straight lengths in multiples of the nominal diameter (R49/R137 installation)."
+
+  u:cylinder_per_minute_per_receptor:
+    names:
+    - { value: "cylinder per minute per receptor", lang: en }
+    short: cylinder_per_minute_per_receptor
+    symbols:
+    - { unicode: "cylinders/min/receptor", ascii: "cylinders/min/receptor", id: "cyl_per_min_rec" }
+    - { unicode: "cylinders/minute/receptor", ascii: "cylinders/minute/receptor", id: "cyl_per_minute_rec" }
+    notes: "R61 gas-cylinder filling rate; direct symbol, no composition (a receptor is a filling point, not a unit)."
+  u:percent:
+    names:
+    - { value: "percent", lang: en }
+    - { value: "pourcent", lang: fr }
+    short: percent
+    symbols:
+    - { unicode: "%", ascii: "%", id: "pct" }
+    notes: "Dimensionless ratio 1/100; the unitsml parser treats it as a plain unit."
+
+  u:parts_per_billion:
+    names:
+    - { value: "parts per billion", lang: en }
+    short: parts_per_billion
+    symbols:
+    - { unicode: "ppb", ascii: "ppb", id: "ppb" }
+    notes: "Dimensionless mixing ratio."
+
+  u:millivolt_per_volt:
+    names:
+    - { value: "millivolt per volt", lang: en }
+    short: millivolt_per_volt
+    symbols:
+    - { unicode: "mV/V", ascii: "mV/V", id: "mV_per_V" }
+    root_units:
+    - { power: 1,  prefix_reference: { type: unitsml, id: p:milli }, unit_reference: { type: unitsml, id: u:volt } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:volt } }
+    notes: "Load-cell sensitivity (mV/V)."
+
+  u:degree_Celsius_per_hour:
+    names:
+    - { value: "degree Celsius per hour", lang: en }
+    short: degree_Celsius_per_hour
+    symbols:
+    - { unicode: "°C/h", ascii: "degC/h", id: "degC_per_h" }
+    root_units:
+    - { power: 1,  unit_reference: { type: unitsml, id: u:degree_Celsius } }
+    - { power: -1, unit_reference: { type: unitsml, id: u:hour } }
+    notes: "Temperature drift rate."
+
+# Non-unit values that ride unit_symbol but measure nothing physical: the
+# walker stamps _unit_kind: descriptor instead of minting a unit.
+descriptors: [counts, cts, keys, records, results, units, weighing results, transactions, pixels, Price, Price/l, per minute, baud]
+
+
 counts:
+
+  u:cylinder:
+    names:
+    - { value: "gas cylinder", lang: en }
+    short: cylinder
+    symbols:
+    - { unicode: "cylinder", ascii: "cylinder", id: "cylinder" }
+    - { unicode: "cylinders", ascii: "cylinders", id: "cylinders" }
 
   u:division:
     names:
@@ -345,6 +461,7 @@ counts:
     short: division
     symbols:
     - { unicode: "divisions", ascii: "divisions", id: "divisions" }
+    - { unicode: "div", ascii: "div", id: "div" }
     notes: "Count of scale divisions (R76/R51 weighing instruments)."
 
   u:digit:
@@ -522,7 +639,11 @@ counts:
 # compound atoms resolve (revs/litre -> u:revolution + u:liter).
 aliases:
   u:liter: [litre, liter]
-  u:minute: [minute]
+  u:minute: [minute, minutes]
+  u:year_365: [years, year]
+  u:arc_degree: [degrees]
+  u:revolution: [revolution, revolutions]
+  u:percent: ["%vol", "%RO"]
   u:hour: [hour]
   u:second: [second]
   u:us_gallon: ["US gal"]
@@ -553,6 +674,10 @@ disambiguation:
   r: [R76, R60]
   unit_id: u:av_pound
   notes: "Imperial capacity columns: avoirdupois pound, not troy."
+- symbol: ft
+  r: [R60]
+  unit_id: u:foot
+  notes: "Ordinary foot, not the US survey foot."
 
 # Currency symbol spellings to ISO 4217 alpha-3 codes. Currency is not a
 # unit of measurement — the resolver emits it on the record's own currency

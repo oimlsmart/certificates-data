@@ -240,7 +240,8 @@ characteristics:
       value: 350
     - model: DN400
       value: 400
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: overload_flow_rate_q4
     unit_symbol: m^3/h
     values:
@@ -478,7 +479,8 @@ characteristics:
       value: 550
     - model: DN400
       value: 600
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
 recommendation:
   id: R49
   edition: 2013
@@ -564,12 +566,12 @@ components:
       straight_inlet_length:
         value: 5
         unit_symbol: "*DN"
-        unit_id:
+        unit_id: u:DN_multiple
         footnote_markers: []
       straight_outlet_length:
         value: 3
         unit_symbol: "*DN"
-        unit_id:
+        unit_id: u:DN_multiple
         footnote_markers: []
       flow_conditioner:
         value: none

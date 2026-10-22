@@ -76,7 +76,8 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     q3_q1_ratio:
       value:
         min: 40
@@ -122,11 +123,13 @@ characteristics:
     minimum_inlet_straight_length:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     minimum_outlet_straight_length:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     flow_profile_sensitivity_class:
       value: U0D0
       unit_symbol:
@@ -156,7 +159,7 @@ characteristics:
     minimum_battery_life:
       value: 10
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
     software_version:
       value: LS 612842
       unit_symbol:
@@ -175,7 +178,8 @@ characteristics:
       value: 20
     - model: LXC DN25
       value: 25
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: q3
     unit_symbol: m^3/h
     values:
@@ -214,7 +218,8 @@ characteristics:
       value: 195
     - model: LXC DN25
       value: 160
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: q1
     axis: q3_q1_ratio

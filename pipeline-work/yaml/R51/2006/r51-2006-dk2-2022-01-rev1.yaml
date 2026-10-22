@@ -61,6 +61,7 @@ characteristics:
     maximum_time_between_automatic_zero_setting:
       value: 150
       unit_symbol: minutes
+      unit_id: u:minute
     excitation_voltage:
       value: 5
       unit_symbol: V
@@ -136,7 +137,8 @@ characteristics:
         min: 0
         max: 20
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
+      prefix: p:milli
     logical_output_max_current:
       value:
         min:
@@ -152,7 +154,8 @@ characteristics:
         min:
         max: 2
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
+      prefix: p:milli
     logical_input_voltage:
       value: 30
       unit_symbol: V
@@ -196,9 +199,11 @@ characteristics:
     - condition: 0.4 μV ≤ e < 0.8 μV
       value: 18
       unit_symbol: minutes
+      unit_id: u:minute
     - condition: 0.8 μV ≤ e
       value: 3
       unit_symbol: minutes
+      unit_id: u:minute
 recommendation:
   id: R51-1
   edition: 2006

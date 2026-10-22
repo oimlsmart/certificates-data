@@ -108,8 +108,9 @@ characteristics:
     path_angle:
       value: 60
       unit_symbol: deg
-      unit_id: u:degree
+      unit_id: u:arc_degree
       footnote_markers: []
+      prefix:
     inlet_piping_length:
       value: 0
       unit_symbol: DN
@@ -168,7 +169,8 @@ characteristics:
     - model: DN150
       value: 105
       footnote_markers: []
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: minimum_flow_velocity_vmin
     unit_symbol: m/s
     values:
@@ -243,32 +245,36 @@ model_family:
       internal_flow_channel_bore_diameter:
         value: 43
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
         footnote_markers: []
+        prefix: p:milli
   - model_id: DN80
     label: 3" DN80
     attributes:
       internal_flow_channel_bore_diameter:
         value: 66
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
         footnote_markers: []
+        prefix: p:milli
   - model_id: DN100
     label: 4" DN100
     attributes:
       internal_flow_channel_bore_diameter:
         value: 84
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
         footnote_markers: []
+        prefix: p:milli
   - model_id: DN150
     label: 6" DN150
     attributes:
       internal_flow_channel_bore_diameter:
         value: 105
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
         footnote_markers: []
+        prefix: p:milli
 components:
 - role: Transducer
   type_designations:

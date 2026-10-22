@@ -79,7 +79,7 @@ characteristics:
     display_duration_of_measured_volume:
       value: 10
       unit_symbol: s
-      unit_id: u:second_time
+      unit_id: u:second
       footnote_markers: []
       prefix:
     communication_interfaces:
@@ -110,8 +110,9 @@ characteristics:
         min: 110
         max: 190
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
       footnote_markers: []
+      prefix: p:milli
     pressure_loss:
       value: 0.63
       unit_symbol: bar
@@ -135,14 +136,15 @@ characteristics:
         min:
         max: 16
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
     software_and_checksum:
       value: 13 22681
       unit_symbol:
     nominal_diameter:
       value: 20
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     body_material:
       value: brass / plastic
     permanent_flowrate_q3:
@@ -173,6 +175,7 @@ characteristics:
         min:
         max: 10
       unit_symbol: years
+      unit_id: u:year_365
     installation_orientation:
       value: All positions
     maximum_admissible_pressure_map:
@@ -235,9 +238,11 @@ characteristics:
     - condition: two or three batteries
       value: 16
       unit_symbol: years
+      unit_id: u:year_365
     - condition: one battery
       value: 10
       unit_symbol: years
+      unit_id: u:year_365
   - attribute: temperature_class
     axis: body_material_and_size
     values:
@@ -574,7 +579,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter_dn
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: DN15 Q3=1.6
       value: 15
@@ -582,6 +587,7 @@ characteristics:
       value: 15
     - model: DN20 Q3=2.5
       value: 20
+    prefix: p:milli
   - attribute: permanent_flowrate_q3
     unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
@@ -639,7 +645,8 @@ characteristics:
       value: 15
     - model: DN20 Q3=2.5
       value: 20
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: permanent_flowrate_q3
     unit_symbol: m^3/h
     values:
@@ -767,6 +774,7 @@ characteristics:
       value: 10
     - model: DN20 Q3=2.5
       value: 10
+    unit_id: u:year_365
   - attribute: minimum_flowrate_q1
     unit_symbol: l/h
     values:
@@ -870,7 +878,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       permanent_flowrate_q3:
         value: 4
         unit_symbol: m^3/h
@@ -880,7 +889,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       permanent_flowrate_q3:
         value: 4
         unit_symbol: m^3/h
@@ -890,7 +900,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       permanent_flowrate_q3:
         value: 4
         unit_symbol: m^3/h
@@ -900,7 +911,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       permanent_flowrate_q3:
         value: 4
         unit_symbol: m^3/h
