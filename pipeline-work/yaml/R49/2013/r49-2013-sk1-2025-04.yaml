@@ -118,6 +118,7 @@ characteristics:
     battery_lifetime:
       value: 13
       unit_symbol: years
+      unit_id: u:year_365
     software_version:
       value: V1-1.1
     software_checksum:
@@ -142,7 +143,8 @@ characteristics:
       value: 20
     - model: SCL-61HFY-100 DN20 R400
       value: 20
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: ratio_q3_q1
     unit_symbol:
     values:
@@ -252,7 +254,8 @@ characteristics:
       value: 130
     - model: SCL-61HFY-100 DN20 R400
       value: 130
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: mpe_upper_flow_rates_q2_to_q4
     axis: water_temperature
@@ -292,7 +295,8 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 250
   - model_id: SCL-61HFY-100 DN15 R315
@@ -300,7 +304,8 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 315
   - model_id: SCL-61HFY-100 DN15 R400
@@ -308,7 +313,8 @@ model_family:
       nominal_diameter:
         value: 15
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 400
   - model_id: SCL-61HFY-100 DN20 R250
@@ -316,7 +322,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 250
   - model_id: SCL-61HFY-100 DN20 R315
@@ -324,7 +331,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 315
   - model_id: SCL-61HFY-100 DN20 R400
@@ -332,7 +340,8 @@ model_family:
       nominal_diameter:
         value: 20
         unit_symbol: mm
-        unit_id: u:millimeter
+        unit_id: u:meter
+        prefix: p:milli
       ratio_q3_q1:
         value: 400
 components:
@@ -347,7 +356,8 @@ components:
     reflection_sheets_angle:
       value: 45
       unit_symbol: deg
-      unit_id: u:degree
+      unit_id: u:arc_degree
+      prefix:
     transducers:
       value: two ultrasonic transducers at upstream and downstream of the measurement channel
 - role: Calculator and indication device
@@ -367,6 +377,7 @@ components:
     battery_lifetime:
       value: 13
       unit_symbol: years
+      unit_id: u:year_365
     end_of_battery_life_indicator_threshold:
       value: 3.6
       unit_symbol: V

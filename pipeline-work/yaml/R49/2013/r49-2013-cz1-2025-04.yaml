@@ -102,8 +102,9 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
       footnote_markers: []
+      prefix: p:mega
     resolution_of_indicating_device_mechanical_register:
       value: 0.05
       unit_symbol: L
@@ -182,7 +183,7 @@ characteristics:
     minimum_battery_lifetime:
       value: 10
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
       footnote_markers:
       - 1)
     software_version:
@@ -200,13 +201,15 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
       footnote_markers: []
+      prefix: p:milli
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
       footnote_markers: []
+      prefix: p:milli
     flow_profile_sensitivity_class:
       value: U0/D0
       unit_symbol:
@@ -235,7 +238,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: Unico4 DN15
       value: 15
@@ -249,6 +252,7 @@ characteristics:
       value: 15
     - model: Unico4e DN20
       value: 20
+    prefix: p:milli
   - attribute: connection_type
     unit_symbol:
     unit_id:
@@ -500,15 +504,18 @@ characteristics:
     - condition: Q3 = 2.5 m³/h (length option 1)
       value: 110
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: Q3 = 2.5 m³/h (length option 2)
       value: 130
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     - condition: DN 20, Q3 = 4.0 m³/h
       value: 130
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
 recommendation:
   id: R49
   edition: 2013

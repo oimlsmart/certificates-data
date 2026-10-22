@@ -144,7 +144,7 @@ characteristics:
     battery_lifetime:
       value: 13
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
       footnote_markers: []
     battery_life_end_indicator_threshold:
       value: 3.6
@@ -177,7 +177,8 @@ characteristics:
       value: 40
     - model: DN50
       value: 50
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   - attribute: permanent_flowrate_q3
     unit_symbol: m^3/h
     values:
@@ -240,7 +241,8 @@ characteristics:
       value: 200/245/300
     - model: DN50
       value: 294/300
-    unit_id: u:millimeter
+    unit_id: u:meter
+    prefix: p:milli
   config_level:
   - attribute: pressure_loss
     axis: pressure_loss_class
@@ -357,8 +359,9 @@ components:
     reflection_sheet_angle:
       value: 45
       unit_symbol: deg
-      unit_id: u:degree
+      unit_id: u:arc_degree
       footnote_markers: []
+      prefix:
     ultrasonic_transducer_count:
       value: 2
       unit_symbol:

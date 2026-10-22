@@ -89,7 +89,8 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     maximum_admissible_pressure_bar:
       value: 16
       unit_symbol: bar
@@ -127,7 +128,7 @@ characteristics:
   model_level:
   - attribute: inlet_outlet_diameter
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: Full bore DN32
       value: 32
@@ -169,6 +170,7 @@ characteristics:
       value: 250
     - model: Reduced bore DN300
       value: 300
+    prefix: p:milli
   - attribute: minimum_flow_rate_q1
     unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
@@ -458,23 +460,28 @@ characteristics:
     - condition: FLC-2200EL, all sizes
       value: 0.01
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: FLC-2300 (documentation 11690/0-06), sizes < DN80
       value: 0.01
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: FLC-2300 (documentation 11690/0-06), sizes ≥ DN80
       value: 0.016
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: FLC-2300 (documentation 11690/0-05), sizes < DN80
       value: 0.025
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     - condition: FLC-2300 (documentation 11690/0-05), sizes ≥ DN80
       value: 0.04
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
   - attribute: electromagnetic_environment
     axis: converter type and version
     values:

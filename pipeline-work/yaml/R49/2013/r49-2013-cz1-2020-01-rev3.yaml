@@ -85,7 +85,8 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     pressure_loss_class:
       value: Δp10
       unit_symbol:
@@ -155,11 +156,13 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     installation_orientation:
       value: arbitrary orientation
       unit_symbol:
@@ -167,7 +170,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: DN50
       value: 50
@@ -196,9 +199,10 @@ characteristics:
     - model: DN300
       value: 300
       footnote_markers: []
+    prefix: p:milli
   - attribute: body_length
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: DN50
       value: 200; 270; 300
@@ -227,6 +231,7 @@ characteristics:
     - model: DN300
       value: '500'
       footnote_markers: []
+    prefix: p:milli
   - attribute: indicating_range
     unit_symbol: m^3
     unit_id: u:cubic_meter

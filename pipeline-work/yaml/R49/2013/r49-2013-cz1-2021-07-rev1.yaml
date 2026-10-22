@@ -114,7 +114,8 @@ characteristics:
     maximum_admissible_pressure:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     orientation_limitation:
       value: any
       unit_symbol:
@@ -134,11 +135,13 @@ characteristics:
     minimum_straight_length_inlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     minimum_straight_length_outlet_pipe:
       value: 0
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     flow_conditioner_required:
       value: 'No'
       unit_symbol:
@@ -170,9 +173,10 @@ characteristics:
         min:
         max: 50
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
       footnote_markers:
       - 2)
+      prefix: p:milli
     inductive_sensor_max_supply_voltage:
       value:
         min:
@@ -192,13 +196,14 @@ characteristics:
         min:
         max: 20
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
       footnote_markers:
       - 2)
+      prefix: p:milli
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: DN15
       value: 15
@@ -206,6 +211,7 @@ characteristics:
       value: 20
     - model: DN25
       value: 25
+    prefix: p:milli
   - attribute: q1
     unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
@@ -289,7 +295,7 @@ characteristics:
       value: G1 ¼”B
   - attribute: length
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: DN15
       value: 115
@@ -297,6 +303,7 @@ characteristics:
       value: 165
     - model: DN25
       value: 199
+    prefix: p:milli
   config_level:
   - attribute: maximum_permissible_error_upper_flowrate_zone
     axis: water_temperature
@@ -377,7 +384,8 @@ components:
     max_supply_current:
       value: 50
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
+      prefix: p:milli
     note: ancillary device not tested (certificate footnote 2)
 - role: inductive sensor (ancillary device, inductive pulser)
   type_designations: []
@@ -391,7 +399,8 @@ components:
     max_supply_current:
       value: 20
       unit_symbol: mA
-      unit_id: u:milliampere
+      unit_id: u:ampere
+      prefix: p:milli
     note: ancillary device not tested (certificate footnote 2)
 footnotes:
 - marker: 1)

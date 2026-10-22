@@ -82,7 +82,8 @@ characteristics:
     maximum_working_pressure_map:
       value: 1.6
       unit_symbol: MPa
-      unit_id: u:megapascal
+      unit_id: u:pascal
+      prefix: p:mega
     pressure_loss_class_delta_p:
       value: 40
       unit_symbol:
@@ -146,15 +147,17 @@ characteristics:
     battery_maximum_lifetime:
       value: 10
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
     overall_height_h1:
       value: 98
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     overall_height_h2:
       value: 138
       unit_symbol: mm
-      unit_id: u:millimeter
+      unit_id: u:meter
+      prefix: p:milli
     software_version:
       value: V 10732.02
       unit_symbol:
@@ -170,7 +173,7 @@ characteristics:
   model_level:
   - attribute: nominal_diameter
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: LXCY-15K
       value: 15
@@ -178,6 +181,7 @@ characteristics:
       value: 20
     - model: LXCY-25K
       value: 25
+    prefix: p:milli
   - attribute: permanent_flowrate_q3
     unit_symbol: m^3/h
     unit_id: u:cubic_meter_per_hour
@@ -230,7 +234,7 @@ characteristics:
       value: G1 ¼
   - attribute: construction_length
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: LXCY-15K
       value: 165
@@ -238,9 +242,10 @@ characteristics:
       value: 190
     - model: LXCY-25K
       value: 260
+    prefix: p:milli
   - attribute: overall_length_l2
     unit_symbol: mm
-    unit_id: u:millimeter
+    unit_id: u:meter
     values:
     - model: LXCY-15K
       value: 255
@@ -248,6 +253,7 @@ characteristics:
       value: 290
     - model: LXCY-25K
       value: 376
+    prefix: p:milli
   config_level:
   - attribute: maximum_permissible_error_upper_flowrates
     axis: water_temperature
@@ -337,7 +343,7 @@ components:
     battery_maximum_lifetime:
       value: 10
       unit_symbol: years
-      unit_id:
+      unit_id: u:year_365
 - role: integrated_equipment
   type_designations:
   - NB-IOT
