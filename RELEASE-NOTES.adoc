@@ -1,0 +1,40 @@
+= OIML-CS certificates — release notes
+
+The consumer's re-pin basis (plan 05): each entry states what a pinned
+state contains, in consumer-visible terms. Consumers pin commit SHAs;
+nothing here is a tag ceremony.
+
+== 841111de — the unitsml tier (PR #16)
+
+The units layer becomes fully unitsml, in one atomic change.
+
+Consumer-visible contract changes:
+
+- `unit_symbol` on the structured tier is now canonical unitsml ascii:
+  `m³ → m^3`, `µV`/`μV → uV`, `Ω → Ohm`, `ℓ → l`, `°C → degC`, `·`/`× → *`,
+  `mPa.s → mPa*s`, `dm³ → L` (exact equivalence). OIML scale intervals
+  (`e1`) and abbreviation forms (`F.S`) stay verbatim. The document-true
+  transcription remains in `ocr_md/`.
+- `currency` (ISO 4217, `^[A-Z]{3}$`) added to `Unit` and `StructuredValue`
+  in `_core.yaml`; R117 price-display characteristics carry `currency: EUR`
+  beside `unit_id: u:liter`. Schema copies with `additionalProperties:
+  false` must re-sync or they reject these records (oimlsmart/cnml#82).
+- `current_type` populates: `Vdc`/`V dc`/`V (DC)` → `DC` with `u:volt`;
+  `Vac/dc`/`V ac/dc` → `AC_DC`.
+- `_units_local.yaml` grows counts (`u:pulse`, `u:revolution`, `u:piece`,
+  `u:diameter`), compounds (`u:metric_ton_per_hour`, `u:kilogram_per_hour`,
+  `u:revolution_per_liter`, `u:liter_per_pulse`, `u:liter_per_revolution`),
+  a `(recommendation, symbol)` disambiguation table, currency spellings and
+  word-form aliases; the impulse family's `root_units` realigned to
+  `u:pulse`.
+- Unit resolution is compositional (root-units signature matching); the
+  collision lottery is repaired (`L` → `u:liter` everywhere, `D` →
+  `u:diameter`, `d` → `u:division`, `lb` → `u:av_pound`, `in` → `u:inch`).
+
+Corpus state: 6,556 register rows, 5,166 document-backed records at 100%
+structured coverage; validation green across all dataset joins.
+
+== 20261012 scrape (2dddd4bb)
+
+Weekly snapshot: +80 certificates, 2 register corrections recorded in the
+changes dataset.
