@@ -1,5 +1,5 @@
 # The quality report
-# generated: 2026-10-26T09:22:05Z
+# generated: 2026-11-02T11:30:29Z
 
 Corpus: 6562 register rows · 5166 structured records · 6561 fused rows (1 register-defective rows quarantined).
 
