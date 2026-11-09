@@ -1,7 +1,7 @@
 # The quality report
-# generated: 2026-11-02T11:30:29Z
+# generated: 2026-11-09T11:51:01Z
 
-Corpus: 6562 register rows · 5166 structured records · 6561 fused rows (1 register-defective rows quarantined).
+Corpus: 6595 register rows · 5166 structured records · 6594 fused rows (1 register-defective rows quarantined).
 
 Reconciliation: 3789 reconciled · 231 variant · 1146 conflict (adjudicated with committed evidence; 2 verdicts unparseable and flagged).
 
